@@ -1,4 +1,4 @@
-// Содержание обучения НОО по действующей редакции ФОП НОО (приказ № 372, ред. от 10.11.2025, КонсультантПлюс).
+// Содержание обучения по действующим редакциям ФОП НОО (приказ № 372) и ФОП ООО (приказ № 370), ред. от 10.11.2025, КонсультантПлюс.
 // При сборке страницы содержания по классам загружаются с consultant.ru и разбираются на разделы и абзацы.
 // Слова не меняются: только кавычки «», тире, склейка перечней и удаление сносок/примечаний КонсультантПлюс.
 // Если источник недоступен (и нет кэша), сборка не падает: остаётся содержание из корпуса. В GitHub Actions сборка падает при неполноте.
@@ -7,7 +7,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DOC = 'https://www.consultant.ru/document/cons_doc_LAW_452094/';
+const DOC = 'https://www.consultant.ru/document/cons_doc_';
+const NOO = 'LAW_452094', OOO = 'LAW_452180';
 const VID = 'virtual:noo-content';
 const ENT = { nbsp: ' ', quot: '"', laquo: '«', raquo: '»', amp: '&', lt: '<', gt: '>', mdash: '—', ndash: '–', hellip: '…' };
 // [предмет, класс, пункт ФОП, страница КонсультантПлюс]
@@ -31,8 +32,14 @@ export const PAGES = [
   ['Физическая культура', 1, '168.3.2', 'c0837412925e5cee690e9ad933344c7a875d02c7'], ['Физическая культура', 2, '168.3.3', 'c0837412925e5cee690e9ad933344c7a875d02c7'],
   ['Физическая культура', 3, '168.3.4', 'c0837412925e5cee690e9ad933344c7a875d02c7'], ['Физическая культура', 4, '168.3.5', 'c0837412925e5cee690e9ad933344c7a875d02c7'],
 ];
+// ФОП ООО: [предмет, класс, пункт ФОП, страница КонсультантПлюс]
+export const OOO_PAGES = [
+  ['Иностранный (английский) язык', 5, '136.3', '9760c9d91ab6748cdf739b7e7a713850cf61f053'], ['Иностранный (английский) язык', 6, '136.4', 'a8ead0c3208df493b2aaaa2a27228797b2f72b51'],
+  ['Иностранный (английский) язык', 7, '136.5', '08132177c8218bf41cd221bd1cb6e3dce848abb0'], ['Иностранный (английский) язык', 8, '136.6', '508ec8dcaf0e9b36416f48058aba07125be787de'],
+  ['Иностранный (английский) язык', 9, '136.7', 'c1201aaecc23ceed267e30efb2b8f3d445b8421d'],
+];
 export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
-export const EXPECTED = PAGES.length + 5 + 4; // ОРКСЭ: 6 модулей на одной странице; музыка 1–4
+export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length; // ОРКСЭ: 6 модулей на одной странице; музыка 1–4
 
 export function htmlLines(html) {
   return html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, '').replace(/<img[^>]*>/gi, 'ё').replace(/<\/?(?:p|br|div|h\d|li|tr)\b[^>]*>/gi, '\n').replace(/<[^>]+>/g, '')
@@ -47,7 +54,7 @@ const FIXNUM = { '157.6.2. ': ['157.6.1.2.', '157.6.2. Мир моих увле�
 const STOP = /^(?:Изучение|Освоение)\s|универсальн[а-я]+ учебн/;
 
 // Разбор одной части страницы: sec — пункт класса (например '20.7' или '168.3.3').
-export function parse(lines, sec, { lit = false } = {}) {
+export function parse(lines, sec, { lit = false, keep = false, nopend = false } = {}) {
   // В тексте КонсультантПлюс у 157.6.1.2 ошибочно стоит номер 157.6.2 (см. примечание КонсультантПлюс); номера не выводятся, нужны только для структуры.
   lines = lines.map(x => (FIXNUM[x.slice(0, x.indexOf(' ') + 1)] && x.startsWith(FIXNUM[x.slice(0, x.indexOf(' ') + 1)][1]) ? FIXNUM[x.slice(0, x.indexOf(' ') + 1)][0] + x.slice(x.indexOf(' ')) : x));
   const a = lines.findIndex(x => x.startsWith(`${sec}.1.`) || x.startsWith(`${sec}.1 `));
@@ -77,7 +84,7 @@ export function parse(lines, sec, { lit = false } = {}) {
     if (prev && (/[:;]$/.test(prev) || /^[a-zа-яё(]/.test(t))) s.topics[s.topics.length - 1] = `${prev} ${t}`;
     else if (prev && s.pending) { s.topics[s.topics.length - 1] = `${prev} ${t}`; }
     else s.topics.push(t);
-    s.pending = t.length < 45 && /\.$/.test(t) && oneTitle(t) && !/[:;]/.test(t);
+    s.pending = !nopend && t.length < 45 && /\.$/.test(t) && oneTitle(t) && !/[:;]/.test(t);
   };
   items.forEach((it, i) => {
     const text = typo(it.text);
@@ -100,7 +107,8 @@ export function parse(lines, sec, { lit = false } = {}) {
     add(text);
   });
   // Разделы, у которых есть подразделы, сами по себе не выводим (вводные абзацы и описания модулей).
-  return secs.filter(s => s.topics.length && !secs.some(z => z !== s && z.key.startsWith(s.key + '|')))
+  // ООО (keep): у разделов ФОП ООО собственный текст стоит перед подразделами (например, тематика речи) и выводится.
+  return secs.filter(s => s.topics.length && (keep || !secs.some(z => z !== s && z.key.startsWith(s.key + '|'))))
     .map(s => ({ title: s.title, topics: s.topics }));
 }
 
@@ -147,13 +155,13 @@ export function musicSections(corpus, fop, miss) {
   }) }));
 }
 
-async function page(hash, cacheDir) {
+async function page(hash, cacheDir, doc = NOO) {
   const f = path.join(cacheDir, `${hash}.html`);
   if (fs.existsSync(f)) return fs.readFileSync(f, 'utf8');
-  const res = await fetch(`${DOC}${hash}/`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(60000) });
+  const res = await fetch(`${DOC}${doc}/${hash}/`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(60000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
-  if (!html.includes('LAW_452094') && !html.includes('Минпросвещения')) throw new Error('неожиданная страница');
+  if (!html.includes(doc) && !html.includes('Минпросвещения')) throw new Error('неожиданная страница');
   // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию (будни 20–24 МСК, выходные весь день);
   // вне расписания приходит заглушка без текста: её не кэшируем. Кэш (node_modules/.cache) сохраняется между сборками Vercel.
   if (/доступен по расписанию/.test(html) || html.length < 20000) throw new Error('КонсультантПлюс: документ доступен только по расписанию');
@@ -170,6 +178,12 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
       const s = parse(lines, sec, { lit: subject === 'Литературное чтение' });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`${sec}: разделы не найдены`);
     } catch (e) { errors.push(`${sec}: ${e.message || e}`); }
+  }
+  for (const [subject, grade, sec, hash] of OOO_PAGES) {
+    try {
+      const s = parse(htmlLines(await page(hash, cacheDir, OOO)), sec, { keep: true, nopend: true });
+      if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`ООО ${sec}: разделы не найдены`);
+    } catch (e) { errors.push(`ООО ${sec}: ${e.message || e}`); }
   }
   try {
     const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir)));
@@ -194,11 +208,13 @@ export default function nooContent() {
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
-          const sum = Object.entries(map).map(([k, v]) => `#${k} s=${v.length} t=${v.reduce((a, s) => a + s.topics.length, 0)}\n` + v.map(s => `${s.title.slice(0, 60)} [${s.topics.length}]`).join('\n')).join('\n');
-          const dump = (map['Музыка|3'] || []).map(s => `## ${s.title}\n${s.topics.join('\n')}`).join('\n');
-          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== Музыка 3\n${dump}`;
-          for (let i = 0, k = 0; i < text.length && k < 18; i += 1900, k++) console.log(`::${k < 8 ? 'notice' : 'warning'} title=c${k}::${esc(text.slice(i, i + 1900))}`);
-          if (n < EXPECTED) this.error(`Содержание НОО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
+          // Не больше 4 сообщений: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
+          const ooo = new Set(OOO_PAGES.map(([s, g]) => `${s}|${g}`));
+          const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${v.reduce((a, s) => a + s.topics.length, 0)}\n` + v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n')).join('\n');
+          const dump = (map['Иностранный (английский) язык|5'] || []).map(s => `## ${s.title}\n${s.topics.map(t => t.slice(0, 160)).join('\n')}`).join('\n');
+          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== Англ 5\n${dump}`;
+          for (let i = 0, k = 0; i < text.length && k < 4; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
+          if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
         mod = `export default ${JSON.stringify(map)};`;
       }
