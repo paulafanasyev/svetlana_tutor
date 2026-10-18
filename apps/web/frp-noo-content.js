@@ -48,7 +48,8 @@ export const COURSES = [
   ['Иностранный (английский) язык', '136.8', '94947fccef514db3a8687e66e8bf853b67f69ea6', [5, 6, 7, 8, 9], true],
 ];
 export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
-export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length; // ОРКСЭ: 6 модулей на одной странице; музыка 1–4
+// ОРКСЭ: 6 модулей на одной странице; музыка 1–4; курсы ООО: содержание (кроме «только результаты») и результаты по классам.
+export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length + COURSES.reduce((a, [, , , gs, only]) => a + gs.length * (only ? 1 : 2), 0);
 
 export function htmlLines(html) {
   return html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, '').replace(/<img[^>]*>/gi, 'ё').replace(/<\/?(?:p|br|div|h\d|li|tr)\b[^>]*>/gi, '\n').replace(/<[^>]+>/g, '')
@@ -146,7 +147,7 @@ export function courseParts(lines, root) {
   }
   return { content, results };
 }
-// Результаты: абзацы пункта sec подряд; заголовки подпунктов (короткие, без двоеточия) не выводим, перечни склеиваем.
+// Абзацы пункта sec подряд (каждый абзац отдельно); заголовки подпунктов (короткие, без двоеточия) не выводим.
 export function flatResults(lines, sec) {
   const i = lines.findIndex(x => x.startsWith(sec + '. '));
   if (i < 0) return [];
@@ -158,8 +159,7 @@ export function flatResults(lines, sec) {
     if (m && !m[1].startsWith(sec + '.')) break;
     const t = typo(m ? m[2] : x);
     if (m && oneTitle(t) && t.length < 120) continue;
-    const prev = out[out.length - 1];
-    if (prev && (/[:;]$/.test(prev) || /^[a-zа-яё]/.test(t))) out[out.length - 1] = `${prev} ${t}`; else out.push(t);
+    out.push(t);
   }
   return out;
 }
@@ -209,7 +209,7 @@ async function page(hash, cacheDir, doc = NOO) {
 }
 
 export async function loadNooContent({ cacheDir = path.resolve('node_modules/.cache/noo-content') } = {}) {
-  const map = {}, errors = [], soft = new Set();
+  const map = {}, errors = [];
   for (const [subject, grade, sec, hash] of PAGES) {
     try {
       const lines = htmlLines(await page(hash, cacheDir));
@@ -230,11 +230,13 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
       const { content, results } = courseParts(lines, root);
       for (const g of grades) {
         if (!onlyResults) {
-          const s = content[g] && parse(lines, content[g], { keep: true, nopend: true });
-          if (s && s.length) soft.add(`${subject}|${g}`), map[`${subject}|${g}`] = s; else errors.push(`ООО ${root}: нет содержания ${g} кл.`);
+          // Без подразделов (геометрия, ВиС): один раздел «Содержание обучения в N классе» с абзацами подряд.
+          let s = content[g] && parse(lines, content[g], { keep: true, nopend: true });
+          if (content[g] && !(s && s.length)) { const t = flatResults(lines, content[g]); if (t.length) s = [{ title: `Содержание обучения в ${g} классе`, topics: t }]; }
+          if (s && s.length) map[`${subject}|${g}`] = s; else errors.push(`ООО ${root}: нет содержания ${g} кл.`);
         }
         const r = results[g] && flatResults(lines, results[g]);
-        if (r && r.length) soft.add(`R|${subject}|${g}`), map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
+        if (r && r.length) map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
       }
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   }
@@ -245,7 +247,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     for (const p of corpus.filter(q => /^music-[1-4]$/.test(q.id))) map[`Музыка|${p.grade}`] = musicSections(p, fop, miss);
     if (miss.length) errors.push(`музыка, нет в ФОП: ${miss.join('; ')}`);
   } catch (e) { errors.push(`166.6: ${e.message || e}`); }
-  return { map, errors, soft };
+  return { map, errors };
 }
 
 export default function nooContent() {
@@ -256,17 +258,16 @@ export default function nooContent() {
     async load(id) {
       if (id !== '\0' + VID) return null;
       if (!mod) {
-        const { map, errors, soft } = await loadNooContent();
-        // Курсы ООО (COURSES) пока проверяются мягко: в EXPECTED не входят, ошибки только в отчёте.
-        const n = Object.keys(map).filter(k => !soft.has(k)).length;
+        const { map, errors } = await loadNooContent();
+        const n = Object.keys(map).length;
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
           // Не больше 4 сообщений: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
-          const ooo = new Set([...COURSES.flatMap(([s, , , gs]) => gs.flatMap(g => [`${s}|${g}`, `R|${s}|${g}`]))]);
+          const ooo = new Set(COURSES.flatMap(([s, , , gs, only]) => gs.flatMap(g => only ? [`R|${s}|${g}`] : [`${s}|${g}`, `R|${s}|${g}`])));
           const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}\n` + (Array.isArray(v[0]?.topics) ? v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n') : '')).join('\n');
-          const dump = (map['R|Иностранный (английский) язык|5'] || []).map(t => t.slice(0, 200)).join('\n');
-          const text = `n=${n}/${EXPECTED} soft=${soft.size} errors=${errors.join(' | ')}\n${sum}\n=== Результаты англ 5\n${dump}`;
+          const dump = [...(map['Вероятность и статистика|7'] || []).flatMap(s => [`## ${s.title}`, ...s.topics]), '=== R англ 5', ...(map['R|Иностранный (английский) язык|5'] || [])].map(t => t.slice(0, 150)).join('\n');
+          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== ВиС 7\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 4; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
