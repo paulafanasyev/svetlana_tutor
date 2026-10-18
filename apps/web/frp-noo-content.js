@@ -38,6 +38,15 @@ export const OOO_PAGES = [
   ['Иностранный (английский) язык', 7, '136.5', '08132177c8218bf41cd221bd1cb6e3dce848abb0'], ['Иностранный (английский) язык', 8, '136.6', '508ec8dcaf0e9b36416f48058aba07125be787de'],
   ['Иностранный (английский) язык', 9, '136.7', 'c1201aaecc23ceed267e30efb2b8f3d445b8421d'],
 ];
+// ФОП ООО, курсы на одной странице: «Содержание обучения в N классе» и предметные результаты «к концу обучения в N классе»
+// находятся по заголовкам. [предмет, пункт, страница, классы, только результаты]
+export const COURSES = [
+  ['Математика', '146.4', '76b44841c3da8f19c19a5d503046f8255cab22c6', [5, 6]],
+  ['Алгебра', '146.5', 'd5b25ad8ed951a831bcd4fed0feffaf354eb6025', [7, 8, 9]],
+  ['Геометрия', '146.6', '0e4c55d2e25f53e4f8e2ad181aeb5b09d1dae129', [7, 8, 9]],
+  ['Вероятность и статистика', '146.7', '028b0e926036a3222b0ed8e422335c790e281fbf', [7, 8, 9]],
+  ['Иностранный (английский) язык', '136.8', '94947fccef514db3a8687e66e8bf853b67f69ea6', [5, 6, 7, 8, 9], true],
+];
 export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
 export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length; // ОРКСЭ: 6 модулей на одной странице; музыка 1–4
 
@@ -125,6 +134,36 @@ export function parseOrkse(lines) {
   return out;
 }
 
+// Номера пунктов «Содержание обучения в N классе» и «… к концу обучения в N классе» внутри курса root.
+export function courseParts(lines, root) {
+  const content = {}, results = {};
+  for (const x of lines) {
+    const m = x.match(NUM);
+    if (!m || !m[1].startsWith(root + '.')) continue;
+    let g;
+    if ((g = m[2].match(/^Содержание обучения в (\d+) классе/))) content[g[1]] ??= m[1];
+    else if ((g = m[2].match(/к концу обучения в (\d+) классе/))) results[g[1]] ??= m[1];
+  }
+  return { content, results };
+}
+// Результаты: абзацы пункта sec подряд; заголовки подпунктов (короткие, без двоеточия) не выводим, перечни склеиваем.
+export function flatResults(lines, sec) {
+  const i = lines.findIndex(x => x.startsWith(sec + '. '));
+  if (i < 0) return [];
+  const out = [];
+  for (const x of lines.slice(i + 1)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (NOTE.test(x)) continue;
+    const m = x.match(NUM);
+    if (m && !m[1].startsWith(sec + '.')) break;
+    const t = typo(m ? m[2] : x);
+    if (m && oneTitle(t) && t.length < 120) continue;
+    const prev = out[out.length - 1];
+    if (prev && (/[:;]$/.test(prev) || /^[a-zа-яё]/.test(t))) out[out.length - 1] = `${prev} ${t}`; else out.push(t);
+  }
+  return out;
+}
+
 // Музыка: подпункт 166.6.k.j «Название.» → текст после «Содержание:» (до «Виды деятельности обучающихся»).
 const key = s => String(s).toLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/g, ' ').trim();
 export function parseMusic(lines) {
@@ -170,7 +209,7 @@ async function page(hash, cacheDir, doc = NOO) {
 }
 
 export async function loadNooContent({ cacheDir = path.resolve('node_modules/.cache/noo-content') } = {}) {
-  const map = {}, errors = [];
+  const map = {}, errors = [], soft = new Set();
   for (const [subject, grade, sec, hash] of PAGES) {
     try {
       const lines = htmlLines(await page(hash, cacheDir));
@@ -185,6 +224,20 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`ООО ${sec}: разделы не найдены`);
     } catch (e) { errors.push(`ООО ${sec}: ${e.message || e}`); }
   }
+  for (const [subject, root, hash, grades, onlyResults] of COURSES) {
+    try {
+      const lines = htmlLines(await page(hash, cacheDir, OOO));
+      const { content, results } = courseParts(lines, root);
+      for (const g of grades) {
+        if (!onlyResults) {
+          const s = content[g] && parse(lines, content[g], { keep: true, nopend: true });
+          if (s && s.length) soft.add(`${subject}|${g}`), map[`${subject}|${g}`] = s; else errors.push(`ООО ${root}: нет содержания ${g} кл.`);
+        }
+        const r = results[g] && flatResults(lines, results[g]);
+        if (r && r.length) soft.add(`R|${subject}|${g}`), map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
+      }
+    } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
+  }
   try {
     const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir)));
     const corpus = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/music_noo.json'), 'utf8'));
@@ -192,7 +245,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     for (const p of corpus.filter(q => /^music-[1-4]$/.test(q.id))) map[`Музыка|${p.grade}`] = musicSections(p, fop, miss);
     if (miss.length) errors.push(`музыка, нет в ФОП: ${miss.join('; ')}`);
   } catch (e) { errors.push(`166.6: ${e.message || e}`); }
-  return { map, errors };
+  return { map, errors, soft };
 }
 
 export default function nooContent() {
@@ -203,16 +256,17 @@ export default function nooContent() {
     async load(id) {
       if (id !== '\0' + VID) return null;
       if (!mod) {
-        const { map, errors } = await loadNooContent();
-        const n = Object.keys(map).length;
+        const { map, errors, soft } = await loadNooContent();
+        // Курсы ООО (COURSES) пока проверяются мягко: в EXPECTED не входят, ошибки только в отчёте.
+        const n = Object.keys(map).filter(k => !soft.has(k)).length;
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
           // Не больше 4 сообщений: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
-          const ooo = new Set(OOO_PAGES.map(([s, g]) => `${s}|${g}`));
-          const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${v.reduce((a, s) => a + s.topics.length, 0)}\n` + v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n')).join('\n');
-          const dump = (map['Иностранный (английский) язык|5'] || []).map(s => `## ${s.title}\n${s.topics.map(t => t.slice(0, 160)).join('\n')}`).join('\n');
-          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== Англ 5\n${dump}`;
+          const ooo = new Set([...COURSES.flatMap(([s, , , gs]) => gs.flatMap(g => [`${s}|${g}`, `R|${s}|${g}`]))]);
+          const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}\n` + (Array.isArray(v[0]?.topics) ? v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n') : '')).join('\n');
+          const dump = (map['R|Иностранный (английский) язык|5'] || []).map(t => t.slice(0, 200)).join('\n');
+          const text = `n=${n}/${EXPECTED} soft=${soft.size} errors=${errors.join(' | ')}\n${sum}\n=== Результаты англ 5\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 4; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
