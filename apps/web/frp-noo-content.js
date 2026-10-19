@@ -263,13 +263,16 @@ export default function nooContent() {
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
-          // Не больше 4 сообщений: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
+          // Одно сообщение: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
           const ooo = new Set(COURSES.flatMap(([s, , , gs, only]) => gs.flatMap(g => only ? [`R|${s}|${g}`] : [`${s}|${g}`, `R|${s}|${g}`])));
           const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}\n` + (Array.isArray(v[0]?.topics) ? v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n') : '')).join('\n');
           const dump = [...(map['Вероятность и статистика|7'] || []).flatMap(s => [`## ${s.title}`, ...s.topics]), '=== R англ 5', ...(map['R|Иностранный (английский) язык|5'] || [])].map(t => t.slice(0, 150)).join('\n');
           const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== ВиС 7\n${dump}`;
-          for (let i = 0, k = 0; i < text.length && k < 4; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
-          if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
+          for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
+          // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
+          const blocked = errors.length && errors.every(e => /по расписанию/.test(e));
+          if (blocked) console.log(`::warning title=noo-content::КонсультантПлюс вне расписания: ${n} из ${EXPECTED}, остальное из корпуса`);
+          else if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
         mod = `export default ${JSON.stringify(map)};`;
       }
