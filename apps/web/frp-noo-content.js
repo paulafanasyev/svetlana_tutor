@@ -194,16 +194,19 @@ export function musicSections(corpus, fop, miss) {
   }) }));
 }
 
-async function page(hash, cacheDir, doc = NOO) {
+// mark — номер пункта, который обязан быть в тексте страницы (например «20.6.1»): вне расписания КонсультантПлюс
+// отдаёт страницу без текста документа (с оглавлением и навигацией), её не кэшируем; такой кэш тоже отбрасываем.
+async function page(hash, cacheDir, doc = NOO, mark = '') {
   const f = path.join(cacheDir, `${hash}.html`);
-  if (fs.existsSync(f)) return fs.readFileSync(f, 'utf8');
+  const ok = h => !mark || htmlLines(h).some(x => x.startsWith(mark + '.') || x.startsWith(mark + ' '));
+  if (fs.existsSync(f)) { const h = fs.readFileSync(f, 'utf8'); if (ok(h)) return h; fs.rmSync(f); }
   const res = await fetch(`${DOC}${doc}/${hash}/`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(60000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
   if (!html.includes(doc) && !html.includes('Минпросвещения')) throw new Error('неожиданная страница');
   // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию (будни 20–24 МСК, выходные весь день);
   // вне расписания приходит заглушка без текста: её не кэшируем. Кэш (node_modules/.cache) сохраняется между сборками Vercel.
-  if (/доступен по расписанию/.test(html) || html.length < 20000) throw new Error('КонсультантПлюс: документ доступен только по расписанию');
+  if (/доступен по расписанию/.test(html) || html.length < 20000 || !ok(html)) throw new Error('КонсультантПлюс: документ доступен только по расписанию');
   fs.mkdirSync(cacheDir, { recursive: true }); fs.writeFileSync(f, html);
   return html;
 }
@@ -212,7 +215,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
   const map = {}, errors = [];
   for (const [subject, grade, sec, hash] of PAGES) {
     try {
-      const lines = htmlLines(await page(hash, cacheDir));
+      const lines = htmlLines(await page(hash, cacheDir, NOO, `${sec}.1`));
       if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); continue; }
       const s = parse(lines, sec, { lit: subject === 'Литературное чтение' });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`${sec}: разделы не найдены`);
@@ -220,13 +223,13 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
   }
   for (const [subject, grade, sec, hash] of OOO_PAGES) {
     try {
-      const s = parse(htmlLines(await page(hash, cacheDir, OOO)), sec, { keep: true, nopend: true });
+      const s = parse(htmlLines(await page(hash, cacheDir, OOO, `${sec}.1`)), sec, { keep: true, nopend: true });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`ООО ${sec}: разделы не найдены`);
     } catch (e) { errors.push(`ООО ${sec}: ${e.message || e}`); }
   }
   for (const [subject, root, hash, grades, onlyResults] of COURSES) {
     try {
-      const lines = htmlLines(await page(hash, cacheDir, OOO));
+      const lines = htmlLines(await page(hash, cacheDir, OOO, `${root}.1`));
       const { content, results } = courseParts(lines, root);
       for (const g of grades) {
         if (!onlyResults) {
@@ -241,7 +244,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   }
   try {
-    const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir)));
+    const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir, NOO, '166.6.1')));
     const corpus = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/music_noo.json'), 'utf8'));
     const miss = [];
     for (const p of corpus.filter(q => /^music-[1-4]$/.test(q.id))) map[`Музыка|${p.grade}`] = musicSections(p, fop, miss);
