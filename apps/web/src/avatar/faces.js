@@ -28,6 +28,14 @@ export const FACES = {
     eyes: '#735B9C', brow: '#704C50', lips: '#AA3854', blush: '#DF817C',
     hairStyle: 'longWavy', faceShape: 'round', eyeShape: 'round', accessory: 'earrings', accessoryColor: '#E6AA4B',
   },
+  // Cadet version of Dmitry: olive-green uniform with a collar, short haircut, gold accents.
+  cadet: {
+    id: 'cadet', name: 'Major Andrey', gender: 'm', nationality: 'Russian', vibe: 'calm',
+    bg: '#E4E8DA', clothing: '#4F6B3A', clothingDark: '#33472A', clothingStyle: 'collar',
+    skin: '#E4AD82', skinLight: '#F5CAA2', hair: '#302A2C', hairLight: '#5E5254',
+    eyes: '#4D6D67', brow: '#6A5554', lips: '#A64D4B', blush: '#D88D7D',
+    hairStyle: 'texturedCrop', faceShape: 'long', eyeShape: 'almond', accessory: 'none', accessoryColor: '#D4A93C',
+  },
 };
 
 const FALLBACK_PALETTE = [
