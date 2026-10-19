@@ -5,7 +5,7 @@ import { FRAME_CLS, renderAvatarSVG } from './svg.js';
 
 // Pixar-style portraits: one base render + feathered RGBA overlays that are
 // cross-faded for lip-sync (A / O / E), blinking and a happy smile.
-const PIXAR = new Set(['emma', 'james', 'sofia', 'alex']);
+const PIXAR = new Set(['emma', 'james', 'sofia', 'alex', 'cadet']);
 const LAYERS = ['A', 'O', 'E', 'happy', 'blink'];
 const MOUTHS = ['A', 'O', 'E'];
 // Viseme from the TTS engine -> mouth overlay (null = closed lips of the base render).
@@ -14,11 +14,13 @@ const HAPPY = new Set(['happy', 'encourage', 'excited', 'proud']);
 
 // Portraits ship as lazily-loaded JS modules with WebP data URLs (no extra
 // static files to deploy; each teacher is ~20 KB and loads on first use).
+// The cadet captain is drawn as SVG data URLs in the same format.
 const LOADERS = {
   emma: () => import('./pixar/emma.js'),
   james: () => import('./pixar/james.js'),
   sofia: () => import('./pixar/sofia.js'),
   alex: () => import('./pixar/alex.js'),
+  cadet: () => import('./pixar/cadet.js'),
 };
 const cache = {};
 function usePortrait(id) {

@@ -5,8 +5,8 @@ import { CADET_TEACHER } from '../../data/teachers.js';
 import { sfx } from '../../audio/sfx.js';
 
 const COPY = {
-  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: майор запаса Андрей Николаевич, офицер-воспитатель.' },
-  en: { title: 'Tutor version', hint: 'Changes Svetlana’s tone, pace and task difficulty.', who: 'For', cadet: 'Mentor: Major Andrey Nikolaevich (reserve), officer-educator.' },
+  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель.' },
+  en: { title: 'Tutor version', hint: 'Changes Svetlana’s tone, pace and task difficulty.', who: 'For', cadet: 'Mentor: Captain Andrey Nikolaevich (reserve), officer-educator.' },
 };
 const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 

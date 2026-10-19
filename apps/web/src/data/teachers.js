@@ -34,14 +34,14 @@ export const TEACHERS = [
     greeting: "Hey! Alexey here! Ready to level up your English like a video game? Let's go — first quest starts now!" },
 ];
 
-// Cadet version: Dmitry serves as a reserve major, an officer-educator of a cadet corps.
+// Cadet version: Dmitry serves as a reserve captain, an officer-educator of a cadet corps.
 // The saved id stays 'james' (no server changes); only the look, name, voice and greeting change.
-// Until a portrait is uploaded, Avatar draws the 'cadet' face from avatar/faces.js (uniform, short haircut).
+// Portrait: avatar/pixar/cadet.js (uniform with cap and captain's shoulder boards).
 export const CADET_TEACHER = {
-  id: 'cadet', baseId: 'james', name: 'Андрей Николаевич', nameEn: 'Major Andrey', emoji: '🎖️', bg: '#E4E8DA', accent: '#4F6B3A', gender: 'm',
+  id: 'cadet', baseId: 'james', name: 'Андрей Николаевич', nameEn: 'Captain Andrey', emoji: '🎖️', bg: '#E4E8DA', accent: '#4F6B3A', gender: 'm',
   voice: { pitch: 0.8, rate: 0.95 },
-  tagline: { en: 'Reserve major, cadet corps officer-educator', ru: 'Майор запаса, офицер-воспитатель' },
-  greeting: "Good day, cadet! I'm Major Andrey Nikolaevich, your English instructor. A little practice every day, and English will become your strong side. Ready? Let's begin!",
+  tagline: { en: 'Reserve captain, cadet corps officer-educator', ru: 'Капитан запаса, офицер-воспитатель' },
+  greeting: "Good day, cadet! I'm Captain Andrey Nikolaevich, your English instructor. A little practice every day, and English will become your strong side. Ready? Let's begin!",
 };
 
 const trackId = () => {
