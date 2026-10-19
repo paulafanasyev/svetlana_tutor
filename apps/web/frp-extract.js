@@ -146,16 +146,30 @@ export async function fpuExtract(jobs, root) {
   const get = async u => (await fetch(`https://r.jina.ai/${u}`, { signal: AbortSignal.timeout(90000) })).text();
   // direct: страница КонсультантПлюс без r.jina.ai (порядок абзацев как в документе), HTML -> текст.
   const ENT = { nbsp: ' ', quot: '"', laquo: '«', raquo: '»', amp: '&', lt: '<', gt: '>', mdash: '—', ndash: '–', hellip: '…' };
-  const getDirect = async u => (await (await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(90000) })).text())
+  const fetchHtml = async u => (await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(90000) })).text();
+  const getDirect = async u => (await fetchHtml(u))
     .replace(/<(script|style)[\s\S]*?<\/\1>/gi, '').replace(/<img[^>]*>/gi, 'ё').replace(/<\/?(?:p|br|div|h\d|li|tr)\b[^>]*>/gi, '\n').replace(/<[^>]+>/g, '')
     .replace(/&#(\d+);/g, (m, d) => String.fromCodePoint(+d)).replace(/&([a-z]+);/g, (m, k) => ENT[k] ?? m).replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n');
   const indexes = new Map();
+  // Оглавление: сначала HTML КонсультантПлюс напрямую (ссылки <a href="/document/cons_doc_X/HASH/">N. Название</a>),
+  // если ссылок нет — как раньше через r.jina.ai (markdown).
   const linksOf = async doc => {
     if (!indexes.has(doc)) {
-      const index = await get(`https://www.consultant.ru/document/cons_doc_${doc}/`);
       const links = new Map();
-      for (const m of index.matchAll(new RegExp(`\\[(\\d+(?:\\.\\d+)*)\\.?\\s([^\\]]*)\\]\\((https:\\/\\/www\\.consultant\\.ru\\/document\\/cons_doc_${doc}\\/[0-9a-f]+\\/)\\)`, 'g')))
-        if (!links.has(m[1])) links.set(m[1], { url: m[3], name: m[2] });
+      try {
+        const html = await fetchHtml(`https://www.consultant.ru/document/cons_doc_${doc}/`);
+        const re = new RegExp(`href="(?:https://www\\.consultant\\.ru)?(/document/cons_doc_${doc}/[0-9a-f]{40}/)"[^>]*>([\\s\\S]*?)</a>`, 'g');
+        for (const m of html.matchAll(re)) {
+          const text = m[2].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
+          const k = text.match(/^(\d+(?:\.\d+)*)\.?\s(.*)$/);
+          if (k && !links.has(k[1])) links.set(k[1], { url: `https://www.consultant.ru${m[1]}`, name: k[2] });
+        }
+      } catch {}
+      if (!links.size) {
+        const index = await get(`https://www.consultant.ru/document/cons_doc_${doc}/`);
+        for (const m of index.matchAll(new RegExp(`\\[(\\d+(?:\\.\\d+)*)\\.?\\s([^\\]]*)\\]\\((https:\\/\\/www\\.consultant\\.ru\\/document\\/cons_doc_${doc}\\/[0-9a-f]+\\/)\\)`, 'g')))
+          if (!links.has(m[1])) links.set(m[1], { url: m[3], name: m[2] });
+      }
       indexes.set(doc, links);
     }
     return indexes.get(doc);
@@ -192,7 +206,7 @@ export async function fpuExtract(jobs, root) {
       let rows0 = null;
       if (job.pick) {
         // Компактно: по каждому классу до job.pick ЭОР, приоритет — правообладатели из job.prefer.
-        const pref = job.prefer || ['Государственный университет просвещения', 'Издательство "Просвещение', 'ЯКласс'];
+        const pref = job.prefer || ['Государственный университет просвещения', 'Издательство "Просвещения', 'ЯКласс'];
         const parsed = all.filter(r => r.split('|')[1].startsWith(job.section + '.')).map(r => {
           const [n, code, title, owner, grade] = r.split('|');
           const g = (grade.match(/^(\d+)(?:\s*-\s*(\d+))?/) || []);
