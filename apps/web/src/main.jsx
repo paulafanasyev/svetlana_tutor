@@ -1,3 +1,4 @@
+import './app/trackFromUrl.js'; // must stay first: applies ?track=... before the store loads preferences
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';

@@ -34,8 +34,8 @@ export const TEACHERS = [
     greeting: "Hey! Alexey here! Ready to level up your English like a video game? Let's go — first quest starts now!" },
 ];
 
-// Cadet version: Dmitry serves as a reserve captain, an officer-educator of a cadet corps.
-// The saved id stays 'james' (no server changes); only the look, name, voice and greeting change.
+// Cadet version: the only mentor is a reserve captain, an officer-educator of a cadet corps
+// (Dmitry in uniform). The saved id stays 'james' (no server changes).
 // Portrait: avatar/pixar/cadet.js (uniform with cap and captain's shoulder boards).
 export const CADET_TEACHER = {
   id: 'cadet', baseId: 'james', name: 'Андрей Николаевич', nameEn: 'Captain Andrey', emoji: '🎖️', bg: '#E4E8DA', accent: '#4F6B3A', gender: 'm',
@@ -44,16 +44,18 @@ export const CADET_TEACHER = {
   greeting: "Good day, cadet! I'm Captain Andrey Nikolaevich, your English instructor. A little practice every day, and English will become your strong side. Ready? Let's begin!",
 };
 
-const trackId = () => {
+export const currentTrackId = () => {
   try { return (JSON.parse(localStorage.getItem('aet_prefs') || '{}') || {}).track || 'base'; } catch { return 'base'; }
 };
-const forTrack = (t) => (t && t.id === CADET_TEACHER.baseId && trackId() === 'cadet' ? CADET_TEACHER : t);
+const isCadet = () => currentTrackId() === 'cadet';
 
 // Teachers as shown in the current tutor version.
-export const teachersForTrack = () => TEACHERS.map(forTrack);
+export const teachersForTrack = () => (isCadet() ? [CADET_TEACHER] : TEACHERS);
 
 // Unknown or removed teacher ids (e.g. old saved choices) fall back to Svetlana.
+// In the cadet version every lesson is led by the captain.
 export const teacherById = (id) => {
+  if (isCadet()) return CADET_TEACHER;
   const key = id === CADET_TEACHER.id ? CADET_TEACHER.baseId : id;
-  return forTrack(TEACHERS.find((t) => t.id === key) || TEACHERS[0]);
+  return TEACHERS.find((t) => t.id === key) || TEACHERS[0];
 };

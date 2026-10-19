@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useApp, useT } from '../../core/store.js';
 import { api } from '../../core/api.js';
 import { LOCALES } from '../../i18n/index.js';
-import { TEACHERS, introVideoUrl } from '../../data/teachers.js';
+import { TEACHERS, CADET_TEACHER, introVideoUrl } from '../../data/teachers.js';
+import { TRACKS, trackById } from '../../data/tracks.js';
 import Avatar from '../../avatar/Avatar.jsx';
 import { Modal } from '../../ui/kit.jsx';
 import { sfx } from '../../audio/sfx.js';
@@ -10,15 +11,19 @@ import { track } from '../../core/analytics.js';
 
 // Emma, Alex, Sofia (filter keeps the row safe if the teacher list changes).
 const HERO_TEACHERS = ['emma', 'alex', 'sofia'].map((id) => TEACHERS.find((t) => t.id === id)).filter(Boolean);
+const VERSION_LABEL = { ru: 'Версия', en: 'Version' };
+const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 
 export default function Login() {
-  const { setUser, locale, setLocale } = useApp();
+  const { setUser, locale, setLocale, prefs, setPref } = useApp();
   const t = useT();
   const [mode, setMode] = useState('login');
   const [form, setForm] = useState({ email: '', password: '', name: '' });
   const [err, setErr] = useState(null);
   const [busy, setBusy] = useState(false);
   const [introOpen, setIntroOpen] = useState(false);
+  const version = trackById(prefs.track);
+  const hero = version.id === 'cadet' ? [CADET_TEACHER] : HERO_TEACHERS;
 
   const submit = async (e) => {
     e.preventDefault();
@@ -50,15 +55,23 @@ export default function Login() {
         {/* Brand side */}
         <div className="text-center lg:text-left">
           <div className="flex justify-center lg:justify-start items-end gap-[-10px] mb-6">
-            {HERO_TEACHERS.map((tc, i) => (
-              <div key={tc.id} className={`w-24 md:w-32 ${i === 1 ? 'z-10 scale-110 mx-[-14px]' : ''} anim-floaty`} style={{ animationDelay: i * 0.5 + 's' }}>
+            {hero.map((tc, i) => (
+              <div key={tc.id} className={`${hero.length === 1 ? 'w-36 md:w-44' : 'w-24 md:w-32'} ${hero.length > 1 && i === 1 ? 'z-10 scale-110 mx-[-14px]' : ''} anim-floaty`} style={{ animationDelay: i * 0.5 + 's' }}>
                 <Avatar teacher={tc} />
               </div>
             ))}
           </div>
           <h1 className="h1">🎓 {t('app.name')}</h1>
+          {version.id === 'cadet' && <p className="mt-2 font-black text-ink/70">🎖️ {pick(CADET_TEACHER.tagline, locale)} · {CADET_TEACHER.name}</p>}
           <p className="mt-3 text-lg font-semibold text-ink/60 max-w-md mx-auto lg:mx-0">{t('auth.subtitle')}</p>
-          <div className="mt-5 flex flex-wrap gap-2 justify-center lg:justify-start">
+          <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start items-center">
+            <span className="text-xs font-black text-ink/50 uppercase tracking-wider">{pick(VERSION_LABEL, locale)}:</span>
+            {TRACKS.map((v) => (
+              <button key={v.id} onClick={() => { sfx.click(); setPref('track', v.id); }} aria-pressed={version.id === v.id}
+                className={`chip cursor-pointer ${version.id === v.id ? '!bg-primary text-white' : ''}`}>{v.emoji} {pick(v.title, locale)}</button>
+            ))}
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
             <span className="chip">🧑‍🏫 {t('auth.feature.avatars')}</span>
             <span className="chip">🧩 {t('auth.feature.tasks')}</span>
             <span className="chip">🎮 {t('auth.feature.games')}</span>
