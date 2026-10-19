@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import App from './app/App.jsx';
 import { useApp } from './core/store.js';
 import { initAnalytics } from './core/analytics.js';
+import './ai/trackPrompt.js'; // tutor version (base / cadet / lyceum / support) for every local-AI request
 import './styles.css'; // processed by Vite (or externalized by the no-npm esbuild pipeline)
 
 // Apply saved theme before first paint (guarded: sandboxed iframes may block storage)

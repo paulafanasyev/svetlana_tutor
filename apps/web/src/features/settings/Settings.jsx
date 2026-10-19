@@ -11,6 +11,7 @@ import { sfx } from '../../audio/sfx.js';
 import AISettings from './AISettings.jsx';
 import About from './About.jsx';
 import NaturalVoices from './NaturalVoices.jsx';
+import TrackSettings from './TrackSettings.jsx';
 
 const TEST = { ru: 'Привет! Это проверка звука.', en: 'Hi! This is a sound check.' };
 const TEST_LABEL = { ru: 'Проверить голос', en: 'Test voice' };
@@ -30,6 +31,7 @@ export default function Settings() {
           {LOCALES.map((l) => <button key={l.id} onClick={() => { sfx.click(); setLocale(l.id); }} aria-pressed={locale === l.id} className={`btn !py-2.5 ${locale === l.id ? 'btn-primary' : 'btn-ghost'}`}>{l.flag} {l.label}</button>)}
         </div>
       </div>
+      <TrackSettings />
       <div className="card p-5 space-y-4">
         <div className="label">🔊 {t('settings.sound')}</div>
         <Toggle checked={prefs.musicOn} onChange={(v) => setPref('musicOn', v)} label={'🎵 ' + t('settings.music')} />
