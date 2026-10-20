@@ -153,6 +153,7 @@ export async function fpuExtract(jobs, root) {
   const indexes = new Map();
   // Оглавление: сначала HTML КонсультантПлюс напрямую (ссылки <a href="/document/cons_doc_X/HASH/">N. Название</a>),
   // если ссылок нет — как раньше через r.jina.ai (markdown).
+  // Номера пунктов вида 162(1) (вставленные пункты, например ОБЗР) тоже распознаются.
   const linksOf = async doc => {
     if (!indexes.has(doc)) {
       const links = new Map();
@@ -161,7 +162,7 @@ export async function fpuExtract(jobs, root) {
         const re = new RegExp(`href="(?:https://www\\.consultant\\.ru)?(/document/cons_doc_${doc}/[0-9a-f]{40}/)"[^>]*>([\\s\\S]*?)</a>`, 'g');
         for (const m of html.matchAll(re)) {
           const text = m[2].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
-          const k = text.match(/^(\d+(?:\.\d+)*)\.?\s(.*)$/);
+          const k = text.match(/^(\d+(?:\(\d+\))?(?:\.\d+)*)\.?\s(.*)$/);
           if (k && !links.has(k[1])) links.set(k[1], { url: `https://www.consultant.ru${m[1]}`, name: k[2] });
         }
       } catch {}
