@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap'); /* трафаретный шрифт кадетской версии (кириллица) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,95 +66,116 @@ body { @apply bg-page text-ink font-sans antialiased; }
 ::-webkit-scrollbar-track { background: transparent; }
 
 /* ===== Кадетская версия: <html data-track="cadet"> (app/trackTheme.js) =====
-   Олива и хаки, золото погон, красный кант, лёгкий камуфляж, уставные заглавные кнопки и звёзды.
-   Специфичность html[data-track] выше [data-theme]: цветовые темы не перебивают форму; тёмная тема даёт «ночной наряд». */
+   Полевая форма: камуфляж «лес», олива и хаки, латунь и золото, триколор, трафаретные заглавные надписи,
+   армейские планшеты (заклёпки по углам, строчка), кнопки-шильдики со срезанными углами, нашивки.
+   Специфичность html[data-track] выше [data-theme]; тёмная тема даёт «ночной наряд». */
 html[data-track='cadet'] {
- --c-primary: 63 79 31;   /* олива */
- --c-primary2: 96 112 46; /* светлая олива */
- --c-accent: 201 162 39;  /* золото */
- --c-page: 232 228 208;   /* хаки-бумага */
- --c-surface: 249 247 238;
- --c-ink: 30 34 20;
- --c-soft: 221 216 190;
+ --c-primary: 58 70 28;   /* олива */
+ --c-primary2: 92 106 44; /* светлая олива */
+ --c-accent: 201 162 39;  /* латунь */
+ --c-page: 196 190 150;   /* хаки */
+ --c-surface: 241 237 216;/* брезент */
+ --c-ink: 28 31 18;
+ --c-soft: 220 213 182;
  --cadet-gold: 201 162 39;
  --cadet-red: 178 34 34;
- --cadet-camo: 63 79 31;
+ --cadet-dark: 38 44 20;
+ --cadet-veil: 196 190 150;
+ --cadet-stencil: 'Russo One', 'Oswald', 'Roboto Condensed', 'Arial Narrow', Impact, system-ui, sans-serif;
 }
 html[data-track='cadet'][data-theme='galaxy'] {
  --c-primary: 120 138 60; --c-primary2: 150 166 80; --c-accent: 214 178 60;
- --c-page: 20 24 14; --c-surface: 33 39 23; --c-ink: 236 232 210; --c-soft: 48 56 32;
- --cadet-camo: 150 166 80;
+ --c-page: 22 26 14; --c-surface: 36 42 24; --c-ink: 236 232 210; --c-soft: 50 58 32;
+ --cadet-dark: 12 14 8; --cadet-veil: 18 22 12;
 }
 html[data-track='cadet'] body {
  background-color: rgb(var(--c-page));
- background-image:
-  radial-gradient(ellipse 140px 70px at 12% 18%, rgb(var(--cadet-camo) / 0.07), transparent 70%),
-  radial-gradient(ellipse 110px 60px at 78% 12%, rgb(110 90 50 / 0.06), transparent 70%),
-  radial-gradient(ellipse 160px 80px at 60% 62%, rgb(var(--cadet-camo) / 0.06), transparent 70%),
-  radial-gradient(ellipse 120px 70px at 22% 82%, rgb(110 90 50 / 0.06), transparent 70%),
-  repeating-linear-gradient(135deg, rgb(0 0 0 / 0.018) 0 2px, transparent 2px 9px);
- background-size: 520px 420px, 480px 380px, 560px 460px, 500px 400px, auto;
+ background-image: linear-gradient(rgb(var(--cadet-veil) / 0.62), rgb(var(--cadet-veil) / 0.62)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Crect width='240' height='240' fill='%238f8b5e'/%3E%3Cpath fill='%237a7a4a' d='M10 30 C40 5 90 20 100 45 C110 70 70 80 45 75 C20 70 -5 55 10 30Z'/%3E%3Cpath fill='%237a7a4a' d='M150 120 C180 95 235 110 240 140 C245 170 200 185 170 175 C140 165 125 140 150 120Z'/%3E%3Cpath fill='%237a7a4a' d='M30 170 C55 150 95 160 100 185 C105 215 60 230 35 220 C10 210 5 185 30 170Z'/%3E%3Cpath fill='%234f5528' d='M120 10 C150 0 190 15 185 40 C180 65 140 70 120 55 C100 40 95 20 120 10Z'/%3E%3Cpath fill='%234f5528' d='M60 95 C90 80 130 100 125 125 C120 150 80 155 60 140 C40 125 35 105 60 95Z'/%3E%3Cpath fill='%234f5528' d='M170 200 C195 185 235 195 235 220 C235 245 190 248 175 235 C160 222 150 210 170 200Z'/%3E%3Cpath fill='%234f5528' d='M0 120 C15 110 35 118 30 135 C25 150 5 152 0 145Z'/%3E%3Cpath fill='%234f5528' d='M240 120 C225 110 205 118 210 135 C215 150 235 152 240 145Z'/%3E%3Cpath fill='%233a3c22' d='M80 50 C95 42 115 50 110 62 C105 74 85 74 78 66 C72 58 70 54 80 50Z'/%3E%3Cpath fill='%233a3c22' d='M190 70 C205 62 225 72 220 85 C215 98 195 96 188 88 C181 80 180 75 190 70Z'/%3E%3Cpath fill='%233a3c22' d='M110 190 C125 182 145 192 140 205 C135 218 115 216 108 208 C101 200 100 195 110 190Z'/%3E%3Cpath fill='%233a3c22' d='M20 230 C35 222 55 232 50 240 L15 240 C12 236 12 233 20 230Z'/%3E%3Cpath fill='%233a3c22' d='M20 0 L50 0 C55 8 35 12 22 6Z'/%3E%3Cpath fill='%23a49f6e' d='M200 20 C215 12 235 22 232 35 C229 48 210 48 202 40 C194 32 192 26 200 20Z'/%3E%3Cpath fill='%23a49f6e' d='M140 150 C150 144 162 150 160 160 C158 170 145 170 140 164 C135 158 134 154 140 150Z'/%3E%3Cpath fill='%23a49f6e' d='M40 120 C50 114 62 120 60 130 C58 140 45 140 40 134 C35 128 34 124 40 120Z'/%3E%3C/svg%3E");
+ background-size: auto, 240px 240px;
  background-attachment: fixed;
 }
-/* Тонкая лента сверху: золото, красный кант, золото */
+/* Триколор сверху */
 html[data-track='cadet'] body::before {
- content: ''; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 9990; pointer-events: none;
- background: linear-gradient(180deg, rgb(var(--cadet-gold)) 0 2px, rgb(var(--cadet-red)) 2px 3px, rgb(var(--cadet-gold)) 3px 5px);
+ content: ''; position: fixed; left: 0; right: 0; top: 0; height: 6px; z-index: 9990; pointer-events: none;
+ background: linear-gradient(180deg, #fff 0 2px, #0039a6 2px 4px, #d52b1e 4px 6px);
+ box-shadow: 0 1px 3px rgb(0 0 0 / 0.35);
 }
-/* Водяной знак: звезда в углу */
+/* Водяной знак: звезда с ободом */
 html[data-track='cadet'] body::after {
- content: ''; position: fixed; right: -60px; bottom: -60px; width: 340px; height: 340px; z-index: 0; pointer-events: none; opacity: 0.06;
- background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%233f4f1f' d='M50 3l13.8 31.2 33.9 3.3-25.5 22.6 7.4 33.3L50 76.3 20.4 93.4l7.4-33.3L2.3 37.5l33.9-3.3z'/%3E%3C/svg%3E");
+ content: ''; position: fixed; right: -50px; bottom: -50px; width: 360px; height: 360px; z-index: 0; pointer-events: none; opacity: 0.09;
+ background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='47' fill='none' stroke='%23262c14' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23262c14' stroke-width='1.5'/%3E%3Cpath fill='%23262c14' d='M50 13l9.6 21.8 23.7 2.3-17.8 15.8 5.2 23.3L50 64.2 29.3 76.2l5.2-23.3-17.8-15.8 23.7-2.3z'/%3E%3C/svg%3E");
 }
 html[data-track='cadet'] #root { position: relative; z-index: 1; }
 
-html[data-track='cadet'] .card {
- border-radius: 14px;
- border: 1px solid rgb(var(--c-primary) / 0.22);
- box-shadow: 0 6px 20px -10px rgb(30 34 20 / 0.35), inset 0 0 0 1px rgb(255 255 255 / 0.35);
- background-image: linear-gradient(180deg, rgb(var(--cadet-gold) / 0.9) 0 3px, transparent 3px);
- background-repeat: no-repeat;
-}
-html[data-track='cadet'][data-theme='galaxy'] .card { box-shadow: 0 6px 20px -10px rgb(0 0 0 / 0.6); border-color: rgb(var(--c-primary) / 0.35); }
+/* Углы прямее: армейский стиль (круглые элементы rounded-full не трогаем) */
+html[data-track='cadet'] .rounded-3xl, html[data-track='cadet'] .rounded-2xl { border-radius: 8px !important; }
+html[data-track='cadet'] .rounded-xl { border-radius: 6px !important; }
 
+/* Планшет: брезент, тёмная окантовка, строчка, заклёпки по углам */
+html[data-track='cadet'] .card {
+ border-radius: 8px;
+ outline: 1px dashed rgb(var(--c-primary) / 0.35); outline-offset: -8px;
+ border: 2px solid rgb(var(--cadet-dark) / 0.75);
+ box-shadow: 0 10px 22px -12px rgb(0 0 0 / 0.55), inset 0 0 0 4px rgb(var(--c-surface)), inset 0 0 0 5px rgb(var(--c-primary) / 0.35);
+ background-color: rgb(var(--c-surface));
+ background-image:
+  radial-gradient(circle at 9px 9px, #d8c27a 0 2px, #6b5a1e 2.5px, transparent 3.5px),
+  radial-gradient(circle at calc(100% - 9px) 9px, #d8c27a 0 2px, #6b5a1e 2.5px, transparent 3.5px),
+  radial-gradient(circle at 9px calc(100% - 9px), #d8c27a 0 2px, #6b5a1e 2.5px, transparent 3.5px),
+  radial-gradient(circle at calc(100% - 9px) calc(100% - 9px), #d8c27a 0 2px, #6b5a1e 2.5px, transparent 3.5px),
+  repeating-linear-gradient(0deg, rgb(0 0 0 / 0.018) 0 1px, transparent 1px 3px),
+  repeating-linear-gradient(90deg, rgb(0 0 0 / 0.018) 0 1px, transparent 1px 3px);
+ background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+}
+html[data-track='cadet'][data-theme='galaxy'] .card { border-color: rgb(0 0 0 / 0.7); box-shadow: 0 10px 22px -12px rgb(0 0 0 / 0.8), inset 0 0 0 4px rgb(var(--c-surface)), inset 0 0 0 5px rgb(var(--c-primary) / 0.45); }
+
+/* Кнопки-шильдики: срезанные углы, трафарет, металл */
 html[data-track='cadet'] .btn,
 html[data-track='cadet'] .btn-primary,
 html[data-track='cadet'] .btn-ghost,
-html[data-track='cadet'] .btn-outline { border-radius: 10px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92em; }
+html[data-track='cadet'] .btn-outline {
+ border-radius: 0; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--cadet-stencil); font-weight: 400; font-size: 0.9em;
+ clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
 html[data-track='cadet'] .btn-primary {
- color: rgb(253 246 214);
- background: linear-gradient(180deg, rgb(var(--c-primary2)), rgb(var(--c-primary)));
- border: 1px solid rgb(var(--cadet-gold) / 0.85);
- box-shadow: 0 8px 18px -8px rgb(var(--c-primary) / 0.7), inset 0 1px 0 rgb(255 255 255 / 0.18);
- text-shadow: 0 1px 0 rgb(0 0 0 / 0.35);
+ color: #f6eccb;
+ background: linear-gradient(180deg, rgb(var(--c-primary2)) 0%, rgb(var(--c-primary)) 55%, rgb(var(--cadet-dark)) 100%);
+ box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.18), inset 0 -3px 0 rgb(0 0 0 / 0.3), inset 0 0 0 2px rgb(var(--cadet-gold) / 0.8);
+ text-shadow: 0 1px 0 rgb(0 0 0 / 0.5);
 }
-html[data-track='cadet'] .btn-primary:hover { filter: brightness(1.08); }
-html[data-track='cadet'] .btn-outline { border-color: rgb(var(--c-primary) / 0.5); }
-html[data-track='cadet'] .btn-ghost { border: 1px solid rgb(var(--c-primary) / 0.18); }
+html[data-track='cadet'] .btn-primary:hover { filter: brightness(1.1); }
+html[data-track='cadet'] .btn-ghost { background: rgb(var(--c-soft)); box-shadow: inset 0 0 0 2px rgb(var(--c-primary) / 0.35); }
+html[data-track='cadet'] .btn-outline { border: 0; color: rgb(var(--c-primary)); box-shadow: inset 0 0 0 2px rgb(var(--c-primary) / 0.7); }
+html[data-track='cadet'][data-theme='galaxy'] .btn-outline { color: rgb(var(--cadet-gold)); box-shadow: inset 0 0 0 2px rgb(var(--cadet-gold) / 0.7); }
 
-/* Чипы как нашивки: олива с золотым кантом */
+/* Нашивки */
 html[data-track='cadet'] .chip {
- border-radius: 6px;
- background: rgb(var(--c-primary) / 0.12);
- border: 1px solid rgb(var(--cadet-gold) / 0.6);
- text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.78rem;
+ border-radius: 0; clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+ background: rgb(var(--cadet-dark)); color: #e9dfb6;
+ box-shadow: inset 0 0 0 1px rgb(var(--cadet-gold) / 0.7);
+ text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.74rem;
 }
 
-html[data-track='cadet'] .input { border-radius: 10px; border-color: rgb(var(--c-primary) / 0.25); }
-html[data-track='cadet'] .input:focus { border-color: rgb(var(--cadet-gold)); box-shadow: 0 0 0 3px rgb(var(--cadet-gold) / 0.2); }
+html[data-track='cadet'] .input {
+ border-radius: 0; border-color: rgb(var(--c-primary) / 0.45); background: rgb(var(--c-surface));
+ clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+html[data-track='cadet'] .input:focus { border-color: rgb(var(--cadet-gold)); }
 
-/* Заголовки: уставной шрифт (узкий, заглавный), золотая звезда */
+/* Заголовки: трафарет, заглавные, золотая звезда */
 html[data-track='cadet'] .h1,
 html[data-track='cadet'] .h2 {
- font-family: 'Oswald', 'Roboto Condensed', 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
- text-transform: uppercase; letter-spacing: 0.04em; font-weight: 800;
+ font-family: var(--cadet-stencil); font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em;
+ text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
 }
+html[data-track='cadet'][data-theme='galaxy'] .h1, html[data-track='cadet'][data-theme='galaxy'] .h2 { text-shadow: 0 1px 0 rgb(0 0 0 / 0.6); }
 html[data-track='cadet'] .h1::before,
-html[data-track='cadet'] .h2::before { content: '★'; color: rgb(var(--cadet-gold)); margin-right: 0.4em; font-size: 0.8em; vertical-align: 0.08em; }
-html[data-track='cadet'] .label { color: rgb(var(--c-primary) / 0.85); letter-spacing: 0.12em; }
-html[data-track='cadet'][data-theme='galaxy'] .label { color: rgb(var(--cadet-gold) / 0.85); }
-html[data-track='cadet'] .label::before { content: '▸ '; color: rgb(var(--cadet-gold)); }
+html[data-track='cadet'] .h2::before { content: '★'; color: rgb(var(--cadet-gold)); margin-right: 0.4em; font-size: 0.8em; vertical-align: 0.08em; text-shadow: 0 1px 0 #5a4710; }
+html[data-track='cadet'] .label { font-family: var(--cadet-stencil); font-weight: 400; color: rgb(var(--c-primary)); letter-spacing: 0.14em; }
+html[data-track='cadet'][data-theme='galaxy'] .label { color: rgb(var(--cadet-gold) / 0.9); }
+html[data-track='cadet'] .label::before { content: '/// '; color: rgb(var(--cadet-gold)); letter-spacing: -0.1em; margin-right: 0.3em; }
 
-/* Выделение и полоса прокрутки */
-html[data-track='cadet'] ::selection { background: rgb(var(--cadet-gold) / 0.35); }
-html[data-track='cadet'] ::-webkit-scrollbar-thumb { background: rgb(var(--c-primary) / 0.45); border-radius: 4px; }
+/* Акценты, выделение и прокрутка в цвет латуни */
+html[data-track='cadet'] .bg-accent { background-color: rgb(var(--cadet-gold)) !important; }
+html[data-track='cadet'] ::selection { background: rgb(var(--cadet-gold) / 0.4); }
+html[data-track='cadet'] ::-webkit-scrollbar-thumb { background: rgb(var(--c-primary) / 0.6); border-radius: 0; }
