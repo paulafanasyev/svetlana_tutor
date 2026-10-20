@@ -1,0 +1,5 @@
+Contact: mailto:Pavel.afanasyev@inbox.ru
+Contact: https://t.me/PaulPavel_it_dev
+Expires: 2027-10-21T00:00:00.000Z
+Preferred-Languages: ru, en
+Policy: https://github.com/paulafanasyev/svetlana_tutor/blob/main/SECURITY_AUDIT.md
