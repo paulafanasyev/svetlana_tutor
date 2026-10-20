@@ -1,7 +1,8 @@
 // English is one subject among the school ones, so it lives in its own section (/english) with inner tabs:
-// overview, lesson, conversation, games, exams, courses. Old links (/lesson, /talk, /games/..., /exams, /courses)
+// overview, practice (exercises), conversation, games, exams, courses. Old links (/lesson, /talk, /games/..., /exams, /courses)
 // keep working and open inside the same section. In the lyceum version the section is the advanced level.
-// The tab bar has no visible title: each page keeps its own single heading; the section name is the nav label.
+// School lessons and homework for every subject are in the main section «Уроки» (/lessons), so the English
+// exercises tab is called «Упражнения» to avoid two different «Уроки».
 import { NavLink } from 'react-router-dom';
 import { useApp, useT } from '../../core/store.js';
 import { pickL } from '../../i18n/index.js';
@@ -18,7 +19,7 @@ export const englishTitle = (track, locale) => pickL(track === 'lyceum' ? TITLE.
 
 export const ENGLISH_TABS = [
   { to: '/english', icon: '🧭', label: { ru: 'Обзор', en: 'Overview' }, end: true },
-  { to: '/lesson', icon: '📖', key: 'nav.lesson' },
+  { to: '/lesson', icon: '✏️', label: { ru: 'Упражнения', en: 'Practice' } },
   { to: '/talk', icon: '💬', key: 'nav.talk' },
   { to: '/games', icon: '🎮', key: 'nav.games' },
   { to: '/exams', icon: '📝', key: 'nav.exams' },
@@ -30,14 +31,17 @@ export default function EnglishTabs() {
   const t = useT();
   const label = (tab) => (tab.label ? pickL(tab.label, locale) : t(tab.key));
   return (
-    <nav className="mb-5 flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" aria-label={englishTitle(prefs.track, locale)}>
-      {ENGLISH_TABS.map((tab) => (
-        <NavLink key={tab.to} to={tab.to} end={tab.end} onClick={() => sfx.click()}
-          className={({ isActive }) => `chip whitespace-nowrap min-h-[44px] !px-4 transition ${isActive ? '!bg-primary !text-white shadow' : 'hover:brightness-95'}`}>
-          <span aria-hidden="true">{tab.icon}</span>{label(tab)}
-        </NavLink>
-      ))}
-    </nav>
+    <div className="mb-5">
+      <div className="label mb-2">🔤 {englishTitle(prefs.track, locale)}</div>
+      <nav className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" aria-label={englishTitle(prefs.track, locale)}>
+        {ENGLISH_TABS.map((tab) => (
+          <NavLink key={tab.to} to={tab.to} end={tab.end} onClick={() => sfx.click()}
+            className={({ isActive }) => `chip whitespace-nowrap min-h-[36px] transition ${isActive ? '!bg-primary !text-white shadow' : 'hover:brightness-95'}`}>
+            <span aria-hidden="true">{tab.icon}</span>{label(tab)}
+          </NavLink>
+        ))}
+      </nav>
+    </div>
   );
 }
 
