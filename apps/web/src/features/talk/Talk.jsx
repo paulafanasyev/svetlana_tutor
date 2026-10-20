@@ -15,6 +15,8 @@ import { useAI } from '../../ai/useAI.js';
 const MODE_COPY = { en: { local: 'AI: local model', basic: 'AI: basic mode', mic: 'Microphone error — type instead.' }, ru: { local: 'AI: локальная модель', basic: 'AI: базовый режим', mic: 'Ошибка микрофона — напиши ответ.' } };
 // A free-chat turn counts toward the reward only if it is a real English sentence (3+ words) and not a repeat.
 const countsAsTurn = (text, previous) => (text.match(/[A-Za-z']+/g) || []).length >= 3 && text.trim().toLowerCase() !== previous;
+// Safety answers (help lines, refusals) can be Russian: speak them with a Russian voice.
+const voiceLang = (text) => (/[\u0400-\u04FF]/.test(text || '') ? 'ru-RU' : 'en-US');
 
 export default function Talk() {
   const { user, setUser } = useApp();
@@ -44,7 +46,7 @@ export default function Talk() {
   const teacherSay = (text, onDone) => {
     if (!text) { onDone?.(); return; }
     setMessages((m) => [...m, { who: 't', text }]);
-    tts.speak(text, teacher, { onStart: () => setTalking(true), onEnd: () => { setTalking(false); onDone?.(); }, lang: 'en-US' });
+    tts.speak(text, teacher, { onStart: () => setTalking(true), onEnd: () => { setTalking(false); onDone?.(); }, lang: voiceLang(text) });
   };
   const startScenario = (s) => {
     tts.unlock?.();
@@ -84,7 +86,7 @@ export default function Talk() {
     const result = await ai.runTask('tutor_reply', { text, history: messages.slice(-8).map((item) => ({ role: item.who === 's' ? 'user' : 'assistant', content: item.text })), scenario: mode?.s?.title?.en || mode?.s?.id || 'free conversation' }, { locale, level: user.level, teacher, fallbackSession: sessionRef.current, ...context, onToken: (token) => { streamed += token; updateBubble(bubbleId, streamed); } });
     const finalText = result.data?.text || streamed;
     updateBubble(bubbleId, finalText);
-    tts.speak(finalText, teacher, { onStart: () => setTalking(true), onEnd: () => setTalking(false), lang: 'en-US' });
+    tts.speak(finalText, teacher, { onStart: () => setTalking(true), onEnd: () => setTalking(false), lang: voiceLang(finalText) });
     return result;
   };
   const submit = async (textRaw) => {
@@ -97,6 +99,8 @@ export default function Talk() {
       api.addAttempt({ taskType: 'speaking', topic: 'conversation', level: mode.s.level, correct: res.ok, durationMs: 0 }).then((u) => u && setUser(u)).catch(() => {});
       if (res.ok) { okSteps.current++; sfx.correct(); flash('happy'); } else { sfx.wrong(); flash('encourage'); }
       const correction = await ai.runTask('correct_sentence', { sentence: text }, { locale, level: user.level });
+      // A crisis or a dangerous request leaves the script: the teacher answers with care / a refusal first.
+      if (correction.safety) { await askTeacher(text); return; }
       const errors = correction.data?.errors || [];
       if (errors.length) setMessages((m) => [...m, { who: 'fix', text: `${errors[0].wrong} → ${errors[0].right}`, tip: errors[0].rule }]);
       // Scenarios stay scripted (predictable lesson path); the next line waits for the teacher to finish speaking.
@@ -108,7 +112,7 @@ export default function Talk() {
       if (countsAsTurn(text, lastFree.current)) okSteps.current = Math.min(okSteps.current + 1, 20);
       lastFree.current = text.trim().toLowerCase();
       const correction = await ai.runTask('correct_sentence', { sentence: text }, { locale, level: user.level });
-      const errors = correction.data?.errors || [];
+      const errors = correction.safety ? [] : (correction.data?.errors || []);
       if (errors.length) flash('encourage'); else if (Math.random() < 0.4) flash('happy');
       if (errors.length) setMessages((m) => [...m, { who: 'fix', text: `${errors[0].wrong} → ${errors[0].right}`, tip: errors[0].rule }]);
       await askTeacher(text);
@@ -137,10 +141,10 @@ export default function Talk() {
   return (
     <div className="max-w-3xl mx-auto h-[calc(100vh-140px)] md:h-[calc(100vh-120px)] flex flex-col">
       {doneInfo && <Confetti burst={doneInfo.steps > 2} />}
-      <div className="flex items-center gap-3 mb-3"><button className="text-2xl" onClick={() => { finish(false); setMode(null); }}>←</button><div className="font-black truncate">{scenario ? `${scenario.emoji} ${pickL(scenario.title, locale)}` : '🗨️ ' + t('talk.free')}</div>{scenario && !doneInfo && <span className="chip ml-auto">{t('talk.step', { n: Math.min(session.index + 1, session.total), total: session.total })}</span>}{!scenario && !doneInfo && <button className="btn-ghost !py-1.5 !px-3 text-sm ml-auto" onClick={() => finish(true)}>🏁 {t('talk.exit')}</button>}</div>
+      <div className="flex items-center gap-3 mb-3"><button className="text-2xl min-w-[44px] min-h-[44px]" aria-label={t('common.back')} onClick={() => { finish(false); setMode(null); }}>←</button><div className="font-black truncate">{scenario ? `${scenario.emoji} ${pickL(scenario.title, locale)}` : '🗨️ ' + t('talk.free')}</div>{scenario && !doneInfo && <span className="chip ml-auto">{t('talk.step', { n: Math.min(session.index + 1, session.total), total: session.total })}</span>}{!scenario && !doneInfo && <button className="btn-ghost !py-1.5 !px-3 text-sm ml-auto" onClick={() => finish(true)}>🏁 {t('talk.exit')}</button>}</div>
       <div className="flex items-center gap-2 mb-2"><span className="chip text-xs">{ai.ready ? copy.local : copy.basic}</span>{voiceError && <span className="text-xs font-bold text-rose-600">{voiceError}</span>}</div>
       <div className="flex-1 min-h-0 grid grid-cols-[92px_1fr] md:grid-cols-[150px_1fr] gap-4"><div className="sticky top-0"><Avatar teacher={teacher} talking={talking} emotion={emotion} frame={user.frame} /></div><div ref={logRef} className="overflow-y-auto pr-1 space-y-2.5 pb-2">{messages.map((m, i) => m.who === 'fix' ? <div key={m.id || i} className="anim-bubble mx-auto max-w-[90%] text-center text-sm font-bold bg-amber-100 text-amber-800 rounded-2xl px-4 py-2">✏️ {m.text}<div className="text-xs font-semibold mt-0.5">{m.tip}</div></div> : <div key={m.id || i} className={`anim-bubble max-w-[85%] rounded-2xl px-4 py-2.5 font-semibold leading-snug ${m.who === 't' ? 'bg-surface border border-black/5 shadow-sm' : 'ml-auto text-white'}`} style={m.who === 's' ? { background: 'linear-gradient(135deg, rgb(var(--c-primary)), rgb(var(--c-primary2)))' } : {}}>{m.text}</div>)}{doneInfo && <div className="card p-5 text-center anim-pop"><div className="text-3xl">🏆</div><div className="font-black text-lg">{t('talk.done.title')}</div><div className="mt-1 font-bold text-ink/60 text-sm">{t('talk.done.steps')}: {doneInfo.steps} · ⭐ +{doneInfo.xp} · 🪙 +{doneInfo.coins}</div><button className="btn-primary mt-3" onClick={() => setMode(null)}>{t('common.back')}</button></div>}</div></div>
-      {!doneInfo && <div className="mt-3 space-y-2">{scenario && session.step && <div className="text-center"><span className="chip text-xs">💡 {t('talk.hint')}: {pickL(session.step.hint, locale)}</span></div>}<div className="flex gap-2">{stt.supported && <button onClick={toggleMic} className={`w-14 h-14 rounded-2xl text-2xl flex items-center justify-center shadow-lg shrink-0 transition ${listening ? 'bg-rose-500 text-white animate-pulse' : 'btn-primary !p-0'}`}>{listening ? '⏹' : '🎤'}</button>}<input className="input flex-1" placeholder={listening ? t('task.speaking.listening') : t('talk.typed.placeholder')} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && submit()} /><button className="btn-primary shrink-0" onClick={() => submit()} disabled={!input.trim() || talking}>➤</button></div></div>}
+      {!doneInfo && <div className="mt-3 space-y-2">{scenario && session.step && <div className="text-center"><span className="chip text-xs">💡 {t('talk.hint')}: {pickL(session.step.hint, locale)}</span></div>}<div className="flex gap-2">{stt.supported && <button onClick={toggleMic} aria-label={listening ? 'Stop' : 'Microphone'} className={`w-14 h-14 rounded-2xl text-2xl flex items-center justify-center shadow-lg shrink-0 transition ${listening ? 'bg-rose-500 text-white animate-pulse' : 'btn-primary !p-0'}`}>{listening ? '⏹' : '🎤'}</button>}<input className="input flex-1" placeholder={listening ? t('task.speaking.listening') : t('talk.typed.placeholder')} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && submit()} /><button className="btn-primary shrink-0" aria-label="Send" onClick={() => submit()} disabled={!input.trim() || talking}>➤</button></div></div>}
     </div>
   );
 }

@@ -5,8 +5,16 @@
 //    trusted adult + free helplines (RU 8-800-2000-122, VN 111, emergency 112 / 113);
 //  - danger: requests for weapons, explosives, drugs, how to hurt people → brief refusal, back to the lesson.
 // Plain words like "war", "army", "gun" in an English exercise are NOT blocked: only clear requests.
+// Also used for the class chat (features/school/schoolStore.js).
 
-const norm = (s) => String(s == null ? '' : s).toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ');
+// Lower case, ё→е, Latin look-alikes in Cyrillic words (a→а, o→о, e→е, p→р, c→с, x→х, y→у), letters repeated 3+ times squeezed to one.
+const LOOK = { a: 'а', o: 'о', e: 'е', p: 'р', c: 'с', x: 'х', y: 'у', k: 'к', m: 'м', t: 'т', h: 'н', b: 'в' };
+const fixMixed = (w) => (/[а-я]/.test(w) && /[a-z]/.test(w) ? w.replace(/[aoepcxykmthb]/g, (ch) => LOOK[ch]) : w);
+const norm = (s) => String(s == null ? '' : s).toLowerCase().replace(/ё/g, 'е')
+  .replace(/[\u0400-\u04ffa-z0-9]+/g, fixMixed)
+  .replace(/([а-яa-z])\1{2,}/g, '$1')
+  .replace(/[^\p{L}\p{N}'\s-]+/gu, ' ')
+  .replace(/\s+/g, ' ');
 
 const CRISIS = [
   // ru
@@ -14,9 +22,13 @@ const CRISIS = [
   /(порезать|режу|порезал[аи]?) (себя|руки|вены)/, /самоповрежд/, /наглотаться таблеток/, /прыгнуть с (крыши|моста)/,
   /меня (бьют|избивают|насилу|домогаются|трогают)/, /(отчим|отец|папа|мама|мать|брат|сестра|учитель|воспитатель|старшие|кто-то|он|она|они) (бьет|бьют|избивает|избивают|трогает|домогается) меня/,
   /надо мной издеваются/, /меня травят/,
+  // ru slang and transliteration
+  /выпил(иться|юсь|ился)/, /роскомнадзор(нуться|нусь|нулся|иться)/, /самовыпил/, /выйти в окно/, /не хочу просыпаться/,
+  /\bne hochu zhit/, /\bhochu umeret/, /\bpokonchit s soboy/,
   // en
   /\bkill(ing)? myself\b/, /\bsuicid/, /\bwant to die\b/, /\bdon'?t want to live\b/, /\bself[- ]?harm/, /\bcut(ting)? myself\b/, /\bhurt(ing)? myself\b/,
   /\b(someone|he|she|they|my (dad|mom|mum|father|mother|stepfather|teacher)) (hits|beats|hurts|touches|abuses) me\b/, /\bi am (being )?(abused|bullied)\b/, /\bi'?m (being )?(abused|bullied)\b/,
+  /\bkms\b/, /\bunalive\b/, /\bend (it all|my life)\b/, /\bkill me\b/,
   // vi
   /tự tử/, /muốn chết/, /không muốn sống/, /tự làm hại/, /bị (đánh đập|xâm hại|bắt nạt)/,
 ];
@@ -25,7 +37,7 @@ const DANGER = [
   // ru
   /как (сделать|собрать|изготовить|смастерить) (бомб|взрывчат|взрывн|оружи|пистолет|автомат|самопал|коктейль молотова|яд)/,
   /(купить|достать|где взять|заказать) (наркот|травк|закладк|оружи|пистолет|патрон)/,
-  /как (убить|отравить|зарезать|застрелить) /, /(взорвать|подорвать|заминировать|расстрелять) (школ|класс|здани|людей)/,
+  /как (убить|отравить|зарезать|застрелить) (?!время|скуку|вечер|час)/, /(взорвать|подорвать|заминировать|расстрелять) (школ|класс|здани|людей)/,
   /как (стрелять|целиться) (в людей|в человека)/,
   // en
   /\bhow (do i |to |can i )?(make|build|craft) (a |an )?(bomb|explosive|gun|weapon|poison|molotov)/, /\bhow (do i |to |can i )?(kill|poison|stab|shoot) (a |my |some|him|her|them|people|person)/,
@@ -58,8 +70,10 @@ export function checkChildSafety(text, locale = 'ru') {
 export function learnerText(input) {
   if (input == null) return '';
   if (typeof input === 'string') return input;
-  return [input.text, input.message, input.question, input.prompt].filter((x) => typeof x === 'string').join(' ');
+  return [input.text, input.message, input.question, input.prompt, input.sentence, input.answer, input.transcript, input.essay, input.writing]
+    .filter((x) => typeof x === 'string').join(' ');
 }
 
-// Tasks that answer the learner directly in free text.
+// Tasks that answer the learner directly in free text: on a hit they get the care / refusal message.
+// Every other AI task with learner text is still checked: on a hit the model is skipped (rule-based fallback only).
 export const GUARDED_TASKS = ['tutor_reply'];

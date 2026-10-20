@@ -17,6 +17,12 @@ const time = (t) => new Date(t).toLocaleString('ru-RU', { day: '2-digit', month:
 const dayRu = (d) => (d ? new Date(`${d}T12:00:00`).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' }) : '');
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 
+// Per-learner "don't show messages from" list, kept on this device.
+const MUTE_KEY = 'aet_chat_muted';
+const loadMuted = (uid) => { try { return (JSON.parse(localStorage.getItem(MUTE_KEY) || '{}') || {})[uid] || []; } catch { return []; } };
+const saveMuted = (uid, list) => { try { const all = JSON.parse(localStorage.getItem(MUTE_KEY) || '{}') || {}; all[uid] = list; localStorage.setItem(MUTE_KEY, JSON.stringify(all)); } catch { /* noop */ } };
+const smallBtn = 'min-h-[44px] px-2 text-xs font-bold text-ink/50 hover:text-ink';
+
 function SvetlanaCheck({ check }) {
   if (!check) return <p className="text-xs font-semibold text-ink/50">Светлана ещё не проверяла этот ответ.</p>;
   return (
@@ -166,7 +172,30 @@ function ClassTabs({ classes, cls, setSel }) {
   return (
     <div className="flex flex-wrap gap-2" role="group" aria-label="Классы">
       {classes.map((c) => (
-        <button key={c.id} onClick={() => setSel(c.id)} aria-pressed={cls?.id === c.id} className={`rounded-full px-4 py-1.5 text-sm font-black ${cls?.id === c.id ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>{c.title} · {c.subject}{c.lesson ? ' 🔴' : ''}{c.lesson && <span className="sr-only"> (идёт урок)</span>}</button>
+        <button key={c.id} onClick={() => setSel(c.id)} aria-pressed={cls?.id === c.id} className={`rounded-full px-4 py-1.5 min-h-[44px] text-sm font-black ${cls?.id === c.id ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>{c.title} · {c.subject}{c.lesson ? ' 🔴' : ''}{c.lesson && <span className="sr-only"> (идёт урок)</span>}</button>
+      ))}
+    </div>
+  );
+}
+
+// Teacher-only signals: crisis messages that were not posted, blocked dangerous messages, reports.
+const SIGNAL = { crisis: '💙 Ученику может быть нужна помощь', danger: '⛔ Опасное сообщение не отправлено', report: '⚑ Жалоба на сообщение' };
+function Signals({ cls, user, db }) {
+  const list = db.incidents.filter((x) => x.classId === cls.id && !x.resolved).sort((a, b) => b.at - a.at);
+  if (!list.length) return null;
+  return (
+    <div className="card p-4 space-y-2 border-2 border-amber-300" role="region" aria-label="Сигналы для учителя">
+      <div className="font-black">🔔 Сигналы ({list.length})</div>
+      <p className="text-xs font-semibold text-ink/60">Видите только вы. При признаках беды поговорите с учеником лично, сообщите школьному психологу и родителям; при угрозе жизни звоните 112.</p>
+      {list.map((x) => (
+        <div key={x.id} className="rounded-xl bg-white p-3 text-sm">
+          <div className="text-xs font-black text-ink/50">{SIGNAL[x.kind]} · {x.name}{x.by ? ` · жалоба от ${x.by}` : ''} · {time(x.at)}</div>
+          <p className="whitespace-pre-wrap font-semibold mt-1">{x.text}</p>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {x.kind === 'report' && x.msgId && <button className="btn-ghost !py-1.5 text-sm" onClick={() => school.setHidden(cls.id, x.msgId, user.id, true)}>Скрыть сообщение</button>}
+            <button className="btn-primary !py-1.5 text-sm" onClick={() => school.resolveIncident(x.id, user.id)}>Разобрано</button>
+          </div>
+        </div>
       ))}
     </div>
   );
@@ -174,24 +203,63 @@ function ClassTabs({ classes, cls, setSel }) {
 
 function Chat({ cls, user, db }) {
   const [text, setText] = useState('');
-  const list = db.messages[cls.id] || [];
+  const [help, setHelp] = useState('');
+  const [note, setNote] = useState('');
+  const [muted, setMuted] = useState(() => loadMuted(user.id));
+  const isTeacher = user.id === cls.teacherId;
+  const all = db.messages[cls.id] || [];
+  const list = isTeacher ? all : all.filter((m) => !muted.includes(m.userId));
   const end = useRef(null);
   useEffect(() => { end.current?.scrollIntoView({ block: 'nearest' }); }, [list.length]);
-  const send = (kind = 'msg') => { if (school.post(cls.id, user, text, kind)) setText(''); };
-  const isTeacher = user.id === cls.teacherId;
+  const send = (kind = 'msg') => {
+    const r = school.post(cls.id, user, text, kind);
+    if (!r) return;
+    if (r.blocked === 'crisis') { setHelp(r.help); setNote(''); setText(''); return; }
+    if (r.blocked === 'danger') { setNote('Такое сообщение нельзя отправить в чат класса. Если кому-то грозит опасность, скажи взрослому или позвони 112.'); return; }
+    if (r.blocked === 'member') { setNote('Писать в чат могут только ученики этого класса и учитель.'); return; }
+    setHelp(''); setNote(''); setText('');
+  };
+  const mute = (m) => { const next = [...new Set([...muted, m.userId])]; setMuted(next); saveMuted(user.id, next); setNote(`Сообщения от ${m.name} больше не показываются.`); };
+  const unmuteAll = () => { setMuted([]); saveMuted(user.id, []); setNote(''); };
+  const report = (m) => { if (school.report(cls.id, m.id, user)) setNote('Спасибо! Учитель увидит жалобу.'); };
   return (
     <div className="card p-4 flex flex-col gap-3">
       <div className="font-black">💬 Чат класса</div>
+      <p className="text-[11px] font-semibold text-ink/50">Правила: пишем вежливо, не делимся адресом и телефоном. Если тебя обижают, нажми «Пожаловаться»: учитель увидит.</p>
       <div className="max-h-80 min-h-[8rem] overflow-y-auto space-y-2 rounded-2xl bg-soft/60 p-3" aria-live="polite">
         {list.length === 0 && <p className="text-sm font-semibold text-ink/50">Сообщений пока нет.</p>}
-        {list.map((m) => (
-          <div key={m.id} className={`rounded-xl px-3 py-2 text-sm ${m.kind === 'hw' ? 'bg-amber-100' : m.userId === user.id ? 'bg-white' : 'bg-white/70'}`}>
-            <div className="text-[11px] font-black text-ink/50">{m.kind === 'hw' ? '📌 Домашнее задание · ' : ''}{m.name}{m.userId === cls.teacherId ? ' (учитель)' : ''} · {time(m.at)}</div>
-            <div className="whitespace-pre-wrap font-semibold">{m.text}</div>
-          </div>
-        ))}
+        {list.map((m) => {
+          const mine = m.userId === user.id;
+          const fromTeacher = m.userId === cls.teacherId;
+          if (m.hidden && !isTeacher) return <div key={m.id} className="rounded-xl px-3 py-2 text-xs font-semibold text-ink/40 bg-white/50">Сообщение скрыто учителем.</div>;
+          return (
+            <div key={m.id} className={`rounded-xl px-3 py-2 text-sm ${m.hidden ? 'opacity-50' : ''} ${m.kind === 'hw' ? 'bg-amber-100' : mine ? 'bg-white' : 'bg-white/70'}`}>
+              <div className="text-[11px] font-black text-ink/50">{m.kind === 'hw' ? '📌 Домашнее задание · ' : ''}{m.name}{fromTeacher ? ' (учитель)' : ''} · {time(m.at)}{m.hidden ? ' · скрыто' : ''}{isTeacher && m.reports.length ? ` · жалоб: ${m.reports.length}` : ''}</div>
+              <div className="whitespace-pre-wrap font-semibold">{m.text}</div>
+              {!mine && (
+                <div className="flex flex-wrap gap-1 -mb-2">
+                  {isTeacher
+                    ? <button className={smallBtn} onClick={() => school.setHidden(cls.id, m.id, user.id, !m.hidden)}>{m.hidden ? 'Вернуть' : 'Скрыть'}</button>
+                    : !fromTeacher && (
+                      <>
+                        <button className={smallBtn} aria-label={`Пожаловаться на сообщение ${m.name}`} onClick={() => report(m)}>⚑ Пожаловаться</button>
+                        <button className={smallBtn} aria-label={`Не показывать сообщения ${m.name}`} onClick={() => mute(m)}>🔇 Не показывать</button>
+                      </>
+                    )}
+                </div>
+              )}
+            </div>
+          );
+        })}
         <div ref={end} />
       </div>
+      {help && (
+        <div role="alert" className="rounded-2xl border border-sky-200 bg-sky-50 p-3 text-sm font-semibold">
+          💙 {help}
+          <div className="text-xs text-ink/60 mt-1">Это сообщение не ушло в чат. Учитель получит тихий сигнал, чтобы помочь.</div>
+        </div>
+      )}
+      {note && <p className="text-sm font-bold text-ink/70" role="status">{note}{muted.length > 0 && <button className="ml-2 underline" onClick={unmuteAll}>Показывать всех</button>}</p>}
       <div className="flex flex-wrap gap-2">
         <textarea aria-label="Сообщение" className={`${input} min-h-[2.75rem] flex-1`} rows={2} value={text} onChange={(e) => setText(e.target.value)} placeholder="Написать классу…" onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } }} />
         <div className="flex flex-col gap-2">
@@ -278,13 +346,14 @@ function TeacherView({ user, db }) {
               {cls.members.length === 0 && <p className="text-sm font-semibold text-ink/50">Пока никого. Передайте код классу.</p>}
               <ul className="space-y-1 text-sm font-semibold">
                 {cls.members.map((m) => (
-                  <li key={m.id} className="flex items-center justify-between gap-2"><span>{m.name}</span><button className="text-xs font-bold text-ink/40 hover:text-ink" aria-label={`Убрать из класса: ${m.name}`} onClick={() => school.leave(cls.id, m.id)}>убрать</button></li>
+                  <li key={m.id} className="flex items-center justify-between gap-2"><span>{m.name}</span><button className="text-xs font-bold text-ink/40 hover:text-ink min-h-[44px] px-2" aria-label={`Убрать из класса: ${m.name}`} onClick={() => school.leave(cls.id, m.id)}>убрать</button></li>
                 ))}
               </ul>
             </div>
             <RemoteLesson cls={cls} user={user} />
           </div>
           <div className="space-y-4 min-w-0">
+            <Signals cls={cls} user={user} db={db} />
             <HomeworkTeacher cls={cls} user={user} db={db} />
             <Chat cls={cls} user={user} db={db} />
           </div>

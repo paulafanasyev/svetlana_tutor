@@ -14,11 +14,23 @@ const HERO_TEACHERS = ['emma', 'alex', 'sofia'].map((id) => TEACHERS.find((t) =>
 const VERSION_LABEL = { ru: 'Версия', en: 'Version' };
 const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 
+// Consent texts (152-FZ art. 9: a child's data needs a parent's consent; under 14 the parent decides).
+const CONSENT_VERSION = 1;
+const L_CONSENT = {
+  ru: 'Мне исполнилось 14 лет, или мой родитель (законный представитель) разрешил регистрацию и согласен на обработку моих данных',
+  en: 'I am 14 or older, or my parent (legal guardian) allowed me to register and agrees to the processing of my data',
+};
+const L_PRIVACY = { ru: 'Как мы обращаемся с данными', en: 'How we handle data' };
+const L_STATS = { ru: 'Разрешаю анонимную статистику посещений (можно не ставить)', en: 'Allow anonymous usage statistics (optional)' };
+const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rating 6+' };
+
 export default function Login() {
   const { setUser, locale, setLocale, prefs, setPref } = useApp();
   const t = useT();
   const [mode, setMode] = useState('login');
   const [form, setForm] = useState({ email: '', password: '', name: '' });
+  const [agree, setAgree] = useState(false);
+  const [stats, setStats] = useState(!!prefs.analyticsConsent);
   const [err, setErr] = useState(null);
   const [busy, setBusy] = useState(false);
   const [introOpen, setIntroOpen] = useState(false);
@@ -27,8 +39,14 @@ export default function Login() {
 
   const submit = async (e) => {
     e.preventDefault();
+    if (mode === 'register' && !agree) return;
     setBusy(true); setErr(null);
     try {
+      if (mode === 'register') {
+        // Consent is recorded before anything else, analytics only if the box was ticked.
+        setPref('consents', { ...(prefs.consents || {}), data: { at: new Date().toISOString(), v: CONSENT_VERSION } });
+        setPref('analyticsConsent', !!stats);
+      }
       const user = mode === 'login' ? await api.login(form) : await api.register(form);
       track(mode === 'register' ? 'sign_up' : 'login');
       sfx.levelUp();
@@ -72,6 +90,7 @@ export default function Login() {
             ))}
           </div>
           <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
+            <span className="chip font-black" title={pick(L_AGE, locale)} aria-label={pick(L_AGE, locale)}>6+</span>
             <span className="chip">🧑‍🏫 {t('auth.feature.avatars')}</span>
             <span className="chip">🧩 {t('auth.feature.tasks')}</span>
             <span className="chip">🎮 {t('auth.feature.games')}</span>
@@ -98,12 +117,24 @@ export default function Login() {
               onChange={(e) => setForm({ ...form, email: e.target.value })} />
             <input className="input" type="password" placeholder={t('auth.password')} value={form.password} required minLength={6}
               onChange={(e) => setForm({ ...form, password: e.target.value })} />
+            {mode === 'register' && (
+              <div className="space-y-2 text-sm font-semibold text-ink/70">
+                <label className="flex items-start gap-2 cursor-pointer min-h-[44px]">
+                  <input type="checkbox" className="mt-1 h-5 w-5 shrink-0" checked={agree} required onChange={(e) => setAgree(e.target.checked)} />
+                  <span>{pick(L_CONSENT, locale)}. <a href="./privacy.html" target="_blank" rel="noreferrer" className="underline text-primary">{pick(L_PRIVACY, locale)}</a></span>
+                </label>
+                <label className="flex items-start gap-2 cursor-pointer min-h-[44px]">
+                  <input type="checkbox" className="mt-1 h-5 w-5 shrink-0" checked={stats} onChange={(e) => setStats(e.target.checked)} />
+                  <span>{pick(L_STATS, locale)}</span>
+                </label>
+              </div>
+            )}
             {err && <div className="text-rose-500 font-bold text-sm anim-shake">{t(err)}</div>}
-            <button className="btn-primary w-full" disabled={busy}>
+            <button className="btn-primary w-full" disabled={busy || (mode === 'register' && !agree)}>
               {mode === 'login' ? t('auth.login') : t('auth.register')}
             </button>
           </form>
-          <button className="mt-3 w-full text-center font-bold text-primary text-sm"
+          <button className="mt-3 w-full text-center font-bold text-primary text-sm min-h-[44px]"
             onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setErr(null); }}>
             {mode === 'login' ? t('auth.noAccount') : t('auth.haveAccount')}
           </button>
