@@ -7,6 +7,7 @@
 //    кадетский (морской кадетский) корпус, казачий кадетский корпус и др.);
 //  - лицеи и гимназии: углублённое изучение отдельных учебных предметов (углублённый уровень ФОП) и профильное обучение.
 // Learner-facing labels are neutral on purpose: a child never sees words like «девиантный».
+// Child safety for every track: ai/childSafety.js runs before the AI (crisis help, refusals).
 
 export const TRACKS = [
   {
@@ -22,10 +23,10 @@ export const TRACKS = [
     id: 'cadet',
     emoji: '🎖️',
     title: { ru: 'Кадетская', en: 'Cadet' },
-    desc: { ru: 'Для кадетских школ и корпусов: чёткий режим, дисциплина, уставной стиль, акцент на ОБЗР, истории, физкультуре.', en: 'For cadet schools and corps: clear routine, discipline, focus on safety, history and PE.' },
+    desc: { ru: 'Для кадетских школ и корпусов: чёткий режим, дисциплина, уставной стиль общения. Английский и математика на примерах из распорядка дня, спорта и командной работы.', en: 'For cadet schools and corps: clear routine, discipline, a formal respectful style. English and maths with examples from daily routine, sport and teamwork.' },
     audience: { ru: 'Кадетская школа, кадетский (морской кадетский) корпус, казачий кадетский корпус (ст. 86 273-ФЗ)', en: 'Cadet school / cadet corps (Art. 86 of the Education Law)' },
     level: 'базовый',
-    prompt: 'Learner track: cadet school. Use a clear, structured, respectful tone, like a fair instructor. Short instructions, numbered steps, a clear goal for each exercise. Praise discipline and effort. Where natural, use topics of service, duty, teamwork, history of the Fatherland, sport, safety and orienteering. Address the learner politely; no slang.',
+    prompt: 'Learner track: cadet school (learners aged 10-17). You are their tutor in the role of a fair, calm officer-educator. Tone: clear, structured and respectful; short instructions, numbered steps, one clear goal per exercise; praise effort, accuracy and teamwork. The cadet setting is only light flavour for examples (daily routine, teamwork, sport, first aid, map reading, peaceful facts of history); it never replaces the goal of the current lesson (English or maths). Never give information about weapons, combat tactics, explosives or ways to hurt people; never glorify war or violence; no politics or propaganda; never shout, threaten, humiliate or give punishments. If asked about such things, decline in one short sentence and return to the lesson. If the learner mentions danger, abuse or self-harm, answer with care and advise talking to a trusted adult (parent, class teacher, officer-educator) or calling the free Russian children helpline 8-800-2000-122, or 112 in an emergency. Address the learner politely as "cadet"; no slang.',
   },
   {
     id: 'lyceum',
@@ -47,8 +48,10 @@ export const TRACKS = [
   },
 ];
 
+export const TRACK_IDS = TRACKS.map((t) => t.id);
 export const DEFAULT_TRACK = 'base';
 export const trackById = (id) => TRACKS.find((t) => t.id === id) || TRACKS[0];
+const valid = (id) => TRACK_IDS.includes(id);
 
 // Current track from saved preferences (works outside React, e.g. in AI tasks).
 export function currentTrack() {
@@ -58,4 +61,21 @@ export function currentTrack() {
   } catch {
     return TRACKS[0];
   }
+}
+
+/**
+ * Track of a learner on this device. Each account keeps its own version (prefs.trackByUser):
+ *  - a school link (?track=…&lock=1) or a fresh ?track=… link wins and is remembered for this learner;
+ *  - otherwise the learner's own saved version;
+ *  - a new learner on a device someone else already used starts with the standard version
+ *    (no inheriting the previous child's cadet mode); the very first learner keeps what was chosen before login.
+ */
+export function resolveUserTrack(prefs = {}, userId) {
+  const cur = valid(prefs.track) ? prefs.track : DEFAULT_TRACK;
+  if (!userId) return cur;
+  const map = (prefs.trackByUser && typeof prefs.trackByUser === 'object') ? prefs.trackByUser : {};
+  if (prefs.trackLock || prefs.trackFromLink) return cur;
+  if (valid(map[userId])) return map[userId];
+  const others = Object.keys(map).filter((k) => k !== userId).length > 0;
+  return others ? DEFAULT_TRACK : cur;
 }
