@@ -1,11 +1,16 @@
 // Opens a tutor version straight from a link: ?track=cadet | lyceum | care | base.
-// Imported first in main.jsx, so the saved preference is in place before the store reads it.
+// School link: ?track=cadet&lock=1 fixes the version (the top switcher is hidden, settings show it as set by the school);
+// ?lock=0 removes the lock. Imported first in main.jsx, so the saved preference is in place before the store reads it.
 const ALLOWED = ['base', 'cadet', 'lyceum', 'care'];
 try {
-  const track = new URLSearchParams(window.location.search).get('track');
-  if (ALLOWED.includes(track)) {
+  const q = new URLSearchParams(window.location.search);
+  const track = q.get('track');
+  const lock = q.get('lock');
+  if (ALLOWED.includes(track) || lock === '0' || lock === '1') {
     const prefs = JSON.parse(window.localStorage.getItem('aet_prefs') || '{}') || {};
-    prefs.track = track;
+    if (ALLOWED.includes(track)) prefs.track = track;
+    if (lock === '1' && ALLOWED.includes(track)) prefs.trackLock = true;
+    if (lock === '0') prefs.trackLock = false;
     window.localStorage.setItem('aet_prefs', JSON.stringify(prefs));
   }
 } catch { /* storage may be blocked in a sandboxed frame */ }

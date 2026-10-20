@@ -5,6 +5,7 @@ import { api } from '../../core/api.js';
 import { teacherById } from '../../data/teachers.js';
 import { greetingFor, vocabulary, pickOne } from '../../data/index.js';
 import { pickL } from '../../i18n/index.js';
+import { rankOf } from '../../i18n/cadet.js';
 import Avatar, { SpeechBubble, useEmotion } from '../../avatar/Avatar.jsx';
 import { tts } from '../../audio/tts.js';
 import { Stat } from '../../ui/kit.jsx';
@@ -23,10 +24,17 @@ const L_CLASS = {
   title: { ru: 'Мой класс', en: 'My class', vi: 'Lớp của tôi' },
   desc: { ru: 'Класс, задания и чат', en: 'Class, assignments and chat', vi: 'Lớp, bài tập và trò chuyện' },
 };
+// Кадетская версия: те же разделы, уставные названия.
+const L_CADET = {
+  school: { ru: 'Учебная часть: программа 1–11', en: 'Academic programme 1–11' },
+  class: { ru: 'Мой взвод', en: 'My platoon' },
+  classDesc: { ru: 'Взвод, задания и связь', en: 'Platoon, assignments and chat' },
+};
 
 export default function Home() {
-  const { user, locale } = useApp();
+  const { user, locale, prefs } = useApp();
   const t = useT();
+  const cadet = prefs?.track === 'cadet';
   const teacher = teacherById(user.teacherId);
   const [stats, setStats] = useState(null);
   const [talking, setTalking] = useState(false);
@@ -38,7 +46,7 @@ export default function Home() {
 
   const sayHello = () => {
     sfx.pop();
-    const text = greetingFor(user.name);
+    const text = cadet && teacher.greeting ? teacher.greeting : greetingFor(user.name);
     setBubble(text);
     flash('happy', 1200);
     const ok = tts.speak(text, teacher, { onStart: () => setTalking(true), onEnd: () => { setTalking(false); setTimeout(() => setBubble(null), 2500); } });
@@ -46,15 +54,21 @@ export default function Home() {
   };
 
   const CTA = [
-    { to: '/programs', icon: '📋', title: pickL(L_SCHOOL.title, locale), desc: pickL(L_SCHOOL.desc, locale), cls: 'from-blue-600 to-sky-500' },
-    { to: '/math', icon: '🧮', title: pickL(L_MATH.title, locale), desc: pickL(L_MATH.desc, locale), cls: 'from-lime-600 to-emerald-500' },
-    { to: '/classroom', icon: '👥', title: pickL(L_CLASS.title, locale), desc: pickL(L_CLASS.desc, locale), cls: 'from-slate-600 to-slate-500' },
-    { to: '/lesson', icon: '📖', title: t('home.startLesson'), desc: t('home.lessonDesc'), cls: 'from-violet-500 to-fuchsia-500' },
-    { to: '/talk', icon: '🎤', title: t('home.quickTalk', { name: teacher.name }), desc: t('home.talkDesc'), cls: 'from-sky-500 to-cyan-400' },
-    { to: '/games', icon: '🎮', title: t('home.playGames'), desc: t('home.gamesDesc'), cls: 'from-amber-500 to-orange-500' },
+    { to: '/programs', icon: cadet ? '🎖️' : '📋', title: cadet ? pickL(L_CADET.school, locale) : pickL(L_SCHOOL.title, locale), desc: pickL(L_SCHOOL.desc, locale), cls: 'from-blue-600 to-sky-500' },
+    { to: '/math', icon: cadet ? '📐' : '🧮', title: pickL(L_MATH.title, locale), desc: pickL(L_MATH.desc, locale), cls: 'from-lime-600 to-emerald-500' },
+    { to: '/classroom', icon: cadet ? '🪡' : '👥', title: cadet ? pickL(L_CADET.class, locale) : pickL(L_CLASS.title, locale), desc: cadet ? pickL(L_CADET.classDesc, locale) : pickL(L_CLASS.desc, locale), cls: 'from-slate-600 to-slate-500' },
+    { to: '/lesson', icon: cadet ? '🎯' : '📖', title: t('home.startLesson'), desc: t('home.lessonDesc'), cls: 'from-violet-500 to-fuchsia-500' },
+    { to: '/talk', icon: cadet ? '📻' : '🎤', title: t('home.quickTalk', { name: teacher.name }), desc: t('home.talkDesc'), cls: 'from-sky-500 to-cyan-400' },
+    { to: '/games', icon: cadet ? '🧭' : '🎮', title: t('home.playGames'), desc: t('home.gamesDesc'), cls: 'from-amber-500 to-orange-500' },
     { to: '/exams', icon: '📝', title: t('home.exams'), desc: t('home.examsDesc'), cls: 'from-rose-500 to-red-500' },
     { to: '/courses', icon: '📚', title: t('home.courses'), desc: t('home.coursesDesc'), cls: 'from-emerald-500 to-teal-500' },
     { to: '/diary', icon: '📔', title: t('home.diary'), desc: t('home.diaryDesc'), cls: 'from-indigo-500 to-violet-500' },
+  ];
+  const rank = rankOf(user.xp, locale);
+  const ORDERS = [
+    { to: '/lesson', n: 1, title: t('cadet.task.1'), desc: t('cadet.task.1d') },
+    { to: '/talk', n: 2, title: t('cadet.task.2'), desc: t('cadet.task.2d') },
+    { to: '/programs', n: 3, title: t('cadet.task.3'), desc: t('cadet.task.3d') },
   ];
 
   return (
@@ -63,7 +77,7 @@ export default function Home() {
       <div className="card p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 relative overflow-visible">
         <button onClick={sayHello} className="w-40 md:w-48 shrink-0 relative group" title="👋">
           <Avatar teacher={teacher} talking={talking} emotion={emotion} frame={user.frame} />
-          <span className="absolute -bottom-1 -right-1 text-2xl bg-surface rounded-full p-1.5 shadow group-hover:scale-110 transition">👋</span>
+          <span className="absolute -bottom-1 -right-1 text-2xl bg-surface rounded-full p-1.5 shadow group-hover:scale-110 transition">{cadet ? '🫡' : '👋'}</span>
         </button>
         <div className="min-w-0 flex-1 text-center sm:text-left">
           {bubble
@@ -75,19 +89,37 @@ export default function Home() {
               </>
             )}
           <div className="mt-3 flex flex-wrap gap-2 justify-center sm:justify-start">
+            {cadet && <span className="chip">🎖️ {t('cadet.rank')}: <b>{rank.name}</b></span>}
             <span className="chip">🧑‍🏫 {t('home.myTeacher')}: <b>{teacher.name}</b></span>
-            <Link to="/teacher" className="chip hover:bg-primary hover:text-white transition cursor-pointer">🔄 {t('home.changeTeacher')}</Link>
+            {!cadet && <Link to="/teacher" className="chip hover:bg-primary hover:text-white transition cursor-pointer">🔄 {t('home.changeTeacher')}</Link>}
           </div>
         </div>
       </div>
 
+      {/* Кадетская версия: задача на сегодня */}
+      {cadet && (
+        <div className="card p-5 cadet-order">
+          <div className="label mb-2">{t('cadet.task.title')}</div>
+          <div className="grid md:grid-cols-3 gap-3">
+            {ORDERS.map((o) => (
+              <Link key={o.n} to={o.to} onClick={() => sfx.click()} className="flex gap-3 items-start rounded-xl p-3 bg-soft hover:brightness-95 transition">
+                <span className="shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm" style={{ background: 'rgb(var(--c-primary))', color: '#f3ead0', clipPath: 'polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)' }}>{o.n}</span>
+                <span className="min-w-0"><span className="block font-black leading-tight">{o.title}</span><span className="block text-xs font-semibold text-ink/60 mt-0.5">{o.desc}</span></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-        <Stat icon="🎯" label={t('home.level')} value={user.level} sub={`LVL ${1 + Math.floor(user.xp / 250)}`} />
-        <Stat icon="⭐" label={t('home.xp')} value={user.xp} />
-        <Stat icon="🪙" label={t('home.coins')} value={user.coins} />
-        <Stat icon="🔥" label={t('home.streak')} value={(stats?.streak ?? 0) + 'd'} />
-        <Stat icon="✅" label={t('home.accuracy')} value={stats ? Math.round(stats.accuracy * 100) + '%' : '—'} sub={stats ? `${stats.total} ${t('home.attempts').toLowerCase()}` : ''} />
+        {cadet
+          ? <Stat icon="🎖️" label={t('cadet.rank')} value={rank.name} sub={rank.next ? t('cadet.toNext', { rank: rank.nextName, xp: rank.next }) : t('cadet.maxRank')} />
+          : <Stat icon="🎯" label={t('home.level')} value={user.level} sub={`LVL ${1 + Math.floor(user.xp / 250)}`} />}
+        <Stat icon={cadet ? '🎞️' : '⭐'} label={t('home.xp')} value={user.xp} sub={cadet ? `${t('home.level')} ${user.level || 'A1'}` : undefined} />
+        <Stat icon={cadet ? '🎗️' : '🪙'} label={t('home.coins')} value={user.coins} />
+        <Stat icon="🔥" label={t('home.streak')} value={(stats?.streak ?? 0) + (locale === 'ru' && cadet ? ' дн.' : 'd')} />
+        <Stat icon={cadet ? '🎯' : '✅'} label={t('home.accuracy')} value={stats ? Math.round(stats.accuracy * 100) + '%' : '—'} sub={stats ? `${stats.total} ${t('home.attempts').toLowerCase()}` : ''} />
       </div>
 
       {/* CTAs */}
@@ -105,7 +137,7 @@ export default function Home() {
       {/* Tip of the day */}
       {tip && (
         <div className="card p-5 flex items-center gap-4">
-          <div className="text-3xl">💡</div>
+          <div className="text-3xl">{cadet ? '📌' : '💡'}</div>
           <div>
             <div className="label">{t('home.tip.title')}</div>
             <div className="font-black text-lg">{tip.en} — {tip.ru}</div>

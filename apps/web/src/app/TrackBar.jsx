@@ -1,5 +1,5 @@
 // ВРЕМЕННО: переключатель версий репетитора вверху экрана (потом спрячем в настройки: там уже есть TrackSettings).
-// Убрать: SHOW_TRACK_BAR = false.
+// Убрать: SHOW_TRACK_BAR = false. Если версию задала школа (ссылка с &lock=1), переключатель скрыт.
 import { useApp } from '../core/store.js';
 import { api } from '../core/api.js';
 import { TRACKS, trackById, DEFAULT_TRACK } from '../data/tracks.js';
@@ -10,7 +10,7 @@ export const SHOW_TRACK_BAR = true;
 
 export default function TrackBar() {
   const { prefs, setPref, locale, user, setUser } = useApp();
-  if (!SHOW_TRACK_BAR) return null;
+  if (!SHOW_TRACK_BAR || prefs.trackLock) return null;
   const current = trackById(prefs.track || DEFAULT_TRACK);
   const choose = async (id) => {
     try { sfx.click(); } catch { /* noop */ }

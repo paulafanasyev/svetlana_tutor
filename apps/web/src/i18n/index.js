@@ -2,6 +2,7 @@ import en from './en.js';
 import ru from './ru.js';
 import extra from './cabinets.js';
 import brand from './brand.js';
+import { trackWord } from './trackWords.js';
 
 const dicts = { en, ru };
 
@@ -16,8 +17,9 @@ export function normalizeLocale(locale) {
   return LOCALE_IDS.includes(locale) ? locale : 'ru';
 }
 
+// Версия репетитора (например, кадетская) может переопределить названия: см. trackWords.js.
 export function translate(locale, key, params) {
-  let s = brand[locale]?.[key] ?? dicts[locale]?.[key] ?? extra[locale]?.[key] ?? brand.en[key] ?? dicts.en[key] ?? extra.en?.[key] ?? key;
+  let s = trackWord(locale, key) ?? brand[locale]?.[key] ?? dicts[locale]?.[key] ?? extra[locale]?.[key] ?? brand.en[key] ?? dicts.en[key] ?? extra.en?.[key] ?? key;
   if (params) for (const k of Object.keys(params)) s = s.split(`{${k}}`).join(String(params[k]));
   return s;
 }
