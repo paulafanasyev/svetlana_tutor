@@ -5,6 +5,7 @@ import { music } from '../audio/music.js';
 import { setSfxEnabled } from '../audio/sfx.js';
 import { setVoiceEnabled } from '../audio/tts.js';
 import Layout from './Layout.jsx';
+import TrackBar from './TrackBar.jsx';
 import Login from '../features/auth/Login.jsx';
 import TeacherPicker from '../features/picker/TeacherPicker.jsx';
 import Home from '../features/home/Home.jsx';
@@ -82,7 +83,17 @@ function Page({ children }) {
   );
 }
 
+// ВРЕМЕННО: переключатель версий над всеми экранами (включая вход), см. TrackBar.jsx.
 export default function App() {
+  return (
+    <>
+      <TrackBar />
+      <AppScreens />
+    </>
+  );
+}
+
+function AppScreens() {
   const { user, booted, prefs } = useApp();
 
   useEffect(() => { setSfxEnabled(prefs.sfxOn); }, [prefs.sfxOn]);
