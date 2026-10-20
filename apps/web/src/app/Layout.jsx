@@ -19,6 +19,8 @@ const L_PLANNER = { ru: 'План уроков', en: 'Lesson plan' };
 const L_A11Y = { ru: 'Доступность', en: 'Accessibility' };
 const L_READ = { ru: 'Прочитать выделенное', en: 'Read selection aloud' };
 const L_MORE = { ru: 'Ещё', en: 'More' };
+const L_PRIVACY = { ru: 'Данные и конфиденциальность', en: 'Privacy' };
+const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rating 6+' };
 
 // Student menu: school subjects first. English is one section (/english) with inner tabs:
 // lesson, conversation, games, exams, courses (features/english/EnglishTabs.jsx).
@@ -40,6 +42,10 @@ html.a11y :focus-visible { outline: 3px solid #1d4ed8 !important; outline-offset
 html.a11y body { line-height: 1.6; letter-spacing: 0.01em; }
 html.a11y .text-ink\\/40, html.a11y .text-ink\\/50, html.a11y .text-ink\\/55, html.a11y .text-ink\\/60 { color: rgba(17, 24, 39, 0.85) !important; }
 `;
+
+// Bottom bar sits above the iPhone home indicator / Android gesture bar.
+const SAFE_BOTTOM = { paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 4px)' };
+const SHEET_BOTTOM = { paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 6rem)' };
 
 function useA11y(on) {
   useEffect(() => {
@@ -117,6 +123,8 @@ export default function Layout({ children }) {
 
   const linkCls = (active) =>
     `flex items-center gap-3 px-4 py-2.5 rounded-2xl font-extrabold transition ${active ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'hover:bg-soft text-ink/70'}`;
+  const barCls = (active) =>
+    `flex flex-col items-center justify-center min-h-[48px] min-w-[56px] px-2 py-1 rounded-xl text-[11px] font-bold ${active ? 'text-primary' : 'text-ink/50'}`;
   const a11yName = pickL(L_A11Y, locale);
   const readName = pickL(L_READ, locale);
   const moreName = pickL(L_MORE, locale);
@@ -156,7 +164,7 @@ export default function Layout({ children }) {
               <div className="font-black truncate">{user.name}</div>
               <div className="text-xs font-bold text-ink/50">{isStaff ? t(user.role === 'TEACHER' ? 'cab.title' : 'par.title') : `${user.level} · ⭐ ${user.xp}`}</div>
             </div>
-            <button title={t('nav.logout')} aria-label={t('nav.logout')} onClick={logout} className="text-xl hover:scale-110 transition">🚪</button>
+            <button title={t('nav.logout')} aria-label={t('nav.logout')} onClick={logout} className="text-xl min-h-[44px] min-w-[44px] hover:scale-110 transition">🚪</button>
           </div>
         </div>
       </aside>
@@ -169,20 +177,22 @@ export default function Layout({ children }) {
           <span className="font-black truncate">{t('app.name')}</span>
           <div className="ml-auto flex items-center gap-2">
             <Lang /><Xp n={user.xp} /><Coin n={user.coins} />
-            <button aria-label={a11yName} aria-pressed={!!prefs.a11y} title={a11yName} onClick={toggleA11y} className={`text-xl rounded-lg px-1 ${prefs.a11y ? 'bg-primary text-white' : ''}`}>♿</button>
-            {prefs.a11y && <button aria-label={readName} title={readName} className="text-xl" onMouseDown={(e) => e.preventDefault()} onClick={readSelection}>🔊</button>}
-            <button aria-label={musicName} aria-pressed={!!prefs.musicOn} title={musicName} onClick={() => setPref('musicOn', !prefs.musicOn)} className="text-xl">{prefs.musicOn ? '🎵' : '🔇'}</button>
+            <button aria-label={a11yName} aria-pressed={!!prefs.a11y} title={a11yName} onClick={toggleA11y} className={`text-xl rounded-lg px-1 min-h-[40px] min-w-[36px] ${prefs.a11y ? 'bg-primary text-white' : ''}`}>♿</button>
+            {prefs.a11y && <button aria-label={readName} title={readName} className="text-xl min-h-[40px] min-w-[36px]" onMouseDown={(e) => e.preventDefault()} onClick={readSelection}>🔊</button>}
+            <button aria-label={musicName} aria-pressed={!!prefs.musicOn} title={musicName} onClick={() => setPref('musicOn', !prefs.musicOn)} className="text-xl min-h-[40px] min-w-[36px]">{prefs.musicOn ? '🎵' : '🔇'}</button>
           </div>
         </header>
 
-        <main className="flex-1 overflow-y-auto px-4 md:px-8 py-5 md:py-8 pb-24 md:pb-8">
+        <main className="flex-1 overflow-y-auto px-4 md:px-8 py-5 md:py-8 pb-28 md:pb-8">
           <div className="max-w-5xl mx-auto">{children}</div>
           <footer className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center gap-3 border-t border-black/10 pt-4 text-xs text-ink/60">
             <img src="./pavel-afanasev-logo.svg" alt="Pavel Afanasev" className="h-8 w-auto rounded bg-white" />
+            <span className="rounded border border-ink/40 px-1.5 font-black text-ink/70" title={pickL(L_AGE, locale)} aria-label={pickL(L_AGE, locale)}>6+</span>
             <span>{t('app.credit')} · © 2026</span>
             <a href="mailto:Pavel.afanasyev@inbox.ru" className="underline">Email</a>
             <a href="https://wa.me/79148289964" target="_blank" rel="noreferrer" className="underline">WhatsApp</a>
             <a href="https://t.me/PaulPavel_it_dev" target="_blank" rel="noreferrer" className="underline">Telegram</a>
+            <a href="./privacy.html" target="_blank" rel="noreferrer" className="underline">{pickL(L_PRIVACY, locale)}</a>
             <a href="https://github.com/paulafanasyev/ai-english-teacher/blob/main/LICENSE" className="underline" target="_blank" rel="noreferrer">License</a>
           </footer>
         </main>
@@ -191,10 +201,10 @@ export default function Layout({ children }) {
         {more && hasMore && (
           <div className="md:hidden fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={moreName} onClick={() => setMore(false)}>
             <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute bottom-0 inset-x-0 bg-surface rounded-t-3xl p-4 pb-24 grid grid-cols-3 gap-2 max-h-[80vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="absolute bottom-0 inset-x-0 bg-surface rounded-t-3xl p-4 grid grid-cols-3 gap-2 max-h-[80vh] overflow-y-auto shadow-2xl" style={SHEET_BOTTOM} onClick={(e) => e.stopPropagation()}>
               {mobileMore.map((n) => (
                 <NavLink key={n.to} to={n.to} onClick={() => { sfx.click(); setMore(false); }}
-                  className={({ isActive }) => `flex flex-col items-center gap-1 p-3 rounded-2xl text-xs font-bold text-center ${on(n, isActive) ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>
+                  className={({ isActive }) => `flex flex-col items-center justify-center gap-1 min-h-[64px] p-3 rounded-2xl text-xs font-bold text-center ${on(n, isActive) ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>
                   <span className="text-2xl" aria-hidden="true">{n.icon}</span>{label(n)}
                 </NavLink>
               ))}
@@ -203,16 +213,16 @@ export default function Layout({ children }) {
         )}
 
         {/* Bottom nav (mobile) */}
-        <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-surface/95 backdrop-blur border-t border-black/5 flex justify-around py-1.5">
+        <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-surface/95 backdrop-blur border-t border-black/5 flex justify-around pt-1" style={SAFE_BOTTOM}>
           {mobileBar.map((n) => (
             <NavLink key={n.to} to={n.to} onClick={() => { sfx.click(); setMore(false); }}
-              className={({ isActive }) => `flex flex-col items-center px-3 py-1 rounded-xl text-[11px] font-bold ${on(n, isActive) ? 'text-primary' : 'text-ink/50'}`}>
+              className={({ isActive }) => barCls(on(n, isActive))}>
               <span className="text-2xl" aria-hidden="true">{n.icon}</span>{label(n)}
             </NavLink>
           ))}
           {hasMore && (
             <button type="button" aria-expanded={more} onClick={() => { sfx.click(); setMore((v) => !v); }}
-              className={`flex flex-col items-center px-3 py-1 rounded-xl text-[11px] font-bold ${more ? 'text-primary' : 'text-ink/50'}`}>
+              className={barCls(more)}>
               <span className="text-2xl" aria-hidden="true">☰</span>{moreName}
             </button>
           )}
