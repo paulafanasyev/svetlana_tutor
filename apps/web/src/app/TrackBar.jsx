@@ -1,12 +1,12 @@
-// ВРЕМЕННО: переключатель версий репетитора вверху экрана (потом спрячем в настройки: там уже есть TrackSettings).
-// Убрать: SHOW_TRACK_BAR = false. Если версию задала школа (ссылка с &lock=1), переключатель скрыт.
-// Переключение версии не трогает выбранного учителя: в кадетской версии капитан показывается поверх него,
-// а при возврате в обычную версию ученик снова видит своего учителя.
+// Переключатель версий репетитора вверху экрана — инструмент для тестов. По аудиту 20.10 выключен: на телефоне
+// он перекрывал шапку. Версию меняют в Настройках (TrackSettings) или на экране входа; школа — ссылкой ?track=…&lock=1.
+// Вернуть для тестов: SHOW_TRACK_BAR = true. Если версию задала школа (&lock=1), переключатель скрыт всегда.
+// Переключение версии не трогает выбранного учителя.
 import { useApp } from '../core/store.js';
 import { TRACKS, trackById, DEFAULT_TRACK } from '../data/tracks.js';
 import { sfx } from '../audio/sfx.js';
 
-export const SHOW_TRACK_BAR = true;
+export const SHOW_TRACK_BAR = false;
 
 export default function TrackBar() {
   const { prefs, setPref, locale } = useApp();
@@ -24,7 +24,7 @@ export default function TrackBar() {
         const on = current.id === t.id;
         return (
           <button key={t.id} role="radio" aria-checked={on} onClick={() => choose(t.id)}
-            className={`whitespace-nowrap rounded-full px-3 min-h-[36px] text-xs font-extrabold transition ${on ? 'text-white shadow' : 'text-ink/80 hover:bg-soft'}`}
+            className={`whitespace-nowrap rounded-full px-3 min-h-[44px] text-xs font-extrabold transition ${on ? 'text-white shadow' : 'text-ink/80 hover:bg-soft'}`}
             style={on ? { background: 'linear-gradient(135deg, rgb(var(--c-primary)), rgb(var(--c-primary2)))' } : undefined}>
             {t.emoji} {(t.title && (t.title[locale] || t.title.ru)) || t.id}
           </button>

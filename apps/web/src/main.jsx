@@ -7,6 +7,7 @@ import { useApp } from './core/store.js';
 import { initAnalytics } from './core/analytics.js';
 import './ai/trackPrompt.js'; // tutor version (base / cadet / lyceum / support) for every local-AI request
 import './app/trackTheme.js'; // tutor version look: <html data-track="cadet"> = military style
+import './app/updateWatch.js'; // reloads an open app once a new build is deployed
 import './styles.css'; // processed by Vite (or externalized by the no-npm esbuild pipeline)
 
 // Apply saved theme before first paint (guarded: sandboxed iframes may block storage)
@@ -47,7 +48,7 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 useApp.getState().boot();
-initAnalytics(); // GA4 — no-op пока не задан VITE_GA_ID / window.__AET_GA_ID__
+initAnalytics(); // GA4 — only with VITE_GA_ID and the parent's consent (core/analytics.js)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -59,10 +60,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 // --- PWA: service worker + install prompt (works on a real HTTPS deploy) ---
 // Guarded: in a sandboxed iframe (no allow-same-origin) even reading navigator.serviceWorker throws.
+// updateViaCache: 'none' — the browser always re-checks sw.js itself, not from the HTTP cache.
 try {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      try { navigator.serviceWorker.register('sw.js').catch(() => {}); } catch { /* ignore */ }
+      try {
+        navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then((reg) => {
+          document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { try { reg.update(); } catch { /* ignore */ } } });
+        }).catch(() => {});
+      } catch { /* ignore */ }
     });
   }
 } catch { /* sandboxed context — service worker unavailable, ignore */ }
