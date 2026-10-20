@@ -9,7 +9,7 @@ import Avatar, { SpeechBubble } from '../../avatar/Avatar.jsx';
 import { sfx } from '../../audio/sfx.js';
 
 const TEACHER_PRICE = 300;
-// The cadet version shows Dmitry as Major Andrey: the saved id is still the base one.
+// The cadet version shows Dmitry as Captain Andrey: the saved id is still the base one.
 const idOf = (teacher) => teacher.baseId || teacher.id;
 
 export default function TeacherPicker({ firstTime = false }) {
@@ -38,6 +38,8 @@ export default function TeacherPicker({ firstTime = false }) {
   };
 
   const choose = async (teacher) => {
+    // The cadet mentor is shown on top of the learner's own teacher: a learner who already has one keeps it.
+    if (teacher.baseId && user.teacherId) { sfx.levelUp(); nav('/'); return; }
     if (!isUnlocked(idOf(teacher))) { nav('/shop'); return; }
     sfx.levelUp();
     const u = await api.updateProfile({ teacherId: idOf(teacher) });
@@ -53,7 +55,7 @@ export default function TeacherPicker({ firstTime = false }) {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         {teachers.map((teacher) => {
-          const unlocked = isUnlocked(idOf(teacher));
+          const unlocked = teacher.baseId ? true : isUnlocked(idOf(teacher));
           const playing = playingId === teacher.id;
           return (
             <div key={teacher.id} className={`card p-3 flex flex-col gap-2 relative overflow-visible transition hover:-translate-y-1 ${!unlocked ? 'opacity-80' : ''}`}>

@@ -1,31 +1,25 @@
 import { useApp, useT } from '../../core/store.js';
-import { api } from '../../core/api.js';
 import { TRACKS, trackById, DEFAULT_TRACK } from '../../data/tracks.js';
-import { CADET_TEACHER } from '../../data/teachers.js';
 import { sfx } from '../../audio/sfx.js';
 
 const COPY = {
-  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель.', school: 'Ссылка для школы (версия закрепляется у ученика):', copy: 'Скопировать', copied: 'Скопировано' },
-  en: { title: 'Tutor version', hint: 'Changes Svetlana’s tone, pace and task difficulty.', who: 'For', cadet: 'Mentor: Captain Andrey Nikolaevich (reserve), officer-educator.', school: 'Link for a school (fixes the version for the learner):', copy: 'Copy', copied: 'Copied' },
+  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель (вымышленный персонаж).', school: 'Ссылка для школы (версия закрепляется у ученика):', copy: 'Скопировать', copied: 'Скопировано' },
+  en: { title: 'Tutor version', hint: 'Changes Svetlana’s tone, pace and task difficulty.', who: 'For', cadet: 'Mentor: Captain Andrey Nikolaevich (reserve), officer-educator (a fictional character).', school: 'Link for a school (fixes the version for the learner):', copy: 'Copy', copied: 'Copied' },
 };
 const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 
 export default function TrackSettings() {
-  const { prefs, setPref, locale, user, setUser } = useApp();
+  const { prefs, setPref, locale, user } = useApp();
   const t = useT();
   const c = COPY[locale] || COPY.en;
   const current = trackById(prefs.track || DEFAULT_TRACK);
   const locked = !!prefs.trackLock;
   const staff = user && (user.role === 'ADMIN' || user.role === 'TEACHER');
-  const choose = async (id) => {
+  // The cadet version shows its own mentor on top of the learner's teacher: the saved teacher is never changed.
+  const choose = (id) => {
     if (locked) return;
     sfx.click();
     setPref('track', id);
-    // The cadet version comes with its own mentor (Dmitry in uniform), free of charge.
-    if (id === 'cadet' && user && user.teacherId !== CADET_TEACHER.baseId) {
-      const u = await api.updateProfile({ teacherId: CADET_TEACHER.baseId }).catch(() => null);
-      if (u) setUser(u);
-    }
   };
   let link = '';
   try { link = `${location.origin}${location.pathname}?track=${current.id}&lock=1`; } catch { /* noop */ }
