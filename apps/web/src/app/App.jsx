@@ -9,6 +9,7 @@ import TrackBar from './TrackBar.jsx';
 import Login from '../features/auth/Login.jsx';
 import TeacherPicker from '../features/picker/TeacherPicker.jsx';
 import Home from '../features/home/Home.jsx';
+import { EnglishShell } from '../features/english/EnglishTabs.jsx';
 
 // Everything except the first screens is loaded on demand: the school programs
 // (ФОП data for grades 1–11), exams, courses and games are large and most
@@ -19,6 +20,7 @@ const retryLazy = (factory) => lazy(() => factory().catch((error) => {
   if (!sessionStorage.getItem(key)) { sessionStorage.setItem(key, '1'); location.reload(); }
   throw error;
 }));
+const EnglishHub = retryLazy(() => import('../features/english/EnglishHub.jsx'));
 const Lesson = retryLazy(() => import('../features/lessons/Lesson.jsx'));
 const Talk = retryLazy(() => import('../features/talk/Talk.jsx'));
 const GamesHub = retryLazy(() => import('../features/games/GamesHub.jsx'));
@@ -82,6 +84,9 @@ function Page({ children }) {
     </ErrorBoundary>
   );
 }
+
+// English screens share one section with inner tabs (features/english/EnglishTabs.jsx).
+const En = ({ children }) => <EnglishShell>{children}</EnglishShell>;
 
 // ВРЕМЕННО: переключатель версий над всеми экранами (включая вход), см. TrackBar.jsx.
 export default function App() {
@@ -149,18 +154,19 @@ function AppScreens() {
       <Page>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/lesson" element={<Lesson />} />
+          <Route path="/english" element={<En><EnglishHub /></En>} />
+          <Route path="/lesson" element={<En><Lesson /></En>} />
           <Route path="/math" element={<MathTutor />} />
-          <Route path="/talk" element={<Talk />} />
-          <Route path="/games" element={<GamesHub />} />
-          <Route path="/games/wordbattle" element={<WordBattle />} />
-          <Route path="/games/shooter" element={<GrammarShooter />} />
-          <Route path="/games/quest" element={<Quest />} />
-          <Route path="/games/memory" element={<Memory />} />
+          <Route path="/talk" element={<En><Talk /></En>} />
+          <Route path="/games" element={<En><GamesHub /></En>} />
+          <Route path="/games/wordbattle" element={<En><WordBattle /></En>} />
+          <Route path="/games/shooter" element={<En><GrammarShooter /></En>} />
+          <Route path="/games/quest" element={<En><Quest /></En>} />
+          <Route path="/games/memory" element={<En><Memory /></En>} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/progress" element={<Progress />} />
-          <Route path="/exams" element={<ExamCenter />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/exams" element={<En><ExamCenter /></En>} />
+          <Route path="/courses" element={<En><Courses /></En>} />
           <Route path="/diary" element={<StudentDiary />} />
           <Route path="/classroom" element={<ClassRoom />} />
           <Route path="/programs" element={<Programs />} />

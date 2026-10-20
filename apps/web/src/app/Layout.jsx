@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useApp, useT } from '../core/store.js';
 import { LOCALES, pickL } from '../i18n/index.js';
 import { api } from '../core/api.js';
@@ -8,8 +8,11 @@ import Avatar from '../avatar/Avatar.jsx';
 import { audioCtx } from '../audio/engine.js';
 import { sfx } from '../audio/sfx.js';
 import { Coin, Xp } from '../ui/kit.jsx';
+import { isEnglishPath } from '../features/english/EnglishTabs.jsx';
 
 const L_PROGRAMS = { ru: 'Темы ФОП', en: 'Curriculum topics' };
+const L_SUBJECTS = { ru: 'Предметы', en: 'Subjects' };
+const L_ENGLISH = { ru: 'Английский', en: 'English' };
 const L_CLASS = { ru: 'Мой класс', en: 'My class' };
 const L_CLASSES = { ru: 'Классы и чат', en: 'Classes & chat' };
 const L_PLANNER = { ru: 'План уроков', en: 'Lesson plan' };
@@ -17,19 +20,17 @@ const L_A11Y = { ru: 'Доступность', en: 'Accessibility' };
 const L_READ = { ru: 'Прочитать выделенное', en: 'Read selection aloud' };
 const L_MORE = { ru: 'Ещё', en: 'More' };
 
+// Student menu: school subjects first. English is one section (/english) with inner tabs:
+// lesson, conversation, games, exams, courses (features/english/EnglishTabs.jsx).
 const NAV = [
   { to: '/', icon: '🏠', key: 'nav.home' },
-  { to: '/lesson', icon: '📖', key: 'nav.lesson' },
+  { to: '/programs', icon: '📚', key: 'nav.programs', label: L_SUBJECTS },
+  { to: '/english', icon: '🔤', key: 'nav.english', label: L_ENGLISH, english: true },
   { to: '/math', icon: '🧮', key: 'nav.math', label: { ru: 'Математика', en: 'Math' } },
   { to: '/classroom', icon: '👥', key: 'nav.classroom', label: L_CLASS },
-  { to: '/talk', icon: '💬', key: 'nav.talk' },
-  { to: '/games', icon: '🎮', key: 'nav.games' },
-  { to: '/shop', icon: '🛍️', key: 'nav.shop' },
-  { to: '/progress', icon: '📈', key: 'nav.progress' },
-  { to: '/exams', icon: '📝', key: 'nav.exams' },
-  { to: '/courses', icon: '📚', key: 'nav.courses' },
   { to: '/diary', icon: '📔', key: 'nav.diary' },
-  { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
+  { to: '/progress', icon: '📈', key: 'nav.progress' },
+  { to: '/shop', icon: '🛍️', key: 'nav.shop' },
 ];
 
 const A11Y_CSS = `
@@ -70,10 +71,13 @@ export default function Layout({ children }) {
   const { user, prefs, setPref, setUser, locale, setLocale } = useApp();
   const t = useT();
   const nav = useNavigate();
+  const { pathname } = useLocation();
   const [more, setMore] = useState(false);
   const teacher = teacherById(user.teacherId);
   const isStaff = user.role === 'TEACHER' || user.role === 'PARENT';
   const label = (n) => (n.label ? pickL(n.label, locale) : t(n.key));
+  // The English item stays highlighted on every English screen (/lesson, /talk, /games/..., /exams, /courses).
+  const on = (n, isActive) => isActive || (n.english && isEnglishPath(pathname));
   useA11y(prefs.a11y);
   const Lang = () => (
     <div className="flex gap-1 bg-soft rounded-full p-1">
@@ -111,8 +115,8 @@ export default function Layout({ children }) {
   const mobileBar = hasMore ? items.slice(0, 4) : [...items, SETTINGS];
   const mobileMore = hasMore ? [...items.slice(4), SETTINGS] : [];
 
-  const linkCls = ({ isActive }) =>
-    `flex items-center gap-3 px-4 py-2.5 rounded-2xl font-extrabold transition ${isActive ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'hover:bg-soft text-ink/70'}`;
+  const linkCls = (active) =>
+    `flex items-center gap-3 px-4 py-2.5 rounded-2xl font-extrabold transition ${active ? 'bg-primary text-white shadow-lg shadow-primary/30' : 'hover:bg-soft text-ink/70'}`;
   const a11yName = pickL(L_A11Y, locale);
   const readName = pickL(L_READ, locale);
   const moreName = pickL(L_MORE, locale);
@@ -128,11 +132,11 @@ export default function Layout({ children }) {
           <span className="font-black text-lg leading-tight">{t('app.name')}</span>
         </div>
         {items.map((n) => (
-          <NavLink key={n.to} to={n.to} className={linkCls} onClick={() => sfx.click()}>
+          <NavLink key={n.to} to={n.to} className={({ isActive }) => linkCls(on(n, isActive))} onClick={() => sfx.click()}>
             <span className="text-xl" aria-hidden="true">{n.icon}</span>{label(n)}
           </NavLink>
         ))}
-        <NavLink to="/settings" className={linkCls} onClick={() => sfx.click()}>
+        <NavLink to="/settings" className={({ isActive }) => linkCls(isActive)} onClick={() => sfx.click()}>
           <span className="text-xl" aria-hidden="true">⚙️</span>{t('nav.settings')}
         </NavLink>
         <div className="mt-auto space-y-3 pt-4">
@@ -190,7 +194,7 @@ export default function Layout({ children }) {
             <div className="absolute bottom-0 inset-x-0 bg-surface rounded-t-3xl p-4 pb-24 grid grid-cols-3 gap-2 max-h-[80vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
               {mobileMore.map((n) => (
                 <NavLink key={n.to} to={n.to} onClick={() => { sfx.click(); setMore(false); }}
-                  className={({ isActive }) => `flex flex-col items-center gap-1 p-3 rounded-2xl text-xs font-bold text-center ${isActive ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>
+                  className={({ isActive }) => `flex flex-col items-center gap-1 p-3 rounded-2xl text-xs font-bold text-center ${on(n, isActive) ? 'bg-primary text-white' : 'bg-soft text-ink/70'}`}>
                   <span className="text-2xl" aria-hidden="true">{n.icon}</span>{label(n)}
                 </NavLink>
               ))}
@@ -202,7 +206,7 @@ export default function Layout({ children }) {
         <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-surface/95 backdrop-blur border-t border-black/5 flex justify-around py-1.5">
           {mobileBar.map((n) => (
             <NavLink key={n.to} to={n.to} onClick={() => { sfx.click(); setMore(false); }}
-              className={({ isActive }) => `flex flex-col items-center px-3 py-1 rounded-xl text-[11px] font-bold ${isActive ? 'text-primary' : 'text-ink/50'}`}>
+              className={({ isActive }) => `flex flex-col items-center px-3 py-1 rounded-xl text-[11px] font-bold ${on(n, isActive) ? 'text-primary' : 'text-ink/50'}`}>
               <span className="text-2xl" aria-hidden="true">{n.icon}</span>{label(n)}
             </NavLink>
           ))}
