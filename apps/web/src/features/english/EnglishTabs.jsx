@@ -3,6 +3,7 @@
 // keep working and open inside the same section. In the lyceum version the section is the advanced level.
 // School lessons and homework for every subject are in the main section «Уроки» (/lessons), so the English
 // exercises tab is called «Упражнения» to avoid two different «Уроки».
+// The tab bar has no visible title: each page keeps its own single heading; the section name is the nav label.
 import { NavLink } from 'react-router-dom';
 import { useApp, useT } from '../../core/store.js';
 import { pickL } from '../../i18n/index.js';
@@ -31,17 +32,14 @@ export default function EnglishTabs() {
   const t = useT();
   const label = (tab) => (tab.label ? pickL(tab.label, locale) : t(tab.key));
   return (
-    <div className="mb-5">
-      <div className="label mb-2">🔤 {englishTitle(prefs.track, locale)}</div>
-      <nav className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" aria-label={englishTitle(prefs.track, locale)}>
-        {ENGLISH_TABS.map((tab) => (
-          <NavLink key={tab.to} to={tab.to} end={tab.end} onClick={() => sfx.click()}
-            className={({ isActive }) => `chip whitespace-nowrap min-h-[36px] transition ${isActive ? '!bg-primary !text-white shadow' : 'hover:brightness-95'}`}>
-            <span aria-hidden="true">{tab.icon}</span>{label(tab)}
-          </NavLink>
-        ))}
-      </nav>
-    </div>
+    <nav className="mb-5 flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" aria-label={englishTitle(prefs.track, locale)}>
+      {ENGLISH_TABS.map((tab) => (
+        <NavLink key={tab.to} to={tab.to} end={tab.end} onClick={() => sfx.click()}
+          className={({ isActive }) => `chip whitespace-nowrap min-h-[44px] !px-4 transition ${isActive ? '!bg-primary !text-white shadow' : 'hover:brightness-95'}`}>
+          <span aria-hidden="true">{tab.icon}</span>{label(tab)}
+        </NavLink>
+      ))}
+    </nav>
   );
 }
 
