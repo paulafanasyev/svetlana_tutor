@@ -6,6 +6,7 @@ import App from './app/App.jsx';
 import { useApp } from './core/store.js';
 import { initAnalytics } from './core/analytics.js';
 import './ai/trackPrompt.js'; // tutor version (base / cadet / lyceum / support) for every local-AI request
+import './app/trackTheme.js'; // tutor version look: <html data-track="cadet"> = military style
 import './styles.css'; // processed by Vite (or externalized by the no-npm esbuild pipeline)
 
 // Apply saved theme before first paint (guarded: sandboxed iframes may block storage)

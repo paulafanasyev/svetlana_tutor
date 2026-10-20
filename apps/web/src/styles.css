@@ -3,47 +3,47 @@
 @tailwind utilities;
 
 :root, [data-theme='candy'] {
-  --c-primary: 124 58 237;   /* violet-600 */
-  --c-primary2: 168 85 247;  /* purple-500 */
-  --c-accent: 245 158 11;    /* amber-500 */
-  --c-page: 245 243 255;     /* violet-50 */
-  --c-surface: 255 255 255;
-  --c-ink: 30 27 55;
-  --c-soft: 237 233 254;
+ --c-primary: 124 58 237; /* violet-600 */
+ --c-primary2: 168 85 247; /* purple-500 */
+ --c-accent: 245 158 11; /* amber-500 */
+ --c-page: 245 243 255; /* violet-50 */
+ --c-surface: 255 255 255;
+ --c-ink: 30 27 55;
+ --c-soft: 237 233 254;
 }
 [data-theme='ocean'] {
-  --c-primary: 2 132 199; --c-primary2: 6 182 212; --c-accent: 249 115 22;
-  --c-page: 236 249 255; --c-surface: 255 255 255; --c-ink: 12 42 63; --c-soft: 224 242 254;
+ --c-primary: 2 132 199; --c-primary2: 6 182 212; --c-accent: 249 115 22;
+ --c-page: 236 249 255; --c-surface: 255 255 255; --c-ink: 12 42 63; --c-soft: 224 242 254;
 }
 [data-theme='sunset'] {
-  --c-primary: 225 29 72; --c-primary2: 249 115 22; --c-accent: 250 204 21;
-  --c-page: 255 241 242; --c-surface: 255 255 255; --c-ink: 60 18 30; --c-soft: 255 228 230;
+ --c-primary: 225 29 72; --c-primary2: 249 115 22; --c-accent: 250 204 21;
+ --c-page: 255 241 242; --c-surface: 255 255 255; --c-ink: 60 18 30; --c-soft: 255 228 230;
 }
 [data-theme='forest'] {
-  --c-primary: 5 150 105; --c-primary2: 132 204 22; --c-accent: 245 158 11;
-  --c-page: 236 253 245; --c-surface: 255 255 255; --c-ink: 15 45 35; --c-soft: 209 250 229;
+ --c-primary: 5 150 105; --c-primary2: 132 204 22; --c-accent: 245 158 11;
+ --c-page: 236 253 245; --c-surface: 255 255 255; --c-ink: 15 45 35; --c-soft: 209 250 229;
 }
 [data-theme='galaxy'] {
-  --c-primary: 139 92 246; --c-primary2: 34 211 238; --c-accent: 250 204 21;
-  --c-page: 17 15 35; --c-surface: 30 27 55; --c-ink: 235 233 254; --c-soft: 44 40 80;
+ --c-primary: 139 92 246; --c-primary2: 34 211 238; --c-accent: 250 204 21;
+ --c-page: 17 15 35; --c-surface: 30 27 55; --c-ink: 235 233 254; --c-soft: 44 40 80;
 }
 
 html, body, #root { height: 100%; }
 body { @apply bg-page text-ink font-sans antialiased; }
 
 @layer components {
-  .card { @apply bg-surface rounded-3xl shadow-[0_6px_24px_-8px_rgb(0_0_0/0.12)] border border-black/5; }
-  [data-theme='galaxy'] .card { @apply border-white/10; }
-  .btn, .btn-primary, .btn-ghost, .btn-outline { @apply inline-flex items-center justify-center gap-2 font-extrabold rounded-2xl px-5 py-3 transition active:scale-95 select-none cursor-pointer disabled:opacity-40 disabled:pointer-events-none; }
-  .btn-primary { @apply text-white shadow-lg shadow-primary/30; background: linear-gradient(135deg, rgb(var(--c-primary)), rgb(var(--c-primary2))); }
-  .btn-ghost { @apply bg-soft text-ink hover:brightness-95; }
-  .btn-outline { @apply border-2 border-primary/30 text-primary hover:bg-primary/5; }
-  .chip { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold bg-soft; }
-  .input { @apply w-full rounded-2xl border-2 border-black/10 bg-surface px-4 py-3 font-semibold outline-none focus:border-primary/60 placeholder:text-ink/30; }
-  [data-theme='galaxy'] .input { @apply border-white/15; }
-  .h1 { @apply text-3xl md:text-4xl font-black tracking-tight; }
-  .h2 { @apply text-xl md:text-2xl font-black tracking-tight; }
-  .label { @apply text-xs font-extrabold uppercase tracking-wider text-ink/50; }
+ .card { @apply bg-surface rounded-3xl shadow-[0_6px_24px_-8px_rgb(0_0_0/0.12)] border border-black/5; }
+ [data-theme='galaxy'] .card { @apply border-white/10; }
+ .btn, .btn-primary, .btn-ghost, .btn-outline { @apply inline-flex items-center justify-center gap-2 font-extrabold rounded-2xl px-5 py-3 transition active:scale-95 select-none cursor-pointer disabled:opacity-40 disabled:pointer-events-none; }
+ .btn-primary { @apply text-white shadow-lg shadow-primary/30; background: linear-gradient(135deg, rgb(var(--c-primary)), rgb(var(--c-primary2))); }
+ .btn-ghost { @apply bg-soft text-ink hover:brightness-95; }
+ .btn-outline { @apply border-2 border-primary/30 text-primary hover:bg-primary/5; }
+ .chip { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold bg-soft; }
+ .input { @apply w-full rounded-2xl border-2 border-black/10 bg-surface px-4 py-3 font-semibold outline-none focus:border-primary/60 placeholder:text-ink/30; }
+ [data-theme='galaxy'] .input { @apply border-white/15; }
+ .h1 { @apply text-3xl md:text-4xl font-black tracking-tight; }
+ .h2 { @apply text-xl md:text-2xl font-black tracking-tight; }
+ .label { @apply text-xs font-extrabold uppercase tracking-wider text-ink/50; }
 }
 
 @keyframes breathe { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-4px) scale(1.012); } }
@@ -63,3 +63,97 @@ body { @apply bg-page text-ink font-sans antialiased; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: rgb(var(--c-primary) / 0.25); border-radius: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
+
+/* ===== Кадетская версия: <html data-track="cadet"> (app/trackTheme.js) =====
+   Олива и хаки, золото погон, красный кант, лёгкий камуфляж, уставные заглавные кнопки и звёзды.
+   Специфичность html[data-track] выше [data-theme]: цветовые темы не перебивают форму; тёмная тема даёт «ночной наряд». */
+html[data-track='cadet'] {
+ --c-primary: 63 79 31;   /* олива */
+ --c-primary2: 96 112 46; /* светлая олива */
+ --c-accent: 201 162 39;  /* золото */
+ --c-page: 232 228 208;   /* хаки-бумага */
+ --c-surface: 249 247 238;
+ --c-ink: 30 34 20;
+ --c-soft: 221 216 190;
+ --cadet-gold: 201 162 39;
+ --cadet-red: 178 34 34;
+ --cadet-camo: 63 79 31;
+}
+html[data-track='cadet'][data-theme='galaxy'] {
+ --c-primary: 120 138 60; --c-primary2: 150 166 80; --c-accent: 214 178 60;
+ --c-page: 20 24 14; --c-surface: 33 39 23; --c-ink: 236 232 210; --c-soft: 48 56 32;
+ --cadet-camo: 150 166 80;
+}
+html[data-track='cadet'] body {
+ background-color: rgb(var(--c-page));
+ background-image:
+  radial-gradient(ellipse 140px 70px at 12% 18%, rgb(var(--cadet-camo) / 0.07), transparent 70%),
+  radial-gradient(ellipse 110px 60px at 78% 12%, rgb(110 90 50 / 0.06), transparent 70%),
+  radial-gradient(ellipse 160px 80px at 60% 62%, rgb(var(--cadet-camo) / 0.06), transparent 70%),
+  radial-gradient(ellipse 120px 70px at 22% 82%, rgb(110 90 50 / 0.06), transparent 70%),
+  repeating-linear-gradient(135deg, rgb(0 0 0 / 0.018) 0 2px, transparent 2px 9px);
+ background-size: 520px 420px, 480px 380px, 560px 460px, 500px 400px, auto;
+ background-attachment: fixed;
+}
+/* Тонкая лента сверху: золото, красный кант, золото */
+html[data-track='cadet'] body::before {
+ content: ''; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 9990; pointer-events: none;
+ background: linear-gradient(180deg, rgb(var(--cadet-gold)) 0 2px, rgb(var(--cadet-red)) 2px 3px, rgb(var(--cadet-gold)) 3px 5px);
+}
+/* Водяной знак: звезда в углу */
+html[data-track='cadet'] body::after {
+ content: ''; position: fixed; right: -60px; bottom: -60px; width: 340px; height: 340px; z-index: 0; pointer-events: none; opacity: 0.06;
+ background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%233f4f1f' d='M50 3l13.8 31.2 33.9 3.3-25.5 22.6 7.4 33.3L50 76.3 20.4 93.4l7.4-33.3L2.3 37.5l33.9-3.3z'/%3E%3C/svg%3E");
+}
+html[data-track='cadet'] #root { position: relative; z-index: 1; }
+
+html[data-track='cadet'] .card {
+ border-radius: 14px;
+ border: 1px solid rgb(var(--c-primary) / 0.22);
+ box-shadow: 0 6px 20px -10px rgb(30 34 20 / 0.35), inset 0 0 0 1px rgb(255 255 255 / 0.35);
+ background-image: linear-gradient(180deg, rgb(var(--cadet-gold) / 0.9) 0 3px, transparent 3px);
+ background-repeat: no-repeat;
+}
+html[data-track='cadet'][data-theme='galaxy'] .card { box-shadow: 0 6px 20px -10px rgb(0 0 0 / 0.6); border-color: rgb(var(--c-primary) / 0.35); }
+
+html[data-track='cadet'] .btn,
+html[data-track='cadet'] .btn-primary,
+html[data-track='cadet'] .btn-ghost,
+html[data-track='cadet'] .btn-outline { border-radius: 10px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92em; }
+html[data-track='cadet'] .btn-primary {
+ color: rgb(253 246 214);
+ background: linear-gradient(180deg, rgb(var(--c-primary2)), rgb(var(--c-primary)));
+ border: 1px solid rgb(var(--cadet-gold) / 0.85);
+ box-shadow: 0 8px 18px -8px rgb(var(--c-primary) / 0.7), inset 0 1px 0 rgb(255 255 255 / 0.18);
+ text-shadow: 0 1px 0 rgb(0 0 0 / 0.35);
+}
+html[data-track='cadet'] .btn-primary:hover { filter: brightness(1.08); }
+html[data-track='cadet'] .btn-outline { border-color: rgb(var(--c-primary) / 0.5); }
+html[data-track='cadet'] .btn-ghost { border: 1px solid rgb(var(--c-primary) / 0.18); }
+
+/* Чипы как нашивки: олива с золотым кантом */
+html[data-track='cadet'] .chip {
+ border-radius: 6px;
+ background: rgb(var(--c-primary) / 0.12);
+ border: 1px solid rgb(var(--cadet-gold) / 0.6);
+ text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.78rem;
+}
+
+html[data-track='cadet'] .input { border-radius: 10px; border-color: rgb(var(--c-primary) / 0.25); }
+html[data-track='cadet'] .input:focus { border-color: rgb(var(--cadet-gold)); box-shadow: 0 0 0 3px rgb(var(--cadet-gold) / 0.2); }
+
+/* Заголовки: уставной шрифт (узкий, заглавный), золотая звезда */
+html[data-track='cadet'] .h1,
+html[data-track='cadet'] .h2 {
+ font-family: 'Oswald', 'Roboto Condensed', 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
+ text-transform: uppercase; letter-spacing: 0.04em; font-weight: 800;
+}
+html[data-track='cadet'] .h1::before,
+html[data-track='cadet'] .h2::before { content: '★'; color: rgb(var(--cadet-gold)); margin-right: 0.4em; font-size: 0.8em; vertical-align: 0.08em; }
+html[data-track='cadet'] .label { color: rgb(var(--c-primary) / 0.85); letter-spacing: 0.12em; }
+html[data-track='cadet'][data-theme='galaxy'] .label { color: rgb(var(--cadet-gold) / 0.85); }
+html[data-track='cadet'] .label::before { content: '▸ '; color: rgb(var(--cadet-gold)); }
+
+/* Выделение и полоса прокрутки */
+html[data-track='cadet'] ::selection { background: rgb(var(--cadet-gold) / 0.35); }
+html[data-track='cadet'] ::-webkit-scrollbar-thumb { background: rgb(var(--c-primary) / 0.45); border-radius: 4px; }
