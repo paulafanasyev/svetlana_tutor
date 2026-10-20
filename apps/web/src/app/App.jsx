@@ -39,6 +39,7 @@ const Courses = retryLazy(() => import('../features/courses/Courses.jsx'));
 const StudentDiary = retryLazy(() => import('../features/journal/StudentDiary.jsx'));
 const MathTutor = retryLazy(() => import('../features/math/MathTutor.jsx'));
 const Programs = retryLazy(() => import('../features/school/Programs.jsx'));
+const Lessons = retryLazy(() => import('../features/school/Lessons.jsx'));
 const Planner = retryLazy(() => import('../features/school/Planner.jsx'));
 const ClassRoom = retryLazy(() => import('../features/school/ClassRoom.jsx'));
 
@@ -154,6 +155,7 @@ function AppScreens() {
       <Page>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/lessons" element={<Lessons />} />
           <Route path="/english" element={<En><EnglishHub /></En>} />
           <Route path="/lesson" element={<En><Lesson /></En>} />
           <Route path="/math" element={<MathTutor />} />
