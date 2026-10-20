@@ -179,3 +179,24 @@ html[data-track='cadet'] .label::before { content: '/// '; color: rgb(var(--cade
 html[data-track='cadet'] .bg-accent { background-color: rgb(var(--cadet-gold)) !important; }
 html[data-track='cadet'] ::selection { background: rgb(var(--cadet-gold) / 0.4); }
 html[data-track='cadet'] ::-webkit-scrollbar-thumb { background: rgb(var(--c-primary) / 0.6); border-radius: 0; }
+
+/* ===== Доступность (аудит 20.10) ===== */
+/* Ночной наряд: кнопки темнее, чтобы текст #f6eccb читался (контраст не ниже 4.5:1). Переменные не трогаем. */
+html[data-track='cadet'][data-theme='galaxy'] .btn-primary { background: linear-gradient(180deg, #606e2c 0%, #4a5622 55%, rgb(var(--cadet-dark)) 100%); }
+html[data-track='cadet'][data-theme='galaxy'] .aet-trackbar [aria-checked='true'] { background: linear-gradient(135deg, #4a5622, #606e2c) !important; }
+
+/* Видимый фокус с клавиатуры */
+:focus-visible { outline: 3px solid rgb(var(--c-primary)); outline-offset: 2px; }
+html[data-track='cadet'] :focus-visible { outline-color: rgb(var(--cadet-dark)); }
+html[data-track='cadet'][data-theme='galaxy'] :focus-visible { outline-color: rgb(var(--cadet-gold)); }
+html[data-track='cadet'] .btn:focus-visible,
+html[data-track='cadet'] .btn-primary:focus-visible,
+html[data-track='cadet'] .btn-ghost:focus-visible,
+html[data-track='cadet'] .btn-outline:focus-visible,
+html[data-track='cadet'] .chip:focus-visible,
+html[data-track='cadet'] .input:focus-visible { clip-path: none; }
+
+/* Меньше движения для тех, кто так настроил систему */
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}

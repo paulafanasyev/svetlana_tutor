@@ -34,14 +34,16 @@ export const TEACHERS = [
     greeting: "Hey! Alexey here! Ready to level up your English like a video game? Let's go — first quest starts now!" },
 ];
 
-// Cadet version: the only mentor is a reserve captain, an officer-educator of a cadet corps
-// (Dmitry in uniform). The saved id stays 'james' (no server changes).
-// Portrait: avatar/pixar/cadet.js (uniform with cap and captain's shoulder boards).
+// Cadet version: the only mentor is a fictional reserve captain, an officer-educator of a cadet corps.
+// He is the main teacher of the version: he leads every subject (maths, English, the school programme).
+// Portrait: avatar/pixar/cadet.js (Dmitry's face in the parade uniform of the Ground Forces, parade cap,
+// captain's gold shoulder boards). The saved id stays 'james' (no server changes).
 export const CADET_TEACHER = {
-  id: 'cadet', baseId: 'james', name: 'Андрей Николаевич', nameEn: 'Captain Andrey', emoji: '🎖️', bg: '#E4E8DA', accent: '#4F6B3A', gender: 'm',
+  id: 'cadet', baseId: 'james', name: 'Андрей Николаевич', nameEn: 'Captain Andrey', emoji: '🎖️', bg: '#E4E8DA', accent: '#214D46', gender: 'm',
+  rank: { ru: 'Капитан', en: 'Captain' },
   voice: { pitch: 0.8, rate: 0.95 },
-  tagline: { en: 'Reserve captain, cadet corps officer-educator', ru: 'Капитан запаса, офицер-воспитатель' },
-  greeting: "Good day, cadet! I'm Captain Andrey Nikolaevich, your English instructor. A little practice every day, and English will become your strong side. Ready? Let's begin!",
+  tagline: { en: 'Reserve captain, officer-educator, your mentor in every subject', ru: 'Капитан запаса, офицер-воспитатель, наставник по всем предметам' },
+  greeting: "Good day, cadet! I'm Captain Andrey Nikolaevich, your mentor. Maths, English and every school subject: a little practice every day, step by step. Ready? Let's begin!",
 };
 
 export const currentTrackId = () => {

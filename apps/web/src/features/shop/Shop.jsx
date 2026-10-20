@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useApp, useT, useLocale } from '../../core/store.js';
 import { api } from '../../core/api.js';
-import { TEACHERS } from '../../data/teachers.js';
+import { TEACHERS, CADET_TEACHER } from '../../data/teachers.js';
 import { pickL } from '../../i18n/index.js';
 import Avatar from '../../avatar/Avatar.jsx';
 import { sfx } from '../../audio/sfx.js';
@@ -19,6 +19,9 @@ export default function Shop() {
   const locale = useLocale();
   const [unlocks, setUnlocks] = useState([]);
   const [msg, setMsg] = useState(null);
+  // Cadet version: the captain leads every lesson, so ordinary teachers are not offered here
+  // (buying or switching them would change nothing on screen and confuse the learner).
+  const cadet = prefs.track === 'cadet';
 
   const load = () => api.getUnlocks().then(setUnlocks).catch(() => {});
   useEffect(() => { load(); }, []);
@@ -62,17 +65,29 @@ export default function Shop() {
       {msg && <div className="card p-3 mb-4 font-bold text-rose-500 anim-shake">😿 {msg}</div>}
 
       <div className="label mb-2">🧑‍🏫 {t('shop.teachers')}</div>
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-8">
-        {TEACHERS.map((tc) => (
-          <div key={tc.id} className="card p-2.5 text-center">
-            <Avatar teacher={tc} className="w-full" rounded="rounded-xl" />
-            <div className="font-black text-sm mt-1.5">{tc.name}</div>
-            <div className="text-[11px] font-semibold text-ink/45 leading-tight mb-1.5 truncate">{pickL(tc.tagline, locale)}</div>
-            <ItemBtn type="teacher" id={tc.id} price={TEACHER_PRICE} active={user.teacherId === tc.id}
-              freeIds={unlocks.length === 0 && user.teacherId ? [user.teacherId] : [user.teacherId]} />
+      {cadet ? (
+        <div className="card p-4 mb-8 flex items-center gap-4">
+          <Avatar teacher={CADET_TEACHER} className="w-20 shrink-0" rounded="rounded-xl" />
+          <div className="text-sm font-semibold text-ink/70">
+            <div className="font-black text-ink">{CADET_TEACHER.emoji} {locale === 'ru' ? `Капитан ${CADET_TEACHER.name}` : CADET_TEACHER.nameEn}</div>
+            {locale === 'ru'
+              ? 'В кадетской версии все занятия ведёт наставник, он бесплатный. Твой учитель сохранён: сменить его можно в обычной версии.'
+              : 'In the cadet version every lesson is led by the mentor, free of charge. Your teacher is kept: you can change it in the standard version.'}
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-8">
+          {TEACHERS.map((tc) => (
+            <div key={tc.id} className="card p-2.5 text-center">
+              <Avatar teacher={tc} className="w-full" rounded="rounded-xl" />
+              <div className="font-black text-sm mt-1.5">{tc.name}</div>
+              <div className="text-[11px] font-semibold text-ink/45 leading-tight mb-1.5 truncate">{pickL(tc.tagline, locale)}</div>
+              <ItemBtn type="teacher" id={tc.id} price={TEACHER_PRICE} active={user.teacherId === tc.id}
+                freeIds={unlocks.length === 0 && user.teacherId ? [user.teacherId] : [user.teacherId]} />
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="label mb-2">🎨 {t('shop.themes')}</div>
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
