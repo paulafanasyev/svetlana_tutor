@@ -1,7 +1,5 @@
 [
-  {"type":"fpu","doc":"LAW_452180","list":1,"grep":"защит|безопасност|ОБЗР","full":1},
-  {"type":"fpu","doc":"LAW_452180","section":"150.8","direct":1,"from":"150.8.","raw":7000},
-  {"type":"fpu","doc":"LAW_452180","section":"163.9","direct":1,"from":"163.9.","raw":6000},
-  {"type":"fpu","doc":"LAW_452180","section":"150.3","direct":1,"from":"150.3.","raw":3000},
-  {"type":"fpu","doc":"LAW_452180","section":"163.3","direct":1,"from":"163.3.","raw":3000}
+  {"type":"fpu","doc":"LAW_452180","list":1,"keys":"^162\\(1\\)","full":1},
+  {"type":"fpu","doc":"LAW_452180","section":"162(1).3","direct":1,"from":"162(1).3.1","raw":5000},
+  {"type":"fpu","doc":"LAW_452180","section":"162(1).4","direct":1,"from":"162(1).4.5","raw":4000}
 ]

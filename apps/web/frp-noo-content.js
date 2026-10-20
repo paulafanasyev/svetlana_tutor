@@ -37,6 +37,14 @@ export const OOO_PAGES = [
   ['Иностранный (английский) язык', 5, '136.3', '9760c9d91ab6748cdf739b7e7a713850cf61f053'], ['Иностранный (английский) язык', 6, '136.4', 'a8ead0c3208df493b2aaaa2a27228797b2f72b51'],
   ['Иностранный (английский) язык', 7, '136.5', '08132177c8218bf41cd221bd1cb6e3dce848abb0'], ['Иностранный (английский) язык', 8, '136.6', '508ec8dcaf0e9b36416f48058aba07125be787de'],
   ['Иностранный (английский) язык', 9, '136.7', 'c1201aaecc23ceed267e30efb2b8f3d445b8421d'],
+  // История (п. 150): содержание по классам, Всеобщая история и История России в одном пункте класса.
+  ['История', 5, '150.3', '6cd2dbfd63f4567da8f29bb63f4710ec67f2b145'], ['История', 6, '150.4', 'c51f0abca3d3c8a82bc14dbc1c219570acf23d3e'],
+  ['История', 7, '150.5', '1e85464769ab88e3d6fd0b44bb246428d72ca73b'], ['История', 8, '150.6', '2d295331c16e4c5c35b026a78ed40f5e4eb92eea'],
+  ['История', 9, '150.7', '9c97424b505b47ffdd808bf6b1e9a9e144971417'],
+  // Физическая культура (п. 163): содержание по классам (модули по видам спорта п. 163.10 и вариативный модуль 163.8 не входят).
+  ['Физическая культура', 5, '163.3', '06fedfdda8684272d2c4e083259cba95f7181db9'], ['Физическая культура', 6, '163.4', '7b85b3f26ae198e1bd18bb57792152b5c962bf07'],
+  ['Физическая культура', 7, '163.5', 'c1401985374a1b9f706ada1d56a335a13f655218'], ['Физическая культура', 8, '163.6', '690400c303b99a75e10d11b6204fa465fb17c2c1'],
+  ['Физическая культура', 9, '163.7', '191a2c681655052bf870b5fd76a7d14c58c0efc7'],
 ];
 // ФОП ООО, курсы на одной странице: «Содержание обучения в N классе» и предметные результаты «к концу обучения в N классе»
 // находятся по заголовкам. [предмет, пункт, страница, классы, только результаты]
@@ -46,6 +54,9 @@ export const COURSES = [
   ['Геометрия', '146.6', '0e4c55d2e25f53e4f8e2ad181aeb5b09d1dae129', [7, 8, 9]],
   ['Вероятность и статистика', '146.7', '028b0e926036a3222b0ed8e422335c790e281fbf', [7, 8, 9]],
   ['Иностранный (английский) язык', '136.8', '94947fccef514db3a8687e66e8bf853b67f69ea6', [5, 6, 7, 8, 9], true],
+  // Планируемые результаты истории (150.8) и физкультуры (163.9): предметные результаты по классам.
+  ['История', '150.8', '06a9ee3182714c5e524fe0997ebb8f9640c928b3', [5, 6, 7, 8, 9], true],
+  ['Физическая культура', '163.9', '3d35f5e743ae2ff79c753b1f485caf54df5f05cd', [5, 6, 7, 8, 9], true],
 ];
 export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
 // ОРКСЭ: 6 модулей на одной странице; музыка 1–4; курсы ООО: содержание (кроме «только результаты») и результаты по классам.
@@ -135,7 +146,8 @@ export function parseOrkse(lines) {
   return out;
 }
 
-// Номера пунктов «Содержание обучения в N классе» и «… к концу обучения в N классе» внутри курса root.
+// Номера пунктов «Содержание обучения в N классе» и предметных результатов по классам внутри курса root:
+// «… к концу обучения в N классе» (математика, английский) или «Предметные результаты изучения … в N классе» (история и др.).
 export function courseParts(lines, root) {
   const content = {}, results = {};
   for (const x of lines) {
@@ -143,7 +155,7 @@ export function courseParts(lines, root) {
     if (!m || !m[1].startsWith(root + '.')) continue;
     let g;
     if ((g = m[2].match(/^Содержание обучения в (\d+) классе/))) content[g[1]] ??= m[1];
-    else if ((g = m[2].match(/к концу обучения в (\d+) классе/))) results[g[1]] ??= m[1];
+    else if ((g = m[2].match(/(?:[Кк] концу обучения|[Пп]редметные результаты[^.:]*?) в (\d+) классе/))) results[g[1]] ??= m[1];
   }
   return { content, results };
 }
@@ -241,6 +253,8 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
         const r = results[g] && flatResults(lines, results[g]);
         if (r && r.length) map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
       }
+      // Для диагностики: заголовки пунктов курса, если результаты по классам не найдены.
+      if (grades.some(g => !results[g])) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   }
   try {
@@ -266,11 +280,11 @@ export default function nooContent() {
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
-          // Одно сообщение: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract).
-          const ooo = new Set(COURSES.flatMap(([s, , , gs, only]) => gs.flatMap(g => only ? [`R|${s}|${g}`] : [`${s}|${g}`, `R|${s}|${g}`])));
-          const sum = Object.entries(map).filter(([k]) => ooo.has(k)).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}\n` + (Array.isArray(v[0]?.topics) ? v.map(s => `${s.title.slice(0, 70)} [${s.topics.length}]`).join('\n') : '')).join('\n');
-          const dump = [...(map['Вероятность и статистика|7'] || []).flatMap(s => [`## ${s.title}`, ...s.topics]), '=== R англ 5', ...(map['R|Иностранный (английский) язык|5'] || [])].map(t => t.slice(0, 150)).join('\n');
-          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n=== ВиС 7\n${dump}`;
+          // Одно сообщение: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract). Сводка по последним подключённым предметам.
+          const CHECK = ['История', 'Физическая культура'];
+          const sum = Object.entries(map).filter(([k]) => CHECK.some(s => k === `${s}|${k.split('|').pop()}` || k === `R|${s}|${k.split('|').pop()}`) && +k.split('|').pop() >= 5).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}` + (Array.isArray(v[0]?.topics) ? ' ' + v.slice(0, 4).map(s => `${s.title.slice(0, 40)} [${s.topics.length}]`).join('; ') : '')).join('\n');
+          const dump = ['=== История 5', ...(map['История|5'] || []).slice(0, 3).flatMap(s => [`## ${s.title}`, ...s.topics.slice(0, 2)]), '=== R История 5', ...(map['R|История|5'] || []).slice(0, 4), '=== R ФК 5', ...(map['R|Физическая культура|5'] || []).slice(0, 3)].map(t => t.slice(0, 110)).join('\n');
+          const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
           const blocked = errors.length && errors.every(e => /по расписанию/.test(e));
