@@ -1,0 +1,1119 @@
+{
+  "schemaVersion": 1,
+  "title": "Официальные программы внеурочной деятельности — ЕДСОО",
+  "source": "https://edsoo.ru/rabochie-programmy-vd/",
+  "checkedAt": "2026-10-21",
+  "count": 53,
+  "records": [
+    {
+      "id": "edsoo-vd-001",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Разговоры о важном». 1-11 классы (2026 г.)",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/prilozhieniie-4.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-002",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности « Основы информационной культуры школьников: учимся быть убедительными и защищенными». 1-4 класс(2025 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/01/pvd_noo_osnovy-inf-kultury_shkolnikov_22012026.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-003",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Край родной». 1–4 классы (2025 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "geography",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/programma_kraj_rodnoj.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-004",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Раскрываем секреты текста”. 1-4 классы (2023 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_raskryvaem-sekrety-teksta.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-005",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «В мире русского языка». 1–4 классы (2025 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/11/pfk_v_mire_russkogo_yazyka_itog-2.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-006",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Яркие страницы истории нашего Отечества». 1–4 классы (2023 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_yarkie_straniczy_istorii_nashego_otechestva.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-007",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Словесное творчество». 1-4 классы (2023 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_slovesnoe_tvorchestvo.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-008",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Моя художественная практика». 1-4 классы (2022 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "visual-arts",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87-%D0%B4%D0%B5%D1%8F%D1%82.-%D0%9C%D0%BE%D1%8F-%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-%D0%9D%D0%9E%D0%9E_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-009",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Наша Родина от края и до края». 1-4 классы (2023 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_nasha-rodina-ot-kraya-i-do-kraya.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-010",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Музыкальный театр». 1-9 классы (2022 г.)",
+      "gradeRange": [
+        1,
+        9
+      ],
+      "subject": "music",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%82%D0%B5%D0%B0%D1%82%D1%80-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%B8-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-011",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Предметной области «Искусство» (Музыка)» «Хоровое пение». 1-8 классы (2022 г.)",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "subject": "music",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87.-%D0%B4%D0%B5%D1%8F%D1%82.-%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%BE%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0_%D0%A5%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5-%D0%BF%D0%B5%D0%BD%D0%B8%D0%B5_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-012",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы логики и алгоритмики». 1-4 классы (2022 г.)",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "mathematics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%9F%D0%A0%D0%9F_%D0%9A%D0%92%D0%94_%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B_%D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%D0%B8_%D0%B8_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%B8%D0%BA%D0%B8_%D0%B4%D0%BB%D1%8F_1_4_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%B2.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-013",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Современные исследования и достижения нанохимии». 10-11 классы (2024 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chemistry",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/01/rp_sovremennye_issledovaniya_i_dostizheniya_nanohimii_2024.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-014",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Живая физика». 6 класс (2026 г.)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "physics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/zhivaya-fizika.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-015",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Математика: магия и стройность чисел». 5-6 классы (2026 г.)",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "subject": "mathematics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/matematika-magiya-i-strojnost-chisel.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-016",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Нескучная информатика». 5-6 классы (2026 г.)",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "subject": "informatics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/neskuchnaya-informatika.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-017",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Комнатные растения в школе». 6 класс (2026 г.)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "biology",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/komnatnye-rasteniya.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-018",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Тайны кристаллов». 7 класс (2026 г.)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/kristally.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-019",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Трудные вопросы математики». 7-9 классы (2026 г.)",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "mathematics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-020",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности « Основы информационной культуры школьников: учимся быть убедительными и защищенными». 5-11 классы (2025 г.)",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-021",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Трудные вопросы физики». 7-9 классы (2025 г.)",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "physics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_fizika_uglub_10_07_sajt-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-022",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы финансовой грамотности. Финансовая культура». 5-9 классы (2025 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "economics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/ooo_finkult_2025_.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-023",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Химия в экспериментах и задачах». 8-9 классы (2025 г.)",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subject": "chemistry",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_kvd_himiya_uglub_posle-sinhronizaczii_10.07.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-024",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Практическая биология: теория и практика». 7-9 классы (2025 г.)",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "biology",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_bio_uglub_posle-sinhronizaczii_0907.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-025",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Моя семья». 5-9 классы (2024 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2024/09/pvd_moya-semya_ooo_itog_12092024.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-026",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Обучение служением. Первые». 5-9 классы (2024 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_obuchenie_sluzheniem_soo_2024_g-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-027",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Искусственный интеллект». 5-9 классы (2024 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "informatics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/programma_vneurochnoj_deyatelnosti_iskusstvennyj_intellekt.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-028",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Памятные места моего края». 6-9 классы (2023 г.)",
+      "gradeRange": [
+        6,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_pamyatnye-mesta_28112023.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-029",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Великие достижения соотечественников». 5-9 классы (2023 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/pvd_velikie_dostizheniya_sootechestvennikov1-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-030",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Мир визуально-пространственных искусств». 5-8 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        8
+      ],
+      "subject": "visual-arts",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D0%B4%D0%B5%D1%8F%D1%82.-%D0%9C%D0%B8%D1%80-%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-031",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы программирования». 5-6 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "subject": "informatics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%9A%D0%92%D0%94-%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-5-6-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%B2_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-032",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Умей вести за собой». 5-6 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%A3%D0%BC%D0%B5%D0%B9-%D0%B2%D0%B5%D1%81%D1%82%D0%B8-%D0%B7%D0%B0-%D1%81%D0%BE%D0%B1%D0%BE%D0%B9-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-033",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы программирования на PYTHON». 7-9 классы (2022 г.)",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "informatics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%92%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-PYTHON_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-034",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Профориентация». 8-9 классы (2022 г.)",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D0%B4%D0%B5%D1%8F%D1%82-%D0%9F%D1%80%D0%BE%D1%84%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F-%D0%9E%D0%9E%D0%9E_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-035",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Проектно-исследовательская деятельность: гуманитарное направление». 6-9 классы (2022 г.)",
+      "gradeRange": [
+        6,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80-%D0%B4%D0%B5%D1%8F%D1%82-%D0%9F%D0%98%D0%94_%D0%93%D0%9D_%D0%9E%D0%9E%D0%9E_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-036",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Функциональная грамотность: учимся для жизни». 5-9 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "functional-literacy",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%B3%D1%80%D0%B0%D0%BC%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%9E%D0%9E%D0%9E_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-037",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Биология. Проектно-исследовательская деятельность». 5-9 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "biology",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%91%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-5-9-%D0%BA%D0%BB%D0%B0%D1%81%D1%81.-%D0%9F%D0%98%D0%94-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-038",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Экологичный образ жизни». 5-7 классы (2022 г.)",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%9F%D0%A0%D0%9F-%D0%BA%D1%83%D1%80%D1%81%D0%B0-%D0%B2%D0%BD%D0%B5%D1%83%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%AD%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7-%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-039",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «История отечественного кино в истории ХХ века». 10-11 классы (2026 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/pvd_ist_otech_kino_v_ist_hh-v_itog.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-040",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Россия – мои горизонты». 5-11 классы (2026 г.)",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rossiya-%E2%80%93-moi-gorizonty-2026.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-041",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы информационной культуры». 10-11 класс (2025 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/12/pvd_osn_inf_kultury_soo_.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-042",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Обучение служением. Первые». 10-11 классы (2024 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_obuchenie_sluzheniem_ooo_2024-1.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-043",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Компьютерное проектирование. Черчение». 10-11 классы (2024 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_kompyuternoe_proektirovanie_cherchenie_19082024_itog.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-044",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Международная журналистика». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_zhurnalistika_28112023.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-045",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Математика в экономике». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_matematika-v-ekonomike.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-046",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Основы физического эксперимента». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_osnovy_fizicheskogo_eksperimenta_01.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-047",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Литературная мастерская». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_literaturnaya-masterskaya-2.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-048",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Исторические основы российской цивилизации». 10-11 классы (2023 г. )",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_istoricheskie_osnovy_rossijskoj_czivilizaczii.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-049",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Россия – моя история». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_rossiya_moya-istoriya_28112023.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-050",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Мой край в истории Отечества». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_moj-kraj-v-istorii-otechestva_soo_28112023.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-051",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Начальная военная подготовка». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "fundamentals-security-defense-homeland",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/vud_rp_nvp_10-11-kl_novaya.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-052",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Первая помощь, основы преподавания первой помощи, основы ухода за больным». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "fundamentals-security-defense-homeland",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/%D0%92%D0%A3%D0%94_%D0%A0%D0%9F_%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-053",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Современные агробиотехнологии». 10-11 классы (2023 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Программа внеурочной деятельности",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_agrobio_soo_28112023.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    }
+  ]
+}
