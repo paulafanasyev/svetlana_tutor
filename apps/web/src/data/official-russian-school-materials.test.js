@@ -9,6 +9,7 @@ const items = readJson('./official-russian-school-material-items.json');
 const programs = readJson('./federal-working-programs.json');
 const historical = readJson('./historical-school-textbooks-library.json');
 const federalSections = readJson('./federal-textbook-list-2026-sections.json');
+const textbookBibliography = readJson('./federal-textbook-bibliography-2026.json');
 const practice = readJson('./original-school-practice-bank.json');
 const coverage = readJson('./school-curriculum-coverage.json');
 
@@ -63,4 +64,23 @@ test('historical textbook bibliography does not assume republication rights', ()
 test('coverage matrix does not claim completeness without full inventory proof', () => {
   assert.equal(coverage.rows.length, 275);
   assert.ok(coverage.rows.every((row) => row.completeCoverage === 'NOT_PROVEN'));
+});
+
+
+test('partial 2026 federal textbook bibliography has unique records and explicit rights status', () => {
+  assert.equal(textbookBibliography.extractionStatus, 'PARTIAL_NOT_COMPLETE');
+  assert.ok(textbookBibliography.records.length >= 100);
+  assert.equal(textbookBibliography.totalRecords, textbookBibliography.records.length);
+  assert.ok(unique(textbookBibliography.records.map((x) => x.id)));
+  for (const book of textbookBibliography.records) {
+    assert.ok(book.title && book.subject && book.sourceUrl);
+    assert.equal(book.fullTextStoredLocally, false);
+    assert.equal(book.rightsStatus, 'NOT_PROVEN_FOR_REPUBLICATION');
+    assert.match(book.sourceUrl, /^https:\/\//);
+  }
+});
+
+test('unified catalog includes federal textbook bibliographic entries without duplicate IDs', () => {
+  assert.ok(items.items.filter((x) => x.kind?.includes('federal-textbook-bibliographic-record')).length >= 100);
+  assert.ok(unique(items.items.map((x) => x.id)));
 });
