@@ -10,6 +10,7 @@ on:
       - '.github/workflows/school-materials-sync.yml'
       - 'scripts/school_materials_*'
       - 'scripts/sync_official_*.py'
+      - 'apps/web/src/data/schoolMaterials.test.js'
   workflow_dispatch:
     inputs:
       ocr:
