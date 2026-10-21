@@ -76,12 +76,13 @@
     {
       "id": "federal-textbook-list-2026",
       "name": "Федеральный перечень учебников — приказ Минпросвещения России от 22.06.2026 № 436",
-      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "url": "https://publication.pravo.gov.ru/document/0001202607230005",
       "announcementUrl": "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
       "kind": [
         "official-textbook-list",
         "bibliographic-registry",
-        "normative-document"
+        "normative-document",
+        "official-publication-portal"
       ],
       "access": "public-document",
       "gradeRange": [
@@ -92,7 +93,9 @@
         "all-school-subjects"
       ],
       "storesFullTextLocally": false,
-      "rightsNote": "Ссылка на актуальный нормативный перечень; текст конкретного учебника в этот каталог не копируется."
+      "rightsNote": "Ссылка на актуальный нормативный перечень; текст конкретного учебника в этот каталог не копируется.",
+      "referenceUrl": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "officialPdfLandingPage": "https://minjust.consultant.ru/documents/60664"
     },
     {
       "id": "federal-curriculum-registry",
