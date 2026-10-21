@@ -1,5 +1,5 @@
 // Вопросы грузятся только когда ребёнок открыл игру: один файл на предмет (все классы внутри).
-import { normalizeGrade } from './subjects.js';
+import { normalizeGrade, mergeMore } from './subjects.js';
 import { REVIEW } from './review.js';
 
 export const LOADERS = {
@@ -28,14 +28,19 @@ export const LOADERS = {
   obzr: () => import('./packs/obzr.json'),
 };
 
+// Дополнительные вопросы (вторая дюжина): more/<slug>.json, тот же формат { grades: { "N": { quiz, pairs? } } }.
+// Дописываются после вопросов из packs/, поэтому номера q1…q6 и правки критиков к ним не сдвигаются.
+const MORE = import.meta.glob('./more/*.json');
+
 const cache = new Map();
+const cached = (key, load) => { if (!cache.has(key)) cache.set(key, load().then((m) => m.default || m)); return cache.get(key); };
 
 // → { subject, grade, quiz, pairs, review } или null, если вопросов для класса нет.
 export async function loadPack(slug, grade) {
   const load = LOADERS[slug];
   if (!load) return null;
-  if (!cache.has(slug)) cache.set(slug, load().then((m) => m.default || m));
-  const file = await cache.get(slug);
-  const g = normalizeGrade(slug, grade, file.grades?.[String(grade)]);
+  const moreLoad = MORE[`./more/${slug}.json`];
+  const [file, more] = await Promise.all([cached(slug, load), moreLoad ? cached(`more:${slug}`, moreLoad) : null]);
+  const g = normalizeGrade(slug, grade, mergeMore(file.grades?.[String(grade)], more?.grades?.[String(grade)]));
   return g ? { ...g, review: REVIEW[slug] || null } : null;
 }

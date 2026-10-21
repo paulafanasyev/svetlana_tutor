@@ -43,6 +43,12 @@ export const MODES = [
   { id: 'pairs', icon: '🧠', name: 'Пары', desc: 'Открывай карточки и находи пары.' },
 ];
 
+// Класс из packs/ + класс из more/ → один класс: новые вопросы и пары идут в конец.
+export function mergeMore(base, more) {
+  if (!base || !more) return base;
+  return { ...base, quiz: [...(base.quiz || []), ...(more.quiz || [])], pairs: [...(base.pairs || []), ...(more.pairs || [])] };
+}
+
 // Пакет из файла → удобный вид с id. Формат файла: { quiz: [{t, q, o: [4], a, e}], pairs: [[термин, значение]] }.
 // Перед показом поверх файла накладываются исправления критиков (data/games/fixes.js).
 export function normalizeGrade(slug, grade, raw) {
