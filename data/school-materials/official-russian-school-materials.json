@@ -720,6 +720,28 @@
       ],
       "recordCount": 746,
       "notes": "746 entries extracted from school-grade sections in the HTML version. The extraction is broad but not yet fully reconciled line-by-line against the official 312-page PDF."
+    },
+    {
+      "id": "official-program-reading-list-2026",
+      "name": "Список произведений, включённых в федеральные образовательные программы НОО, ООО и СОО (Минпросвещения России, 21.07.2026)",
+      "url": "https://docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/",
+      "kind": [
+        "official-reading-list",
+        "federal-program-content",
+        "literature-reference"
+      ],
+      "access": "public-document",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "literature",
+        "literary-reading",
+        "native-literature"
+      ],
+      "storesFullTextLocally": false,
+      "rightsNote": "Ссылка на официальный список произведений. Она не разрешает копировать современные произведения или полные учебники; права и условия переиспользования проверять для каждого текста."
     }
   ],
   "integrationPolicy": {
@@ -774,7 +796,7 @@
   "workingProgramCount": 61,
   "directWorkingProgramPdfCount": 55,
   "originalExerciseCount": 153,
-  "currentCoverageNote": "Каталог содержит 773 карточек, 61 навигационный раздел федерального перечня, 128 библиографических записей исторических учебников и 153 авторских заданий с ответами. Полный набор актуальных издательских учебников не сохранён; полнота остаётся NOT PROVEN.",
+  "currentCoverageNote": "Сверка 21.10.2026 расширяет матрицу до 407 сочетаний (37 идентификаторов предметов × 11 классов) и считает записи отдельно по источникам. Полные тексты актуальных учебников не собраны; полнота всех строк остаётся NOT PROVEN. 934 OCR-библиографические записи исключены из подтверждённого подсчёта до ручной перепроверки.",
   "lastFederalProgramDownloadAttemptAt": "2026-10-21T09:38:54.393445+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
   "failedFederalWorkingProgramPdfCount": 0,
@@ -793,5 +815,6 @@
     "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
     "contentStoredLocally": false,
     "storedInRelease": true
-  }
+  },
+  "sha": "ee0e8807aba014b81856042810ed8b3f8b8939e6"
 }
