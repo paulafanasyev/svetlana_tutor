@@ -1,5 +1,23 @@
 [
-  {"type":"fpu","doc":"LAW_452180","list":1,"keys":"^162\\(1\\)","full":1},
-  {"type":"fpu","doc":"LAW_452180","section":"162(1).3","direct":1,"from":"162(1).3.1","raw":5000},
-  {"type":"fpu","doc":"LAW_452180","section":"162(1).4","direct":1,"from":"162(1).4.5","raw":4000}
+{"type":"fpu","section":"rus-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/","numbers":[233,234,235,236,237]},
+{"type":"fpu","section":"okr-noo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/210e0071d6a151ed5440d01314f522dc45f4f450/","numbers":[199,200,201,202]},
+{"type":"fpu","section":"mus-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/4477ea9cd5353d0f9c78cbeb12b00df95d72942a/","numbers":[594,595,596,597]},
+{"type":"fpu","section":"bio-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/","numbers":[583,584,585,586,587]},
+{"type":"fpu","section":"bio-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/d8799ce346d3fc308fc4690cca02a4784c9da7e9/","numbers":[713,714,715,716]},
+{"type":"fpu","section":"geo-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/59d8b2fda6b50975482f1ad419d595e5e5a81651/","numbers":[571,572,573,574]},
+{"type":"fpu","section":"pe-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/bb975acf2bfeb14b31cf0818913bcb0ff5fb048a/","numbers":[604,605,606]},
+{"type":"fpu","section":"pe-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/4d6760e9e0feb780295f5eb8d59ab06535013dea/","numbers":[731]},
+{"type":"fpu","section":"pe-noo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/","numbers":[226,227,228,229,230]},
+{"type":"fpu","section":"mus-noo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/e3cb5f150a0dc0e829ac3e0e4ae45fafb4576cd5/","numbers":[216,217,218,219]},
+{"type":"fpu","section":"phys-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/dec887588d152b74b67c1459dee72e20f1857283/","numbers":[576,577,578]},
+{"type":"fpu","section":"chem-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/ab917731fc6624773e62265b12c4266d662c6500/","numbers":[580,581]},
+{"type":"fpu","section":"math-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/","numbers":[474,475,476,477,478,479,480]},
+{"type":"fpu","section":"inf-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/fe31088b2941cf307d46cd33142fa619b0ed89f9/","numbers":[482,483,484]},
+{"type":"fpu","section":"lit-ooo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/","numbers":[239,240,241,242,243]},
+{"type":"fpu","section":"soc-9","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/504a285ce487d1ca8171769a6f670401e4afc400/","numbers":[569]},
+{"type":"fpu","section":"rus-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/a0168f8d1ffcd05451f28f4604b364477cda91c3/","numbers":[616,617,618]},
+{"type":"fpu","section":"eng-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/651f84f48a8beefe3a094e39c0a2ca385b8d9210/","numbers":[668,669,670,671]},
+{"type":"fpu","section":"hist-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/b457ffa115fad152512f0d47df9ad91e56933edc/","numbers":[718,719,720,721]},
+{"type":"fpu","section":"soc-soo","url":"https://www.consultant.ru/document/cons_doc_LAW_540209/d4fa6e2ac174158e385277b760fdc600692792c6/","numbers":[723,724]},
+{"type":"fpu","section":"2.1.2.13","raw":2500}
 ]
