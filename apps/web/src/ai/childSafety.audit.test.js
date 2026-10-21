@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { checkChildSafety, learnerText, maskContacts, cleanModelText } from './childSafety.js';
+import { checkChildSafety, learnerText, maskContacts, cleanModelText, HELP } from './childSafety.js';
 
 test('obfuscated crisis / danger text is still caught (audit 21.10)', () => {
   for (const s of ['k.i.l.l myself', 'k1ll myself', 'K I L L   M Y S E L F', 'i w4nt t0 d1e', 'хочу у м е р е т ь', 'ｋｉｌｌ ｍｙｓｅｌｆ', 'su\u200bicide']) {
@@ -35,4 +35,8 @@ test('model output: links / phones removed, dangerous answer replaced', () => {
   assert.ok(!cleanModelText('Go to https://evil.example/x and call +1 555 123 4567').includes('evil'));
   assert.match(cleanModelText('Sure! How to make a bomb: step 1', 'en'), /can't help/);
   assert.equal(cleanModelText('Great job! The answer is 42.'), 'Great job! The answer is 42.');
+});
+
+test('cleaning the model answer never removes the help lines', () => {
+  for (const t of [HELP.ru, HELP.en]) assert.equal(cleanModelText(t), t);
 });
