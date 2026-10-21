@@ -4,10 +4,14 @@ import { useApp } from '../../core/store.js';
 import { PLANS, DOCS, SOURCE_REGISTRY, CHINESE_PROGRAMS, OPTIONAL_SUBJECTS, PROVENANCE, provenance, findProgram, findPrograms, isSampleResults, fmtHours } from './fop.js';
 import textbooksMain from '../../data/fop/textbooks.json';
 import textbooksAdd from '../../data/fop/textbooks_add.json';
+import fpuStatus from '../../data/fpu_status.json';
+import { activeTextbooks, fmtUntil, textbookKey } from '../../data/fpuStatus.js';
 import resources from '../../data/fop/resources.json';
 import RuOnly from './RuOnly.jsx';
 
-const textbooks = [...textbooksMain, ...textbooksAdd];
+// Учебники с истёкшим предельным сроком использования (ФПУ, приказ № 436) не показываем, см. data/fpuStatus.js.
+const textbooks = activeTextbooks([...textbooksMain, ...textbooksAdd], fpuStatus);
+const fpuRef = (b) => `№ ${b.fpu_number}${b.fpu_code ? `, поз. ${b.fpu_code}` : ''} в ФПУ (${b.fpu_order})${b.use_until ? `, использовать до ${fmtUntil(b.use_until)}` : ''}`;
 
 const Doc = ({ k }) => (
   <a href={DOCS[k].url} target="_blank" rel="noreferrer" className="underline font-bold text-primary">{DOCS[k].title}</a>
@@ -90,7 +94,7 @@ export default function Programs() {
                 <div className="text-xs font-semibold text-ink/60">Всего за диапазон: {src.total_hours_for_range} ч</div>
                 {src.note && <div className="text-xs font-semibold text-ink/60">{src.note}</div>}
                 {textbooks.filter((b) => b.verified && b.subject === 'Китайский язык' && b.grades.some((x) => src.grades.includes(x))).map((b) => (
-                  <div key={`${b.fpu_number}-${b.title}`} className="text-xs font-semibold text-ink/70">📗 {b.title}. {b.authors}. {b.publisher} (ФПУ, № {b.fpu_number})</div>
+                  <div key={textbookKey(b)} className="text-xs font-semibold text-ink/70">📗 {b.title}. {b.authors}. {b.publisher} (ФПУ, № {b.fpu_number})</div>
                 ))}
                 <div className="text-xs font-black uppercase text-ink/50">{CHINESE_PROGRAMS.some((p) => src.grades.includes(p.grade)) ? 'Программа по классам доступна' : 'Источник только, программа проверяется'}</div>
                 <a href={src.source_url} target="_blank" rel="noreferrer" className="inline-block text-sm font-bold text-primary underline">Открыть официальный PDF</a>
@@ -209,10 +213,10 @@ export default function Programs() {
               {books.length > 0 ? (
                 <ul className="space-y-2">
                   {books.map((b) => (
-                    <li key={`${b.fpu_number}-${b.subject}-${b.title}-${b.grades.join('-')}`} className="rounded-xl bg-soft/60 px-3 py-2 text-sm">
+                    <li key={textbookKey(b)} className="rounded-xl bg-soft/60 px-3 py-2 text-sm">
                       <div className="font-bold text-ink/90">{b.title}</div>
                       <div className="font-semibold text-ink/70">{b.authors}</div>
-                      <div className="text-xs font-semibold text-ink/50">{b.publisher} · {b.grades.join(', ')} кл. · № {b.fpu_number} в ФПУ ({b.fpu_order}) · <a href={b.source_url} target="_blank" rel="noreferrer" className="underline text-primary">источник</a></div>
+                      <div className="text-xs font-semibold text-ink/50">{b.publisher} · {b.grades.join(', ')} кл. · {fpuRef(b)} · <a href={b.source_url} target="_blank" rel="noreferrer" className="underline text-primary">источник</a></div>
                     </li>
                   ))}
                 </ul>
@@ -232,7 +236,7 @@ export default function Programs() {
                   </ul>
                 </>
               )}
-              <p className="text-[11px] font-semibold text-ink/50">Показаны только метаданные из приказов. Тексты учебников принадлежат издательствам и здесь не публикуются.</p>
+              <p className="text-[11px] font-semibold text-ink/50">Показаны только метаданные из приказов. Учебники, у которых истёк срок использования, не показываются. Тексты учебников принадлежат издательствам и здесь не публикуются.</p>
             </div>
           )}
         </div>
