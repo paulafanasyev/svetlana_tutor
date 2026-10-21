@@ -1,10 +1,10 @@
 """Write data/school-materials/REPORT.md: schema, counts, legacy collisions, expired-table hints."""
-import json, re, sys
+import json, re, subprocess, sys
 from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from school_materials_common import DATA, MANIFESTS, CACHE, load
+from school_materials_common import DATA, MANIFESTS, CACHE, ROOT, load
 
 EXPIRY = re.compile(r"[Дд]о\s*31\s*августа\s*20\d\d")
 
@@ -49,7 +49,7 @@ def main():
     legacy = CACHE / "legacy/downloads/federal-extracurricular-programs"
     if legacy.exists():
         old_pdfs = sorted(p.name for p in legacy.glob("*.pdf"))
-        garbled = [n for n in old_pdfs if n.startswith("_-") or re.fullmatch(r"[-_.]+pdf", n)]
+        garbled = [n for n in old_pdfs if re.fullmatch(r"[-_.]*(pdf)?", n.replace(".pdf", "") + "") or n.startswith("_-")]
         old_m = legacy / "MANIFEST.json"
         old_entries = load(old_m).get("files", []) if old_m.exists() else []
         paths = Counter(e.get("localPath") for e in old_entries)
@@ -57,6 +57,40 @@ def main():
                 f"- PDFs in git: {len(old_pdfs)}; manifest entries: {len(old_entries)}",
                 f"- localPath collisions (several URLs -> one file): {sum(v - 1 for v in paths.values() if v > 1)}",
                 f"- garbled-looking names: {len(garbled)}"]
+
+    # Cross-check with apps/web/src/data/fpu_status.json (checked by hand on Consultant 21.10).
+    status_path = ROOT / "apps/web/src/data/fpu_status.json"
+    if status_path.exists():
+        status = load(status_path)["items"]
+        by_code = {}
+        for name in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json",
+                     "federal-textbooks-2026-secondary-10-11.json"):
+            for rec in load(DATA / name)["records"]:
+                by_code.setdefault(rec.get("sectionCode"), []).append(("garant", rec.get("listRow"), rec.get("title"), rec.get("allowedUseUntil")))
+        for rec in load(DATA / "federal-textbook-bibliography-2026-full-extraction.json")["records"]:
+            by_code.setdefault(rec.get("sectionCode"), []).append(("ocr", rec.get("federalListNumber"), rec.get("title"), None))
+        out += ["", "## Cross-check with fpu_status.json (by position code)",
+                "| key | code | use_until | source | row | allowedUseUntil | title |", "|---|---|---|---|---|---|---|"]
+        agree = disagree = absent = 0
+        for key, st in status.items():
+            hits = by_code.get(st["fpu_code"], [])
+            if not hits:
+                absent += 1
+                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | — | — | — | NOT FOUND |")
+            for src, row, title, until in hits:
+                m = re.search(r"(20\d\d)", until or "")
+                ok = None if src == "ocr" or not m else (m.group(1) == st["use_until"][:4])
+                agree += ok is True; disagree += ok is False
+                flag = "" if ok is not False else " **MISMATCH**"
+                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | {src} | {row} | {until or '—'}{flag} | {(title or '')[:70]} |")
+        out.append(f"- agree={agree} disagree={disagree} absent={absent}")
+        years = Counter()
+        for name in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json",
+                     "federal-textbooks-2026-secondary-10-11.json"):
+            for rec in load(DATA / name)["records"]:
+                m = re.search(r"(20\d\d)", rec.get("allowedUseUntil") or "")
+                years[(name.split("-2026-")[1].replace(".json", ""), m.group(1) if m else "none")] += 1
+        out.append("- allowedUseUntil by stage/year: " + ", ".join(f"{a}:{b}={c}" for (a, b), c in sorted(years.items())))
     (DATA / "REPORT.md").write_text("\n".join(out) + "\n", encoding="utf-8")
     print("\n".join(out[:80]))
 
