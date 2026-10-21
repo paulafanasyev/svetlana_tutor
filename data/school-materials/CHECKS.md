@@ -32,5 +32,5 @@
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 248.272026
+# duration_ms 242.41149
 ```
