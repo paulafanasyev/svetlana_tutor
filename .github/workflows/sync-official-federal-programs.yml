@@ -1,0 +1,106 @@
+name: Sync official federal working programmes
+
+on:
+  push:
+    branches:
+      - feat/official-russian-school-materials
+    paths:
+      - 'apps/web/src/data/federal-working-programs.json'
+      - 'scripts/sync_official_federal_programs.py'
+      - '.github/workflows/sync-official-federal-programs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-official-federal-programs-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  download-and-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout the selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate catalogs before download
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          files = [
+              'apps/web/src/data/official-russian-school-materials.json',
+              'apps/web/src/data/official-russian-school-material-items.json',
+              'apps/web/src/data/federal-working-programs.json',
+              'apps/web/src/data/original-school-practice-bank.json',
+              'apps/web/src/data/federal-textbook-list-2026-sections.json',
+              'apps/web/src/data/historical-school-textbooks-library.json',
+              'apps/web/src/data/school-curriculum-coverage.json',
+          ]
+          for name in files:
+              json.loads(Path(name).read_text(encoding='utf-8'))
+              print('VALID JSON:', name)
+          PY
+          node --test apps/web/src/data/official-russian-school-materials.test.js
+
+      - name: Download official PDFs and record hashes
+        run: python scripts/sync_official_federal_programs.py
+
+      - name: Verify local PDFs and updated index
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          programs = json.loads(Path('apps/web/src/data/federal-working-programs.json').read_text(encoding='utf-8'))
+          items = json.loads(Path('apps/web/src/data/official-russian-school-material-items.json').read_text(encoding='utf-8'))
+          manifest = json.loads(Path('downloads/federal-working-programs/MANIFEST.json').read_text(encoding='utf-8'))
+          assert len({x['id'] for x in items['items']}) == len(items['items']), 'duplicate resource IDs'
+          assert manifest['attempted'] > 0
+          for record in programs['programs']:
+              if record.get('downloadStatus') == 'LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED':
+                  path = Path(record['localPath'])
+                  assert path.exists() and path.read_bytes().startswith(b'%PDF-'), record['id']
+          print('PDF audit:', manifest['verifiedLocalPdfCount'], 'verified; failed:', manifest['failedCount'])
+          PY
+          node --test apps/web/src/data/official-russian-school-materials.test.js
+
+      - name: Upload manifest and files as backup artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-federal-programmes-${{ github.run_id }}
+          path: downloads/federal-working-programs/
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Commit downloaded programme PDFs to the feature branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/src/data/federal-working-programs.json
+          git add apps/web/src/data/official-russian-school-material-items.json
+          git add apps/web/src/data/official-russian-school-materials.json
+          git add downloads/federal-working-programs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Store verified official federal working-program PDFs"
+            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" "HEAD:${{ github.ref_name }}"
+          fi
