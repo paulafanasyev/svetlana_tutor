@@ -1,5 +1,20 @@
 {
   "schemaVersion": 1,
   "checkedAt": "2026-10-21",
-  "testUrl": "https:\/\/edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/"
+  "status": "SUPPLEMENTAL_INDEX_CREATED",
+  "supplementalIndex": "apps/web/src/data/official-russian-school-material-updates-2026-10.json",
+  "newItems": [
+    "minprosveshcheniya-literary-works-list-2026",
+    "edsoo-literature-teaching-2026-2027",
+    "edsoo-music-method-webinar-2026",
+    "edsoo-engineering-project-method-seminar-2026"
+  ],
+  "updatedItems": [
+    "fipi-ege-demos",
+    "fipi-oge-demos",
+    "fipi-ege-methodology"
+  ],
+  "verification": "Official page publication dates and page identities checked; exam-final-version and webinar-recording availability remain NOT PROVEN.",
+  "integrationStatus": "NOT_MERGED_INTO_UNIFIED_ITEM_INDEX",
+  "rightsNote": "Only official links and metadata are stored; full copyrighted textbooks are not mirrored."
 }
