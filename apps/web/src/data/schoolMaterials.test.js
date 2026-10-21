@@ -235,3 +235,14 @@ test('новые официальные предметные материалы 
     assert.match(item.rightsStatus, /LINK_ONLY/, id);
   }
 });
+
+test('перекрёстная сверка OCR охватывает все записи и не снимает статус ручной проверки', () => {
+  const crosswalk = read('federal-textbook-ocr-crosswalk-2026.json');
+  assert.equal(crosswalk.records.length, 934);
+  assert.equal(new Set(crosswalk.records.map((x) => x.ocrId)).size, crosswalk.records.length);
+  assert.equal(crosswalk.summary.totalRecords, 934);
+  assert.equal(crosswalk.summary.structuredRecordCount, 746);
+  assert.equal(crosswalk.summary.allRemainUnverified, true);
+  assert.equal(crosswalk.records.reduce((n, x) => n + (x.status.includes('NEEDS_') || x.status.includes('NEEDS_RECHECK') || x.status.includes('NEEDS_MANUAL_CONFIRMATION') ? 1 : 0), 0), 0);
+  assert.ok(crosswalk.records.every((x) => x.ocrExtractionStatus === 'OCR_EXTRACTED_NEEDS_RECHECK'));
+});

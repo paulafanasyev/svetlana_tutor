@@ -2,6 +2,7 @@
 """Rebuild school coverage by grade/subject; never infer completeness from links."""
 from datetime import datetime, timezone
 from pathlib import Path
+import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -168,6 +169,61 @@ def stage_summary(rows, low, high):
     }
 
 
+
+def normalize_title(value):
+    return re.sub(r"[^a-zа-я0-9]+", " ", str(value or "").lower().replace("ё", "е")).strip()
+
+
+def build_ocr_crosswalk(ocr_records, structured_records):
+    ocr_by_key, structured_by_key = {}, {}
+    key = lambda row: (row.get("federalListNumber", row.get("listRow")), row.get("sectionCode"))
+    for row in ocr_records:
+        ocr_by_key.setdefault(key(row), []).append(row)
+    for row in structured_records:
+        structured_by_key.setdefault((row.get("listRow"), row.get("sectionCode")), []).append(row)
+    status_counts, output = {}, []
+    for row in ocr_records:
+        candidates = structured_by_key.get(key(row), [])
+        same_ocr_key = ocr_by_key[key(row)]
+        candidate = candidates[0] if len(candidates) == 1 else None
+        if not candidates:
+            status = "NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW"
+        elif len(same_ocr_key) > 1 or len(candidates) > 1:
+            status = "DUPLICATE_KEY_NEEDS_MANUAL_REVIEW"
+        elif candidate.get("grade") not in (row.get("gradeRange") or []):
+            status = "KEY_MATCH_GRADE_MISMATCH_NEEDS_MANUAL_REVIEW"
+        elif normalize_title(row.get("title")) == normalize_title(candidate.get("title")):
+            status = "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"
+        else:
+            status = "KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK"
+        status_counts[status] = status_counts.get(status, 0) + 1
+        output.append({
+            "ocrId": row.get("id"), "federalListNumber": row.get("federalListNumber"),
+            "sectionCode": row.get("sectionCode"), "structuredRecordId": candidate.get("id") if candidate else None,
+            "ocrGradeRange": row.get("gradeRange") or [], "structuredGrade": candidate.get("grade") if candidate else None,
+            "normalizedTitleExact": bool(candidate and normalize_title(row.get("title")) == normalize_title(candidate.get("title"))),
+            "ocrExtractionStatus": row.get("extractionStatus", "OCR_EXTRACTED_NEEDS_RECHECK"), "status": status
+        })
+    return {
+        "schemaVersion": 1, "name": "federal-textbook-ocr-crosswalk-2026",
+        "checkedAt": datetime.now(timezone.utc).date().isoformat(),
+        "sourceDocument": "https://publication.pravo.gov.ru/document/0001202607230005",
+        "matchingPolicy": "Сопоставление по паре порядковый номер + код раздела; класс проверяется на вхождение в диапазон OCR; названия нормализуются только для сравнения. Совпадение не подтверждает корректность OCR и не снимает статус ручной проверки.",
+        "summary": {
+            "totalRecords": len(ocr_records), "structuredRecordCount": len(structured_records),
+            "matchedByNumberAndSectionCount": sum(1 for row in output if row["structuredRecordId"] or row["status"] == "DUPLICATE_KEY_NEEDS_MANUAL_REVIEW"),
+            "uniqueCandidateMatches": sum(1 for row in output if row["structuredRecordId"]),
+            "exactNormalizedTitleCount": status_counts.get("KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION", 0),
+            "titleNeedsReviewCount": status_counts.get("KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK", 0),
+            "duplicateKeyNeedsReviewCount": status_counts.get("DUPLICATE_KEY_NEEDS_MANUAL_REVIEW", 0),
+            "gradeMismatchNeedsReviewCount": status_counts.get("KEY_MATCH_GRADE_MISMATCH_NEEDS_MANUAL_REVIEW", 0),
+            "unmatchedNeedsReviewCount": status_counts.get("NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW", 0),
+            "statusCounts": status_counts, "allRemainUnverified": True
+        },
+        "records": output
+    }
+
+
 def main():
     checked_at = datetime.now(timezone.utc).date().isoformat()
     catalog_path = DATA / "official-russian-school-materials.json"
@@ -199,6 +255,11 @@ def main():
     catalog_items = records(catalog_item_doc, "items")
     lesson_ids = {item.get("id") for item in lessons}
     ocr = records(ocr_doc, "records")
+    structured_fpu = []
+    for filename in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json", "federal-textbooks-2026-secondary-10-11.json"):
+        structured_fpu.extend(records(load(DATA / filename), "records"))
+    ocr_crosswalk = build_ocr_crosswalk(ocr, structured_fpu)
+    save(DATA / "federal-textbook-ocr-crosswalk-2026.json", ocr_crosswalk)
     catalog_only_items = []
     for item in catalog_items:
         source_id = item.get("sourceId")
@@ -311,6 +372,7 @@ def main():
         "additionalCatalogResourceCountsByType": catalog_resource_counts,
         "federalBibliographySubsetRecordsWithFullText": full_text_count,
         "unverifiedOcrBibliographyRecords": len(ocr),
+        "ocrCrosswalk": ocr_crosswalk["summary"],
         "ocrStatus": "OCR_EXTRACTED_NEEDS_RECHECK; excluded from counts used to claim verified grade/subject coverage",
         "officialWorkingProgramRecords": len(programs),
         "directWorkingProgramPDFs": catalog.get("directWorkingProgramPdfCount", 0),
@@ -376,6 +438,7 @@ def main():
         "- Федеральный перечень учебников 2026: [официальный приказ № 436](https://publication.pravo.gov.ru/document/0001202607230005).",
         "- Частичный библиографический набор: " + str(len(biblio)) + " записей; полных текстов среди них: " + str(full_text_count) + ".",
         "- OCR-выгрузка ФПУ: " + str(len(ocr)) + " записей со статусом OCR_EXTRACTED_NEEDS_RECHECK; не входит в подтверждённые счётчики.",
+        "- Перекрёстная сверка OCR: " + str(ocr_crosswalk["summary"]["matchedByNumberAndSectionCount"]) + " строк имеют кандидата по номеру+коду раздела; точное нормализованное название совпало у " + str(ocr_crosswalk["summary"]["exactNormalizedTitleCount"]) + "; " + str(ocr_crosswalk["summary"]["titleNeedsReviewCount"]) + " названий требуют перепроверки, " + str(ocr_crosswalk["summary"]["unmatchedNeedsReviewCount"]) + " строк не имеют кандидата, " + str(ocr_crosswalk["summary"]["duplicateKeyNeedsReviewCount"]) + " строк попали в неоднозначные ключи. Все OCR-записи остаются непроверенными.",
         "- Федеральные рабочие программы: " + str(len(programs)) + " записей; прямых PDF: " + str(catalog.get("directWorkingProgramPdfCount", 0)) + "; по манифесту файлов в Release: " + str(summary["workingProgramReleaseAssets"]) + ".",
         "- Внеурочная деятельность: " + str(len(extracurricular)) + " записей; синхронизация активов: " + extra_status + ".",
         "- Материалы ЕДСОО: " + str(len(lessons)) + " ссылок; класс установлен у " + str(known_grade_lessons) + "; требуется перепроверить класс у " + str(len(lessons) - known_grade_lessons) + ".",
