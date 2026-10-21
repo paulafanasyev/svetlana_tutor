@@ -176,6 +176,27 @@ export function flatResults(lines, sec) {
   return out;
 }
 
+// Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
+// Собирает только подпункты одного корневого раздела, не подхватывая следующий раздел ФОП.
+export function flatSubtreeResults(lines, root) {
+  const i = lines.findIndex(x => {
+    const m = x.match(NUM);
+    return m && m[1].startsWith(root + '.');
+  });
+  if (i < 0) return [];
+  const out = [];
+  for (const x of lines.slice(i)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (NOTE.test(x)) continue;
+    const m = x.match(NUM);
+    if (m && !m[1].startsWith(root + '.')) break;
+    const t = typo(m ? m[2] : x);
+    if (m && oneTitle(t) && t.length < 120) continue;
+    if (t) out.push(t);
+  }
+  return out;
+}
+
 // Музыка: подпункт 166.6.k.j «Название.» → текст после «Содержание:» (до «Виды деятельности обучающихся»).
 const key = s => String(s).toLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/g, ' ').trim();
 export function parseMusic(lines) {
@@ -247,7 +268,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
       // для всего уровня ООО, а не отдельные подпункты для 5–9 классов.
       // Используем общий блок как общий для уровня; не маркируем его как уникальный результат класса.
       const sharedLevelResults = subject === 'Физическая культура' && root === '163.9'
-        ? flatResults(lines, root)
+        ? (flatResults(lines, root).length ? flatResults(lines, root) : flatSubtreeResults(lines, root))
         : [];
       for (const g of grades) {
         if (!onlyResults) {
