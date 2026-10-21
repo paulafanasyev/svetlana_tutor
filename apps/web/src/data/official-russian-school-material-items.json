@@ -17828,6 +17828,64 @@
       "license": "CC BY 4.0",
       "checkedAt": "2026-10-21",
       "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "fpu2026-book-0205-alt-2",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы исламской культуры: 4-й класс: учебник; 10-е издание, переработанное",
+      "authors": "Латышина Д.И., Муртазин М.Ф.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 205,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0206-alt-2",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы буддийской культуры: 4-й класс: учебник; 8-е издание, переработанное",
+      "authors": "Чимитдоржиев В.Л.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 206,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
     }
   ],
   "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав."
