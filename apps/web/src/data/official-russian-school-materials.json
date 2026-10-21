@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "catalogName": "official-russian-school-materials",
   "lastVerified": "2026-10-21",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
@@ -605,6 +605,63 @@
       ],
       "storesFullTextbooksLocally": false,
       "rightsNote": "This site license does not automatically cover textbook files published by third-party publishers."
+    },
+    {
+      "id": "edsoo-working-programs",
+      "name": "Единое содержание общего образования — федеральные рабочие программы",
+      "url": "https://edsoo.ru/rabochie-programmy/",
+      "registryUrl": "https://fgosreestr.edsoo.ru/educational-programs",
+      "kind": [
+        "federal-working-programs",
+        "curriculum-requirements",
+        "thematic-plans",
+        "lesson-plans"
+      ],
+      "access": "public official PDF links and catalogue pages",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Link to official PDFs with active source attribution. This catalog does not mirror program files."
+    },
+    {
+      "id": "original-authored-materials",
+      "name": "Авторские учебные задания Svetlana Tutor",
+      "url": "https://github.com/paulafanasyev/svetlana_tutor/tree/feat/official-russian-school-materials/apps/web/src/data",
+      "kind": [
+        "original-practice",
+        "exercises",
+        "answer-keys"
+      ],
+      "access": "public GitHub branch",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "mathematics",
+        "russian-language",
+        "literary-reading",
+        "world-around-us",
+        "history",
+        "geography",
+        "biology",
+        "algebra",
+        "geometry",
+        "physics",
+        "chemistry",
+        "social-studies",
+        "probability-statistics",
+        "informatics"
+      ],
+      "storesFullTextbooksLocally": true,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsNote": "Original tasks authored for this repository, not copied from commercial textbooks or official exam banks."
     }
   ],
   "integrationPolicy": {
@@ -655,5 +712,9 @@
       "file": "original-school-practice-bank.json",
       "description": "Original practice tasks authored for this repository, not copied from published textbooks and not official exam questions."
     }
-  ]
+  ],
+  "workingProgramCount": 61,
+  "directWorkingProgramPdfCount": 55,
+  "originalExerciseCount": 44,
+  "currentCoverageNote": "Official federal working-program links and original tasks have been added, but the complete current publisher textbook collection is not stored locally. Overall completeness remains NOT PROVEN."
 }
