@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "catalogName": "official-russian-school-materials",
   "lastVerified": "2026-10-21",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
@@ -489,6 +489,120 @@
         "exam-preparation"
       ],
       "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "rao-historic-school-textbook-library",
+      "name": "Электронная библиотека «Школьные учебники» — РАО / Библиотека Ушинского",
+      "url": "https://frcp.ru/",
+      "alternateUrl": "https://rid.gnpbu.ru/",
+      "kind": [
+        "historical-school-textbooks",
+        "historical-school-programs",
+        "education-research"
+      ],
+      "access": "public catalog and digital editions; item-specific redistribution rights must be checked",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "catalogReportedCounts": {
+        "textbooks": 239,
+        "programs": 115,
+        "researches": 101
+      },
+      "catalogReportedUpdated": "2026-10-16",
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Public access for educational/research use is not treated as a general redistribution license; this branch initially stores bibliography and links only."
+    },
+    {
+      "id": "fipi-official-exam-materials",
+      "name": "ФИПИ — официальные материалы ОГЭ, ЕГЭ, открытые варианты, задания и кодификаторы",
+      "url": "https://fipi.ru/",
+      "kind": [
+        "exam-task-banks",
+        "exam-variants",
+        "specifications",
+        "codifiers",
+        "teacher-methodology"
+      ],
+      "access": "public web pages; individual document terms and version dates must be checked",
+      "gradeRange": [
+        9,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "literature",
+        "english-language",
+        "german-language",
+        "french-language",
+        "spanish-language",
+        "chinese-language",
+        "mathematics",
+        "physics",
+        "chemistry",
+        "informatics",
+        "biology",
+        "history",
+        "geography",
+        "social-studies",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "scolaire-open-educational-materials",
+      "name": "Школяр — учебные таблицы, формулы и справочные материалы",
+      "url": "https://scolaire.ru/",
+      "license": "CC BY 4.0 for materials owned by the publisher/site; third-party content may be excluded",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "kind": [
+        "open-educational-reference",
+        "mathematical-formulas",
+        "physics-reference",
+        "language-reference"
+      ],
+      "access": "public",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subjects": [
+        "mathematics",
+        "algebra",
+        "geometry",
+        "physics",
+        "informatics",
+        "history",
+        "english-language",
+        "russian-language"
+      ],
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Any copied content must carry source/title/link/license attribution and a change note; text/data-mining for model training is expressly reserved by the site."
+    },
+    {
+      "id": "official-ministry-reuse-policy",
+      "name": "Минпросвещения России — условия использования материалов сайта",
+      "url": "https://edu.gov.ru/about/apparatus/uchebniki/",
+      "license": "CC BY 4.0 for covered site materials, subject to exclusions and proper attribution",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "kind": [
+        "official-policy",
+        "educational-news"
+      ],
+      "access": "public",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "This site license does not automatically cover textbook files published by third-party publishers."
     }
   ],
   "integrationPolicy": {
@@ -521,5 +635,23 @@
       "Не считать ссылку на платформу доказательством, что каждый урок или файл доступен без регистрации.",
       "Хранить скачанные копии только при подтверждённом разрешении, открытой лицензии или применимом законном основании."
     ]
-  }
+  },
+  "fullCoverageNote": "Bibliographic expansion is ongoing. A source link, search-index result or library catalogue count is not proof that every book has been downloaded or is legally redistributable.",
+  "collections": [
+    {
+      "id": "federal-2026",
+      "file": "federal-textbook-list-2026-sections.json",
+      "description": "61 navigational section pages indexed from the 2026 federal textbook list; each section remains linked to the publisher/source, not copied as a book."
+    },
+    {
+      "id": "rao-historic",
+      "file": "historical-school-textbooks-library.json",
+      "description": "Discovered bibliographic links from the RАО historical school textbook library; not a complete export of the full library catalogue."
+    },
+    {
+      "id": "original-practice",
+      "file": "original-school-practice-bank.json",
+      "description": "Original practice tasks authored for this repository, not copied from published textbooks and not official exam questions."
+    }
+  ]
 }
