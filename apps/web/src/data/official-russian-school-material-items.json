@@ -18149,11 +18149,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-------.--------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 2028172,
+      "sha256": "cd9ebd55f7d29e6bf2d1240cfdd09763d656582dc0d75edf4ff54447608a064d"
     },
     {
       "id": "edsoo-vd-ec69bfa50cb7",
@@ -18198,11 +18200,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-----------------------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 1036388,
+      "sha256": "85fb31f488cf623a8aa569ef62a3707cc8aa092265fcb3067657b93a6a0e11d7"
     },
     {
       "id": "edsoo-vd-a57ab2f050f6",
@@ -18222,11 +18226,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_---.--.--_---_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 708700,
+      "sha256": "d7dae59e6e3827398f3e357e22ebfbc3bb8ae824fbc4920e1700f89e129fedd2"
     },
     {
       "id": "edsoo-vd-6a9c323f0a98",
@@ -18246,11 +18252,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-_-_-_-_-_-_1_4_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 665989,
+      "sha256": "7f68b28312f4962401482526e694d456b251a4cfa726e95d922020610a788147"
     },
     {
       "id": "edsoo-vd-004cfaa23487",
@@ -18695,11 +18703,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-----.--------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 750473,
+      "sha256": "abdf36ebd3a7c785878871c586e453458105921e78be478594af20b2b2288968"
     },
     {
       "id": "edsoo-vd-6f15f4cc977a",
@@ -18719,11 +18729,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_----------5-6--_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 814022,
+      "sha256": "ebc49eaa71be9d7d92dc543c54df7778d4d40ca7d4d00beb124980715e86d268"
     },
     {
       "id": "edsoo-vd-baa9496bd155",
@@ -18743,11 +18755,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_---------------------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 696403,
+      "sha256": "80d8c95bf09bf040525333c77d32c1931d8f295f3806407353ed5d0c5ebc408c"
     },
     {
       "id": "edsoo-vd-50a5ea587115",
@@ -18767,11 +18781,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-----_------PYTHON_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 861156,
+      "sha256": "4153b78d710ac8f1da7405660a41816ae52c4889dffd225685a34dd518cfd263"
     },
     {
       "id": "edsoo-vd-bfc28700adc6",
@@ -18791,11 +18807,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_---------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 944980,
+      "sha256": "27caef6198936fc2b3d059dee4a64c92caaabe667d7e49a26f51bca334036da3"
     },
     {
       "id": "edsoo-vd-08bc244a6cfa",
@@ -18815,11 +18833,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_---------_-_-_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 1348276,
+      "sha256": "bbd0d31dcade8a791e9547a07c865b9b01d65955242ee582f7d2e3d15bd79544"
     },
     {
       "id": "edsoo-vd-8318ce8759e2",
@@ -18839,11 +18859,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-------.------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 995608,
+      "sha256": "8c2bc7529800f1946c7c1b27aec7b3c4a1b95ec678f5304258a8017d4a16c854"
     },
     {
       "id": "edsoo-vd-b7568b636634",
@@ -18863,11 +18885,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_----------5-9--.--------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 805419,
+      "sha256": "e25524bc488d4950bd9621463c54568db9c85b0319a862fc5c14d153a8dc73d2"
     },
     {
       "id": "edsoo-vd-22fe9630273b",
@@ -18887,11 +18911,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-------------------_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 749130,
+      "sha256": "edd9952e41df6d6f35afffa48039ae9908aac2f55ec09290c72b6275d38df304"
     },
     {
       "id": "edsoo-vd-b9b270a2707f",
@@ -18936,11 +18962,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/rossiya---moi-gorizonty-2026.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode character '\\u2013' in position 40: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode character '\\u2013' in position 40: ordinal not in range(128)",
+      "fileSizeBytes": 1023482,
+      "sha256": "68bb48502f1a305c7d6533b79927c948515531dab752755bd54677ff09675c0d"
     },
     {
       "id": "edsoo-vd-d406f2dd22ea",
@@ -19235,11 +19263,13 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "PUBLIC_OFFICIAL_PDF",
       "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
-      "contentStoredLocally": false,
+      "contentStoredLocally": true,
       "localPath": "downloads/federal-extracurricular-programs/_-_---_-.pdf",
       "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
-      "downloadStatus": "DOWNLOAD_FAILED",
-      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)",
+      "fileSizeBytes": 824258,
+      "sha256": "6963d2f424abe9c5a512854638d592ea3d7304b40ebfdf2c48d009351fcff000"
     },
     {
       "id": "edsoo-vd-130855302330",
@@ -19295,6 +19325,6 @@
     }
   ],
   "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав.",
-  "extracurricularPdfCount": 38,
-  "extracurricularPdfFailureCount": 15
+  "extracurricularPdfCount": 53,
+  "extracurricularPdfFailureCount": 0
 }

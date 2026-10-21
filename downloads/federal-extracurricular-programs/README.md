@@ -2,7 +2,7 @@
 
 Источник: https://edsoo.ru/rabochie-programmy-vd/
 Проверено: 2026-10-21
-PDF со проверенной сигнатурой: 38 из 53; ошибок: 15.
+PDF со проверенной сигнатурой: 53 из 53; ошибок: 0.
 
 Точный класс и предмет требуют проверки по PDF. Ссылка на официальный источник сохранена в MANIFEST.json.
 Локальное наличие не означает автоматически разрешение на повторное распространение.
@@ -16,11 +16,11 @@ PDF со проверенной сигнатурой: 38 из 53; ошибок: 
 | pfk_v_mire_russkogo_yazyka_itog-2.pdf | VERIFIED | 57d888357c6a9486173eaee17336d8d7164b736f587790c7b23dc2a5c104cbf9 |
 | pvd_yarkie_straniczy_istorii_nashego_otechestva.pdf | VERIFIED | d45aa2df353049a0f13d34f6d1f10ab49089c30bb3d8fdbfce7874bc652c7cf9 |
 | pvd_slovesnoe_tvorchestvo.pdf | VERIFIED | 85993f3a04e9809b7f4582bdd004e12ec44dbf27025bf4989514c2ed3764c5eb |
-| _-------.--------_-.pdf | FAILED | — |
+| _-------.--------_-.pdf | VERIFIED | cd9ebd55f7d29e6bf2d1240cfdd09763d656582dc0d75edf4ff54447608a064d |
 | pvd_nasha-rodina-ot-kraya-i-do-kraya.pdf | VERIFIED | 880a80980b0bf2a5a0b8255984ebb6a2d30c6c425dbf3a3c96f44d36e61a618c |
-| _-----------------------_-.pdf | FAILED | — |
-| _---.--.--_---_-.pdf | FAILED | — |
-| _-_-_-_-_-_-_1_4_-.pdf | FAILED | — |
+| _-----------------------_-.pdf | VERIFIED | 85fb31f488cf623a8aa569ef62a3707cc8aa092265fcb3067657b93a6a0e11d7 |
+| _---.--.--_---_-.pdf | VERIFIED | d7dae59e6e3827398f3e357e22ebfbc3bb8ae824fbc4920e1700f89e129fedd2 |
+| _-_-_-_-_-_-_1_4_-.pdf | VERIFIED | 7f68b28312f4962401482526e694d456b251a4cfa726e95d922020610a788147 |
 | rp_sovremennye_issledovaniya_i_dostizheniya_nanohimii_2024.pdf | VERIFIED | f4433bdec922fe0d52f7c8cf2544b0cff94713c50b9052168eccbdce94577f3f |
 | zhivaya-fizika.pdf | VERIFIED | be514306ddd0de6d154deaf56cc4372a4063ae012e4e8a437a3b1189409dd46a |
 | matematika-magiya-i-strojnost-chisel.pdf | VERIFIED | 88bc20bd9bc6e1b7da5bde3c448d415a8b0a2fa80262c4f0006fb9696feb01ed |
@@ -38,17 +38,17 @@ PDF со проверенной сигнатурой: 38 из 53; ошибок: 
 | programma_vneurochnoj_deyatelnosti_iskusstvennyj_intellekt.pdf | VERIFIED | 4d38bec8c7d60dc9f090ab328a3e7f89cd1a0683c747ea3d189eb6fdc07b6ccd |
 | pvd_pamyatnye-mesta_28112023.pdf | VERIFIED | 5f6d3481eedfbf563c579f99208a189da0d641d4a88c19b102a3b0733e31a5c6 |
 | pvd_velikie_dostizheniya_sootechestvennikov1-1.pdf | VERIFIED | 8c479362915f7eee3e003e5240cf9ad28b0b8353503336d7f1286ac24eba8d74 |
-| _-----.--------_-.pdf | FAILED | — |
-| _----------5-6--_-.pdf | FAILED | — |
-| _---------------------_-.pdf | FAILED | — |
-| _-----_------PYTHON_-.pdf | FAILED | — |
-| _---------_-.pdf | FAILED | — |
-| _---------_-_-_-.pdf | FAILED | — |
-| _-------.------_-.pdf | FAILED | — |
-| _----------5-9--.--------_-.pdf | FAILED | — |
-| _-------------------_-.pdf | FAILED | — |
+| _-----.--------_-.pdf | VERIFIED | abdf36ebd3a7c785878871c586e453458105921e78be478594af20b2b2288968 |
+| _----------5-6--_-.pdf | VERIFIED | ebc49eaa71be9d7d92dc543c54df7778d4d40ca7d4d00beb124980715e86d268 |
+| _---------------------_-.pdf | VERIFIED | 80d8c95bf09bf040525333c77d32c1931d8f295f3806407353ed5d0c5ebc408c |
+| _-----_------PYTHON_-.pdf | VERIFIED | 4153b78d710ac8f1da7405660a41816ae52c4889dffd225685a34dd518cfd263 |
+| _---------_-.pdf | VERIFIED | 27caef6198936fc2b3d059dee4a64c92caaabe667d7e49a26f51bca334036da3 |
+| _---------_-_-_-.pdf | VERIFIED | bbd0d31dcade8a791e9547a07c865b9b01d65955242ee582f7d2e3d15bd79544 |
+| _-------.------_-.pdf | VERIFIED | 8c2bc7529800f1946c7c1b27aec7b3c4a1b95ec678f5304258a8017d4a16c854 |
+| _----------5-9--.--------_-.pdf | VERIFIED | e25524bc488d4950bd9621463c54568db9c85b0319a862fc5c14d153a8dc73d2 |
+| _-------------------_-.pdf | VERIFIED | edd9952e41df6d6f35afffa48039ae9908aac2f55ec09290c72b6275d38df304 |
 | pvd_ist_otech_kino_v_ist_hh-v_itog.pdf | VERIFIED | 38512ad948f57df74fded92392e4ba509b858e863f806ffabab18592228d3706 |
-| rossiya---moi-gorizonty-2026.pdf | FAILED | — |
+| rossiya---moi-gorizonty-2026.pdf | VERIFIED | 68bb48502f1a305c7d6533b79927c948515531dab752755bd54677ff09675c0d |
 | pvd_osn_inf_kultury_soo_.pdf | VERIFIED | 8bf81d4cdfa64c9dac475c0ca09aa8d9077028f91bbf754d3bc31f5f1fa940f3 |
 | rp_obuchenie_sluzheniem_ooo_2024-1.pdf | VERIFIED | 9910216bb937073c9622431e65e27e3ef43959d81dc215d184d4f1eb96f775ff |
 | pvd_kompyuternoe_proektirovanie_cherchenie_19082024_itog.pdf | VERIFIED | 348410aed853dbeb4dcd0b2ce342c6ab04943c6d8011c43d7af72fd43c24c8fb |
@@ -60,5 +60,5 @@ PDF со проверенной сигнатурой: 38 из 53; ошибок: 
 | pvd_rossiya_moya-istoriya_28112023.pdf | VERIFIED | 01165dec4fde7eb0a5714c39685cd43146645d13de26aeb71985eb9b16d80d7c |
 | pvd_moj-kraj-v-istorii-otechestva_soo_28112023.pdf | VERIFIED | 82cc81c9552ede72975f0708a06cf791fda5142f463d81c4a5b317b8f06a1200 |
 | vud_rp_nvp_10-11-kl_novaya.pdf | VERIFIED | 1946cc5381831548e0d9df45139bd83d8e39b354591cb1dc9a8385dd466c8573 |
-| _-_---_-.pdf | FAILED | — |
+| _-_---_-.pdf | VERIFIED | 6963d2f424abe9c5a512854638d592ea3d7304b40ebfdf2c48d009351fcff000 |
 | pvd_agrobio_soo_28112023.pdf | VERIFIED | 0c9076021c3f81e1d60c355fee5fc078c759beeef4ef1ae86556a55563d90383 |

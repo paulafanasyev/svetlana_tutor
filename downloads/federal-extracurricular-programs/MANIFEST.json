@@ -3,8 +3,8 @@
   "sourcePage": "https://edsoo.ru/rabochie-programmy-vd/",
   "checkedAt": "2026-10-21",
   "attempted": 53,
-  "verifiedLocalPdfCount": 38,
-  "failedCount": 15,
+  "verifiedLocalPdfCount": 53,
+  "failedCount": 0,
   "files": [
     {
       "id": "edsoo-vd-ed16bf7aafc5",
@@ -73,10 +73,10 @@
       "id": "edsoo-vd-1ff5c1342535",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеуроч-деят.-Моя-художественная-практика-НОО_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-------.--------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "cd9ebd55f7d29e6bf2d1240cfdd09763d656582dc0d75edf4ff54447608a064d",
+      "fileSizeBytes": 2028172,
+      "error": null
     },
     {
       "id": "edsoo-vd-ec69bfa50cb7",
@@ -91,28 +91,28 @@
       "id": "edsoo-vd-c88bf9d80188",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Музыкальный-театр-начальное-общее-и-основное-общее-образование_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-----------------------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "85fb31f488cf623a8aa569ef62a3707cc8aa092265fcb3067657b93a6a0e11d7",
+      "fileSizeBytes": 1036388,
+      "error": null
     },
     {
       "id": "edsoo-vd-a57ab2f050f6",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеуроч.-деят.-ИскусствоМузыка_Хоровое-пение_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_---.--.--_---_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "d7dae59e6e3827398f3e357e22ebfbc3bb8ae824fbc4920e1700f89e129fedd2",
+      "fileSizeBytes": 708700,
+      "error": null
     },
     {
       "id": "edsoo-vd-6a9c323f0a98",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ПРП_КВД_Основы_логики_и_алгоритмики_для_1_4_классов.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-_-_-_-_-_-_1_4_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "7f68b28312f4962401482526e694d456b251a4cfa726e95d922020610a788147",
+      "fileSizeBytes": 665989,
+      "error": null
     },
     {
       "id": "edsoo-vd-004cfaa23487",
@@ -271,82 +271,82 @@
       "id": "edsoo-vd-1c862761b92a",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеурочная-деят.-Мир-визуально-пространственных-искусств_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-----.--------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "abdf36ebd3a7c785878871c586e453458105921e78be478594af20b2b2288968",
+      "fileSizeBytes": 750473,
+      "error": null
     },
     {
       "id": "edsoo-vd-6f15f4cc977a",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-КВД-Основы-программирования-для-5-6-классов_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_----------5-6--_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "ebc49eaa71be9d7d92dc543c54df7778d4d40ca7d4d00beb124980715e86d268",
+      "fileSizeBytes": 814022,
+      "error": null
     },
     {
       "id": "edsoo-vd-baa9496bd155",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Умей-вести-за-собой-основное-общее-образование_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_---------------------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "80d8c95bf09bf040525333c77d32c1931d8f295f3806407353ed5d0c5ebc408c",
+      "fileSizeBytes": 696403,
+      "error": null
     },
     {
       "id": "edsoo-vd-50a5ea587115",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-Внеурочной-деятельности_Основы-программирования-на-PYTHON_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-----_------PYTHON_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "4153b78d710ac8f1da7405660a41816ae52c4889dffd225685a34dd518cfd263",
+      "fileSizeBytes": 861156,
+      "error": null
     },
     {
       "id": "edsoo-vd-bfc28700adc6",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеурочная-деят-Профориентация-ООО_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_---------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "27caef6198936fc2b3d059dee4a64c92caaabe667d7e49a26f51bca334036da3",
+      "fileSizeBytes": 944980,
+      "error": null
     },
     {
       "id": "edsoo-vd-08bc244a6cfa",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеур-деят-ПИД_ГН_ООО_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_---------_-_-_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "bbd0d31dcade8a791e9547a07c865b9b01d65955242ee582f7d2e3d15bd79544",
+      "fileSizeBytes": 1348276,
+      "error": null
     },
     {
       "id": "edsoo-vd-8318ce8759e2",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_Программа-курса-внеурочной-деятельности.-Функциональная-грамотность-ООО_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-------.------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "8c2bc7529800f1946c7c1b27aec7b3c4a1b95ec678f5304258a8017d4a16c854",
+      "fileSizeBytes": 995608,
+      "error": null
     },
     {
       "id": "edsoo-vd-b7568b636634",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_----------5-9--.--------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "e25524bc488d4950bd9621463c54568db9c85b0319a862fc5c14d153a8dc73d2",
+      "fileSizeBytes": 805419,
+      "error": null
     },
     {
       "id": "edsoo-vd-22fe9630273b",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Экологичный-образ-жизни-основное-общее-образование_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-------------------_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "edd9952e41df6d6f35afffa48039ae9908aac2f55ec09290c72b6275d38df304",
+      "fileSizeBytes": 749130,
+      "error": null
     },
     {
       "id": "edsoo-vd-b9b270a2707f",
@@ -361,10 +361,10 @@
       "id": "edsoo-vd-3246dd3c28ef",
       "url": "https://edsoo.ru/wp-content/uploads/2026/07/rossiya-–-moi-gorizonty-2026.pdf",
       "localPath": "downloads/federal-extracurricular-programs/rossiya---moi-gorizonty-2026.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode character '\\u2013' in position 40: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "68bb48502f1a305c7d6533b79927c948515531dab752755bd54677ff09675c0d",
+      "fileSizeBytes": 1023482,
+      "error": null
     },
     {
       "id": "edsoo-vd-d406f2dd22ea",
@@ -469,10 +469,10 @@
       "id": "edsoo-vd-996a4f1926db",
       "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_РП_Первая-помощь_Новая.pdf",
       "localPath": "downloads/federal-extracurricular-programs/_-_---_-.pdf",
-      "status": "FAILED",
-      "sha256": null,
-      "fileSizeBytes": null,
-      "error": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+      "status": "VERIFIED",
+      "sha256": "6963d2f424abe9c5a512854638d592ea3d7304b40ebfdf2c48d009351fcff000",
+      "fileSizeBytes": 824258,
+      "error": null
     },
     {
       "id": "edsoo-vd-130855302330",
