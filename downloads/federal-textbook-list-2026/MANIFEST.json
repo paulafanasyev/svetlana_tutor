@@ -12,11 +12,19 @@
     "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
     "signature": "%PDF-"
   },
+  "ocrPdf": {
+    "path": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026-ocr.pdf",
+    "bytes": 39039750,
+    "pages": 312,
+    "sha256": "c466216ed388c0fe999c733531d32c3d991d757cb9bc96787fabad5a815a4984",
+    "language": "rus+eng"
+  },
   "text": {
     "path": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.txt",
-    "characters": 8314,
-    "extractionLibrary": "pypdf"
+    "characters": 629592,
+    "extractionLibrary": "pypdf after OCR",
+    "status": "OCR_TEXT_EXTRACTED"
   },
   "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; preserve source attribution; not a substitute for individual textbook files",
-  "note": "The PDF and extracted text are the federal textbook-list document. They are not full copies of each listed textbook."
+  "note": "The PDF and extracted text are the federal list, not full copies of each listed textbook."
 }

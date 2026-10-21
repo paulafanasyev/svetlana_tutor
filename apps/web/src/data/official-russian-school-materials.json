@@ -776,7 +776,7 @@
   "originalExerciseCount": 153,
   "currentCoverageNote": "Каталог содержит 773 карточек, 61 навигационный раздел федерального перечня, 128 библиографических записей исторических учебников и 153 авторских заданий с ответами. Полный набор актуальных издательских учебников не сохранён; полнота остаётся NOT PROVEN.",
   "localFederalWorkingProgramPdfCount": 55,
-  "lastFederalProgramDownloadAttemptAt": "2026-10-21T08:51:03.693989+00:00",
+  "lastFederalProgramDownloadAttemptAt": "2026-10-21T09:00:50.602319+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
   "failedFederalWorkingProgramPdfCount": 0,
   "extracurricularProgramsSourceUrl": "https://edsoo.ru/rabochie-programmy-vd/",
@@ -785,9 +785,11 @@
     "status": "VERIFIED",
     "sourceUrl": "https://minjust.consultant.ru/documents/60664",
     "pdfPath": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.pdf",
+    "ocrPdfPath": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026-ocr.pdf",
     "textPath": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.txt",
     "pages": 312,
     "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
+    "extractedCharacters": 629592,
     "note": "Contains the federal list, not the full contents of every listed textbook."
   }
 }
