@@ -47966,6 +47966,190 @@
       "releaseAsset": "fpu-436-2026.pdf",
       "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
       "storedInRelease": true
+    },
+    {
+      "id": "edsoo-history-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Инструктивно-методическое письмо об организации исторического просвещения в 2026–2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_PAGE",
+      "subject": "history",
+      "topic": "Историческое просвещение и организация преподавания",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/astor/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная категория ЕДСОО; содержит инструктивно-методическое письмо на 2026–2027 учебный год. Это материал для учителя, не полный учебник."
+    },
+    {
+      "id": "edsoo-history-assessment-bank-5-9",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Банк заданий для текущего оценивания по истории, 5–9 классы (2024 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "history",
+      "topic": "Задания для текущего оценивания",
+      "kind": [
+        "assessment-bank",
+        "task-bank",
+        "methodical-materials"
+      ],
+      "url": "https://edsoo.ru/md-istoriya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО с банком заданий и методическими материалами; вложения не копируются в репозиторий без проверки условий."
+    },
+    {
+      "id": "edsoo-literature-interactive-lessons-grade5",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Материалы к урокам литературы с интерактивными элементами — 5 класс",
+      "gradeRange": [
+        5
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_PAGE",
+      "subject": "literature",
+      "topic": "Интерактивные материалы к урокам литературы",
+      "kind": [
+        "lesson-materials",
+        "interactive-exercises"
+      ],
+      "url": "https://edsoo.ru/2026/02/07/materialy-k-urokam-literatury-s-interaktivnymi-elementami/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО содержит раздел «5 класс» с темами уроков. Не считать полной копией учебника."
+    },
+    {
+      "id": "edsoo-literature-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания литературы в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SUBJECT_SCOPE",
+      "subject": "literature",
+      "topic": "Методические рекомендации для учителей",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-literatura/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; опубликовано письмо на 2026–2027 год и интерактивные материалы. Не заменяет учебник."
+    },
+    {
+      "id": "edsoo-informatics-ai-methodology-7-9",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методические рекомендации по изучению основ искусственного интеллекта в информатике основного общего образования",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "informatics",
+      "topic": "Основы искусственного интеллекта в школьной информатике",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/inf/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_LEVEL_VERIFIED",
+      "note": "Официальная категория ЕДСОО содержит рекомендации по основам ИИ в основном общем образовании и внеурочной деятельности."
+    },
+    {
+      "id": "edsoo-foreign-language-methodical-resources",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методические материалы ЕДСОО по иностранному языку",
+      "gradeRange": [
+        2,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SUBJECT_SCOPE",
+      "subject": "foreign-language",
+      "topic": "Методические рекомендации и задания по иностранным языкам",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/ino/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_SCOPE_VERIFIED",
+      "note": "Официальная категория ЕДСОО с методическими материалами и письмами по иностранному языку; конкретный язык и класс проверять на странице отдельного материала."
+    },
+    {
+      "id": "edsoo-functional-literacy-5-9-methodical",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методические рекомендации по формированию функциональной грамотности обучающихся, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "functional-literacy",
+      "topic": "Функциональная грамотность в учебных предметах",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/metodicheskie-posobiya-i-rekomendaczii/36/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО перечисляет рекомендации по функциональной грамотности для 5–9 классов; это межпредметный ресурс."
+    },
+    {
+      "id": "edsoo-social-studies-demography-10-11",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методические материалы к программе межпредметного модуля «Демография», 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "social-studies",
+      "topic": "Демография и межпредметный модуль",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/obshe/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная категория ЕДСОО содержит методические материалы к модулю «Демография» для 10–11 классов; отдельные вложения остаются на сайте источника."
     }
   ],
   "coverageNote": "Добавлено 934 OCR-извлечённых библиографических записей учебников из действующих разделов федерального перечня 2026 года для классов 1–11. Точность названий/авторов/издателей не гарантируется до ручной сверки с PDF. Полные тексты коммерческих учебников не загружались.",

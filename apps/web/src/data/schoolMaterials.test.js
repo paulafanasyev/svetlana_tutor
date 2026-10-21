@@ -223,7 +223,15 @@ test('новые официальные предметные материалы 
     'edsoo-geography-methodical-letter-2026-2027',
     'edsoo-math-methodical-letter-2026-2027',
     'edsoo-physics-methodical-letter-2025-2026',
-    'edsoo-geography-methodical-letter-2025-2026'
+    'edsoo-geography-methodical-letter-2025-2026',
+    'edsoo-history-methodical-letter-2026-2027',
+    'edsoo-history-assessment-bank-5-9',
+    'edsoo-literature-interactive-lessons-grade5',
+    'edsoo-literature-methodical-letter-2026-2027',
+    'edsoo-informatics-ai-methodology-7-9',
+    'edsoo-foreign-language-methodical-resources',
+    'edsoo-functional-literacy-5-9-methodical',
+    'edsoo-social-studies-demography-10-11'
   ];
   const catalog = read('official-russian-school-material-items.json').items;
   for (const id of ids) {
