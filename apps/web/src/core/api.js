@@ -7,6 +7,14 @@
 // edited by whoever uses it. The role checks below keep the UI honest; real
 // multi-user security comes only from the HTTP backend.
 import { storage } from './storage.js';
+import { priceOf } from '../data/shopCatalog.js';
+
+// Audit 21.10: the published demo has NO administrator. The admin demo login (admin@demo / admin123) and any
+// ADMIN role saved in this browser exist only in local development or when VITE_DEMO_ADMIN=1 is set for a build.
+// A role edited by hand in localStorage is reset to STUDENT on the next read.
+const ENV = (typeof import.meta !== 'undefined' && import.meta.env) || {};
+export const DEMO_ADMIN = ENV.VITE_DEMO_ADMIN === '1' || ENV.DEV === true;
+const ROLES = ['STUDENT', 'TEACHER', 'PARENT', ...(DEMO_ADMIN ? ['ADMIN'] : [])];
 
 const DB_KEY = 'aet_db_v3';
 const SES_KEY = 'aet_session';
@@ -39,8 +47,8 @@ function seedDb() {
     ['Аня', 'anya@school.demo', 'A2', 0.74],
   ];
   const users = [
-    { id: 'u_admin', email: 'admin@demo', passwordHash: enc('admin123'), name: 'Admin', role: 'ADMIN',
-      blocked: false, level: 'B2', xp: 0, coins: 999, teacherId: 'emma', theme: 'candy', frame: 'none', createdAt: now() - 40 * DAY, lastActive: now() },
+    ...(DEMO_ADMIN ? [{ id: 'u_admin', email: 'admin@demo', passwordHash: enc('admin123'), name: 'Admin', role: 'ADMIN',
+      blocked: false, level: 'B2', xp: 0, coins: 999, teacherId: 'emma', theme: 'candy', frame: 'none', createdAt: now() - 40 * DAY, lastActive: now() }] : []),
     { id: 'u_student', email: 'student@demo', passwordHash: enc('demo123'), name: 'Саша', role: 'STUDENT',
       blocked: false, level: 'A1', xp: 120, coins: 350, teacherId: null, theme: 'candy', frame: 'none', createdAt: now() - 2 * DAY, lastActive: now() },
   ];
@@ -104,8 +112,14 @@ function migrate(d) {
     d.settings = { avatarGenerationEnabled: true, gamesEnabled: true, listeningEnabled: true, registrationOpen: true };
     changed = true;
   }
+  if (!DEMO_ADMIN) {
+    const before = d.users.length;
+    d.users = d.users.filter((u) => u.id !== 'u_admin' && u.email !== 'admin@demo');
+    if (d.users.length !== before) changed = true;
+  }
   for (const u of d.users) {
     if (u.teacherId != null && !validTeacher(u.teacherId)) { u.teacherId = null; changed = true; }
+    if (!ROLES.includes(u.role)) { u.role = 'STUDENT'; changed = true; }
   }
   for (const a of d.attempts) {
     const t = normalizeTaskType(a.taskType);
@@ -252,12 +266,13 @@ const DemoApi = {
     u.coins += addCoins;
     save(d); return publicUser(u);
   },
-  async spend({ itemType, itemId, price }) {
+  async spend({ itemType, itemId }) {
     const d = db();
     const u = sessionUser(d);
     if (!u) throw new Error('auth');
-    const cost = Number(price);
-    if (!Number.isInteger(cost) || cost < 0) throw new Error('price');
+    // The price comes from the catalog, never from the caller (audit 21.10).
+    const cost = priceOf(itemType, itemId);
+    if (cost == null) throw new Error('item');
     if (d.unlocks.some((x) => x.userId === u.id && x.itemType === itemType && x.itemId === itemId)) return publicUser(u);
     if (u.coins < cost) throw new Error('coins');
     u.coins -= cost;
@@ -285,7 +300,9 @@ const DemoApi = {
     const d = db(); requireRole(d, 'ADMIN');
     const u = d.users.find((x) => x.id === id);
     if (!u) throw new Error('notfound');
-    for (const k of ['blocked', 'role', 'level']) if (patch[k] !== undefined) u[k] = patch[k];
+    if (patch.blocked !== undefined) u.blocked = patch.blocked === true;
+    if (patch.role !== undefined && ROLES.includes(patch.role)) u.role = patch.role;
+    if (patch.level !== undefined && CEFR.includes(patch.level)) u.level = patch.level;
     save(d); return publicUser(u);
   },
   async deleteUser(id) {
