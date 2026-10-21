@@ -1,0 +1,107 @@
+name: School materials sync (PDF to Release)
+
+# PDFs go to the GitHub Release, never into git. The bot commits only
+# data/school-materials/ (JSON indexes, manifests, report). It never runs on main.
+on:
+  push:
+    branches:
+      - 'materials/**'
+    paths:
+      - '.github/workflows/school-materials-sync.yml'
+      - 'scripts/school_materials_*'
+      - 'scripts/sync_official_*.py'
+  workflow_dispatch:
+    inputs:
+      ocr:
+        description: 'Run OCR on the textbook list (slow)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: school-materials-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TAG: school-materials-2026-10
+      RUN_OCR: ${{ inputs.ocr && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dependencies
+        run: |
+          python -m pip install pypdf
+          if [ "$RUN_OCR" = "1" ]; then
+            sudo apt-get update
+            sudo apt-get install -y tesseract-ocr tesseract-ocr-rus ghostscript qpdf
+            python -m pip install ocrmypdf
+          fi
+
+      - name: Import JSON from backup branch and seed PDF cache
+        run: bash scripts/school_materials_import.sh
+
+      - name: Download PDFs into the release cache (single pass)
+        run: |
+          python scripts/sync_official_federal_programs.py
+          python scripts/sync_official_extracurricular_programs.py || echo "::warning::extracurricular sync failed"
+          python scripts/sync_official_textbook_list.py || echo "::warning::textbook list sync failed"
+
+      - name: Upload PDFs to the release
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --prerelease \
+            --title "School materials 2026-10" \
+            --notes "Official PDFs (EDSOO, Minjust). Not in git: see data/school-materials/manifests for source URLs and sha256."
+          gh release upload "$TAG" .cache/school-materials/release/* --clobber
+
+      - name: Verify release against manifests
+        run: |
+          gh release view "$TAG" --json assets > .cache/school-materials/assets.json
+          python - <<'PY'
+          import json, pathlib
+          assets = {a['name']: a['size'] for a in json.load(open('.cache/school-materials/assets.json'))['assets']}
+          missing, wrong = [], []
+          def check(name, size):
+              if not name: return
+              if name not in assets: missing.append(name)
+              elif size and assets[name] != size: wrong.append(name)
+          for path in pathlib.Path('data/school-materials/manifests').glob('*.json'):
+              m = json.loads(path.read_text(encoding='utf-8'))
+              for f in m.get('files', []):
+                  check(f.get('releaseAsset'), f.get('fileSizeBytes'))
+              for key in ('pdf', 'ocrPdf', 'text'):
+                  if isinstance(m.get(key), dict):
+                      check(m[key].get('releaseAsset'), m[key].get('fileSizeBytes'))
+          print('assets in release:', len(assets))
+          assert not missing, f'missing in release: {missing[:10]}'
+          assert not wrong, f'size mismatch: {wrong[:10]}'
+          PY
+
+      - name: Report
+        run: python scripts/school_materials_report.py
+
+      - name: Commit indexes only (no PDF)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/school-materials docs/official-russian-school-materials
+          if git diff --cached --name-only | grep -iE '\.(pdf|txt)$'; then
+            echo "::error::refusing to commit PDF/TXT into git"; exit 1
+          fi
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "School materials: indexes and manifests (PDF in release ${TAG})"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
