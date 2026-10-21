@@ -61,7 +61,10 @@ jobs:
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
       - name: Install PDF extraction dependency
-        run: python -m pip install pypdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-rus ghostscript qpdf
+          python -m pip install pypdf ocrmypdf
 
       - name: Download official PDFs and record hashes
         run: |
@@ -90,7 +93,9 @@ jobs:
           assert textbook_list['pdf']['signature'] == '%PDF-'
           assert textbook_list['pdf']['pages'] > 0
           assert Path(textbook_list['text']['path']).exists()
-          print('Federal textbook-list PDF:', textbook_list['pdf']['pages'], 'pages; extracted text chars:', textbook_list['text']['characters'])
+          assert Path(textbook_list['ocrPdf']['path']).exists()
+          assert textbook_list['text']['characters'] > 100000, 'OCR text extraction is too sparse to claim searchable full list'
+          print('Federal textbook-list PDF:', textbook_list['pdf']['pages'], 'pages; OCR text chars:', textbook_list['text']['characters'])
           PY
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
