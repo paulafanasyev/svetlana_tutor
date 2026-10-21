@@ -110,3 +110,40 @@ test('матрица покрытия не заявляет полноту бе�
   assert.ok(rows.length > 0);
   assert.ok(rows.every((r) => r.completeCoverage === 'NOT_PROVEN'));
 });
+
+
+test('матрица сверки охватывает все предметы каталога и не заявляет полноту', () => {
+  const coverage = read('school-curriculum-coverage.json');
+  const catalog = read('official-russian-school-materials.json');
+  assert.deepEqual(coverage.subjects, catalog.subjects);
+  assert.equal(coverage.rows.length, coverage.grades.length * catalog.subjects.length);
+  const keys = coverage.rows.map((r) => String(r.grade) + '|' + r.subject);
+  assert.equal(new Set(keys).size, keys.length, 'дубли сочетания класс—предмет');
+  const sourceSubjects = new Set(catalog.subjects);
+  for (const row of coverage.rows) {
+    assert.ok(sourceSubjects.has(row.subject), row.subject);
+    assert.ok(Number.isInteger(row.indexedResourceCount) && row.indexedResourceCount >= 0, row.subject);
+    assert.ok(Number.isInteger(row.locallyStoredOriginalTaskCount) && row.locallyStoredOriginalTaskCount >= 0, row.subject);
+    assert.equal(row.completeCoverage, 'NOT_PROVEN', String(row.grade) + '/' + row.subject);
+    assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', String(row.grade) + '/' + row.subject);
+  }
+});
+
+test('счётчик авторских заданий в матрице соответствует банку по классу и предмету', () => {
+  const coverage = read('school-curriculum-coverage.json').rows;
+  const exercises = read('original-school-practice-bank.json').exercises;
+  const foreignLanguages = new Set(['english-language', 'german-language', 'french-language', 'spanish-language', 'chinese-language']);
+  for (const row of coverage) {
+    const count = exercises.filter((e) => e.grade === row.grade
+      && (e.subject === row.subject || (row.subject === 'foreign-language' && foreignLanguages.has(e.subject)))).length;
+    assert.equal(row.locallyStoredOriginalTaskCount, count, String(row.grade) + '/' + row.subject);
+  }
+});
+
+test('каталог содержит официальный список произведений для федеральных программ', () => {
+  const sources = read('official-russian-school-materials.json').sources;
+  const source = sources.find((x) => x.id === 'official-program-reading-list-2026');
+  assert.ok(source, 'missing Ministry official reading list');
+  assert.equal(source.url, 'https://docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/');
+  assert.equal(source.storesFullTextLocally, false);
+});

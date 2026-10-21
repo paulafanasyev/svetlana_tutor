@@ -91,6 +91,12 @@ jobs:
           assert not wrong, f'size mismatch: {wrong[:10]}'
           PY
 
+      - name: Reconcile grade/subject coverage
+        run: python scripts/school_materials_reconcile.py
+
+      - name: Validate school material indexes
+        run: node --test apps/web/src/data/schoolMaterials.test.js
+
       - name: Report
         run: python scripts/school_materials_report.py
 
