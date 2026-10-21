@@ -1,8 +1,12 @@
-# MOVE THIS FILE TO .github/workflows/web-ci.yml
 name: Web CI
 
 on:
   push:
+    branches: [main]
+    paths:
+      - 'apps/web/**'
+      - 'site/**'
+      - '.github/workflows/web-ci.yml'
   pull_request:
     paths:
       - 'apps/web/**'
@@ -12,9 +16,14 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: web-ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,6 +34,9 @@ jobs:
       - name: Install web dependencies
         working-directory: apps/web
         run: npm install --no-audit --no-fund --legacy-peer-deps
+      - name: Tests (child safety, chat, shop, tracks, math)
+        working-directory: apps/web
+        run: npm test
       - name: Build web app
         working-directory: apps/web
         run: npx vite build --base=./
