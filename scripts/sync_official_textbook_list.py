@@ -113,7 +113,7 @@ def main():
     existing_items.append(item)
     items_obj["schemaVersion"] = max(int(items_obj.get("schemaVersion", 1)), 8)
     items_obj["lastVerified"] = manifest["checkedAt"]
-    items_path.write_text(json.dumps(items_obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    items_path.write_text(json.dumps(items_obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     catalog_path = ROOT / "apps/web/src/data/official-russian-school-materials.json"
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     catalog["federalTextbookListLocalCopy"] = {
@@ -122,7 +122,7 @@ def main():
         "pages": manifest["pdf"]["pages"], "sha256": manifest["pdf"]["sha256"],
         "note": "Contains the federal list, not the full contents of every listed textbook."
     }
-    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"pdfPages":len(reader.pages),"pdfBytes":len(pdf_data),"sha256":sha,"extractedCharacters":len(extracted)},ensure_ascii=False))
 
 if __name__=="__main__":
