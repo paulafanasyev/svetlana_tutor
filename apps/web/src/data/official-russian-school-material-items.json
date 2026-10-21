@@ -2,7 +2,7 @@
   "schemaVersion": 6,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
-  "note": "Объединённый индекс: ссылки на ресурсы, уроки, федеральные программы, исторические записи и частичные библиографические записи учебников. Не считать индекс полным архивом учебников.",
+  "note": "Индекс содержит источники, библиографические записи и ссылки. Авторские задания с ответами хранятся локально; полнота всех издательских учебников не доказана.",
   "items": [
     {
       "id": "fpu-order-436-2026",
@@ -16748,6 +16748,1086 @@
       "contentStoredLocally": false,
       "fullTextAvailable": false,
       "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "original-task-g1-extended-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Заглавная буква в имени (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "russian-language",
+      "topic": "Заглавная буква в имени",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-extended-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-extended-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сравнение чисел (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "mathematics",
+      "topic": "Сравнение чисел",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-extended-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-extended-003",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Времена года (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "world-around-us",
+      "topic": "Времена года",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-extended-003",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-extended-004",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Состав числа (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "mathematics",
+      "topic": "Состав числа",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-extended-004",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-extended-005",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Понимание текста (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "literary-reading",
+      "topic": "Понимание текста",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-extended-005",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-extended-006",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Проверка безударной гласной (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "russian-language",
+      "topic": "Проверка безударной гласной",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-extended-006",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-extended-007",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Умножение (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-extended-007",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-extended-008",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Состояния воды (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "world-around-us",
+      "topic": "Состояния воды",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-extended-008",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-extended-009",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Простая лексика (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "english-language",
+      "topic": "Простая лексика",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-extended-009",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-extended-010",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Главная мысль (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "literary-reading",
+      "topic": "Главная мысль",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-extended-010",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-extended-011",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Периметр прямоугольника (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "mathematics",
+      "topic": "Периметр прямоугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-extended-011",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-extended-012",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Части речи (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "russian-language",
+      "topic": "Части речи",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-extended-012",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-extended-013",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Планеты (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "world-around-us",
+      "topic": "Планеты",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-extended-013",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-extended-014",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Дроби (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "mathematics",
+      "topic": "Дроби",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-extended-014",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-extended-015",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Глагол to be (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "english-language",
+      "topic": "Глагол to be",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-extended-015",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-extended-016",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Площадь прямоугольника (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "mathematics",
+      "topic": "Площадь прямоугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-extended-016",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-extended-017",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Склонение существительных (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Склонение существительных",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-extended-017",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-extended-018",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Круговорот воды (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "world-around-us",
+      "topic": "Круговорот воды",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-extended-018",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-extended-019",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Источники истории (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "history",
+      "topic": "Источники истории",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-extended-019",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-extended-020",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Множественное число (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "english-language",
+      "topic": "Множественное число",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-extended-020",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-extended-021",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Обыкновенные дроби (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "mathematics",
+      "topic": "Обыкновенные дроби",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-extended-021",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-extended-022",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Эпитет (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "literature",
+      "topic": "Эпитет",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-extended-022",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-extended-023",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Стороны горизонта (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "geography",
+      "topic": "Стороны горизонта",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-extended-023",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-extended-024",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Признаки живого (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "biology",
+      "topic": "Признаки живого",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-extended-024",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-extended-025",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Историческая хронология (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "history",
+      "topic": "Историческая хронология",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-extended-025",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-extended-026",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Отрицательные числа (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "mathematics",
+      "topic": "Отрицательные числа",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-extended-026",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-extended-027",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Фотосинтез (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "biology",
+      "topic": "Фотосинтез",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-extended-027",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-extended-028",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Масштаб карты (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "geography",
+      "topic": "Масштаб карты",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-extended-028",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-extended-029",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Первичный источник (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "history",
+      "topic": "Первичный источник",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-extended-029",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-extended-030",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Past Simple (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "english-language",
+      "topic": "Past Simple",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-extended-030",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-extended-031",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Скорость (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "physics",
+      "topic": "Скорость",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-extended-031",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-extended-032",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Линейное уравнение (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "algebra",
+      "topic": "Линейное уравнение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-extended-032",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-extended-033",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Экосистема (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "biology",
+      "topic": "Экосистема",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-extended-033",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-extended-034",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сумма углов треугольника (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "geometry",
+      "topic": "Сумма углов треугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-extended-034",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-extended-035",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Алгоритм (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "informatics",
+      "topic": "Алгоритм",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-extended-035",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-extended-036",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Химические элементы (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "chemistry",
+      "topic": "Химические элементы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-extended-036",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-extended-037",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Электрическая мощность (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "physics",
+      "topic": "Электрическая мощность",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-extended-037",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-extended-038",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Теорема Пифагора (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-extended-038",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-extended-039",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Право и обязанность (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "social-studies",
+      "topic": "Право и обязанность",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-extended-039",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-extended-040",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Present Perfect (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "english-language",
+      "topic": "Present Perfect",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-extended-040",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-extended-041",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Линейная функция (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "mathematics",
+      "topic": "Линейная функция",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-extended-041",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-extended-042",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Закон сохранения массы (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "chemistry",
+      "topic": "Закон сохранения массы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-extended-042",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-extended-043",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Экологические факторы (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "biology",
+      "topic": "Экологические факторы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-extended-043",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-extended-044",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Экономическая география (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "geography",
+      "topic": "Экономическая география",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-extended-044",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-extended-045",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Работа с доказательствами (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "history",
+      "topic": "Работа с доказательствами",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-extended-045",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-extended-046",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Логарифмы (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "mathematics",
+      "topic": "Логарифмы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-extended-046",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-extended-047",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Кинетическая энергия (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "physics",
+      "topic": "Кинетическая энергия",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-extended-047",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-extended-048",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Окислительно-восстановительные реакции (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "chemistry",
+      "topic": "Окислительно-восстановительные реакции",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-extended-048",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-extended-049",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Формы государства (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "social-studies",
+      "topic": "Формы государства",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-extended-049",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-extended-050",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Аргументированное сочинение (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "literature",
+      "topic": "Аргументированное сочинение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-extended-050",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-extended-051",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Производная (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "mathematics",
+      "topic": "Производная",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-extended-051",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-extended-052",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Независимые события (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "probability-statistics",
+      "topic": "Независимые события",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-extended-052",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-extended-053",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сложность алгоритма (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "informatics",
+      "topic": "Сложность алгоритма",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-extended-053",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-extended-054",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Инфляция (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "economics",
+      "topic": "Инфляция",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-extended-054",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
     }
   ],
   "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав."
