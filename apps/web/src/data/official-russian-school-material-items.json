@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
   "note": "Это проверенный индекс источников и отдельных учебных ресурсов, а не архив полных коммерческих учебников.",
@@ -366,6 +366,1223 @@
       "accessStatus": "public directory",
       "rightsStatus": "follow each resource's licence",
       "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-bank",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый банк заданий ЕГЭ",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Практические задания ЕГЭ",
+      "kind": [
+        "official-task-bank"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege",
+      "accessStatus": "PUBLIC_PAGE; external task bank may have separate domain",
+      "rightsStatus": "LINK_ONLY_NO_BULK_COPY",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-oge-bank",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый банк заданий ОГЭ",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "topic": "Практические задания ОГЭ",
+      "kind": [
+        "official-task-bank"
+      ],
+      "url": "https://fipi.ru/oge/otkrytyy-bank-zadaniy-oge",
+      "accessStatus": "PUBLIC_PAGE; external task bank may have separate domain",
+      "rightsStatus": "LINK_ONLY_NO_BULK_COPY",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-variants-2026",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытые варианты КИМ ЕГЭ 2026",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Открытые варианты контрольных измерительных материалов ЕГЭ 2026",
+      "kind": [
+        "exam-variants"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "LINK_TO_SOURCE; retain attribution and current edition",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2027-specs",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Демоверсии, спецификации и кодификаторы ЕГЭ 2027",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Документы, определяющие структуру и содержание КИМ ЕГЭ 2027",
+      "kind": [
+        "demonstration-variants",
+        "specifications",
+        "codifiers"
+      ],
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "accessStatus": "PUBLIC_PAGE; status may be draft/consultation and should be rechecked",
+      "rightsStatus": "LINK_TO_SOURCE",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-oge-specs",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Демоверсии, спецификации и кодификаторы ОГЭ",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "topic": "Документы для подготовки к ОГЭ",
+      "kind": [
+        "demonstration-variants",
+        "specifications",
+        "codifiers"
+      ],
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "LINK_TO_SOURCE",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-methodology",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Аналитические и методические материалы ЕГЭ",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Типичные ошибки и рекомендации для преподавателей",
+      "kind": [
+        "methodical-materials"
+      ],
+      "url": "https://fipi.ru/ege/analiticheskie-i-metodicheskie-materialy",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "LINK_TO_SOURCE",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-oge-methodology",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Методические материалы ОГЭ",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "topic": "Методические материалы и критерии проверки",
+      "kind": [
+        "methodical-materials"
+      ],
+      "url": "https://fipi.ru/oge/dlya-predmetnyh-komissiy-subektov-rf",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "LINK_TO_SOURCE",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-literacy-science",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый банк заданий для оценки естественнонаучной грамотности",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "biology",
+      "topic": "Естественнонаучная грамотность",
+      "kind": [
+        "assessment-bank"
+      ],
+      "url": "https://oge.fipi.ru/",
+      "accessStatus": "PUBLIC_ENTRY_POINT",
+      "rightsStatus": "LINK_ONLY",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-literacy-reading",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый банк заданий для оценки читательской грамотности",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "russian-language",
+      "topic": "Читательская грамотность",
+      "kind": [
+        "assessment-bank"
+      ],
+      "url": "https://oge.fipi.ru/",
+      "accessStatus": "PUBLIC_ENTRY_POINT",
+      "rightsStatus": "LINK_ONLY",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-russian-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Русский язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "russian-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-mathematics",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Математика",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-physics",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Физика",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "physics",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-chemistry",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Химия",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chemistry",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-informatics",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Информатика",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "informatics",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-biology",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Биология",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "biology",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-history",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — История",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-geography",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — География",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "geography",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-social-studies",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Обществознание",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "social-studies",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-literature",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Литература",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-english-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Английский язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "english-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-german-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Немецкий язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-french-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Французский язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "french-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-spanish-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Испанский язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "spanish-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-2026-chinese-language",
+      "sourceId": "fipi-official-exam-materials",
+      "title": "Открытый вариант КИМ ЕГЭ 2026 — Китайский язык",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chinese-language",
+      "topic": "Официальный открытый вариант ЕГЭ 2026",
+      "kind": [
+        "exam-variant"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege/otkrytyye-varianty-kim-ege",
+      "accessStatus": "PUBLIC_SOURCE_PAGE; individual file linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not mirror files without confirmed terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "scolaire-open-001",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Аксиоматика рациональных чисел - Школяр",
+      "url": "https://scolaire.ru/axiomi-termini-racionalnih-chisel.php",
+      "description": "Аксиоматика рациональных чисел: определение как наименьшего поля, содержащего кольцо целых чисел, первичные термины и полный список аксиом с пояснениями.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Аксиоматика рациональных чисел - Школяр"
+    },
+    {
+      "id": "scolaire-open-002",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Британская имперская система мер и весов - Школяр",
+      "url": "https://scolaire.ru/britanskaya-imperskaya-sistema-mer-i-vesov.php",
+      "description": "Миля, ярд, фут, дюйм, акр, галлон, пинта, фунт, унция, стоун, тонна — 36 единиц в точном пересчёте на СИ по закону 1985 года.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Британская имперская система мер и весов - Школяр"
+    },
+    {
+      "id": "scolaire-open-003",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "demografiya-metodika.php",
+      "url": "https://scolaire.ru/demografiya-metodika.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "demografiya-metodika.php"
+    },
+    {
+      "id": "scolaire-open-004",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "demografiya-piramidy.php",
+      "url": "https://scolaire.ru/demografiya-piramidy.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "demografiya-piramidy.php"
+    },
+    {
+      "id": "scolaire-open-005",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "demografiya-ryady.php",
+      "url": "https://scolaire.ru/demografiya-ryady.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "demografiya-ryady.php"
+    },
+    {
+      "id": "scolaire-open-006",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Вымирающие страны: естественная убыль населения в 28 странах",
+      "url": "https://scolaire.ru/demografiya.php",
+      "description": "Рейтинг 28 стран с естественной убылью населения — Россия, Япония, Китай, Германия, Италия, Украина и другие: рождаемость, миграция, потеря численности от исторического максимума, годовые ряды с 1990 года по данным ООН и ...",
+      "subjects": [
+        "history"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Вымирающие страны: естественная убыль населения в 28 странах"
+    },
+    {
+      "id": "scolaire-open-007",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "early-music.php",
+      "url": "https://scolaire.ru/early-music.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "early-music.php"
+    },
+    {
+      "id": "scolaire-open-008",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Английский алфавит: 26 букв с транскрипцией и ... - Школяр",
+      "url": "https://scolaire.ru/english_alphabet.php",
+      "description": "В английском алфавите 26 букв. Гласных букв пять — A, E, I, O, U; Y обозначает то гласный звук, то согласный; остальные 20 — согласные. Под ...",
+      "subjects": [
+        "foreign-language"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Английский алфавит: 26 букв с транскрипцией и ... - Школяр"
+    },
+    {
+      "id": "scolaire-open-009",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Формулы сокращенного умножения - Школяр",
+      "url": "https://scolaire.ru/formuli_sokrashennogo_umnozheniya.php",
+      "description": "Формулы сокращенного умножения ; (1), Разность квадратов, a2-b ; (2), Квадрат суммы/разности, (a±b) ; (3), Квадрат суммы для n переменных, (a1+a2+...+an) ; (4) ...",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Формулы сокращенного умножения - Школяр"
+    },
+    {
+      "id": "scolaire-open-010",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "grecheskiy_alphavit.php",
+      "url": "https://scolaire.ru/grecheskiy_alphavit.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "grecheskiy_alphavit.php"
+    },
+    {
+      "id": "scolaire-open-011",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Формулы кинематики - Школяр",
+      "url": "https://scolaire.ru/kinematika_formuli.php",
+      "description": "Тринадцать формул кинематики одной таблицей: равноускоренное движение, свободное падение, движение по окружности. У каждой формулы разобраны обозначения.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Формулы кинематики - Школяр"
+    },
+    {
+      "id": "scolaire-open-012",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Классификация кривых второго порядка — Школяр",
+      "url": "https://scolaire.ru/klassifikaciya_krivih_vtorogo_poryadka.php",
+      "description": "Все девять кривых второго порядка с каноническими уравнениями: эллипс, гипербола, парабола, пары прямых и мнимые кривые. С определением и примером.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Классификация кривых второго порядка — Школяр"
+    },
+    {
+      "id": "scolaire-open-013",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Классификация поверхностей второго порядка - Школяр",
+      "url": "https://scolaire.ru/klassifikaciya_poverhnostey_vtorogo_poryadka.php",
+      "description": "Все семнадцать поверхностей второго порядка с каноническими уравнениями: эллипсоид, гиперболоиды, параболоиды, цилиндры и плоскости, включая мнимые.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Классификация поверхностей второго порядка - Школяр"
+    },
+    {
+      "id": "scolaire-open-014",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "logarifmi-formuli-primeri.php",
+      "url": "https://scolaire.ru/logarifmi-formuli-primeri.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "logarifmi-formuli-primeri.php"
+    },
+    {
+      "id": "scolaire-open-015",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Перевод числа из одной позиционной системы счислений ...",
+      "url": "https://scolaire.ru/perevod_systemi_schislenia.php",
+      "description": "Программа переводит число из любой позиционной системы счисления от 2 до 36 в любую другую. Считает на сервере и работает без JavaScript.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Перевод числа из одной позиционной системы счислений ..."
+    },
+    {
+      "id": "scolaire-open-016",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Правила ударения в английском — Школяр",
+      "url": "https://scolaire.ru/pravila-udareniya-v-angliyskom.php",
+      "description": "Правила ударения в английском языке: на какой слог оно падает в словах разной длины, с примерами, исключениями и разбором приставок и суффиксов",
+      "subjects": [
+        "foreign-language"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Правила ударения в английском — Школяр"
+    },
+    {
+      "id": "scolaire-open-017",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Русский алфавит - Школяр",
+      "url": "https://scolaire.ru/russkiy_alphavit.php",
+      "description": "Русский алфавит по порядку: 33 буквы, печатные и письменные, с произношением. Есть версия для печати.",
+      "subjects": [
+        "russian-language"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Русский алфавит - Школяр"
+    },
+    {
+      "id": "scolaire-open-018",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица ASCII (кодировка Windows-1251) - Школяр",
+      "url": "https://scolaire.ru/tablica-ascii.php",
+      "description": "(33), \"(34), #(35), $(36), %(37), &(38), '(39), ((40), )(41), *(42), +(43), ,(44), -(45) .(46), /(47). 0(48), 1(49), 2(50), 3(51), 4(52), 5(53), 6(54) ...",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица ASCII (кодировка Windows-1251) - Школяр"
+    },
+    {
+      "id": "scolaire-open-019",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица объёмов Платоновых тел — Школяр",
+      "url": "https://scolaire.ru/tablica-obyemov-platonovih-tel.php",
+      "description": "Объёмы пяти правильных многогранников тремя способами: через ребро, через вписанную и через описанную сферу. Точные формулы и множители на двенадцать знаков, сверенные с Евклидом.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица объёмов Платоновых тел — Школяр"
+    },
+    {
+      "id": "scolaire-open-020",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица пятых степеней от 0 до 99 - Школяр",
+      "url": "https://scolaire.ru/tablica-pyatih.php",
+      "description": "Пятые степени всех чисел от 0 до 99 одной сеткой: строка — десятки, столбец — единицы. Значения считаются, а не вписаны. Определение и пример.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица пятых степеней от 0 до 99 - Школяр"
+    },
+    {
+      "id": "scolaire-open-021",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица композиций движений плоскости - Школяр",
+      "url": "https://scolaire.ru/tablica_dvizheniy.php",
+      "description": "Движение плоскости — преобразование, которое не меняет расстояний между точками. Сложите два движения — сделайте сначала одно, потом другое, — и ...",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица композиций движений плоскости - Школяр"
+    },
+    {
+      "id": "scolaire-open-022",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица факториалов от 0 до 100 - Школяр",
+      "url": "https://scolaire.ru/tablica_faktorialov.php",
+      "description": "Таблица факториалов от 0 до 100. Факториал числа n — это произведение всех натуральных чисел от 1 до n; пишут его восклицательным знаком: 5! = 5 ...",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица факториалов от 0 до 100 - Школяр"
+    },
+    {
+      "id": "scolaire-open-023",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица кубов - Школяр",
+      "url": "https://scolaire.ru/tablica_kubov.php",
+      "description": "Классическая двумерная таблица кубов от 1 до 99. Определение куба числа и пример прилагаются.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица кубов - Школяр"
+    },
+    {
+      "id": "scolaire-open-024",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица квадратов от 0 до 99 - Школяр",
+      "url": "https://scolaire.ru/tablica_kvadratov.php",
+      "description": "десятки ↓единицы →, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. 0, 0, 1, 4, 9, 16, 25, 36, 49, 64, 81. 1, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица квадратов от 0 до 99 - Школяр"
+    },
+    {
+      "id": "scolaire-open-025",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица квадратов чисел от 1 до 210 - Школяр",
+      "url": "https://scolaire.ru/tablica_kvadratov_big.php",
+      "description": "1² = 1, 2² = 4, 3² = 9, 4² = 16, 5² = 25, 6² = 36, 7² = 49, 8² = 64, 9² = 81, 10² = 100, 11² = 121, 12² = 144, 13² = 169, 14² = 196.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица квадратов чисел от 1 до 210 - Школяр"
+    },
+    {
+      "id": "scolaire-open-026",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица производных (логарифм, синус, косинус ... - Школяр",
+      "url": "https://scolaire.ru/tablica_proizvodnih.php",
+      "description": "Таблица производных: степень, логарифм, экспонента, синус, косинус, тангенс и обратные функции. С определением производной и примерами.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица производных (логарифм, синус, косинус ... - Школяр"
+    },
+    {
+      "id": "scolaire-open-027",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица простых чисел от 3 до 1013 - Школяр",
+      "url": "https://scolaire.ru/tablica_prostih_chisel.php",
+      "description": "Первые 169 простых чисел, начиная с 3 в лаконичной таблице. С определениями и примерами.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица простых чисел от 3 до 1013 - Школяр"
+    },
+    {
+      "id": "scolaire-open-028",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "Таблица синусов, косинусов, тангенсов, котангенсов",
+      "url": "https://scolaire.ru/tablica_sinusov_cosinusov.php",
+      "description": "Точные и приблизительные значения самых широко используемых тригонометрических функций для углов 0, 30, 45, 60, 90, 120, 135, 150 и 180 градусов.",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "Таблица синусов, косинусов, тангенсов, котангенсов"
+    },
+    {
+      "id": "scolaire-open-029",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "vavilonskaya-sistema-schisleniya.php",
+      "url": "https://scolaire.ru/vavilonskaya-sistema-schisleniya.php",
+      "description": "",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "vavilonskaya-sistema-schisleniya.php"
+    },
+    {
+      "id": "scolaire-open-030",
+      "sourceId": "scolaire-open-educational-materials",
+      "title": "scolaire.ru",
+      "url": "https://scolaire.ru/dannye/early-music-kompozitory.csv",
+      "description": "\"# Источник данных: https://scolaire.ru/early-music.php\" \"# Издатель: Школяр (https://scolaire.ru)\" \"# Лицензия: CC BY 4.0 ...",
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "license": "CC BY 4.0 for material owned by the site; verify exclusions on each page",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "trainingUse": "Do not use for model training without separate permission; license page reserves text/data-mining rights for training",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC",
+      "rightsStatus": "OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS",
+      "contentStoredLocally": false,
+      "gradeRange": [
+        5,
+        11
+      ],
+      "kind": [
+        "open-reference-material"
+      ],
+      "topic": "scolaire.ru"
     }
-  ]
+  ],
+  "coverageNote": "Expanded with official FIPI resource links and open-licensed school reference pages. Entries marked link-only are intentionally not represented as locally downloaded textbooks."
 }
