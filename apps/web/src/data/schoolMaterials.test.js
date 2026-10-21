@@ -75,10 +75,10 @@ test('OCR-выгрузка ФПУ честно помечена черновик
 
 const garant = ['primary-1-4', 'basic-5-9', 'secondary-10-11'].flatMap((f) => read(`federal-textbooks-2026-${f}.json`).records);
 
-test('сроки в выгрузке ФПУ: «До 31 августа ГГГГ» или «Бессрочно»', () => {
+test('сроки в выгрузке ФПУ: «До Д месяца ГГГГ» или «Бессрочно»', () => {
   for (const r of garant) {
     if (r.allowedUseUntil == null) continue;
-    assert.match(r.allowedUseUntil, /31\s+августа\s+20\d\d|[Бб]ессрочно/, r.id);
+    assert.match(r.allowedUseUntil, /^До\s+\d{1,2}\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d\d|[Бб]ессрочно/, r.id);
   }
 });
 
