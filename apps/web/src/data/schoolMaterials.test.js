@@ -1,0 +1,112 @@
+// Школьные материалы (data/school-materials): индексы и манифесты.
+// PDF лежат в GitHub Release, в git только JSON. Проверяем инварианты, а не точные количества,
+// чтобы обновление каталога не роняло CI.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync } from 'node:fs';
+
+const DIR = new URL('../../../../data/school-materials/', import.meta.url);
+const read = (name) => JSON.parse(readFileSync(new URL(name, DIR), 'utf8'));
+const unique = (xs) => new Set(xs).size === xs.length;
+const SHA = /^[0-9a-f]{64}$/;
+const TAG = 'school-materials-2026-10';
+
+const items = read('official-russian-school-material-items.json').items;
+const programs = read('federal-working-programs.json').programs;
+const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
+
+test('все JSON читаются, id в общем каталоге уникальны', () => {
+  for (const f of readdirSync(DIR).filter((x) => x.endsWith('.json'))) read(f);
+  assert.ok(items.length > 0);
+  assert.ok(unique(items.map((x) => x.id)));
+  for (const it of items) if (it.url) assert.match(it.url, /^https:\/\//, it.id);
+});
+
+test('в индексах нет локальных путей к PDF (localPath)', () => {
+  const text = readFileSync(new URL('official-russian-school-material-items.json', DIR), 'utf8')
+    + readFileSync(new URL('federal-working-programs.json', DIR), 'utf8');
+  assert.ok(!/"localPath"/.test(text), 'localPath остался');
+});
+
+test('каждый файл из релиза описан в манифесте: sha256, размер, уникальное имя', () => {
+  const assets = new Map();
+  for (const m of manifests) {
+    const files = [...(m.files || []), ...['pdf', 'ocrPdf', 'text'].map((k) => m[k]).filter(Boolean)];
+    for (const f of files) {
+      if (!f.releaseAsset) continue;
+      assert.ok(!assets.has(f.releaseAsset), 'дубль имени ' + f.releaseAsset);
+      assert.match(f.sha256, SHA, f.releaseAsset);
+      assert.ok(f.fileSizeBytes > 0, f.releaseAsset);
+      assets.set(f.releaseAsset, f);
+    }
+  }
+  for (const it of items.filter((x) => x.storedInRelease)) {
+    assert.equal(it.releaseTag, TAG, it.id);
+    assert.ok(assets.has(it.releaseAsset), 'нет в манифесте: ' + it.releaseAsset);
+    assert.equal(assets.get(it.releaseAsset).sha256, it.sha256, it.id);
+  }
+});
+
+test('имена PDF внеурочки строятся из id, без битой кириллицы', () => {
+  const vd = manifests.find((m) => m.sourcePage?.includes('rabochie-programmy-vd'));
+  assert.ok(vd, 'манифест внеурочки');
+  for (const f of vd.files.filter((x) => x.releaseAsset)) assert.match(f.releaseAsset, /^vd-[0-9a-f]{12}\.pdf$/);
+  assert.equal(vd.verified, vd.files.filter((x) => x.releaseAsset).length);
+});
+
+test('ФРП с ЕДСОО помечены как корпус, не как сверенные с ФОП', () => {
+  for (const p of programs.filter((x) => x.storedInRelease)) {
+    assert.equal(p.provenance, 'corpus', p.id);
+    assert.match(p.releaseAsset, /^frp-[a-z0-9-]+\.pdf$/);
+  }
+});
+
+test('OCR-выгрузка ФПУ честно помечена черновиком', () => {
+  const ocr = read('federal-textbook-bibliography-2026-full-extraction.json');
+  assert.ok(unique(ocr.records.map((x) => x.id)));
+  for (const r of ocr.records) {
+    assert.equal(r.extractionStatus, 'OCR_EXTRACTED_NEEDS_RECHECK', r.id);
+    assert.equal(r.fullTextStoredLocally, false, r.id);
+  }
+  const fpu = manifests.find((m) => m.pdf?.releaseAsset === 'fpu-436-2026.pdf');
+  assert.ok(fpu, 'манифест ФПУ');
+  if (fpu.text.characters < 100000) assert.match(fpu.text.status, /_SPARSE$/);
+});
+
+const garant = ['primary-1-4', 'basic-5-9', 'secondary-10-11'].flatMap((f) => read(`federal-textbooks-2026-${f}.json`).records);
+
+test('сроки в выгрузке ФПУ: «До Д месяца ГГГГ» или «Бессрочно»', () => {
+  for (const r of garant) {
+    if (r.allowedUseUntil == null) continue;
+    assert.match(r.allowedUseUntil, /^До\s+\d{1,2}\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d\d|[Бб]ессрочно/, r.id);
+  }
+});
+
+// Коды позиций повторяются в разных таблицах приказа № 436, поэтому учебник = пара «номер + код».
+test('выгрузка ФПУ не противоречит сверенным вручную срокам (fpu_status.json)', () => {
+  const status = JSON.parse(readFileSync(new URL('./fpu_status.json', import.meta.url), 'utf8')).items;
+  let matched = 0;
+  for (const [key, st] of Object.entries(status)) {
+    const number = Number(key.split('|')[0]);
+    for (const r of garant.filter((x) => x.listRow === number && x.sectionCode === st.fpu_code)) {
+      const year = /(20\d\d)/.exec(r.allowedUseUntil || '')?.[1];
+      if (!year) continue;
+      assert.equal(year, st.use_until.slice(0, 4), `${key} ${st.fpu_code}: ${r.allowedUseUntil}`);
+      matched += 1;
+    }
+  }
+  assert.ok(matched > 0, 'ни одной пары номер+код не нашлось');
+});
+
+test('банк заданий покрывает 1–11 классы, у каждого есть ответ и объяснение', () => {
+  const ex = read('original-school-practice-bank.json').exercises;
+  assert.ok(unique(ex.map((x) => x.id)));
+  assert.deepEqual([...new Set(ex.map((x) => x.grade))].sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+  for (const e of ex) assert.ok(e.prompt && e.answer && e.explanation, e.id);
+});
+
+test('матрица покрытия не заявляет полноту без доказательства', () => {
+  const rows = read('school-curriculum-coverage.json').rows;
+  assert.ok(rows.length > 0);
+  assert.ok(rows.every((r) => r.completeCoverage === 'NOT_PROVEN'));
+});

@@ -1,0 +1,31 @@
+{
+  "title": "Приказ Минпросвещения России от 22.06.2026 № 436 — федеральный перечень учебников",
+  "registration": "Зарегистрирован Минюстом России 22.07.2026 № 87563",
+  "officialLandingPage": "https://minjust.consultant.ru/documents/60664",
+  "officialAnnouncement": "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
+  "resolvedPdfUrl": "https://minjust.consultant.ru/files/60664",
+  "checkedAt": "2026-10-21",
+  "pages": 312,
+  "pdf": {
+    "releaseTag": "school-materials-2026-10",
+    "releaseAsset": "fpu-436-2026.pdf",
+    "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
+    "fileSizeBytes": 15774591,
+    "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
+    "contentStoredLocally": false,
+    "storedInRelease": true
+  },
+  "ocrPdf": null,
+  "text": {
+    "releaseTag": "school-materials-2026-10",
+    "releaseAsset": "fpu-436-2026.txt",
+    "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.txt",
+    "fileSizeBytes": 8314,
+    "sha256": "7dc4584507b0257f5b7d8aaa8733e9b1544adc87db5e781b3381062891f3ed41",
+    "contentStoredLocally": false,
+    "storedInRelease": true,
+    "characters": 8314,
+    "status": "TEXT_LAYER_SPARSE"
+  },
+  "note": "Source of truth for the app stays apps/web/src/data/fpu_status.json and textbooks_add.json. OCR records are a draft and must be checked against the Consultant pages."
+}
