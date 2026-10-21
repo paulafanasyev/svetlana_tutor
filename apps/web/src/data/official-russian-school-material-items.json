@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
   "note": "Это проверенный индекс источников и отдельных учебных ресурсов, а не архив полных коммерческих учебников.",
@@ -7838,7 +7838,2351 @@
       "metadataCompleteness": "URL_ONLY",
       "checkedAt": "2026-10-21",
       "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "frp-noo-russian-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Русский язык, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_russkij-yazyk_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 196,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-literary-reading-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Литературное чтение, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "literary-reading",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_literaturnoe-chtenie_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 204,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-english-2-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (английский) язык, 2–4 классы",
+      "gradeRange": [
+        2,
+        4
+      ],
+      "subject": "english-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_anglijskij-yazyk_2-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 175,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-german-2-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (немецкий) язык, 2–4 классы",
+      "gradeRange": [
+        2,
+        4
+      ],
+      "subject": "german-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 88,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-visual-arts-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Изобразительное искусство, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "visual-arts",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 92,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-math-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Математика, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "mathematics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 79,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-world-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Окружающий мир, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "world-around-us",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 111,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-orkse-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Основы религиозных культур и светской этики, 4 класс",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "subject": "fundamentals-spiritual-culture",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_orkse_4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 110,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-pe-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Физическая культура, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "physical-education",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_fizicheskaya-kultura_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 340,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-music-1-4",
+      "sourceId": "edsoo-working-programs",
+      "title": "Музыка, 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "music",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_muzyka_1-4.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 114,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-noo-programs-hub",
+      "sourceId": "edsoo-working-programs",
+      "title": "Каталог программ начальной школы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/rabochie-programmy/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "frp-ooo-russian-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Русский язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "russian-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/09/01_frp_russkij-yazyk_5-9-klassy_itog-na-sajt_1-2.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 252,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-literature-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Литература, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "literature",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 193,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-math-basic-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Математика, базовый уровень, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "mathematics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 143,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-math-advanced-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Математика, углублённый уровень, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "mathematics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 101,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-informatics-basic-7-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Информатика, базовый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "informatics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 66,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-informatics-advanced-7-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Информатика, углублённый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "informatics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 51,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-physics-basic-7-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Физика, базовый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "physics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 97,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-physics-advanced-7-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Физика, углублённый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "physics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 72,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-chemistry-basic-8-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Химия, базовый уровень, 8–9 классы",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subject": "chemistry",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 71,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-chemistry-advanced-8-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Химия, углублённый уровень, 8–9 классы",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subject": "chemistry",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 81,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-biology-basic-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Биология, базовый уровень, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "biology",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 144,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-biology-advanced-7-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Биология, углублённый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "biology",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/17_frp_biologiya_7_9_klassy_ugl_itog_na_sajt.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 117,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-geography-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "География, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "geography",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_geografiya-5-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 181,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-history-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "История, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "history",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_istoriya_5-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 228,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-technology-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Труд (технология), 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "technology",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 180,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-social-studies-2026",
+      "sourceId": "edsoo-working-programs",
+      "title": "Обществознание, основное общее образование",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "social-studies",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 40,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-english-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (английский) язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "english-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_angl_5-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 263,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-french-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (французский) язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "french-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2024,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2024/03/frp_ooo_franczuzskij_yazyk_29032024_itog.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 200,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-french-second-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Второй иностранный (французский) язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "french-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/26_frp_franczuzskij_vi_5_9_klassy_na_sajt.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 142,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-spanish-second-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Второй иностранный (испанский) язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "spanish-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 152,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-chinese-second-5-9",
+      "sourceId": "edsoo-working-programs",
+      "title": "Второй иностранный (китайский) язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "chinese-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 169,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-ooo-programs-hub",
+      "sourceId": "edsoo-working-programs",
+      "title": "Каталог программ основной школы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/rabochie-programmy/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "frp-soo-math-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Математика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 89,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-math-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Математика, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 89,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-russian-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Русский язык, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "russian-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_russkij-yazyk_10_11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 92,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-literature-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Литература, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 127,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-informatics-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Информатика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "informatics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 46,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-physics-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Физика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "physics",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 78,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-chemistry-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Химия, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chemistry",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 58,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-chemistry-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Химия, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chemistry",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 72,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-biology-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Биология, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "biology",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 88,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-biology-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Биология, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "biology",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 163,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-geography-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "География, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "geography",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 85,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-geography-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "География, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "geography",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 283,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-history-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "История, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 150,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-history-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "История, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 181,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-social-studies-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Обществознание, среднее общее образование",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "social-studies",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 67,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-pe-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Физическая культура, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "physical-education",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizkultura_10_11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 236,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-english-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (английский) язык, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "english-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_angl-yaz_10-11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 157,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-german-basic-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Базовый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 124,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-german-advanced-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 117,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-french-second-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Второй иностранный (французский) язык, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "french-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 84,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-english-second-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Английский язык, второй иностранный, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "english-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 115,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-german-second-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Немецкий язык, второй иностранный, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 80,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-chinese-second-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Китайский язык, второй иностранный, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "chinese-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 124,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-soo-spanish-second-10-11",
+      "sourceId": "edsoo-working-programs",
+      "title": "Испанский язык, второй иностранный, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "spanish-language",
+      "topic": "Федеральная рабочая программа",
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_ispanskij_10-11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 87,
+      "accessStatus": "PUBLIC_OFFICIAL_PDF_LINK_VERIFIED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "DIRECT_PDF_LINK_AND_PAGE_COUNT_VERIFIED"
+    },
+    {
+      "id": "frp-all-levels-index",
+      "sourceId": "edsoo-working-programs",
+      "title": "Каталог федеральных рабочих программ всех уровней образования",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/rabochie-programmy/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "frp-extra-curricular-index",
+      "sourceId": "edsoo-working-programs",
+      "title": "Рабочие программы курсов внеурочной деятельности",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/rabochie-programmy-vd/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "edsoo-methodical-index",
+      "sourceId": "edsoo-working-programs",
+      "title": "Методические документы, банки заданий и материалы к урокам",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/metodicheskie-dokumenty/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "edsoo-history-assessment-bank",
+      "sourceId": "edsoo-working-programs",
+      "title": "Банк заданий для текущего оценивания по истории, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "history",
+      "topic": "Федеральная рабочая программа",
+      "level": "Банк заданий",
+      "year": 2024,
+      "kind": [
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/md-istoriya/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "OFFICIAL_CATALOG_PAGE_ONLY"
+    },
+    {
+      "id": "original-task-g1-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сложение в пределах 20 (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "mathematics",
+      "topic": "Сложение в пределах 20",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-math-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Вычитание в пределах 20 (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "mathematics",
+      "topic": "Вычитание в пределах 20",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-math-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Звуки и буквы (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "russian-language",
+      "topic": "Звуки и буквы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g1-reading-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Понимание короткого текста (1 класс)",
+      "gradeRange": [
+        1
+      ],
+      "subject": "literary-reading",
+      "topic": "Понимание короткого текста",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g1-reading-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Умножение (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-math-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Деление на равные группы (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "mathematics",
+      "topic": "Деление на равные группы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-math-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Части речи (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "russian-language",
+      "topic": "Части речи",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g2-world-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Суточные изменения (2 класс)",
+      "gradeRange": [
+        2
+      ],
+      "subject": "world-around-us",
+      "topic": "Суточные изменения",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g2-world-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Периметр прямоугольника (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "mathematics",
+      "topic": "Периметр прямоугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Главные члены предложения (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "russian-language",
+      "topic": "Главные члены предложения",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-world-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Части растения (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "world-around-us",
+      "topic": "Части растения",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-world-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g3-math-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Доли (3 класс)",
+      "gradeRange": [
+        3
+      ],
+      "subject": "mathematics",
+      "topic": "Доли",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g3-math-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Дроби (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "mathematics",
+      "topic": "Дроби",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Падежи (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "russian-language",
+      "topic": "Падежи",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-world-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Планеты Солнечной системы (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "world-around-us",
+      "topic": "Планеты Солнечной системы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-world-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g4-math-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Площадь прямоугольника (4 класс)",
+      "gradeRange": [
+        4
+      ],
+      "subject": "mathematics",
+      "topic": "Площадь прямоугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g4-math-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Обыкновенные дроби (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "mathematics",
+      "topic": "Обыкновенные дроби",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Имя существительное (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "russian-language",
+      "topic": "Имя существительное",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-history-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Исторические источники (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "history",
+      "topic": "Исторические источники",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-history-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g5-geography-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Стороны горизонта (5 класс)",
+      "gradeRange": [
+        5
+      ],
+      "subject": "geography",
+      "topic": "Стороны горизонта",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g5-geography-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Проценты (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Имя прилагательное (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "russian-language",
+      "topic": "Имя прилагательное",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-biology-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Клетка (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "biology",
+      "topic": "Клетка",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-biology-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g6-geography-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Масштаб карты (6 класс)",
+      "gradeRange": [
+        6
+      ],
+      "subject": "geography",
+      "topic": "Масштаб карты",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g6-geography-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Линейные уравнения (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-geo-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сумма углов треугольника (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "geometry",
+      "topic": "Сумма углов треугольника",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-geo-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-physics-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Плотность (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "physics",
+      "topic": "Плотность",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-physics-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g7-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Причастие (7 класс)",
+      "gradeRange": [
+        7
+      ],
+      "subject": "russian-language",
+      "topic": "Причастие",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g7-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-algebra-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Квадратные корни (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "algebra",
+      "topic": "Квадратные корни",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-algebra-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-geo-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Теорема Пифагора (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-geo-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-physics-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Закон Ома (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "physics",
+      "topic": "Закон Ома",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-physics-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g8-chem-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Формулы веществ (8 класс)",
+      "gradeRange": [
+        8
+      ],
+      "subject": "chemistry",
+      "topic": "Формулы веществ",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g8-chem-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-algebra-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Квадратные уравнения (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-algebra-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-rus-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Сложноподчинённое предложение (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "russian-language",
+      "topic": "Сложноподчинённое предложение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-rus-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-physics-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Механическая работа (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "physics",
+      "topic": "Механическая работа",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-physics-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g9-biology-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Наследственность (9 класс)",
+      "gradeRange": [
+        9
+      ],
+      "subject": "biology",
+      "topic": "Наследственность",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g9-biology-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Производная (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "mathematics",
+      "topic": "Производная",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-physics-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Равноускоренное движение (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "physics",
+      "topic": "Равноускоренное движение",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-physics-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-chem-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Количество вещества (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "chemistry",
+      "topic": "Количество вещества",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-chem-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g10-social-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Аргументация (10 класс)",
+      "gradeRange": [
+        10
+      ],
+      "subject": "social-studies",
+      "topic": "Аргументация",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g10-social-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-math-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Вероятность (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-math-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-math-002",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Логарифмы (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "algebra",
+      "topic": "Логарифмы",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-math-002",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-informatics-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Двоичная система счисления (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "informatics",
+      "topic": "Двоичная система счисления",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-informatics-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
+    },
+    {
+      "id": "original-task-g11-biology-001",
+      "sourceId": "original-authored-materials",
+      "title": "Авторское задание: Генетика (11 класс)",
+      "gradeRange": [
+        11
+      ],
+      "subject": "biology",
+      "topic": "Генетика",
+      "kind": [
+        "original-practice-task"
+      ],
+      "contentRef": "original-school-practice-bank.json#g11-biology-001",
+      "accessStatus": "LOCAL_REPOSITORY_FILE",
+      "rightsStatus": "ORIGINAL_CONTENT_CC_BY_4.0",
+      "contentStoredLocally": true,
+      "license": "CC BY 4.0",
+      "checkedAt": "2026-10-21",
+      "metadataCompleteness": "TASK_AND_ANSWER_STORED_IN_REPOSITORY"
     }
   ],
-  "coverageNote": "Unified index contains federal-list subject sections, historical library records, FIPI materials, open-reference pages and indexed EDSOO lesson cards. The existence of a link does not mean the whole textbook or its PDF is stored in GitHub."
+  "coverageNote": "Includes official federal textbook list section links, historical RАО bibliography, EDSOO lesson-card index, 61 federal working-program records including 55 direct PDF URLs, FIPI material links, and individual references to all locally stored original practice tasks. Not all publisher textbooks are in local files."
 }
