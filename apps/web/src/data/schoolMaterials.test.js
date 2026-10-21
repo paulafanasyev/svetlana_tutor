@@ -244,6 +244,6 @@ test('перекрёстная сверка OCR охватывает все за
   assert.equal(crosswalk.summary.structuredRecordCount, 746);
   assert.equal(crosswalk.summary.matchedByNumberAndSectionCount, 626);
   assert.equal(crosswalk.summary.allRemainUnverified, true);
-  assert.equal(crosswalk.records.reduce((n, x) => n + (x.status.includes('NEEDS_') || x.status.includes('NEEDS_RECHECK') || x.status.includes('NEEDS_MANUAL_CONFIRMATION') ? 1 : 0), 0), 0);
+  assert.ok(crosswalk.records.every((x) => x.status.includes('NEEDS_') || x.status.includes('NEEDS_RECHECK')), 'crosswalk must not mark any OCR record verified');
   assert.ok(crosswalk.records.every((x) => x.ocrExtractionStatus === 'OCR_EXTRACTED_NEEDS_RECHECK'));
 });
