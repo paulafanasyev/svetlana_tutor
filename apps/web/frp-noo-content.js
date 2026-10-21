@@ -243,6 +243,12 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     try {
       const lines = htmlLines(await page(hash, cacheDir, OOO, `${root}.1`));
       const { content, results } = courseParts(lines, root);
+      // ФОП ООО, п. 163.9 по физической культуре задаёт общие предметные результаты
+      // для всего уровня ООО, а не отдельные подпункты для 5–9 классов.
+      // Используем общий блок как общий для уровня; не маркируем его как уникальный результат класса.
+      const sharedLevelResults = subject === 'Физическая культура' && root === '163.9'
+        ? flatResults(lines, root)
+        : [];
       for (const g of grades) {
         if (!onlyResults) {
           // Без подразделов (геометрия, ВиС): один раздел «Содержание обучения в N классе» с абзацами подряд.
@@ -251,7 +257,9 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
           if (s && s.length) map[`${subject}|${g}`] = s; else errors.push(`ООО ${root}: нет содержания ${g} кл.`);
         }
         const r = results[g] && flatResults(lines, results[g]);
-        if (r && r.length) map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
+        const resolvedResults = r && r.length ? r : sharedLevelResults;
+        if (resolvedResults && resolvedResults.length) map[`R|${subject}|${g}`] = resolvedResults;
+        else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
       }
       // Для диагностики: заголовки пунктов курса, если результаты по классам не найдены.
       if (grades.some(g => !results[g])) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
