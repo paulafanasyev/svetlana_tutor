@@ -47714,35 +47714,6 @@
       "note": "OCR-запись из официального федерального перечня; сверить библиографические поля по оригинальному PDF."
     },
     {
-      "id": "federal-textbook-list-2026-full-document",
-      "sourceId": "federal-textbook-list-2026",
-      "title": "Федеральный перечень учебников — приказ № 436 от 22.06.2026",
-      "gradeRange": [
-        1,
-        11
-      ],
-      "subject": "all-school-subjects",
-      "topic": "Полный официальный перечень допущенных учебников",
-      "kind": [
-        "official-textbook-list",
-        "normative-document"
-      ],
-      "url": "https://minjust.consultant.ru/documents/60664",
-      "checkedAt": "2026-10-21",
-      "accessStatus": "LOCAL_OFFICIAL_PDF_AND_TEXT_VERIFIED",
-      "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; individual textbook contents are not included",
-      "contentStoredLocally": false,
-      "pageCount": 312,
-      "fileSizeBytes": 15774591,
-      "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
-      "downloadStatus": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "textStatus": "TEXT_LAYER_SPARSE",
-      "releaseTag": "school-materials-2026-10",
-      "releaseAsset": "fpu-436-2026.pdf",
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
-      "storedInRelease": true
-    },
-    {
       "id": "edsoo-math-interactive-lessons-grade3",
       "sourceId": "edsoo-subject-materials",
       "title": "Материалы к урокам по математике с интерактивными элементами — 3 класс",
@@ -47966,6 +47937,35 @@
       "contentStoredLocally": false,
       "metadataCompleteness": "SUBJECT_AND_YEAR_VERIFIED",
       "note": "Официальная страница ЕДСОО; материал относится к учебному году 2025/2026, сохранён как дополнительный архивный ресурс."
+    },
+    {
+      "id": "federal-textbook-list-2026-full-document",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Федеральный перечень учебников — приказ № 436 от 22.06.2026",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Полный официальный перечень допущенных учебников",
+      "kind": [
+        "official-textbook-list",
+        "normative-document"
+      ],
+      "url": "https://minjust.consultant.ru/documents/60664",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "LOCAL_OFFICIAL_PDF_AND_TEXT_VERIFIED",
+      "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; individual textbook contents are not included",
+      "contentStoredLocally": false,
+      "pageCount": 312,
+      "fileSizeBytes": 15774591,
+      "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
+      "downloadStatus": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "textStatus": "TEXT_LAYER_SPARSE",
+      "releaseTag": "school-materials-2026-10",
+      "releaseAsset": "fpu-436-2026.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
+      "storedInRelease": true
     }
   ],
   "coverageNote": "Добавлено 934 OCR-извлечённых библиографических записей учебников из действующих разделов федерального перечня 2026 года для классов 1–11. Точность названий/авторов/издателей не гарантируется до ручной сверки с PDF. Полные тексты коммерческих учебников не загружались.",

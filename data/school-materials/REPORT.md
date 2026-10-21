@@ -169,10 +169,10 @@ top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, r
   - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=53
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-material-items.json (2230321 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1713], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
-- `items` record keys: id(1713), sourceId(1713), title(1713), kind(1713), accessStatus(1713), rightsStatus(1713), contentStoredLocally(1713), checkedAt(1689), subject(1683), gradeRange(1611), url(1560), note(1181), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(635), metadataCompleteness(559), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), gradeStatus(103), catalogueSnippet(61), year(61)
-  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=103, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
+## official-russian-school-material-items.json (2241489 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1723], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
+- `items` record keys: id(1723), sourceId(1723), title(1723), kind(1723), accessStatus(1723), rightsStatus(1723), contentStoredLocally(1723), checkedAt(1699), subject(1693), gradeRange(1621), url(1570), note(1191), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(645), metadataCompleteness(569), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(113), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), catalogueSnippet(61), year(61)
+  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=113, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
   - provenance: corpus=108
   - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
   - records mentioning «до 31 августа 20XX»: 0
@@ -191,7 +191,7 @@ top-level: schemaVersion:int, title:str, language:str, grades:list[11], license:
 - `exercises` record keys: grade(153), subject(153), topic(153), prompt(153), answer(153), explanation(153), difficulty(153), id(153), authorship(54), license(54)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (611004 bytes)
+## school-curriculum-coverage.json (611015 bytes)
 top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[25]
 - `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), openReferenceResourceCount(407), officialExamResourceCount(407), publicLessonPlatformResourceCount(407), additionalOfficialSubjectResourceCount(407), officialPlatformEntryPointCount(407), additionalCatalogResourceCount(407), notes(407)
   - status: LINKS_AVAILABLE=237, NO_EXACT_GRADE_SUBJECT_RECORD=170
@@ -200,7 +200,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-21, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-21, pages=312
-- federal-working-programs.json: generatedAt=2026-10-21T19:06:33.543518+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-21T19:11:47.129091+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
