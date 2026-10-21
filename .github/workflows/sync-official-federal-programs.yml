@@ -6,8 +6,6 @@ on:
       - feat/official-russian-school-materials
     paths:
       - 'apps/web/src/data/federal-working-programs.json'
-      - 'apps/web/src/data/official-russian-school-material-items.json'
-      - 'apps/web/src/data/official-russian-school-materials.json'
       - 'scripts/sync_official_extracurricular_programs.py'
       - 'scripts/sync_official_textbook_list.py'
       - 'scripts/sync_official_federal_programs.py'
