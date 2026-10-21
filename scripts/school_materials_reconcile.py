@@ -44,6 +44,28 @@ BIBLIOGRAPHY_SUBJECTS = {
     "Биология": ["biology"], "Физическая культура": ["physical-education"],
     "Вероятность и статистика": ["probability-statistics"], "Обществознание": ["social-studies"],
 }
+OPEN_REFERENCE_SUBJECTS = {
+    "scolaire-open-001": "mathematics", "scolaire-open-002": "mathematics",
+    "scolaire-open-003": "geography", "scolaire-open-004": "geography",
+    "scolaire-open-005": "geography", "scolaire-open-006": "geography",
+    "scolaire-open-007": "music", "scolaire-open-008": "english-language",
+    "scolaire-open-009": "algebra", "scolaire-open-010": "all-school-subjects",
+    "scolaire-open-011": "physics", "scolaire-open-012": "geometry",
+    "scolaire-open-013": "geometry", "scolaire-open-014": "algebra",
+    "scolaire-open-015": "informatics", "scolaire-open-016": "english-language",
+    "scolaire-open-017": "russian-language", "scolaire-open-018": "informatics",
+    "scolaire-open-019": "geometry", "scolaire-open-020": "mathematics",
+    "scolaire-open-021": "geometry", "scolaire-open-022": "mathematics",
+    "scolaire-open-023": "mathematics", "scolaire-open-024": "mathematics",
+    "scolaire-open-025": "mathematics", "scolaire-open-026": "algebra",
+    "scolaire-open-027": "mathematics", "scolaire-open-028": "geometry",
+    "scolaire-open-029": "history", "scolaire-open-030": "music",
+}
+PLATFORM_ENTRYPOINT_IDS = {
+    "federal-program-registry", "edsoo-program-constructor", "my-school-digital-content",
+    "moscow-e-school-catalog", "prosv-media-library", "prosv-catalog", "prosv-ebook-access",
+    "minprosveshcheniya-distance-resources",
+}
 READING_LIST_SOURCE = {
     "id": "official-program-reading-list-2026",
     "name": "Список произведений, включённых в федеральные образовательные программы НОО, ООО и СОО (Минпросвещения России, 21.07.2026)",
@@ -157,6 +179,7 @@ def main():
     lesson_index = load(DATA / "edsoo-official-lesson-index.json")
     program_doc = load(DATA / "federal-working-programs.json")
     extra_doc = load(DATA / "official-extracurricular-programs.json")
+    catalog_item_doc = load(DATA / "official-russian-school-material-items.json")
     ocr_path = DATA / "federal-textbook-bibliography-2026-full-extraction.json"
     ocr_doc = load(ocr_path) if ocr_path.exists() else {"records": []}
     program_manifest_path = MANIFESTS / "federal-working-programs.json"
@@ -167,7 +190,36 @@ def main():
     lessons = records(lesson_index, "items")
     programs = records(program_doc, "programs")
     extracurricular = records(extra_doc, "records")
+    catalog_items = records(catalog_item_doc, "items")
+    lesson_ids = {item.get("id") for item in lessons}
     ocr = records(ocr_doc, "records")
+    catalog_only_items = []
+    for item in catalog_items:
+        source_id = item.get("sourceId")
+        item_id = item.get("id")
+        kinds = item.get("kind", [])
+        if source_id == "scolaire-open-educational-materials":
+            item["_coverageSubject"] = OPEN_REFERENCE_SUBJECTS.get(item_id, "all-school-subjects")
+            item["_coverageType"] = "openReferenceResourceCount"
+        elif source_id == "fipi-official-exam-materials":
+            item["_coverageSubject"] = item.get("subject", "all-school-subjects")
+            item["_coverageType"] = "officialExamResourceCount"
+        elif source_id == "resh":
+            item["_coverageSubject"] = item.get("subject", "all-school-subjects")
+            item["_coverageType"] = "publicLessonPlatformResourceCount"
+        elif source_id == "edsoo-subject-materials" and item_id not in lesson_ids and "lesson-card" not in kinds:
+            item["_coverageSubject"] = item.get("subject", "all-school-subjects")
+            item["_coverageType"] = "additionalOfficialSubjectResourceCount"
+        elif item_id in PLATFORM_ENTRYPOINT_IDS:
+            item["_coverageSubject"] = item.get("subject", "all-school-subjects")
+            item["_coverageType"] = "officialPlatformEntryPointCount"
+        else:
+            continue
+        if not item.get("url") or not item.get("gradeRange"):
+            continue
+        catalog_only_items.append(item)
+    if len({item.get("id") for item in catalog_only_items}) != len(catalog_only_items):
+        raise ValueError("Duplicate IDs in catalog-only link set; refusing to double-count")
     rows = []
 
     for grade in grades:
@@ -196,7 +248,21 @@ def main():
                 1 for item in exercises
                 if item.get("grade") == grade and source_matches(subject, item.get("subject", ""))
             )
-            count = biblio_count + lesson_count + len(matching_programs) + extra_count + task_count
+            catalog_counts = {
+                field: sum(
+                    1 for item in catalog_only_items
+                    if item.get("_coverageType") == field
+                    and covers(item.get("gradeRange"), grade)
+                    and source_matches(subject, item.get("_coverageSubject", ""))
+                )
+                for field in (
+                    "openReferenceResourceCount", "officialExamResourceCount",
+                    "publicLessonPlatformResourceCount", "additionalOfficialSubjectResourceCount",
+                    "officialPlatformEntryPointCount"
+                )
+            }
+            additional_catalog_count = sum(catalog_counts.values())
+            count = biblio_count + lesson_count + len(matching_programs) + extra_count + task_count + additional_catalog_count
             rows.append({
                 "grade": grade, "subject": subject, "subjectLabel": LABELS[subject],
                 "indexedResourceCount": count,
@@ -210,13 +276,22 @@ def main():
                 "officialExtracurricularProgramCount": extra_count,
                 "locallyStoredOriginalTaskCount": task_count,
                 "federalBibliographyFullTextCount": 0,
-                "notes": "Считаются записи в отдельных индексах с совпадением класса и предмета; это не количество уникальных книг. Полный текст учебника не подтверждён. Класс/предмет без точного совпадения требует проверки по действующей ФОП."
+                **catalog_counts,
+                "additionalCatalogResourceCount": additional_catalog_count,
+                "notes": "Сумма записей из разных индексов, не уникальные книги. Дополнительные ссылки взяты из открытых справочных материалов, ФИПИ, РЭШ и официальных каталогов; предметные метки справочных материалов определены по названию/описанию. Диапазон карточки не доказывает точное соответствие ФОП. Полнота учебников не подтверждена."
             })
 
     extra_status, extra_evidence = extracurricular_status()
     known_grade_lessons = sum(item.get("gradeStatus") == "GRADE_FOUND_IN_INDEX" for item in lessons)
     rows_with_records = sum(row["indexedResourceCount"] > 0 for row in rows)
     full_text_count = sum(item.get("fullTextAvailable") is True for item in biblio)
+    catalog_resource_counts = {
+        "openReferenceResourceCount": sum(item.get("_coverageType") == "openReferenceResourceCount" for item in catalog_only_items),
+        "officialExamResourceCount": sum(item.get("_coverageType") == "officialExamResourceCount" for item in catalog_only_items),
+        "publicLessonPlatformResourceCount": sum(item.get("_coverageType") == "publicLessonPlatformResourceCount" for item in catalog_only_items),
+        "additionalOfficialSubjectResourceCount": sum(item.get("_coverageType") == "additionalOfficialSubjectResourceCount" for item in catalog_only_items),
+        "officialPlatformEntryPointCount": sum(item.get("_coverageType") == "officialPlatformEntryPointCount" for item in catalog_only_items),
+    }
     summary = {
         "subjectGradeRows": len(rows), "catalogSubjectCount": len(subjects),
         "rowsWithAtLeastOneIndexedLink": rows_with_records,
@@ -225,6 +300,8 @@ def main():
         "rowsWithAGradeVerifiedOfficialLesson": sum(row["verifiedOfficialLessonIndexCount"] > 0 for row in rows),
         "rowsWithAtLeastOneOriginalPracticeTask": sum(row["locallyStoredOriginalTaskCount"] > 0 for row in rows),
         "rowsProvenComplete": 0, "federalBibliographySubsetRecords": len(biblio),
+        "additionalCatalogResourceRecords": len(catalog_only_items),
+        "additionalCatalogResourceCountsByType": catalog_resource_counts,
         "federalBibliographySubsetRecordsWithFullText": full_text_count,
         "unverifiedOcrBibliographyRecords": len(ocr),
         "ocrStatus": "OCR_EXTRACTED_NEEDS_RECHECK; excluded from counts used to claim verified grade/subject coverage",
@@ -297,6 +374,7 @@ def main():
         "- Материалы ЕДСОО: " + str(len(lessons)) + " ссылок; класс установлен у " + str(known_grade_lessons) + "; требуется перепроверить класс у " + str(len(lessons) - known_grade_lessons) + ".",
         "- Авторский банк: " + str(len(exercises)) + " заданий с ответами и объяснениями; лицензия " + str(practice.get("license", "NOT_STATED")) + ".",
         "- Официальный список произведений для федеральных программ: [ссылка Минпросвещения](https://docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/). Добавление ссылки не разрешает копировать защищённые тексты.", "",
+        "Дополнительные каталожные записи в матрице: " + str(len(catalog_only_items)) + " из открытых справочных материалов, ФИПИ, РЭШ и официальных каталогов; предметная классификация части справочных материалов сделана по названию/описанию и не является подтверждением точного соответствия ФОП.", "",
         "## Официальные источники", "",
         "- [Федеральный перечень учебников](https://publication.pravo.gov.ru/document/0001202607230005)",
         "- [Реестр ФОП и рабочих программ](https://fgosreestr.edsoo.ru/educational-programs)",

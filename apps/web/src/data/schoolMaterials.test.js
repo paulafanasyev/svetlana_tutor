@@ -159,3 +159,25 @@ test('OCR-библиография не выдаётся за проверенн
     assert.equal(row.rightsStatus, 'NOT_PROVEN_FOR_REPUBLICATION', row.id);
   }
 });
+
+
+test('счётчик индексных записей равен сумме источников матрицы', () => {
+  const rows = read('school-curriculum-coverage.json').rows;
+  const fields = [
+    'federalBibliographyRecordCount', 'verifiedOfficialLessonIndexCount',
+    'officialWorkingProgramCount', 'officialExtracurricularProgramCount',
+    'locallyStoredOriginalTaskCount', 'openReferenceResourceCount',
+    'officialExamResourceCount', 'publicLessonPlatformResourceCount',
+    'additionalOfficialSubjectResourceCount', 'officialPlatformEntryPointCount'
+  ];
+  for (const row of rows) {
+    const sum = fields.reduce((total, field) => total + (row[field] || 0), 0);
+    assert.equal(row.indexedResourceCount, sum, String(row.grade) + '/' + row.subject);
+    const extra = [
+      'openReferenceResourceCount', 'officialExamResourceCount',
+      'publicLessonPlatformResourceCount', 'additionalOfficialSubjectResourceCount',
+      'officialPlatformEntryPointCount'
+    ].reduce((total, field) => total + (row[field] || 0), 0);
+    assert.equal(row.additionalCatalogResourceCount, extra, row.subject);
+  }
+});
