@@ -345,11 +345,16 @@ export default function nooContent() {
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
-          // Одно сообщение: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract). Сводка по последним подключённым предметам.
-          const CHECK = [OBZR.subject];
-          const sum = Object.entries(map).filter(([k]) => CHECK.some(s => k === `${s}|${k.split('|').pop()}` || k === `R|${s}|${k.split('|').pop()}`) && +k.split('|').pop() >= 5).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}` + (Array.isArray(v[0]?.topics) ? ' ' + v.map(s => `${s.title.slice(0, 40)} [${s.topics[0].length}]`).join('; ') : '')).join('\n');
-          const r8 = map[`R|${OBZR.subject}|8`] || [], r9 = map[`R|${OBZR.subject}|9`] || [];
-          const dump = ['=== ОБЗР 8 модуль 1', ...((map[`${OBZR.subject}|8`] || [])[0]?.topics || []).map(t => t.slice(0, 200)), '=== R ОБЗР 8', ...r8.slice(0, 2), ...r8.slice(12, 17), ...r8.filter(t => /^Предметные/.test(t)), '=== R ОБЗР 9', ...r9.slice(0, 2), ...r9.slice(-1)].map(t => t.slice(0, 110)).join('\n');
+          // Одно сообщение (лимит GitHub — 10 notice на шаг). Сверка результатов ОБЗР с корпусом: «+» есть только в ФОП, «−» только в корпусе.
+          let old = {};
+          try { old = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/obzr_ooo_results.json'), 'utf8')); } catch { /* нет файла */ }
+          const diff = g => {
+            const live = map[`R|${OBZR.subject}|${g}`] || [], was = old[`obzr-${g}`] || [];
+            const a = new Set(was.map(key)), b = new Set(live.map(key));
+            return [`=== R ОБЗР ${g}: ФОП ${live.length}, корпус ${was.length}`, ...live.filter(t => !a.has(key(t))).map(t => '+ ' + t), ...was.filter(t => !b.has(key(t))).map(t => '- ' + t)];
+          };
+          const sum = [8, 9].map(g => `#ОБЗР|${g} ` + (map[`${OBZR.subject}|${g}`] || []).map(s => `${s.title.slice(0, 14)} [${s.topics[0].length}]`).join('; ')).join('\n');
+          const dump = [...diff(8), ...diff(9)].map(t => t.slice(0, 170)).join('\n');
           const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
