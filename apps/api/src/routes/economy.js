@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { validate } from '../middleware/validate.js';
+import { priceOf } from '../lib/catalog.js';
 
 const router = Router();
 
@@ -59,17 +60,19 @@ router.post('/earn', validate({ body: earnSchema }), async (req, res, next) => {
   }
 });
 
+// `price` may still be sent by older clients; it is ignored. The price always comes from src/lib/catalog.js.
 const spendSchema = z.object({
   itemType: z.string().trim().min(1).max(60),
   itemId: z.string().trim().min(1).max(120),
-  price: z.number().int().min(1).max(1_000_000),
+  price: z.number().int().min(0).max(1_000_000).optional(),
 });
 
-// POST /api/economy/spend — transactional; 400 if insufficient coins, 409 if already owned.
-// NOTE: the price still comes from the client; a server-side catalog is the real fix.
+// POST /api/economy/spend — transactional; 404 unknown item, 400 if insufficient coins, 409 if already owned.
 router.post('/spend', validate({ body: spendSchema }), async (req, res, next) => {
   try {
-    const { itemType, itemId, price } = req.body;
+    const { itemType, itemId } = req.body;
+    const price = priceOf(itemType, itemId);
+    if (price == null) return res.status(404).json({ error: 'Unknown item' });
 
     const result = await prisma.$transaction(async (tx) => {
       const user = await tx.user.findUnique({ where: { id: req.user.id } });
@@ -92,10 +95,9 @@ router.post('/spend', validate({ body: spendSchema }), async (req, res, next) =>
         throw err;
       }
 
-      const updatedUser = await tx.user.update({
-        where: { id: req.user.id },
-        data: { coins: { decrement: price } },
-      });
+      const updatedUser = price > 0
+        ? await tx.user.update({ where: { id: req.user.id }, data: { coins: { decrement: price } } })
+        : user;
 
       const unlock = await tx.unlock.create({
         data: {
@@ -105,7 +107,7 @@ router.post('/spend', validate({ body: spendSchema }), async (req, res, next) =>
         },
       });
 
-      return { coins: updatedUser.coins, unlock };
+      return { coins: updatedUser.coins, price, unlock };
     });
 
     res.json(result);

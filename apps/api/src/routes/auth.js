@@ -10,6 +10,7 @@ import {
   hashRefreshToken,
 } from '../lib/jwt.js';
 import { lockRemaining, recordFailure, recordSuccess } from '../lib/loginGuard.js';
+import { markRotated, reuseKind } from '../lib/refreshReuse.js';
 
 const router = Router();
 
@@ -109,15 +110,15 @@ router.post('/login', validate({ body: loginSchema }), async (req, res, next) =>
   try {
     const { email, password } = req.body;
 
-    // Account locked after repeated failures: refuse before touching the
-    // password, so even the right password does not help a guesser.
-    const locked = lockRemaining(email);
+    // Locked after repeated failures (this e-mail from this IP, or the e-mail from many IPs):
+    // refuse before touching the password, so even the right password does not help a guesser.
+    const locked = lockRemaining(email, req.ip);
     if (locked) return tooManyAttempts(res, locked);
 
     const user = await prisma.user.findUnique({ where: { email } });
     const valid = await bcrypt.compare(password, user ? user.passwordHash : DUMMY_HASH);
     if (!user || !valid) {
-      recordFailure(email);
+      recordFailure(email, req.ip);
       return res.status(401).json({ error: 'Invalid email or password' });
     }
 
@@ -125,7 +126,7 @@ router.post('/login', validate({ body: loginSchema }), async (req, res, next) =>
       return res.status(403).json({ error: 'Account is blocked' });
     }
 
-    recordSuccess(email);
+    recordSuccess(email, req.ip);
     const tokens = await issueTokenPair(user);
 
     res.json({ user: publicUser(user), ...tokens });
@@ -142,14 +143,17 @@ router.post('/refresh', validate({ body: refreshSchema }), async (req, res, next
 
     const stored = await prisma.refreshToken.findFirst({ where: { tokenHash } });
 
-    // Reuse detection: a refresh token is one-time. If an already-rotated token
-    // comes back, either the user or a thief holds a copy — we can't tell which,
-    // so every session of that user is revoked and they must log in again.
+    // Reuse detection: a refresh token is one-time. If an already-rotated token comes back after the
+    // grace window, either the user or a thief holds a copy — we can't tell which, so every session of
+    // that user is revoked and they must log in again. A reuse within the window (two tabs refreshing at
+    // once) is only refused. See src/lib/refreshReuse.js.
     if (stored && stored.revoked) {
-      await prisma.refreshToken.updateMany({
-        where: { userId: stored.userId, revoked: false },
-        data: { revoked: true },
-      });
+      if (reuseKind(stored.tokenHash) === 'theft') {
+        await prisma.refreshToken.updateMany({
+          where: { userId: stored.userId, revoked: false },
+          data: { revoked: true },
+        });
+      }
       return res.status(401).json({ error: 'Invalid or expired refresh token' });
     }
 
@@ -180,6 +184,7 @@ router.post('/refresh', validate({ body: refreshSchema }), async (req, res, next
     if (revoked.count !== 1) {
       return res.status(401).json({ error: 'Invalid or expired refresh token' });
     }
+    markRotated(stored.tokenHash);
 
     const tokens = await issueTokenPair(user);
 
