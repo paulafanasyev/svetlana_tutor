@@ -1,0 +1,72 @@
+{"slug":"english","grades":{
+"2":{"quiz":[
+{"t":"Colours","q":"Как по-английски «красный»?","o":["blue","red","green","black"],"a":1,"e":"Red — красный, blue — синий, green — зелёный."},
+{"t":"Numbers","q":"Какое число «seven»?","o":["6","9","7","11"],"a":2,"e":"Seven = 7. Six = 6, nine = 9."},
+{"t":"Animals","q":"Что значит «dog»?","o":["собака","кошка","лягушка","птица"],"a":0,"e":"Dog — собака, cat — кошка."},
+{"t":"Greetings","q":"Что ответить на «How are you?»","o":["I am seven.","My name is Ann.","Goodbye!","I am fine, thank you."],"a":3,"e":"How are you? — как дела? Ответ: I am fine, thank you."},
+{"t":"Articles","q":"Выбери: «It is … apple.»","o":["a","an","the","—"],"a":1,"e":"Перед словом с гласного звука пишем an: an apple."},
+{"t":"Family","q":"Как по-английски «мама»?","o":["father","sister","mother","brother"],"a":2,"e":"Mother (mum) — мама, father (dad) — папа."}]},
+"3":{"quiz":[
+{"t":"Plurals","q":"Как будет множественное число от «box»?","o":["boxs","boxes","boxies","boxen"],"a":1,"e":"После x, s, sh, ch добавляем -es: boxes."},
+{"t":"Have got","q":"«She … a cat.»","o":["has got","have got","is got","am got"],"a":0,"e":"С he, she, it используем has got."},
+{"t":"Days","q":"Какой день идёт после Monday?","o":["Sunday","Wednesday","Friday","Tuesday"],"a":3,"e":"Monday — понедельник, Tuesday — вторник."},
+{"t":"Can","q":"Что значит «I can swim»?","o":["Я люблю плавать","Я умею плавать","Я плыву сейчас","Я не плаваю"],"a":1,"e":"Can означает «уметь, мочь»."},
+{"t":"Food","q":"Как по-английски «молоко»?","o":["bread","juice","milk","water"],"a":2,"e":"Milk — молоко, water — вода, bread — хлеб."},
+{"t":"Prepositions","q":"«The ball is … the box» (мяч в коробке).","o":["in","on","under","near"],"a":0,"e":"In — внутри, on — на, under — под."}]},
+"4":{"quiz":[
+{"t":"Present Continuous","q":"«Look! The boys … football.»","o":["plays","are playing","is playing","play"],"a":1,"e":"Действие происходит сейчас (Look!): are + playing."},
+{"t":"Past Simple","q":"Какая форма прошедшего времени у «go»?","o":["goed","gone","went","going"],"a":2,"e":"Go — неправильный глагол: go — went — gone."},
+{"t":"Comparatives","q":"«An elephant is … than a mouse.»","o":["bigger","big","biggest","more big"],"a":0,"e":"Сравнительная степень короткого прилагательного: big — bigger."},
+{"t":"Time","q":"Что значит «It's half past three»?","o":["3:00","2:30","3:15","3:30"],"a":3,"e":"Half past three — половина четвёртого, 3:30."},
+{"t":"Seasons","q":"Как по-английски «зима»?","o":["summer","winter","autumn","spring"],"a":1,"e":"Winter — зима, summer — лето, spring — весна."},
+{"t":"Questions","q":"«… do you live?» — «In Moscow.»","o":["What","When","Where","Who"],"a":2,"e":"Where — где. Ответ называет место."}]},
+"5":{"quiz":[
+{"t":"Present Simple","q":"«My brother … to school every day.»","o":["go","goes","going","is go"],"a":1,"e":"Обычное действие, he/she/it: глагол + -es: goes."},
+{"t":"There is / are","q":"«There … two books on the table.»","o":["are","is","am","be"],"a":0,"e":"Множественное число: there are."},
+{"t":"Possessives","q":"«This is … bag» (сумка Анны).","o":["Ann","Anns","Ann's","Anns'"],"a":2,"e":"Притяжательный падеж: 's — Ann's bag."},
+{"t":"Adverbs of frequency","q":"Что значит «never»?","o":["всегда","часто","иногда","никогда"],"a":3,"e":"Always — всегда, often — часто, sometimes — иногда, never — никогда."},
+{"t":"Past Simple","q":"«We … a film yesterday.»","o":["watch","watched","watches","are watching"],"a":1,"e":"Yesterday указывает на прошлое: watched."},
+{"t":"Countries","q":"Столица Великобритании?","o":["London","Paris","Dublin","New York"],"a":0,"e":"The capital of the UK is London."}]},
+"6":{"quiz":[
+{"t":"Future Simple","q":"«I think it … rain tomorrow.»","o":["is","was","will","does"],"a":2,"e":"Предположение о будущем с I think: will rain."},
+{"t":"Going to","q":"«Look at the clouds! It … rain.»","o":["is going to","goes to","went to","go to"],"a":0,"e":"Предсказание по признакам прямо сейчас: is going to."},
+{"t":"Countable / uncountable","q":"«How … sugar do you need?»","o":["many","lot","few","much"],"a":3,"e":"Sugar — неисчисляемое, поэтому how much."},
+{"t":"Superlatives","q":"«It's the … day of the year.»","o":["hot","hottest","hotter","most hot"],"a":1,"e":"Превосходная степень: hot — the hottest (удвоение t)."},
+{"t":"Must","q":"Что значит «You mustn't run here»?","o":["Тебе не нужно бегать","Ты должен бегать","Здесь нельзя бегать","Ты умеешь бегать"],"a":2,"e":"Mustn't — запрет: нельзя."},
+{"t":"Irregular verbs","q":"Форма Past Simple глагола «buy»?","o":["bought","buyed","brought","buys"],"a":0,"e":"Buy — bought — bought. Brought — от bring."}]},
+"7":{"quiz":[
+{"t":"Present Perfect","q":"«I … already … my homework.»","o":["did / done","have / done","has / did","am / doing"],"a":1,"e":"Present Perfect: have + третья форма (done). С already часто используется это время."},
+{"t":"Ever / never","q":"«Have you … been to London?»","o":["yet","ago","ever","since"],"a":2,"e":"Have you ever…? — ты когда-нибудь…?"},
+{"t":"Passive","q":"«English … all over the world.»","o":["speaks","is speaking","spoke","is spoken"],"a":3,"e":"Страдательный залог: языком говорят — is spoken."},
+{"t":"Too / enough","q":"«The tea is … hot to drink.»","o":["too","enough","very much","so much"],"a":0,"e":"Too + прилагательное — слишком: too hot to drink."},
+{"t":"Relative pronouns","q":"«The girl … lives next door is my friend.»","o":["which","who","what","whose"],"a":1,"e":"О людях используем who."},
+{"t":"Used to","q":"Что значит «I used to play the piano»?","o":["Я сейчас играю","Я буду играть","Раньше я играл (а теперь нет)","Я привык играть прямо сейчас"],"a":2,"e":"Used to — привычка в прошлом, которой сейчас нет."}]},
+"8":{"quiz":[
+{"t":"Past Perfect","q":"«When we arrived, the film … already …»","o":["has / started","had / started","was / starting","did / start"],"a":1,"e":"Действие закончилось до другого в прошлом: Past Perfect — had started."},
+{"t":"Gerund / infinitive","q":"«I enjoy … books.»","o":["to read","read","reading","reads"],"a":2,"e":"После enjoy используется герундий: enjoy reading."},
+{"t":"Phrasal verbs","q":"Что значит «to give up»?","o":["бросить, перестать","поднять","подарить","вернуть"],"a":0,"e":"Give up — сдаться, бросить: He gave up sweets."},
+{"t":"Word formation","q":"Существительное от «happy»?","o":["happily","happier","unhappy","happiness"],"a":3,"e":"Суффикс -ness образует существительные: happiness — счастье."},
+{"t":"Passive","q":"«The bridge … in 1990.»","o":["built","was built","is building","has build"],"a":1,"e":"Прошедшее в страдательном залоге: was built."},
+{"t":"Linking words","q":"«It was raining, … we stayed at home.»","o":["but","because","so","although"],"a":2,"e":"So — поэтому, вводит следствие."}]},
+"9":{"quiz":[
+{"t":"Second Conditional","q":"«If I … rich, I would travel.»","o":["am","will be","were","be"],"a":2,"e":"Нереальное условие в настоящем: If I were…, I would…"},
+{"t":"Reported questions","q":"«Где ты живёшь?» → She asked me where I …","o":["lived","do live","did I live","live I"],"a":0,"e":"В косвенном вопросе прямой порядок слов и сдвиг времён: where I lived."},
+{"t":"Modal verbs","q":"«You … see a doctor» (совет).","o":["can't","should","mustn't","needn't"],"a":1,"e":"Should выражает совет: тебе стоит сходить к врачу."},
+{"t":"Word formation","q":"Какая приставка даёт противоположное значение у «possible»?","o":["un-","dis-","ir-","im-"],"a":3,"e":"Impossible — невозможный. Перед p, b, m часто im-."},
+{"t":"Present Perfect Continuous","q":"«She … English for five years.»","o":["has been learning","is learning","learns","learned"],"a":0,"e":"Действие началось в прошлом и продолжается (for five years): has been learning."},
+{"t":"Articles","q":"«She plays … violin.»","o":["a","—","the","an"],"a":2,"e":"С музыкальными инструментами после play ставится the."}]},
+"10":{"quiz":[
+{"t":"Third Conditional","q":"«If you had asked me, I … you.»","o":["will help","would help","would have helped","helped"],"a":2,"e":"Условие о прошлом: if + Past Perfect, would have + V3."},
+{"t":"Wish","q":"«I wish I … a car» (сейчас машины нет).","o":["had","have","will have","am having"],"a":0,"e":"Сожаление о настоящем: I wish + Past Simple."},
+{"t":"Collocations","q":"Выбери верное сочетание:","o":["make homework","do a mistake","make a decision","do a noise"],"a":2,"e":"Make a decision, make a mistake, make a noise, но do homework."},
+{"t":"Linking words","q":"«… it was cold, we went for a walk.»","o":["Because","Although","So","Unless"],"a":1,"e":"Although — хотя: хотя было холодно, мы пошли гулять."},
+{"t":"Phrasal verbs","q":"Что значит «to look forward to»?","o":["смотреть вперёд","искать","ухаживать","с нетерпением ждать"],"a":3,"e":"I look forward to seeing you — жду встречи с нетерпением."},
+{"t":"Passive","q":"«The letter … tomorrow.»","o":["will send","will be sent","is sent","sends"],"a":1,"e":"Будущее в страдательном залоге: will be + V3."}]},
+"11":{"quiz":[
+{"t":"Inversion","q":"«Never … such a beautiful sunset.»","o":["I have seen","have I seen","I saw","seen I have"],"a":1,"e":"После отрицательных наречий в начале предложения — инверсия: Never have I seen…"},
+{"t":"Modal perfect","q":"«He … have taken the bus, his car is here» (наверняка).","o":["must","can't","shouldn't","needn't"],"a":0,"e":"Must have + V3 — уверенное предположение о прошлом."},
+{"t":"Mixed conditionals","q":"«If I had studied medicine, I … a doctor now.»","o":["will be","would have been","am","would be"],"a":3,"e":"Смешанное условие: прошлое условие → настоящий результат: would be now."},
+{"t":"Formal writing","q":"Как закончить официальное письмо, начатое с «Dear Sir or Madam»?","o":["Love,","See you!","Yours faithfully,","Cheers,"],"a":2,"e":"Если имя адресата неизвестно, пишут Yours faithfully."},
+{"t":"Causative","q":"«I … my hair cut yesterday» (меня постригли).","o":["cut","had","made","did"],"a":1,"e":"Have something done — кто-то сделал для вас: I had my hair cut."},
+{"t":"Vocabulary","q":"Что значит «to be keen on»?","o":["увлекаться чем-то","бояться","забыть","спорить"],"a":0,"e":"She is keen on photography — она увлекается фотографией."}]}
+}}

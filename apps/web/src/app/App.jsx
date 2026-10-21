@@ -28,6 +28,7 @@ const WordBattle = retryLazy(() => import('../features/games/WordBattle.jsx'));
 const GrammarShooter = retryLazy(() => import('../features/games/GrammarShooter.jsx'));
 const Quest = retryLazy(() => import('../features/games/Quest.jsx'));
 const Memory = retryLazy(() => import('../features/games/Memory.jsx'));
+const SchoolGames = retryLazy(() => import('../features/games/school/SchoolGames.jsx'));
 const Shop = retryLazy(() => import('../features/shop/Shop.jsx'));
 const Progress = retryLazy(() => import('../features/progress/Progress.jsx'));
 const Admin = retryLazy(() => import('../features/admin/Admin.jsx'));
@@ -156,6 +157,7 @@ function AppScreens() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lessons" element={<Lessons />} />
+          <Route path="/play" element={<SchoolGames />} />
           <Route path="/english" element={<En><EnglishHub /></En>} />
           <Route path="/lesson" element={<En><Lesson /></En>} />
           <Route path="/math" element={<MathTutor />} />
