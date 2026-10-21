@@ -9,6 +9,7 @@ on:
       - 'apps/web/src/data/official-russian-school-material-items.json'
       - 'apps/web/src/data/official-russian-school-materials.json'
       - 'scripts/sync_official_extracurricular_programs.py'
+      - 'scripts/sync_official_textbook_list.py'
       - 'scripts/sync_official_federal_programs.py'
       - '.github/workflows/sync-official-federal-programs.yml'
   workflow_dispatch:
@@ -61,10 +62,14 @@ jobs:
           PY
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
+      - name: Install PDF extraction dependency
+        run: python -m pip install pypdf
+
       - name: Download official PDFs and record hashes
         run: |
           python scripts/sync_official_federal_programs.py
           python scripts/sync_official_extracurricular_programs.py
+          python scripts/sync_official_textbook_list.py
 
       - name: Verify local PDFs and updated index
         run: |
@@ -75,6 +80,7 @@ jobs:
           items = json.loads(Path('apps/web/src/data/official-russian-school-material-items.json').read_text(encoding='utf-8'))
           manifest = json.loads(Path('downloads/federal-working-programs/MANIFEST.json').read_text(encoding='utf-8'))
           extracurricular = json.loads(Path('downloads/federal-extracurricular-programs/MANIFEST.json').read_text(encoding='utf-8'))
+          textbook_list = json.loads(Path('downloads/federal-textbook-list-2026/MANIFEST.json').read_text(encoding='utf-8'))
           assert len({x['id'] for x in items['items']}) == len(items['items']), 'duplicate resource IDs'
           assert manifest['attempted'] > 0
           for record in programs['programs']:
@@ -83,6 +89,10 @@ jobs:
                   assert path.exists() and path.read_bytes().startswith(b'%PDF-'), record['id']
           print('Federal working programme PDF audit:', manifest['verifiedLocalPdfCount'], 'verified; failed:', manifest['failedCount'])
           print('Extracurricular programme PDF audit:', extracurricular['verifiedLocalPdfCount'], 'verified; failed:', extracurricular['failedCount'])
+          assert textbook_list['pdf']['signature'] == '%PDF-'
+          assert textbook_list['pdf']['pages'] > 0
+          assert Path(textbook_list['text']['path']).exists()
+          print('Federal textbook-list PDF:', textbook_list['pdf']['pages'], 'pages; extracted text chars:', textbook_list['text']['characters'])
           PY
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
@@ -94,6 +104,7 @@ jobs:
           path: |
             downloads/federal-working-programs/
             downloads/federal-extracurricular-programs/
+            downloads/federal-textbook-list-2026/
           if-no-files-found: warn
           retention-days: 90
 
@@ -108,6 +119,7 @@ jobs:
           git add apps/web/src/data/official-russian-school-materials.json
           git add downloads/federal-working-programs/
           git add downloads/federal-extracurricular-programs/
+          git add downloads/federal-textbook-list-2026/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
