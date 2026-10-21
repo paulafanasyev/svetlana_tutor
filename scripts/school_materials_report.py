@@ -7,6 +7,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from school_materials_common import DATA, MANIFESTS, CACHE, ROOT, load
 
 EXPIRY = re.compile(r"[Дд]о\s*31\s*августа\s*20\d\d")
+# Same rule as apps/web/src/data/schoolMaterials.test.js: any «До Д месяца ГГГГ» or «Бессрочно».
+DEADLINE = re.compile(r"^До\s+\d{1,2}\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d\d|[Бб]ессрочно")
 
 
 def strings(obj):
@@ -106,7 +108,7 @@ def main():
                  "federal-textbooks-2026-secondary-10-11.json"):
         for rec in load(DATA / name)["records"]:
             v = rec.get("allowedUseUntil")
-            if v is not None and not re.search(r"31\s+августа\s+20\d\d|[Бб]ессрочно", v):
+            if v is not None and not DEADLINE.search(v):
                 odd[v[:80]] += 1
     diag.append("- allowedUseUntil values outside the expected forms: " + (", ".join(f"«{a}»={b}" for a, b in odd.most_common(20)) or "none"))
     for name in ("official-russian-school-material-items.json", "federal-working-programs.json"):
