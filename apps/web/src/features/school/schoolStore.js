@@ -4,8 +4,10 @@
 // child-safety guard (ai/childSafety.js): dangerous text is not posted, a crisis message is not posted either
 // but becomes a private signal for the teacher, and the child sees help lines. Any member can report a message;
 // the teacher hides / restores messages and closes signals. 3 reports hide a message until the teacher decides.
+// Audit 21.10: the teacher's own messages and homework go through the guard too; a learner's phone, e-mail,
+// links, @nicknames and street address are masked before the message is saved; video room names are unguessable.
 import { sanitizeCheck, validMark } from './homeworkCheck.js';
-import { checkChildSafety } from '../../ai/childSafety.js';
+import { checkChildSafety, maskContacts } from '../../ai/childSafety.js';
 
 const KEY = 'aet_school_v1';
 const EVT = 'aet-school-change';
@@ -136,14 +138,18 @@ export const school = {
     const c = db.classes.find((x) => x.id === classId);
     if (!inClass(c, user?.id)) return { blocked: 'member', help: '' };
     const isTeacher = c.teacherId === String(user.id);
-    const hit = isTeacher ? null : checkChildSafety(body, 'ru');
+    // The teacher's text is checked too: dangerous instructions are never posted. A teacher writing about help
+    // for children in crisis (e.g. sharing the helpline) is not a crisis signal, so only 'danger' blocks a teacher.
+    const found = checkChildSafety(body, 'ru');
+    const hit = isTeacher && found && found.kind !== 'danger' ? null : found;
     if (hit) {
       db.incidents.push({ id: uid('inc'), classId, userId: String(user.id), name: clean(user.name, 60), kind: hit.kind, text: body, msgId: '', by: '', at: Date.now(), resolved: false });
       save(db);
       return { blocked: hit.kind, help: hit.text };
     }
     const list = db.messages[classId] || (db.messages[classId] = []);
-    const m = { id: uid('msg'), userId: String(user.id), name: clean(user.name, 60), role: String(user.role || ''), text: body, kind: kind === 'hw' && isTeacher ? 'hw' : 'msg', at: Date.now(), hidden: false, reports: [] };
+    const shown = isTeacher ? body : maskContacts(body).text;
+    const m = { id: uid('msg'), userId: String(user.id), name: clean(user.name, 60), role: String(user.role || ''), text: shown, kind: kind === 'hw' && isTeacher ? 'hw' : 'msg', at: Date.now(), hidden: false, reports: [] };
     list.push(m);
     if (list.length > 500) list.splice(0, list.length - 500);
     save(db);
@@ -189,7 +195,10 @@ export const school = {
     const db = load();
     const c = db.classes.find((x) => x.id === classId);
     if (!c) return null;
-    const room = `Svetlana-${c.code}-${Math.random().toString(36).slice(2, 8)}`;
+    // 16 random characters from the crypto source: the room name cannot be guessed from the class code.
+    const rnd = new Uint8Array(16);
+    try { crypto.getRandomValues(rnd); } catch { for (let i = 0; i < rnd.length; i++) rnd[i] = Math.floor(Math.random() * 256); }
+    const room = `Svetlana-${Array.from(rnd, (b) => ALPHA[b % ALPHA.length]).join('')}`;
     c.lesson = { url: `https://meet.jit.si/${room}`, topic: clean(topic, 140), startedAt: Date.now() };
     save(db);
     return c.lesson;
@@ -208,6 +217,7 @@ export const school = {
     if (!c || c.teacherId !== String(teacher?.id)) return null;
     const h = { id: uid('hw'), classId, teacherId: String(teacher.id), title: clean(title, 140), text: txt(text), expected: clean(expected, 300), due: isDay(due) ? due : '', createdAt: Date.now() };
     if (!h.title) return null;
+    if (checkChildSafety(`${h.title} ${h.text} ${h.expected}`, 'ru')) return null;
     db.homework.push(h);
     const list = db.messages[classId] || (db.messages[classId] = []);
     list.push({ id: uid('msg'), userId: h.teacherId, name: clean(teacher.name, 60), role: String(teacher.role || ''), text: `${h.title}${h.due ? ` (сдать до ${ruDay(h.due)})` : ''}${h.text ? `\n${h.text}` : ''}\nСдать на проверку можно в разделе «Домашние задания».`.slice(0, 2000), kind: 'hw', at: h.createdAt, hidden: false, reports: [] });

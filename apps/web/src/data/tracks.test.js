@@ -13,6 +13,13 @@ test('cadet prompt keeps the lesson goal and child-safety limits', () => {
   assert.ok(!/ОБЗР/.test(trackById('cadet').desc.ru));
 });
 
+test('cadet version shows its age range and softens for young children (audit 21.10)', () => {
+  const c = trackById('cadet');
+  assert.match(c.ages.ru, /10–17/);
+  assert.equal(c.agesShort.ru, '10+');
+  assert.match(c.prompt, /younger than 10/);
+});
+
 test('each learner keeps their own version', () => {
   const prefs = { track: 'cadet', trackByUser: { a: 'cadet', b: 'lyceum' } };
   assert.equal(resolveUserTrack(prefs, 'a'), 'cadet');
