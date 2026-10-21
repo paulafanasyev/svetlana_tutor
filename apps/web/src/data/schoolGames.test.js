@@ -9,7 +9,7 @@ import { gameCells, SLUGS, ICONS, normalizeGrade, mergeMore } from './games/subj
 import { REVIEW } from './games/review.js';
 import { FIXES, applyFixes } from './games/fixes.js';
 
-const MIN_QUIZ = 6;
+const MIN_QUIZ = 12;
 const dir = new URL('./games/packs/', import.meta.url);
 const moreDir = new URL('./games/more/', import.meta.url);
 const loaderSrc = readFileSync(new URL('./games/loadPack.js', import.meta.url), 'utf8');
@@ -30,7 +30,11 @@ function report(name, problems) {
   if (out) appendFileSync(out, `\n**schoolGames: ${name}**: ${problems.length ? `${problems.length} замечаний\n\n${problems.slice(0, 80).map((x) => `- ${x}`).join('\n')}` : 'ok'}\n`);
   // Аннотация на странице запуска: пишем в stdout запускающего node --test (вывод самого теста он прячет).
   if (problems.length && process.env.GITHUB_ACTIONS) {
-    try { appendFileSync(`/proc/${process.ppid}/fd/1`, `\n::error title=schoolGames: ${name} (${problems.length})::${problems.slice(0, 40).join(' | ')}\n`); } catch { /* не Linux */ }
+    try {
+      for (let i = 0; i < Math.min(problems.length, 400); i += 40) {
+        appendFileSync(`/proc/${process.ppid}/fd/1`, `\n::error title=schoolGames: ${name} (${problems.length}, с ${i + 1})::${problems.slice(i, i + 40).join(' | ')}\n`);
+      }
+    } catch { /* не Linux */ }
   }
   assert.deepEqual(problems, []);
 }
