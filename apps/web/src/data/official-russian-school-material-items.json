@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "catalogName": "official-russian-school-material-items",
+  "lastVerified": "2026-10-21",
+  "note": "Это проверенный индекс источников и отдельных учебных ресурсов, а не архив полных коммерческих учебников.",
+  "items": [
+    {
+      "id": "fpu-order-436-2026",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Федеральный перечень учебников: приказ Минпросвещения России от 22.06.2026 № 436",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Допуск учебников к использованию",
+      "kind": [
+        "official-registry",
+        "normative-document"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public-document",
+      "rightsStatus": "link-only; do not copy commercial textbook content",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fpu-order-436-announcement",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Сообщение Минпросвещения об обновлении федерального перечня учебников",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Актуальность федерального перечня",
+      "kind": [
+        "official-announcement"
+      ],
+      "url": "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public",
+      "rightsStatus": "official webpage; check licence before reproducing content",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "federal-program-registry",
+      "sourceId": "federal-curriculum-registry",
+      "title": "Реестр федеральных образовательных программ и рабочих программ",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "ФГОС, ФООП и федеральные рабочие программы",
+      "kind": [
+        "curriculum",
+        "working-programs"
+      ],
+      "url": "https://fgosreestr.edsoo.ru/educational-programs",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public; confirm individual file availability",
+      "rightsStatus": "download and redistribute only when rights permit",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-program-constructor",
+      "sourceId": "edsoo-program-constructor",
+      "title": "Конструктор рабочих программ",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Учебное планирование по ФООП/ФРП",
+      "kind": [
+        "curriculum-planning"
+      ],
+      "url": "https://edsoo.ru/konstruktor-rabochih-programm/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public site; sign-in may be needed for functions",
+      "rightsStatus": "link-only",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-russian-interactive-56",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Интерактивные задания по русскому языку для 5–6 классов",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "subject": "russian-language",
+      "topic": "Русский язык; задания для уроков",
+      "kind": [
+        "interactive-exercises",
+        "methodical-materials"
+      ],
+      "url": "https://edsoo.ru/2026/08/17/uchim-russkomu-yazyku-s-interesom/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public page; check embedded resource availability",
+      "rightsStatus": "link-only unless item-specific licence permits copying",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "resh-russian-noun-g5",
+      "sourceId": "resh",
+      "title": "Русский язык, 5 класс: имя существительное",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "subject": "russian-language",
+      "topic": "Имя существительное",
+      "kind": [
+        "lesson",
+        "interactive-exercises"
+      ],
+      "url": "https://resh.edu.ru/subject/lesson/7629/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public lesson",
+      "rightsStatus": "link to original; do not copy lesson wholesale",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "my-school-digital-content",
+      "sourceId": "my-school-knowledge-base",
+      "title": "ФГИС «Моя школа»: каталог контента для ученика",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Цифровой учебный контент и домашние задания",
+      "kind": [
+        "digital-content-catalog",
+        "homework"
+      ],
+      "url": "https://myschool.eduprosvet.ru/data/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "some content/functions require sign-in",
+      "rightsStatus": "use through authorized account and platform terms",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "resh-main",
+      "sourceId": "resh",
+      "title": "Российская электронная школа — каталог уроков",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Видео-уроки и интерактивные задания",
+      "kind": [
+        "lesson-catalog",
+        "video-lessons",
+        "interactive-exercises"
+      ],
+      "url": "https://resh.edu.ru/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public",
+      "rightsStatus": "link-only",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "moscow-e-school-catalog",
+      "sourceId": "moscow-e-school",
+      "title": "Московская электронная школа: электронные учебники и уроки",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Электронные учебники, сценарии уроков и задания",
+      "kind": [
+        "electronic-textbooks",
+        "lesson-materials",
+        "exercises"
+      ],
+      "url": "https://uchebnik.mos.ru/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "regional platform; sign-in may be required",
+      "rightsStatus": "link-only unless licence permits copying",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "prosv-media-library",
+      "sourceId": "prosv-media-library",
+      "title": "Медиатека «Просвещения»: электронные учебники",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Электронные формы учебников и интерактивные объекты",
+      "kind": [
+        "electronic-textbooks",
+        "digital-library"
+      ],
+      "url": "https://media.prosv.ru/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "licence or account may be required",
+      "rightsStatus": "publisher-protected; no mirroring",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "prosv-catalog",
+      "sourceId": "prosv-textbook-catalog",
+      "title": "Каталог учебников издательства «Просвещение»",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Учебники, пособия, рабочие тетради, атласы",
+      "kind": [
+        "textbook-catalog",
+        "workbooks",
+        "atlases"
+      ],
+      "url": "https://prosv.ru/catalog/uchebniki/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "catalog public; some products paid",
+      "rightsStatus": "metadata/link-only; product content protected unless stated otherwise",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "prosv-ebook-access",
+      "sourceId": "prosv-digital-help",
+      "title": "Как получать доступ к электронным учебникам «Просвещения»",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Условия доступа к цифровым учебникам",
+      "kind": [
+        "access-instructions"
+      ],
+      "url": "https://digital.prosv.ru/faq/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public help page",
+      "rightsStatus": "link-only",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-open-ege",
+      "sourceId": "fipi-ege-bank",
+      "title": "ФИПИ: открытый банк заданий ЕГЭ",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Подготовка к ЕГЭ",
+      "kind": [
+        "exam-task-bank",
+        "practice-tasks"
+      ],
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public; the task-bank itself is linked from the page",
+      "rightsStatus": "link to original; do not bulk-copy bank without permission",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-open-oge",
+      "sourceId": "fipi-oge-bank",
+      "title": "ФИПИ: открытый банк заданий ОГЭ",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "topic": "Подготовка к ОГЭ",
+      "kind": [
+        "exam-task-bank",
+        "practice-tasks"
+      ],
+      "url": "https://fipi.ru/oge/otkrytyy-bank-zadaniy-oge",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public; the task-bank itself is linked from the page",
+      "rightsStatus": "link to original; do not bulk-copy bank without permission",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-demos",
+      "sourceId": "fipi-ege-specifications",
+      "title": "ФИПИ: демоверсии, спецификации и кодификаторы ЕГЭ",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Структура и содержание экзамена; проверяемые элементы",
+      "kind": [
+        "demonstration-variants",
+        "specifications",
+        "codifiers"
+      ],
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public",
+      "rightsStatus": "link to original; preserve document attribution",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-oge-demos",
+      "sourceId": "fipi-oge-specifications",
+      "title": "ФИПИ: демоверсии, спецификации и кодификаторы ОГЭ",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "topic": "Структура и содержание ОГЭ",
+      "kind": [
+        "demonstration-variants",
+        "specifications",
+        "codifiers"
+      ],
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public",
+      "rightsStatus": "link to original; preserve document attribution",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "fipi-ege-navigator",
+      "sourceId": "fipi-ege-navigator",
+      "title": "ФИПИ: навигатор самостоятельной подготовки к ЕГЭ",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "topic": "Самостоятельная подготовка по темам",
+      "kind": [
+        "self-study-guides",
+        "topic-practice"
+      ],
+      "url": "https://fipi.ru/navigator-podgotovki/navigator-ege",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public",
+      "rightsStatus": "link to original; check each document's terms before copying",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "minprosveshcheniya-distance-resources",
+      "sourceId": "minprosveshcheniya-distance",
+      "title": "Федеральные дистанционные образовательные ресурсы",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Подборка образовательных платформ и ресурсов",
+      "kind": [
+        "official-resource-directory"
+      ],
+      "url": "https://edu.gov.ru/distance/",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "public directory",
+      "rightsStatus": "follow each resource's licence",
+      "contentStoredLocally": false
+    }
+  ]
+}
