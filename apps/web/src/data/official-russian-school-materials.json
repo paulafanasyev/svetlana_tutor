@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "catalogName": "official-russian-school-materials",
+  "lastVerified": "2026-10-21",
+  "note": "This file contains links and metadata only. It does not redistribute textbook content.",
+  "gradeRange": [5, 11],
+  "subjects": [
+    "russian-language",
+    "literature",
+    "english-language",
+    "mathematics",
+    "algebra",
+    "geometry",
+    "probability-statistics",
+    "informatics",
+    "history",
+    "social-studies",
+    "geography",
+    "biology",
+    "physics",
+    "chemistry"
+  ],
+  "sources": [
+    {
+      "id": "resh",
+      "name": "Российская электронная школа",
+      "url": "https://resh.edu.ru/",
+      "kind": ["lessons", "interactive-exercises"],
+      "access": "public",
+      "gradeRange": [1, 11],
+      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"],
+      "verifiedExample": {
+        "title": "Русский язык, 5 класс: имя существительное",
+        "url": "https://resh.edu.ru/subject/lesson/7629/",
+        "grade": 5,
+        "subject": "russian-language",
+        "kind": ["lesson", "interactive-exercises"]
+      }
+    },
+    {
+      "id": "minprosveshcheniya-distance",
+      "name": "Минпросвещения России — федеральные дистанционные образовательные ресурсы",
+      "url": "https://edu.gov.ru/distance/",
+      "kind": ["official-resource-directory"],
+      "access": "public",
+      "gradeRange": [1, 11],
+      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+    },
+    {
+      "id": "my-school-knowledge-base",
+      "name": "ФГИС «Моя школа» — база знаний",
+      "url": "https://myschool.eduprosvet.ru/data/",
+      "kind": ["digital-content-catalog", "homework-guidance"],
+      "access": "mixed-public-and-authenticated",
+      "gradeRange": [1, 11],
+      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+    },
+    {
+      "id": "uchi-tsok",
+      "name": "Учи.ру в «Моей школе»",
+      "url": "https://www.tsok.uchi.ru/",
+      "kind": ["exercises", "learning-materials"],
+      "access": "check-current-access-conditions",
+      "gradeRange": [5, 9],
+      "subjects": ["russian-language", "mathematics", "algebra"]
+    },
+    {
+      "id": "federal-textbook-list",
+      "name": "Минпросвещения России — федеральный перечень учебников",
+      "url": "https://edu.gov.ru/press/11911/minprosvescheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
+      "kind": ["official-textbook-list"],
+      "access": "public",
+      "gradeRange": [1, 11],
+      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+    },
+    {
+      "id": "moscow-e-school",
+      "name": "Московская электронная школа",
+      "url": "https://uchebnik.mos.ru/",
+      "kind": ["electronic-textbooks", "lesson-materials", "exercises"],
+      "access": "regional-platform-may-require-authentication",
+      "gradeRange": [1, 11],
+      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+    }
+  ],
+  "integrationPolicy": {
+    "storeSourceLinksAndMetadataOnly": true,
+    "redistributeFullTextbooksWithoutPermission": false,
+    "bypassAuthenticationOrAccessControls": false,
+    "generateOriginalPracticeQuestions": true,
+    "requiredItemFields": [
+      "sourceId",
+      "title",
+      "grade",
+      "subject",
+      "topic",
+      "kind",
+      "url",
+      "checkedAt",
+      "accessStatus"
+    ]
+  }
+}
