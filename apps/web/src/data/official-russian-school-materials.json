@@ -662,6 +662,38 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "rightsNote": "Original tasks authored for this repository, not copied from commercial textbooks or official exam banks."
+    },
+    {
+      "id": "edsoo-extracurricular-programs",
+      "name": "Единое содержание общего образования — программы внеурочной деятельности",
+      "url": "https://edsoo.ru/rabochie-programmy-vd/",
+      "kind": [
+        "official-extracurricular-programs",
+        "working-programs",
+        "direct-pdf-links"
+      ],
+      "access": "public official PDF links; redistribution rights not independently confirmed",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects",
+        "russian-language",
+        "mathematics",
+        "informatics",
+        "physics",
+        "chemistry",
+        "biology",
+        "history",
+        "literature",
+        "music",
+        "visual-arts",
+        "economics",
+        "functional-literacy"
+      ],
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Catalogue links to official PDFs; do not redistribute copies unless the applicable licence or legal basis is confirmed."
     }
   ],
   "integrationPolicy": {
