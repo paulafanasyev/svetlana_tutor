@@ -796,12 +796,12 @@
   "workingProgramCount": 61,
   "directWorkingProgramPdfCount": 55,
   "originalExerciseCount": 153,
-  "currentCoverageNote": "Сверка 21.10.2026 расширяет матрицу до 407 сочетаний (37 идентификаторов предметов × 11 классов) и считает записи отдельно по источникам. Полные тексты актуальных учебников не собраны; полнота всех строк остаётся NOT PROVEN. 934 OCR-библиографические записи исключены из подтверждённого подсчёта до ручной перепроверки.",
-  "lastFederalProgramDownloadAttemptAt": "2026-10-21T09:38:54.393445+00:00",
+  "currentCoverageNote": "Сверка 2026-10-21: матрица 407 строк (37 предметных идентификаторов × 11 классов); 217 сочетаний имеют индексные записи; ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
+  "lastFederalProgramDownloadAttemptAt": "2026-10-21T16:02:38.060519+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
   "failedFederalWorkingProgramPdfCount": 0,
   "extracurricularProgramsSourceUrl": "https://edsoo.ru/rabochie-programmy-vd/",
-  "extracurricularProgramsLocalSyncStatus": "PENDING_FIRST_GITHUB_ACTIONS_RUN",
+  "extracurricularProgramsLocalSyncStatus": "VERIFIED_IN_RELEASE",
   "federalWorkingProgramReleasePdfCount": 55,
   "federalTextbookListReleaseCopy": {
     "sourceUrl": "https://minjust.consultant.ru/documents/60664",
@@ -816,5 +816,13 @@
     "contentStoredLocally": false,
     "storedInRelease": true
   },
-  "sha": "ee0e8807aba014b81856042810ed8b3f8b8939e6"
+  "sha": "ee0e8807aba014b81856042810ed8b3f8b8939e6",
+  "extracurricularSyncEvidence": {
+    "status": "VERIFIED_IN_RELEASE",
+    "linksFound": 53,
+    "verified": 53,
+    "failed": 0,
+    "releaseAssetChecks": 53,
+    "manifestPath": "data/school-materials/manifests/federal-extracurricular-programs.json"
+  }
 }

@@ -177,11 +177,11 @@ top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items
   - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-materials.json (25884 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[25], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11]
+## official-russian-school-materials.json (27424 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[26], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
 - `schoolStages` record keys: id(3), name(3), grades(3)
   - records mentioning «до 31 августа 20XX»: 0
-- `sources` record keys: id(25), name(25), url(25), kind(25), access(25), gradeRange(25), subjects(25), storesFullTextbooksLocally(22), rightsNote(8), storesFullTextLocally(3), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
+- `sources` record keys: id(26), name(26), url(26), kind(26), access(26), gradeRange(26), subjects(26), storesFullTextbooksLocally(22), rightsNote(9), storesFullTextLocally(4), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
   - records mentioning «до 31 августа 20XX»: 0
 - `collections` record keys: id(3), file(3), description(3)
   - records mentioning «до 31 августа 20XX»: 0
@@ -191,16 +191,16 @@ top-level: schemaVersion:int, title:str, language:str, grades:list[11], license:
 - `exercises` record keys: grade(153), subject(153), topic(153), prompt(153), answer(153), explanation(153), difficulty(153), id(153), authorship(54), license(54)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (124967 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], coveragePolicy:str, statusDefinitions:dict[3], rows:list[275], summary:dict[9]
-- `rows` record keys: grade(275), subject(275), subjectLabel(275), indexedResourceCount(275), status(275), completeCoverage(275), notes(275), locallyStoredOriginalTaskCount(275), officialWorkingProgramCount(275)
-  - status: LINKS_AVAILABLE=275
+## school-curriculum-coverage.json (429423 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[23]
+- `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), notes(407)
+  - status: LINKS_AVAILABLE=217, NO_EXACT_GRADE_SUBJECT_RECORD=190
   - records mentioning «до 31 августа 20XX»: 0
 
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-21, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-21, pages=312
-- federal-working-programs.json: generatedAt=2026-10-21T09:38:54.393445+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-21T16:02:38.060519+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
