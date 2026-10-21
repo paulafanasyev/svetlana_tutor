@@ -1,0 +1,2501 @@
+{
+  "schemaVersion": 1,
+  "name": "school-curriculum-coverage",
+  "checkedAt": "2026-10-21",
+  "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "coveragePolicy": "A row is NOT marked complete merely because source links exist. Complete means each curricular textbook/material has a verified citation, classroom applicability, access route, and rights status.",
+  "statusDefinitions": {
+    "LINKS_AVAILABLE": "At least one indexed item/source link matches the grade/subject, but does not prove complete coverage.",
+    "NOT_PROVEN_COMPLETE": "No proof that all required textbooks, workbooks, teacher guides, tasks and adaptations for this grade/subject are included.",
+    "VERIFIED_COMPLETE": "Reserved for a checked full inventory reconciled against the official program and permitted source files; none automatically assigned."
+  },
+  "rows": [
+    {
+      "grade": 1,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 70,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 1,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 70,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 70,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 2,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 69,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 70,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 3,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 69,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 4,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 73,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 5,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 73,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 79,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 6,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 62,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 77,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 62,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 80,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 74,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 69,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 7,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 76,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 79,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 69,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 8,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 77,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 68,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 9,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 60,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 77,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 79,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 10,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 62,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "indexedResourceCount": 71,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "indexedResourceCount": 58,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "indexedResourceCount": 56,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "foreign-language",
+      "subjectLabel": "Иностранные языки",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "indexedResourceCount": 77,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "indexedResourceCount": 59,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "history",
+      "subjectLabel": "История",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "indexedResourceCount": 57,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "geography",
+      "subjectLabel": "География",
+      "indexedResourceCount": 61,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "indexedResourceCount": 78,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "indexedResourceCount": 72,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "indexedResourceCount": 69,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "astronomy",
+      "subjectLabel": "Астрономия",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "technology",
+      "subjectLabel": "Труд/технология",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "fundamentals-security-defense-homeland",
+      "subjectLabel": "Основы безопасности и защиты Родины",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "regional-and-native-languages",
+      "subjectLabel": "Родные языки и литературы народов России",
+      "indexedResourceCount": 55,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    },
+    {
+      "grade": 11,
+      "subject": "exam-preparation",
+      "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+      "indexedResourceCount": 62,
+      "status": "LINKS_AVAILABLE",
+      "completeCoverage": "NOT_PROVEN",
+      "notes": "Count includes link/catalog records, not necessarily locally stored textbook files or a full set of chapter exercises."
+    }
+  ]
+}
