@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "catalogName": "official-russian-school-material-updates-2026-10",
+  "checkedAt": "2026-10-21",
+  "note": "Дополнительный проверенный индекс официальных материалов. Включён в каталог отдельной коллекцией; полные защищённые учебники не копируются.",
+  "newSources": [
+    {
+      "id": "minprosveshcheniya-literary-works-2026",
+      "name": "Минпросвещения России — список произведений в федеральных образовательных программах",
+      "url": "https:\/\/docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/",
+      "kind": [
+        "official-literature-list",
+        "federal-education-programs",
+        "recommended-reading"
+      ],
+      "access": "public official document page; downloadable file linked on the page",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "literature",
+        "literary-reading",
+        "native-literature"
+      ],
+      "publicationDate": "2026-07-21",
+      "lastCheckedAt": "2026-10-21",
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Keep official link and metadata; copyright of individual literary works remains separate."
+    }
+  ],
+  "itemUpdates": [
+    {
+      "id": "fipi-ege-demos",
+      "title": "ФИПИ: проекты КИМ ЕГЭ и ГВЭ-11 2027 года",
+      "url": "https:\/\/fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "publishedAt": "2026-08-28",
+      "status": "VERIFIED_PROJECT_PUBLICATION; final approved 2027 version NOT PROVEN",
+      "publicDiscussionDeadline": "2026-09-30",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; do not mirror without confirmed permission"
+    },
+    {
+      "id": "fipi-oge-demos",
+      "title": "ФИПИ: проекты КИМ ОГЭ и ГВЭ-9 2027 года",
+      "url": "https:\/\/fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "subject": "exam-preparation",
+      "publishedAt": "2026-08-26",
+      "status": "VERIFIED_PROJECT_PUBLICATION; final approved 2027 version NOT PROVEN",
+      "publicDiscussionDeadline": "2026-09-30",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; do not mirror without confirmed permission"
+    },
+    {
+      "id": "fipi-ege-methodology",
+      "title": "ФИПИ: методические рекомендации для учителей по результатам ЕГЭ 2026 года",
+      "url": "https:\/\/fipi.ru/ege/analiticheskie-i-metodicheskie-materialy",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "exam-preparation",
+      "publishedAt": "2026-09-15",
+      "status": "VERIFIED_OFFICIAL_PAGE; subject-specific files linked from the page",
+      "rightsStatus": "LINK_TO_SOURCE; do not bulk-copy PDFs without confirmed permission"
+    }
+  ],
+  "newItems": [
+    {
+      "id": "minprosveshcheniya-literary-works-list-2026",
+      "sourceId": "minprosveshcheniya-literary-works-2026",
+      "title": "Список произведений, включённых в федеральные образовательные программы начального, основного и среднего общего образования",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Рекомендуемый перечень произведений для школьного литературного образования",
+      "kind": [
+        "official-list",
+        "federal-education-programs",
+        "recommended-reading"
+      ],
+      "url": "https:\/\/docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-07-21",
+      "accessStatus": "PUBLIC_OFFICIAL_DOCUMENT_PAGE; downloadable file linked on source page",
+      "rightsStatus": "LINK_ONLY; copyright status of individual literary works remains separate",
+      "contentStoredLocally": false,
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "id": "edsoo-literature-teaching-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: «Вопросы о важном — литература», материалы к преподаванию в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Методическое письмо, федеральные рабочие программы и материалы к урокам литературы",
+      "kind": [
+        "teacher-methodology",
+        "federal-working-programs",
+        "lesson-materials"
+      ],
+      "url": "https:\/\/edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-10-19",
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE; linked documents are referenced on the page",
+      "rightsStatus": "LINK_ONLY; check terms of each linked file before redistribution",
+      "contentStoredLocally": false,
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "id": "edsoo-music-method-webinar-2026",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: методический вебинар «Как сделать уроки музыки интересными и результативными?»",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "subject": "music",
+      "topic": "Музицирование и предметные результаты на уроках музыки",
+      "kind": [
+        "teacher-methodology",
+        "webinar-announcement"
+      ],
+      "url": "https:\/\/edsoo.ru/2026/10/19/kak-sdelat-uroki-muzyki-interesnymi-i-rezultativnymi/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-10-19",
+      "accessStatus": "PUBLIC_ANNOUNCEMENT; webinar date 2026-10-20 passed; recording NOT PROVEN",
+      "rightsStatus": "LINK_ONLY; do not copy video or presentation without confirmed permission",
+      "contentStoredLocally": false,
+      "verificationStatus": "VERIFIED",
+      "recordingStatus": "NOT_PROVEN"
+    },
+    {
+      "id": "edsoo-engineering-project-method-seminar-2026",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: «От школьной теории к инженерной практике» — семинар по инженерным и агротехнологическим классам",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Проектная деятельность и методические рекомендации для учителей естественно-научных предметов",
+      "kind": [
+        "teacher-methodology",
+        "webinar-announcement",
+        "project-learning"
+      ],
+      "url": "https:\/\/edsoo.ru/2026/10/20/ot-shkolnoj-teorii-k-inzhenernoj-praktike/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-10-20",
+      "accessStatus": "PUBLIC_ANNOUNCEMENT; event scheduled 2026-10-21 14:00 Moscow time; recording NOT PROVEN",
+      "rightsStatus": "LINK_ONLY; do not copy video or presentation without confirmed permission",
+      "contentStoredLocally": false,
+      "verificationStatus": "VERIFIED",
+      "recordingStatus": "NOT_PROVEN"
+    }
+  ]
+}
