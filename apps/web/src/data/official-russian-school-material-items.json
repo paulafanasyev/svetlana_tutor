@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
   "note": "Это проверенный индекс источников и отдельных учебных ресурсов, а не архив полных коммерческих учебников.",
@@ -5373,7 +5373,2472 @@
       "checkedAt": "2026-10-21",
       "metadataCompleteness": "CATALOGUE_PAGE_METADATA_ONLY",
       "notes": "Historical/archival title discovered by subject-specific map. Confirm edition, rights and curriculum relevance before using."
+    },
+    {
+      "id": "edsoo-lesson-001",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – РЯ – 2 класс – Связь слов в предложении",
+      "url": "https://edsoo.ru/urok-rya-2-klass-svyaz-slov-v-predlozhenii",
+      "description": "Класс 2 · Тема. Связь слов в предложении. · Цель задания: проверять умение использовать слова в предложении в нужной форме (с опорой на собственный речевой опыт).",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "russian-language",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-002",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Дом и все домашние",
+      "url": "https://edsoo.ru/urok-1",
+      "description": "Планируемые предметные результаты: 1. Характеризовать тематические группы слов, родовые и видовые понятия. 2. Проводить лексический анализ слов (в рамках ...",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-003",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Нравственные уроки Владимира Мономаха 1 – Единое ...",
+      "url": "https://edsoo.ru/urok-nravstvennye-uroki-vladimira-monomaha-1",
+      "description": "Владимир Мономах (1053-1125) – сын князя Всеволода Ярославича, был прозван Мономахом в подражание своему деду по матери – византийскому императору Константину IX Мономаху. Он не сразу стал великим князем Киевским – лишь ...",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-004",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок_Стилистические пласты лексики. Разговорная лексика ...",
+      "url": "https://edsoo.ru/urok_stilisticheskie-plasty-leksiki-razgovornaya-leksika",
+      "description": "Класс 6 Тема: Стилистические пласты лексики. Разговорная лексика Планируемые предметные ...",
+      "gradeRange": [
+        6
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "russian-language",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-005",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок_Дорога жизни – Единое содержание общего образования",
+      "url": "https://edsoo.ru/urok_doroga-zhizni",
+      "description": "Дорога жизни – единственная дорога, проходившая в годы Великой Отечественной войны через Ладожское озеро, связывая осаждённый немецкими войсками Ленинград (ныне Санкт-Петербург) с тылом страны.",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "history",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-006",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Русский язык как государственный язык – Единое ...",
+      "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniya",
+      "description": "Я люблю свой родной язык! Он понятен для всех, Он певуч, Он, как русский народ, многоли́к, Как держа́ва наша, могуч. Хочешь — песни, гимны пиши, Хочешь — выскажи боль души.",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "russian-language",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-007",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок_Урок на всю жизнь – Единое содержание общего образования",
+      "url": "https://edsoo.ru/urok_urok-na-vsyu-zhizn",
+      "description": "Один из рассказов М.М. Зощенко из цикла «Лёля и Минька» называется «Ёлка». Задание связано со знанием содержания этого рассказа. Разделите между Лёлей и Минькой перечисленные украшения, которые они сняли с ёлки, и ...",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "russian-language",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-008",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Шаблон без графики",
+      "url": "https://edsoo.ru/urok-shablon-bez-grafiki",
+      "description": "Шаблон для уроков. Карточка занятия. Задание 1. Задание 2. Методические рекомендации. Задание 4. Карточка занятия. Класс 2. Тема урока: Общие сведения о языке.",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-009",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – ЛЧ – 3 класс – Произведения К.Г. Паустовского о ...",
+      "url": "https://edsoo.ru/urok-lch-3-klass-proizvedeniya-k-g-paustovskogo-o-prirode-i-zhivotnyh-glavnaya-mysl-ideya-rasskaza-barsuchij-nos",
+      "description": "Класс 3 Тема. Произведения К.Г. Паустовского о природе и животных. Главная мысль (идея) рассказа «Барсучий нос». Цель задания: формировать умение находить в тексте средства художественной выразительности (эпитеты ...",
+      "gradeRange": [
+        3
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "biology",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-010",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Общие сведения о языке – Единое содержание общего ...",
+      "url": "https://edsoo.ru/urok-obshhie-svedeniya-o-yazyke",
+      "description": "2 КЛАСС Тематический раздел ФРП: Общие сведения о языке. Основные виды деятельности детей: работа с текстом; учебный диалог.",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-011",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок – Русский язык как язык межнационального общения",
+      "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniyaurok",
+      "description": "Русский язык – национальное достояние всех народов Российской Федерации. Это замечательно, что все народы, живущие в нашей огромной стране, имеют возможность ...",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "russian-language",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-012",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок_Слово “извините” в русском языке",
+      "url": "https://edsoo.ru/urok_slovo-izvinite-v-russkom-yazyke",
+      "description": "... русского языка и литературы (5-7 классы). Класс 5. Тема: Речевой этикет. Планируемые предметные результаты: 1. Создавать устные монологические высказывания ...",
+      "gradeRange": [
+        5
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "literature",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-013",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Урок_Родной, родственный, родимый",
+      "url": "https://edsoo.ru/urok_rodnoj-rodstvennyj-rodimyj",
+      "description": "... русского языка и литературы (5–7 классы). Класс 6. Тема: Морфемный и словообразовательный анализ слов. Практикум. Планируемые предметные результаты: 1 ...",
+      "gradeRange": [
+        6
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "literature",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-014",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok znachenie slova v slovare",
+      "url": "https://edsoo.ru/urok-znachenie-slova-v-slovare",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-015",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok predanie semi merczalovyh",
+      "url": "https://edsoo.ru/urok_predanie-semi-merczalovyh",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-016",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok soderzhanie skazki",
+      "url": "https://edsoo.ru/urok_soderzhanie-skazki",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-017",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok tematicheskie gruppy slov",
+      "url": "https://edsoo.ru/urok_tematicheskie-gruppy-slov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-018",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass vzaimootnosheniya cheloveka i zhivotnyh tema proizvedeniya d n mamina sibiryaka priyomysh",
+      "url": "https://edsoo.ru/urok-lch-3-klass-vzaimootnosheniya-cheloveka-i-zhivotnyh-tema-proizvedeniya-d-n-mamina-sibiryaka-priyomysh",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-019",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass obobshhenie znanii ob imeni sushhestvitelnom",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-ob-imeni-sushhestvitelnom",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-020",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass sostavlyayushhie kompyutera ustrojstva vvoda i vyvoda informaczii",
+      "url": "https://edsoo.ru/urok-t-4-klass-sostavlyayushhie-kompyutera-ustrojstva-vvoda-i-vyvoda-informaczii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-021",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass programmnoe obespechenie kompyutera po 2",
+      "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po-2",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-022",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass mir informaczii",
+      "url": "https://edsoo.ru/urok-t-4-klass-mir-informaczii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-023",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok test2",
+      "url": "https://edsoo.ru/urok-test2",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-024",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok 113 pp literaturnoe chtenie 4 klass",
+      "url": "https://edsoo.ru/urok-113-pp_literaturnoe-chtenie-4-klass",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-025",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok roditelskaya lyubov",
+      "url": "https://edsoo.ru/urok-roditelskaya-lyubov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-026",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok propavshie slova",
+      "url": "https://edsoo.ru/urok_propavshie-slova",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok postupki nastoyashhego cheloveka",
+      "url": "https://edsoo.ru/urok_postupki-nastoyashhego-cheloveka",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-028",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok krestyanskaya semya",
+      "url": "https://edsoo.ru/urok_krestyanskaya-semya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-029",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lyubov i brak v dvoryanskoj seme",
+      "url": "https://edsoo.ru/urok_lyubov-i-brak-v-dvoryanskoj-seme",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-030",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok detskie strahi",
+      "url": "https://edsoo.ru/urok_detskie-strahi",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-031",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok detskie fantazii",
+      "url": "https://edsoo.ru/urok_detskie-fantazii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-032",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok detskie igry vzroslye roli",
+      "url": "https://edsoo.ru/urok_detskie-igry-vzroslye-roli",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-033",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok chej hod",
+      "url": "https://edsoo.ru/urok_chej-hod",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-034",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok proverim sebya",
+      "url": "https://edsoo.ru/urok_proverim-sebya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-035",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok uznaj geroya",
+      "url": "https://edsoo.ru/urok_uznaj-geroya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-036",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok suffiksy",
+      "url": "https://edsoo.ru/urok-suffiksy",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-037",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok morfemika soberite slovo",
+      "url": "https://edsoo.ru/urok_morfemika-soberite-slovo",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-038",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok odnoznachnye i mnogoznachnye slova",
+      "url": "https://edsoo.ru/urok_odnoznachnye-i-mnogoznachnye-slova",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-039",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok vodoyomy zemli ih raznoobrazie estestvennye vodoyomy okean more ozero boloto primery vodoyomov v rossii",
+      "url": "https://edsoo.ru/urok_vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-040",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok imya sushhestvitelnoe voprosy",
+      "url": "https://edsoo.ru/urok-imya-sushhestvitelnoe-voprosy",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-041",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok krupnejshie reki rossii",
+      "url": "https://edsoo.ru/urok-krupnejshie-reki-rossii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-042",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok vydelenie v slovah s odnoznachno vydelyaemymi morfemami okonchaniya kornya pristavki suffiksa",
+      "url": "https://edsoo.ru/urok-vydelenie-v-slovah-s-odnoznachno-vydelyaemymi-morfemami-okonchaniya-kornya-pristavki-suffiksa",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-043",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok hudozhestvennye osobennosti skazok raznogo vida volshebnye o zhivotnyh bytovye",
+      "url": "https://edsoo.ru/urok-hudozhestvennye-osobennosti-skazok-raznogo-vida-volshebnye-o-zhivotnyh-bytovye",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-044",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass rabota s detskimi knigami avtory yumoristicheskih rasskazov",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-avtory-yumoristicheskih-rasskazov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-045",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass sredstva hudozhestvennoj vyrazitelnosti epitet sravnenie v liricheskih proizvedeniyah poetov 2",
+      "url": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov-2",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-046",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass delenie teksta na chasti sostavlenie plana vyyavlenie glavnoj mysli idei rasskaza dzheka londona buryj volk",
+      "url": "https://edsoo.ru/urok-lch-3-klass-delenie-teksta-na-chasti-sostavlenie-plana-vyyavlenie-glavnoj-mysli-idei-rasskaza-dzheka-londona-buryj-volk",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-047",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass rabota s detskimi knigami literaturnye skazki pisatelej sostavlenie annotaczii",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-literaturnye-skazki-pisatelej-sostavlenie-annotaczii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-048",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass osobennosti yumoristicheskih proizvedenij n n nosova i drugih avtorov na vybor",
+      "url": "https://edsoo.ru/urok-lch-3-klass-osobennosti-yumoristicheskih-proizvedenij-n-n-nosova-i-drugih-avtorov-na-vybor",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-049",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass rabota so slovaryom yazyk byliny ustarevshie slova ih mesto i predstavlenie v sovremennoj leksike",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-so-slovaryom-yazyk-byliny-ustarevshie-slova-ih-mesto-i-predstavlenie-v-sovremennoj-leksike",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-050",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass sredstva hudozhestvennoj vyrazitelnosti epitet sravnenie v liricheskih proizvedeniyah poetov",
+      "url": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-051",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass m m prishvin pevecz russkoi prirody",
+      "url": "https://edsoo.ru/urok-lch-3-klass-m-m-prishvin-pevecz-russkoi-prirody",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-052",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass obobshhenie znanij o vidah predlozhenij",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanij-o-vidah-predlozhenij",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-053",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass obobshhenie znanii o napisanii okonchanii imen prilagatelnyh",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-o-napisanii-okonchanii-imen-prilagatelnyh",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-054",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass proshedshee vremya glagolov",
+      "url": "https://edsoo.ru/urok-rya-3-klass-proshedshee-vremya-glagolov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-055",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass chasti rechi sistematizacziya izuchennogo v 3 klasse",
+      "url": "https://edsoo.ru/urok-rya-3-klass-chasti-rechi-sistematizacziya-izuchennogo-v-3-klasse",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-056",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass rod imyon sushhestvitelnyh",
+      "url": "https://edsoo.ru/urok-rya-3-klass-rod-imyon-sushhestvitelnyh",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-057",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 1 klass ty peshehod",
+      "url": "https://edsoo.ru/urok-om-1-klass-ty-peshehod",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-058",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 1 klass domashnie i dikie zhivotnye razlichiya v usloviyah zhizni",
+      "url": "https://edsoo.ru/urok-om-1-klass-domashnie-i-dikie-zhivotnye-razlichiya-v-usloviyah-zhizni",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-059",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 2 klass chasti rasteniya nazvanie kratkaya harakteristika znacheniya dlya zhizni rasteniya",
+      "url": "https://edsoo.ru/urok-om-2-klass-chasti-rasteniya-nazvanie-kratkaya-harakteristika-znacheniya-dlya-zhizni-rasteniya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-060",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 1 klass obekty zhivoj prirody sravnenie obektov nezhivoj i zhivoj prirody vydelenie razlichij",
+      "url": "https://edsoo.ru/urok-om-1-klass-obekty-zhivoj-prirody-sravnenie-obektov-nezhivoj-i-zhivoj-prirody-vydelenie-razlichij",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-061",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 2 klass derevya listvennye i hvojnye sravnenie listvennyh i hvojnyh derevev obshhee i razlichiya",
+      "url": "https://edsoo.ru/urok-om-2-klass-derevya-listvennye-i-hvojnye-sravnenie-listvennyh-i-hvojnyh-derevev-obshhee-i-razlichiya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-062",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 2 klass rasteniya dikorastushhie i kulturnye obshhee i razlichiya",
+      "url": "https://edsoo.ru/urok-om-2-klass-rasteniya-dikorastushhie-i-kulturnye-obshhee-i-razlichiya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-063",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass organy chuvstv ih rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-organy-chuvstv-ih-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-064",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass harakteristika prirodnyh zon rossii arkticheskaya pustynya svyazi v prirodnoj zone",
+      "url": "https://edsoo.ru/urok-om-4-klass-harakteristika-prirodnyh-zon-rossii-arkticheskaya-pustynya-svyazi-v-prirodnoj-zone",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-065",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass pishhevaritelnaya sistema i eyo rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-pishhevaritelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-066",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass dyhatelnaya sistema i eyo rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-dyhatelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-067",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass profilaktika zabolevanij rol zakalivaniya dlya zdorovya rastushhego organizma",
+      "url": "https://edsoo.ru/urok-om-3-klass-profilaktika-zabolevanij-rol-zakalivaniya-dlya-zdorovya-rastushhego-organizma",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-068",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass tema bezopasnoe povedenie pri ezde na velosipede i samokate dorozhnye znaki",
+      "url": "https://edsoo.ru/urok-om-4-klass-tema-bezopasnoe-povedenie-pri-ezde-na-velosipede-i-samokate-dorozhnye-znaki",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-069",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass vodoyomy zemli ih raznoobrazie estestvennye vodoyomy okean more ozero boloto primery vodoyomov v rossii",
+      "url": "https://edsoo.ru/urok-om-4-klass-vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-070",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass zashhita i ohrana prirodnyh bogatstv vozduha vody poleznyh iskopaemyh flory i fauny",
+      "url": "https://edsoo.ru/urok-om-4-klass-zashhita-i-ohrana-prirodnyh-bogatstv-vozduha-vody-poleznyh-iskopaemyh-flory-i-fauny",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-071",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass ekologicheskie problemy vzaimodejstviya cheloveka i prirody",
+      "url": "https://edsoo.ru/urok-om-4-klass-ekologicheskie-problemy-vzaimodejstviya-cheloveka-i-prirody",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-072",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass prirodnye i kulturnye obekty vsemirnogo naslediya v rossii",
+      "url": "https://edsoo.ru/urok-om-4-klass-prirodnye-i-kulturnye-obekty-vsemirnogo-naslediya-v-rossii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-073",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok m 3 klass massa sootnoshenie mezhdu kilogrammom i grammom",
+      "url": "https://edsoo.ru/urok-m-3-klass-massa-sootnoshenie-mezhdu-kilogrammom-i-grammom",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-074",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok m 3 klass konstruirovanie mnogougolnika iz zadannyh figur delenie mnogougolnika na chasti",
+      "url": "https://edsoo.ru/urok-m-3-klass-konstruirovanie-mnogougolnika-iz-zadannyh-figur-delenie-mnogougolnika-na-chasti",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-075",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok m 3 klass vybor pravilnogo resheniya zadachi",
+      "url": "https://edsoo.ru/urok-m-3-klass-vybor-pravilnogo-resheniya-zadachi",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-076",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok m 4 klass modeli prostranstvennyh geometricheskih figur v okruzhayushhem mire",
+      "url": "https://edsoo.ru/urok-m-4-klass-modeli-prostranstvennyh-geometricheskih-figur-v-okruzhayushhem-mire",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-077",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok m 4 klass diagramma",
+      "url": "https://edsoo.ru/urok-m-4-klass-diagramma",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-078",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass imya prilagatelnoe oznakomlenie znachenie",
+      "url": "https://edsoo.ru/urok-rya-2-klass-imya-prilagatelnoe-oznakomlenie-znachenie",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-079",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass chasti rechi obobshhenie trening",
+      "url": "https://edsoo.ru/urok-rya-2-klass-chasti-rechi-obobshhenie-trening",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-080",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass predlozhenie kak edinicza yazyka",
+      "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-kak-edinicza-yazyka",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-081",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass vidy predlozhenij po czeli vyskazyvaniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-vidy-predlozhenij-po-czeli-vyskazyvaniya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-082",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass povestvovatelnye voprositelnye pobuditelnye predlozheniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-povestvovatelnye-voprositelnye-pobuditelnye-predlozheniya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-083",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass voskliczatelnye i nevoskliczatelnye predlozheniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-voskliczatelnye-i-nevoskliczatelnye-predlozheniya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-084",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass predlozhenie sistematizacziya znanij",
+      "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-sistematizacziya-znanij",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-085",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 3 klass vidy informaczii",
+      "url": "https://edsoo.ru/urok-t-3-klass-vidy-informaczii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-086",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 3 klass kodirovanie informaczii",
+      "url": "https://edsoo.ru/urok-t-3-klass-kodirovanie-informaczii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-087",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass programmnoe obespechenie kompyutera po",
+      "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-088",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass rabota s tekstovym redaktorom",
+      "url": "https://edsoo.ru/urok-t-4-klass-rabota-s-tekstovym-redaktorom",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-089",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass vidy kodirovaniya",
+      "url": "https://edsoo.ru/urok-t-4-klass-vidy-kodirovaniya",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-090",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok t 4 klass czifrovoj etiket netiket",
+      "url": "https://edsoo.ru/urok-t-4-klass-czifrovoj-etiket-netiket",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-091",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok test 0000",
+      "url": "https://edsoo.ru/urok-test_0000",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-092",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok vidit devicza chto tut lyudi dobrye zhivut",
+      "url": "https://edsoo.ru/urok_vidit-devicza-chto-tut-lyudi-dobrye-zhivut",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-093",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok semya v kuche",
+      "url": "https://edsoo.ru/urok_semya-v-kuche",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-094",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok istoria semyi",
+      "url": "https://edsoo.ru/urok_istoria-semyi",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-095",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok ustnoe narodnoe tvorchestvo harakteristika malyh zhanrov folklora poteshki nebyliczy skorogovorki schitalki",
+      "url": "https://edsoo.ru/urok-ustnoe-narodnoe-tvorchestvo-harakteristika-malyh-zhanrov-folklora-poteshki-nebyliczy-skorogovorki-schitalki",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-096",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass rabota s detskimi knigami i ya bilibin illyustrator skazok a s pushkina",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-i-ya-bilibin-illyustrator-skazok-a-s-pushkina",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-097",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok lch 3 klass nravstvennaya oczenka situaczij povedeniya i postupkov geroev proizvedeniya a p gajdara timur i ego komanda otryvki",
+      "url": "https://edsoo.ru/urok-lch-3-klass-nravstvennaya-oczenka-situaczij-povedeniya-i-postupkov-geroev-proizvedeniya-a-p-gajdara-timur-i-ego-komanda-otryvki",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-098",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass odnorodnye chleny predlozheniya bez soyuzov",
+      "url": "https://edsoo.ru/urok-rya-3-klass-odnorodnye-chleny-predlozheniya-bez-soyuzov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-099",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 3 klass sostav slova obobshhenie",
+      "url": "https://edsoo.ru/urok-rya-3-klass-sostav-slova-obobshhenie",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-100",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass raznoobrazie gribov griby sedobnye i nesedobnye",
+      "url": "https://edsoo.ru/urok-om-3-klass-raznoobrazie-gribov-griby-sedobnye-i-nesedobnye",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-101",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 3 klass nasha rodina rossijskaya federacziya gosudarstvennaya simvolika rossijskoj federaczii uvazhenie k gosudarstvennym simvolam rossii",
+      "url": "https://edsoo.ru/urok-om-3-klass-nasha-rodina-rossijskaya-federacziya-gosudarstvennaya-simvolika-rossijskoj-federaczii-uvazhenie-k-gosudarstvennym-simvolam-rossii",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-102",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok om 4 klass ispolzovanie rek i vodoyomov chelovekom hozyajstvennaya deyatelnost otdyh ohrana rek i vodoyomov",
+      "url": "https://edsoo.ru/urok-om-4-klass-ispolzovanie-rek-i-vodoyomov-chelovekom-hozyajstvennaya-deyatelnost-otdyh-ohrana-rek-i-vodoyomov",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+    },
+    {
+      "id": "edsoo-lesson-103",
+      "sourceId": "edsoo-subject-materials",
+      "title": "urok rya 2 klass glagol voprosy chto delat chto sdelat i drugie",
+      "url": "https://edsoo.ru/urok-rya-2-klass-glagol-voprosy-chto-delat-chto-sdelat-i-drugie",
+      "description": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "subject": "all-school-subjects",
+      "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
+      "kind": [
+        "lesson-card",
+        "curriculum-linked-material"
+      ],
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "URL_ONLY",
+      "checkedAt": "2026-10-21",
+      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
     }
   ],
-  "coverageNote": "Unified resource index includes links to official federal textbook-list subject sections, discovered historical RАО library catalogue records, official FIPI materials and open-reference pages. Entries marked LINK_ONLY or NOT_PROVEN are not locally stored full-text books."
+  "coverageNote": "Unified index contains federal-list subject sections, historical library records, FIPI materials, open-reference pages and indexed EDSOO lesson cards. The existence of a link does not mean the whole textbook or its PDF is stored in GitHub."
 }
