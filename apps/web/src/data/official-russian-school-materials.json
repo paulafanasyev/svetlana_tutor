@@ -715,8 +715,10 @@
   ],
   "workingProgramCount": 61,
   "directWorkingProgramPdfCount": 55,
-  "originalExerciseCount": 44,
+  "originalExerciseCount": 99,
   "currentCoverageNote": "Official federal working-program links and original tasks have been added, but the complete current publisher textbook collection is not stored locally. Overall completeness remains NOT PROVEN.",
   "localFederalWorkingProgramPdfCount": 55,
-  "lastFederalProgramDownloadAttemptAt": "2026-10-21T04:43:41.720824+00:00"
+  "lastFederalProgramDownloadAttemptAt": "2026-10-21T04:43:41.720824+00:00",
+  "verifiedLocalFederalWorkingProgramPdfCount": 55,
+  "failedFederalWorkingProgramPdfCount": 0
 }
