@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "catalogName": "current-official-school-materials-2026-2027",
  "checkedAt": "2026-10-21",
- "note": "Дополнение к общему каталогу. Полные PDF не зеркалируются, пока права на повторное распространение не подтверждены.",
+ "note": "Дополнительная проверка текущих материалов. Четыре карточки ЕДСОО новые. Две записи ФИПИ ниже — только ссылки на существующие карточки общего индекса, не импортировать повторно. Полные PDF не зеркалируются без подтверждения прав.",
  "records": [
   {
    "id": "edsoo-literature-guidance-2026-2027-page",
@@ -119,7 +119,11 @@
    ],
    "access": "VERIFIED — official FIPI page lists OGE 2027 documents",
    "rights": "NOT PROVEN for republishing linked PDFs; link only",
-   "contentStoredLocally": false
+   "contentStoredLocally": false,
+   "recordStatus": "EXISTING_MAIN_INDEX_REFERENCE_ONLY",
+   "duplicateOf": "fipi-oge-demos",
+   "notForReimportIntoUnifiedIndex": true,
+   "note": "Проверка актуальности существующей карточки; не создавать вторую запись в общем индексе."
   },
   {
    "id": "fipi-ege-project-kim-2027",
@@ -141,7 +145,11 @@
    ],
    "access": "VERIFIED — official FIPI page lists EGE 2027 documents",
    "rights": "NOT PROVEN for republishing linked PDFs; link only",
-   "contentStoredLocally": false
+   "contentStoredLocally": false,
+   "recordStatus": "EXISTING_MAIN_INDEX_REFERENCE_ONLY",
+   "duplicateOf": "fipi-ege-2027-specs",
+   "notForReimportIntoUnifiedIndex": true,
+   "note": "Проверка актуальности существующей карточки; не создавать вторую запись в общем индексе."
   }
  ]
 }
