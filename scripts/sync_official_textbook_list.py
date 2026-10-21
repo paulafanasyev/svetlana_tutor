@@ -83,7 +83,7 @@ def main():
     # The official 312-page PDF is image-based; pypdf alone extracted almost no text.
     # OCR every page before claiming a searchable text version.
     ocr_cmd = [
-        "ocrmypdf", "--skip-text", "--language", "rus+eng", "--jobs", "4",
+        "ocrmypdf", "--force-ocr", "--language", "rus+eng", "--jobs", "4",
         "--output-type", "pdf", "--optimize", "0",
         str(PDF_PATH), str(OCR_PDF_PATH)
     ]
