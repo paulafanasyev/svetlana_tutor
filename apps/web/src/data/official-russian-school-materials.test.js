@@ -10,6 +10,7 @@ const programs = readJson('./federal-working-programs.json');
 const historical = readJson('./historical-school-textbooks-library.json');
 const federalSections = readJson('./federal-textbook-list-2026-sections.json');
 const textbookBibliography = readJson('./federal-textbook-bibliography-2026.json');
+const fullTextbookExtraction = readJson('./federal-textbook-bibliography-2026-full-extraction.json');
 const practice = readJson('./original-school-practice-bank.json');
 const coverage = readJson('./school-curriculum-coverage.json');
 
@@ -82,5 +83,24 @@ test('partial 2026 federal textbook bibliography has unique records and explicit
 
 test('unified catalog includes federal textbook bibliographic entries without duplicate IDs', () => {
   assert.ok(items.items.filter((x) => x.kind?.includes('federal-textbook-bibliographic-record')).length >= 100);
+  assert.ok(unique(items.items.map((x) => x.id)));
+});
+
+
+test('full OCR extraction indexes active K-11 textbook records without claiming verified OCR', () => {
+  assert.ok(fullTextbookExtraction.records.length >= 900);
+  assert.equal(fullTextbookExtraction.extraction.records, fullTextbookExtraction.records.length);
+  assert.equal(fullTextbookExtraction.extraction.status, 'OCR_EXTRACTED_NEEDS_RECHECK');
+  assert.ok(unique(fullTextbookExtraction.records.map((x) => x.id)));
+  for (const book of fullTextbookExtraction.records) {
+    assert.ok(book.title && book.sectionCode && book.sourceUrl);
+    assert.equal(book.fullTextStoredLocally, false);
+    assert.equal(book.rightsStatus, 'NOT_PROVEN_FOR_REPUBLICATION');
+    assert.equal(book.extractionStatus, 'OCR_EXTRACTED_NEEDS_RECHECK');
+  }
+});
+
+test('unified index includes the OCR textbook records', () => {
+  assert.ok(items.items.filter((x) => x.kind?.includes('ocr-extracted-record')).length >= 900);
   assert.ok(unique(items.items.map((x) => x.id)));
 });
