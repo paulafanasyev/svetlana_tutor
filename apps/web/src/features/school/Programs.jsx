@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../core/store.js';
-import { PLANS, DOCS, SOURCE_REGISTRY, CHINESE_PROGRAMS, OPTIONAL_SUBJECTS, findProgram, findPrograms, isSampleResults, fmtHours } from './fop.js';
+import { PLANS, DOCS, SOURCE_REGISTRY, CHINESE_PROGRAMS, OPTIONAL_SUBJECTS, PROVENANCE, provenance, findProgram, findPrograms, isSampleResults, fmtHours } from './fop.js';
 import textbooksMain from '../../data/fop/textbooks.json';
 import textbooksAdd from '../../data/fop/textbooks_add.json';
 import resources from '../../data/fop/resources.json';
@@ -12,6 +12,24 @@ const textbooks = [...textbooksMain, ...textbooksAdd];
 const Doc = ({ k }) => (
   <a href={DOCS[k].url} target="_blank" rel="noreferrer" className="underline font-bold text-primary">{DOCS[k].title}</a>
 );
+
+const BADGE_STYLE = {
+  live: { background: '#dcfce7', color: '#14532d' },
+  fop: { background: '#e0f2fe', color: '#0c4a6e' },
+  corpus: { background: '#fef3c7', color: '#78350f' },
+  none: { background: '#f1f5f9', color: '#475569' },
+};
+// Откуда текст: отдельно для содержания и для результатов (см. fopProvenance.js).
+const Provenance = ({ p }) => {
+  const pv = provenance(p);
+  return (
+    <div className="flex flex-wrap gap-2 pt-1" aria-label="Источник текста">
+      {[['Содержание', pv.content], ['Результаты', pv.results]].map(([what, k]) => (
+        <span key={what} style={BADGE_STYLE[k]} className="rounded-full px-2.5 py-0.5 text-[11px] font-bold">{PROVENANCE[k].icon} {what}: {PROVENANCE[k].label}</span>
+      ))}
+    </div>
+  );
+};
 
 // Предмет учебного плана -> названия предмета в данных ФПУ/ЭОР
 const TB_MAP = {
@@ -55,7 +73,7 @@ export default function Programs() {
       <div>
         <div className="h2">📋 Федеральные рабочие программы</div>
         <p className="text-sm font-semibold text-ink/60 mt-1">
-          Учебный план и содержание обучения по документам Минпросвещения России. Для всех предметов обязательной части учебного плана 1–9 классов доступны разделы, темы и планируемые предметные результаты (ОРКСЭ по всем шести модулям, английский язык со 2 класса). Для 10–11 классов добавлен универсальный профиль (базовый уровень); по обществознанию 11 класса (в 2026/27 году ещё прежняя программа) пока нет предметных результатов. Китайский язык (2–4 классы) и второй иностранный китайский (5–11 классы) показаны отдельно, в блоке «По выбору школы». Это справка, она не заменяет полный текст действующей программы и утверждённый план школы.
+          Учебный план и содержание обучения по документам Минпросвещения России. Для всех предметов обязательной части учебного плана 1–9 классов доступны разделы, темы и планируемые предметные результаты (ОРКСЭ по всем шести модулям, английский язык со 2 класса). Для 10–11 классов добавлен универсальный профиль (базовый уровень); по обществознанию 11 класса (в 2026/27 году ещё прежняя программа) пока нет предметных результатов. Китайский язык (2–4 классы) и второй иностранный китайский (5–11 классы) показаны отдельно, в блоке «По выбору школы». У каждой программы отдельно отмечено, откуда взяты содержание и результаты: ✅ сверено с действующей ФОП при сборке, ☑️ копия текста ФОП ред. 10.11.2025, ⚠️ из корпуса ЕДСОО и ещё не сверено. Это справка, она не заменяет полный текст действующей программы и утверждённый план школы.
         </p>
       </div>
       <RuOnly />
@@ -152,6 +170,7 @@ export default function Programs() {
                 <div>
                   <div className="font-black text-lg">{program.subject}, {program.grade} класс</div>
                   <div className="text-sm font-bold text-ink/60">{program.hours_per_week} ч в неделю · {program.hours_per_year} ч в год · {program.source_doc}</div>
+                  <Provenance p={program} />
                 </div>
                 {canPlan && <button className="btn-primary !py-2 text-sm" onClick={() => nav(`/planner?p=${program.id}`)}>🗓️ Составить план уроков</button>}
               </div>
@@ -180,7 +199,7 @@ export default function Programs() {
                   </ul>
                 </details>
               )}
-              <p className="text-[11px] font-semibold text-ink/50">Текст по федеральной рабочей программе, пунктуация упрощена для экрана. Для документов школы сверяйтесь с оригиналом.</p>
+              <p className="text-[11px] font-semibold text-ink/50">Текст по федеральной рабочей программе, пунктуация упрощена для экрана. Для документов школы сверяйтесь с оригиналом. Метка ⚠️ значит, что текст взят из корпуса ЕДСОО и с действующей редакцией ФОП ещё не сверен.</p>
               <a href={program.source_url} target="_blank" rel="noreferrer" className="inline-block text-sm font-bold text-primary underline">Открыть официальный источник</a>
             </div>
           )}
