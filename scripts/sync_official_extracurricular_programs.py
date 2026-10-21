@@ -4,7 +4,7 @@ from __future__ import annotations
 import concurrent.futures, hashlib, html, json, re, sys, time
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlparse, unquote
+from urllib.parse import urljoin, urlparse, unquote, quote
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,6 +42,8 @@ def write_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 def fetch(url):
+    # urllib rejects unescaped Cyrillic and typographic punctuation in official file URLs.
+    url = quote(url, safe=":/?&=#%+-._~")
     req = Request(url, headers={"User-Agent": "svetlana-tutor-education-catalog/1.0"})
     with urlopen(req, timeout=TIMEOUT) as response:
         data = response.read(MAX_FILE_BYTES + 1)
