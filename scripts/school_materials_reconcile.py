@@ -211,7 +211,7 @@ def build_ocr_crosswalk(ocr_records, structured_records):
         "matchingPolicy": "Сопоставление по паре порядковый номер + код раздела; класс проверяется на вхождение в диапазон OCR; названия нормализуются только для сравнения. Совпадение не подтверждает корректность OCR и не снимает статус ручной проверки.",
         "summary": {
             "totalRecords": len(ocr_records), "structuredRecordCount": len(structured_records),
-            "matchedByNumberAndSectionCount": sum(1 for row in output if row["structuredRecordId"] or row["status"] == "DUPLICATE_KEY_NEEDS_MANUAL_REVIEW"),
+            "matchedByNumberAndSectionCount": len(ocr_records) - status_counts.get("NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW", 0),
             "uniqueCandidateMatches": sum(1 for row in output if row["structuredRecordId"]),
             "exactNormalizedTitleCount": status_counts.get("KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION", 0),
             "titleNeedsReviewCount": status_counts.get("KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK", 0),
