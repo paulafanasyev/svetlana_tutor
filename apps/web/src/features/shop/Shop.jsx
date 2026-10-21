@@ -2,16 +2,13 @@ import { useEffect, useState } from 'react';
 import { useApp, useT, useLocale } from '../../core/store.js';
 import { api } from '../../core/api.js';
 import { TEACHERS, CADET_TEACHER } from '../../data/teachers.js';
+import { THEMES, MUSIC, FRAMES, TEACHER_PRICE } from '../../data/shopCatalog.js';
 import { pickL } from '../../i18n/index.js';
 import Avatar from '../../avatar/Avatar.jsx';
 import { sfx } from '../../audio/sfx.js';
 
-const THEMES = [{ id: 'candy', price: 0, sw: ['#7c3aed', '#a855f7'] }, { id: 'ocean', price: 200, sw: ['#0284c7', '#06b6d4'] },
-  { id: 'sunset', price: 200, sw: ['#e11d48', '#f97316'] }, { id: 'forest', price: 200, sw: ['#059669', '#84cc16'] },
-  { id: 'galaxy', price: 250, sw: ['#111023', '#8b5cf6'] }];
-const MUSIC = [{ id: 'lofi', price: 0, icon: '🎧' }, { id: 'classical', price: 150, icon: '🎻' }, { id: 'electronic', price: 150, icon: '🎛️' }, { id: 'ambient', price: 150, icon: '🌌' }];
-const FRAMES = [{ id: 'none', price: 0, icon: '⬜' }, { id: 'gold', price: 100, icon: '🥇' }, { id: 'neon', price: 120, icon: '💠' }, { id: 'leaf', price: 100, icon: '🍃' }];
-const TEACHER_PRICE = 300;
+// Prices live in data/shopCatalog.js (and apps/api/src/lib/catalog.js on the server): the price shown on a button
+// is only a label, the backend charges the catalog price.
 
 export default function Shop() {
   const { user, setUser, prefs, setPref } = useApp();
@@ -29,9 +26,9 @@ export default function Shop() {
   const owned = (type, id, freeIds = []) =>
     freeIds.includes(id) || unlocks.some((u) => u.itemType === type && u.itemId === id);
 
-  const buy = async (type, id, price) => {
+  const buy = async (type, id) => {
     try {
-      const u = await api.spend({ itemType: type, itemId: id, price });
+      const u = await api.spend({ itemType: type, itemId: id });
       setUser(u); sfx.coin(); load();
     } catch {
       sfx.wrong(); setMsg(t('shop.notEnough'));
@@ -52,7 +49,7 @@ export default function Shop() {
     const has = owned(type, id, freeIds) || price === 0;
     if (active) return <span className="chip !bg-emerald-500 text-white text-xs">✓ {t('shop.active')}</span>;
     if (has) return <button className="btn-ghost !py-1.5 !px-3 text-xs" onClick={() => useItem(type, id)}>{t('shop.use')}</button>;
-    return <button className="btn-primary !py-1.5 !px-3 text-xs" onClick={() => buy(type, id, price)}>🪙 {price}</button>;
+    return <button className="btn-primary !py-1.5 !px-3 text-xs" onClick={() => buy(type, id)}>🪙 {price}</button>;
   };
 
   return (
