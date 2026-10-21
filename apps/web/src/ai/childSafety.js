@@ -5,16 +5,29 @@
 //    trusted adult + free helplines (RU 8-800-2000-122, VN 111, emergency 112 / 113);
 //  - danger: requests for weapons, explosives, drugs, how to hurt people → brief refusal, back to the lesson.
 // Plain words like "war", "army", "gun" in an English exercise are NOT blocked: only clear requests.
-// Also used for the class chat (features/school/schoolStore.js).
+// Also used for the class chat (features/school/schoolStore.js) and to clean the model's answer (cleanModelText).
 
-// Lower case, ё→е, Latin look-alikes in Cyrillic words (a→а, o→о, e→е, p→р, c→с, x→х, y→у), letters repeated 3+ times squeezed to one.
+// Normalisation (audit 21.10: obfuscation like "k.i.l.l myself", "k1ll", "у б и т ь", full-width letters):
+//  1) NFKC (full-width / stylised letters → plain), lower case, ё→е, zero-width characters removed;
+//  2) leet digits inside words with letters (k1ll, s3lf, d1e) → letters;
+//  3) Latin look-alikes inside Cyrillic words (a→а, o→о …);
+//  4) punctuation → space, runs of 3+ single letters joined ("k i l l" → "kill");
+//  5) letters repeated 3+ times squeezed to one.
 const LOOK = { a: 'а', o: 'о', e: 'е', p: 'р', c: 'с', x: 'х', y: 'у', k: 'к', m: 'м', t: 'т', h: 'н', b: 'в' };
+const LEET = { 0: 'o', 1: 'i', 3: 'e', 4: 'a', 5: 's', 7: 't', '@': 'a', $: 's' };
 const fixMixed = (w) => (/[а-я]/.test(w) && /[a-z]/.test(w) ? w.replace(/[aoepcxykmthb]/g, (ch) => LOOK[ch]) : w);
-const norm = (s) => String(s == null ? '' : s).toLowerCase().replace(/ё/g, 'е')
+const fixLeet = (w) => (/[a-zа-я]/.test(w) && /[0-9@$]/.test(w) ? w.replace(/[013457@$]/g, (ch) => LEET[ch]) : w);
+// Runs of single letters separated by ONE space are a spelled-out word; 2+ spaces still separate words.
+const joinSpelled = (s) => s.replace(/(?<![\p{L}\p{N}])\p{L}(?: \p{L}){2,}(?![\p{L}\p{N}])/gu, (m) => m.replace(/ /g, ''));
+export const norm = (s) => joinSpelled(String(s == null ? '' : s).normalize('NFKC').toLowerCase().replace(/ё/g, 'е')
+  .replace(/[\u200b-\u200f\u2060\ufeff\u00ad]/g, '')
+  .replace(/[\p{L}\p{N}@$]+/gu, fixLeet)
   .replace(/[\u0400-\u04ffa-z0-9]+/g, fixMixed)
-  .replace(/([а-яa-z])\1{2,}/g, '$1')
-  .replace(/[^\p{L}\p{N}'\s-]+/gu, ' ')
-  .replace(/\s+/g, ' ');
+  .replace(/[^\p{L}\p{N}'\s-]/gu, ' ')
+  .replace(/[\t\r\n]/g, ' '))
+  .replace(/\s+/g, ' ')
+  .trim()
+  .replace(/(\p{L})\1{2,}/gu, '$1');
 
 const CRISIS = [
   // ru
@@ -66,12 +79,60 @@ export function checkChildSafety(text, locale = 'ru') {
   return null;
 }
 
+// Every field through which a learner's own words reach an AI task (audit 21.10: phrase, vocab, answers, point… were missed).
+const LEARNER_FIELDS = ['text', 'message', 'question', 'prompt', 'sentence', 'answer', 'answers', 'transcript', 'essay', 'writing',
+  'phrase', 'vocab', 'point', 'word', 'words', 'reply', 'input', 'userText', 'query', 'note'];
+const flat = (v, depth = 0) => {
+  if (typeof v === 'string') return [v];
+  if (depth > 2 || v == null || typeof v !== 'object') return [];
+  return (Array.isArray(v) ? v : Object.values(v)).flatMap((x) => flat(x, depth + 1));
+};
+
 /** Text the learner typed or said, whatever the task input shape is. */
 export function learnerText(input) {
   if (input == null) return '';
   if (typeof input === 'string') return input;
-  return [input.text, input.message, input.question, input.prompt, input.sentence, input.answer, input.transcript, input.essay, input.writing]
-    .filter((x) => typeof x === 'string').join(' ');
+  return LEARNER_FIELDS.flatMap((k) => flat(input[k])).join(' ');
+}
+
+// ---- Contacts and links (audit 21.10): a child's phone / e-mail / address never goes into the class chat,
+// and the model never shows links or phone numbers (it can make them up). Help lines are kept.
+const KEEP_PHONES = ['8-800-2000-122', '88002000122', '112', '111', '113'];
+const URL_RE = /\b(?:https?:\/\/|www\.)\S+|\b[a-z0-9-]+\.(?:ru|рф|com|net|org|su|io|me|info|xyz|vn|online|site|club)(?:\/\S*)?/giu;
+const EMAIL_RE = /[\p{L}0-9._%+-]+@[\p{L}0-9.-]+\.\p{L}{2,}/gu;
+const PHONE_RE = /(?:\+|\b)\d[\d\s().-]{8,}\d\b/g;
+const TG_RE = /(?:^|\s)@[a-z0-9_]{4,}\b/gi;
+const ADDR_RE = /(?<!\p{L})(?:ул|улица|проспект|пр-т|переулок|пер|дом|д|кв|квартира|подъезд)\.?\s+(?:[\p{L}-]+\s+)?\d+\p{L}?(?:[\s,]*(?:д|дом|кв|к)\.?\s*\d+)*/giu;
+// Not a phone: help lines, big numbers written by thousands (1 000 000), sums like 12.5 - 3.25, fewer than 10 digits.
+const isNotPhone = (m) => {
+  const digits = m.replace(/\D/g, '');
+  return KEEP_PHONES.includes(m.replace(/[^\d-]/g, '')) || KEEP_PHONES.includes(digits)
+    || /^\d{1,3}(?:[ .]\d{3})+$/.test(m.trim()) || digits.length < 10 || digits.length > 13;
+};
+export const HIDDEN = '[скрыто]';
+
+/** Masks phones, e-mails, links, @nicknames and street addresses. Returns { text, masked }. */
+export function maskContacts(text, { addresses = true } = {}) {
+  let masked = false;
+  const hide = (m) => { masked = true; return m.startsWith(' ') ? ` ${HIDDEN}` : HIDDEN; };
+  let s = String(text || '')
+    .replace(EMAIL_RE, hide)
+    .replace(URL_RE, hide)
+    .replace(PHONE_RE, (m) => (isNotPhone(m) ? m : hide(m)))
+    .replace(TG_RE, hide);
+  if (addresses) s = s.replace(ADDR_RE, hide);
+  return { text: s, masked };
+}
+
+/**
+ * The model's answer is not trusted either: links / phones / contacts are removed, and an answer that itself
+ * contains dangerous instructions is replaced by the refusal. Returns the cleaned text.
+ */
+export function cleanModelText(text, locale = 'ru') {
+  if (typeof text !== 'string' || !text) return text;
+  const hit = checkChildSafety(text, locale);
+  if (hit && hit.kind === 'danger') return hit.text;
+  return maskContacts(text, { addresses: false }).text;
 }
 
 // Tasks that answer the learner directly in free text: on a hit they get the care / refusal message.
