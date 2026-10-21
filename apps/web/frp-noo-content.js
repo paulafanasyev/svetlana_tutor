@@ -60,8 +60,15 @@ export const COURSES = [
   ['История', '150.8', '06a9ee3182714c5e524fe0997ebb8f9640c928b3', [5, 6, 7, 8, 9], true],
 ];
 export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
-// ОРКСЭ: 6 модулей на одной странице; музыка 1–4; курсы ООО: содержание (кроме «только результаты») и результаты по классам.
-export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length + COURSES.reduce((a, [, , , gs, only]) => a + gs.length * (only ? 1 : 2), 0);
+// ОБЗР (п. 162(1) ФОП ООО): содержание (162(1).3) дано 11 модулями без деления по классам. Распределение как в ФРП ЕДСОО 2025:
+// 8 класс — модули 1–6, 9 класс — модули 7–11. Результаты (162(1).4.5): общие (162(1).4.5.2) — в 8 классе, по модулю — в классе его изучения.
+export const OBZR = {
+  subject: 'Основы безопасности и защиты Родины',
+  content: '42194d1cf196527ad6157c637b93df0d49551229', results: '6479083db56ea138e601a06b2c641d7b0466947f',
+  grades: { 8: [1, 2, 3, 4, 5, 6], 9: [7, 8, 9, 10, 11] },
+};
+// ОРКСЭ: 6 модулей на одной странице; музыка 1–4; курсы ООО: содержание (кроме «только результаты») и результаты по классам; ОБЗР: содержание и результаты 8–9.
+export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length + COURSES.reduce((a, [, , , gs, only]) => a + gs.length * (only ? 1 : 2), 0) + Object.keys(OBZR.grades).length * 2;
 
 export function htmlLines(html) {
   return html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, '').replace(/<img[^>]*>/gi, 'ё').replace(/<\/?(?:p|br|div|h\d|li|tr)\b[^>]*>/gi, '\n').replace(/<[^>]+>/g, '')
@@ -207,6 +214,50 @@ export function musicSections(corpus, fop, miss) {
   }) }));
 }
 
+// ОБЗР: номера пунктов со скобками (162(1).3.1) обычный NUM не берёт.
+const OBZR_NUM = /^(\d+(?:\(\d+\))?(?:\.\d+)+)\.?\s+(.*)$/;
+const modNo = s => +((s.match(/[Мм]одул[ьюя] (?:N|№)\s?(\d+)/) || [])[1] || 0);
+// Содержание: «162(1).3.k. Модуль N k "Название":», дальше абзацы без номеров. Выход: { k: { title, text: [абзацы] } }.
+export function parseObzrContent(lines) {
+  const out = {};
+  let cur = null;
+  const a = lines.findIndex(x => x.startsWith('162(1).3.1.'));
+  if (a < 0) return out;
+  for (const x of lines.slice(a)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (NOTE.test(x)) continue;
+    const m = x.match(OBZR_NUM);
+    if (m) {
+      if (!m[1].startsWith('162(1).3.')) break;
+      const k = modNo(m[2]), name = (m[2].match(/"([^"]+)"/) || [])[1];
+      cur = k && name ? (out[k] = { title: `Модуль № ${k} «${name}»`, text: [] }) : null;
+      continue;
+    }
+    if (cur) cur.text.push(typo(x));
+  }
+  return out;
+}
+// Результаты: общий перечень после «162(1).4.5.2. Предметные результаты по ОБЗР должны обеспечивать:», затем
+// «Предметные результаты по модулю N k …:» (заголовок оставляем первой строкой, как в корпусе). Прочие нумерованные подпункты не выводим.
+export function parseObzrResults(lines) {
+  const general = [], mods = {};
+  const a = lines.findIndex(x => x.startsWith('162(1).4.5.2.'));
+  if (a < 0) return { general, mods };
+  let cur = general;
+  for (const x of lines.slice(a + 1)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (NOTE.test(x)) continue;
+    const m = x.match(OBZR_NUM);
+    if (m && !m[1].startsWith('162(1).4.5.')) break;
+    const t = typo(m ? m[2] : x);
+    const k = /^Предметные результаты по модулю/.test(t) ? modNo(t) : 0;
+    if (k) { cur = mods[k] = [t.replace(/ N (\d+)/, ' № $1')]; continue; }
+    if (m) continue;
+    cur.push(t);
+  }
+  return { general, mods };
+}
+
 // mark — номер пункта, который обязан быть в тексте страницы (например «20.6.1»): вне расписания КонсультантПлюс
 // отдаёт страницу без текста документа (с оглавлением и навигацией), её не кэшируем; такой кэш тоже отбрасываем.
 async function page(hash, cacheDir, doc = NOO, mark = '') {
@@ -259,6 +310,19 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   }
   try {
+    const c = parseObzrContent(htmlLines(await page(OBZR.content, cacheDir, OOO, '162(1).3.1')));
+    const { general, mods } = parseObzrResults(htmlLines(await page(OBZR.results, cacheDir, OOO, '162(1).4.5')));
+    if (general.length < 10) errors.push(`ОБЗР 162(1).4.5.2: общих результатов ${general.length}`);
+    for (const [g, ks] of Object.entries(OBZR.grades)) {
+      const miss = ks.filter(k => !c[k]?.text.length);
+      if (miss.length) errors.push(`ОБЗР ${g} кл.: нет содержания модулей ${miss.join(', ')}`);
+      else map[`${OBZR.subject}|${g}`] = ks.map(k => ({ title: c[k].title, topics: [c[k].text.join(' ')] }));
+      const rm = ks.filter(k => !(mods[k]?.length > 1));
+      if (rm.length) errors.push(`ОБЗР ${g} кл.: нет результатов модулей ${rm.join(', ')}`);
+      else map[`R|${OBZR.subject}|${g}`] = [...(g === '8' ? general : []), ...ks.flatMap(k => mods[k])];
+    }
+  } catch (e) { errors.push(`ОБЗР 162(1): ${e.message || e}`); }
+  try {
     const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir, NOO, '166.6.1')));
     const corpus = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/music_noo.json'), 'utf8'));
     const miss = [];
@@ -281,10 +345,16 @@ export default function nooContent() {
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
         if (process.env.GITHUB_ACTIONS === 'true') {
           const esc = s => s.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
-          // Одно сообщение: лимит GitHub — 10 notice на шаг (остальное нужно frp-extract). Сводка по последним подключённым предметам.
-          const CHECK = ['История', 'Физическая культура'];
-          const sum = Object.entries(map).filter(([k]) => CHECK.some(s => k === `${s}|${k.split('|').pop()}` || k === `R|${s}|${k.split('|').pop()}`) && +k.split('|').pop() >= 5).map(([k, v]) => `#${k} s=${v.length} t=${Array.isArray(v[0]?.topics) ? v.reduce((a, s) => a + s.topics.length, 0) : v.length}` + (Array.isArray(v[0]?.topics) ? ' ' + v.slice(0, 4).map(s => `${s.title.slice(0, 40)} [${s.topics.length}]`).join('; ') : '')).join('\n');
-          const dump = ['=== История 5', ...(map['История|5'] || []).slice(0, 3).flatMap(s => [`## ${s.title}`, ...s.topics.slice(0, 2)]), '=== R История 5', ...(map['R|История|5'] || []).slice(0, 4), '=== R ФК 5', ...(map['R|Физическая культура|5'] || []).slice(0, 3)].map(t => t.slice(0, 110)).join('\n');
+          // Одно сообщение (лимит GitHub — 10 notice на шаг). Сверка результатов ОБЗР с корпусом: «+» есть только в ФОП, «−» только в корпусе.
+          let old = {};
+          try { old = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/obzr_ooo_results.json'), 'utf8')); } catch { /* нет файла */ }
+          const diff = g => {
+            const live = map[`R|${OBZR.subject}|${g}`] || [], was = old[`obzr-${g}`] || [];
+            const a = new Set(was.map(key)), b = new Set(live.map(key));
+            return [`=== R ОБЗР ${g}: ФОП ${live.length}, корпус ${was.length}`, ...live.filter(t => !a.has(key(t))).map(t => '+ ' + t), ...was.filter(t => !b.has(key(t))).map(t => '- ' + t)];
+          };
+          const sum = [8, 9].map(g => `#ОБЗР|${g} ` + (map[`${OBZR.subject}|${g}`] || []).map(s => `${s.title.slice(0, 14)} [${s.topics[0].length}]`).join('; ')).join('\n');
+          const dump = [...diff(8), ...diff(9)].map(t => t.slice(0, 170)).join('\n');
           const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
