@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: sync-official-federal-programs-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   download-and-index:
