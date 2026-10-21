@@ -38,6 +38,14 @@ test('просроченные учебники скрываются, срок �
   assert.ok(act.some((x) => x.fpu_number === 206 && x.subject === 'Литература'));
 });
 
+test('бессрочные учебники видны всегда, у остальных срок есть', () => {
+  const act = activeTextbooks(books, status, '2099-01-01');
+  assert.ok(act.some((x) => x.fpu_number === 718 && x.subject === 'История'));
+  assert.ok(!act.some((x) => x.fpu_number === 233 && x.subject === 'Русский язык'));
+  const bad = Object.entries(status.items).filter(([, v]) => !v.fpu_code || (!v.use_until && !v.unlimited)).map(([k]) => k);
+  assert.deepEqual(bad, []);
+});
+
 test('дата срока по-русски', () => {
   assert.equal(fmtUntil('2027-08-31'), '31 августа 2027 г.');
   assert.equal(fmtUntil(''), '');
