@@ -114,6 +114,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Rebase the working tree's generated files onto the current branch head to avoid a stale-run push rejection.
+          git fetch origin "$GITHUB_REF_NAME"
+          git reset --mixed "origin/$GITHUB_REF_NAME"
+          # Reconcile generated indexes against the latest catalog after any concurrent metadata commit.
+          python scripts/sync_official_federal_programs.py
+          python scripts/sync_official_extracurricular_programs.py
+          python scripts/sync_official_textbook_list.py
           git add apps/web/src/data/federal-working-programs.json
           git add apps/web/src/data/official-russian-school-material-items.json
           git add apps/web/src/data/official-russian-school-materials.json
