@@ -147,3 +147,15 @@ test('каталог содержит официальный список про
   assert.equal(source.url, 'https://docs.edu.gov.ru/document/9e6ddf2b6267693c0cecdd047768cafa/');
   assert.equal(source.storesFullTextLocally, false);
 });
+
+
+test('OCR-библиография не выдаётся за проверенный текст учебников', () => {
+  const ocr = read('federal-textbook-bibliography-2026-full-extraction.json');
+  assert.ok(ocr.records.length > 0);
+  for (const row of ocr.records) {
+    assert.equal(row.extractionStatus, 'OCR_EXTRACTED_NEEDS_RECHECK', row.id);
+    assert.equal(row.fullTextAvailable, false, row.id);
+    assert.equal(row.fullTextStoredLocally, false, row.id);
+    assert.equal(row.rightsStatus, 'NOT_PROVEN_FOR_REPUBLICATION', row.id);
+  }
+});
