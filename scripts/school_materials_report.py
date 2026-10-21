@@ -98,6 +98,32 @@ def main():
                 m = re.search(r"(20\d\d)", rec.get("allowedUseUntil") or "")
                 years[(name.split("-2026-")[1].replace(".json", ""), m.group(1) if m else "none")] += 1
         out.append("- allowedUseUntil by stage/year: " + ", ".join(f"{a}:{b}={c}" for (a, b), c in sorted(years.items())))
+
+    # Diagnostics for CI: run the invariant test here and save its output (Actions logs are not visible to the reviewer).
+    diag = ["# School materials: checks", ""]
+    odd = Counter()
+    for name in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json",
+                 "federal-textbooks-2026-secondary-10-11.json"):
+        for rec in load(DATA / name)["records"]:
+            v = rec.get("allowedUseUntil")
+            if v is not None and not re.search(r"31\s+августа\s+20\d\d|[Бб]ессрочно", v):
+                odd[v[:80]] += 1
+    diag.append("- allowedUseUntil values outside the expected forms: " + (", ".join(f"«{a}»={b}" for a, b in odd.most_common(20)) or "none"))
+    for name in ("official-russian-school-material-items.json", "federal-working-programs.json"):
+        n = (DATA / name).read_text(encoding="utf-8").count('"localPath"')
+        diag.append(f"- {name}: localPath occurrences = {n}")
+    test_file = ROOT / "apps/web/src/data/schoolMaterials.test.js"
+    if test_file.exists():
+        try:
+            run = subprocess.run(["node", "--test", str(test_file)], capture_output=True, text=True, timeout=300)
+            text = (run.stdout + run.stderr).splitlines()
+            fails = [i for i, line in enumerate(text) if line.startswith("not ok") or "AssertionError" in line or "Error" in line]
+            keep = sorted({j for i in fails for j in range(max(0, i - 2), min(len(text), i + 25))})
+            diag += ["", f"## node --test exit={run.returncode}", "```"] + [text[j][:300] for j in keep][:300] \
+                    + [l for l in text if l.startswith("# ")] + ["```"]
+        except Exception as exc:
+            diag.append(f"- node --test could not run: {exc}")
+    (DATA / "CHECKS.md").write_text("\n".join(diag) + "\n", encoding="utf-8")
     (DATA / "REPORT.md").write_text("\n".join(out) + "\n", encoding="utf-8")
     print("\n".join(out[:80]))
 
