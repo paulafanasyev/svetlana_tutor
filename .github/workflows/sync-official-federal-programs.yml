@@ -6,6 +6,9 @@ on:
       - feat/official-russian-school-materials
     paths:
       - 'apps/web/src/data/federal-working-programs.json'
+      - 'apps/web/src/data/official-russian-school-material-items.json'
+      - 'apps/web/src/data/official-russian-school-materials.json'
+      - 'scripts/sync_official_extracurricular_programs.py'
       - 'scripts/sync_official_federal_programs.py'
       - '.github/workflows/sync-official-federal-programs.yml'
   workflow_dispatch:
@@ -59,7 +62,9 @@ jobs:
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
       - name: Download official PDFs and record hashes
-        run: python scripts/sync_official_federal_programs.py
+        run: |
+          python scripts/sync_official_federal_programs.py
+          python scripts/sync_official_extracurricular_programs.py
 
       - name: Verify local PDFs and updated index
         run: |
@@ -69,13 +74,15 @@ jobs:
           programs = json.loads(Path('apps/web/src/data/federal-working-programs.json').read_text(encoding='utf-8'))
           items = json.loads(Path('apps/web/src/data/official-russian-school-material-items.json').read_text(encoding='utf-8'))
           manifest = json.loads(Path('downloads/federal-working-programs/MANIFEST.json').read_text(encoding='utf-8'))
+          extracurricular = json.loads(Path('downloads/federal-extracurricular-programs/MANIFEST.json').read_text(encoding='utf-8'))
           assert len({x['id'] for x in items['items']}) == len(items['items']), 'duplicate resource IDs'
           assert manifest['attempted'] > 0
           for record in programs['programs']:
               if record.get('downloadStatus') == 'LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED':
                   path = Path(record['localPath'])
                   assert path.exists() and path.read_bytes().startswith(b'%PDF-'), record['id']
-          print('PDF audit:', manifest['verifiedLocalPdfCount'], 'verified; failed:', manifest['failedCount'])
+          print('Federal working programme PDF audit:', manifest['verifiedLocalPdfCount'], 'verified; failed:', manifest['failedCount'])
+          print('Extracurricular programme PDF audit:', extracurricular['verifiedLocalPdfCount'], 'verified; failed:', extracurricular['failedCount'])
           PY
           node --test apps/web/src/data/official-russian-school-materials.test.js
 
@@ -84,7 +91,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: official-federal-programmes-${{ github.run_id }}
-          path: downloads/federal-working-programs/
+          path: |
+            downloads/federal-working-programs/
+            downloads/federal-extracurricular-programs/
           if-no-files-found: warn
           retention-days: 90
 
@@ -98,6 +107,7 @@ jobs:
           git add apps/web/src/data/official-russian-school-material-items.json
           git add apps/web/src/data/official-russian-school-materials.json
           git add downloads/federal-working-programs/
+          git add downloads/federal-extracurricular-programs/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
