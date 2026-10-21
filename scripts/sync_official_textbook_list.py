@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch and archive the official 2026 federal textbook-list legal act."""
 from __future__ import annotations
-import hashlib, html, json, re, time
+import hashlib, html, json, re, subprocess, time
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -14,6 +14,7 @@ DIRECT_PDF = "https://minjust.consultant.ru/files/60664"
 OFFICIAL_NOTICE = "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya"
 OUT = ROOT / "downloads/federal-textbook-list-2026"
 PDF_PATH = OUT / "federal-textbook-list-order-436-2026.pdf"
+OCR_PDF_PATH = OUT / "federal-textbook-list-order-436-2026-ocr.pdf"
 TEXT_PATH = OUT / "federal-textbook-list-order-436-2026.txt"
 MANIFEST_PATH = OUT / "MANIFEST.json"
 MAX_BYTES = 30 * 1024 * 1024
@@ -79,23 +80,37 @@ def main():
     if not pdf_data or not pdf_data.startswith(b"%PDF-"):
         raise RuntimeError("Could not retrieve the official textbook-list PDF from the Minjust landing page.")
     PDF_PATH.write_bytes(pdf_data)
-    reader=PdfReader(str(PDF_PATH),strict=False)
+    # The official 312-page PDF is image-based; pypdf alone extracted almost no text.
+    # OCR every page before claiming a searchable text version.
+    ocr_cmd = [
+        "ocrmypdf", "--skip-text", "--language", "rus+eng", "--jobs", "4",
+        "--output-type", "pdf", "--optimize", "0",
+        str(PDF_PATH), str(OCR_PDF_PATH)
+    ]
+    ocr_run = subprocess.run(ocr_cmd, capture_output=True, text=True)
+    if ocr_run.returncode != 0:
+        raise RuntimeError("OCR failed: " + (ocr_run.stderr or ocr_run.stdout)[-2500:])
+    reader=PdfReader(str(OCR_PDF_PATH),strict=False)
     pages=[]
     for number,page in enumerate(reader.pages,1):
         text=page.extract_text() or ""
         pages.append(f"===== PDF PAGE {number} =====\n{text.strip()}\n")
     extracted="\n".join(pages).strip()+"\n"
+    if len(extracted) < 100000:
+        raise RuntimeError(f"OCR output is too sparse to index the full textbook list ({len(extracted)} characters).")
     TEXT_PATH.write_text(extracted,encoding="utf-8")
     sha=hashlib.sha256(pdf_data).hexdigest()
+    ocr_sha=hashlib.sha256(OCR_PDF_PATH.read_bytes()).hexdigest()
     manifest={
         "title":"Приказ Минпросвещения России от 22.06.2026 № 436 — федеральный перечень учебников",
         "registration":"Зарегистрирован Минюстом России 22.07.2026 № 87563",
         "officialLandingPage":LANDING,"officialAnnouncement":OFFICIAL_NOTICE,"resolvedPdfUrl":pdf_url,
         "checkedAt":time.strftime("%Y-%m-%d",time.gmtime()),
-        "pdf":{"path":str(PDF_PATH.relative_to(ROOT)),"bytes":len(pdf_data),"pages":len(reader.pages),"sha256":sha,"signature":"%PDF-"},
-        "text":{"path":str(TEXT_PATH.relative_to(ROOT)),"characters":len(extracted),"extractionLibrary":"pypdf"},
+        "pdf":{"path":str(PDF_PATH.relative_to(ROOT)),"bytes":len(pdf_data),"pages":len(PdfReader(str(PDF_PATH),strict=False).pages),"sha256":sha,"signature":"%PDF-"},
+        "ocrPdf":{"path":str(OCR_PDF_PATH.relative_to(ROOT)),"bytes":OCR_PDF_PATH.stat().st_size,"pages":len(reader.pages),"sha256":ocr_sha,"language":"rus+eng"},
+        "text":{"path":str(TEXT_PATH.relative_to(ROOT)),"characters":len(extracted),"extractionLibrary":"pypdf after OCR","status":"OCR_TEXT_EXTRACTED"},
         "rightsStatus":"OFFICIAL_NORMATIVE_LEGAL_ACT; preserve source attribution; not a substitute for individual textbook files",
-        "note":"The PDF and extracted text are the federal textbook-list document. They are not full copies of each listed textbook."
+        "note":"The PDF and extracted text are the federal list, not full copies of each listed textbook."
     }
     write_json(MANIFEST_PATH,manifest)
     # Add one provenance record for the full legal list; individual textbooks remain separate records.
@@ -112,7 +127,7 @@ def main():
         "accessStatus": "LOCAL_OFFICIAL_PDF_AND_TEXT_VERIFIED",
         "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; individual textbook contents are not included",
         "contentStoredLocally": True, "localPath": manifest["pdf"]["path"],
-        "textPath": manifest["text"]["path"], "pageCount": manifest["pdf"]["pages"],
+        "textPath": manifest["text"]["path"], "ocrPdfPath": manifest["ocrPdf"]["path"], "pageCount": manifest["pdf"]["pages"],
         "fileSizeBytes": manifest["pdf"]["bytes"], "sha256": manifest["pdf"]["sha256"],
         "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
     }
@@ -126,8 +141,8 @@ def main():
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     catalog["federalTextbookListLocalCopy"] = {
         "status": "VERIFIED", "sourceUrl": LANDING,
-        "pdfPath": manifest["pdf"]["path"], "textPath": manifest["text"]["path"],
-        "pages": manifest["pdf"]["pages"], "sha256": manifest["pdf"]["sha256"],
+        "pdfPath": manifest["pdf"]["path"], "ocrPdfPath": manifest["ocrPdf"]["path"], "textPath": manifest["text"]["path"],
+        "pages": manifest["pdf"]["pages"], "sha256": manifest["pdf"]["sha256"], "extractedCharacters": manifest["text"]["characters"],
         "note": "Contains the federal list, not the full contents of every listed textbook."
     }
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
