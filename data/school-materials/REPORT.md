@@ -74,6 +74,28 @@ top-level: schemaVersion:int, name:str, checkedAt:str, officialDocument:dict[8],
     {"id": "fpu2026-section-032", "title": "1.1.2.9. История (учебный предмет)", "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/eb97a1787c2876237b0e287fea3d5055aec2d8ac", "sourceId": "federal-textbook-list-2026", "subjectLabel": "История", "catalogueSnippet": "История нашего края. Республика Ингушетия. 7 класс: учебник для общеобразовательных организаций; 1-е издание. Акиева П.Х.,. Долгиева М.Б,.", "entryNumberHint": null, "verifiedAt": "2026-10-21", "status": "SOURCE_LINK_VERIFIED_SNIPPET_ONLY", "contentStoredLocally": false, "rightsStatus": "official legal act/metadata; individual textbook files not included", "note": "Section URL is a navigational bibliographic reference. The snippet is not the complete list of records in the section."}
     ```
 
+## federal-textbook-ocr-crosswalk-2026.json (385358 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, sourceDocument:str, matchingPolicy:str, summary:dict[11], records:list[934]
+- `records` record keys: ocrId(934), federalListNumber(934), sectionCode(934), structuredRecordId(934), ocrGradeRange(934), structuredGrade(934), normalizedTitleExact(934), ocrExtractionStatus(934), status(934)
+  - status: KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK=480, NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW=308, KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION=139, DUPLICATE_KEY_NEEDS_MANUAL_REVIEW=6, KEY_MATCH_GRADE_MISMATCH_NEEDS_MANUAL_REVIEW=1
+  - records mentioning «до 31 августа 20XX»: 0
+  - samples:
+    ```json
+    {"ocrId": "fpu2026-pdf-0005-1-1-1-1-1-1", "federalListNumber": 5, "sectionCode": "1.1.1.1.1.1", "structuredRecordId": "fpu2026-0005", "ocrGradeRange": [1, 1], "structuredGrade": 1, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0006-1-1-1-1-2", "federalListNumber": 6, "sectionCode": "1.1.1.1.2", "structuredRecordId": null, "ocrGradeRange": [1, 1], "structuredGrade": null, "normalizedTitleExact": false, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0007-1-1-1-1-1-3", "federalListNumber": 7, "sectionCode": "1.1.1.1.1.3", "structuredRecordId": "fpu2026-0007", "ocrGradeRange": [2, 2], "structuredGrade": 2, "normalizedTitleExact": false, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0529-1-1-2-9-14-2", "federalListNumber": 529, "sectionCode": "1.1.2.9.14.2", "structuredRecordId": "fpu2026-0529", "ocrGradeRange": [6, 6], "structuredGrade": 6, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0530-1-1-2-9-14-3", "federalListNumber": 530, "sectionCode": "1.1.2.9.14.3", "structuredRecordId": "fpu2026-0530", "ocrGradeRange": [7, 7], "structuredGrade": 7, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+
 ## federal-textbooks-2026-basic-5-9.json (640099 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[423]
 - `records` record keys: id(423), listRow(423), sectionCode(423), listSection(423), schoolStage(423), grade(423), title(423), authors(423), publisher(423), relatedTeachingMaterials(423), approvalBasis(423), approvalOrganization(423), approvalOrder(423), allowedUseUntil(423), metadataSource(423), officialDocument(423), checkedAt(423), contentStoredLocally(423), status(423), rightsStatus(423)
@@ -191,8 +213,8 @@ top-level: schemaVersion:int, title:str, language:str, grades:list[11], license:
 - `exercises` record keys: grade(153), subject(153), topic(153), prompt(153), answer(153), explanation(153), difficulty(153), id(153), authorship(54), license(54)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (611015 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[25]
+## school-curriculum-coverage.json (611737 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[26]
 - `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), openReferenceResourceCount(407), officialExamResourceCount(407), publicLessonPlatformResourceCount(407), additionalOfficialSubjectResourceCount(407), officialPlatformEntryPointCount(407), additionalCatalogResourceCount(407), notes(407)
   - status: LINKS_AVAILABLE=237, NO_EXACT_GRADE_SUBJECT_RECORD=170
   - records mentioning «до 31 августа 20XX»: 0
@@ -200,7 +222,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-21, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-21, pages=312
-- federal-working-programs.json: generatedAt=2026-10-21T19:11:47.129091+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-21T19:15:34.871774+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53

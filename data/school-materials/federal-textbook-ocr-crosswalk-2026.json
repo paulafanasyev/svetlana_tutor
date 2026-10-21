@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "federal-textbook-ocr-crosswalk-2026",
-  "checkedAt": "2026-10-22",
+  "checkedAt": "2026-10-21",
   "sourceDocument": "https://publication.pravo.gov.ru/document/0001202607230005",
   "matchingPolicy": "Сопоставление по паре порядковый номер + код раздела; класс проверяется на вхождение в диапазон OCR; названия нормализуются только для сравнения. Совпадение не подтверждает корректность OCR и не снимает статус ручной проверки.",
   "summary": {

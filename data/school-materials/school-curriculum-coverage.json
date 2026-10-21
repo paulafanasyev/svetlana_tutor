@@ -9445,6 +9445,25 @@
     },
     "federalBibliographySubsetRecordsWithFullText": 0,
     "unverifiedOcrBibliographyRecords": 934,
+    "ocrCrosswalk": {
+      "totalRecords": 934,
+      "structuredRecordCount": 746,
+      "matchedByNumberAndSectionCount": 626,
+      "uniqueCandidateMatches": 624,
+      "exactNormalizedTitleCount": 139,
+      "titleNeedsReviewCount": 480,
+      "duplicateKeyNeedsReviewCount": 6,
+      "gradeMismatchNeedsReviewCount": 1,
+      "unmatchedNeedsReviewCount": 308,
+      "statusCounts": {
+        "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION": 139,
+        "NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW": 308,
+        "KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK": 480,
+        "DUPLICATE_KEY_NEEDS_MANUAL_REVIEW": 6,
+        "KEY_MATCH_GRADE_MISMATCH_NEEDS_MANUAL_REVIEW": 1
+      },
+      "allRemainUnverified": true
+    },
     "ocrStatus": "OCR_EXTRACTED_NEEDS_RECHECK; excluded from counts used to claim verified grade/subject coverage",
     "officialWorkingProgramRecords": 61,
     "directWorkingProgramPDFs": 55,
