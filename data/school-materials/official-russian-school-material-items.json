@@ -1,8 +1,8 @@
 {
   "schemaVersion": 8,
   "catalogName": "official-russian-school-material-items",
-  "lastVerified": "2026-10-21",
-  "note": "Объединённый индекс ссылок, уроков, федеральных программ, исторической библиографии, авторских заданий и OCR-записей учебников. OCR-записи требуют сверки; каталог не является архивом полных учебников.",
+  "lastVerified": "2026-10-22",
+  "note": "Объединённый индекс официальных школьных материалов, программ, методических ресурсов, исторической библиографии, авторских заданий и OCR-записей учебников. OCR-записи требуют сверки; каталог не является архивом полных учебников.",
   "items": [
     {
       "id": "fpu-order-436-2026",
@@ -47741,6 +47741,231 @@
       "releaseAsset": "fpu-436-2026.pdf",
       "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
       "storedInRelease": true
+    },
+    {
+      "id": "edsoo-math-interactive-lessons-grade3",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Материалы к урокам по математике с интерактивными элементами — 3 класс",
+      "gradeRange": [
+        3
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_PAGE",
+      "subject": "mathematics",
+      "topic": "Интерактивные задания и материалы к урокам",
+      "kind": [
+        "lesson-materials",
+        "interactive-exercises"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/mat/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО; на странице перечислены материалы к урокам математики, включая задания для 3 класса. Не копировать вложения без проверки условий."
+    },
+    {
+      "id": "edsoo-chemistry-context-tasks-grade8",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Контекстные задачи. Задания к учебному курсу «Химия». 8 класс (2024 г.)",
+      "gradeRange": [
+        8
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "chemistry",
+      "topic": "Контекстные задачи по химии",
+      "kind": [
+        "contextual-tasks",
+        "methodical-materials"
+      ],
+      "url": "https://edsoo.ru/2025/01/16/kontekstnye-zadachi-zadaniya-k-uchebnomu-kursu-himiya-8-klass-2024-g/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная публикация ЕДСОО. Ссылка ведёт на страницу материала; право на зеркалирование PDF отдельно не подтверждено."
+    },
+    {
+      "id": "edsoo-geography-methodical-grade5",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методическое пособие. География. 5 класс (2022 г.)",
+      "gradeRange": [
+        5
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "geography",
+      "topic": "Методические материалы по географии",
+      "kind": [
+        "methodical-materials",
+        "teacher-guide"
+      ],
+      "url": "https://edsoo.ru/2023/08/31/metodicheskoe-posobie-geografiya-5-klass-2022-g/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО с материалом для учителя; год издания 2022, размещение на странице — 2023."
+    },
+    {
+      "id": "edsoo-biology-methodical-grade5",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методическое пособие. Биология. 5 класс, базовый уровень (2022 г.)",
+      "gradeRange": [
+        5
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "biology",
+      "topic": "Методические материалы по биологии",
+      "kind": [
+        "methodical-materials",
+        "teacher-guide"
+      ],
+      "url": "https://edsoo.ru/2023/08/08/biologiya-bazovyj-uroven-realizacziya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная страница ЕДСОО с материалом для учителя; не является полным учебником для ученика."
+    },
+    {
+      "id": "edsoo-physics-resh-case-grade7",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методические пособия РЭШ по физике — подборка уроков для 7 класса",
+      "gradeRange": [
+        7
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_PAGE",
+      "subject": "physics",
+      "topic": "Уроки физики и задания",
+      "kind": [
+        "lesson-catalog",
+        "methodical-materials"
+      ],
+      "url": "https://edsoo.ru/case_resh/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_GRADE_EXAMPLES_VERIFIED",
+      "note": "Страница ЕДСОО перечисляет уроки физики с примерами для 7 класса; каталог содержит ссылки на материалы, а не их локальные копии."
+    },
+    {
+      "id": "edsoo-biology-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания биологии в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SUBJECT_SCOPE",
+      "subject": "biology",
+      "topic": "Методические рекомендации для учителей",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-biologiya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; на ней опубликовано письмо на 2026/2027 год. Это методический материал, не учебник."
+    },
+    {
+      "id": "edsoo-geography-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания географии в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SUBJECT_SCOPE",
+      "subject": "geography",
+      "topic": "Методические рекомендации для учителей",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-geografiya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; на ней опубликовано письмо на 2026/2027 год. Это методический материал, не учебник."
+    },
+    {
+      "id": "edsoo-math-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания математики в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SUBJECT_SCOPE",
+      "subject": "mathematics",
+      "topic": "Методические рекомендации для учителей",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-matematika/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; на ней опубликовано письмо на 2026/2027 год и материалы по математике. Не заменяет учебник."
+    },
+    {
+      "id": "edsoo-physics-methodical-letter-2025-2026",
+      "sourceId": "edsoo-subject-materials",
+      "title": "«Вопросы о важном»: физика — материалы и рекомендации для учителей (2025/2026)",
+      "gradeRange": [
+        7,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_PAGE",
+      "subject": "physics",
+      "topic": "Методические рекомендации и федеральная рабочая программа",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/2025/09/11/voprosy-o-vazhnom-fizika/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; материал относится к учебному году 2025/2026, поэтому сохранён как дополнительный, не как актуальный на 2026/2027."
+    },
+    {
+      "id": "edsoo-geography-methodical-letter-2025-2026",
+      "sourceId": "edsoo-subject-materials",
+      "title": "«Вопросы о важном»: география — материалы и рекомендации для учителей (2025/2026)",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_PAGE",
+      "subject": "geography",
+      "topic": "Методические рекомендации и федеральная рабочая программа",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/2025/09/25/voprosy-o-vazhnom-geografiya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; материал относится к учебному году 2025/2026, сохранён как дополнительный архивный ресурс."
     }
   ],
   "coverageNote": "Добавлено 934 OCR-извлечённых библиографических записей учебников из действующих разделов федерального перечня 2026 года для классов 1–11. Точность названий/авторов/издателей не гарантируется до ручной сверки с PDF. Полные тексты коммерческих учебников не загружались.",

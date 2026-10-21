@@ -211,3 +211,27 @@ test('результаты уровня ООО извлекаются, даже 
   assert.ok(results.some((x) => x.includes('физическую нагрузку')));
   assert.ok(results.every((x) => !x.includes('Содержание обучения')));
 });
+
+test('новые официальные предметные материалы имеют уникальные ID, класс и прямую ссылку на источник', () => {
+  const ids = [
+    'edsoo-math-interactive-lessons-grade3',
+    'edsoo-chemistry-context-tasks-grade8',
+    'edsoo-geography-methodical-grade5',
+    'edsoo-biology-methodical-grade5',
+    'edsoo-physics-resh-case-grade7',
+    'edsoo-biology-methodical-letter-2026-2027',
+    'edsoo-geography-methodical-letter-2026-2027',
+    'edsoo-math-methodical-letter-2026-2027',
+    'edsoo-physics-methodical-letter-2025-2026',
+    'edsoo-geography-methodical-letter-2025-2026'
+  ];
+  const catalog = read('official-russian-school-material-items.json').items;
+  for (const id of ids) {
+    const item = catalog.find((x) => x.id === id);
+    assert.ok(item, 'missing official subject resource: ' + id);
+    assert.match(item.url, /^https:\/\//, id);
+    assert.equal(item.contentStoredLocally, false, id);
+    assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length > 0, id);
+    assert.match(item.rightsStatus, /LINK_ONLY/, id);
+  }
+});
