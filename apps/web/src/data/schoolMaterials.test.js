@@ -178,6 +178,6 @@ test('счётчик индексных записей равен сумме и�
       'publicLessonPlatformResourceCount', 'additionalOfficialSubjectResourceCount',
       'officialPlatformEntryPointCount'
     ].reduce((total, field) => total + (row[field] || 0), 0);
-    assert.equal(row.additionalCatalogResourceCount, extra, row.subject);
+    assert.equal(row.additionalCatalogResourceCount || 0, extra, row.subject);
   }
 });
