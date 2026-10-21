@@ -78,14 +78,20 @@ READING_LIST_SOURCE = {
 }
 
 
-def source_matches(target, source):
+def source_matches(target, source, grade=None):
     if target == "foreign-language":
         return source == "foreign-language" or source in LANGUAGE_SUBJECTS
+    # Федеральная программа использует «Литературное чтение» в начальной школе,
+    # а «Литературу» в основной/средней. Сопоставляем названия с учётом класса.
+    if target == "literature" and grade is not None and grade <= 4:
+        return source == "literary-reading"
+    if target == "literary-reading" and grade is not None and grade >= 5:
+        return source == "literature"
     return target == source
 
 
-def bibliography_matches(target, label):
-    return any(source_matches(target, subject) for subject in BIBLIOGRAPHY_SUBJECTS.get(label, []))
+def bibliography_matches(target, label, grade):
+    return any(source_matches(target, subject, grade) for subject in BIBLIOGRAPHY_SUBJECTS.get(label, []))
 
 
 def covers(grades, grade):
@@ -226,13 +232,14 @@ def main():
         for subject in subjects:
             biblio_count = sum(
                 1 for item in biblio if grade in (item.get("grades") or [])
-                and bibliography_matches(subject, item.get("subject", ""))
+                and covers(item.get("grades"), grade)
+                and bibliography_matches(subject, item.get("subject", ""), grade)
             )
             lesson_count = sum(
                 1 for item in lessons
                 if item.get("gradeStatus") == "GRADE_FOUND_IN_INDEX"
                 and covers(item.get("gradeRange"), grade)
-                and source_matches(subject, item.get("subject", ""))
+                and source_matches(subject, item.get("subject", ""), grade)
             )
             matching_programs = [
                 item for item in programs
@@ -253,7 +260,7 @@ def main():
                     1 for item in catalog_only_items
                     if item.get("_coverageType") == field
                     and covers(item.get("gradeRange"), grade)
-                    and source_matches(subject, item.get("_coverageSubject", ""))
+                    and source_matches(subject, item.get("_coverageSubject", ""), grade)
                 )
                 for field in (
                     "openReferenceResourceCount", "officialExamResourceCount",
