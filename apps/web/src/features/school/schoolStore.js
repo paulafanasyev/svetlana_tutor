@@ -6,6 +6,7 @@
 // the teacher hides / restores messages and closes signals. 3 reports hide a message until the teacher decides.
 // Audit 21.10: the teacher's own messages and homework go through the guard too; a learner's phone, e-mail,
 // links, @nicknames and street address are masked before the message is saved; video room names are unguessable.
+// All ids are stored as strings; lookups convert the caller's id with String() (a signed-in user's id may be a number).
 import { sanitizeCheck, validMark } from './homeworkCheck.js';
 import { checkChildSafety, maskContacts } from '../../ai/childSafety.js';
 
@@ -99,7 +100,7 @@ export const school = {
     save(db);
     return s;
   },
-  schoolOf(ownerId) { return load().schools.find((s) => s.ownerId === ownerId) || null; },
+  schoolOf(ownerId) { return load().schools.find((s) => s.ownerId === String(ownerId)) || null; },
   schoolById(id) { return load().schools.find((s) => s.id === id) || null; },
 
   createClass({ schoolId, title, subject, teacher }) {
@@ -112,21 +113,21 @@ export const school = {
     save(db);
     return c;
   },
-  classesOfTeacher(id) { return load().classes.filter((c) => c.teacherId === id); },
-  classesOfStudent(id) { return load().classes.filter((c) => c.members.some((m) => m.id === id)); },
+  classesOfTeacher(id) { return load().classes.filter((c) => c.teacherId === String(id)); },
+  classesOfStudent(id) { return load().classes.filter((c) => c.members.some((m) => m.id === String(id))); },
 
   join(code, user) {
     const db = load();
     const c = db.classes.find((x) => x.code === clean(code, 10).toUpperCase());
     if (!c) return null;
-    if (!c.members.some((m) => m.id === user.id)) c.members.push({ id: String(user.id), name: clean(user.name, 60), joinedAt: Date.now() });
+    if (!c.members.some((m) => m.id === String(user.id))) c.members.push({ id: String(user.id), name: clean(user.name, 60), joinedAt: Date.now() });
     save(db);
     return c;
   },
   leave(classId, userId) {
     const db = load();
     const c = db.classes.find((x) => x.id === classId);
-    if (c) c.members = c.members.filter((m) => m.id !== userId);
+    if (c) c.members = c.members.filter((m) => m.id !== String(userId));
     save(db);
   },
 

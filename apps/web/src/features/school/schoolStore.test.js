@@ -41,3 +41,23 @@ test('video room names are long and random', () => {
   assert.notEqual(a, b);
   assert.ok(!a.includes(c.code));
 });
+
+// A signed-in user's id can be a number; the store keeps ids as strings, so every lookup must match both.
+test('numeric user ids: no duplicate join, class lists, leave and homework work', () => {
+  mem.clear();
+  const t = { id: 41, name: 'Учитель', role: 'TEACHER' };
+  const s = { id: 7, name: 'Маша', role: 'STUDENT' };
+  const sch = school.createSchool({ name: 'СОШ 1', region: '', ownerId: t.id });
+  assert.equal(school.schoolOf(41)?.id, sch.id);
+  const c = school.createClass({ schoolId: sch.id, title: '6Б', subject: 'Математика', teacher: t });
+  school.join(c.code, s);
+  school.join(c.code, s);
+  assert.equal(school.get().classes[0].members.length, 1, 'joined twice');
+  assert.equal(school.classesOfTeacher(41).length, 1);
+  assert.equal(school.classesOfStudent(7).length, 1);
+  const h = school.addHomework(c.id, t, { title: '№ 12' });
+  assert.ok(school.submitHomework(h.id, s, 'Ответ: 5', null));
+  assert.ok(school.submissionOf(h.id, 7));
+  school.leave(c.id, 7);
+  assert.equal(school.get().classes[0].members.length, 0, 'leave with a numeric id');
+});

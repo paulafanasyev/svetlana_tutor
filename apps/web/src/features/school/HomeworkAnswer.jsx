@@ -1,5 +1,4 @@
-// Student homework answer + Svetlana's check. Shared by «Уроки» (features/school/Lessons.jsx).
-// TODO: ClassRoom.jsx still has its own copy of these two components; switch it to this file.
+// Student homework answer + Svetlana's check. Shared by «Уроки» (Lessons.jsx) and «Мой класс» (ClassRoom.jsx).
 import { useState } from 'react';
 import { school } from './schoolStore.js';
 import { useAI } from '../../ai/useAI.js';

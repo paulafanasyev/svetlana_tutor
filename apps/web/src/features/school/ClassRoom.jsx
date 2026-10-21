@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useApp } from '../../core/store.js';
 import { school } from './schoolStore.js';
 import { MARKS } from './homeworkCheck.js';
-import { useAI } from '../../ai/useAI.js';
+import HomeworkAnswer, { SvetlanaCheck } from './HomeworkAnswer.jsx';
 import RuOnly from './RuOnly.jsx';
 
 function useSchoolDb() {
@@ -10,6 +10,9 @@ function useSchoolDb() {
   useEffect(() => school.subscribe(setDb), []);
   return db;
 }
+
+// The store keeps every id as a string; the signed-in user's id may be a number, so compare as strings.
+const sid = (v) => String(v ?? '');
 
 const SUBJECTS = ['Математика', 'Алгебра', 'Геометрия', 'Иностранный язык', 'Русский язык', 'Классное руководство', 'Другой предмет'];
 const input = 'w-full rounded-xl border border-black/10 bg-white px-3 py-2 font-semibold';
@@ -22,24 +25,6 @@ const MUTE_KEY = 'aet_chat_muted';
 const loadMuted = (uid) => { try { return (JSON.parse(localStorage.getItem(MUTE_KEY) || '{}') || {})[uid] || []; } catch { return []; } };
 const saveMuted = (uid, list) => { try { const all = JSON.parse(localStorage.getItem(MUTE_KEY) || '{}') || {}; all[uid] = list; localStorage.setItem(MUTE_KEY, JSON.stringify(all)); } catch { /* noop */ } };
 const smallBtn = 'min-h-[44px] px-2 text-xs font-bold text-ink/50 hover:text-ink';
-
-function SvetlanaCheck({ check }) {
-  if (!check) return <p className="text-xs font-semibold text-ink/50">Светлана ещё не проверяла этот ответ.</p>;
-  return (
-    <div className="rounded-xl bg-violet-50 px-3 py-2 text-sm space-y-1">
-      <div className="font-black">👩‍🏫 Светлана{check.mark ? `: предварительно ${check.mark}` : ''}<span className="ml-1 text-[11px] font-bold text-ink/40">{check.source === 'llm' ? '(локальный ИИ)' : '(проверка по правилам)'}</span></div>
-      <p className="font-semibold">{check.verdict}</p>
-      {check.fixes.length > 0 && (
-        <ul className="space-y-0.5">
-          {check.fixes.map((f, i) => (
-            <li key={i} className="font-semibold"><span className="line-through text-red-600">{f.wrong}</span>{f.right && <> → <span className="text-green-700">{f.right}</span></>}{f.why && <span className="text-ink/60"> · {f.why}</span>}</li>
-          ))}
-        </ul>
-      )}
-      {check.advice && <p className="text-xs font-semibold text-ink/60">💡 {check.advice}</p>}
-    </div>
-  );
-}
 
 function TeacherMark({ sub, user }) {
   const [mark, setMark] = useState(String(sub.mark || sub.check?.mark || 5));
@@ -99,50 +84,6 @@ function HomeworkTeacher({ cls, user, db }) {
   );
 }
 
-function HomeworkAnswer({ hw, cls, user, sub }) {
-  const ai = useAI();
-  const [text, setText] = useState('');
-  const [editing, setEditing] = useState(!sub);
-  const [busy, setBusy] = useState(false);
-  const send = async () => {
-    if (!text.trim() || busy) return;
-    setBusy(true);
-    let check = null;
-    try {
-      const r = await ai.runTask('check_homework', { subject: cls.subject, task: `${hw.title}\n${hw.text}`, answer: text, expected: hw.expected }, { locale: 'ru', timeoutMs: 40000 });
-      check = r?.data || null;
-    } catch { check = null; }
-    if (school.submitHomework(hw.id, user, text, check)) { setText(''); setEditing(false); }
-    setBusy(false);
-  };
-  if (sub && !editing) {
-    return (
-      <div className="space-y-2">
-        <div className="text-xs font-black text-ink/50">Твой ответ · {time(sub.at)}</div>
-        <p className="whitespace-pre-wrap rounded-xl bg-white px-3 py-2 text-sm font-semibold">{sub.text}</p>
-        <SvetlanaCheck check={sub.check} />
-        {sub.mark ? (
-          <p className="rounded-xl bg-green-50 px-3 py-2 text-sm font-black">✅ Оценка учителя: {sub.mark}{sub.comment ? ` · ${sub.comment}` : ''}</p>
-        ) : (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold text-ink/50">Учитель ещё не поставил оценку.</span>
-            <button className="btn-ghost !py-1.5 text-sm" onClick={() => { setText(sub.text); setEditing(true); }}>Исправить и сдать заново</button>
-          </div>
-        )}
-      </div>
-    );
-  }
-  return (
-    <div className="space-y-2">
-      <textarea aria-label={`Ответ: ${hw.title}`} className={input} rows={4} value={text} onChange={(e) => setText(e.target.value)} placeholder="Напиши решение или ответ…" disabled={busy} />
-      <div className="flex flex-wrap gap-2">
-        <button className="btn-primary !py-2" disabled={!text.trim() || busy} onClick={send}>{busy ? 'Светлана проверяет…' : 'Сдать на проверку Светлане'}</button>
-        {sub && !busy && <button className="btn-ghost !py-2" onClick={() => setEditing(false)}>Отмена</button>}
-      </div>
-    </div>
-  );
-}
-
 function HomeworkStudent({ cls, user, db }) {
   const list = db.homework.filter((h) => h.classId === cls.id).sort((a, b) => b.createdAt - a.createdAt);
   return (
@@ -150,7 +91,7 @@ function HomeworkStudent({ cls, user, db }) {
       <div className="font-black">🏠 Домашние задания</div>
       {list.length === 0 && <p className="text-sm font-semibold text-ink/50">Учитель пока не задал домашних заданий.</p>}
       {list.map((h) => {
-        const sub = db.submissions.find((x) => x.hwId === h.id && x.studentId === user.id) || null;
+        const sub = db.submissions.find((x) => x.hwId === h.id && x.studentId === sid(user.id)) || null;
         const late = h.due && !sub && h.due < today();
         return (
           <details key={h.id} className="rounded-2xl bg-soft/60 p-3" open={!sub}>
@@ -206,7 +147,8 @@ function Chat({ cls, user, db }) {
   const [help, setHelp] = useState('');
   const [note, setNote] = useState('');
   const [muted, setMuted] = useState(() => loadMuted(user.id));
-  const isTeacher = user.id === cls.teacherId;
+  const me = sid(user.id);
+  const isTeacher = me === cls.teacherId;
   const all = db.messages[cls.id] || [];
   const list = isTeacher ? all : all.filter((m) => !muted.includes(m.userId));
   const end = useRef(null);
@@ -229,7 +171,7 @@ function Chat({ cls, user, db }) {
       <div className="max-h-80 min-h-[8rem] overflow-y-auto space-y-2 rounded-2xl bg-soft/60 p-3" aria-live="polite">
         {list.length === 0 && <p className="text-sm font-semibold text-ink/50">Сообщений пока нет.</p>}
         {list.map((m) => {
-          const mine = m.userId === user.id;
+          const mine = m.userId === me;
           const fromTeacher = m.userId === cls.teacherId;
           if (m.hidden && !isTeacher) return <div key={m.id} className="rounded-xl px-3 py-2 text-xs font-semibold text-ink/40 bg-white/50">Сообщение скрыто учителем.</div>;
           return (
@@ -273,7 +215,7 @@ function Chat({ cls, user, db }) {
 
 function RemoteLesson({ cls, user }) {
   const [topic, setTopic] = useState('');
-  const isTeacher = user.id === cls.teacherId;
+  const isTeacher = sid(user.id) === cls.teacherId;
   return (
     <div className="card p-4 space-y-3">
       <div className="font-black">🎥 Дистанционный урок</div>
@@ -299,8 +241,9 @@ function RemoteLesson({ cls, user }) {
 }
 
 function TeacherView({ user, db }) {
-  const mySchool = db.schools.find((s) => s.ownerId === user.id);
-  const classes = db.classes.filter((c) => c.teacherId === user.id);
+  const me = sid(user.id);
+  const mySchool = db.schools.find((s) => s.ownerId === me);
+  const classes = db.classes.filter((c) => c.teacherId === me);
   const [name, setName] = useState('');
   const [region, setRegion] = useState('');
   const [title, setTitle] = useState('');
@@ -364,7 +307,8 @@ function TeacherView({ user, db }) {
 }
 
 function StudentView({ user, db }) {
-  const classes = db.classes.filter((c) => c.members.some((m) => m.id === user.id));
+  const me = sid(user.id);
+  const classes = db.classes.filter((c) => c.members.some((m) => m.id === me));
   const [code, setCode] = useState('');
   const [err, setErr] = useState('');
   const [sel, setSel] = useState(null);
