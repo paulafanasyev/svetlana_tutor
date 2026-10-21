@@ -139,10 +139,11 @@
   } else $$('.reveal').forEach((el) => el.classList.add('in'));
 
   /* ---------------- teacher portraits (from the app's data modules) ---------------- */
+  // Repository was renamed ai-english-teacher → svetlana_tutor; the pinned commit is the same.
   const REV = 'e19bed09d0cbce96d412d2d4746861d4806399b5';
   const SOURCES = [
-    `https://cdn.jsdelivr.net/gh/paulafanasyev/ai-english-teacher@${REV}/apps/web/src/avatar/pixar/`,
-    `https://raw.githubusercontent.com/paulafanasyev/ai-english-teacher/${REV}/apps/web/src/avatar/pixar/`,
+    `https://cdn.jsdelivr.net/gh/paulafanasyev/svetlana_tutor@${REV}/apps/web/src/avatar/pixar/`,
+    `https://raw.githubusercontent.com/paulafanasyev/svetlana_tutor/${REV}/apps/web/src/avatar/pixar/`,
   ];
   async function fetchText(path) {
     for (const base of SOURCES) {
