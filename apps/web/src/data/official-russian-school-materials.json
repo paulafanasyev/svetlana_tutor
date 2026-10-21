@@ -515,7 +515,9 @@
       },
       "catalogReportedUpdated": "2026-10-16",
       "storesFullTextbooksLocally": false,
-      "rightsNote": "Public access for educational/research use is not treated as a general redistribution license; this branch initially stores bibliography and links only."
+      "rightsNote": "Public access for educational/research use is not treated as a general redistribution license; this branch initially stores bibliography and links only.",
+      "indexedPageCount": 128,
+      "indexCoverageStatus": "PARTIAL_INDEX"
     },
     {
       "id": "fipi-official-exam-materials",
