@@ -2,7 +2,7 @@
   "schemaVersion": 6,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
-  "note": "Это проверенный индекс источников и отдельных учебных ресурсов, а не архив полных коммерческих учебников.",
+  "note": "Объединённый индекс: ссылки на ресурсы, уроки, федеральные программы, исторические записи и частичные библиографические записи учебников. Не считать индекс полным архивом учебников.",
   "items": [
     {
       "id": "fpu-order-436-2026",
@@ -12612,7 +12612,4201 @@
       "accessStatus": "direct PDF link published on official EDSOO site",
       "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
       "contentStoredLocally": false
+    },
+    {
+      "id": "fpu2026-book-0006",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 1-й класс: учебник",
+      "authors": "Канакина В.П., Горецкий В.Г.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 6,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0007",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 2-й класс: учебник: в 2 частях",
+      "authors": "Канакина В.П., Горецкий В.Г.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 7,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0008",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 3-й класс: учебник: в 2 частях",
+      "authors": "Канакина В.П., Горецкий В.Г.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 8,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0009",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 4-й класс: учебник: в 2 частях",
+      "authors": "Канакина В.П., Горецкий В.Г.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 9,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0011",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литературное чтение: 1-й класс: учебник: в 2 частях",
+      "authors": "Климанова Л.Ф., Горецкий В.Г., Голованова М.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 11,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0012",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литературное чтение: 2-й класс: учебник: в 2 частях",
+      "authors": "Климанова Л.Ф., Горецкий В.Г., Голованова М.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 12,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0013",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литературное чтение: 3-й класс: учебник: в 2 частях",
+      "authors": "Климанова Л.Ф., Горецкий В.Г., Голованова М.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 13,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0018",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литературное чтение (в 2 частях)",
+      "authors": "Климанова Л.Ф., Виноградская Л.А., Бойкина М.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 18,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "literary-reading",
+      "subjectLabel": "Литературное чтение",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/15895839d7db8d68e7323fa24f83eeabb8562360/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0194",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 1-й класс: учебник: в 2 частях; 15-е издание, переработанное",
+      "authors": "Моро М.И., Волкова С.И., Степанова С.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 194,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e1536aaf8f22e4af5de24e01e968ff24bff35a1f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0195",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 2-й класс: учебник: в 2 частях; 15-е издание, переработанное",
+      "authors": "Моро М.И., Бантова М.А., Бельтюкова Г.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 195,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e1536aaf8f22e4af5de24e01e968ff24bff35a1f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0196",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 3-й класс: учебник: в 2 частях; 14-е издание, переработанное",
+      "authors": "Моро М.И., Бантова М.А., Бельтюкова Г.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 196,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e1536aaf8f22e4af5de24e01e968ff24bff35a1f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0197",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 4-й класс: учебник: в 2 частях; 13-е издание, переработанное",
+      "authors": "Моро М.И., Бантова М.А., Бельтюкова Г.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 197,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e1536aaf8f22e4af5de24e01e968ff24bff35a1f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0110",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Информатика",
+      "authors": "Рудченко Т.А., Семенов А.Л.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 110,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/6761c3bfe79db1e08f7777e4f061d77105d5c0d4/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0111",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Информатика",
+      "authors": "Рудченко Т.А., Семенов А.Л.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 111,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/6761c3bfe79db1e08f7777e4f061d77105d5c0d4/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0169",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 2-й класс: учебник: в 2 частях; переработанное",
+      "authors": "Быкова Н.И., Дули Д., Поспелова М.Д. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 169,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8c40fbce5e9c13288a6a0479115982e5a7bb1800/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0170",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 3-й класс: учебник: в 2 частях; переработанное",
+      "authors": "Быкова Н.И., Дули Д., Поспелова М.Д. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 170,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8c40fbce5e9c13288a6a0479115982e5a7bb1800/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0171",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 4-й класс: учебник: в 2 частях; переработанное",
+      "authors": "Быкова Н.И., Дули Д., Поспелова М.Д. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 171,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8c40fbce5e9c13288a6a0479115982e5a7bb1800/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0412",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 5-й класс: учебник; переработанное",
+      "authors": "Ваулина Ю.Е., Дули Д., Подоляко О.Е. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 412,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/61db9a1b64acf92032a6dbdf6fc08e662c847451/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0413",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 6-й класс: учебник; переработанное",
+      "authors": "Ваулина Ю.Е., Дули Д., Подоляко О.Е. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 413,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/61db9a1b64acf92032a6dbdf6fc08e662c847451/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0414",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 7-й класс: учебник; переработанное",
+      "authors": "Ваулина Ю.Е., Дули Д., Подоляко О.Е. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 414,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/61db9a1b64acf92032a6dbdf6fc08e662c847451/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0415",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 8-й класс: учебник; переработанное",
+      "authors": "Ваулина Ю.Е., Дули Д., Подоляко О.Е. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 415,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/61db9a1b64acf92032a6dbdf6fc08e662c847451/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0416",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык: 9-й класс: учебник; переработанное",
+      "authors": "Ваулина Ю.Е., Дули Д., Подоляко О.Е. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 416,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/61db9a1b64acf92032a6dbdf6fc08e662c847451/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0205",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература (в 2 частях)",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 205,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/cf71da7c12d65a62bc6443ab4a51cf37c7241b66/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0206",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература (в 2 частях)",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И. и другие; под редакцией Коровиной В.Я.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 206,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/cf71da7c12d65a62bc6443ab4a51cf37c7241b66/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0620",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература (в 2 частях)",
+      "authors": "Лебедев Ю.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 620,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/66d03884e6bf6b4a20e00e58de3daa54faf22c4e/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0621",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература (в 2 частях)",
+      "authors": "Михайлов О.Н., Шайтанов И.О., Чалмаев В.А. и другие; под редакцией Журавлева В.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 621,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/66d03884e6bf6b4a20e00e58de3daa54faf22c4e/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0331",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: алгебра и геометрия",
+      "authors": "Козлов В.В., Никитин А.А., Белоносов В.С. и другие; под редакцией Козлова В.В. и Никитина А.А.",
+      "publisher": "ООО «Русское слово - учебник»",
+      "federalListNumber": 331,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Математика (алгебра и геометрия)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4cf01534f8ee978a2e0f2342feda2bf164d24489/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0334",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Алгебра",
+      "authors": "Бунимович Е.А., Кузнецова Л.В., Минаева С.С. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 334,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4cf01534f8ee978a2e0f2342feda2bf164d24489/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0335",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Алгебра",
+      "authors": "Дорофеев Г.В., Суворова С.Б., Бунимович Е.А. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 335,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4cf01534f8ee978a2e0f2342feda2bf164d24489/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0695",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: алгебра и начала математического анализа, геометрия. Алгебра и начала математического анализа",
+      "authors": "Алимов Ш.А., Колягин Ю.М., Ткачева М.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 695,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "grades": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Математика (алгебра и начала математического анализа)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/45b0608740f0d92a712a457fe3247f133f1027ce/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0696",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: алгебра и начала математического анализа, геометрия. Геометрия",
+      "authors": "Атанасян Л.С., Бутузов В.Ф., Кадомцев С.Б. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 696,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "grades": [
+        10,
+        11
+      ],
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/45b0608740f0d92a712a457fe3247f133f1027ce/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0364",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История России (в 2 частях)",
+      "authors": "Арсентьев Н.М., Данилов А.А., Курукин И.В. и другие; под редакцией Торкунова А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 364,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0440",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физика",
+      "authors": "Белага В.В., Ломаченков И.А., Панебратцев Ю.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 440,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/6a6731b361ad0223fabba82735aff4e53ffabc56/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0485",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Химия",
+      "authors": "Габриелян О.С., Остроумов И.Г., Сладков С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 485,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/6f5955d7041aa4d66b25bdaf5206b29929daf6b2/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0708",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Химия",
+      "authors": "Габриелян О.С., Остроумов И.Г., Сладков С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 708,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/fb83ac95eb58b8728ac4c9eb488e5658de0cac9c/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0540",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физика (в 2 частях); углубленное обучение",
+      "authors": "Генденштейн Л.Э., Булатова А.А., Корнильев И.Н. и другие; под редакцией Орлова В.А.",
+      "publisher": "ООО «БИНОМ. Лаборатория знаний»; АО «Издательство «Просвещение»",
+      "federalListNumber": 540,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/440d8fbfbc2153f475e1115e247486ff045e2902/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0709",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Химия",
+      "authors": "Габриелян О.С., Остроумов И.Г., Сладков С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 709,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/fb83ac95eb58b8728ac4c9eb488e5658de0cac9c/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0384",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. История Древнего мира: 5-й класс: учебник; 14-е издание, переработанное",
+      "authors": "Вигасин А.А., Годер Г.И., Свенцицкая И.С.; под редакцией Искендерова А.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 384,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0390",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России: 7-й класс: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Арсентьев Н.М., Данилов А.А., Курукин И.В. и другие; под редакцией Торкунова А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 390,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0391",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России: 8-й класс: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Арсентьев Н.М., Данилов А.А., Курукин И.В. и другие; под редакцией Торкунова А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 391,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0392",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России: 9-й класс: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Арсентьев Н.М., Данилов А.А., Левандовский А.А. и другие; под редакцией Торкунова А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 392,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0374",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История России. Конец XVII - XVIII века",
+      "authors": "Черникова Т.В., Агафонов С.В.; под общей редакцией Мединского В.Р.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 374,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0375",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История России. XIX - начало XX века",
+      "authors": "Вишняков Я.В., Могилевский Н.А., Агафонов С.В.; под общей редакцией Мединского В.Р.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 375,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0126",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Изобразительное искусство",
+      "authors": "Горяева Н.А., Неменская Л.А., Питерских А.С. и другие; под редакцией Неменского Б.М.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 126,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a7680e1fd6b623a35439fb6ab22c75b4711a4ffd/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0127",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Изобразительное искусство",
+      "authors": "Неменская Л.А.; под редакцией Неменского Б.М.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 127,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a7680e1fd6b623a35439fb6ab22c75b4711a4ffd/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0130",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Изобразительное искусство",
+      "authors": "Шпикалова Т.Я., Ершова Л.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 130,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a7680e1fd6b623a35439fb6ab22c75b4711a4ffd/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0131",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Изобразительное искусство",
+      "authors": "Шпикалова Т.Я., Ершова Л.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 131,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "visual-arts",
+      "subjectLabel": "Изобразительное искусство",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a7680e1fd6b623a35439fb6ab22c75b4711a4ffd/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0204",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы православной культуры. 4 класс: учебник: в 2 частях; 1-ое издание",
+      "authors": "Васильева О.Ю., Кульберг А.С., Корытко О.В. и другие; под научной редакцией Васильевой О.Ю.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 204,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0205",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы исламской культуры: 4-й класс: учебник; 10-е издание, переработанное",
+      "authors": "Латышина Д.И., Муртазин М.Ф.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 205,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0206",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы буддийской культуры: 4-й класс: учебник; 8-е издание, переработанное",
+      "authors": "Чимитдоржиев В.Л.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 206,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0207",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы иудейской культуры: 4-й класс: учебник; 7-е издание, переработанное",
+      "authors": "Членов М.А., Миндрина Г.А., Глоцер А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 207,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0208",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы религиозных культур народов России: 4-й класс: учебник; 10-е издание, переработанное",
+      "authors": "Беглов А.Л., Саплина Е.В., Токарева Е.С. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 208,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0209",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы религиозных культур и светской этики. Основы светской этики: 4-й класс: учебник; 11-е издание, переработанное",
+      "authors": "Шемшурина А.И., Шемшурин А.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 209,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОРКСЭ",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/c8338b4c649aafee2a235d801554d655f1f574c0/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0599",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Технология: 5-й класс: учебник; 4-е издание, переработанное",
+      "authors": "Глозман Е.С., Кожина О.А., Хотунцев Ю.Л. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 599,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Труд (технология)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/98af6bb62daa18ec9ee0a79ed91daf715800d88b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0600",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Технология: 6-й класс: учебник; 4-е издание, переработанное",
+      "authors": "Глозман Е.С., Кожина О.А., Хотунцев Ю.Л. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 600,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Труд (технология)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/98af6bb62daa18ec9ee0a79ed91daf715800d88b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0601",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Технология: 7-й класс: учебник; 4-е издание, переработанное",
+      "authors": "Глозман Е.С., Кожина О.А., Хотунцев Ю.Л. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 601,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Труд (технология)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/98af6bb62daa18ec9ee0a79ed91daf715800d88b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0602",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Технология: 8 - 9-е классы: учебник; 4-е издание, переработанное",
+      "authors": "Глозман Е.С., Кожина О.А., Хотунцев Ю.Л. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 602,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "grades": [
+        8,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "Труд (технология)",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/98af6bb62daa18ec9ee0a79ed91daf715800d88b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0608",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 8 - 9-е классы: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Часть 1: Рудаков Д.П., Приорова Е.М., Позднякова О.В. и другие; под научной редакцией Шойгу Ю.С. Часть 2: Куличенко Т.В., Костюк Г.П., Дежурный Л.И. и другие; под научной редакцией Шойгу Ю.С.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 608,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "grades": [
+        8,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0609",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 5-й класс: учебник; 3-е издание, переработанное",
+      "authors": "Хренников Б.О., Гололобов Н.В., Льняная Л.И. и другие; под редакцией Егорова С.Н.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 609,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0610",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 6-й класс: учебник; 3-е издание, переработанное",
+      "authors": "Хренников Б.О., Гололобов Н.В., Льняная Л.И. и другие; под редакцией Егорова С.Н.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 610,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0612",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 8-й класс: учебник; 3-е издание, переработанное",
+      "authors": "Хренников Б.О., Гололобов Н.В., Льняная Л.И. и другие; под редакцией Егорова С.Н.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 612,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0613",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 9-й класс: учебник; 3-е издание, переработанное",
+      "authors": "Хренников Б.О., Гололобов Н.В., Льняная Л.И. и другие; под редакцией Егорова С.Н.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 613,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0468",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Китайский язык: второй иностранный язык: 5-й класс: учебник; 6-е издание, переработанное",
+      "authors": "Сизова А.А., Чэнь Фу, Чжу Чжипин и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 468,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "chinese-language",
+      "subjectLabel": "Китайский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/00a71b3b08e73bfa04795eefebd5bc26df521123/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0611",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Основы безопасности жизнедеятельности: 7-й класс: учебник; 3-е издание, переработанное",
+      "authors": "Хренников Б.О., Гололобов Н.В., Льняная Л.И. и другие; под редакцией Егорова С.Н.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 611,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "all-school-subjects",
+      "subjectLabel": "ОБЗР",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/2084305d6801e49b94baf15f0cdb37dd42e06518/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0726",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География; базовое и углубленное обучение",
+      "authors": "Гладкий Ю.Н., Николина В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 726,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/3b7389a2cb689eae6f6ab6235a6f6358822b883e/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0727",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География; базовое и углубленное обучение",
+      "authors": "Гладкий Ю.Н., Николина В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 727,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/3b7389a2cb689eae6f6ab6235a6f6358822b883e/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0389",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России: 6-й класс: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Арсентьев Н.М., Данилов А.А., Стефанович П.С. и другие; под редакцией Торкунова А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 389,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0233",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 5-й класс: учебник: в 2 частях; 5-е издание, переработанное",
+      "authors": "Ладыженская Т.А., Баранов М.Т., Тростенцова Л.А. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 233,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0234",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 6-й класс: учебник: в 2 частях; 5-е издание, переработанное",
+      "authors": "Баранов М.Т., Ладыженская Т.А., Тростенцова Л.А. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 234,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0235",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 7-й класс: учебник: в 2 частях; 5-е издание, переработанное",
+      "authors": "Баранов М.Т., Ладыженская Т.А., Тростенцова Л.А. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 235,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0236",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 8-й класс: учебник; 5-е издание, переработанное",
+      "authors": "Бархударов С.Г., Крючков С.Е., Максимов Л.Ю. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 236,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0237",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык: 9-й класс: учебник; 5-е издание, переработанное",
+      "authors": "Бархударов С.Г., Крючков С.Е., Максимов Л.Ю. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 237,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/27f78d1940d87bc8ff0f11ee74a8b6e581d8377f/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0347",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Геометрия",
+      "authors": "Атанасян Л.С., Бутузов В.Ф., Кадомцев С.Б. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 347,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4cf01534f8ee978a2e0f2342feda2bf164d24489/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0199",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Окружающий мир: 1-й класс: учебник: в 2 частях",
+      "authors": "Плешаков А.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 199,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/210e0071d6a151ed5440d01314f522dc45f4f450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0200",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Окружающий мир: 2-й класс: учебник: в 2 частях",
+      "authors": "Плешаков А.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 200,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/210e0071d6a151ed5440d01314f522dc45f4f450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0201",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Окружающий мир: 3-й класс: учебник: в 2 частях",
+      "authors": "Плешаков А.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 201,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/210e0071d6a151ed5440d01314f522dc45f4f450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0202",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Окружающий мир: 4-й класс: учебник: в 2 частях",
+      "authors": "Плешаков А.А., Крючкова Е.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 202,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "world-around-us",
+      "subjectLabel": "Окружающий мир",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/210e0071d6a151ed5440d01314f522dc45f4f450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0594",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 5-й класс: учебник",
+      "authors": "Сергеева Г.П., Критская Е.Д.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 594,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4477ea9cd5353d0f9c78cbeb12b00df95d72942a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0595",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 6-й класс: учебник",
+      "authors": "Сергеева Г.П., Критская Е.Д.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 595,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4477ea9cd5353d0f9c78cbeb12b00df95d72942a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0596",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 7-й класс: учебник",
+      "authors": "Сергеева Г.П., Критская Е.Д.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 596,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4477ea9cd5353d0f9c78cbeb12b00df95d72942a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0597",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 8-й класс: учебник",
+      "authors": "Сергеева Г.П., Критская Е.Д.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 597,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4477ea9cd5353d0f9c78cbeb12b00df95d72942a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0402",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. История Древнего мира: 5-й класс: учебник; 3-е, переработанное",
+      "authors": "Саплина Е.В., Немировский А.А., Соломатина Е.И. и другие; под общей редакцией Мединского В.Р.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 402,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0403",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. История Средних веков: 6-й класс: учебник; 3-е, переработанное",
+      "authors": "Абрамов А.В., Рогожкин В.А., Тырин С.В.; под общей редакцией Мединского В.Р.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 403,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0404",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. История Нового времени. Конец XV - XVII веков: 7-й класс: учебник; 3-е, переработанное",
+      "authors": "Морозов А.Ю., Абдулаев Э.Н., Тырин С.В. и другие; под общей редакцией Мединского В.Р.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 404,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/f2f6daed6c7fa1297c23767a166b671fb44f866d/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0583",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология: 5-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "Пасечник В.В., Суматохин С.В., Гапонюк З.Г. и другие; под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 583,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0584",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология: 6-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "Пасечник В.В., Суматохин С.В., Гапонюк З.Г. и другие; под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 584,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0585",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология: 7-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "Пасечник В.В., Суматохин С.В., Гапонюк З.Г. и другие; под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 585,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0586",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология: 8-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "Пасечник В.В., Суматохин С.В., Гапонюк З.Г.; под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 586,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0587",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология: 9-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "Пасечник В.В., Каменский А.А., Швецов Г.Г. и другие; под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 587,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/535f77e0c3c98bfa8b0f0e2770aceaff37e06450/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0713",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология",
+      "authors": "Пасечник В.В., Каменский А.А., Рубцов А.М. и другие; Под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 713,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d8799ce346d3fc308fc4690cca02a4784c9da7e9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0714",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология",
+      "authors": "Пасечник В.В., Каменский А.А., Рубцов А.М. и другие; Под редакцией Пасечника В.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 714,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d8799ce346d3fc308fc4690cca02a4784c9da7e9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0715",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология. Биологические системы и процессы; углубленное обучение",
+      "authors": "Теремов А.В., Петросова Р.А.",
+      "publisher": "ООО «ИОЦ МНЕМОЗИНА»",
+      "federalListNumber": 715,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d8799ce346d3fc308fc4690cca02a4784c9da7e9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0716",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Биология. Биологические системы и процессы; углубленное обучение",
+      "authors": "Теремов А.В., Петросова Р.А.",
+      "publisher": "ООО «ИОЦ МНЕМОЗИНА»",
+      "federalListNumber": 716,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "biology",
+      "subjectLabel": "Биология",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d8799ce346d3fc308fc4690cca02a4784c9da7e9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0571",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География: 5 - 6-е классы: учебник; 12-е издание, переработанное",
+      "authors": "Алексеев А.И., Николина В.В., Липкина Е.К. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 571,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "grades": [
+        5,
+        6
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/59d8b2fda6b50975482f1ad419d595e5e5a81651/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0572",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География: 7-й класс: учебник; 11-е издание, переработанное",
+      "authors": "Алексеев А.И., Николина В.В., Липкина Е.К. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 572,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/59d8b2fda6b50975482f1ad419d595e5e5a81651/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0573",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География: 8-й класс: учебник; 12-е издание, переработанное",
+      "authors": "Алексеев А.И., Николина В.В., Липкина Е.К. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 573,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/59d8b2fda6b50975482f1ad419d595e5e5a81651/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0574",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "География: 9-й класс: учебник; 11-е издание, переработанное",
+      "authors": "Алексеев А.И., Николина В.В., Липкина Е.К. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 574,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "geography",
+      "subjectLabel": "География",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/59d8b2fda6b50975482f1ad419d595e5e5a81651/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0604",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 5-й класс: учебник; 13-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 604,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/bb975acf2bfeb14b31cf0818913bcb0ff5fb048a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0605",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 6 - 7-е классы: учебник; 13-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 605,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        7
+      ],
+      "grades": [
+        6,
+        7
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/bb975acf2bfeb14b31cf0818913bcb0ff5fb048a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0606",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 8 - 9-е классы: учебник; 12-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 606,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "grades": [
+        8,
+        9
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/bb975acf2bfeb14b31cf0818913bcb0ff5fb048a/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0731",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура; базовый уровень",
+      "authors": "Лях В.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 731,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "grades": [
+        10,
+        11
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/4d6760e9e0feb780295f5eb8d59ab06535013dea/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0226",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 1 - 4-е классы: учебник: в 2 частях",
+      "authors": "Винер И.А., Цыганкова О.Д. под редакцией Винер И.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 226,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0227",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 1-й класс: учебник; 14-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 227,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0228",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 2-й класс: учебник; 13-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 228,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0229",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 3-й класс: учебник; 5-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 229,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0230",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физическая культура: 4-й класс: учебник; 5-е издание, переработанное",
+      "authors": "Матвеев А.П.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 230,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "physical-education",
+      "subjectLabel": "Физическая культура",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/8322b353ce6184c7d72449068bc051b83b3171b9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0216",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 1-й класс: учебник; 15-е издание, переработанное",
+      "authors": "Критская Е.Д., Сергеева Г.П., Шмагина Т.С.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 216,
+      "level": "НОО",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "grades": [
+        1
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e3cb5f150a0dc0e829ac3e0e4ae45fafb4576cd5/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0217",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 2-й класс: учебник; 15-е издание, переработанное",
+      "authors": "Критская Е.Д., Сергеева Г.П., Шмагина Т.С.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 217,
+      "level": "НОО",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "grades": [
+        2
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e3cb5f150a0dc0e829ac3e0e4ae45fafb4576cd5/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0218",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 3-й класс: учебник; 15-е издание, переработанное",
+      "authors": "Критская Е.Д., Сергеева Г.П., Шмагина Т.С.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 218,
+      "level": "НОО",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "grades": [
+        3
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e3cb5f150a0dc0e829ac3e0e4ae45fafb4576cd5/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0219",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Музыка: 4-й класс: учебник; 14-е издание, переработанное",
+      "authors": "Критская Е.Д., Сергеева Г.П., Шмагина Т.С.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 219,
+      "level": "НОО",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "grades": [
+        4
+      ],
+      "subject": "music",
+      "subjectLabel": "Музыка",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/e3cb5f150a0dc0e829ac3e0e4ae45fafb4576cd5/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0576",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физика: 7-й класс: базовый уровень: учебник; 3-е издание, переработанное",
+      "authors": "Перышкин И.М., Иванов А.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 576,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/dec887588d152b74b67c1459dee72e20f1857283/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0577",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физика: 8-й класс: базовый уровень: учебник; 3-е издание, переработанное",
+      "authors": "Перышкин И.М., Иванов А.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 577,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/dec887588d152b74b67c1459dee72e20f1857283/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0578",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Физика: 9-й класс: базовый уровень: учебник; 3-е издание, переработанное",
+      "authors": "Перышкин И.М., Гутник Е.М., Иванов А.И. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 578,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "physics",
+      "subjectLabel": "Физика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/dec887588d152b74b67c1459dee72e20f1857283/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0580",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Химия: 8-й класс: базовый уровень: учебник; 5-е издание, переработанное",
+      "authors": "Габриелян О.С., Остроумов И.Г., Сладков С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 580,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/ab917731fc6624773e62265b12c4266d662c6500/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0581",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Химия: 9-й класс: базовый уровень: учебник; 5-е издание, переработанное",
+      "authors": "Габриелян О.С., Остроумов И.Г., Сладков С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 581,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "chemistry",
+      "subjectLabel": "Химия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/ab917731fc6624773e62265b12c4266d662c6500/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0474",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 5-й класс: базовый уровень: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Виленкин Н.Я., Жохов В.И., Чесноков А.С. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 474,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0475",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика: 6-й класс: базовый уровень: учебник: в 2 частях; 3-е издание, переработанное",
+      "authors": "Виленкин Н.Я., Жохов В.И., Чесноков А.С. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 475,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "mathematics",
+      "subjectLabel": "Математика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0476",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика. Алгебра: 7-й класс: базовый уровень: учебник; 15-е издание, переработанное",
+      "authors": "Макарычев Ю.Н., Миндюк Н.Г., Нешков К.И. и другие; под редакцией Теляковского С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 476,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0477",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика. Алгебра: 8-й класс: базовый уровень: учебник; 16-е издание, переработанное",
+      "authors": "Макарычев Ю.Н., Миндюк Н.Г., Нешков К.И. и другие; под редакцией Теляковского С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 477,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0478",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика. Алгебра: 9-й класс: базовый уровень: учебник; 15-е издание, переработанное",
+      "authors": "Макарычев Ю.Н., Миндюк Н.Г., Нешков К.И. и другие; под редакцией Теляковского С.А.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 478,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "algebra",
+      "subjectLabel": "Алгебра",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0479",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика. Геометрия: 7 - 9-е классы: базовый уровень: учебник; 14-е издание, переработанное",
+      "authors": "Атанасян Л.С., Бутузов В.Ф., Кадомцев С.Б. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 479,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "subject": "geometry",
+      "subjectLabel": "Геометрия",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0480",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Математика. Вероятность и статистика: 7 - 9-е классы: базовый уровень: учебник: в 2 частях; 1-ое издание",
+      "authors": "Высоцкий И.Р., Ященко И.В.; под редакцией Ященко И.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 480,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "subject": "probability-statistics",
+      "subjectLabel": "Вероятность и статистика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/1a3c4bf2637a6079228b3b08aba2c9546014ee53/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0482",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Информатика: 7-й класс: базовый уровень: учебник; 5-е издание, переработанное",
+      "authors": "Босова Л.Л., Босова А.Ю.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 482,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/fe31088b2941cf307d46cd33142fa619b0ed89f9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0483",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Информатика: 8-й класс: базовый уровень: учебник; 5-е издание, переработанное",
+      "authors": "Босова Л.Л., Босова А.Ю.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 483,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/fe31088b2941cf307d46cd33142fa619b0ed89f9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0484",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Информатика: 9-й класс: базовый уровень: учебник; 5-е издание, переработанное",
+      "authors": "Босова Л.Л., Босова А.Ю.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 484,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "informatics",
+      "subjectLabel": "Информатика",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/fe31088b2941cf307d46cd33142fa619b0ed89f9/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0239",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература: 5-й класс: учебник: в 2 частях; 14-е издание, переработанное",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 239,
+      "level": "ООО",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "grades": [
+        5
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0240",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература: 6-й класс: учебник: в 2 частях; 14-е издание, переработанное",
+      "authors": "Полухина В.П., Коровина В.Я., Журавлев В.П. и другие; под редакцией Коровиной В.Я.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 240,
+      "level": "ООО",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "grades": [
+        6
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0241",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература: 7-й класс: учебник: в 2 частях; 13-е издание, переработанное",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 241,
+      "level": "ООО",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "grades": [
+        7
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0242",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература: 8-й класс: учебник: в 2 частях; 12-е издание, переработанное",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 242,
+      "level": "ООО",
+      "gradeRange": [
+        8,
+        8
+      ],
+      "grades": [
+        8
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0243",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Литература: 9-й класс: учебник: в 2 частях; 11-е издание, переработанное",
+      "authors": "Коровина В.Я., Журавлев В.П., Коровин В.И. и другие; под редакцией Коровиной В.Я.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 243,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "literature",
+      "subjectLabel": "Литература",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/354cf57d6b3ec932e19e182c39ce410c2d39075b/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0569",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Обществознание: 9-й класс: учебник; 1-е издание",
+      "authors": "под редакцией Медведева Д.А. (Бродовская Е.В., Кононов В.А. (ответственный секретарь), Мединский В.Р. (руководитель авторского коллектива), Моисеев С.Р., Никифоров Ю.А, Никонов В.А., Саплина Е.В., Синюков В.Н., Холмогоров Е.С. и другие)",
+      "publisher": "ООО «Просвещение-Союз»",
+      "federalListNumber": 569,
+      "level": "ООО",
+      "gradeRange": [
+        9,
+        9
+      ],
+      "grades": [
+        9
+      ],
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/504a285ce487d1ca8171769a6f670401e4afc400/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0616",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык",
+      "authors": "Рыбченкова Л.М., Александрова О.М., Нарушевич А.Г. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 616,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "grades": [
+        10,
+        11
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a0168f8d1ffcd05451f28f4604b364477cda91c3/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0617",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык; углубленное обучение",
+      "authors": "Гусарова И.В.",
+      "publisher": "ООО Издательский центр «ВЕНТАНА-ГРАФ»; АО «Издательство «Просвещение»",
+      "federalListNumber": 617,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a0168f8d1ffcd05451f28f4604b364477cda91c3/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0618",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Русский язык; углубленное обучение",
+      "authors": "Гусарова И.В.",
+      "publisher": "ООО Издательский центр «ВЕНТАНА-ГРАФ»; АО «Издательство «Просвещение»",
+      "federalListNumber": 618,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "russian-language",
+      "subjectLabel": "Русский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/a0168f8d1ffcd05451f28f4604b364477cda91c3/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0668",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык",
+      "authors": "Афанасьева О.В., Дули Д., Михеева И.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 668,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/651f84f48a8beefe3a094e39c0a2ca385b8d9210/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0669",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык",
+      "authors": "Афанасьева О.В., Дули Д., Михеева И.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 669,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/651f84f48a8beefe3a094e39c0a2ca385b8d9210/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0670",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык; углубленное обучение",
+      "authors": "Баранова К.М., Дули Д., Копылова В.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 670,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/651f84f48a8beefe3a094e39c0a2ca385b8d9210/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0671",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Английский язык; углубленное обучение",
+      "authors": "Баранова К.М., Дули Д., Копылова В.В. и другие",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 671,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "english-language",
+      "subjectLabel": "Английский язык",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/651f84f48a8beefe3a094e39c0a2ca385b8d9210/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0718",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России. 1914 - 1945 годы: 10 класс: базовый уровень: учебник",
+      "authors": "Мединский В.Р., Торкунов А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 718,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/b457ffa115fad152512f0d47df9ad91e56933edc/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0719",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. История России. 1945 год - начало XXI века: 11 класс: базовый уровень: учебник",
+      "authors": "Мединский В.Р., Торкунов А.В.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 719,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/b457ffa115fad152512f0d47df9ad91e56933edc/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0720",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. 1914 - 1945 годы: 10 класс: базовый уровень: учебник",
+      "authors": "Мединский В.Р., Чубарьян А.О.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 720,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/b457ffa115fad152512f0d47df9ad91e56933edc/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0721",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "История. Всеобщая история. 1945 год - начало XXI века: 11 класс: базовый уровень: учебник",
+      "authors": "Мединский В.Р., Чубарьян А.О.",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 721,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "history",
+      "subjectLabel": "История",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/b457ffa115fad152512f0d47df9ad91e56933edc/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0723",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Обществознание: 10-й класс: базовый уровень: учебник; 1-е издание",
+      "authors": "под редакцией Медведева Д.А. (Андреев П.В., Кононов В.А. (ответственный секретарь), Мединский В.Р. (руководитель авторского коллектива), Никифоров Ю.А., Никонов В.А., Новиков С.Г., Пиотровский М.Б., Швыдкой М.Е. и другие)",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 723,
+      "level": "СОО",
+      "gradeRange": [
+        10,
+        10
+      ],
+      "grades": [
+        10
+      ],
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d4fa6e2ac174158e385277b760fdc600692792c6/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-book-0724",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Обществознание: 11-й класс: базовый уровень; 1-е издание",
+      "authors": "под редакцией Медведева Д.А. (Батырь В.А., Кононов В.А. (ответственный секретарь), Мединский В.Р. (руководитель авторского коллектива), Чемусов А.В., Калуцкая Е.К., Лаврентьева О.Н., Никонов В.А., Холмогоров Е.С. и другие)",
+      "publisher": "АО «Издательство «Просвещение»",
+      "federalListNumber": 724,
+      "level": "СОО",
+      "gradeRange": [
+        11,
+        11
+      ],
+      "grades": [
+        11
+      ],
+      "subject": "social-studies",
+      "subjectLabel": "Обществознание",
+      "kind": [
+        "federal-textbook-bibliographic-record"
+      ],
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/d4fa6e2ac174158e385277b760fdc600692792c6/",
+      "checkedAt": "2026-10-21",
+      "metadataStatus": "PARTIAL_INDEX_ENTRY",
+      "accessStatus": "BIBLIOGRAPHIC_RECORD_ONLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION",
+      "contentStoredLocally": false,
+      "fullTextAvailable": false,
+      "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
     }
   ],
-  "coverageNote": "The index includes official federal-list section links, historical school-library records, EDSOO lesson cards, federal working programmes, and individual references for all 99 locally stored original practice tasks. 55 official EDSOO federal working-programme PDFs are locally copied with verified PDF signatures, SHA-256 and retained source links. Publisher textbook completeness is still NOT PROVEN."
+  "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав."
 }
