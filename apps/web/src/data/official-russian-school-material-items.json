@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 6,
+  "schemaVersion": 8,
   "catalogName": "official-russian-school-material-items",
   "lastVerified": "2026-10-21",
   "note": "Индекс содержит источники, библиографические записи и ссылки. Авторские задания с ответами хранятся локально; полнота всех издательских учебников не доказана.",
@@ -17955,7 +17955,1346 @@
       "accessStatus": "repository metadata file; official book files accessed separately",
       "rightsStatus": "BIBLIOGRAPHY_ONLY; no textbook files redistributed",
       "contentStoredLocally": true
+    },
+    {
+      "id": "edsoo-vd-ed16bf7aafc5",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "prilozhieniie 4",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/prilozhieniie-4.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/prilozhieniie-4.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1096614,
+      "sha256": "f2ce6d8a4f79a982402ffff85f4fb1917fdce6c4f779d99671bd14276e3d7c5d",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-189b7ab890ad",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd noo osnovy inf kultury shkolnikov 22012026",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/01/pvd_noo_osnovy-inf-kultury_shkolnikov_22012026.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_noo_osnovy-inf-kultury_shkolnikov_22012026.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 346024,
+      "sha256": "feef240659788c7fd62402e217f32a66f843b661567dd88c355e7b0814dad2ce",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-ce17c4482c73",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "programma kraj rodnoj",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/programma_kraj_rodnoj.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/programma_kraj_rodnoj.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 706160,
+      "sha256": "2e016d0bbff3f590607e075ec5d3532af6ea3a4b3165a8c24438bb91c138db40",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-5b4e0e7622fa",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd raskryvaem sekrety teksta",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_raskryvaem-sekrety-teksta.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_raskryvaem-sekrety-teksta.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1066295,
+      "sha256": "066c5ff97614feda43421e3818f83f15f9c310b316ef2cef44a2bf05c348fd50",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-44bdb6aeb54b",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pfk v mire russkogo yazyka itog 2",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/11/pfk_v_mire_russkogo_yazyka_itog-2.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pfk_v_mire_russkogo_yazyka_itog-2.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 908707,
+      "sha256": "57d888357c6a9486173eaee17336d8d7164b736f587790c7b23dc2a5c104cbf9",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-116d9270e09d",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd yarkie straniczy istorii nashego otechestva",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_yarkie_straniczy_istorii_nashego_otechestva.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_yarkie_straniczy_istorii_nashego_otechestva.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 975227,
+      "sha256": "d45aa2df353049a0f13d34f6d1f10ab49089c30bb3d8fdbfce7874bc652c7cf9",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-2c762fbfe14b",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd slovesnoe tvorchestvo",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_slovesnoe_tvorchestvo.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_slovesnoe_tvorchestvo.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 799324,
+      "sha256": "85993f3a04e9809b7f4582bdd004e12ec44dbf27025bf4989514c2ed3764c5eb",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-1ff5c1342535",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": ".",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеуроч-деят.-Моя-художественная-практика-НОО_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-------.--------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-ec69bfa50cb7",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd nasha rodina ot kraya i do kraya",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_nasha-rodina-ot-kraya-i-do-kraya.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_nasha-rodina-ot-kraya-i-do-kraya.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 885610,
+      "sha256": "880a80980b0bf2a5a0b8255984ebb6a2d30c6c425dbf3a3c96f44d36e61a618c",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-c88bf9d80188",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Музыкальный-театр-начальное-общее-и-основное-общее-образование_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-----------------------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-a57ab2f050f6",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": ". .",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеуроч.-деят.-ИскусствоМузыка_Хоровое-пение_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_---.--.--_---_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-6a9c323f0a98",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "1 4",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ПРП_КВД_Основы_логики_и_алгоритмики_для_1_4_классов.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-_-_-_-_-_-_1_4_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-004cfaa23487",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "rp sovremennye issledovaniya i dostizheniya nanohimii 2024",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/01/rp_sovremennye_issledovaniya_i_dostizheniya_nanohimii_2024.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/rp_sovremennye_issledovaniya_i_dostizheniya_nanohimii_2024.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 456132,
+      "sha256": "f4433bdec922fe0d52f7c8cf2544b0cff94713c50b9052168eccbdce94577f3f",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-d1a07dad8b5e",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "zhivaya fizika",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/zhivaya-fizika.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/zhivaya-fizika.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 299923,
+      "sha256": "be514306ddd0de6d154deaf56cc4372a4063ae012e4e8a437a3b1189409dd46a",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-af548e100127",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "matematika magiya i strojnost chisel",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/matematika-magiya-i-strojnost-chisel.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/matematika-magiya-i-strojnost-chisel.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 347423,
+      "sha256": "88bc20bd9bc6e1b7da5bde3c448d415a8b0a2fa80262c4f0006fb9696feb01ed",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-f00c6424255c",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "neskuchnaya informatika",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/neskuchnaya-informatika.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/neskuchnaya-informatika.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 843617,
+      "sha256": "aa6c1d29aaacd7ba61754b6d3de8972ccde0ecfcbe784799a5481fa3241d4e9a",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-ff2e1321f32c",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "komnatnye rasteniya",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/komnatnye-rasteniya.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/komnatnye-rasteniya.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 359740,
+      "sha256": "7c433372bfb1cf77c050bafd0a776509e29643239d56c7863835ffa9052cc04d",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-1eab39ae1656",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "kristally",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/kristally.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/kristally.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 413052,
+      "sha256": "98bfaa5669f44acfde9e448b2f116a3d46f73a91bd547431cbf2dd9608cfa620",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-8fbb460b9d09",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd matematika uglub posle sinhronizaczii 10.07 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 540676,
+      "sha256": "e95be258d6674fbb76ab0f2e6e04d5777e17f57aa2ff4fe83e9bbc7e6fb6f6f0",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-82aaa027b021",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd osnovy inf kultury shkolnikov 2025 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 697602,
+      "sha256": "3513f522f6e88f4433e6e1cee10687db3c255da4bdbdc47e1440284cf3b93ff3",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-466cc842f4d6",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd fizika uglub 10 07 sajt 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_fizika_uglub_10_07_sajt-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_fizika_uglub_10_07_sajt-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 409166,
+      "sha256": "6483bd66d9d3d211acf934cf86036e885522ccf1d902d3d3dd2b1df80ae90f5b",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-be595842a611",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "ooo finkult 2025",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/ooo_finkult_2025_.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/ooo_finkult_2025_.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 779775,
+      "sha256": "32e048b80c0ad5f48da5e178ac6235c4fd290ca78043140bce72ab56a66c961b",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-c872af0d721f",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "rp kvd himiya uglub posle sinhronizaczii 10.07",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_kvd_himiya_uglub_posle-sinhronizaczii_10.07.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/rp_kvd_himiya_uglub_posle-sinhronizaczii_10.07.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 454476,
+      "sha256": "b4f9116ee7f6bdf968b0c4e7e73bf87bbbf5461ee8033f5874d8e48b324fe315",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-68adb794ed31",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd bio uglub posle sinhronizaczii 0907",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_bio_uglub_posle-sinhronizaczii_0907.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_bio_uglub_posle-sinhronizaczii_0907.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 590041,
+      "sha256": "6542d8e3b07fc1c7065a4bb83c9c6b5cbd46e60dbbe4edd908032ddfe27808a1",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-f1a58e8d3c18",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd moya semya ooo itog 12092024",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2024/09/pvd_moya-semya_ooo_itog_12092024.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_moya-semya_ooo_itog_12092024.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 541532,
+      "sha256": "4967607325a1df6783f490f938938f609f14eff3912f001f0a0f4b62f1553411",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-bca2160f0ab8",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "rp obuchenie sluzheniem soo 2024 g 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_obuchenie_sluzheniem_soo_2024_g-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/rp_obuchenie_sluzheniem_soo_2024_g-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 447497,
+      "sha256": "8c381c107b10ca5cd8865e52da149b4ed6371748632592598f5b9c2c901df82b",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-e9af09368b6d",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "programma vneurochnoj deyatelnosti iskusstvennyj intellekt",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/programma_vneurochnoj_deyatelnosti_iskusstvennyj_intellekt.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/programma_vneurochnoj_deyatelnosti_iskusstvennyj_intellekt.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 776851,
+      "sha256": "4d38bec8c7d60dc9f090ab328a3e7f89cd1a0683c747ea3d189eb6fdc07b6ccd",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-45c2d270da19",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd pamyatnye mesta 28112023",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_pamyatnye-mesta_28112023.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_pamyatnye-mesta_28112023.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 841333,
+      "sha256": "5f6d3481eedfbf563c579f99208a189da0d641d4a88c19b102a3b0733e31a5c6",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-36d02f0bcfbc",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd velikie dostizheniya sootechestvennikov1 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/pvd_velikie_dostizheniya_sootechestvennikov1-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_velikie_dostizheniya_sootechestvennikov1-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 721063,
+      "sha256": "8c479362915f7eee3e003e5240cf9ad28b0b8353503336d7f1286ac24eba8d74",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-1c862761b92a",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": ".",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеурочная-деят.-Мир-визуально-пространственных-искусств_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-----.--------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-6f15f4cc977a",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "5 6",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-КВД-Основы-программирования-для-5-6-классов_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_----------5-6--_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-baa9496bd155",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Умей-вести-за-собой-основное-общее-образование_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_---------------------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-50a5ea587115",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "PYTHON",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "informatics",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-Внеурочной-деятельности_Основы-программирования-на-PYTHON_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-----_------PYTHON_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-bfc28700adc6",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-внеурочная-деят-Профориентация-ООО_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_---------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-08bc244a6cfa",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеур-деят-ПИД_ГН_ООО_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_---------_-_-_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-8318ce8759e2",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": ".",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_Программа-курса-внеурочной-деятельности.-Функциональная-грамотность-ООО_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-------.------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-b7568b636634",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "5 9 .",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_----------5-9--.--------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-22fe9630273b",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Экологичный-образ-жизни-основное-общее-образование_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-------------------_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-b9b270a2707f",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd ist otech kino v ist hh v itog",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/pvd_ist_otech_kino_v_ist_hh-v_itog.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_ist_otech_kino_v_ist_hh-v_itog.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 524751,
+      "sha256": "38512ad948f57df74fded92392e4ba509b858e863f806ffabab18592228d3706",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-3246dd3c28ef",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "rossiya moi gorizonty 2026",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rossiya-–-moi-gorizonty-2026.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/rossiya---moi-gorizonty-2026.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode character '\\u2013' in position 40: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-d406f2dd22ea",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd osn inf kultury soo",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2025/12/pvd_osn_inf_kultury_soo_.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_osn_inf_kultury_soo_.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 314997,
+      "sha256": "8bf81d4cdfa64c9dac475c0ca09aa8d9077028f91bbf754d3bc31f5f1fa940f3",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-69b939aca238",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "rp obuchenie sluzheniem ooo 2024 1",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/rp_obuchenie_sluzheniem_ooo_2024-1.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/rp_obuchenie_sluzheniem_ooo_2024-1.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 412219,
+      "sha256": "9910216bb937073c9622431e65e27e3ef43959d81dc215d184d4f1eb96f775ff",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-cd5ddc3b71de",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd kompyuternoe proektirovanie cherchenie 19082024 itog",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_kompyuternoe_proektirovanie_cherchenie_19082024_itog.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_kompyuternoe_proektirovanie_cherchenie_19082024_itog.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 405669,
+      "sha256": "348410aed853dbeb4dcd0b2ce342c6ab04943c6d8011c43d7af72fd43c24c8fb",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-84e2272b2982",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd zhurnalistika 28112023",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_zhurnalistika_28112023.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_zhurnalistika_28112023.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1019764,
+      "sha256": "11d833caf1171dc76a9e0889b965b45d6eb45d18e2803e22ac8f91a2d3fdda6c",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-a8a5298af84a",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd matematika v ekonomike",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_matematika-v-ekonomike.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_matematika-v-ekonomike.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 450901,
+      "sha256": "090338fd4f936d93c9ba6fc5b63a30f5182b29dbb52449498c4a51777374579b",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-c12c7fe1d29f",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd osnovy fizicheskogo eksperimenta 01",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_osnovy_fizicheskogo_eksperimenta_01.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_osnovy_fizicheskogo_eksperimenta_01.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1455974,
+      "sha256": "2bf2d5f78721c4e2e88fbf1b53d4e2d5319dc4c7e9ea1aa4c967e88339d165e7",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-09e2ffa2505d",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd literaturnaya masterskaya 2",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_literaturnaya-masterskaya-2.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_literaturnaya-masterskaya-2.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1371940,
+      "sha256": "97779cc5479e4ef447ecece413102962027d3052fe1910c8a65264d467149c59",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-7a8183b73d18",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd istoricheskie osnovy rossijskoj czivilizaczii",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/12/pvd_istoricheskie_osnovy_rossijskoj_czivilizaczii.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_istoricheskie_osnovy_rossijskoj_czivilizaczii.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 932679,
+      "sha256": "1fc55543763fd44a33e9def1873416aedd35c6e468e8e8fb98808c969f28d6a6",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-a57ed031895f",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd rossiya moya istoriya 28112023",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_rossiya_moya-istoriya_28112023.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_rossiya_moya-istoriya_28112023.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 1067138,
+      "sha256": "01165dec4fde7eb0a5714c39685cd43146645d13de26aeb71985eb9b16d80d7c",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-086c25bd0519",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd moj kraj v istorii otechestva soo 28112023",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_moj-kraj-v-istorii-otechestva_soo_28112023.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_moj-kraj-v-istorii-otechestva_soo_28112023.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 804419,
+      "sha256": "82cc81c9552ede72975f0708a06cf791fda5142f463d81c4a5b317b8f06a1200",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-b8822082bbc1",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "vud rp nvp 10 11 kl novaya",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/07/vud_rp_nvp_10-11-kl_novaya.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/vud_rp_nvp_10-11-kl_novaya.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 871633,
+      "sha256": "1946cc5381831548e0d9df45139bd83d8e39b354591cb1dc9a8385dd466c8573",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-vd-996a4f1926db",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_РП_Первая-помощь_Новая.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": false,
+      "localPath": "downloads/federal-extracurricular-programs/_-_---_-.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "downloadStatus": "DOWNLOAD_FAILED",
+      "downloadError": "'ascii' codec can't encode characters in position 32-34: ordinal not in range(128)"
+    },
+    {
+      "id": "edsoo-vd-130855302330",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "pvd agrobio soo 28112023",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Федеральная рабочая программа внеурочной деятельности; точный класс и предмет требуют проверки по PDF",
+      "kind": [
+        "official-extracurricular-program",
+        "federal-working-program"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_agrobio_soo_28112023.pdf",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "PUBLIC_OFFICIAL_PDF",
+      "rightsStatus": "OFFICIAL_SOURCE; redistribution terms not independently established",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-extracurricular-programs/pvd_agrobio_soo_28112023.pdf",
+      "metadataCompleteness": "TITLE_FROM_FILENAME; gradeRange_is_catalog_scope_not_verified_document_scope",
+      "fileSizeBytes": 476508,
+      "sha256": "0c9076021c3f81e1d60c355fee5fc078c759beeef4ef1ae86556a55563d90383",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "federal-textbook-list-2026-full-document",
+      "sourceId": "federal-textbook-list-2026",
+      "title": "Федеральный перечень учебников — полный текст приказа № 436 от 22.06.2026",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Полный официальный перечень допущенных учебников",
+      "kind": [
+        "official-textbook-list",
+        "normative-document",
+        "full-text-extraction"
+      ],
+      "url": "https://minjust.consultant.ru/documents/60664",
+      "checkedAt": "2026-10-21",
+      "accessStatus": "LOCAL_OFFICIAL_PDF_AND_TEXT_VERIFIED",
+      "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; individual textbook contents are not included",
+      "contentStoredLocally": true,
+      "localPath": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.pdf",
+      "textPath": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.txt",
+      "pageCount": 312,
+      "fileSizeBytes": 15774591,
+      "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
+      "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
     }
   ],
-  "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав."
+  "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав.",
+  "extracurricularPdfCount": 38,
+  "extracurricularPdfFailureCount": 15
 }

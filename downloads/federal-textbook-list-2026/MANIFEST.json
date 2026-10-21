@@ -1,0 +1,22 @@
+{
+  "title": "Приказ Минпросвещения России от 22.06.2026 № 436 — федеральный перечень учебников",
+  "registration": "Зарегистрирован Минюстом России 22.07.2026 № 87563",
+  "officialLandingPage": "https://minjust.consultant.ru/documents/60664",
+  "officialAnnouncement": "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
+  "resolvedPdfUrl": "https://minjust.consultant.ru/files/60664",
+  "checkedAt": "2026-10-21",
+  "pdf": {
+    "path": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.pdf",
+    "bytes": 15774591,
+    "pages": 312,
+    "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
+    "signature": "%PDF-"
+  },
+  "text": {
+    "path": "downloads/federal-textbook-list-2026/federal-textbook-list-order-436-2026.txt",
+    "characters": 8314,
+    "extractionLibrary": "pypdf"
+  },
+  "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; preserve source attribution; not a substitute for individual textbook files",
+  "note": "The PDF and extracted text are the federal textbook-list document. They are not full copies of each listed textbook."
+}
