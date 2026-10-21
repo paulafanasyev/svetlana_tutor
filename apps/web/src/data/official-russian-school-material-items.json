@@ -324,9 +324,10 @@
       ],
       "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
       "checkedAt": "2026-10-21",
-      "accessStatus": "public",
-      "rightsStatus": "link to original; preserve document attribution",
-      "contentStoredLocally": false
+      "accessStatus": "VERIFIED_OFFICIAL_PAGE; OGE 2027 project documents present",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; official FIPI page link only",
+      "contentStoredLocally": false,
+      "currentExamYear": 2027
     },
     {
       "id": "fipi-ege-navigator",
@@ -437,9 +438,11 @@
         "codifiers"
       ],
       "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
-      "accessStatus": "PUBLIC_PAGE; status may be draft/consultation and should be rechecked",
-      "rightsStatus": "LINK_TO_SOURCE",
-      "contentStoredLocally": false
+      "accessStatus": "VERIFIED_OFFICIAL_PAGE; EGE 2027 project documents present",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; official FIPI page link only",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-21",
+      "currentExamYear": 2027
     },
     {
       "id": "fipi-oge-specs",
@@ -48365,9 +48368,128 @@
       "fileSizeBytes": 15774591,
       "sha256": "b928492bc88275408457d4bba50a53692ac71e38152895a91e7ef3ea7c16c61c",
       "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    },
+    {
+      "id": "edsoo-literature-guidance-2026-2027-page",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: материалы по преподаванию литературы в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Методическое письмо, федеральные рабочие программы ООО/СОО и интерактивные материалы",
+      "kind": [
+        "official-source-page",
+        "annual-subject-guidance",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-10-19",
+      "officialLinks": [
+        "https://edsoo.ru/wp-content/uploads/2026/08/literatura2-2.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_ugl.pdf",
+        "https://edsoo.ru/2026/02/07/materialy-k-urokam-literatury-s-interaktivnymi-elementami/"
+      ],
+      "accessStatus": "VERIFIED_OFFICIAL_PAGE_LINK",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; metadata and official links only",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-literature-guidance-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: информационно-методическое письмо по литературе и родной (русской) литературе на 2026/2027 учебный год",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "subject": "literature",
+      "topic": "Методическое письмо для учителей; изменения федеральных рабочих программ",
+      "kind": [
+        "methodological-letter",
+        "official-teacher-guidance",
+        "academic-year-2026-2027"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/literatura2-2.pdf",
+      "sourceAttributionUrl": "https://edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-10-19",
+      "verifiedPageCount": 20,
+      "accessStatus": "VERIFIED_OFFICIAL_PDF_LINK; NOT_STORED_LOCALLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; full PDF not mirrored; preserve official source attribution",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-technology-guidance-2026-2027-page",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: материалы по преподаванию труда (технологии) в 2026/2027 учебном году",
+      "gradeRange": [
+        1,
+        9
+      ],
+      "subject": "technology",
+      "topic": "Методическое письмо и федеральные рабочие программы НОО/ООО",
+      "kind": [
+        "official-source-page",
+        "annual-subject-guidance",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/2026/09/28/voprosy-o-vazhnom-trud-tehnologiya/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-09-28",
+      "officialLinks": [
+        "https://edsoo.ru/wp-content/uploads/2026/08/trud-tehnologiya.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_trud_1-4.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf"
+      ],
+      "accessStatus": "VERIFIED_OFFICIAL_PAGE_LINK",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; metadata and official links only",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-technology-guidance-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "ЕДСОО: информационно-методическое письмо по предмету «Труд (технология)» на 2026/2027 учебный год",
+      "gradeRange": [
+        1,
+        9
+      ],
+      "subject": "technology",
+      "topic": "Методическое письмо для учителей; федеральные рабочие программы НОО/ООО",
+      "kind": [
+        "methodological-letter",
+        "official-teacher-guidance",
+        "academic-year-2026-2027"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/08/trud-tehnologiya.pdf",
+      "sourceAttributionUrl": "https://edsoo.ru/2026/09/28/voprosy-o-vazhnom-trud-tehnologiya/",
+      "checkedAt": "2026-10-21",
+      "publicationDate": "2026-09-28",
+      "verifiedPageCount": 25,
+      "accessStatus": "VERIFIED_OFFICIAL_PDF_LINK; NOT_STORED_LOCALLY",
+      "rightsStatus": "NOT_PROVEN_FOR_REPUBLICATION; full PDF not mirrored; preserve official source attribution",
+      "contentStoredLocally": false
     }
   ],
   "coverageNote": "Добавлено 934 OCR-извлечённых библиографических записей учебников из действующих разделов федерального перечня 2026 года для классов 1–11. Точность названий/авторов/издателей не гарантируется до ручной сверки с PDF. Полные тексты коммерческих учебников не загружались.",
   "extracurricularPdfCount": 53,
-  "extracurricularPdfFailureCount": 0
+  "extracurricularPdfFailureCount": 0,
+  "currentOfficialMaterialUpdate": {
+    "checkedAt": "2026-10-21",
+    "status": "VERIFIED",
+    "addedIds": [
+      "edsoo-literature-guidance-2026-2027-page",
+      "edsoo-literature-guidance-letter-2026-2027",
+      "edsoo-technology-guidance-2026-2027-page",
+      "edsoo-technology-guidance-letter-2026-2027"
+    ],
+    "updatedExistingIds": [
+      "fipi-oge-demos",
+      "fipi-ege-2027-specs"
+    ],
+    "note": "FIPI 2027 items updated in place; no duplicate cards created."
+  }
 }
