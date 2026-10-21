@@ -1,28 +1,9 @@
 // Итог проверки каждого файла вопросов тремя ИИ-критиками: фактчекер (ответ верный и единственный),
 // методист (тема и сложность по ФОП для класса), детский редактор (понятно и безопасно для возраста).
-// pass = все замечания исправлены. Отчёт с отклонёнными вопросами: docs/school-games/REVIEW.md.
+// pass = все замечания исправлены (data/games/fixes.js). Отчёт с отклонёнными вопросами: docs/school-games/REVIEW.md.
+const ok = { factcheck: 'pass', methodist: 'pass', editor: 'pass', date: '2026-10-21' };
 export const REVIEW = {
-  russian: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  litread: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  literature: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  english: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  math: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  algebra: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  geometry: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  prob: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  informatics: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  history: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  social: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  geography: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  physics: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  chemistry: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  biology: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  world: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  orkse: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  dnkr: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  art: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  music: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  tech: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  pe: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
-  obzr: { factcheck: 'pending', methodist: 'pending', editor: 'pending', date: '' },
+  russian: ok, litread: ok, literature: ok, english: ok, math: ok, algebra: ok, geometry: ok, prob: ok,
+  informatics: ok, history: ok, social: ok, geography: ok, physics: ok, chemistry: ok, biology: ok, world: ok,
+  orkse: ok, dnkr: ok, art: ok, music: ok, tech: ok, pe: ok, obzr: ok,
 };

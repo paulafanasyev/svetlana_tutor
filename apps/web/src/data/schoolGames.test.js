@@ -1,10 +1,12 @@
 // Игры по предметам: вопросы есть для каждой клетки учебного плана (часы > 0), формат верный,
 // правильный ответ среди вариантов, каждый пакет прошёл трёх критиков (факты, методист, детский редактор).
+// Проверяется то, что увидит ребёнок: файл пакета вместе с правками критиков (games/fixes.js).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { gameCells, SLUGS, ICONS, normalizeGrade } from './games/subjects.js';
 import { REVIEW } from './games/review.js';
+import { FIXES, applyFixes } from './games/fixes.js';
 
 const dir = new URL('./games/packs/', import.meta.url);
 const loaderSrc = readFileSync(new URL('./games/loadPack.js', import.meta.url), 'utf8');
@@ -25,7 +27,7 @@ test('каждая клетка плана 1–11 с часами > 0 имеет
   const cells = gameCells();
   assert.equal(cells.length, 136);
   for (const c of cells) {
-    const g = files[c.slug].grades?.[String(c.grade)];
+    const g = applyFixes(c.slug, c.grade, files[c.slug].grades?.[String(c.grade)]);
     assert.ok(g, `${c.subject}, ${c.grade} класс`);
     assert.equal(g.subject, c.subject, `${c.slug} ${c.grade}: предмет`);
     assert.ok(g.quiz.length >= 6, `${c.slug} ${c.grade}: вопросов ${g.quiz.length}`);
@@ -40,7 +42,8 @@ test('каждая клетка плана 1–11 с часами > 0 имеет
 
 test('вопросы: 4 разных варианта, ответ среди них, есть тема и объяснение', () => {
   for (const [slug, f] of Object.entries(files)) {
-    for (const [grade, g] of Object.entries(f.grades)) {
+    for (const [grade, raw] of Object.entries(f.grades)) {
+      const g = applyFixes(slug, grade, raw);
       const qs = new Set();
       const answers = new Set();
       for (const [i, x] of g.quiz.entries()) {
@@ -57,9 +60,19 @@ test('вопросы: 4 разных варианта, ответ среди н�
       assert.ok(g.pairs.every((p) => Array.isArray(p) && p.length === 2 && p.every(str)), `${slug}-${grade}: пары`);
       assert.equal(new Set(terms).size, terms.length, `${slug}-${grade}: термины повторяются`);
       assert.equal(new Set(means).size, means.length, `${slug}-${grade}: значения повторяются`);
-      const n = normalizeGrade(slug, Number(grade), g);
+      const n = normalizeGrade(slug, Number(grade), raw);
       assert.equal(new Set([...n.quiz, ...n.pairs].map((x) => x.id)).size, n.quiz.length + n.pairs.length);
     }
+  }
+});
+
+test('каждая правка критиков указывает на существующий вопрос или пару', () => {
+  for (const id of Object.keys(FIXES)) {
+    const m = /^(.+)-(\d+)-([qp])(\d+)$/.exec(id);
+    assert.ok(m, `${id}: формат ключа`);
+    const g = files[m[1]]?.grades?.[m[2]];
+    const list = m[3] === 'q' ? g?.quiz : g?.pairs;
+    assert.ok(list?.[Number(m[4]) - 1], `${id}: нет такого места в файле`);
   }
 });
 

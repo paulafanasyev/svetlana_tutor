@@ -1,6 +1,7 @@
 // Игры по школьным предметам: какие предметы и классы есть (по учебному плану ФОП) и где лежат вопросы.
 // Без React и без Vite: модуль читают и приложение, и тест (node --test).
 import { PLANS } from '../../features/school/fopPlan.js';
+import { applyFixes } from './fixes.js';
 
 // Название предмета в плане → файл с вопросами data/games/packs/<slug>.json (внутри вопросы по классам).
 // «Алгебра» (7–9) и «Алгебра и начала математического анализа» (10–11) лежат в одном файле: классы не пересекаются.
@@ -43,8 +44,10 @@ export const MODES = [
 ];
 
 // Пакет из файла → удобный вид с id. Формат файла: { quiz: [{t, q, o: [4], a, e}], pairs: [[термин, значение]] }.
-export function normalizeGrade(slug, grade, g) {
-  if (!g) return null;
+// Перед показом поверх файла накладываются исправления критиков (data/games/fixes.js).
+export function normalizeGrade(slug, grade, raw) {
+  if (!raw) return null;
+  const g = applyFixes(slug, grade, raw);
   return {
     subject: g.subject,
     grade,
