@@ -727,7 +727,7 @@
       "Хранить скачанные копии только при подтверждённом разрешении, открытой лицензии или применимом законном основании."
     ]
   },
-  "fullCoverageNote": "Bibliographic expansion is ongoing. A source link, search-index result or library catalogue count is not proof that every book has been downloaded or is legally redistributable.",
+  "fullCoverageNote": "Наличие ссылки или библиографической карточки не означает, что полный файл книги включён. Добавлять полные учебники только при подтверждённом разрешении/лицензии.",
   "collections": [
     {
       "id": "federal-2026",
@@ -742,13 +742,13 @@
     {
       "id": "original-practice",
       "file": "original-school-practice-bank.json",
-      "description": "Original practice tasks authored for this repository, not copied from published textbooks and not official exam questions."
+      "description": "Оригинальные задания с ответами, созданные для репозитория; всего 153, лицензия CC BY 4.0."
     }
   ],
   "workingProgramCount": 61,
   "directWorkingProgramPdfCount": 55,
-  "originalExerciseCount": 99,
-  "currentCoverageNote": "Official federal working-program links and original tasks have been added, but the complete current publisher textbook collection is not stored locally. Overall completeness remains NOT PROVEN.",
+  "originalExerciseCount": 153,
+  "currentCoverageNote": "Каталог содержит 773 карточек, 61 навигационный раздел федерального перечня, 128 библиографических записей исторических учебников и 153 авторских заданий с ответами. Полный набор актуальных издательских учебников не сохранён; полнота остаётся NOT PROVEN.",
   "localFederalWorkingProgramPdfCount": 55,
   "lastFederalProgramDownloadAttemptAt": "2026-10-21T04:49:00.856032+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
