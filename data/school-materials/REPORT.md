@@ -74,7 +74,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, officialDocument:dict[8],
     {"id": "fpu2026-section-032", "title": "1.1.2.9. История (учебный предмет)", "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/eb97a1787c2876237b0e287fea3d5055aec2d8ac", "sourceId": "federal-textbook-list-2026", "subjectLabel": "История", "catalogueSnippet": "История нашего края. Республика Ингушетия. 7 класс: учебник для общеобразовательных организаций; 1-е издание. Акиева П.Х.,. Долгиева М.Б,.", "entryNumberHint": null, "verifiedAt": "2026-10-21", "status": "SOURCE_LINK_VERIFIED_SNIPPET_ONLY", "contentStoredLocally": false, "rightsStatus": "official legal act/metadata; individual textbook files not included", "note": "Section URL is a navigational bibliographic reference. The snippet is not the complete list of records in the section."}
     ```
 
-## federal-textbooks-2026-basic-5-9.json (639607 bytes)
+## federal-textbooks-2026-basic-5-9.json (640099 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[423]
 - `records` record keys: id(423), listRow(423), sectionCode(423), listSection(423), schoolStage(423), grade(423), title(423), authors(423), publisher(423), relatedTeachingMaterials(423), approvalBasis(423), approvalOrganization(423), approvalOrder(423), allowedUseUntil(423), metadataSource(423), officialDocument(423), checkedAt(423), contentStoredLocally(423), status(423), rightsStatus(423)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=423
@@ -97,7 +97,7 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-0462", "listRow": 462, "sectionCode": "1.1.2.6.3.5", "listSection": "1.1", "schoolStage": "basic", "grade": 9, "title": "Французский язык: второй иностранный язык: 9-й класс: учебник; 10-е издание, переработанное", "authors": "Селиванова Н.А., Шашурина А.Ю.", "publisher": "Акционерное общество \"Издательство \"Просвещение\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 287", "approvalOrganization": "Акционерное общество \"Издательство \"Просвещение\"", "approvalOrder": "От 21 сентября 2022 г. № 858", "allowedUseUntil": "До 31 августа 2032 года", "metadataSource": "https://www.garant.ru/products/ipo/prime/doc/414535956/", "officialDocument": "https://publication.pravo.gov.ru/document/0001202607230005", "checkedAt": "2026-10-21", "contentStoredLocally": false, "status": "BIBLIOGRAPHIC_ENTRY_EXTRACTED", "rightsStatus": "LINK_ONLY; bibliography does not grant
     ```
 
-## federal-textbooks-2026-primary-1-4.json (394667 bytes)
+## federal-textbooks-2026-primary-1-4.json (394751 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[237]
 - `records` record keys: id(237), listRow(237), sectionCode(237), listSection(237), schoolStage(237), grade(237), title(237), authors(237), publisher(237), relatedTeachingMaterials(237), approvalBasis(237), approvalOrganization(237), approvalOrder(237), allowedUseUntil(237), metadataSource(237), officialDocument(237), checkedAt(237), contentStoredLocally(237), status(237), rightsStatus(237)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=237
@@ -120,7 +120,7 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-0164", "listRow": 164, "sectionCode": "1.1.1.4.13.1", "listSection": "1.1", "schoolStage": "primary", "grade": 1, "title": "Литературное чтение на родном (татарском) языке: Эдэби уку. 1 класс: учебник для общеобразовательных организаций начального общего образования (для обучающихся, слабо владеющих родным (татарским) языком); 2-е издание, переработанное; язык издания: татарский", "authors": "Ханнанов Р.Г., Гареева Л.Р.", "publisher": "Общество с ограниченной ответственностью \"Издательство \"Магариф-Вакыт\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 286; Приказ № 372", "approvalOrganization": "Общество с ограниченной ответственностью \"Издательство \"Магариф-Вакыт\"", "approvalOrder": "От 26 июня 2025 г. № 495", "allowedUseUntil": "До 31 августа 2030 года", "metadataSource": "https://www.garant.ru/products/ipo/prime/doc/414535956/", "officialDocument"
     ```
 
-## federal-textbooks-2026-secondary-10-11.json (148934 bytes)
+## federal-textbooks-2026-secondary-10-11.json (148946 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[86]
 - `records` record keys: id(86), listRow(86), sectionCode(86), listSection(86), schoolStage(86), grade(86), title(86), authors(86), publisher(86), relatedTeachingMaterials(86), approvalBasis(86), approvalOrganization(86), approvalOrder(86), allowedUseUntil(86), metadataSource(86), officialDocument(86), checkedAt(86), contentStoredLocally(86), status(86), rightsStatus(86)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=86
@@ -200,7 +200,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-21, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-21, pages=312
-- federal-working-programs.json: generatedAt=2026-10-21T17:59:27.812833+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-21T18:02:18.203519+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
