@@ -18,11 +18,13 @@
         "official-registry",
         "normative-document"
       ],
-      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "url": "https://publication.pravo.gov.ru/document/0001202607230005",
       "checkedAt": "2026-10-21",
       "accessStatus": "public-document",
       "rightsStatus": "link-only; do not copy commercial textbook content",
-      "contentStoredLocally": false
+      "contentStoredLocally": false,
+      "referenceUrl": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "officialPdfLandingPage": "https://minjust.consultant.ru/documents/60664"
     },
     {
       "id": "fpu-order-436-announcement",
