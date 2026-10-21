@@ -262,7 +262,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
         else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
       }
       // Для диагностики: заголовки пунктов курса, если результаты по классам не найдены.
-      if (grades.some(g => !results[g])) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
+      if (grades.some(g => !results[g]) && !sharedLevelResults.length) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   }
   try {
