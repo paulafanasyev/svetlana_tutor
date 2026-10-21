@@ -10,6 +10,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 LANDING = "https://minjust.consultant.ru/documents/60664"
+DIRECT_PDF = "https://minjust.consultant.ru/files/60664"
 OFFICIAL_NOTICE = "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya"
 OUT = ROOT / "downloads/federal-textbook-list-2026"
 PDF_PATH = OUT / "federal-textbook-list-order-436-2026.pdf"
@@ -42,32 +43,39 @@ def write_json(path,obj):
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
-    page,final_url,ctype=get(LANDING)
     pdf_data=None; pdf_url=None
-    if page.startswith(b"%PDF-") or "application/pdf" in ctype.lower():
-        pdf_data,pdf_url=page,final_url
-    else:
-        parser=Links(); parser.feed(page.decode("utf-8",errors="replace"))
-        candidates=[]
-        for a in parser.links:
-            url=urljoin(final_url,html.unescape(a["href"].strip()))
-            p=urlparse(url)
-            if p.scheme!="https" or p.netloc.lower() not in {"minjust.consultant.ru","www.minjust.consultant.ru"}:
-                continue
-            label=(a["text"]+" "+p.path).lower()
-            if ".pdf" in p.path.lower() or "pdf" in label or "скачать" in label:
-                candidates.append(url)
-        # Try explicit PDF candidates first, then the official landing endpoint.
-        for url in list(dict.fromkeys(candidates+[LANDING])):
-            try:
-                data,actual_url,content_type=get(url)
-                if data.startswith(b"%PDF-") or "application/pdf" in content_type.lower():
-                    if not data.startswith(b"%PDF-"):
-                        raise ValueError("PDF content type without PDF signature")
-                    pdf_data,pdf_url=data,actual_url
-                    break
-            except Exception:
-                continue
+    # The official page exposes this direct PDF endpoint; try it first to avoid slow HTML parsing.
+    try:
+        direct_data,direct_url,direct_type=get(DIRECT_PDF)
+        if direct_data.startswith(b"%PDF-"):
+            pdf_data,pdf_url=direct_data,direct_url
+    except Exception:
+        pass
+    if pdf_data is None:
+        page,final_url,ctype=get(LANDING)
+        if page.startswith(b"%PDF-") or "application/pdf" in ctype.lower():
+            pdf_data,pdf_url=page,final_url
+        else:
+            parser=Links(); parser.feed(page.decode("utf-8",errors="replace"))
+            candidates=[]
+            for a in parser.links:
+                url=urljoin(final_url,html.unescape(a["href"].strip()))
+                p=urlparse(url)
+                if p.scheme!="https" or p.netloc.lower() not in {"minjust.consultant.ru","www.minjust.consultant.ru"}:
+                    continue
+                label=(a["text"]+" "+p.path).lower()
+                if ".pdf" in p.path.lower() or "pdf" in label or "скачать" in label:
+                    candidates.append(url)
+            for url in list(dict.fromkeys(candidates+[LANDING])):
+                try:
+                    data,actual_url,content_type=get(url)
+                    if data.startswith(b"%PDF-") or "application/pdf" in content_type.lower():
+                        if not data.startswith(b"%PDF-"):
+                            raise ValueError("PDF content type without PDF signature")
+                        pdf_data,pdf_url=data,actual_url
+                        break
+                except Exception:
+                    continue
     if not pdf_data or not pdf_data.startswith(b"%PDF-"):
         raise RuntimeError("Could not retrieve the official textbook-list PDF from the Minjust landing page.")
     PDF_PATH.write_bytes(pdf_data)
