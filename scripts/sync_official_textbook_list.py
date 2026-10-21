@@ -82,6 +82,7 @@ def main():
     PDF_PATH.write_bytes(pdf_data)
     # The official 312-page PDF is image-based; pypdf alone extracted almost no text.
     # OCR every page before claiming a searchable text version.
+    OCR_PDF_PATH.unlink(missing_ok=True)
     ocr_cmd = [
         "ocrmypdf", "--force-ocr", "--language", "rus+eng", "--jobs", "4",
         "--output-type", "pdf", "--optimize", "0",
