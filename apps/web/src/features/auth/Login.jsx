@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useApp, useT } from '../../core/store.js';
-import { api } from '../../core/api.js';
+import { api, DEMO_ADMIN } from '../../core/api.js';
 import { LOCALES } from '../../i18n/index.js';
 import { TEACHERS, CADET_TEACHER, introVideoUrl } from '../../data/teachers.js';
 import { TRACKS, trackById } from '../../data/tracks.js';
@@ -23,6 +23,10 @@ const L_CONSENT = {
 const L_PRIVACY = { ru: 'Как мы обращаемся с данными', en: 'How we handle data' };
 const L_STATS = { ru: 'Разрешаю анонимную статистику посещений (можно не ставить)', en: 'Allow anonymous usage statistics (optional)' };
 const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rating 6+' };
+
+// Demo logins exist only in the browser-only demo (no server). The administrator demo is off in published builds
+// (audit 21.10): it is available in local development or with VITE_DEMO_ADMIN=1.
+const SHOW_DEMO = api.demo === true;
 
 export default function Login() {
   const { setUser, locale, setLocale, prefs, setPref } = useApp();
@@ -86,9 +90,11 @@ export default function Login() {
             <span className="text-xs font-black text-ink/50 uppercase tracking-wider">{pick(VERSION_LABEL, locale)}:</span>
             {TRACKS.map((v) => (
               <button key={v.id} onClick={() => { sfx.click(); setPref('track', v.id); }} aria-pressed={version.id === v.id}
-                className={`chip cursor-pointer ${version.id === v.id ? '!bg-primary text-white' : ''}`}>{v.emoji} {pick(v.title, locale)}</button>
+                title={v.ages ? pick(v.ages, locale) : undefined}
+                className={`chip cursor-pointer ${version.id === v.id ? '!bg-primary text-white' : ''}`}>{v.emoji} {pick(v.title, locale)}{v.ages ? <span className="ml-1 opacity-70">{pick(v.agesShort, locale)}</span> : null}</button>
             ))}
           </div>
+          {version.ages && <p className="mt-2 text-xs font-semibold text-ink/55">{pick(version.ages, locale)}</p>}
           <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
             <span className="chip font-black" title={pick(L_AGE, locale)} aria-label={pick(L_AGE, locale)}>6+</span>
             <span className="chip">🧑‍🏫 {t('auth.feature.avatars')}</span>
@@ -138,15 +144,19 @@ export default function Login() {
             onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setErr(null); }}>
             {mode === 'login' ? t('auth.noAccount') : t('auth.haveAccount')}
           </button>
-          <div className="flex items-center gap-3 my-4 text-ink/40 font-bold text-xs uppercase tracking-wider">
-            <div className="h-px bg-ink/10 flex-1" />{t('auth.or')}<div className="h-px bg-ink/10 flex-1" />
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('student@demo', 'demo123')}>🎒 {t('auth.demoStudent')}</button>
-            <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('teacher@demo', 'teacher123')}>🧑‍🏫 {t('auth.demoTeacher')}</button>
-            <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('parent@demo', 'parent123')}>👪 {t('auth.demoParent')}</button>
-            <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('admin@demo', 'admin123')}>🛠️ {t('auth.demoAdmin')}</button>
-          </div>
+          {SHOW_DEMO && (
+            <>
+              <div className="flex items-center gap-3 my-4 text-ink/40 font-bold text-xs uppercase tracking-wider">
+                <div className="h-px bg-ink/10 flex-1" />{t('auth.or')}<div className="h-px bg-ink/10 flex-1" />
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('student@demo', 'demo123')}>🎒 {t('auth.demoStudent')}</button>
+                <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('teacher@demo', 'teacher123')}>🧑‍🏫 {t('auth.demoTeacher')}</button>
+                <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('parent@demo', 'parent123')}>👪 {t('auth.demoParent')}</button>
+                {DEMO_ADMIN && <button className="btn-ghost text-sm" disabled={busy} onClick={() => demo('admin@demo', 'admin123')}>🛠️ {t('auth.demoAdmin')}</button>}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
