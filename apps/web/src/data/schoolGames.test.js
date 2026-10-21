@@ -1,10 +1,10 @@
 // Игры по предметам: вопросы есть для каждой клетки учебного плана (часы > 0), формат верный,
 // правильный ответ среди вариантов, каждый пакет прошёл трёх критиков (факты, методист, детский редактор).
 // Проверяется то, что увидит ребёнок: packs/ + more/ (вторая дюжина) вместе с правками критиков (games/fixes.js).
-// Замечания по содержимому собираются списком: в CI видно сразу все (аннотацией), а не только первое.
+// Замечания по содержимому собираются списком: в CI видно сразу все (в сводке запуска), а не только первое.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
 import { gameCells, SLUGS, ICONS, normalizeGrade, mergeMore } from './games/subjects.js';
 import { REVIEW } from './games/review.js';
 import { FIXES, applyFixes } from './games/fixes.js';
@@ -14,20 +14,25 @@ const dir = new URL('./games/packs/', import.meta.url);
 const moreDir = new URL('./games/more/', import.meta.url);
 const loaderSrc = readFileSync(new URL('./games/loadPack.js', import.meta.url), 'utf8');
 const slugs = [...new Set(Object.values(SLUGS))];
-const json = (u) => JSON.parse(readFileSync(u, 'utf8'));
+const loadErrors = [];
+const json = (u) => {
+  try { return JSON.parse(readFileSync(u, 'utf8')); } catch (e) { loadErrors.push(`${u.pathname.split('/').slice(-2).join('/')}: ${e.message}`); return { grades: {} }; }
+};
 const files = Object.fromEntries(slugs.map((s) => [s, json(new URL(`${s}.json`, dir))]));
 const moreNames = existsSync(moreDir) ? readdirSync(moreDir).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)) : [];
 const more = Object.fromEntries(moreNames.filter((s) => slugs.includes(s)).map((s) => [s, json(new URL(`${s}.json`, moreDir))]));
 const merged = (slug, grade) => mergeMore(files[slug]?.grades?.[String(grade)], more[slug]?.grades?.[String(grade)]);
 const str = (x) => typeof x === 'string' && x.trim().length > 0;
 
-function report(problems) {
-  if (problems.length && process.env.GITHUB_ACTIONS) console.log(`::error title=schoolGames (${problems.length})::${problems.slice(0, 60).join(' | ')}`);
+// В CI итог каждой проверки пишется в сводку запуска (видна на странице Actions без входа в логи).
+function report(name, problems) {
+  const out = process.env.GITHUB_STEP_SUMMARY;
+  if (out) appendFileSync(out, `\n**schoolGames: ${name}**: ${problems.length ? `${problems.length} замечаний\n\n${problems.slice(0, 80).map((x) => `- ${x}`).join('\n')}` : 'ok'}\n`);
   assert.deepEqual(problems, []);
 }
 
 test('для каждого предмета есть файл, загрузчик и значок', () => {
-  const p = [];
+  const p = [...loadErrors];
   for (const s of slugs) {
     if (!loaderSrc.includes(`${s}: () => import('./packs/${s}.json')`)) p.push(`загрузчик ${s}`);
     if (!ICONS[s]) p.push(`значок ${s}`);
@@ -36,7 +41,7 @@ test('для каждого предмета есть файл, загрузчи
   for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).map((x) => x.slice(0, -5))) if (!slugs.includes(f)) p.push(`лишний файл packs/${f}`);
   for (const f of moreNames) if (!slugs.includes(f)) p.push(`лишний файл more/${f}`);
   for (const [s, f] of Object.entries(more)) for (const grade of Object.keys(f.grades || {})) if (!files[s].grades?.[grade]) p.push(`more/${s}: класса ${grade} нет в packs/`);
-  report(p);
+  report('файлы', p);
 });
 
 test('каждая клетка плана 1–11 с часами > 0 имеет вопросы и пары', () => {
@@ -53,7 +58,7 @@ test('каждая клетка плана 1–11 с часами > 0 имеет
   for (const [slug, f] of Object.entries(files)) {
     for (const grade of Object.keys(f.grades)) if (!cells.some((c) => c.slug === slug && String(c.grade) === grade)) p.push(`${slug}: класса ${grade} нет в плане`);
   }
-  report(p);
+  report('клетки', p);
 });
 
 test('вопросы: 4 разных варианта, ответ среди них, есть тема и объяснение', () => {
@@ -84,7 +89,7 @@ test('вопросы: 4 разных варианта, ответ среди н�
       if (new Set([...n.quiz, ...n.pairs].map((x) => x.id)).size !== n.quiz.length + n.pairs.length) p.push(`${slug}-${grade}: id повторяются`);
     }
   }
-  report(p);
+  report('вопросы', p);
 });
 
 test('каждая правка критиков указывает на существующий вопрос или пару', () => {
@@ -96,7 +101,7 @@ test('каждая правка критиков указывает на сущ�
     const list = m[3] === 'q' ? g?.quiz : g?.pairs;
     if (!list?.[Number(m[4]) - 1]) p.push(`${id}: нет такого места`);
   }
-  report(p);
+  report('правки', p);
 });
 
 test('каждый пакет проверили три критика', () => {
@@ -106,5 +111,5 @@ test('каждый пакет проверили три критика', () => {
     for (const k of ['factcheck', 'methodist', 'editor']) if (r[k] !== 'pass') p.push(`${slug}: ${k}`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(String(r.date || ''))) p.push(`${slug}: дата проверки`);
   }
-  report(p);
+  report('критики', p);
 });
