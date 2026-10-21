@@ -12,6 +12,7 @@ import { isEnglishPath } from '../features/english/EnglishTabs.jsx';
 
 const L_PROGRAMS = { ru: 'Темы ФОП', en: 'Curriculum topics' };
 const L_LESSONS = { ru: 'Уроки', en: 'Lessons' };
+const L_PLAY = { ru: 'Игры по предметам', en: 'Subject games' };
 const L_ENGLISH = { ru: 'Английский', en: 'English' };
 const L_CLASS = { ru: 'Мой класс', en: 'My class' };
 const L_CLASSES = { ru: 'Классы и чат', en: 'Classes & chat' };
@@ -23,11 +24,13 @@ const L_PRIVACY = { ru: 'Данные и конфиденциальность', 
 const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rating 6+' };
 
 // Student menu: school lessons first (/lessons: homework from all classes + subjects of the grade by ФОП;
-// the curriculum reference /programs opens from a subject). English is one section (/english) with inner tabs:
-// exercises, conversation, games, exams, courses (features/english/EnglishTabs.jsx).
+// the curriculum reference /programs opens from a subject), then game-form practice for every subject (/play).
+// English is one section (/english) with inner tabs: exercises, conversation, games, exams, courses
+// (features/english/EnglishTabs.jsx).
 const NAV = [
   { to: '/', icon: '🏠', key: 'nav.home' },
   { to: '/lessons', icon: '📖', key: 'nav.lessons', label: L_LESSONS },
+  { to: '/play', icon: '🎮', key: 'nav.play', label: L_PLAY },
   { to: '/english', icon: '🔤', key: 'nav.english', label: L_ENGLISH, english: true },
   { to: '/math', icon: '🧮', key: 'nav.math', label: { ru: 'Математика', en: 'Math' } },
   { to: '/classroom', icon: '👥', key: 'nav.classroom', label: L_CLASS },
