@@ -231,7 +231,14 @@ test('новые официальные предметные материалы 
     'edsoo-informatics-ai-methodology-7-9',
     'edsoo-foreign-language-methodical-resources',
     'edsoo-functional-literacy-5-9-methodical',
-    'edsoo-social-studies-demography-10-11'
+    'edsoo-social-studies-demography-10-11',
+    'edsoo-music-methodical-letter-2026-2027',
+    'edsoo-visual-arts-methodical-letter-2026-2027',
+    'edsoo-physical-education-methodical-letter-2026-2027',
+    'edsoo-obzr-methodical-letter-2026-2027',
+    'edsoo-technology-methodical-letter-2026-2027',
+    'edsoo-chemistry-assessment-bank-8-11',
+    'edsoo-physics-hydrostatic-pressure-grade7'
   ];
   const catalog = read('official-russian-school-material-items.json').items;
   for (const id of ids) {

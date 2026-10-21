@@ -48150,6 +48150,167 @@
       "releaseAsset": "fpu-436-2026.pdf",
       "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/fpu-436-2026.pdf",
       "storedInRelease": true
+    },
+    {
+      "id": "edsoo-music-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания музыки в 2026/2027 учебном году",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "music",
+      "topic": "Методические рекомендации для учителей музыки",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-muzyka/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО с письмом на 2026–2027 учебный год; диапазон отражает школьный предметный охват, не заменяет проверку конкретной программы."
+    },
+    {
+      "id": "edsoo-visual-arts-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания изобразительного искусства в 2026/2027 учебном году",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "visual-arts",
+      "topic": "Методические рекомендации для учителей ИЗО",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-izobrazitelnoe-iskusstvo/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО с письмом на 2026–2027 учебный год и пособиями по ИЗО."
+    },
+    {
+      "id": "edsoo-physical-education-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания физической культуры в 2026/2027 учебном году",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "physical-education",
+      "topic": "Методические рекомендации и рабочие программы по физической культуре",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-fizkultura/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО с актуальным письмом на 2026–2027 учебный год; программа уровня класса проверяется отдельно."
+    },
+    {
+      "id": "edsoo-obzr-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо об особенностях преподавания основ безопасности и защиты Родины в 2026/2027 учебном году",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "fundamentals-security-defense-homeland",
+      "topic": "Методические рекомендации по ОБЗР",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-obzh/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО; на ней опубликовано письмо на 2026–2027 учебный год и материалы по ОБЗР."
+    },
+    {
+      "id": "edsoo-technology-methodical-letter-2026-2027",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Информационно-методическое письмо о преподавании труда (технологии) в 2026/2027 учебном году",
+      "gradeRange": [
+        1,
+        9
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "technology",
+      "topic": "Методические рекомендации по труду (технологии)",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "url": "https://edsoo.ru/mr-tehnologiya/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_ACADEMIC_YEAR_VERIFIED",
+      "note": "Официальная страница ЕДСОО содержит письмо на 2026–2027 год и материалы по инвариантным модулям технологии."
+    },
+    {
+      "id": "edsoo-chemistry-assessment-bank-8-11",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Банк заданий для текущего оценивания по химии (2024 г.)",
+      "gradeRange": [
+        8,
+        11
+      ],
+      "gradeStatus": "GRADE_RANGE_FROM_SOURCE_SCOPE",
+      "subject": "chemistry",
+      "topic": "Задания для текущего оценивания по химии",
+      "kind": [
+        "assessment-bank",
+        "task-bank",
+        "methodical-materials"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/him/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "SUBJECT_AND_SOURCE_ENTRY_VERIFIED",
+      "note": "Официальная категория ЕДСОО содержит банк заданий по химии (2024 г.) и другие методические материалы; конкретные классы уточнять в карточке вложения."
+    },
+    {
+      "id": "edsoo-physics-hydrostatic-pressure-grade7",
+      "sourceId": "edsoo-subject-materials",
+      "title": "Методический кейс. Гидростатическое давление. Физика. 7 класс (2024 г.)",
+      "gradeRange": [
+        7
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_SOURCE_TITLE",
+      "subject": "physics",
+      "topic": "Гидростатическое давление",
+      "kind": [
+        "methodical-case",
+        "lesson-materials"
+      ],
+      "url": "https://edsoo.ru/category/mmposob/fiz/",
+      "checkedAt": "2026-10-22",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "metadataCompleteness": "TITLE_SUBJECT_GRADE_VERIFIED",
+      "note": "Официальная категория ЕДСОО содержит кейс для 7 класса; ссылка ведёт на категорию, не на локальную копию PDF."
     }
   ],
   "coverageNote": "Добавлено 934 OCR-извлечённых библиографических записей учебников из действующих разделов федерального перечня 2026 года для классов 1–11. Точность названий/авторов/издателей не гарантируется до ручной сверки с PDF. Полные тексты коммерческих учебников не загружались.",
