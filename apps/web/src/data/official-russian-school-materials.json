@@ -694,6 +694,32 @@
       ],
       "storesFullTextbooksLocally": false,
       "rightsNote": "Catalogue links to official PDFs; do not redistribute copies unless the applicable licence or legal basis is confirmed."
+    },
+    {
+      "id": "federal-textbook-bibliography-2026",
+      "name": "Библиографические записи федерального перечня учебников 2026 года",
+      "url": "https://publication.pravo.gov.ru/document/0001202607230005",
+      "referenceUrl": "https://www.garant.ru/products/ipo/prime/doc/414535956/",
+      "kind": [
+        "federal-textbook-list",
+        "bibliographic-records"
+      ],
+      "access": "public bibliographic source; actual textbook files may be separately licensed",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false,
+      "recordFiles": [
+        "apps/web/src/data/federal-textbooks-2026-primary-1-4.json",
+        "apps/web/src/data/federal-textbooks-2026-basic-5-9.json",
+        "apps/web/src/data/federal-textbooks-2026-secondary-10-11.json"
+      ],
+      "recordCount": 746,
+      "notes": "746 entries extracted from school-grade sections in the HTML version. The extraction is broad but not yet fully reconciled line-by-line against the official 312-page PDF."
     }
   ],
   "integrationPolicy": {
