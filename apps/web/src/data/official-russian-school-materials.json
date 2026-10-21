@@ -1,13 +1,50 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "catalogName": "official-russian-school-materials",
   "lastVerified": "2026-10-21",
-  "note": "This file contains links and metadata only. It does not redistribute textbook content.",
-  "gradeRange": [5, 11],
+  "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
+  "gradeRange": [
+    1,
+    11
+  ],
+  "schoolStages": [
+    {
+      "id": "primary",
+      "name": "Начальное общее образование",
+      "grades": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "basic",
+      "name": "Основное общее образование",
+      "grades": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "secondary",
+      "name": "Среднее общее образование",
+      "grades": [
+        10,
+        11
+      ]
+    }
+  ],
   "subjects": [
     "russian-language",
     "literature",
+    "native-language",
+    "native-literature",
+    "foreign-language",
     "english-language",
+    "german-language",
+    "french-language",
+    "spanish-language",
+    "chinese-language",
+    "literary-reading",
     "mathematics",
     "algebra",
     "geometry",
@@ -18,86 +55,468 @@
     "geography",
     "biology",
     "physics",
-    "chemistry"
+    "chemistry",
+    "astronomy",
+    "world-around-us",
+    "economics",
+    "ecology",
+    "technology",
+    "visual-arts",
+    "music",
+    "physical-education",
+    "fundamentals-security-defense-homeland",
+    "fundamentals-spiritual-culture",
+    "chess",
+    "functional-literacy",
+    "exam-preparation",
+    "regional-and-native-languages",
+    "all-school-subjects"
   ],
   "sources": [
+    {
+      "id": "federal-textbook-list-2026",
+      "name": "Федеральный перечень учебников — приказ Минпросвещения России от 22.06.2026 № 436",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/",
+      "announcementUrl": "https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
+      "kind": [
+        "official-textbook-list",
+        "bibliographic-registry",
+        "normative-document"
+      ],
+      "access": "public-document",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextLocally": false,
+      "rightsNote": "Ссылка на актуальный нормативный перечень; текст конкретного учебника в этот каталог не копируется."
+    },
+    {
+      "id": "federal-curriculum-registry",
+      "name": "Реестр ФГОС, федеральных образовательных программ и федеральных рабочих программ",
+      "url": "https://fgosreestr.edsoo.ru/educational-programs",
+      "kind": [
+        "federal-curricula",
+        "working-programs",
+        "standards"
+      ],
+      "access": "public",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextLocally": false
+    },
+    {
+      "id": "edsoo-program-constructor",
+      "name": "Единое содержание общего образования — конструктор рабочих программ",
+      "url": "https://edsoo.ru/konstruktor-rabochih-programm/",
+      "kind": [
+        "working-programs",
+        "curriculum-planning"
+      ],
+      "access": "public-site; some functions require sign-in",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextLocally": false
+    },
+    {
+      "id": "edsoo-subject-materials",
+      "name": "Единое содержание общего образования — предметные и методические материалы",
+      "url": "https://edsoo.ru/",
+      "kind": [
+        "methodical-materials",
+        "interactive-tasks",
+        "teacher-guides",
+        "videos"
+      ],
+      "access": "public",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "literature",
+        "native-language",
+        "native-literature",
+        "mathematics",
+        "informatics",
+        "history",
+        "social-studies",
+        "geography",
+        "foreign-language",
+        "biology",
+        "physics",
+        "chemistry",
+        "fundamentals-security-defense-homeland",
+        "fundamentals-spiritual-culture",
+        "technology",
+        "music",
+        "visual-arts",
+        "physical-education",
+        "functional-literacy"
+      ],
+      "verifiedExample": {
+        "title": "Интерактивные задания по русскому языку для 5–6 классов",
+        "url": "https://edsoo.ru/2026/08/17/uchim-russkomu-yazyku-s-interesom/",
+        "gradeRange": [
+          5,
+          6
+        ],
+        "subject": "russian-language"
+      },
+      "storesFullTextbooksLocally": false
+    },
     {
       "id": "resh",
       "name": "Российская электронная школа",
       "url": "https://resh.edu.ru/",
-      "kind": ["lessons", "interactive-exercises"],
+      "kind": [
+        "lessons",
+        "video-lessons",
+        "interactive-exercises"
+      ],
       "access": "public",
-      "gradeRange": [1, 11],
-      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"],
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
       "verifiedExample": {
         "title": "Русский язык, 5 класс: имя существительное",
         "url": "https://resh.edu.ru/subject/lesson/7629/",
         "grade": 5,
         "subject": "russian-language",
-        "kind": ["lesson", "interactive-exercises"]
-      }
+        "kind": [
+          "lesson",
+          "interactive-exercises"
+        ]
+      },
+      "storesFullTextbooksLocally": false
     },
     {
       "id": "minprosveshcheniya-distance",
       "name": "Минпросвещения России — федеральные дистанционные образовательные ресурсы",
       "url": "https://edu.gov.ru/distance/",
-      "kind": ["official-resource-directory"],
+      "kind": [
+        "official-resource-directory"
+      ],
       "access": "public",
-      "gradeRange": [1, 11],
-      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false
     },
     {
       "id": "my-school-knowledge-base",
-      "name": "ФГИС «Моя школа» — база знаний",
+      "name": "ФГИС «Моя школа» — база знаний и каталог контента",
       "url": "https://myschool.eduprosvet.ru/data/",
-      "kind": ["digital-content-catalog", "homework-guidance"],
+      "kind": [
+        "digital-content-catalog",
+        "homework-guidance"
+      ],
       "access": "mixed-public-and-authenticated",
-      "gradeRange": [1, 11],
-      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false
     },
     {
       "id": "uchi-tsok",
       "name": "Учи.ру в «Моей школе»",
       "url": "https://www.tsok.uchi.ru/",
-      "kind": ["exercises", "learning-materials"],
+      "kind": [
+        "exercises",
+        "learning-materials"
+      ],
       "access": "check-current-access-conditions",
-      "gradeRange": [5, 9],
-      "subjects": ["russian-language", "mathematics", "algebra"]
-    },
-    {
-      "id": "federal-textbook-list",
-      "name": "Минпросвещения России — федеральный перечень учебников",
-      "url": "https://edu.gov.ru/press/11911/minprosvescheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya",
-      "kind": ["official-textbook-list"],
-      "access": "public",
-      "gradeRange": [1, 11],
-      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "mathematics",
+        "algebra",
+        "functional-literacy"
+      ],
+      "storesFullTextbooksLocally": false
     },
     {
       "id": "moscow-e-school",
       "name": "Московская электронная школа",
       "url": "https://uchebnik.mos.ru/",
-      "kind": ["electronic-textbooks", "lesson-materials", "exercises"],
+      "kind": [
+        "electronic-textbooks",
+        "lesson-materials",
+        "exercises"
+      ],
       "access": "regional-platform-may-require-authentication",
-      "gradeRange": [1, 11],
-      "subjects": ["russian-language", "literature", "english-language", "mathematics", "algebra", "geometry", "informatics", "history", "social-studies", "geography", "biology", "physics", "chemistry"]
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "prosv-media-library",
+      "name": "Издательство «Просвещение» — Медиатека электронных учебников",
+      "url": "https://media.prosv.ru/",
+      "kind": [
+        "electronic-textbooks",
+        "interactive-objects",
+        "digital-workbooks"
+      ],
+      "access": "publisher-license-or-account-may-be-required",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "literature",
+        "literary-reading",
+        "foreign-language",
+        "mathematics",
+        "informatics",
+        "history",
+        "social-studies",
+        "geography",
+        "biology",
+        "physics",
+        "chemistry",
+        "astronomy",
+        "world-around-us",
+        "technology",
+        "visual-arts",
+        "music",
+        "economics",
+        "ecology"
+      ],
+      "storesFullTextbooksLocally": false,
+      "rightsNote": "Подключать через официальный сайт/приложение на условиях правообладателя; не скачивать и не зеркалировать книги без разрешения."
+    },
+    {
+      "id": "prosv-textbook-catalog",
+      "name": "Издательство «Просвещение» — каталог учебников и пособий",
+      "url": "https://prosv.ru/catalog/uchebniki/",
+      "kind": [
+        "textbook-catalog",
+        "workbooks",
+        "atlases",
+        "exam-preparation"
+      ],
+      "access": "public-catalog; individual products may be paid",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "prosv-digital-help",
+      "name": "«Просвещение» — цифровые учебники и условия доступа",
+      "url": "https://digital.prosv.ru/faq/",
+      "kind": [
+        "publisher-access-guidance",
+        "electronic-textbooks"
+      ],
+      "access": "public-information; textbook access depends on license",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "fipi-ege-bank",
+      "name": "ФИПИ — открытый банк заданий ЕГЭ",
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege",
+      "kind": [
+        "exam-task-bank",
+        "practice-tasks",
+        "exam-preparation"
+      ],
+      "access": "public",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "mathematics",
+        "physics",
+        "chemistry",
+        "informatics",
+        "biology",
+        "history",
+        "geography",
+        "social-studies",
+        "literature",
+        "foreign-language",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "fipi-oge-bank",
+      "name": "ФИПИ — открытый банк заданий ОГЭ",
+      "url": "https://fipi.ru/oge/otkrytyy-bank-zadaniy-oge",
+      "kind": [
+        "exam-task-bank",
+        "practice-tasks",
+        "exam-preparation"
+      ],
+      "access": "public",
+      "gradeRange": [
+        9
+      ],
+      "subjects": [
+        "russian-language",
+        "mathematics",
+        "physics",
+        "chemistry",
+        "informatics",
+        "biology",
+        "history",
+        "geography",
+        "social-studies",
+        "literature",
+        "foreign-language",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "fipi-ege-specifications",
+      "name": "ФИПИ — демоверсии, спецификации и кодификаторы ЕГЭ",
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "kind": [
+        "exam-specifications",
+        "demonstration-variants",
+        "curriculum-requirements"
+      ],
+      "access": "public",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subjects": [
+        "all-school-subjects",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "fipi-oge-specifications",
+      "name": "ФИПИ — демоверсии, спецификации и кодификаторы ОГЭ",
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "kind": [
+        "exam-specifications",
+        "demonstration-variants",
+        "curriculum-requirements"
+      ],
+      "access": "public",
+      "gradeRange": [
+        9
+      ],
+      "subjects": [
+        "all-school-subjects",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
+    },
+    {
+      "id": "fipi-ege-navigator",
+      "name": "ФИПИ — навигатор самостоятельной подготовки к ЕГЭ",
+      "url": "https://fipi.ru/navigator-podgotovki/navigator-ege",
+      "kind": [
+        "self-study-guides",
+        "topic-practice",
+        "exam-preparation"
+      ],
+      "access": "public",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subjects": [
+        "russian-language",
+        "mathematics",
+        "physics",
+        "chemistry",
+        "informatics",
+        "biology",
+        "history",
+        "geography",
+        "social-studies",
+        "literature",
+        "foreign-language",
+        "exam-preparation"
+      ],
+      "storesFullTextbooksLocally": false
     }
   ],
   "integrationPolicy": {
-    "storeSourceLinksAndMetadataOnly": true,
+    "storeSourceLinksAndMetadataOnlyByDefault": true,
     "redistributeFullTextbooksWithoutPermission": false,
+    "mirrorPublisherProtectedTextbooks": false,
     "bypassAuthenticationOrAccessControls": false,
+    "includeMaterialsUnderOpenLicenseWhenLicenseVerified": true,
+    "attributeAdaptedOrReusedOpenMaterials": true,
     "generateOriginalPracticeQuestions": true,
     "requiredItemFields": [
       "sourceId",
       "title",
-      "grade",
+      "gradeRange",
       "subject",
       "topic",
       "kind",
       "url",
       "checkedAt",
-      "accessStatus"
+      "accessStatus",
+      "rightsStatus"
+    ],
+    "statuses": [
+      "VERIFIED",
+      "NOT_PROVEN",
+      "NEEDS_RECHECK"
+    ],
+    "notes": [
+      "Федеральный перечень подтверждает допуск издания к использованию, но не разрешает бесплатно копировать его полный текст.",
+      "Не считать ссылку на платформу доказательством, что каждый урок или файл доступен без регистрации.",
+      "Хранить скачанные копии только при подтверждённом разрешении, открытой лицензии или применимом законном основании."
     ]
   }
 }
