@@ -181,3 +181,16 @@ test('счётчик индексных записей равен сумме и�
     assert.equal(row.additionalCatalogResourceCount || 0, extra, row.subject);
   }
 });
+
+
+test('идентификаторы библиографических записей ФПУ уникальны между всеми этапами', () => {
+  const files = [
+    'federal-textbooks-2026-primary-1-4.json',
+    'federal-textbooks-2026-basic-5-9.json',
+    'federal-textbooks-2026-secondary-10-11.json'
+  ];
+  const records = files.flatMap((file) => read(file).records);
+  assert.equal(records.length, 746);
+  assert.equal(new Set(records.map((row) => row.id)).size, records.length,
+    'повторяются id в библиографических выгрузках ФПУ');
+});
