@@ -17886,6 +17886,75 @@
       "contentStoredLocally": false,
       "fullTextAvailable": false,
       "note": "Библиографическая запись; наличие и права на полный текст не подтверждены."
+    },
+    {
+      "id": "fpu2026-index-primary-1-4",
+      "sourceId": "federal-textbook-bibliography-2026",
+      "title": "Библиографический список федерального перечня учебников 2026: 1–4 классы",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Библиографические записи допущенных учебников и пособий",
+      "kind": [
+        "federal-textbook-bibliography",
+        "textbook-metadata"
+      ],
+      "url": "https://github.com/paulafanasyev/svetlana_tutor/blob/feat/official-russian-school-materials/apps/web/src/data/federal-textbooks-2026-primary-1-4.json",
+      "sourceUrl": "https://www.garant.ru/products/ipo/prime/doc/414535956/",
+      "officialSource": "https://publication.pravo.gov.ru/document/0001202607230005",
+      "recordCount": 237,
+      "checkedAt": "2026-10-21",
+      "accessStatus": "repository metadata file; official book files accessed separately",
+      "rightsStatus": "BIBLIOGRAPHY_ONLY; no textbook files redistributed",
+      "contentStoredLocally": true
+    },
+    {
+      "id": "fpu2026-index-basic-5-9",
+      "sourceId": "federal-textbook-bibliography-2026",
+      "title": "Библиографический список федерального перечня учебников 2026: 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Библиографические записи допущенных учебников и пособий",
+      "kind": [
+        "federal-textbook-bibliography",
+        "textbook-metadata"
+      ],
+      "url": "https://github.com/paulafanasyev/svetlana_tutor/blob/feat/official-russian-school-materials/apps/web/src/data/federal-textbooks-2026-basic-5-9.json",
+      "sourceUrl": "https://www.garant.ru/products/ipo/prime/doc/414535956/",
+      "officialSource": "https://publication.pravo.gov.ru/document/0001202607230005",
+      "recordCount": 423,
+      "checkedAt": "2026-10-21",
+      "accessStatus": "repository metadata file; official book files accessed separately",
+      "rightsStatus": "BIBLIOGRAPHY_ONLY; no textbook files redistributed",
+      "contentStoredLocally": true
+    },
+    {
+      "id": "fpu2026-index-secondary-10-11",
+      "sourceId": "federal-textbook-bibliography-2026",
+      "title": "Библиографический список федерального перечня учебников 2026: 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Библиографические записи допущенных учебников и пособий",
+      "kind": [
+        "federal-textbook-bibliography",
+        "textbook-metadata"
+      ],
+      "url": "https://github.com/paulafanasyev/svetlana_tutor/blob/feat/official-russian-school-materials/apps/web/src/data/federal-textbooks-2026-secondary-10-11.json",
+      "sourceUrl": "https://www.garant.ru/products/ipo/prime/doc/414535956/",
+      "officialSource": "https://publication.pravo.gov.ru/document/0001202607230005",
+      "recordCount": 86,
+      "checkedAt": "2026-10-21",
+      "accessStatus": "repository metadata file; official book files accessed separately",
+      "rightsStatus": "BIBLIOGRAPHY_ONLY; no textbook files redistributed",
+      "contentStoredLocally": true
     }
   ],
   "coverageNote": "В эту версию включены 144 библиографические записи из двух частичных выборок федерального перечня. Это НЕ полный извлечённый список приказа №436: в нём остаются сотни разделов/записей, которые ещё нужно сверить и извлечь. Полные тексты коммерческих учебников не хранятся без подтверждённых прав."
