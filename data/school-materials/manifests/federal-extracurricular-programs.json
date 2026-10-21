@@ -6,7 +6,7 @@
   "verified": 53,
   "failed": 0,
   "duplicatesBySha256": 0,
-  "staleItemsRemoved": 53,
+  "staleItemsRemoved": 0,
   "files": [
     {
       "id": "edsoo-vd-ed16bf7aafc5",
