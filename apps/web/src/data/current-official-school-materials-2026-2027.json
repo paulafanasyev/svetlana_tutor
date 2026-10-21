@@ -1,0 +1,147 @@
+{
+ "schemaVersion": 1,
+ "catalogName": "current-official-school-materials-2026-2027",
+ "checkedAt": "2026-10-21",
+ "note": "Дополнение к общему каталогу. Полные PDF не зеркалируются, пока права на повторное распространение не подтверждены.",
+ "records": [
+  {
+   "id": "edsoo-literature-guidance-2026-2027-page",
+   "sourceId": "edsoo-subject-materials",
+   "title": "ЕДСОО: материалы по преподаванию литературы в 2026/2027 учебном году",
+   "url": "https://edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/",
+   "publicationDate": "2026-10-19",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    5,
+    11
+   ],
+   "subject": "literature",
+   "type": [
+    "official-source-page",
+    "annual-subject-guidance"
+   ],
+   "relatedOfficialUrls": [
+    "https://edsoo.ru/wp-content/uploads/2026/08/literatura2-2.pdf",
+    "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+    "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+    "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_ugl.pdf"
+   ],
+   "access": "VERIFIED — official EDSOO page and links checked",
+   "rights": "NOT PROVEN for full-file redistribution; link only",
+   "contentStoredLocally": false
+  },
+  {
+   "id": "edsoo-literature-guidance-letter-2026-2027",
+   "sourceId": "edsoo-subject-materials",
+   "title": "ЕДСОО: методическое письмо по литературе на 2026/2027 учебный год",
+   "url": "https://edsoo.ru/wp-content/uploads/2026/08/literatura2-2.pdf",
+   "sourceAttributionUrl": "https://edsoo.ru/2026/10/19/voprosy-o-vazhnom-literatura-2/",
+   "publicationDate": "2026-10-19",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    5,
+    11
+   ],
+   "subject": "literature",
+   "type": [
+    "methodological-letter",
+    "teacher-guidance"
+   ],
+   "pageCount": 20,
+   "access": "VERIFIED — official PDF, 20 pages",
+   "rights": "NOT PROVEN for full-PDF redistribution; link only",
+   "contentStoredLocally": false
+  },
+  {
+   "id": "edsoo-technology-guidance-2026-2027-page",
+   "sourceId": "edsoo-subject-materials",
+   "title": "ЕДСОО: материалы по труду (технологии) в 2026/2027 учебном году",
+   "url": "https://edsoo.ru/2026/09/28/voprosy-o-vazhnom-trud-tehnologiya/",
+   "publicationDate": "2026-09-28",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    1,
+    9
+   ],
+   "subject": "technology",
+   "type": [
+    "official-source-page",
+    "annual-subject-guidance"
+   ],
+   "relatedOfficialUrls": [
+    "https://edsoo.ru/wp-content/uploads/2026/08/trud-tehnologiya.pdf",
+    "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_trud_1-4.pdf",
+    "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf"
+   ],
+   "access": "VERIFIED — official EDSOO page and links checked",
+   "rights": "NOT PROVEN for full-file redistribution; link only",
+   "contentStoredLocally": false
+  },
+  {
+   "id": "edsoo-technology-guidance-letter-2026-2027",
+   "sourceId": "edsoo-subject-materials",
+   "title": "ЕДСОО: методическое письмо по труду (технологии) на 2026/2027 учебный год",
+   "url": "https://edsoo.ru/wp-content/uploads/2026/08/trud-tehnologiya.pdf",
+   "sourceAttributionUrl": "https://edsoo.ru/2026/09/28/voprosy-o-vazhnom-trud-tehnologiya/",
+   "publicationDate": "2026-09-28",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    1,
+    9
+   ],
+   "subject": "technology",
+   "type": [
+    "methodological-letter",
+    "teacher-guidance"
+   ],
+   "pageCount": 25,
+   "access": "VERIFIED — official PDF, 25 pages",
+   "rights": "NOT PROVEN for full-PDF redistribution; link only",
+   "contentStoredLocally": false
+  },
+  {
+   "id": "fipi-oge-project-kim-2027",
+   "sourceId": "fipi-oge-specifications",
+   "title": "ФИПИ: проекты демоверсий, спецификаций и кодификаторов ОГЭ 2027",
+   "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+   "publicationDate": "2026-08-26",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    9,
+    9
+   ],
+   "subject": "exam-preparation",
+   "type": [
+    "exam-specifications",
+    "demonstration-variants",
+    "codifiers",
+    "project-documents-2027"
+   ],
+   "access": "VERIFIED — official FIPI page lists OGE 2027 documents",
+   "rights": "NOT PROVEN for republishing linked PDFs; link only",
+   "contentStoredLocally": false
+  },
+  {
+   "id": "fipi-ege-project-kim-2027",
+   "sourceId": "fipi-ege-specifications",
+   "title": "ФИПИ: проекты демоверсий, спецификаций и кодификаторов ЕГЭ 2027",
+   "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+   "publicationDate": "2026-08-26",
+   "checkedAt": "2026-10-21",
+   "gradeRange": [
+    10,
+    11
+   ],
+   "subject": "exam-preparation",
+   "type": [
+    "exam-specifications",
+    "demonstration-variants",
+    "codifiers",
+    "project-documents-2027"
+   ],
+   "access": "VERIFIED — official FIPI page lists EGE 2027 documents",
+   "rights": "NOT PROVEN for republishing linked PDFs; link only",
+   "contentStoredLocally": false
+  }
+ ]
+}
