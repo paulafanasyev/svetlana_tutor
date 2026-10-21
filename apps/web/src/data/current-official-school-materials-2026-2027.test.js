@@ -18,7 +18,14 @@ test('current official school-material records are unique and dated', () => {
   }
 });
 
-test('current official materials include EDSOO letters and FIPI 2027 projects', () => {
+test('FIPI 2027 entries reference existing main-index records rather than reimporting duplicates', () => {
+  for (const record of catalog.records.filter((item) => item.id.startsWith('fipi-'))) {
+    assert.equal(record.notForReimportIntoUnifiedIndex, true, record.id);
+    assert.ok(record.duplicateOf, record.id);
+  }
+});
+
+test('current official materials include EDSOO letters and FIPI 2027 references', () => {
   const ids = new Set(catalog.records.map((record) => record.id));
   for (const id of [
     'edsoo-literature-guidance-letter-2026-2027',
