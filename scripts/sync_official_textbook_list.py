@@ -90,6 +90,39 @@ def main():
         "note":"The PDF and extracted text are the federal textbook-list document. They are not full copies of each listed textbook."
     }
     write_json(MANIFEST_PATH,manifest)
+    # Add one provenance record for the full legal list; individual textbooks remain separate records.
+    items_path = ROOT / "apps/web/src/data/official-russian-school-material-items.json"
+    items_obj = json.loads(items_path.read_text(encoding="utf-8"))
+    item_id = "federal-textbook-list-2026-full-document"
+    item = {
+        "id": item_id, "sourceId": "federal-textbook-list-2026",
+        "title": "Федеральный перечень учебников — полный текст приказа № 436 от 22.06.2026",
+        "gradeRange": [1, 11], "subject": "all-school-subjects",
+        "topic": "Полный официальный перечень допущенных учебников",
+        "kind": ["official-textbook-list", "normative-document", "full-text-extraction"],
+        "url": LANDING, "checkedAt": manifest["checkedAt"],
+        "accessStatus": "LOCAL_OFFICIAL_PDF_AND_TEXT_VERIFIED",
+        "rightsStatus": "OFFICIAL_NORMATIVE_LEGAL_ACT; individual textbook contents are not included",
+        "contentStoredLocally": True, "localPath": manifest["pdf"]["path"],
+        "textPath": manifest["text"]["path"], "pageCount": manifest["pdf"]["pages"],
+        "fileSizeBytes": manifest["pdf"]["bytes"], "sha256": manifest["pdf"]["sha256"],
+        "downloadStatus": "LOCAL_PDF_SIGNATURE_AND_HASH_VERIFIED"
+    }
+    existing_items = items_obj.setdefault("items", [])
+    existing_items[:] = [x for x in existing_items if x.get("id") != item_id]
+    existing_items.append(item)
+    items_obj["schemaVersion"] = max(int(items_obj.get("schemaVersion", 1)), 8)
+    items_obj["lastVerified"] = manifest["checkedAt"]
+    items_path.write_text(json.dumps(items_obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    catalog_path = ROOT / "apps/web/src/data/official-russian-school-materials.json"
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    catalog["federalTextbookListLocalCopy"] = {
+        "status": "VERIFIED", "sourceUrl": LANDING,
+        "pdfPath": manifest["pdf"]["path"], "textPath": manifest["text"]["path"],
+        "pages": manifest["pdf"]["pages"], "sha256": manifest["pdf"]["sha256"],
+        "note": "Contains the federal list, not the full contents of every listed textbook."
+    }
+    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     print(json.dumps({"pdfPages":len(reader.pages),"pdfBytes":len(pdf_data),"sha256":sha,"extractedCharacters":len(extracted)},ensure_ascii=False))
 
 if __name__=="__main__":
