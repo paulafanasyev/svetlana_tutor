@@ -69,21 +69,28 @@ def main():
                 by_code.setdefault(rec.get("sectionCode"), []).append(("garant", rec.get("listRow"), rec.get("title"), rec.get("allowedUseUntil")))
         for rec in load(DATA / "federal-textbook-bibliography-2026-full-extraction.json")["records"]:
             by_code.setdefault(rec.get("sectionCode"), []).append(("ocr", rec.get("federalListNumber"), rec.get("title"), None))
-        out += ["", "## Cross-check with fpu_status.json (by position code)",
-                "| key | code | use_until | source | row | allowedUseUntil | title |", "|---|---|---|---|---|---|---|"]
+        # Position codes repeat across the tables of order No. 436 (e.g. 1.1.1.7.1.1 is Informatics No. 110
+        # in one table and Okruzhayushchiy mir No. 199 in another), so only the pair number+code identifies a book.
+        out += ["", "## Cross-check with fpu_status.json (pair: number + position code)",
+                "| key | code | use_until | source | allowedUseUntil | title |", "|---|---|---|---|---|---|"]
         agree = disagree = absent = 0
         for key, st in status.items():
-            hits = by_code.get(st["fpu_code"], [])
-            if not hits:
+            head = key.split("|")[0]
+            number = int(head) if head.isdigit() else None
+            hits = [h for h in by_code.get(st["fpu_code"], []) if h[1] == number]
+            if not any(h[0] == "garant" for h in hits):
                 absent += 1
-                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | — | — | — | NOT FOUND |")
+            if not hits:
+                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | — | — | NOT IN EXTRACT |")
             for src, row, title, until in hits:
                 m = re.search(r"(20\d\d)", until or "")
                 ok = None if src == "ocr" or not m else (m.group(1) == st["use_until"][:4])
                 agree += ok is True; disagree += ok is False
                 flag = "" if ok is not False else " **MISMATCH**"
-                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | {src} | {row} | {until or '—'}{flag} | {(title or '')[:70]} |")
-        out.append(f"- agree={agree} disagree={disagree} absent={absent}")
+                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | {src} | {until or '—'}{flag} | {(title or '')[:70]} |")
+        out.append(f"- agree={agree} disagree={disagree} not_in_garant_extract={absent}")
+        reused = sum(1 for code, hs in by_code.items() if len({h[1] for h in hs if h[0] == "garant"}) > 1)
+        out.append(f"- position codes used by more than one row in the garant extract: {reused}")
         years = Counter()
         for name in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json",
                      "federal-textbooks-2026-secondary-10-11.json"):
