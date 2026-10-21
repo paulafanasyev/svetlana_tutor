@@ -752,5 +752,7 @@
   "localFederalWorkingProgramPdfCount": 55,
   "lastFederalProgramDownloadAttemptAt": "2026-10-21T04:49:00.856032+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
-  "failedFederalWorkingProgramPdfCount": 0
+  "failedFederalWorkingProgramPdfCount": 0,
+  "extracurricularProgramsSourceUrl": "https://edsoo.ru/rabochie-programmy-vd/",
+  "extracurricularProgramsLocalSyncStatus": "PENDING_FIRST_GITHUB_ACTIONS_RUN"
 }
