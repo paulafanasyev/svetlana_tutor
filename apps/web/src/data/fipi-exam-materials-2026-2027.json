@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "title": "Официальные экзаменационные материалы ФИПИ",
+  "checkedAt": "2026-10-21",
+  "status": "LINKS_VERIFIED_FROM_OFFICIAL_FIPI_PAGES; downloadable files remain hosted by FIPI",
+  "note": "Ветка хранит индекс и официальные ссылки. Полные экзаменационные PDF не зеркалируются автоматически без проверки прямого URL, актуального года, правового режима и структуры страницы.",
+  "materials": [
+    {
+      "id": "fipi-ege-demo-2027",
+      "title": "ЕГЭ 2027: проекты демоверсий, спецификаций и кодификаторов",
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "grades": [
+        10,
+        11
+      ],
+      "kind": [
+        "demo-variant",
+        "specification",
+        "codifier"
+      ],
+      "status": "VERIFIED",
+      "note": "ФИПИ сообщает о публикации проектов КИМ 2027 года; материалы находятся на официальной странице по предметным вкладкам."
+    },
+    {
+      "id": "fipi-oge-demo-2027",
+      "title": "ОГЭ 2027: проекты демоверсий, спецификаций и кодификаторов",
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "grades": [
+        9,
+        9
+      ],
+      "kind": [
+        "demo-variant",
+        "specification",
+        "codifier"
+      ],
+      "status": "VERIFIED",
+      "note": "ФИПИ сообщает о публикации проектов КИМ 2027 года; материалы находятся на официальной странице по предметным вкладкам."
+    },
+    {
+      "id": "fipi-ege-open-bank",
+      "title": "Открытый банк заданий ЕГЭ",
+      "url": "https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege",
+      "grades": [
+        10,
+        11
+      ],
+      "kind": [
+        "exam-task-bank"
+      ],
+      "status": "VERIFIED",
+      "note": "Официальная страница ФИПИ; банк заданий доступен онлайн."
+    },
+    {
+      "id": "fipi-oge-open-bank",
+      "title": "Открытый банк заданий ОГЭ",
+      "url": "https://fipi.ru/oge/otkrytyy-bank-zadaniy-oge",
+      "grades": [
+        9,
+        9
+      ],
+      "kind": [
+        "exam-task-bank"
+      ],
+      "status": "VERIFIED",
+      "note": "Официальная страница ФИПИ; банк заданий доступен онлайн."
+    },
+    {
+      "id": "fipi-ege-2026-final",
+      "title": "ЕГЭ 2026: утверждённые демоверсии, спецификации и кодификаторы",
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "grades": [
+        10,
+        11
+      ],
+      "kind": [
+        "demo-variant",
+        "specification",
+        "codifier"
+      ],
+      "status": "VERIFIED",
+      "note": "На странице размещён отдельный архив материалов ЕГЭ 2026 года."
+    },
+    {
+      "id": "fipi-oge-2026-final",
+      "title": "ОГЭ 2026: утверждённые демоверсии, спецификации и кодификаторы",
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "grades": [
+        9,
+        9
+      ],
+      "kind": [
+        "demo-variant",
+        "specification",
+        "codifier"
+      ],
+      "status": "VERIFIED",
+      "note": "На странице размещён отдельный архив материалов ОГЭ 2026 года."
+    },
+    {
+      "id": "fipi-ege-2026-navigator",
+      "title": "Навигатор самостоятельной подготовки к ЕГЭ 2026",
+      "url": "https://fipi.ru/materials",
+      "grades": [
+        10,
+        11
+      ],
+      "kind": [
+        "self-study",
+        "topic-guides"
+      ],
+      "status": "VERIFIED",
+      "note": "ФИПИ публикует подготовительные материалы и ссылки на открытый банк заданий; отдельные PDF доступны в домене doc.fipi.ru."
+    },
+    {
+      "id": "fipi-oge-regulations-2026",
+      "title": "Нормативные документы и методические рекомендации ОГЭ 2026",
+      "url": "https://fipi.ru/oge/normativno-pravovye-dokumenty",
+      "grades": [
+        9,
+        9
+      ],
+      "kind": [
+        "regulations",
+        "teacher-guidance"
+      ],
+      "status": "VERIFIED",
+      "note": "Официальные документы по организации и оцениванию экзамена."
+    },
+    {
+      "id": "fipi-ege-regulations-2026",
+      "title": "Нормативные документы и методические рекомендации ЕГЭ 2026",
+      "url": "https://fipi.ru/ege/normativno-pravovye-dokumenty",
+      "grades": [
+        10,
+        11
+      ],
+      "kind": [
+        "regulations",
+        "teacher-guidance"
+      ],
+      "status": "VERIFIED",
+      "note": "Официальные документы по организации и оцениванию экзамена."
+    }
+  ],
+  "policy": {
+    "mirrorOnlyWhen": "Direct PDF URL is confirmed on an official FIPI domain and reuse/redistribution terms are checked.",
+    "doNotClaim": "An official page link is not proof that its underlying PDF has been downloaded into this repository.",
+    "preserveOldRecords": true
+  }
+}
