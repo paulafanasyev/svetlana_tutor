@@ -13,6 +13,7 @@ const SHA = /^[0-9a-f]{64}$/;
 const TAG = 'school-materials-2026-10';
 
 const items = read('official-russian-school-material-items.json').items;
+const lessons = read('edsoo-official-lesson-index.json').items;
 const programs = read('federal-working-programs.json').programs;
 const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
 
@@ -262,4 +263,16 @@ test('перекрёстная сверка OCR охватывает все за
   assert.equal(crosswalk.summary.allRemainUnverified, true);
   assert.ok(crosswalk.records.every((x) => x.status.includes('NEEDS_') || x.status.includes('NEEDS_RECHECK')), 'crosswalk must not mark any OCR record verified');
   assert.ok(crosswalk.records.every((x) => x.ocrExtractionStatus === 'OCR_EXTRACTED_NEEDS_RECHECK'));
+});
+
+
+test('записи ЕДСОО с подтверждением класса содержат ссылку и доказательство', () => {
+  const verified = lessons.filter((item) => item.gradeStatus === 'GRADE_VERIFIED_ON_SOURCE_PAGE');
+  assert.ok(verified.length >= 12, 'ожидалось не менее 12 записей с проверкой по странице');
+  for (const item of verified) {
+    assert.equal(item.gradeEvidenceUrl, item.url, item.id);
+    assert.match(item.gradeEvidence || '', /Класс\s*(?::|№)?\s*(?:[1-9]|1[01])/iu, item.id);
+    assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length === 2, item.id);
+    assert.equal(item.gradeRange[0], item.gradeRange[1], item.id);
+  }
 });
