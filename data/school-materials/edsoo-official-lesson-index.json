@@ -137,10 +137,10 @@
       "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniya",
       "description": "Я люблю свой родной язык! Он понятен для всех, Он певуч, Он, как русский народ, многоли́к, Как держа́ва наша, могуч. Хочешь — песни, гимны пиши, Хочешь — выскажи боль души.",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "russian-language",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -151,8 +151,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «3 КЛАСС». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "3 КЛАСС",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniya"
     },
     {
       "id": "edsoo-lesson-007",
@@ -256,10 +259,10 @@
       "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniyaurok",
       "description": "Русский язык – национальное достояние всех народов Российской Федерации. Это замечательно, что все народы, живущие в нашей огромной стране, имеют возможность ...",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "russian-language",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -270,8 +273,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «4 КЛАСС». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "4 КЛАСС",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniyaurok"
     },
     {
       "id": "edsoo-lesson-012",
@@ -326,10 +332,10 @@
       "url": "https://edsoo.ru/urok-znachenie-slova-v-slovare",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -340,8 +346,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «3 КЛАСС». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "3 КЛАСС",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-znachenie-slova-v-slovare"
     },
     {
       "id": "edsoo-lesson-015",
@@ -2741,8 +2750,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 93,
-    "stillNeedsReview": 3,
+    "verifiedOnSourcePage": 96,
+    "stillNeedsReview": 0,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
