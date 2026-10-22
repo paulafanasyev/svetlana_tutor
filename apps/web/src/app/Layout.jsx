@@ -29,7 +29,7 @@ const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rat
 // (features/english/EnglishTabs.jsx).
 const NAV = [
   { to: '/', icon: '🏠', key: 'nav.home' },
-  { to: '/lessons', icon: '📖', key: 'nav.lessons', label: L_LESSONS },
+  { to: '/lessons', icon: '📖', key: 'nav.lessons', label: L_LESSONS },\n  { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-чат', en: 'AI chat' } },
   { to: '/play', icon: '🎮', key: 'nav.play', label: L_PLAY },
   { to: '/english', icon: '🔤', key: 'nav.english', label: L_ENGLISH, english: true },
   { to: '/math', icon: '🧮', key: 'nav.math', label: { ru: 'Математика', en: 'Math' } },
@@ -108,13 +108,13 @@ export default function Layout({ children }) {
   const logout = async () => { await api.logout(); setUser(null); nav('/'); };
   const items = user.role === 'ADMIN' ? [...NAV, { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER }, { to: '/admin', icon: '🛠️', key: 'nav.admin' }]
     : user.role === 'TEACHER' ? [
-      { to: '/teacher', icon: '🧑‍🏫', key: 'nav.cabinet' },
+      { to: '/teacher', icon: '🧑‍🏫', key: 'nav.cabinet' },\n      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'Помощник учителя', en: 'Teacher assistant' } },
       { to: '/classroom', icon: '👥', key: 'nav.classroom', label: L_CLASSES },
       { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
     ]
     : user.role === 'PARENT' ? [
-      { to: '/child', icon: '👪', key: 'nav.child' },
+      { to: '/child', icon: '👪', key: 'nav.child' },\n      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-помощник', en: 'AI assistant' } },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
     ]
     : NAV;
