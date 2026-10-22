@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "edsoo-official-lesson-index",
   "source": "https://edsoo.ru/",
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-10-22",
   "discoveredCount": 103,
   "note": "Discovered by ten separate index searches. It is not the complete catalogue of the site; subject/grade labels are inferred from page titles and snippets and require item-level validation.",
   "items": [
@@ -36,10 +36,10 @@
       "url": "https://edsoo.ru/urok-1",
       "description": "Планируемые предметные результаты: 1. Характеризовать тематические группы слов, родовые и видовые понятия. 2. Проводить лексический анализ слов (в рамках ...",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -50,8 +50,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс: 5». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс: 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-1"
     },
     {
       "id": "edsoo-lesson-003",
@@ -60,10 +62,10 @@
       "url": "https://edsoo.ru/urok-nravstvennye-uroki-vladimira-monomaha-1",
       "description": "Владимир Мономах (1053-1125) – сын князя Всеволода Ярославича, был прозван Мономахом в подражание своему деду по матери – византийскому императору Константину IX Мономаху. Он не сразу стал великим князем Киевским – лишь ...",
       "gradeRange": [
-        1,
-        11
+        7,
+        7
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -74,8 +76,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 7». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 7",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-nravstvennye-uroki-vladimira-monomaha-1"
     },
     {
       "id": "edsoo-lesson-004",
@@ -107,10 +111,10 @@
       "url": "https://edsoo.ru/urok_doroga-zhizni",
       "description": "Дорога жизни – единственная дорога, проходившая в годы Великой Отечественной войны через Ладожское озеро, связывая осаждённый немецкими войсками Ленинград (ныне Санкт-Петербург) с тылом страны.",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "history",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -121,8 +125,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 5». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_doroga-zhizni"
     },
     {
       "id": "edsoo-lesson-006",
@@ -155,10 +161,10 @@
       "url": "https://edsoo.ru/urok_urok-na-vsyu-zhizn",
       "description": "Один из рассказов М.М. Зощенко из цикла «Лёля и Минька» называется «Ёлка». Задание связано со знанием содержания этого рассказа. Разделите между Лёлей и Минькой перечисленные украшения, которые они сняли с ёлки, и ...",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "russian-language",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -169,8 +175,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "TITLE_AND_SNIPPET_INDEXED",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 5». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_urok-na-vsyu-zhizn"
     },
     {
       "id": "edsoo-lesson-008",
@@ -342,10 +350,10 @@
       "url": "https://edsoo.ru/urok_predanie-semi-merczalovyh",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -356,8 +364,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 6». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_predanie-semi-merczalovyh"
     },
     {
       "id": "edsoo-lesson-016",
@@ -366,10 +376,10 @@
       "url": "https://edsoo.ru/urok_soderzhanie-skazki",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -380,8 +390,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 5». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_soderzhanie-skazki"
     },
     {
       "id": "edsoo-lesson-017",
@@ -390,10 +402,10 @@
       "url": "https://edsoo.ru/urok_tematicheskie-gruppy-slov",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -404,8 +416,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён по тексту официальной страницы ЕДСОО: «Класс 5». Сохранена ссылка на источник; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_tematicheskie-gruppy-slov"
     },
     {
       "id": "edsoo-lesson-018",
@@ -2471,5 +2485,11 @@
       "checkedAt": "2026-10-21",
       "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
     }
-  ]
+  ],
+  "gradeVerificationSummary": {
+    "checkedAt": "2026-10-22",
+    "verifiedOnSourcePage": 7,
+    "stillNeedsReview": 89,
+    "note": "Статус ставится только при явном указании класса на открытой странице источника; URL slug сам по себе доказательством не считается."
+  }
 }
