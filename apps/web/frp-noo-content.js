@@ -253,7 +253,7 @@ async function page(hash, cacheDir, doc = NOO, mark = '') {
       pending = (async () => {
         const res = await fetch(`${DOC}${doc}/${hash}/`, {
           headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' },
-          signal: AbortSignal.timeout(60000),
+          signal: AbortSignal.timeout(process.env.GITHUB_ACTIONS === 'true' ? 15000 : 60000),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const fetched = await res.text();
