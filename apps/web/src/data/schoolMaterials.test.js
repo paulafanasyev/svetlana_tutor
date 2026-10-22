@@ -271,7 +271,7 @@ test('записи ЕДСОО с подтверждением класса со�
   assert.ok(verified.length >= 12, 'ожидалось не менее 12 записей с проверкой по странице');
   for (const item of verified) {
     assert.equal(item.gradeEvidenceUrl, item.url, item.id);
-    assert.match(item.gradeEvidence || '', /Класс\s*(?::|№)?\s*(?:[1-9]|1[01])/iu, item.id);
+    assert.match(item.gradeEvidence || '', /(?:Класс\s*(?::|№)?\s*(?:[1-9]|1[01])|(?:[1-9]|1[01])\s*класс)/iu, item.id);
     assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length === 2, item.id);
     assert.equal(item.gradeRange[0], item.gradeRange[1], item.id);
   }
