@@ -2232,10 +2232,10 @@
       "url": "https://edsoo.ru/urok-t-3-klass-vidy-informaczii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2246,8 +2246,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-3-klass-vidy-informaczii"
     },
     {
       "id": "edsoo-lesson-086",
@@ -2256,10 +2259,10 @@
       "url": "https://edsoo.ru/urok-t-3-klass-kodirovanie-informaczii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2270,8 +2273,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-3-klass-kodirovanie-informaczii"
     },
     {
       "id": "edsoo-lesson-087",
@@ -2280,10 +2286,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2294,8 +2300,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po"
     },
     {
       "id": "edsoo-lesson-088",
@@ -2304,10 +2313,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-rabota-s-tekstovym-redaktorom",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2318,8 +2327,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-rabota-s-tekstovym-redaktorom"
     },
     {
       "id": "edsoo-lesson-089",
@@ -2328,10 +2340,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-vidy-kodirovaniya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2342,8 +2354,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-vidy-kodirovaniya"
     },
     {
       "id": "edsoo-lesson-090",
@@ -2352,10 +2367,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-czifrovoj-etiket-netiket",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2366,8 +2381,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-czifrovoj-etiket-netiket"
     },
     {
       "id": "edsoo-lesson-091",
@@ -2684,8 +2702,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 74,
-    "stillNeedsReview": 22,
+    "verifiedOnSourcePage": 80,
+    "stillNeedsReview": 16,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
