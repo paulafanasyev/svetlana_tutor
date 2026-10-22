@@ -82,7 +82,7 @@ const garant = ['primary-1-4', 'basic-5-9', 'secondary-10-11'].flatMap((f) => re
 test('сроки в выгрузке ФПУ: «До Д месяца ГГГГ» или «Бессрочно»', () => {
   for (const r of garant) {
     if (r.allowedUseUntil == null) continue;
-    assert.match(r.allowedUseUntil, /^До\s+\d{1,2}\s+(января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d\d|[Бб]ессрочно/, r.id);
+    assert.match(r.allowedUseUntil, /^(?:До\s+\d{1,2}\s+(?:января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d\d(?:\s+года)?|[Бб]ессрочно)$/, r.id);
   }
 });
 
