@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "sourceCatalog": "data/school-materials/official-russian-school-material-items.json",
+  "sourceName": "Официальные предметные материалы ЕДСОО",
+  "policy": "Только ссылки на официальные страницы; полные тексты не копируются. Доступность вложений и условия переиспользования необходимо проверять на источнике.",
+  "items": [
+    {
+      "id": "edsoo-russian-interactive-56",
+      "title": "Интерактивные задания по русскому языку для 5–6 классов",
+      "subject": "russian-language",
+      "gradeRange": [
+        5,
+        6
+      ],
+      "url": "https://edsoo.ru/2026/08/17/uchim-russkomu-yazyku-s-interesom/",
+      "kind": [
+        "interactive-exercises",
+        "methodical-materials"
+      ],
+      "rightsStatus": "link-only unless item-specific licence permits copying",
+      "accessStatus": "public page; check embedded resource availability",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "id": "edsoo-math-interactive-lessons-grade3",
+      "title": "Материалы к урокам по математике с интерактивными элементами — 3 класс",
+      "subject": "mathematics",
+      "gradeRange": [
+        3
+      ],
+      "url": "https://edsoo.ru/category/mmposob/mat/",
+      "kind": [
+        "lesson-materials",
+        "interactive-exercises"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-chemistry-context-tasks-grade8",
+      "title": "Контекстные задачи. Задания к учебному курсу «Химия». 8 класс (2024 г.)",
+      "subject": "chemistry",
+      "gradeRange": [
+        8
+      ],
+      "url": "https://edsoo.ru/2025/01/16/kontekstnye-zadachi-zadaniya-k-uchebnomu-kursu-himiya-8-klass-2024-g/",
+      "kind": [
+        "contextual-tasks",
+        "methodical-materials"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-geography-methodical-grade5",
+      "title": "Методическое пособие. География. 5 класс (2022 г.)",
+      "subject": "geography",
+      "gradeRange": [
+        5
+      ],
+      "url": "https://edsoo.ru/2023/08/31/metodicheskoe-posobie-geografiya-5-klass-2022-g/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guide"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-biology-methodical-grade5",
+      "title": "Методическое пособие. Биология. 5 класс, базовый уровень (2022 г.)",
+      "subject": "biology",
+      "gradeRange": [
+        5
+      ],
+      "url": "https://edsoo.ru/2023/08/08/biologiya-bazovyj-uroven-realizacziya/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guide"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-physics-resh-case-grade7",
+      "title": "Методические пособия РЭШ по физике — подборка уроков для 7 класса",
+      "subject": "physics",
+      "gradeRange": [
+        7
+      ],
+      "url": "https://edsoo.ru/case_resh/",
+      "kind": [
+        "lesson-catalog",
+        "methodical-materials"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-biology-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания биологии в 2026/2027 учебном году",
+      "subject": "biology",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-biologiya/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-geography-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания географии в 2026/2027 учебном году",
+      "subject": "geography",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-geografiya/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-math-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания математики в 2026/2027 учебном году",
+      "subject": "mathematics",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-matematika/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-physics-methodical-letter-2025-2026",
+      "title": "«Вопросы о важном»: физика — материалы и рекомендации для учителей (2025/2026)",
+      "subject": "physics",
+      "gradeRange": [
+        7,
+        11
+      ],
+      "url": "https://edsoo.ru/2025/09/11/voprosy-o-vazhnom-fizika/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-geography-methodical-letter-2025-2026",
+      "title": "«Вопросы о важном»: география — материалы и рекомендации для учителей (2025/2026)",
+      "subject": "geography",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/2025/09/25/voprosy-o-vazhnom-geografiya/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-history-methodical-letter-2026-2027",
+      "title": "Инструктивно-методическое письмо об организации исторического просвещения в 2026–2027 учебном году",
+      "subject": "history",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/category/mmposob/astor/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-history-assessment-bank-5-9",
+      "title": "Банк заданий для текущего оценивания по истории, 5–9 классы (2024 г.)",
+      "subject": "history",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "url": "https://edsoo.ru/md-istoriya/",
+      "kind": [
+        "assessment-bank",
+        "task-bank",
+        "methodical-materials"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-literature-interactive-lessons-grade5",
+      "title": "Материалы к урокам литературы с интерактивными элементами — 5 класс",
+      "subject": "literature",
+      "gradeRange": [
+        5
+      ],
+      "url": "https://edsoo.ru/2026/02/07/materialy-k-urokam-literatury-s-interaktivnymi-elementami/",
+      "kind": [
+        "lesson-materials",
+        "interactive-exercises"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-literature-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания литературы в 2026/2027 учебном году",
+      "subject": "literature",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-literatura/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-informatics-ai-methodology-7-9",
+      "title": "Методические рекомендации по изучению основ искусственного интеллекта в информатике основного общего образования",
+      "subject": "informatics",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "url": "https://edsoo.ru/category/mmposob/inf/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-foreign-language-methodical-resources",
+      "title": "Методические материалы ЕДСОО по иностранному языку",
+      "subject": "foreign-language",
+      "gradeRange": [
+        2,
+        11
+      ],
+      "url": "https://edsoo.ru/category/mmposob/ino/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-functional-literacy-5-9-methodical",
+      "title": "Методические рекомендации по формированию функциональной грамотности обучающихся, 5–9 классы",
+      "subject": "functional-literacy",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "url": "https://edsoo.ru/metodicheskie-posobiya-i-rekomendaczii/36/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-social-studies-demography-10-11",
+      "title": "Методические материалы к программе межпредметного модуля «Демография», 10–11 классы",
+      "subject": "social-studies",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "url": "https://edsoo.ru/category/mmposob/obshe/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-music-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания музыки в 2026/2027 учебном году",
+      "subject": "music",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "url": "https://edsoo.ru/mr-muzyka/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-visual-arts-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания изобразительного искусства в 2026/2027 учебном году",
+      "subject": "visual-arts",
+      "gradeRange": [
+        1,
+        8
+      ],
+      "url": "https://edsoo.ru/mr-izobrazitelnoe-iskusstvo/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-physical-education-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания физической культуры в 2026/2027 учебном году",
+      "subject": "physical-education",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-fizkultura/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-obzr-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо об особенностях преподавания основ безопасности и защиты Родины в 2026/2027 учебном году",
+      "subject": "fundamentals-security-defense-homeland",
+      "gradeRange": [
+        5,
+        11
+      ],
+      "url": "https://edsoo.ru/mr-obzh/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-technology-methodical-letter-2026-2027",
+      "title": "Информационно-методическое письмо о преподавании труда (технологии) в 2026/2027 учебном году",
+      "subject": "technology",
+      "gradeRange": [
+        1,
+        9
+      ],
+      "url": "https://edsoo.ru/mr-tehnologiya/",
+      "kind": [
+        "methodical-materials",
+        "teacher-guidance"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-chemistry-assessment-bank-8-11",
+      "title": "Банк заданий для текущего оценивания по химии (2024 г.)",
+      "subject": "chemistry",
+      "gradeRange": [
+        8,
+        11
+      ],
+      "url": "https://edsoo.ru/category/mmposob/him/",
+      "kind": [
+        "assessment-bank",
+        "task-bank",
+        "methodical-materials"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "edsoo-physics-hydrostatic-pressure-grade7",
+      "title": "Методический кейс. Гидростатическое давление. Физика. 7 класс (2024 г.)",
+      "subject": "physics",
+      "gradeRange": [
+        7
+      ],
+      "url": "https://edsoo.ru/category/mmposob/fiz/",
+      "kind": [
+        "methodical-case",
+        "lesson-materials"
+      ],
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "contentStoredLocally": false,
+      "sourceId": "edsoo-subject-materials",
+      "checkedAt": "2026-10-22"
+    }
+  ]
+}
