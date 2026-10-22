@@ -176,6 +176,13 @@ export function flatResults(lines, sec) {
   return out;
 }
 
+// Внешний источник может временно ограничивать автоматические запросы (расписание,
+// антибот HTTP 418/429, сетевой сбой или тайм-аут). Эти ошибки не делают локальный корпус
+// недействительным; ошибки разбора/структуры документа остаются фатальными для CI.
+export function isTransientSourceError(message) {
+  return /документ доступен только по расписанию|HTTP (?:418|429|5\\d\\d)|timed? ?out|timeout|operation was aborted|fetch failed|ECONNRESET|ENOTFOUND|EAI_AGAIN|network error/i.test(String(message));
+}
+
 // Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
 // Собирает только подпункты одного корневого раздела, не подхватывая следующий раздел ФОП.
 export function flatSubtreeResults(lines, root) {
@@ -362,9 +369,10 @@ export default function nooContent() {
           const dump = ['=== История 5', ...(map['История|5'] || []).slice(0, 3).flatMap(s => [`## ${s.title}`, ...s.topics.slice(0, 2)]), '=== R История 5', ...(map['R|История|5'] || []).slice(0, 4), '=== R ФК 5', ...(map['R|Физическая культура|5'] || []).slice(0, 3)].map(t => t.slice(0, 110)).join('\n');
           const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
-          // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
-          const blocked = errors.length && errors.every(e => /по расписанию/.test(e));
-          if (blocked) console.log(`::warning title=noo-content::КонсультантПлюс вне расписания: ${n} из ${EXPECTED}, остальное из корпуса`);
+          // Внешний источник может ограничивать CI-запросы не только расписанием, но и антиботом/тайм-аутами.
+          // В таком случае оставляем встроенный корпус и явно предупреждаем; ошибки парсинга не маскируем.
+          const sourceUnavailable = errors.length > 0 && errors.every(e => isTransientSourceError(e));
+          if (sourceUnavailable) console.log(`::warning title=noo-content::Источник КонсультантПлюс временно недоступен для CI; ${n} из ${EXPECTED} динамических разделов, используются встроенные материалы`);
           else if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
         mod = `export default ${JSON.stringify(map)};`;
