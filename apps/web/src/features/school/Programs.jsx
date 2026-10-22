@@ -7,7 +7,7 @@ import textbooksAdd from '../../data/fop/textbooks_add.json';
 import fpuStatus from '../../data/fpu_status.json';
 import { activeTextbooks, fmtUntil, textbookKey } from '../../data/fpuStatus.js';
 import resources from '../../data/fop/resources.json';
-import officialSubjectResources from '../../data/officialSubjectResources.json';
+import officialSubjectResources from '../../data/officialSubjectResources.json' with { type: 'json' };
 import { officialSubjectResourcesFor, officialGradeRangeLabel } from '../../data/officialSubjectResources.js';
 import RuOnly from './RuOnly.jsx';
 
@@ -30,9 +30,9 @@ const Provenance = ({ p }) => {
   const pv = provenance(p);
   return (
     <div className="flex flex-wrap gap-2 pt-1" aria-label="Источник текста">
-      {[['Содержание', pv.content], ['Результаты', pv.results]].map(([what, k]) => (
+      { [['Содержание', pv.content], ['Результаты', pv.results]].map(([what, k]) => (
         <span key={what} style={BADGE_STYLE[k]} className="rounded-full px-2.5 py-0.5 text-[11px] font-bold">{PROVENANCE[k].icon} {what}: {PROVENANCE[k].label}</span>
-      ))}
+      )) }
     </div>
   );
 };
