@@ -936,10 +936,10 @@
       "url": "https://edsoo.ru/urok_morfemika-soberite-slovo",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -950,8 +950,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_morfemika-soberite-slovo"
     },
     {
       "id": "edsoo-lesson-038",
@@ -960,10 +963,10 @@
       "url": "https://edsoo.ru/urok_odnoznachnye-i-mnogoznachnye-slova",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -974,8 +977,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_odnoznachnye-i-mnogoznachnye-slova"
     },
     {
       "id": "edsoo-lesson-039",
@@ -984,10 +990,10 @@
       "url": "https://edsoo.ru/urok_vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -998,8 +1004,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii"
     },
     {
       "id": "edsoo-lesson-040",
@@ -1008,10 +1017,10 @@
       "url": "https://edsoo.ru/urok-imya-sushhestvitelnoe-voprosy",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1022,8 +1031,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-imya-sushhestvitelnoe-voprosy"
     },
     {
       "id": "edsoo-lesson-041",
@@ -1032,10 +1044,10 @@
       "url": "https://edsoo.ru/urok-krupnejshie-reki-rossii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1046,8 +1058,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-krupnejshie-reki-rossii"
     },
     {
       "id": "edsoo-lesson-042",
@@ -1056,10 +1071,10 @@
       "url": "https://edsoo.ru/urok-vydelenie-v-slovah-s-odnoznachno-vydelyaemymi-morfemami-okonchaniya-kornya-pristavki-suffiksa",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1070,8 +1085,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-vydelenie-v-slovah-s-odnoznachno-vydelyaemymi-morfemami-okonchaniya-kornya-pristavki-suffiksa"
     },
     {
       "id": "edsoo-lesson-043",
@@ -2540,8 +2558,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 26,
-    "stillNeedsReview": 70,
+    "verifiedOnSourcePage": 32,
+    "stillNeedsReview": 64,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
