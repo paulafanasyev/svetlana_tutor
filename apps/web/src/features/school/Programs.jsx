@@ -7,7 +7,7 @@ import textbooksAdd from '../../data/fop/textbooks_add.json';
 import fpuStatus from '../../data/fpu_status.json';
 import { activeTextbooks, fmtUntil, textbookKey } from '../../data/fpuStatus.js';
 import resources from '../../data/fop/resources.json';
-import officialSubjectResources from '../../data/officialSubjectResources.json';
+import { officialSubjectResourcesFor, officialGradeRangeLabel } from '../../data/officialSubjectResources.js';
 import RuOnly from './RuOnly.jsx';
 
 // Учебники с истёкшим предельным сроком использования (ФПУ, приказ № 436) не показываем, см. data/fpuStatus.js.
@@ -50,37 +50,6 @@ const TB_MAP = {
 const matchSubject = (s) => TB_MAP[s] || [s];
 const forSubject = (list, s, g) => (s ? list.filter((x) => x.verified && matchSubject(s).includes(x.subject) && Array.isArray(x.grades) && x.grades.includes(g)) : []);
 
-const EDSOO_SUBJECTS = {
-  'Русский язык': ['russian-language'],
-  'Математика': ['mathematics'],
-  'Химия': ['chemistry'],
-  'География': ['geography'],
-  'Биология': ['biology'],
-  'Физика': ['physics'],
-  'История': ['history'],
-  'Литература': ['literature'],
-  'Информатика': ['informatics'],
-  'Иностранный язык': ['foreign-language'],
-  'Обществознание': ['social-studies'],
-  'Музыка': ['music'],
-  'Изобразительное искусство': ['visual-arts'],
-  'Физическая культура': ['physical-education'],
-  'Основы безопасности и защиты Родины': ['fundamentals-security-defense-homeland'],
-  'Труд (технология)': ['technology'],
-  'Функциональная грамотность': ['functional-literacy'],
-};
-const forOfficialSubject = (s, g) => {
-  const subjects = EDSOO_SUBJECTS[s] || [];
-  return officialSubjectResources.items.filter((item) =>
-    subjects.includes(item.subject)
-    && Array.isArray(item.gradeRange) && item.gradeRange.length > 0
-    && g >= item.gradeRange[0] && g <= item.gradeRange[item.gradeRange.length - 1]
-    && /^https:\/\//.test(item.url)
-  );
-};
-const gradeRangeLabel = (range) => range.length === 1 || range[0] === range[range.length - 1]
-  ? `${range[0]} класс`
-  : `${range[0]}–${range[range.length - 1]} классы`;
 
 export default function Programs() {
   const { user } = useApp();
@@ -100,7 +69,7 @@ export default function Programs() {
   const canPlan = user.role === 'TEACHER' || user.role === 'ADMIN';
   const books = forSubject(textbooks, current, g);
   const eors = forSubject(resources, current, g);
-  const edsooMaterials = forOfficialSubject(current, g);
+  const edsooMaterials = officialSubjectResourcesFor(current, g);
   const chineseReady = CHINESE_PROGRAMS.length > 0;
 
   const pickLevel = (l) => { setLevel(l); setGrade(PLANS[l].grades[0]); setSubject(null); setMod(0); };
@@ -277,7 +246,7 @@ export default function Programs() {
                     {edsooMaterials.map((item) => (
                       <li key={item.id} className="rounded-xl bg-soft/60 px-3 py-2 text-sm">
                         <div className="font-bold text-ink/90">{item.title}</div>
-                        <div className="text-xs font-semibold text-ink/50">{gradeRangeLabel(item.gradeRange)} · ссылка на официальную страницу · <a href={item.url} target="_blank" rel="noreferrer" className="underline text-primary">Открыть на ЕДСОО</a></div>
+                        <div className="text-xs font-semibold text-ink/50">{officialGradeRangeLabel(item.gradeRange)} · ссылка на официальную страницу · <a href={item.url} target="_blank" rel="noreferrer" className="underline text-primary">Открыть на ЕДСОО</a></div>
                       </li>
                     ))}
                   </ul>
