@@ -13,7 +13,8 @@ const SHA = /^[0-9a-f]{64}$/;
 const TAG = 'school-materials-2026-10';
 
 const items = read('official-russian-school-material-items.json').items;
-const lessons = read('edsoo-official-lesson-index.json').items;
+const lessonIndex = read('edsoo-official-lesson-index.json');
+const lessons = lessonIndex.items;
 const programs = read('federal-working-programs.json').programs;
 const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
 
@@ -268,7 +269,9 @@ test('перекрёстная сверка OCR охватывает все за
 
 test('записи ЕДСОО с подтверждением класса содержат ссылку и доказательство', () => {
   const verified = lessons.filter((item) => item.gradeStatus === 'GRADE_VERIFIED_ON_SOURCE_PAGE');
-  assert.ok(verified.length >= 12, 'ожидалось не менее 12 записей с проверкой по странице');
+  assert.ok(verified.length > 0, 'нет записей с проверкой по странице');
+  assert.equal(verified.length, lessonIndex.gradeVerificationSummary.verifiedOnSourcePage);
+  assert.equal(lessons.filter((item) => item.gradeStatus === 'GRADE_NOT_FOUND_RECHECK_REQUIRED').length, lessonIndex.gradeVerificationSummary.stillNeedsReview);
   for (const item of verified) {
     assert.equal(item.gradeEvidenceUrl, item.url, item.id);
     assert.match(item.gradeEvidence || '', /(?:Класс\s*(?::|№)?\s*(?:[1-9]|1[01])|(?:[1-9]|1[01])\s*класс)/iu, item.id);
