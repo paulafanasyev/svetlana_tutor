@@ -1,5 +1,3 @@
-import catalog from './officialSubjectResources.json';
-
 // Subject IDs in the source catalog are mapped explicitly to the Russian labels used by the tutor UI.
 // The returned entries are links only; this module never loads or copies textbook content.
 export const EDSOO_SUBJECTS = {
@@ -22,12 +20,11 @@ export const EDSOO_SUBJECTS = {
   'Функциональная грамотность': ['functional-literacy'],
 };
 
-export const officialSubjectResourceItems = catalog.items;
-
-export function officialSubjectResourcesFor(subject, grade) {
+export function officialSubjectResourcesFor(items, subject, grade) {
   if (!Number.isInteger(grade) || grade < 1 || grade > 11) return [];
   const subjects = EDSOO_SUBJECTS[subject] || [];
-  return catalog.items.filter((item) =>
+  if (!Array.isArray(items)) return [];
+  return items.filter((item) =>
     subjects.includes(item.subject)
     && Array.isArray(item.gradeRange) && item.gradeRange.length > 0
     && grade >= item.gradeRange[0] && grade <= item.gradeRange[item.gradeRange.length - 1]
