@@ -5,12 +5,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { flatSubtreeResults, isTransientSourceError } from '../../frp-noo-content.js';
-import { officialGradeRangeLabel, officialSubjectResourceItems, officialSubjectResourcesFor } from './officialSubjectResources.js';
+import { officialGradeRangeLabel, officialSubjectResourcesFor } from './officialSubjectResources.js';
 import { readFileSync, readdirSync } from 'node:fs';
 
 const DIR = new URL('../../../../data/school-materials/', import.meta.url);
 const read = (name) => JSON.parse(readFileSync(new URL(name, DIR), 'utf8'));
 const unique = (xs) => new Set(xs).size === xs.length;
+const officialSubjectResourceItems = JSON.parse(readFileSync(new URL('./officialSubjectResources.json', import.meta.url), 'utf8')).items;
 const SHA = /^[0-9a-f]{64}$/;
 const TAG = 'school-materials-2026-10';
 
@@ -293,6 +294,7 @@ test('записи ЕДСОО с подтверждением класса со�
 
 test('официальные дополнительные материалы ЕДСОО отображаются по предмету и классу', () => {
   const items = officialSubjectResourceItems;
+  const itemsForUi = officialSubjectResourceItems;
   assert.equal(items.length, 26);
   assert.ok(unique(items.map((x) => x.id)));
   for (const item of items) {
@@ -303,13 +305,13 @@ test('официальные дополнительные материалы Е�
     assert.ok(item.gradeRange.every((g) => Number.isInteger(g) && g >= 1 && g <= 11), item.id);
     assert.match(item.rightsStatus, /link.only|reuse.terms.not.confirmed/i, item.id);
   }
-  assert.equal(officialSubjectResourcesFor('Химия', 8).length, 2);
-  assert.equal(officialSubjectResourcesFor('Химия', 7).length, 0);
-  assert.ok(officialSubjectResourcesFor('Физика', 7).some((x) => x.id === 'edsoo-physics-hydrostatic-pressure-grade7'));
-  assert.ok(officialSubjectResourcesFor('Математика', 5).some((x) => x.id === 'edsoo-math-methodical-letter-2026-2027'));
-  assert.equal(officialSubjectResourcesFor('Иностранный язык', 1).length, 0);
-  assert.ok(officialSubjectResourcesFor('Иностранный язык', 2).length > 0);
-  assert.equal(officialSubjectResourcesFor('Неизвестный предмет', 5).length, 0);
+  assert.equal(officialSubjectResourcesFor(itemsForUi, 'Химия', 8).length, 2);
+  assert.equal(officialSubjectResourcesFor(itemsForUi, 'Химия', 7).length, 0);
+  assert.ok(officialSubjectResourcesFor(itemsForUi, 'Физика', 7).some((x) => x.id === 'edsoo-physics-hydrostatic-pressure-grade7'));
+  assert.ok(officialSubjectResourcesFor(itemsForUi, 'Математика', 5).some((x) => x.id === 'edsoo-math-methodical-letter-2026-2027'));
+  assert.equal(officialSubjectResourcesFor(itemsForUi, 'Иностранный язык', 1).length, 0);
+  assert.ok(officialSubjectResourcesFor(itemsForUi, 'Иностранный язык', 2).length > 0);
+  assert.equal(officialSubjectResourcesFor(itemsForUi, 'Неизвестный предмет', 5).length, 0);
   assert.equal(officialGradeRangeLabel([5, 11]), '5–11 классы');
   assert.equal(officialGradeRangeLabel([8]), '8 класс');
 });
