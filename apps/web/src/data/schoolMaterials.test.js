@@ -4,7 +4,7 @@
 // Контрольная ревизия классов карточек ЕДСОО: сверка по страницам источника на 2026-10-22.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { flatSubtreeResults } from '../../frp-noo-content.js';
+import { flatSubtreeResults, isTransientSourceError } from '../../frp-noo-content.js';
 import { readFileSync, readdirSync } from 'node:fs';
 
 const DIR = new URL('../../../../data/school-materials/', import.meta.url);
@@ -213,6 +213,14 @@ test('результаты уровня ООО извлекаются, даже 
   assert.ok(results.some((x) => x.includes('физической культуры')));
   assert.ok(results.some((x) => x.includes('физическую нагрузку')));
   assert.ok(results.every((x) => !x.includes('Содержание обучения')));
+});
+
+test('временные сетевые ограничения источника не смешиваются с ошибками разбора', () => {
+  assert.equal(isTransientSourceError('КонсультантПлюс: документ доступен только по расписанию'), true);
+  assert.equal(isTransientSourceError('ООО 163.3: HTTP 418'), true);
+  assert.equal(isTransientSourceError('ООО 150.6: The operation was aborted due to timeout'), true);
+  assert.equal(isTransientSourceError('ООО 163.9: нет результатов 5 кл.'), false);
+  assert.equal(isTransientSourceError('163.9 пункты: разделы не найдены'), false);
 });
 
 test('новые официальные предметные материалы имеют уникальные ID, класс и прямую ссылку на источник', () => {
