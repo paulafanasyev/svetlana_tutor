@@ -8,7 +8,8 @@ import fpuStatus from '../../data/fpu_status.json';
 import { activeTextbooks, fmtUntil, textbookKey } from '../../data/fpuStatus.js';
 import resources from '../../data/fop/resources.json';
 import officialSubjectResources from '../../data/officialSubjectResources.json' with { type: 'json' };
-import { officialSubjectResourcesFor, officialGradeRangeLabel } from '../../data/officialSubjectResources.js';
+import officialLessonCatalog from '../../data/officialLessonResources.json' with { type: 'json' };
+import { officialSubjectResourcesFor, officialLessonResourcesFor, unclassifiedOfficialLessonsFor, officialGradeRangeLabel } from '../../data/officialSubjectResources.js';
 import RuOnly from './RuOnly.jsx';
 
 // Учебники с истёкшим предельным сроком использования (ФПУ, приказ № 436) не показываем, см. data/fpuStatus.js.
@@ -71,6 +72,8 @@ export default function Programs() {
   const books = forSubject(textbooks, current, g);
   const eors = forSubject(resources, current, g);
   const edsooMaterials = officialSubjectResourcesFor(officialSubjectResources.items, current, g);
+  const edsooLessons = officialLessonResourcesFor(officialLessonCatalog.items, current, g);
+  const edsooUnclassifiedLessons = unclassifiedOfficialLessonsFor(officialLessonCatalog.items, g);
   const chineseReady = CHINESE_PROGRAMS.length > 0;
 
   const pickLevel = (l) => { setLevel(l); setGrade(PLANS[l].grades[0]); setSubject(null); setMod(0); };
@@ -253,6 +256,35 @@ export default function Programs() {
                   </ul>
                   <p className="text-[11px] font-semibold text-ink/50">Показываются карточки-ссылки, а не полные тексты. Доступность вложений и права на переиспользование проверяются на странице источника.</p>
                 </>
+              )}
+              {edsooLessons.length > 0 && (
+                <>
+                  <div className="font-black pt-1">🧩 Официальные карточки уроков ЕДСОО по предмету</div>
+                  <ul className="space-y-2">
+                    {edsooLessons.map((item) => (
+                      <li key={item.id} className="rounded-xl bg-soft/60 px-3 py-2 text-sm">
+                        <div className="font-bold text-ink/90">{item.title}</div>
+                        {item.description && <p className="mt-1 text-xs font-semibold text-ink/60">{item.description.slice(0, 220)}{item.description.length > 220 ? '…' : ''}</p>}
+                        <div className="text-xs font-semibold text-ink/50">{officialGradeRangeLabel(item.gradeRange)} · ссылка на карточку · <a href={item.url} target="_blank" rel="noreferrer" className="underline text-primary">Открыть на ЕДСОО</a></div>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {edsooUnclassifiedLessons.length > 0 && (
+                <details className="rounded-xl bg-soft/40 p-3">
+                  <summary className="cursor-pointer font-black">Другие карточки ЕДСОО для {g} класса без подтверждённой привязки к предмету ({edsooUnclassifiedLessons.length})</summary>
+                  <p className="mt-2 text-xs font-semibold text-ink/60">Класс есть в индексе, но предмет не был надёжно установлен. Эти карточки не считаются материалами выбранного предмета — проверьте содержание на официальной странице.</p>
+                  <ul className="mt-2 space-y-2">
+                    {edsooUnclassifiedLessons.map((item) => (
+                      <li key={item.id} className="rounded-xl bg-white/60 px-3 py-2 text-sm">
+                        <div className="font-bold text-ink/90">{item.title}</div>
+                        {item.description && <p className="mt-1 text-xs font-semibold text-ink/60">{item.description.slice(0, 180)}{item.description.length > 180 ? '…' : ''}</p>}
+                        <div className="text-xs font-semibold text-ink/50">Класс {g} · предмет не подтверждён · <a href={item.url} target="_blank" rel="noreferrer" className="underline text-primary">Открыть на ЕДСОО</a></div>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               )}
               <p className="text-[11px] font-semibold text-ink/50">Показаны метаданные из официальных источников. Учебники, у которых истёк срок использования, не показываются. Тексты учебников принадлежат издательствам и здесь не публикуются.</p>
             </div>

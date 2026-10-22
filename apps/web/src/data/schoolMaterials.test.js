@@ -5,13 +5,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { flatSubtreeResults, isTransientSourceError } from '../../frp-noo-content.js';
-import { officialGradeRangeLabel, officialSubjectResourcesFor } from './officialSubjectResources.js';
+import { officialGradeRangeLabel, officialSubjectResourcesFor, officialLessonResourcesFor, unclassifiedOfficialLessonsFor } from './officialSubjectResources.js';
 import { readFileSync, readdirSync } from 'node:fs';
 
 const DIR = new URL('../../../../data/school-materials/', import.meta.url);
 const read = (name) => JSON.parse(readFileSync(new URL(name, DIR), 'utf8'));
 const unique = (xs) => new Set(xs).size === xs.length;
 const officialSubjectResourceItems = JSON.parse(readFileSync(new URL('./officialSubjectResources.json', import.meta.url), 'utf8')).items;
+const officialLessonResourceItems = JSON.parse(readFileSync(new URL('./officialLessonResources.json', import.meta.url), 'utf8')).items;
 const SHA = /^[0-9a-f]{64}$/;
 const TAG = 'school-materials-2026-10';
 
@@ -132,6 +133,16 @@ test('матрица сверки охватывает все предметы �
     assert.ok(Number.isInteger(row.locallyStoredOriginalTaskCount) && row.locallyStoredOriginalTaskCount >= 0, row.subject);
     assert.equal(row.completeCoverage, 'NOT_PROVEN', String(row.grade) + '/' + row.subject);
     assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', String(row.grade) + '/' + row.subject);
+  }
+  const missingRows = coverage.rows.filter((row) => row.indexedResourceCount === 0);
+  assert.equal(coverage.summary.rowsWithoutExactGradeSubjectRecord, missingRows.length);
+  assert.equal(coverage.summary.subjectsWithUnindexedGradePairs, coverage.summary.unindexedGradePairsBySubject.length);
+  assert.equal(coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0), missingRows.length);
+  const reconciliation = readFileSync(new URL('RECONCILIATION-2026-10-22.md', DIR), 'utf8');
+  assert.ok(reconciliation.includes('## Сочетания без точной индексной записи'));
+  for (const group of coverage.summary.unindexedGradePairsBySubject) {
+    const line = '| ' + group.subjectLabel + ' (`' + group.subject + '`) | ' + group.gradesWithoutExactRecord.join(', ') + ' | ' + group.count + ' |';
+    assert.ok(reconciliation.includes(line), group.subject);
   }
 });
 
@@ -314,4 +325,25 @@ test('официальные дополнительные материалы Е�
   assert.equal(officialSubjectResourcesFor(itemsForUi, 'Неизвестный предмет', 5).length, 0);
   assert.equal(officialGradeRangeLabel([5, 11]), '5–11 классы');
   assert.equal(officialGradeRangeLabel([8]), '8 класс');
+});
+
+test('карточки уроков ЕДСОО доступны в UI по предмету и классу, а неразмеченные не приписываются предметам', () => {
+  assert.equal(officialLessonResourceItems.length, lessons.length);
+  assert.deepEqual(officialLessonResourceItems.map((x) => x.id), lessons.map((x) => x.id), 'compact UI index must stay aligned with official lesson index');
+  assert.ok(unique(officialLessonResourceItems.map((x) => x.id)));
+  for (const item of officialLessonResourceItems) {
+    assert.match(item.url, /^https:\/\//, item.id);
+    assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length > 0, item.id);
+    assert.ok(item.gradeRange.every((grade) => Number.isInteger(grade) && grade >= 1 && grade <= 11), item.id);
+    assert.ok(['GRADE_FOUND_IN_INDEX', 'GRADE_VERIFIED_ON_SOURCE_PAGE'].includes(item.gradeStatus), item.id);
+    assert.equal(item.contentStoredLocally, false, item.id);
+    assert.match(item.rightsStatus, /LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED/i, item.id);
+  }
+  assert.ok(officialLessonResourcesFor(officialLessonResourceItems, 'Русский язык', 3).some((x) => x.id === 'edsoo-lesson-006'));
+  assert.ok(officialLessonResourcesFor(officialLessonResourceItems, 'История', 5).some((x) => x.id === 'edsoo-lesson-005'));
+  assert.ok(officialLessonResourcesFor(officialLessonResourceItems, 'Биология', 3).some((x) => x.subject === 'biology'));
+  assert.equal(officialLessonResourcesFor(officialLessonResourceItems, 'Физика', 7).length, 0);
+  assert.ok(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 3).length > 0);
+  assert.ok(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 3).every((x) => x.subject === 'all-school-subjects'));
+  assert.equal(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 12).length, 0);
 });
