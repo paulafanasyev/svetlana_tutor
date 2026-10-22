@@ -1422,10 +1422,10 @@
       "url": "https://edsoo.ru/urok-rya-3-klass-chasti-rechi-sistematizacziya-izuchennogo-v-3-klasse",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1436,8 +1436,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-chasti-rechi-sistematizacziya-izuchennogo-v-3-klasse"
     },
     {
       "id": "edsoo-lesson-056",
@@ -1446,10 +1449,10 @@
       "url": "https://edsoo.ru/urok-rya-3-klass-rod-imyon-sushhestvitelnyh",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1460,8 +1463,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-rod-imyon-sushhestvitelnyh"
     },
     {
       "id": "edsoo-lesson-057",
@@ -1471,9 +1477,9 @@
       "description": "",
       "gradeRange": [
         1,
-        11
+        1
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1484,8 +1490,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 1». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-ty-peshehod"
     },
     {
       "id": "edsoo-lesson-058",
@@ -1495,9 +1504,9 @@
       "description": "",
       "gradeRange": [
         1,
-        11
+        1
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1508,8 +1517,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 1». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-domashnie-i-dikie-zhivotnye-razlichiya-v-usloviyah-zhizni"
     },
     {
       "id": "edsoo-lesson-059",
@@ -1518,10 +1530,10 @@
       "url": "https://edsoo.ru/urok-om-2-klass-chasti-rasteniya-nazvanie-kratkaya-harakteristika-znacheniya-dlya-zhizni-rasteniya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1532,8 +1544,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-2-klass-chasti-rasteniya-nazvanie-kratkaya-harakteristika-znacheniya-dlya-zhizni-rasteniya"
     },
     {
       "id": "edsoo-lesson-060",
@@ -1543,9 +1558,9 @@
       "description": "",
       "gradeRange": [
         1,
-        11
+        1
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -1556,8 +1571,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 1». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-obekty-zhivoj-prirody-sravnenie-obektov-nezhivoj-i-zhivoj-prirody-vydelenie-razlichij"
     },
     {
       "id": "edsoo-lesson-061",
@@ -2594,8 +2612,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 44,
-    "stillNeedsReview": 52,
+    "verifiedOnSourcePage": 50,
+    "stillNeedsReview": 46,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
