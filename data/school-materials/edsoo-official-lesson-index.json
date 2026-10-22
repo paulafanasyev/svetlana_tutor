@@ -428,10 +428,10 @@
       "url": "https://edsoo.ru/urok-lch-3-klass-vzaimootnosheniya-cheloveka-i-zhivotnyh-tema-proizvedeniya-d-n-mamina-sibiryaka-priyomysh",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -442,8 +442,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-vzaimootnosheniya-cheloveka-i-zhivotnyh-tema-proizvedeniya-d-n-mamina-sibiryaka-priyomysh"
     },
     {
       "id": "edsoo-lesson-019",
@@ -452,10 +454,10 @@
       "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-ob-imeni-sushhestvitelnom",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -466,8 +468,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-ob-imeni-sushhestvitelnom"
     },
     {
       "id": "edsoo-lesson-020",
@@ -476,10 +480,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-sostavlyayushhie-kompyutera-ustrojstva-vvoda-i-vyvoda-informaczii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -490,8 +494,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-sostavlyayushhie-kompyutera-ustrojstva-vvoda-i-vyvoda-informaczii"
     },
     {
       "id": "edsoo-lesson-021",
@@ -500,10 +506,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po-2",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -514,8 +520,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po-2"
     },
     {
       "id": "edsoo-lesson-022",
@@ -524,10 +532,10 @@
       "url": "https://edsoo.ru/urok-t-4-klass-mir-informaczii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -538,8 +546,10 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 4». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-mir-informaczii"
     },
     {
       "id": "edsoo-lesson-023",
@@ -2488,8 +2498,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 7,
-    "stillNeedsReview": 89,
+    "verifiedOnSourcePage": 12,
+    "stillNeedsReview": 84,
     "note": "Статус ставится только при явном указании класса на открытой странице источника; URL slug сам по себе доказательством не считается."
   }
 }
