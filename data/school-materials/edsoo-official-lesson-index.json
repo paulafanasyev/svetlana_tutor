@@ -774,10 +774,10 @@
       "url": "https://edsoo.ru/urok_detskie-fantazii",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -788,8 +788,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-fantazii"
     },
     {
       "id": "edsoo-lesson-032",
@@ -798,10 +801,10 @@
       "url": "https://edsoo.ru/urok_detskie-igry-vzroslye-roli",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -812,8 +815,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-igry-vzroslye-roli"
     },
     {
       "id": "edsoo-lesson-033",
@@ -822,10 +828,10 @@
       "url": "https://edsoo.ru/urok_chej-hod",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -836,8 +842,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_chej-hod"
     },
     {
       "id": "edsoo-lesson-034",
@@ -846,10 +855,10 @@
       "url": "https://edsoo.ru/urok_proverim-sebya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -860,8 +869,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_proverim-sebya"
     },
     {
       "id": "edsoo-lesson-035",
@@ -870,10 +882,10 @@
       "url": "https://edsoo.ru/urok_uznaj-geroya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -884,8 +896,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_uznaj-geroya"
     },
     {
       "id": "edsoo-lesson-036",
@@ -894,10 +909,10 @@
       "url": "https://edsoo.ru/urok-suffiksy",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -908,8 +923,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-suffiksy"
     },
     {
       "id": "edsoo-lesson-037",
@@ -2522,8 +2540,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 20,
-    "stillNeedsReview": 76,
+    "verifiedOnSourcePage": 26,
+    "stillNeedsReview": 70,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
