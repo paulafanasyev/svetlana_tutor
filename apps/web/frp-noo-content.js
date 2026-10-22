@@ -229,38 +229,85 @@ export function musicSections(corpus, fop, miss) {
 
 // mark — номер пункта, который обязан быть в тексте страницы (например «20.6.1»): вне расписания КонсультантПлюс
 // отдаёт страницу без текста документа (с оглавлением и навигацией), её не кэшируем; такой кэш тоже отбрасываем.
+const inFlightPages = new Map();
+
 async function page(hash, cacheDir, doc = NOO, mark = '') {
   const f = path.join(cacheDir, `${hash}.html`);
+  const key = `${doc}/${hash}`;
   const ok = h => !mark || htmlLines(h).some(x => x.startsWith(mark + '.') || x.startsWith(mark + ' '));
-  if (fs.existsSync(f)) { const h = fs.readFileSync(f, 'utf8'); if (ok(h)) return h; fs.rmSync(f); }
-  const res = await fetch(`${DOC}${doc}/${hash}/`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(60000) });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-  if (!html.includes(doc) && !html.includes('Минпросвещения')) throw new Error('неожиданная страница');
-  // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию (будни 20–24 МСК, выходные весь день);
-  // вне расписания приходит заглушка без текста: её не кэшируем. Кэш (node_modules/.cache) сохраняется между сборками Vercel.
-  if (/доступен по расписанию/.test(html) || html.length < 20000 || !ok(html)) throw new Error('КонсультантПлюс: документ доступен только по расписанию');
-  fs.mkdirSync(cacheDir, { recursive: true }); fs.writeFileSync(f, html);
+  let html;
+  if (fs.existsSync(f)) {
+    html = fs.readFileSync(f, 'utf8');
+    if (!ok(html)) { fs.rmSync(f, { force: true }); html = undefined; }
+  }
+  if (html === undefined) {
+    let pending = inFlightPages.get(key);
+    if (!pending) {
+      pending = (async () => {
+        const res = await fetch(`${DOC}${doc}/${hash}/`, {
+          headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' },
+          signal: AbortSignal.timeout(60000),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const fetched = await res.text();
+        if (!fetched.includes(doc) && !fetched.includes('Минпросвещения')) throw new Error('неожиданная страница');
+        // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию.
+        // Не кэшируем заглушку, страницу без текста или страницу без обязательного номера пункта.
+        if (/доступен по расписанию/.test(fetched) || fetched.length < 20000 || !ok(fetched)) {
+          throw new Error('КонсультантПлюс: документ доступен только по расписанию');
+        }
+        fs.mkdirSync(cacheDir, { recursive: true });
+        fs.writeFileSync(f, fetched);
+        return fetched;
+      })();
+      inFlightPages.set(key, pending);
+    }
+    try {
+      html = await pending;
+    } finally {
+      if (inFlightPages.get(key) === pending) inFlightPages.delete(key);
+    }
+    // Each class may refer to a distinct section on the same document page.
+    // A shared fetch must still satisfy this caller's own required section marker.
+    if (!ok(html)) {
+      fs.rmSync(f, { force: true });
+      throw new Error('КонсультантПлюс: в странице отсутствует обязательный пункт ' + mark);
+    }
+  }
   return html;
+}
+
+// Ограничиваем параллелизм сетевых запросов: десятки страниц, каждая с тайм-аутом 60 секунд,
+// не должны выстраиваться в длинную последовательную цепочку во время production build.
+async function eachLimit(items, limit, worker) {
+  let next = 0;
+  const workers = Math.min(Math.max(1, limit), items.length);
+  await Promise.all(Array.from({ length: workers }, async () => {
+    while (true) {
+      const index = next++;
+      if (index >= items.length) return;
+      await worker(items[index], index);
+    }
+  }));
 }
 
 export async function loadNooContent({ cacheDir = path.resolve('node_modules/.cache/noo-content') } = {}) {
   const map = {}, errors = [];
-  for (const [subject, grade, sec, hash] of PAGES) {
+  await eachLimit(PAGES, 6, async ([subject, grade, sec, hash]) => {
     try {
       const lines = htmlLines(await page(hash, cacheDir, NOO, `${sec}.1`));
       if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); continue; }
       const s = parse(lines, sec, { lit: subject === 'Литературное чтение' });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`${sec}: разделы не найдены`);
     } catch (e) { errors.push(`${sec}: ${e.message || e}`); }
-  }
-  for (const [subject, grade, sec, hash] of OOO_PAGES) {
+  });
+  await eachLimit(OOO_PAGES, 6, async ([subject, grade, sec, hash]) => {
     try {
       const s = parse(htmlLines(await page(hash, cacheDir, OOO, `${sec}.1`)), sec, { keep: true, nopend: true });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`ООО ${sec}: разделы не найдены`);
     } catch (e) { errors.push(`ООО ${sec}: ${e.message || e}`); }
-  }
-  for (const [subject, root, hash, grades, onlyResults] of COURSES) {
+  });
+  await eachLimit(COURSES, 6, async ([subject, root, hash, grades, onlyResults]) => {
     try {
       const lines = htmlLines(await page(hash, cacheDir, OOO, `${root}.1`));
       const { content, results } = courseParts(lines, root);
@@ -285,7 +332,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
       // Для диагностики: заголовки пунктов курса, если результаты по классам не найдены.
       if (grades.some(g => !results[g]) && !sharedLevelResults.length) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
-  }
+  });
   try {
     const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir, NOO, '166.6.1')));
     const corpus = JSON.parse(fs.readFileSync(path.resolve('src/data/fop/music_noo.json'), 'utf8'));
