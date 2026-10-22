@@ -1,8 +1,8 @@
 # School materials: import report
 
-## edsoo-official-lesson-index.json (118409 bytes)
+## edsoo-official-lesson-index.json (141728 bytes)
 top-level: schemaVersion:int, name:str, source:str, checkedAt:str, discoveredCount:int, note:str, items:list[103], gradeVerificationSummary:dict[4]
-- `items` record keys: id(103), sourceId(103), title(103), url(103), description(103), gradeRange(103), gradeStatus(103), subject(103), topic(103), kind(103), accessStatus(103), rightsStatus(103), contentStoredLocally(103), metadataCompleteness(103), checkedAt(103), note(103), gradeEvidence(20), gradeEvidenceUrl(20), gradeEvidenceType(8)
+- `items` record keys: id(103), sourceId(103), title(103), url(103), description(103), gradeRange(103), gradeStatus(103), subject(103), topic(103), kind(103), accessStatus(103), rightsStatus(103), contentStoredLocally(103), metadataCompleteness(103), checkedAt(103), note(103), gradeEvidence(96), gradeEvidenceUrl(96), gradeEvidenceType(84)
   - rightsStatus: LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=103
   - records mentioning «до 31 августа 20XX»: 0
 
@@ -222,7 +222,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-22, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-22, pages=312
-- federal-working-programs.json: generatedAt=2026-10-22T06:12:08.741063+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-22T06:25:27.075967+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
