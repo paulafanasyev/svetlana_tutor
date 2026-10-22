@@ -1,8 +1,8 @@
 # School materials: import report
 
-## edsoo-official-lesson-index.json (112484 bytes)
-top-level: schemaVersion:int, name:str, source:str, checkedAt:str, discoveredCount:int, note:str, items:list[103]
-- `items` record keys: id(103), sourceId(103), title(103), url(103), description(103), gradeRange(103), gradeStatus(103), subject(103), topic(103), kind(103), accessStatus(103), rightsStatus(103), contentStoredLocally(103), metadataCompleteness(103), checkedAt(103), note(103)
+## edsoo-official-lesson-index.json (142208 bytes)
+top-level: schemaVersion:int, name:str, source:str, checkedAt:str, discoveredCount:int, note:str, items:list[103], gradeVerificationSummary:dict[4]
+- `items` record keys: id(103), sourceId(103), title(103), url(103), description(103), gradeRange(103), gradeStatus(103), subject(103), topic(103), kind(103), accessStatus(103), rightsStatus(103), contentStoredLocally(103), metadataCompleteness(103), checkedAt(103), note(103), gradeEvidence(96), gradeEvidenceUrl(96), gradeEvidenceType(96)
   - rightsStatus: LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=103
   - records mentioning «до 31 августа 20XX»: 0
 
@@ -74,7 +74,29 @@ top-level: schemaVersion:int, name:str, checkedAt:str, officialDocument:dict[8],
     {"id": "fpu2026-section-032", "title": "1.1.2.9. История (учебный предмет)", "url": "https://www.consultant.ru/document/cons_doc_LAW_540209/eb97a1787c2876237b0e287fea3d5055aec2d8ac", "sourceId": "federal-textbook-list-2026", "subjectLabel": "История", "catalogueSnippet": "История нашего края. Республика Ингушетия. 7 класс: учебник для общеобразовательных организаций; 1-е издание. Акиева П.Х.,. Долгиева М.Б,.", "entryNumberHint": null, "verifiedAt": "2026-10-21", "status": "SOURCE_LINK_VERIFIED_SNIPPET_ONLY", "contentStoredLocally": false, "rightsStatus": "official legal act/metadata; individual textbook files not included", "note": "Section URL is a navigational bibliographic reference. The snippet is not the complete list of records in the section."}
     ```
 
-## federal-textbooks-2026-basic-5-9.json (639607 bytes)
+## federal-textbook-ocr-crosswalk-2026.json (385358 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, sourceDocument:str, matchingPolicy:str, summary:dict[11], records:list[934]
+- `records` record keys: ocrId(934), federalListNumber(934), sectionCode(934), structuredRecordId(934), ocrGradeRange(934), structuredGrade(934), normalizedTitleExact(934), ocrExtractionStatus(934), status(934)
+  - status: KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK=480, NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW=308, KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION=139, DUPLICATE_KEY_NEEDS_MANUAL_REVIEW=6, KEY_MATCH_GRADE_MISMATCH_NEEDS_MANUAL_REVIEW=1
+  - records mentioning «до 31 августа 20XX»: 0
+  - samples:
+    ```json
+    {"ocrId": "fpu2026-pdf-0005-1-1-1-1-1-1", "federalListNumber": 5, "sectionCode": "1.1.1.1.1.1", "structuredRecordId": "fpu2026-0005", "ocrGradeRange": [1, 1], "structuredGrade": 1, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0006-1-1-1-1-2", "federalListNumber": 6, "sectionCode": "1.1.1.1.2", "structuredRecordId": null, "ocrGradeRange": [1, 1], "structuredGrade": null, "normalizedTitleExact": false, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "NO_STRUCTURED_MATCH_NEEDS_MANUAL_REVIEW"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0007-1-1-1-1-1-3", "federalListNumber": 7, "sectionCode": "1.1.1.1.1.3", "structuredRecordId": "fpu2026-0007", "ocrGradeRange": [2, 2], "structuredGrade": 2, "normalizedTitleExact": false, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_AND_GRADE_MATCH_TITLE_NEEDS_RECHECK"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0529-1-1-2-9-14-2", "federalListNumber": 529, "sectionCode": "1.1.2.9.14.2", "structuredRecordId": "fpu2026-0529", "ocrGradeRange": [6, 6], "structuredGrade": 6, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+    ```json
+    {"ocrId": "fpu2026-pdf-0530-1-1-2-9-14-3", "federalListNumber": 530, "sectionCode": "1.1.2.9.14.3", "structuredRecordId": "fpu2026-0530", "ocrGradeRange": [7, 7], "structuredGrade": 7, "normalizedTitleExact": true, "ocrExtractionStatus": "OCR_EXTRACTED_NEEDS_RECHECK", "status": "KEY_GRADE_TITLE_MATCH_NEEDS_MANUAL_CONFIRMATION"}
+    ```
+
+## federal-textbooks-2026-basic-5-9.json (640099 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[423]
 - `records` record keys: id(423), listRow(423), sectionCode(423), listSection(423), schoolStage(423), grade(423), title(423), authors(423), publisher(423), relatedTeachingMaterials(423), approvalBasis(423), approvalOrganization(423), approvalOrder(423), allowedUseUntil(423), metadataSource(423), officialDocument(423), checkedAt(423), contentStoredLocally(423), status(423), rightsStatus(423)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=423
@@ -97,7 +119,7 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-0462", "listRow": 462, "sectionCode": "1.1.2.6.3.5", "listSection": "1.1", "schoolStage": "basic", "grade": 9, "title": "Французский язык: второй иностранный язык: 9-й класс: учебник; 10-е издание, переработанное", "authors": "Селиванова Н.А., Шашурина А.Ю.", "publisher": "Акционерное общество \"Издательство \"Просвещение\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 287", "approvalOrganization": "Акционерное общество \"Издательство \"Просвещение\"", "approvalOrder": "От 21 сентября 2022 г. № 858", "allowedUseUntil": "До 31 августа 2032 года", "metadataSource": "https://www.garant.ru/products/ipo/prime/doc/414535956/", "officialDocument": "https://publication.pravo.gov.ru/document/0001202607230005", "checkedAt": "2026-10-21", "contentStoredLocally": false, "status": "BIBLIOGRAPHIC_ENTRY_EXTRACTED", "rightsStatus": "LINK_ONLY; bibliography does not grant
     ```
 
-## federal-textbooks-2026-primary-1-4.json (394667 bytes)
+## federal-textbooks-2026-primary-1-4.json (394751 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[237]
 - `records` record keys: id(237), listRow(237), sectionCode(237), listSection(237), schoolStage(237), grade(237), title(237), authors(237), publisher(237), relatedTeachingMaterials(237), approvalBasis(237), approvalOrganization(237), approvalOrder(237), allowedUseUntil(237), metadataSource(237), officialDocument(237), checkedAt(237), contentStoredLocally(237), status(237), rightsStatus(237)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=237
@@ -120,7 +142,7 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-0164", "listRow": 164, "sectionCode": "1.1.1.4.13.1", "listSection": "1.1", "schoolStage": "primary", "grade": 1, "title": "Литературное чтение на родном (татарском) языке: Эдэби уку. 1 класс: учебник для общеобразовательных организаций начального общего образования (для обучающихся, слабо владеющих родным (татарским) языком); 2-е издание, переработанное; язык издания: татарский", "authors": "Ханнанов Р.Г., Гареева Л.Р.", "publisher": "Общество с ограниченной ответственностью \"Издательство \"Магариф-Вакыт\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 286; Приказ № 372", "approvalOrganization": "Общество с ограниченной ответственностью \"Издательство \"Магариф-Вакыт\"", "approvalOrder": "От 26 июня 2025 г. № 495", "allowedUseUntil": "До 31 августа 2030 года", "metadataSource": "https://www.garant.ru/products/ipo/prime/doc/414535956/", "officialDocument"
     ```
 
-## federal-textbooks-2026-secondary-10-11.json (148934 bytes)
+## federal-textbooks-2026-secondary-10-11.json (148946 bytes)
 top-level: schemaVersion:int, title:str, source:str, officialSource:str, checkedAt:str, gradeBand:str, recordCount:int, notes:list[3], records:list[86]
 - `records` record keys: id(86), listRow(86), sectionCode(86), listSection(86), schoolStage(86), grade(86), title(86), authors(86), publisher(86), relatedTeachingMaterials(86), approvalBasis(86), approvalOrganization(86), approvalOrder(86), allowedUseUntil(86), metadataSource(86), officialDocument(86), checkedAt(86), contentStoredLocally(86), status(86), rightsStatus(86)
   - status: BIBLIOGRAPHIC_ENTRY_EXTRACTED=86
@@ -169,19 +191,19 @@ top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, r
   - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=53
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-material-items.json (2230321 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1713], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
-- `items` record keys: id(1713), sourceId(1713), title(1713), kind(1713), accessStatus(1713), rightsStatus(1713), contentStoredLocally(1713), checkedAt(1689), subject(1683), gradeRange(1611), url(1560), note(1181), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(635), metadataCompleteness(559), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), gradeStatus(103), catalogueSnippet(61), year(61)
-  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=103, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
+## official-russian-school-material-items.json (2258876 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1738], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
+- `items` record keys: id(1738), sourceId(1738), title(1738), kind(1738), accessStatus(1738), rightsStatus(1738), contentStoredLocally(1738), checkedAt(1714), subject(1708), gradeRange(1636), url(1585), note(1206), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(660), metadataCompleteness(584), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(128), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), catalogueSnippet(61), year(61)
+  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=128, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
   - provenance: corpus=108
   - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-materials.json (25884 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[25], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11]
+## official-russian-school-materials.json (27768 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[26], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
 - `schoolStages` record keys: id(3), name(3), grades(3)
   - records mentioning «до 31 августа 20XX»: 0
-- `sources` record keys: id(25), name(25), url(25), kind(25), access(25), gradeRange(25), subjects(25), storesFullTextbooksLocally(22), rightsNote(8), storesFullTextLocally(3), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
+- `sources` record keys: id(26), name(26), url(26), kind(26), access(26), gradeRange(26), subjects(26), storesFullTextbooksLocally(22), rightsNote(9), storesFullTextLocally(4), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
   - records mentioning «до 31 августа 20XX»: 0
 - `collections` record keys: id(3), file(3), description(3)
   - records mentioning «до 31 августа 20XX»: 0
@@ -191,16 +213,16 @@ top-level: schemaVersion:int, title:str, language:str, grades:list[11], license:
 - `exercises` record keys: grade(153), subject(153), topic(153), prompt(153), answer(153), explanation(153), difficulty(153), id(153), authorship(54), license(54)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (124967 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], coveragePolicy:str, statusDefinitions:dict[3], rows:list[275], summary:dict[9]
-- `rows` record keys: grade(275), subject(275), subjectLabel(275), indexedResourceCount(275), status(275), completeCoverage(275), notes(275), locallyStoredOriginalTaskCount(275), officialWorkingProgramCount(275)
-  - status: LINKS_AVAILABLE=275
+## school-curriculum-coverage.json (619072 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[29]
+- `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), openReferenceResourceCount(407), officialExamResourceCount(407), publicLessonPlatformResourceCount(407), additionalOfficialSubjectResourceCount(407), officialPlatformEntryPointCount(407), additionalCatalogResourceCount(407), notes(407)
+  - status: LINKS_AVAILABLE=241, NO_EXACT_GRADE_SUBJECT_RECORD=166
   - records mentioning «до 31 августа 20XX»: 0
 
 ## Manifests
-- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-21, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
-- federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-21, pages=312
-- federal-working-programs.json: generatedAt=2026-10-21T09:38:54.393445+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-22, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
+- federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-22, pages=312
+- federal-working-programs.json: generatedAt=2026-10-22T12:32:32.423634+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53

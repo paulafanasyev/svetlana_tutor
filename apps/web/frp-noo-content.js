@@ -204,6 +204,34 @@ export function flatResults(lines, sec) {
   return out;
 }
 
+// Внешний источник может временно ограничивать автоматические запросы (расписание,
+// антибот HTTP 418/429, сетевой сбой или тайм-аут). Эти ошибки не делают локальный корпус
+// недействительным; ошибки разбора/структуры документа остаются фатальными для CI.
+export function isTransientSourceError(message) {
+  return /документ доступен только по расписанию|HTTP (?:418|429|5[0-9]{2})|timed? ?out|timeout|operation was aborted|fetch failed|ECONNRESET|ETIMEDOUT|UND_ERR_CONNECT_TIMEOUT|ENOTFOUND|EAI_AGAIN|network error/i.test(String(message));
+}
+
+// Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
+// Собирает только подпункты одного корневого раздела, не подхватывая следующий раздел ФОП.
+export function flatSubtreeResults(lines, root) {
+  const i = lines.findIndex(x => {
+    const m = x.match(NUM);
+    return m && m[1].startsWith(root + '.');
+  });
+  if (i < 0) return [];
+  const out = [];
+  for (const x of lines.slice(i)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (NOTE.test(x)) continue;
+    const m = x.match(NUM);
+    if (m && !m[1].startsWith(root + '.')) break;
+    const t = typo(m ? m[2] : x);
+    if (m && oneTitle(t) && t.length < 120) continue;
+    if (t) out.push(t);
+  }
+  return out;
+}
+
 // Музыка: подпункт 166.6.k.j «Название.» → текст после «Содержание:» (до «Виды деятельности обучающихся»).
 const key = s => String(s).toLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/g, ' ').trim();
 export function parseMusic(lines) {
@@ -280,41 +308,94 @@ export function parseObzrResults(lines) {
 
 // mark — номер пункта, который обязан быть в тексте страницы (например «20.6.1»): вне расписания КонсультантПлюс
 // отдаёт страницу без текста документа (с оглавлением и навигацией), её не кэшируем; такой кэш тоже отбрасываем.
+const inFlightPages = new Map();
+
 async function page(hash, cacheDir, doc = NOO, mark = '') {
   const f = path.join(cacheDir, `${hash}.html`);
+  const key = `${doc}/${hash}`;
   const ok = h => !mark || htmlLines(h).some(x => x.startsWith(mark + '.') || x.startsWith(mark + ' '));
-  if (fs.existsSync(f)) { const h = fs.readFileSync(f, 'utf8'); if (ok(h)) return h; fs.rmSync(f); }
-  const res = await fetch(`${DOC}${doc}/${hash}/`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' }, signal: AbortSignal.timeout(60000) });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-  if (!html.includes(doc) && !html.includes('Минпросвещения')) throw new Error('неожиданная страница');
-  // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию (будни 20–24 МСК, выходные весь день);
-  // вне расписания приходит заглушка без текста: её не кэшируем. Кэш (node_modules/.cache) сохраняется между сборками Vercel.
-  if (/доступен по расписанию/.test(html) || html.length < 20000 || !ok(html)) throw new Error('КонсультантПлюс: документ доступен только по расписанию');
-  fs.mkdirSync(cacheDir, { recursive: true }); fs.writeFileSync(f, html);
+  let html;
+  if (fs.existsSync(f)) {
+    html = fs.readFileSync(f, 'utf8');
+    if (!ok(html)) { fs.rmSync(f, { force: true }); html = undefined; }
+  }
+  if (html === undefined) {
+    let pending = inFlightPages.get(key);
+    if (!pending) {
+      pending = (async () => {
+        const res = await fetch(`${DOC}${doc}/${hash}/`, {
+          headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ru' },
+          signal: AbortSignal.timeout(process.env.GITHUB_ACTIONS === 'true' ? 15000 : 60000),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const fetched = await res.text();
+        if (!fetched.includes(doc) && !fetched.includes('Минпросвещения')) throw new Error('неожиданная страница');
+        // Некоммерческая версия КонсультантПлюс отдаёт большие документы по расписанию.
+        // Не кэшируем заглушку, страницу без текста или страницу без обязательного номера пункта.
+        if (/доступен по расписанию/.test(fetched) || fetched.length < 20000 || !ok(fetched)) {
+          throw new Error('КонсультантПлюс: документ доступен только по расписанию');
+        }
+        fs.mkdirSync(cacheDir, { recursive: true });
+        fs.writeFileSync(f, fetched);
+        return fetched;
+      })();
+      inFlightPages.set(key, pending);
+    }
+    try {
+      html = await pending;
+    } finally {
+      if (inFlightPages.get(key) === pending) inFlightPages.delete(key);
+    }
+    // Each class may refer to a distinct section on the same document page.
+    // A shared fetch must still satisfy this caller's own required section marker.
+    if (!ok(html)) {
+      fs.rmSync(f, { force: true });
+      throw new Error('КонсультантПлюс: в странице отсутствует обязательный пункт ' + mark);
+    }
+  }
   return html;
+}
+
+// Ограничиваем параллелизм сетевых запросов: десятки страниц, каждая с тайм-аутом 60 секунд,
+// не должны выстраиваться в длинную последовательную цепочку во время production build.
+async function eachLimit(items, limit, worker) {
+  let next = 0;
+  const workers = Math.min(Math.max(1, limit), items.length);
+  await Promise.all(Array.from({ length: workers }, async () => {
+    while (true) {
+      const index = next++;
+      if (index >= items.length) return;
+      await worker(items[index], index);
+    }
+  }));
 }
 
 export async function loadNooContent({ cacheDir = path.resolve('node_modules/.cache/noo-content') } = {}) {
   const map = {}, errors = [];
-  for (const [subject, grade, sec, hash] of PAGES) {
+  await eachLimit(PAGES, 6, async ([subject, grade, sec, hash]) => {
     try {
       const lines = htmlLines(await page(hash, cacheDir, NOO, `${sec}.1`));
-      if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); continue; }
+      if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); return; }
       const s = parse(lines, sec, { lit: subject === 'Литературное чтение' });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`${sec}: разделы не найдены`);
     } catch (e) { errors.push(`${sec}: ${e.message || e}`); }
-  }
-  for (const [subject, grade, sec, hash] of OOO_PAGES) {
+  });
+  await eachLimit(OOO_PAGES, 6, async ([subject, grade, sec, hash]) => {
     try {
       const s = parse(htmlLines(await page(hash, cacheDir, OOO, `${sec}.1`)), sec, { keep: true, nopend: true });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`ООО ${sec}: разделы не найдены`);
     } catch (e) { errors.push(`ООО ${sec}: ${e.message || e}`); }
-  }
-  for (const [subject, root, hash, grades, onlyResults] of COURSES) {
+  });
+  await eachLimit(COURSES, 6, async ([subject, root, hash, grades, onlyResults]) => {
     try {
       const lines = htmlLines(await page(hash, cacheDir, OOO, `${root}.1`));
       const { content, results } = courseParts(lines, root);
+      // ФОП ООО, п. 163.9 по физической культуре задаёт общие предметные результаты
+      // для всего уровня ООО, а не отдельные подпункты для 5–9 классов.
+      // Используем общий блок как общий для уровня; не маркируем его как уникальный результат класса.
+      const sharedLevelResults = subject === 'Физическая культура' && root === '163.9'
+        ? (flatResults(lines, root).length ? flatResults(lines, root) : flatSubtreeResults(lines, root))
+        : [];
       for (const g of grades) {
         if (!onlyResults) {
           // Без подразделов (геометрия, ВиС): один раздел «Содержание обучения в N классе» с абзацами подряд.
@@ -323,12 +404,14 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
           if (s && s.length) map[`${subject}|${g}`] = s; else errors.push(`ООО ${root}: нет содержания ${g} кл.`);
         }
         const r = results[g] && flatResults(lines, results[g]);
-        if (r && r.length) map[`R|${subject}|${g}`] = r; else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
+        const resolvedResults = r && r.length ? r : sharedLevelResults;
+        if (resolvedResults && resolvedResults.length) map[`R|${subject}|${g}`] = resolvedResults;
+        else errors.push(`ООО ${root}: нет результатов ${g} кл.`);
       }
       // Для диагностики: заголовки пунктов курса, если результаты по классам не найдены.
-      if (grades.some(g => !results[g])) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
+      if (grades.some(g => !results[g]) && !sharedLevelResults.length) errors.push(`ООО ${root} пункты: ` + lines.filter(x => (x.match(NUM) || [])[1]?.startsWith(root + '.') && x.length < 160 && (x.match(NUM) || [])[1].split('.').length <= root.split('.').length + 2).map(x => x.slice(0, 90)).slice(0, 25).join(' / '));
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
-  }
+  });
   try {
     const c = parseObzrContent(htmlLines(await page(OBZR.content, cacheDir, OOO, '162(1).3.1')));
     const { general, mods } = parseObzrResults(htmlLines(await page(OBZR.results, cacheDir, OOO, '162(1).4.5')));
@@ -371,9 +454,10 @@ export default function nooContent() {
           const dump = CHECK.flatMap(s => { const c = map[`${s}|${[5, 7, 8].find(g => map[`${s}|${g}`])}`] || []; const r = map[`R|${s}|${[5, 7, 8].find(g => map[`R|${s}|${g}`])}`] || []; return [`== ${s}`, ...c.slice(0, 2).map(x => `## ${x.title} :: ${x.topics[0]}`), ...r.slice(0, 2).map(t => `R ${t}`)]; }).map(t => t.slice(0, 120)).join('\n');
           const text = `n=${n}/${EXPECTED} errors=${errors.join(' | ')}\n${sum}\n${dump}`;
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
-          // Вне расписания КонсультантПлюс (будни днём) страницы недоступны: это не ошибка разбора, сборку не валим.
-          const blocked = errors.length && errors.every(e => /по расписанию/.test(e));
-          if (blocked) console.log(`::warning title=noo-content::КонсультантПлюс вне расписания: ${n} из ${EXPECTED}, остальное из корпуса`);
+          // Внешний источник может ограничивать CI-запросы не только расписанием, но и антиботом/тайм-аутами.
+          // В таком случае оставляем встроенный корпус и явно предупреждаем; ошибки парсинга не маскируем.
+          const sourceUnavailable = errors.length > 0 && errors.every(e => isTransientSourceError(e));
+          if (sourceUnavailable) console.log(`::warning title=noo-content::Источник КонсультантПлюс временно недоступен для CI; ${n} из ${EXPECTED} динамических разделов, используются встроенные материалы`);
           else if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
         }
         mod = `export default ${JSON.stringify(map)};`;

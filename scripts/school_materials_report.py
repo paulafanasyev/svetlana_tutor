@@ -102,13 +102,16 @@ def main():
     # Diagnostics for CI: run the invariant test here and save its output (Actions logs are not visible to the reviewer).
     diag = ["# School materials: checks", ""]
     odd = Counter()
+    deadline_pattern = re.compile(
+        r"^(?:До\s+\d{1,2}\s+(?:января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+20\d{2}(?:\s+года)?|[Бб]ессрочно)$"
+    )
     for name in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json",
                  "federal-textbooks-2026-secondary-10-11.json"):
         for rec in load(DATA / name)["records"]:
             v = rec.get("allowedUseUntil")
-            if v is not None and not re.search(r"31\s+августа\s+20\d\d|[Бб]ессрочно", v):
+            if v is not None and not deadline_pattern.fullmatch(v.strip()):
                 odd[v[:80]] += 1
-    diag.append("- allowedUseUntil values outside the expected forms: " + (", ".join(f"«{a}»={b}" for a, b in odd.most_common(20)) or "none"))
+    diag.append("- invalid allowedUseUntil date formats (manual review): " + (", ".join(f"«{a}»={b}" for a, b in odd.most_common(20)) or "none"))
     for name in ("official-russian-school-material-items.json", "federal-working-programs.json"):
         n = (DATA / name).read_text(encoding="utf-8").count('"localPath"')
         diag.append(f"- {name}: localPath occurrences = {n}")

@@ -1,0 +1,1855 @@
+{
+  "schemaVersion": 1,
+  "sourceIndex": "data/school-materials/edsoo-official-lesson-index.json",
+  "checkedAt": "2026-10-22",
+  "note": "Compact UI mirror of indexed official EDSOO lesson links. Links only; no lesson/exercise text is redistributed. Items marked all-school-subjects have no reliable subject mapping and are shown separately by grade.",
+  "items": [
+    {
+      "id": "edsoo-lesson-001",
+      "title": "Урок – РЯ – 2 класс – Связь слов в предложении",
+      "url": "https://edsoo.ru/urok-rya-2-klass-svyaz-slov-v-predlozhenii",
+      "description": "Класс 2 · Тема. Связь слов в предложении. · Цель задания: проверять умение использовать слова в предложении в нужной форме (с опорой на собственный речевой опыт).",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "russian-language",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-svyaz-slov-v-predlozhenii",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-002",
+      "title": "Урок – Дом и все домашние",
+      "url": "https://edsoo.ru/urok-1",
+      "description": "Планируемые предметные результаты: 1. Характеризовать тематические группы слов, родовые и видовые понятия. 2. Проводить лексический анализ слов (в рамках ...",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс: 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-1",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-003",
+      "title": "Урок – Нравственные уроки Владимира Мономаха 1 – Единое ...",
+      "url": "https://edsoo.ru/urok-nravstvennye-uroki-vladimira-monomaha-1",
+      "description": "Владимир Мономах (1053-1125) – сын князя Всеволода Ярославича, был прозван Мономахом в подражание своему деду по матери – византийскому императору Константину IX Мономаху. Он не сразу стал великим князем Киевским – лишь ...",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 7",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-nravstvennye-uroki-vladimira-monomaha-1",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-004",
+      "title": "Урок_Стилистические пласты лексики. Разговорная лексика ...",
+      "url": "https://edsoo.ru/urok_stilisticheskie-plasty-leksiki-razgovornaya-leksika",
+      "description": "Класс 6 Тема: Стилистические пласты лексики. Разговорная лексика Планируемые предметные ...",
+      "gradeRange": [
+        6
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "russian-language",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_stilisticheskie-plasty-leksiki-razgovornaya-leksika",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-005",
+      "title": "Урок_Дорога жизни – Единое содержание общего образования",
+      "url": "https://edsoo.ru/urok_doroga-zhizni",
+      "description": "Дорога жизни – единственная дорога, проходившая в годы Великой Отечественной войны через Ладожское озеро, связывая осаждённый немецкими войсками Ленинград (ныне Санкт-Петербург) с тылом страны.",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "history",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_doroga-zhizni",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-006",
+      "title": "Урок – Русский язык как государственный язык – Единое ...",
+      "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniya",
+      "description": "Я люблю свой родной язык! Он понятен для всех, Он певуч, Он, как русский народ, многоли́к, Как держа́ва наша, могуч. Хочешь — песни, гимны пиши, Хочешь — выскажи боль души.",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "russian-language",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "3 КЛАСС",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-007",
+      "title": "Урок_Урок на всю жизнь – Единое содержание общего образования",
+      "url": "https://edsoo.ru/urok_urok-na-vsyu-zhizn",
+      "description": "Один из рассказов М.М. Зощенко из цикла «Лёля и Минька» называется «Ёлка». Задание связано со знанием содержания этого рассказа. Разделите между Лёлей и Минькой перечисленные украшения, которые они сняли с ёлки, и ...",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "russian-language",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_urok-na-vsyu-zhizn",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-008",
+      "title": "Урок – Шаблон без графики",
+      "url": "https://edsoo.ru/urok-shablon-bez-grafiki",
+      "description": "Шаблон для уроков. Карточка занятия. Задание 1. Задание 2. Методические рекомендации. Задание 4. Карточка занятия. Класс 2. Тема урока: Общие сведения о языке.",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-shablon-bez-grafiki",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-009",
+      "title": "Урок – ЛЧ – 3 класс – Произведения К.Г. Паустовского о ...",
+      "url": "https://edsoo.ru/urok-lch-3-klass-proizvedeniya-k-g-paustovskogo-o-prirode-i-zhivotnyh-glavnaya-mysl-ideya-rasskaza-barsuchij-nos",
+      "description": "Класс 3 Тема. Произведения К.Г. Паустовского о природе и животных. Главная мысль (идея) рассказа «Барсучий нос». Цель задания: формировать умение находить в тексте средства художественной выразительности (эпитеты ...",
+      "gradeRange": [
+        3
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "biology",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-proizvedeniya-k-g-paustovskogo-o-prirode-i-zhivotnyh-glavnaya-mysl-ideya-rasskaza-barsuchij-nos",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-010",
+      "title": "Урок – Общие сведения о языке – Единое содержание общего ...",
+      "url": "https://edsoo.ru/urok-obshhie-svedeniya-o-yazyke",
+      "description": "2 КЛАСС Тематический раздел ФРП: Общие сведения о языке. Основные виды деятельности детей: работа с текстом; учебный диалог.",
+      "gradeRange": [
+        2
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-obshhie-svedeniya-o-yazyke",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-011",
+      "title": "Урок – Русский язык как язык межнационального общения",
+      "url": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniyaurok",
+      "description": "Русский язык – национальное достояние всех народов Российской Федерации. Это замечательно, что все народы, живущие в нашей огромной стране, имеют возможность ...",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "russian-language",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "4 КЛАСС",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-russkij-yazyk-kak-yazyk-mezhnaczionalnogo-obshheniyaurok",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-012",
+      "title": "Урок_Слово “извините” в русском языке",
+      "url": "https://edsoo.ru/urok_slovo-izvinite-v-russkom-yazyke",
+      "description": "... русского языка и литературы (5-7 классы). Класс 5. Тема: Речевой этикет. Планируемые предметные результаты: 1. Создавать устные монологические высказывания ...",
+      "gradeRange": [
+        5
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "literature",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_slovo-izvinite-v-russkom-yazyke",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-013",
+      "title": "Урок_Родной, родственный, родимый",
+      "url": "https://edsoo.ru/urok_rodnoj-rodstvennyj-rodimyj",
+      "description": "... русского языка и литературы (5–7 классы). Класс 6. Тема: Морфемный и словообразовательный анализ слов. Практикум. Планируемые предметные результаты: 1 ...",
+      "gradeRange": [
+        6
+      ],
+      "gradeStatus": "GRADE_FOUND_IN_INDEX",
+      "subject": "literature",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_rodnoj-rodstvennyj-rodimyj",
+      "gradeEvidenceType": ""
+    },
+    {
+      "id": "edsoo-lesson-014",
+      "title": "urok znachenie slova v slovare",
+      "url": "https://edsoo.ru/urok-znachenie-slova-v-slovare",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "3 КЛАСС",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-znachenie-slova-v-slovare",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-015",
+      "title": "urok predanie semi merczalovyh",
+      "url": "https://edsoo.ru/urok_predanie-semi-merczalovyh",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_predanie-semi-merczalovyh",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-016",
+      "title": "urok soderzhanie skazki",
+      "url": "https://edsoo.ru/urok_soderzhanie-skazki",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_soderzhanie-skazki",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-017",
+      "title": "urok tematicheskie gruppy slov",
+      "url": "https://edsoo.ru/urok_tematicheskie-gruppy-slov",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_tematicheskie-gruppy-slov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-018",
+      "title": "urok lch 3 klass vzaimootnosheniya cheloveka i zhivotnyh tema proizvedeniya d n mamina sibiryaka priyomysh",
+      "url": "https://edsoo.ru/urok-lch-3-klass-vzaimootnosheniya-cheloveka-i-zhivotnyh-tema-proizvedeniya-d-n-mamina-sibiryaka-priyomysh",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-vzaimootnosheniya-cheloveka-i-zhivotnyh-tema-proizvedeniya-d-n-mamina-sibiryaka-priyomysh",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-019",
+      "title": "urok rya 3 klass obobshhenie znanii ob imeni sushhestvitelnom",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-ob-imeni-sushhestvitelnom",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-ob-imeni-sushhestvitelnom",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-020",
+      "title": "urok t 4 klass sostavlyayushhie kompyutera ustrojstva vvoda i vyvoda informaczii",
+      "url": "https://edsoo.ru/urok-t-4-klass-sostavlyayushhie-kompyutera-ustrojstva-vvoda-i-vyvoda-informaczii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-sostavlyayushhie-kompyutera-ustrojstva-vvoda-i-vyvoda-informaczii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-021",
+      "title": "urok t 4 klass programmnoe obespechenie kompyutera po 2",
+      "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po-2",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po-2",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-022",
+      "title": "urok t 4 klass mir informaczii",
+      "url": "https://edsoo.ru/urok-t-4-klass-mir-informaczii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-mir-informaczii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-023",
+      "title": "urok test2",
+      "url": "https://edsoo.ru/urok-test2",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-test2",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-024",
+      "title": "urok 113 pp literaturnoe chtenie 4 klass",
+      "url": "https://edsoo.ru/urok-113-pp_literaturnoe-chtenie-4-klass",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Заголовок страницы: «Урок – 113 пп_литературное чтение 4 класс»",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-113-pp_literaturnoe-chtenie-4-klass",
+      "gradeEvidenceType": "page-title"
+    },
+    {
+      "id": "edsoo-lesson-025",
+      "title": "urok roditelskaya lyubov",
+      "url": "https://edsoo.ru/urok-roditelskaya-lyubov",
+      "description": "",
+      "gradeRange": [
+        7,
+        7
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 7",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-roditelskaya-lyubov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-026",
+      "title": "urok propavshie slova",
+      "url": "https://edsoo.ru/urok_propavshie-slova",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_propavshie-slova",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-027",
+      "title": "urok postupki nastoyashhego cheloveka",
+      "url": "https://edsoo.ru/urok_postupki-nastoyashhego-cheloveka",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_postupki-nastoyashhego-cheloveka",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-028",
+      "title": "urok krestyanskaya semya",
+      "url": "https://edsoo.ru/urok_krestyanskaya-semya",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_krestyanskaya-semya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-029",
+      "title": "urok lyubov i brak v dvoryanskoj seme",
+      "url": "https://edsoo.ru/urok_lyubov-i-brak-v-dvoryanskoj-seme",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_lyubov-i-brak-v-dvoryanskoj-seme",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-030",
+      "title": "urok detskie strahi",
+      "url": "https://edsoo.ru/urok_detskie-strahi",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-strahi",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-031",
+      "title": "urok detskie fantazii",
+      "url": "https://edsoo.ru/urok_detskie-fantazii",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-fantazii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-032",
+      "title": "urok detskie igry vzroslye roli",
+      "url": "https://edsoo.ru/urok_detskie-igry-vzroslye-roli",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-igry-vzroslye-roli",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-033",
+      "title": "urok chej hod",
+      "url": "https://edsoo.ru/urok_chej-hod",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_chej-hod",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-034",
+      "title": "urok proverim sebya",
+      "url": "https://edsoo.ru/urok_proverim-sebya",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_proverim-sebya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-035",
+      "title": "urok uznaj geroya",
+      "url": "https://edsoo.ru/urok_uznaj-geroya",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_uznaj-geroya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-036",
+      "title": "urok suffiksy",
+      "url": "https://edsoo.ru/urok-suffiksy",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-suffiksy",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-037",
+      "title": "urok morfemika soberite slovo",
+      "url": "https://edsoo.ru/urok_morfemika-soberite-slovo",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_morfemika-soberite-slovo",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-038",
+      "title": "urok odnoznachnye i mnogoznachnye slova",
+      "url": "https://edsoo.ru/urok_odnoznachnye-i-mnogoznachnye-slova",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_odnoznachnye-i-mnogoznachnye-slova",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-039",
+      "title": "urok vodoyomy zemli ih raznoobrazie estestvennye vodoyomy okean more ozero boloto primery vodoyomov v rossii",
+      "url": "https://edsoo.ru/urok_vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-040",
+      "title": "urok imya sushhestvitelnoe voprosy",
+      "url": "https://edsoo.ru/urok-imya-sushhestvitelnoe-voprosy",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-imya-sushhestvitelnoe-voprosy",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-041",
+      "title": "urok krupnejshie reki rossii",
+      "url": "https://edsoo.ru/urok-krupnejshie-reki-rossii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-krupnejshie-reki-rossii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-042",
+      "title": "urok vydelenie v slovah s odnoznachno vydelyaemymi morfemami okonchaniya kornya pristavki suffiksa",
+      "url": "https://edsoo.ru/urok-vydelenie-v-slovah-s-odnoznachno-vydelyaemymi-morfemami-okonchaniya-kornya-pristavki-suffiksa",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-vydelenie-v-slovah-s-odnoznachno-vydelyaemymi-morfemami-okonchaniya-kornya-pristavki-suffiksa",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-043",
+      "title": "urok hudozhestvennye osobennosti skazok raznogo vida volshebnye o zhivotnyh bytovye",
+      "url": "https://edsoo.ru/urok-hudozhestvennye-osobennosti-skazok-raznogo-vida-volshebnye-o-zhivotnyh-bytovye",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-hudozhestvennye-osobennosti-skazok-raznogo-vida-volshebnye-o-zhivotnyh-bytovye",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-044",
+      "title": "urok lch 3 klass rabota s detskimi knigami avtory yumoristicheskih rasskazov",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-avtory-yumoristicheskih-rasskazov",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-avtory-yumoristicheskih-rasskazov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-045",
+      "title": "urok lch 3 klass sredstva hudozhestvennoj vyrazitelnosti epitet sravnenie v liricheskih proizvedeniyah poetov 2",
+      "url": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov-2",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov-2",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-046",
+      "title": "urok lch 3 klass delenie teksta na chasti sostavlenie plana vyyavlenie glavnoj mysli idei rasskaza dzheka londona buryj volk",
+      "url": "https://edsoo.ru/urok-lch-3-klass-delenie-teksta-na-chasti-sostavlenie-plana-vyyavlenie-glavnoj-mysli-idei-rasskaza-dzheka-londona-buryj-volk",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-delenie-teksta-na-chasti-sostavlenie-plana-vyyavlenie-glavnoj-mysli-idei-rasskaza-dzheka-londona-buryj-volk",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-047",
+      "title": "urok lch 3 klass rabota s detskimi knigami literaturnye skazki pisatelej sostavlenie annotaczii",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-literaturnye-skazki-pisatelej-sostavlenie-annotaczii",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-literaturnye-skazki-pisatelej-sostavlenie-annotaczii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-048",
+      "title": "urok lch 3 klass osobennosti yumoristicheskih proizvedenij n n nosova i drugih avtorov na vybor",
+      "url": "https://edsoo.ru/urok-lch-3-klass-osobennosti-yumoristicheskih-proizvedenij-n-n-nosova-i-drugih-avtorov-na-vybor",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-osobennosti-yumoristicheskih-proizvedenij-n-n-nosova-i-drugih-avtorov-na-vybor",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-049",
+      "title": "urok lch 3 klass rabota so slovaryom yazyk byliny ustarevshie slova ih mesto i predstavlenie v sovremennoj leksike",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-so-slovaryom-yazyk-byliny-ustarevshie-slova-ih-mesto-i-predstavlenie-v-sovremennoj-leksike",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-rabota-so-slovaryom-yazyk-byliny-ustarevshie-slova-ih-mesto-i-predstavlenie-v-sovremennoj-leksike",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-050",
+      "title": "urok lch 3 klass sredstva hudozhestvennoj vyrazitelnosti epitet sravnenie v liricheskih proizvedeniyah poetov",
+      "url": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-sredstva-hudozhestvennoj-vyrazitelnosti-epitet-sravnenie-v-liricheskih-proizvedeniyah-poetov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-051",
+      "title": "urok lch 3 klass m m prishvin pevecz russkoi prirody",
+      "url": "https://edsoo.ru/urok-lch-3-klass-m-m-prishvin-pevecz-russkoi-prirody",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-m-m-prishvin-pevecz-russkoi-prirody",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-052",
+      "title": "urok rya 3 klass obobshhenie znanij o vidah predlozhenij",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanij-o-vidah-predlozhenij",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanij-o-vidah-predlozhenij",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-053",
+      "title": "urok rya 3 klass obobshhenie znanii o napisanii okonchanii imen prilagatelnyh",
+      "url": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-o-napisanii-okonchanii-imen-prilagatelnyh",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-obobshhenie-znanii-o-napisanii-okonchanii-imen-prilagatelnyh",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-054",
+      "title": "urok rya 3 klass proshedshee vremya glagolov",
+      "url": "https://edsoo.ru/urok-rya-3-klass-proshedshee-vremya-glagolov",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-proshedshee-vremya-glagolov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-055",
+      "title": "urok rya 3 klass chasti rechi sistematizacziya izuchennogo v 3 klasse",
+      "url": "https://edsoo.ru/urok-rya-3-klass-chasti-rechi-sistematizacziya-izuchennogo-v-3-klasse",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-chasti-rechi-sistematizacziya-izuchennogo-v-3-klasse",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-056",
+      "title": "urok rya 3 klass rod imyon sushhestvitelnyh",
+      "url": "https://edsoo.ru/urok-rya-3-klass-rod-imyon-sushhestvitelnyh",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-rod-imyon-sushhestvitelnyh",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-057",
+      "title": "urok om 1 klass ty peshehod",
+      "url": "https://edsoo.ru/urok-om-1-klass-ty-peshehod",
+      "description": "",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-ty-peshehod",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-058",
+      "title": "urok om 1 klass domashnie i dikie zhivotnye razlichiya v usloviyah zhizni",
+      "url": "https://edsoo.ru/urok-om-1-klass-domashnie-i-dikie-zhivotnye-razlichiya-v-usloviyah-zhizni",
+      "description": "",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-domashnie-i-dikie-zhivotnye-razlichiya-v-usloviyah-zhizni",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-059",
+      "title": "urok om 2 klass chasti rasteniya nazvanie kratkaya harakteristika znacheniya dlya zhizni rasteniya",
+      "url": "https://edsoo.ru/urok-om-2-klass-chasti-rasteniya-nazvanie-kratkaya-harakteristika-znacheniya-dlya-zhizni-rasteniya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-2-klass-chasti-rasteniya-nazvanie-kratkaya-harakteristika-znacheniya-dlya-zhizni-rasteniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-060",
+      "title": "urok om 1 klass obekty zhivoj prirody sravnenie obektov nezhivoj i zhivoj prirody vydelenie razlichij",
+      "url": "https://edsoo.ru/urok-om-1-klass-obekty-zhivoj-prirody-sravnenie-obektov-nezhivoj-i-zhivoj-prirody-vydelenie-razlichij",
+      "description": "",
+      "gradeRange": [
+        1,
+        1
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 1",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-1-klass-obekty-zhivoj-prirody-sravnenie-obektov-nezhivoj-i-zhivoj-prirody-vydelenie-razlichij",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-061",
+      "title": "urok om 2 klass derevya listvennye i hvojnye sravnenie listvennyh i hvojnyh derevev obshhee i razlichiya",
+      "url": "https://edsoo.ru/urok-om-2-klass-derevya-listvennye-i-hvojnye-sravnenie-listvennyh-i-hvojnyh-derevev-obshhee-i-razlichiya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-2-klass-derevya-listvennye-i-hvojnye-sravnenie-listvennyh-i-hvojnyh-derevev-obshhee-i-razlichiya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-062",
+      "title": "urok om 2 klass rasteniya dikorastushhie i kulturnye obshhee i razlichiya",
+      "url": "https://edsoo.ru/urok-om-2-klass-rasteniya-dikorastushhie-i-kulturnye-obshhee-i-razlichiya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-2-klass-rasteniya-dikorastushhie-i-kulturnye-obshhee-i-razlichiya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-063",
+      "title": "urok om 3 klass organy chuvstv ih rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-organy-chuvstv-ih-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-organy-chuvstv-ih-rol-v-zhizni-cheloveka",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-064",
+      "title": "urok om 4 klass harakteristika prirodnyh zon rossii arkticheskaya pustynya svyazi v prirodnoj zone",
+      "url": "https://edsoo.ru/urok-om-4-klass-harakteristika-prirodnyh-zon-rossii-arkticheskaya-pustynya-svyazi-v-prirodnoj-zone",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-harakteristika-prirodnyh-zon-rossii-arkticheskaya-pustynya-svyazi-v-prirodnoj-zone",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-065",
+      "title": "urok om 3 klass pishhevaritelnaya sistema i eyo rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-pishhevaritelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-pishhevaritelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-066",
+      "title": "urok om 3 klass dyhatelnaya sistema i eyo rol v zhizni cheloveka",
+      "url": "https://edsoo.ru/urok-om-3-klass-dyhatelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-dyhatelnaya-sistema-i-eyo-rol-v-zhizni-cheloveka",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-067",
+      "title": "urok om 3 klass profilaktika zabolevanij rol zakalivaniya dlya zdorovya rastushhego organizma",
+      "url": "https://edsoo.ru/urok-om-3-klass-profilaktika-zabolevanij-rol-zakalivaniya-dlya-zdorovya-rastushhego-organizma",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-profilaktika-zabolevanij-rol-zakalivaniya-dlya-zdorovya-rastushhego-organizma",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-068",
+      "title": "urok om 4 klass tema bezopasnoe povedenie pri ezde na velosipede i samokate dorozhnye znaki",
+      "url": "https://edsoo.ru/urok-om-4-klass-tema-bezopasnoe-povedenie-pri-ezde-na-velosipede-i-samokate-dorozhnye-znaki",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-tema-bezopasnoe-povedenie-pri-ezde-na-velosipede-i-samokate-dorozhnye-znaki",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-069",
+      "title": "urok om 4 klass vodoyomy zemli ih raznoobrazie estestvennye vodoyomy okean more ozero boloto primery vodoyomov v rossii",
+      "url": "https://edsoo.ru/urok-om-4-klass-vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-vodoyomy-zemli-ih-raznoobrazie-estestvennye-vodoyomy-okean-more-ozero-boloto-primery-vodoyomov-v-rossii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-070",
+      "title": "urok om 4 klass zashhita i ohrana prirodnyh bogatstv vozduha vody poleznyh iskopaemyh flory i fauny",
+      "url": "https://edsoo.ru/urok-om-4-klass-zashhita-i-ohrana-prirodnyh-bogatstv-vozduha-vody-poleznyh-iskopaemyh-flory-i-fauny",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-zashhita-i-ohrana-prirodnyh-bogatstv-vozduha-vody-poleznyh-iskopaemyh-flory-i-fauny",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-071",
+      "title": "urok om 4 klass ekologicheskie problemy vzaimodejstviya cheloveka i prirody",
+      "url": "https://edsoo.ru/urok-om-4-klass-ekologicheskie-problemy-vzaimodejstviya-cheloveka-i-prirody",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-ekologicheskie-problemy-vzaimodejstviya-cheloveka-i-prirody",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-072",
+      "title": "urok om 4 klass prirodnye i kulturnye obekty vsemirnogo naslediya v rossii",
+      "url": "https://edsoo.ru/urok-om-4-klass-prirodnye-i-kulturnye-obekty-vsemirnogo-naslediya-v-rossii",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-prirodnye-i-kulturnye-obekty-vsemirnogo-naslediya-v-rossii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-073",
+      "title": "urok m 3 klass massa sootnoshenie mezhdu kilogrammom i grammom",
+      "url": "https://edsoo.ru/urok-m-3-klass-massa-sootnoshenie-mezhdu-kilogrammom-i-grammom",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-m-3-klass-massa-sootnoshenie-mezhdu-kilogrammom-i-grammom",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-074",
+      "title": "urok m 3 klass konstruirovanie mnogougolnika iz zadannyh figur delenie mnogougolnika na chasti",
+      "url": "https://edsoo.ru/urok-m-3-klass-konstruirovanie-mnogougolnika-iz-zadannyh-figur-delenie-mnogougolnika-na-chasti",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-m-3-klass-konstruirovanie-mnogougolnika-iz-zadannyh-figur-delenie-mnogougolnika-na-chasti",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-075",
+      "title": "urok m 3 klass vybor pravilnogo resheniya zadachi",
+      "url": "https://edsoo.ru/urok-m-3-klass-vybor-pravilnogo-resheniya-zadachi",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-m-3-klass-vybor-pravilnogo-resheniya-zadachi",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-076",
+      "title": "urok m 4 klass modeli prostranstvennyh geometricheskih figur v okruzhayushhem mire",
+      "url": "https://edsoo.ru/urok-m-4-klass-modeli-prostranstvennyh-geometricheskih-figur-v-okruzhayushhem-mire",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-m-4-klass-modeli-prostranstvennyh-geometricheskih-figur-v-okruzhayushhem-mire",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-077",
+      "title": "urok m 4 klass diagramma",
+      "url": "https://edsoo.ru/urok-m-4-klass-diagramma",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-m-4-klass-diagramma",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-078",
+      "title": "urok rya 2 klass imya prilagatelnoe oznakomlenie znachenie",
+      "url": "https://edsoo.ru/urok-rya-2-klass-imya-prilagatelnoe-oznakomlenie-znachenie",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-imya-prilagatelnoe-oznakomlenie-znachenie",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-079",
+      "title": "urok rya 2 klass chasti rechi obobshhenie trening",
+      "url": "https://edsoo.ru/urok-rya-2-klass-chasti-rechi-obobshhenie-trening",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-chasti-rechi-obobshhenie-trening",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-080",
+      "title": "urok rya 2 klass predlozhenie kak edinicza yazyka",
+      "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-kak-edinicza-yazyka",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-kak-edinicza-yazyka",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-081",
+      "title": "urok rya 2 klass vidy predlozhenij po czeli vyskazyvaniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-vidy-predlozhenij-po-czeli-vyskazyvaniya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-vidy-predlozhenij-po-czeli-vyskazyvaniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-082",
+      "title": "urok rya 2 klass povestvovatelnye voprositelnye pobuditelnye predlozheniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-povestvovatelnye-voprositelnye-pobuditelnye-predlozheniya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-povestvovatelnye-voprositelnye-pobuditelnye-predlozheniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-083",
+      "title": "urok rya 2 klass voskliczatelnye i nevoskliczatelnye predlozheniya",
+      "url": "https://edsoo.ru/urok-rya-2-klass-voskliczatelnye-i-nevoskliczatelnye-predlozheniya",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-voskliczatelnye-i-nevoskliczatelnye-predlozheniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-084",
+      "title": "urok rya 2 klass predlozhenie sistematizacziya znanij",
+      "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-sistematizacziya-znanij",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-sistematizacziya-znanij",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-085",
+      "title": "urok t 3 klass vidy informaczii",
+      "url": "https://edsoo.ru/urok-t-3-klass-vidy-informaczii",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-3-klass-vidy-informaczii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-086",
+      "title": "urok t 3 klass kodirovanie informaczii",
+      "url": "https://edsoo.ru/urok-t-3-klass-kodirovanie-informaczii",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-3-klass-kodirovanie-informaczii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-087",
+      "title": "urok t 4 klass programmnoe obespechenie kompyutera po",
+      "url": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-programmnoe-obespechenie-kompyutera-po",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-088",
+      "title": "urok t 4 klass rabota s tekstovym redaktorom",
+      "url": "https://edsoo.ru/urok-t-4-klass-rabota-s-tekstovym-redaktorom",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-rabota-s-tekstovym-redaktorom",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-089",
+      "title": "urok t 4 klass vidy kodirovaniya",
+      "url": "https://edsoo.ru/urok-t-4-klass-vidy-kodirovaniya",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-vidy-kodirovaniya",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-090",
+      "title": "urok t 4 klass czifrovoj etiket netiket",
+      "url": "https://edsoo.ru/urok-t-4-klass-czifrovoj-etiket-netiket",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-t-4-klass-czifrovoj-etiket-netiket",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-091",
+      "title": "urok test 0000",
+      "url": "https://edsoo.ru/urok-test_0000",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-test_0000",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-092",
+      "title": "urok vidit devicza chto tut lyudi dobrye zhivut",
+      "url": "https://edsoo.ru/urok_vidit-devicza-chto-tut-lyudi-dobrye-zhivut",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_vidit-devicza-chto-tut-lyudi-dobrye-zhivut",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-093",
+      "title": "urok semya v kuche",
+      "url": "https://edsoo.ru/urok_semya-v-kuche",
+      "description": "",
+      "gradeRange": [
+        5,
+        5
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_semya-v-kuche",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-094",
+      "title": "urok istoria semyi",
+      "url": "https://edsoo.ru/urok_istoria-semyi",
+      "description": "",
+      "gradeRange": [
+        6,
+        6
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_istoria-semyi",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-095",
+      "title": "urok ustnoe narodnoe tvorchestvo harakteristika malyh zhanrov folklora poteshki nebyliczy skorogovorki schitalki",
+      "url": "https://edsoo.ru/urok-ustnoe-narodnoe-tvorchestvo-harakteristika-malyh-zhanrov-folklora-poteshki-nebyliczy-skorogovorki-schitalki",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-ustnoe-narodnoe-tvorchestvo-harakteristika-malyh-zhanrov-folklora-poteshki-nebyliczy-skorogovorki-schitalki",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-096",
+      "title": "urok lch 3 klass rabota s detskimi knigami i ya bilibin illyustrator skazok a s pushkina",
+      "url": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-i-ya-bilibin-illyustrator-skazok-a-s-pushkina",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-rabota-s-detskimi-knigami-i-ya-bilibin-illyustrator-skazok-a-s-pushkina",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-097",
+      "title": "urok lch 3 klass nravstvennaya oczenka situaczij povedeniya i postupkov geroev proizvedeniya a p gajdara timur i ego komanda otryvki",
+      "url": "https://edsoo.ru/urok-lch-3-klass-nravstvennaya-oczenka-situaczij-povedeniya-i-postupkov-geroev-proizvedeniya-a-p-gajdara-timur-i-ego-komanda-otryvki",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-lch-3-klass-nravstvennaya-oczenka-situaczij-povedeniya-i-postupkov-geroev-proizvedeniya-a-p-gajdara-timur-i-ego-komanda-otryvki",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-098",
+      "title": "urok rya 3 klass odnorodnye chleny predlozheniya bez soyuzov",
+      "url": "https://edsoo.ru/urok-rya-3-klass-odnorodnye-chleny-predlozheniya-bez-soyuzov",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-odnorodnye-chleny-predlozheniya-bez-soyuzov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-099",
+      "title": "urok rya 3 klass sostav slova obobshhenie",
+      "url": "https://edsoo.ru/urok-rya-3-klass-sostav-slova-obobshhenie",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-3-klass-sostav-slova-obobshhenie",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-100",
+      "title": "urok om 3 klass raznoobrazie gribov griby sedobnye i nesedobnye",
+      "url": "https://edsoo.ru/urok-om-3-klass-raznoobrazie-gribov-griby-sedobnye-i-nesedobnye",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-raznoobrazie-gribov-griby-sedobnye-i-nesedobnye",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-101",
+      "title": "urok om 3 klass nasha rodina rossijskaya federacziya gosudarstvennaya simvolika rossijskoj federaczii uvazhenie k gosudarstvennym simvolam rossii",
+      "url": "https://edsoo.ru/urok-om-3-klass-nasha-rodina-rossijskaya-federacziya-gosudarstvennaya-simvolika-rossijskoj-federaczii-uvazhenie-k-gosudarstvennym-simvolam-rossii",
+      "description": "",
+      "gradeRange": [
+        3,
+        3
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-3-klass-nasha-rodina-rossijskaya-federacziya-gosudarstvennaya-simvolika-rossijskoj-federaczii-uvazhenie-k-gosudarstvennym-simvolam-rossii",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-102",
+      "title": "urok om 4 klass ispolzovanie rek i vodoyomov chelovekom hozyajstvennaya deyatelnost otdyh ohrana rek i vodoyomov",
+      "url": "https://edsoo.ru/urok-om-4-klass-ispolzovanie-rek-i-vodoyomov-chelovekom-hozyajstvennaya-deyatelnost-otdyh-ohrana-rek-i-vodoyomov",
+      "description": "",
+      "gradeRange": [
+        4,
+        4
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 4",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-om-4-klass-ispolzovanie-rek-i-vodoyomov-chelovekom-hozyajstvennaya-deyatelnost-otdyh-ohrana-rek-i-vodoyomov",
+      "gradeEvidenceType": "page-text"
+    },
+    {
+      "id": "edsoo-lesson-103",
+      "title": "urok rya 2 klass glagol voprosy chto delat chto sdelat i drugie",
+      "url": "https://edsoo.ru/urok-rya-2-klass-glagol-voprosy-chto-delat-chto-sdelat-i-drugie",
+      "description": "",
+      "gradeRange": [
+        2,
+        2
+      ],
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
+      "subject": "all-school-subjects",
+      "accessStatus": "PUBLIC_SOURCE_LINK",
+      "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
+      "contentStoredLocally": false,
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-glagol-voprosy-chto-delat-chto-sdelat-i-drugie",
+      "gradeEvidenceType": "page-text"
+    }
+  ]
+}

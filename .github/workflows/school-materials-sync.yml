@@ -10,6 +10,7 @@ on:
       - '.github/workflows/school-materials-sync.yml'
       - 'scripts/school_materials_*'
       - 'scripts/sync_official_*.py'
+      - 'apps/web/src/data/schoolMaterials.test.js'
   workflow_dispatch:
     inputs:
       ocr:
@@ -91,6 +92,12 @@ jobs:
           assert not wrong, f'size mismatch: {wrong[:10]}'
           PY
 
+      - name: Reconcile grade/subject coverage
+        run: python scripts/school_materials_reconcile.py
+
+      - name: Validate school material indexes
+        run: node --test apps/web/src/data/schoolMaterials.test.js
+
       - name: Report
         run: python scripts/school_materials_report.py
 
@@ -104,4 +111,16 @@ jobs:
           fi
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -m "School materials: indexes and manifests (PDF in release ${TAG})"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          # The branch can receive human/other workflow commits while sync runs.
+          # Rebase the generated index commit onto the latest remote tip; never force-push.
+          # Retry if another commit lands between fetch/rebase and push.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "::warning::push raced with another update (attempt ${attempt}/3)"
+          done
+          echo "::error::could not push school-material index commit after 3 attempts"
+          exit 1
