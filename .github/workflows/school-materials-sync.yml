@@ -111,4 +111,8 @@ jobs:
           fi
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -m "School materials: indexes and manifests (PDF in release ${TAG})"
+          # The branch can receive human/other workflow commits while sync runs.
+          # Rebase the generated index commit onto the current remote tip; never force-push.
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
