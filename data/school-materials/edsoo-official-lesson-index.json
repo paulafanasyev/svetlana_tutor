@@ -2070,10 +2070,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-chasti-rechi-obobshhenie-trening",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2084,8 +2084,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-chasti-rechi-obobshhenie-trening"
     },
     {
       "id": "edsoo-lesson-080",
@@ -2094,10 +2097,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-kak-edinicza-yazyka",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2108,8 +2111,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-kak-edinicza-yazyka"
     },
     {
       "id": "edsoo-lesson-081",
@@ -2118,10 +2124,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-vidy-predlozhenij-po-czeli-vyskazyvaniya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2132,8 +2138,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-vidy-predlozhenij-po-czeli-vyskazyvaniya"
     },
     {
       "id": "edsoo-lesson-082",
@@ -2666,8 +2675,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 68,
-    "stillNeedsReview": 28,
+    "verifiedOnSourcePage": 71,
+    "stillNeedsReview": 25,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
