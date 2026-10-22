@@ -2151,10 +2151,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-povestvovatelnye-voprositelnye-pobuditelnye-predlozheniya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2165,8 +2165,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-povestvovatelnye-voprositelnye-pobuditelnye-predlozheniya"
     },
     {
       "id": "edsoo-lesson-083",
@@ -2175,10 +2178,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-voskliczatelnye-i-nevoskliczatelnye-predlozheniya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2189,8 +2192,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-voskliczatelnye-i-nevoskliczatelnye-predlozheniya"
     },
     {
       "id": "edsoo-lesson-084",
@@ -2199,10 +2205,10 @@
       "url": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-sistematizacziya-znanij",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        2,
+        2
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -2213,8 +2219,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён текстом официальной страницы ЕДСОО: «Класс 2». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 2",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-rya-2-klass-predlozhenie-sistematizacziya-znanij"
     },
     {
       "id": "edsoo-lesson-085",
@@ -2675,8 +2684,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 71,
-    "stillNeedsReview": 25,
+    "verifiedOnSourcePage": 74,
+    "stillNeedsReview": 22,
     "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
