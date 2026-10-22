@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "catalogName": "official-russian-school-materials",
-  "lastVerified": "2026-10-21",
+  "lastVerified": "2026-10-22",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
   "gradeRange": [
     1,
@@ -796,8 +796,8 @@
   "workingProgramCount": 61,
   "directWorkingProgramPdfCount": 55,
   "originalExerciseCount": 153,
-  "currentCoverageNote": "Сверка 2026-10-21: матрица 407 строк (37 предметных идентификаторов × 11 классов); 241 сочетаний имеют индексные записи; ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
-  "lastFederalProgramDownloadAttemptAt": "2026-10-21T19:23:28.495094+00:00",
+  "currentCoverageNote": "Сверка 2026-10-22: матрица 407 строк (37 предметных идентификаторов × 11 классов); 241 сочетаний имеют индексные записи; ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
+  "lastFederalProgramDownloadAttemptAt": "2026-10-22T06:09:32.380619+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
   "failedFederalWorkingProgramPdfCount": 0,
   "extracurricularProgramsSourceUrl": "https://edsoo.ru/rabochie-programmy-vd/",
