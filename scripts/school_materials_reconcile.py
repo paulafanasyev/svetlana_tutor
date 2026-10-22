@@ -353,6 +353,19 @@ def main():
     known_grade_lessons = sum(item.get("gradeStatus") in {"GRADE_FOUND_IN_INDEX", "GRADE_VERIFIED_ON_SOURCE_PAGE"} for item in lessons)
     rows_with_records = sum(row["indexedResourceCount"] > 0 for row in rows)
     rows_without_records = len(rows) - rows_with_records
+    missing_by_subject = []
+    for subject in subjects:
+        missing_grades = sorted(
+            row["grade"] for row in rows
+            if row["subject"] == subject and row["indexedResourceCount"] == 0
+        )
+        if missing_grades:
+            missing_by_subject.append({
+                "subject": subject, "subjectLabel": LABELS[subject],
+                "gradesWithoutExactRecord": missing_grades,
+                "count": len(missing_grades)
+            })
+    missing_by_subject.sort(key=lambda item: (item["subjectLabel"].casefold(), item["subject"]))
     full_text_count = sum(item.get("fullTextAvailable") is True for item in biblio)
     catalog_resource_counts = {
         "openReferenceResourceCount": sum(item.get("_coverageType") == "openReferenceResourceCount" for item in catalog_only_items),
@@ -364,6 +377,9 @@ def main():
     summary = {
         "subjectGradeRows": len(rows), "catalogSubjectCount": len(subjects),
         "rowsWithAtLeastOneIndexedLink": rows_with_records,
+        "rowsWithoutExactGradeSubjectRecord": rows_without_records,
+        "subjectsWithUnindexedGradePairs": len(missing_by_subject),
+        "unindexedGradePairsBySubject": missing_by_subject,
         "rowsWithAnExplicitWorkingProgram": sum(row["officialWorkingProgramCount"] > 0 for row in rows),
         "rowsWithAtLeastOneBibliographyRecord": sum(row["federalBibliographyRecordCount"] > 0 for row in rows),
         "rowsWithAGradeVerifiedOfficialLesson": sum(row["verifiedOfficialLessonIndexCount"] > 0 for row in rows),
@@ -436,6 +452,14 @@ def main():
     ]
     for name, values in stages:
         lines.append("| " + name + " | " + str(values["gradeSubjectRows"]) + " | " + str(values["rowsWithRecords"]) + " | " + str(values["rowsWithPrograms"]) + " | " + str(values["rowsWithBibliography"]) + " | " + str(values["rowsWithTasks"]) + " |")
+    lines += [
+        "", "## Сочетания без точной индексной записи", "",
+        "Ниже перечислены пары «предмет—класс», в которых в учитываемых индексах нет точной записи. Это не список доказанно отсутствующих учебников: сначала нужно сверить, предусмотрен ли предмет для данного класса, включая региональные, факультативные и профильно-углублённые варианты.", "",
+        "| Предмет | Классы без точной записи | Ячеек |",
+        "|---|---|---:|"
+    ]
+    for item in missing_by_subject:
+        lines.append("| " + item["subjectLabel"] + " (`" + item["subject"] + "`) | " + ", ".join(str(g) for g in item["gradesWithoutExactRecord"]) + " | " + str(item["count"]) + " |")
     lines += [
         "", "## Проверенные количества", "",
         "- Федеральный перечень учебников 2026: [официальный приказ № 436](https://publication.pravo.gov.ru/document/0001202607230005).",
