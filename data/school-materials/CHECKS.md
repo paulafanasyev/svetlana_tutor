@@ -1,6 +1,6 @@
 # School materials: checks
 
-- allowedUseUntil values outside the expected forms: «До 26 октября 2029 года»=4, «До 28 апреля 2027 года»=4, «До 28 ноября 2030 года»=1
+- invalid allowedUseUntil date formats (manual review): none
 - official-russian-school-material-items.json: localPath occurrences = 0
 - federal-working-programs.json: localPath occurrences = 0
 
@@ -34,5 +34,5 @@
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 199.03145
+# duration_ms 233.436477
 ```
