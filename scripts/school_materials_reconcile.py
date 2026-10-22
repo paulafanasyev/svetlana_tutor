@@ -298,7 +298,7 @@ def main():
             )
             lesson_count = sum(
                 1 for item in lessons
-                if item.get("gradeStatus") == "GRADE_FOUND_IN_INDEX"
+                if item.get("gradeStatus") in {"GRADE_FOUND_IN_INDEX", "GRADE_VERIFIED_ON_SOURCE_PAGE"}
                 and covers(item.get("gradeRange"), grade)
                 and source_matches(subject, item.get("subject", ""), grade)
             )
@@ -350,7 +350,7 @@ def main():
             })
 
     extra_status, extra_evidence = extracurricular_status()
-    known_grade_lessons = sum(item.get("gradeStatus") == "GRADE_FOUND_IN_INDEX" for item in lessons)
+    known_grade_lessons = sum(item.get("gradeStatus") in {"GRADE_FOUND_IN_INDEX", "GRADE_VERIFIED_ON_SOURCE_PAGE"} for item in lessons)
     rows_with_records = sum(row["indexedResourceCount"] > 0 for row in rows)
     full_text_count = sum(item.get("fullTextAvailable") is True for item in biblio)
     catalog_resource_counts = {
@@ -458,14 +458,14 @@ def main():
         "## Остаточные пробелы", "",
         "1. Полные современные учебники не включены как локальные полные тексты; нужны разрешённые копии или подтверждённые официальные точки доступа.",
         "2. OCR-выгрузка требует ручной сверки названий, авторов, предметов, классов и кодов с официальным PDF.",
-        "3. Ссылки ЕДСОО без установленного класса требуют проверки на странице-источнике.",
+        "3. Карточки без установленного класса требуют проверки на странице-источнике.",
         "4. Наличие JSON в git не доказывает доступность материала ученику в интерфейсе репетитора.", "",
         "## Статус", "",
         "- Сверка счётчиков по классу/предмету: выполняется этим скриптом и тестируется в CI.",
         "- Полнота учебников и материалов 1–11: NOT PROVEN.",
         "- Полные защищённые тексты не копируются без подтверждённых прав.", ""
     ]
-    (DATA / "RECONCILIATION-2026-10-21.md").write_text("\n".join(lines), encoding="utf-8")
+    (DATA / f"RECONCILIATION-{checked_at}.md").write_text("\n".join(lines), encoding="utf-8")
     print("SUMMARY grades=11 subjects=" + str(len(subjects)) + " rows=" + str(len(rows)) + " rows_with_records=" + str(rows_with_records) + " rows_complete=0 extras=" + extra_status)
     return 0
 

@@ -1,7 +1,7 @@
 // Школьные материалы (data/school-materials): индексы и манифесты.
 // PDF лежат в GitHub Release, в git только JSON. Проверяем инварианты, а не точные количества,
-// Контрольная ревизия после сверки классов всех карточек ЕДСОО на 2026-10-22.
 // чтобы обновление каталога не роняло CI.
+// Контрольная ревизия классов карточек ЕДСОО: сверка по страницам источника на 2026-10-22.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { flatSubtreeResults } from '../../frp-noo-content.js';
@@ -275,6 +275,7 @@ test('записи ЕДСОО с подтверждением класса со�
   assert.equal(lessons.filter((item) => item.gradeStatus === 'GRADE_NOT_FOUND_RECHECK_REQUIRED').length, lessonIndex.gradeVerificationSummary.stillNeedsReview);
   for (const item of verified) {
     assert.equal(item.gradeEvidenceUrl, item.url, item.id);
+    assert.ok(['page-text', 'page-title'].includes(item.gradeEvidenceType), item.id);
     assert.match(item.gradeEvidence || '', /(?:Класс\s*(?::|№)?\s*(?:[1-9]|1[01])|(?:[1-9]|1[01])\s*класс)/iu, item.id);
     assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length === 2, item.id);
     assert.equal(item.gradeRange[0], item.gradeRange[1], item.id);
