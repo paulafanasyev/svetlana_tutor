@@ -7,6 +7,7 @@ import textbooksAdd from '../../data/fop/textbooks_add.json';
 import fpuStatus from '../../data/fpu_status.json';
 import { activeTextbooks, fmtUntil, textbookKey } from '../../data/fpuStatus.js';
 import resources from '../../data/fop/resources.json';
+import officialSubjectResources from '../../data/officialSubjectResources.json';
 import { officialSubjectResourcesFor, officialGradeRangeLabel } from '../../data/officialSubjectResources.js';
 import RuOnly from './RuOnly.jsx';
 
@@ -69,7 +70,7 @@ export default function Programs() {
   const canPlan = user.role === 'TEACHER' || user.role === 'ADMIN';
   const books = forSubject(textbooks, current, g);
   const eors = forSubject(resources, current, g);
-  const edsooMaterials = officialSubjectResourcesFor(current, g);
+  const edsooMaterials = officialSubjectResourcesFor(officialSubjectResources.items, current, g);
   const chineseReady = CHINESE_PROGRAMS.length > 0;
 
   const pickLevel = (l) => { setLevel(l); setGrade(PLANS[l].grades[0]); setSubject(null); setMod(0); };
