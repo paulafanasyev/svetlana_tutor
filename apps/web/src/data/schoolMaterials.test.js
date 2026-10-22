@@ -5,6 +5,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { flatSubtreeResults, isTransientSourceError } from '../../frp-noo-content.js';
+import { officialGradeRangeLabel, officialSubjectResourceItems, officialSubjectResourcesFor } from './officialSubjectResources.js';
 import { readFileSync, readdirSync } from 'node:fs';
 
 const DIR = new URL('../../../../data/school-materials/', import.meta.url);
@@ -288,4 +289,27 @@ test('записи ЕДСОО с подтверждением класса со�
     assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length === 2, item.id);
     assert.equal(item.gradeRange[0], item.gradeRange[1], item.id);
   }
+});
+
+test('официальные дополнительные материалы ЕДСОО отображаются по предмету и классу', () => {
+  const items = officialSubjectResourceItems;
+  assert.equal(items.length, 26);
+  assert.ok(unique(items.map((x) => x.id)));
+  for (const item of items) {
+    assert.match(item.url, /^https:\/\//, item.id);
+    assert.equal(item.sourceId, 'edsoo-subject-materials', item.id);
+    assert.equal(item.contentStoredLocally, false, item.id);
+    assert.ok(Array.isArray(item.gradeRange) && item.gradeRange.length > 0, item.id);
+    assert.ok(item.gradeRange.every((g) => Number.isInteger(g) && g >= 1 && g <= 11), item.id);
+    assert.match(item.rightsStatus, /link.only|reuse.terms.not.confirmed/i, item.id);
+  }
+  assert.equal(officialSubjectResourcesFor('Химия', 8).length, 2);
+  assert.equal(officialSubjectResourcesFor('Химия', 7).length, 0);
+  assert.ok(officialSubjectResourcesFor('Физика', 7).some((x) => x.id === 'edsoo-physics-hydrostatic-pressure-grade7'));
+  assert.ok(officialSubjectResourcesFor('Математика', 5).some((x) => x.id === 'edsoo-math-methodical-letter-2026-2027'));
+  assert.equal(officialSubjectResourcesFor('Иностранный язык', 1).length, 0);
+  assert.ok(officialSubjectResourcesFor('Иностранный язык', 2).length > 0);
+  assert.equal(officialSubjectResourcesFor('Неизвестный предмет', 5).length, 0);
+  assert.equal(officialGradeRangeLabel([5, 11]), '5–11 классы');
+  assert.equal(officialGradeRangeLabel([8]), '8 класс');
 });
