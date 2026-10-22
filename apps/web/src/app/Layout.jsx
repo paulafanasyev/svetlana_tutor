@@ -29,7 +29,8 @@ const L_AGE = { ru: 'Возрастная маркировка 6+', en: 'Age rat
 // (features/english/EnglishTabs.jsx).
 const NAV = [
   { to: '/', icon: '🏠', key: 'nav.home' },
-  { to: '/lessons', icon: '📖', key: 'nav.lessons', label: L_LESSONS },\n  { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-чат', en: 'AI chat' } },
+  { to: '/lessons', icon: '📖', key: 'nav.lessons', label: L_LESSONS },
+  { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-чат', en: 'AI chat' } },
   { to: '/play', icon: '🎮', key: 'nav.play', label: L_PLAY },
   { to: '/english', icon: '🔤', key: 'nav.english', label: L_ENGLISH, english: true },
   { to: '/math', icon: '🧮', key: 'nav.math', label: { ru: 'Математика', en: 'Math' } },
