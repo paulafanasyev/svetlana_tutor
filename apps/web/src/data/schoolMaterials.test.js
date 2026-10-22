@@ -1,5 +1,6 @@
 // Школьные материалы (data/school-materials): индексы и манифесты.
 // PDF лежат в GitHub Release, в git только JSON. Проверяем инварианты, а не точные количества,
+// Контрольная ревизия после сверки классов всех карточек ЕДСОО на 2026-10-22.
 // чтобы обновление каталога не роняло CI.
 import test from 'node:test';
 import assert from 'node:assert/strict';
