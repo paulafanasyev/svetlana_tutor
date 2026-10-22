@@ -42,7 +42,7 @@ const MathTutor = retryLazy(() => import('../features/math/MathTutor.jsx'));
 const Programs = retryLazy(() => import('../features/school/Programs.jsx'));
 const Lessons = retryLazy(() => import('../features/school/Lessons.jsx'));
 const Planner = retryLazy(() => import('../features/school/Planner.jsx'));
-const ClassRoom = retryLazy(() => import('../features/school/ClassRoom.jsx'));
+const ClassRoom = retryLazy(() => import('../features/school/ClassRoom.jsx'));\nconst AssistantChat = retryLazy(() => import('../features/assistant/AssistantChat.jsx'));
 
 const DEV = !!import.meta.env.DEV;
 
@@ -124,7 +124,7 @@ function AppScreens() {
       <Layout>
         <Page>
           <Routes>
-            <Route path="/teacher" element={<TeacherCabinet />} />
+            <Route path="/teacher" element={<TeacherCabinet />} />\n            <Route path="/assistant" element={<AssistantChat />} />
             <Route path="/classroom" element={<ClassRoom />} />
             <Route path="/planner" element={<Planner />} />
             <Route path="/programs" element={<Programs />} />
@@ -140,7 +140,7 @@ function AppScreens() {
       <Layout>
         <Page>
           <Routes>
-            <Route path="/child" element={<ParentCabinet />} />
+            <Route path="/child" element={<ParentCabinet />} />\n            <Route path="/assistant" element={<AssistantChat />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/child" replace />} />
@@ -155,7 +155,7 @@ function AppScreens() {
     <Layout>
       <Page>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />\n          <Route path="/assistant" element={<AssistantChat />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/play" element={<SchoolGames />} />
           <Route path="/english" element={<En><EnglishHub /></En>} />
