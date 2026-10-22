@@ -180,7 +180,7 @@ export function flatResults(lines, sec) {
 // антибот HTTP 418/429, сетевой сбой или тайм-аут). Эти ошибки не делают локальный корпус
 // недействительным; ошибки разбора/структуры документа остаются фатальными для CI.
 export function isTransientSourceError(message) {
-  return /документ доступен только по расписанию|HTTP (?:418|429|5\\d\\d)|timed? ?out|timeout|operation was aborted|fetch failed|ECONNRESET|ENOTFOUND|EAI_AGAIN|network error/i.test(String(message));
+  return /документ доступен только по расписанию|HTTP (?:418|429|5[0-9]{2})|timed? ?out|timeout|operation was aborted|fetch failed|ECONNRESET|ENOTFOUND|EAI_AGAIN|network error/i.test(String(message));
 }
 
 // Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
