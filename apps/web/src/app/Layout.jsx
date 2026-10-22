@@ -109,13 +109,15 @@ export default function Layout({ children }) {
   const logout = async () => { await api.logout(); setUser(null); nav('/'); };
   const items = user.role === 'ADMIN' ? [...NAV, { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER }, { to: '/admin', icon: '🛠️', key: 'nav.admin' }]
     : user.role === 'TEACHER' ? [
-      { to: '/teacher', icon: '🧑‍🏫', key: 'nav.cabinet' },\n      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'Помощник учителя', en: 'Teacher assistant' } },
+      { to: '/teacher', icon: '🧑‍🏫', key: 'nav.cabinet' },
+      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'Помощник учителя', en: 'Teacher assistant' } },
       { to: '/classroom', icon: '👥', key: 'nav.classroom', label: L_CLASSES },
       { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
     ]
     : user.role === 'PARENT' ? [
-      { to: '/child', icon: '👪', key: 'nav.child' },\n      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-помощник', en: 'AI assistant' } },
+      { to: '/child', icon: '👪', key: 'nav.child' },
+      { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-помощник', en: 'AI assistant' } },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
     ]
     : NAV;
