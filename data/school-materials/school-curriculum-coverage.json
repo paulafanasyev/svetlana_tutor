@@ -9429,6 +9429,372 @@
     "subjectGradeRows": 407,
     "catalogSubjectCount": 37,
     "rowsWithAtLeastOneIndexedLink": 241,
+    "rowsWithoutExactGradeSubjectRecord": 166,
+    "subjectsWithUnindexedGradePairs": 28,
+    "unindexedGradePairsBySubject": [
+      {
+        "subject": "algebra",
+        "subjectLabel": "Алгебра",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "english-language",
+        "subjectLabel": "Английский язык",
+        "gradesWithoutExactRecord": [
+          1
+        ],
+        "count": 1
+      },
+      {
+        "subject": "astronomy",
+        "subjectLabel": "Астрономия",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "biology",
+        "subjectLabel": "Биология",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          4
+        ],
+        "count": 3
+      },
+      {
+        "subject": "probability-statistics",
+        "subjectLabel": "Вероятность и статистика",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10
+        ],
+        "count": 7
+      },
+      {
+        "subject": "geometry",
+        "subjectLabel": "Геометрия",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "visual-arts",
+        "subjectLabel": "Изобразительное искусство",
+        "gradesWithoutExactRecord": [
+          9,
+          10,
+          11
+        ],
+        "count": 3
+      },
+      {
+        "subject": "foreign-language",
+        "subjectLabel": "Иностранный язык",
+        "gradesWithoutExactRecord": [
+          1
+        ],
+        "count": 1
+      },
+      {
+        "subject": "informatics",
+        "subjectLabel": "Информатика",
+        "gradesWithoutExactRecord": [
+          1,
+          2
+        ],
+        "count": 2
+      },
+      {
+        "subject": "spanish-language",
+        "subjectLabel": "Испанский язык",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "chinese-language",
+        "subjectLabel": "Китайский язык",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "german-language",
+        "subjectLabel": "Немецкий язык",
+        "gradesWithoutExactRecord": [
+          1,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "count": 6
+      },
+      {
+        "subject": "social-studies",
+        "subjectLabel": "Обществознание",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "world-around-us",
+        "subjectLabel": "Окружающий мир",
+        "gradesWithoutExactRecord": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 7
+      },
+      {
+        "subject": "fundamentals-security-defense-homeland",
+        "subjectLabel": "Основы безопасности и защиты Родины",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "fundamentals-spiritual-culture",
+        "subjectLabel": "Основы духовно-нравственной культуры народов России",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 10
+      },
+      {
+        "subject": "exam-preparation",
+        "subjectLabel": "Подготовка к ОГЭ/ЕГЭ",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "count": 8
+      },
+      {
+        "subject": "regional-and-native-languages",
+        "subjectLabel": "Региональные и родные языки",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "native-literature",
+        "subjectLabel": "Родная литература",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "native-language",
+        "subjectLabel": "Родной язык",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "technology",
+        "subjectLabel": "Труд (технология)",
+        "gradesWithoutExactRecord": [
+          10,
+          11
+        ],
+        "count": 2
+      },
+      {
+        "subject": "physics",
+        "subjectLabel": "Физика",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "french-language",
+        "subjectLabel": "Французский язык",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 4
+      },
+      {
+        "subject": "functional-literacy",
+        "subjectLabel": "Функциональная грамотность",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11
+        ],
+        "count": 6
+      },
+      {
+        "subject": "chemistry",
+        "subjectLabel": "Химия",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "count": 7
+      },
+      {
+        "subject": "chess",
+        "subjectLabel": "Шахматы",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "ecology",
+        "subjectLabel": "Экология",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "count": 11
+      },
+      {
+        "subject": "economics",
+        "subjectLabel": "Экономика",
+        "gradesWithoutExactRecord": [
+          1,
+          2,
+          3,
+          4,
+          10
+        ],
+        "count": 5
+      }
+    ],
     "rowsWithAnExplicitWorkingProgram": 156,
     "rowsWithAtLeastOneBibliographyRecord": 149,
     "rowsWithAGradeVerifiedOfficialLesson": 18,
