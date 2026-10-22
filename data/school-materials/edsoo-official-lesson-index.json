@@ -558,10 +558,10 @@
       "url": "https://edsoo.ru/urok-test2",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        3,
+        3
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -572,8 +572,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 3». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 3",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-test2"
     },
     {
       "id": "edsoo-lesson-024",
@@ -582,10 +585,10 @@
       "url": "https://edsoo.ru/urok-113-pp_literaturnoe-chtenie-4-klass",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        4,
+        4
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -596,8 +599,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в заголовке страницы): «Заголовок страницы: «Урок – 113 пп_литературное чтение 4 класс»». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Заголовок страницы: «Урок – 113 пп_литературное чтение 4 класс»",
+      "gradeEvidenceType": "page-title",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-113-pp_literaturnoe-chtenie-4-klass"
     },
     {
       "id": "edsoo-lesson-025",
@@ -606,10 +612,10 @@
       "url": "https://edsoo.ru/urok-roditelskaya-lyubov",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        7,
+        7
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -620,8 +626,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 7». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 7",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok-roditelskaya-lyubov"
     },
     {
       "id": "edsoo-lesson-026",
@@ -630,10 +639,10 @@
       "url": "https://edsoo.ru/urok_propavshie-slova",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -644,8 +653,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_propavshie-slova"
     },
     {
       "id": "edsoo-lesson-027",
@@ -654,10 +666,10 @@
       "url": "https://edsoo.ru/urok_postupki-nastoyashhego-cheloveka",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -668,8 +680,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_postupki-nastoyashhego-cheloveka"
     },
     {
       "id": "edsoo-lesson-028",
@@ -678,10 +693,10 @@
       "url": "https://edsoo.ru/urok_krestyanskaya-semya",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -692,8 +707,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_krestyanskaya-semya"
     },
     {
       "id": "edsoo-lesson-029",
@@ -702,10 +720,10 @@
       "url": "https://edsoo.ru/urok_lyubov-i-brak-v-dvoryanskoj-seme",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        6,
+        6
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -716,8 +734,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 6». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 6",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_lyubov-i-brak-v-dvoryanskoj-seme"
     },
     {
       "id": "edsoo-lesson-030",
@@ -726,10 +747,10 @@
       "url": "https://edsoo.ru/urok_detskie-strahi",
       "description": "",
       "gradeRange": [
-        1,
-        11
+        5,
+        5
       ],
-      "gradeStatus": "GRADE_NOT_FOUND_RECHECK_REQUIRED",
+      "gradeStatus": "GRADE_VERIFIED_ON_SOURCE_PAGE",
       "subject": "all-school-subjects",
       "topic": "Урок/учебная карточка по описанию источника; тему уточнить при открытии страницы",
       "kind": [
@@ -740,8 +761,11 @@
       "rightsStatus": "LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED",
       "contentStoredLocally": false,
       "metadataCompleteness": "URL_ONLY",
-      "checkedAt": "2026-10-21",
-      "note": "This is an indexed link, not a downloaded copy. Confirm the exact grade/subject and reuse conditions before redistribution."
+      "checkedAt": "2026-10-22",
+      "note": "Класс подтверждён на официальной странице ЕДСОО (в тексте карточки): «Класс 5». Ссылка на источник сохранена; локальная копия задания не размещена.",
+      "gradeEvidence": "Класс 5",
+      "gradeEvidenceType": "page-text",
+      "gradeEvidenceUrl": "https://edsoo.ru/urok_detskie-strahi"
     },
     {
       "id": "edsoo-lesson-031",
@@ -2498,8 +2522,8 @@
   ],
   "gradeVerificationSummary": {
     "checkedAt": "2026-10-22",
-    "verifiedOnSourcePage": 12,
-    "stillNeedsReview": 84,
-    "note": "Статус ставится только при явном указании класса на открытой странице источника; URL slug сам по себе доказательством не считается."
+    "verifiedOnSourcePage": 20,
+    "stillNeedsReview": 76,
+    "note": "Статус ставится только при явном указании класса в тексте или заголовке открытой страницы источника; URL slug сам по себе доказательством не считается."
   }
 }
