@@ -296,7 +296,7 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
   await eachLimit(PAGES, 6, async ([subject, grade, sec, hash]) => {
     try {
       const lines = htmlLines(await page(hash, cacheDir, NOO, `${sec}.1`));
-      if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); continue; }
+      if (subject === 'ОРКСЭ') { Object.assign(map, parseOrkse(lines)); return; }
       const s = parse(lines, sec, { lit: subject === 'Литературное чтение' });
       if (s.length) map[`${subject}|${grade}`] = s; else errors.push(`${sec}: разделы не найдены`);
     } catch (e) { errors.push(`${sec}: ${e.message || e}`); }
