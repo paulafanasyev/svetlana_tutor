@@ -9,10 +9,14 @@ test('извлекает класс из типовых запросов учи�
   assert.equal(extractRequestedGrade('Сделай отчёт по параллели'), null);
 });
 
-test('определяет основные школьные предметы', () => {
+test('определяет школьные предметы и не путает близкие названия', () => {
   assert.equal(detectRequestedSubject('План урока алгебры для 8 класса'), 'Математика');
   assert.equal(detectRequestedSubject('Подготовь диктант по русскому языку'), 'Русский язык');
   assert.equal(detectRequestedSubject('Составь занятие по биологии'), 'Биология');
+  assert.equal(detectRequestedSubject('Подготовь урок по литературному чтению для 2 класса'), 'Литературное чтение');
+  assert.equal(detectRequestedSubject('Составь урок китайского языка'), 'Китайский язык');
+  assert.equal(detectRequestedSubject('План занятия по ОДНКНР'), 'Основы духовно-нравственной культуры народов России');
+  assert.equal(detectRequestedSubject('Урок по вероятности и статистике'), 'Математика');
   assert.equal(detectRequestedSubject('Подготовь отчёт по классу'), null);
 });
 
