@@ -1,4 +1,4 @@
-import { Component, Suspense, lazy, useEffect } from 'react';
+import { Component, Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useApp, useT } from '../core/store.js';
 import { music } from '../audio/music.js';
@@ -94,11 +94,106 @@ const En = ({ children }) => <EnglishShell>{children}</EnglishShell>;
 
 // ВРЕМЕННО: переключатель версий над всеми экранами (включая вход), см. TrackBar.jsx.
 export default function App() {
+  const track = useApp((s) => s.prefs.track);
   return (
     <>
       <TrackBar />
       <AppScreens />
+      <CadetWelcomeGate track={track} />
     </>
+  );
+}
+
+// Opening greeting for the locked cadet-school experience. The video is an optional
+// public asset at /assets/cadet-general-chuikov.mp4; speech synthesis is the safe
+// fallback until that asset is present or when browser media playback is unavailable.
+function CadetWelcomeGate({ track }) {
+  const [dismissed, setDismissed] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const [started, setStarted] = useState(false);
+  const videoRef = useRef(null);
+  const utteranceRef = useRef(null);
+  const active = track === 'cadet' && !dismissed;
+
+  useEffect(() => {
+    if (track === 'cadet') setDismissed(false);
+  }, [track]);
+
+  useEffect(() => () => {
+    try { window.speechSynthesis?.cancel(); } catch {}
+  }, []);
+
+  if (!active) return null;
+
+  const enter = () => {
+    try { window.speechSynthesis?.cancel(); } catch {}
+    setDismissed(true);
+  };
+
+  const begin = async () => {
+    setStarted(true);
+    const video = videoRef.current;
+    if (video && !videoFailed) {
+      try {
+        video.muted = false;
+        video.currentTime = 0;
+        await video.play();
+        return;
+      } catch { /* Browser policy/network: use the spoken fallback below. */ }
+    }
+    if ('speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined') {
+      const utterance = new SpeechSynthesisUtterance(
+        'Кадет! Приветствую тебя в Репетиторе для кадетов. Здесь ценятся дисциплина, знания и уважение. Будь настойчив, думай самостоятельно и каждый день становись сильнее. Приступай к занятиям!'
+      );
+      utterance.lang = 'ru-RU';
+      utterance.rate = 0.92;
+      utterance.pitch = 0.82;
+      utterance.onend = enter;
+      utterance.onerror = enter;
+      utteranceRef.current = utterance;
+      window.speechSynthesis.speak(utterance);
+      return;
+    }
+    enter();
+  };
+
+  return (
+    <div role="dialog" aria-modal="true" aria-labelledby="cadet-welcome-title"
+      className="fixed inset-0 z-[100000] flex items-center justify-center overflow-y-auto bg-[#151a0d] p-4 text-[#f4edcf]"
+      style={{ backgroundImage: 'radial-gradient(ellipse at 50% 20%, #46502a 0%, #222916 55%, #11150b 100%)' }}>
+      <div className="w-full max-w-xl text-center">
+        <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center border-2 border-[#c9a227] text-3xl text-[#e0c35c]" aria-hidden="true">★</div>
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-[#d5c783]">Кадетский корпус · Вводный инструктаж</p>
+        <h1 id="cadet-welcome-title" className="mb-4 text-3xl font-black uppercase tracking-wide sm:text-4xl">Генерал Чуйков приветствует кадета</h1>
+        <div className="relative mx-auto mb-4 aspect-[2/3] w-full max-w-[260px] overflow-hidden border-4 border-[#c9a227] bg-[#303824] shadow-2xl">
+          <video ref={videoRef} src="/assets/cadet-general-chuikov.mp4" playsInline preload="metadata"
+            className={`h-full w-full object-cover ${videoFailed ? 'hidden' : ''}`}
+            onCanPlay={() => setVideoReady(true)} onError={() => setVideoFailed(true)}
+            onEnded={enter} aria-label="Видео-приветствие генерала Чуйкова" />
+          {(videoFailed || !videoReady) && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#596343] to-[#1b2112] p-5">
+              <div className="text-7xl" aria-hidden="true">🎖</div>
+              <div className="text-lg font-black uppercase leading-snug">Служу знаниям.<br/>Готовься к занятиям.</div>
+              <div className="text-xs uppercase tracking-widest text-[#d5c783]">Репетитор для кадетов</div>
+            </div>
+          )}
+        </div>
+        <p className="mx-auto mb-5 max-w-md text-sm leading-relaxed text-[#e4dfc8]">
+          «Кадет, приветствую тебя! Здесь ценятся дисциплина, знания и уважение. Будь настойчив, думай самостоятельно и каждый день становись сильнее. Приступай к занятиям!»
+        </p>
+        {!started ? (
+          <button type="button" onClick={begin} className="w-full border-2 border-[#e0c35c] bg-[#5b642f] px-6 py-4 font-black uppercase tracking-widest text-white shadow-lg hover:bg-[#6d7838]">
+            ▶ Начать приветствие
+          </button>
+        ) : (
+          <button type="button" onClick={enter} className="w-full border border-[#b8b08b] bg-black/20 px-6 py-3 font-bold uppercase tracking-widest text-[#f4edcf] hover:bg-black/40">
+            Пропустить и войти
+          </button>
+        )}
+        <p className="mt-3 text-[11px] text-[#c9c5ad]">Приветствие появляется при каждом новом запуске кадетской версии.</p>
+      </div>
+    </div>
   );
 }
 
