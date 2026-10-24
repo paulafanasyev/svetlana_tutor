@@ -404,6 +404,7 @@ export function safeDocumentFilename(valueToSlug) {
     .replace(/[\\/:*?"<>|]/g, '-')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
+    .replace(/^[.-]+/, '')
     .replace(/^-|-$/g, '')
     .slice(0, 90) || 'document';
 }
