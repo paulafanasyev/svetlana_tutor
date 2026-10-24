@@ -52,7 +52,7 @@ export function extractRequestedGrade(question) {
   const text = String(question || '').toLowerCase().replace(/ё/g, 'е');
   const patterns = [
     /(?:^|\D)(1[01]|[1-9])\s*(?:-?\s*(?:й|го|ый|ого))?\s*класс(?:а|е|у|ом)?(?:\D|$)/i,
-    /класс(?:а|е|у|ом)?\s*(1[01]|[1-9])(?:\D|$)/i,
+    /класс(?:а|е|у|ом)?\s*[:№-]?\s*(1[01]|[1-9])(?:\D|$)/i,
   ];
   for (const pattern of patterns) {
     const match = text.match(pattern);
