@@ -17,6 +17,7 @@ const L_ENGLISH = { ru: 'Английский', en: 'English' };
 const L_CLASS = { ru: 'Мой класс', en: 'My class' };
 const L_CLASSES = { ru: 'Классы и чат', en: 'Classes & chat' };
 const L_PLANNER = { ru: 'План уроков', en: 'Lesson plan' };
+const L_TEACHER_DOCS = { ru: 'Документы и отчёты', en: 'Teacher documents & reports' };
 const L_A11Y = { ru: 'Доступность', en: 'Accessibility' };
 const L_READ = { ru: 'Прочитать выделенное', en: 'Read selection aloud' };
 const L_MORE = { ru: 'Ещё', en: 'More' };
@@ -107,12 +108,13 @@ export default function Layout({ children }) {
   }, [prefs.musicOn, prefs.sfxOn]);
 
   const logout = async () => { await api.logout(); setUser(null); nav('/'); };
-  const items = user.role === 'ADMIN' ? [...NAV, { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER }, { to: '/admin', icon: '🛠️', key: 'nav.admin' }]
+  const items = user.role === 'ADMIN' ? [...NAV, { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER }, { to: '/teacher-documents', icon: '🗂️', key: 'nav.teacherDocuments', label: L_TEACHER_DOCS }, { to: '/admin', icon: '🛠️', key: 'nav.admin' }]
     : user.role === 'TEACHER' ? [
       { to: '/teacher', icon: '🧑‍🏫', key: 'nav.cabinet' },
       { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'Помощник учителя', en: 'Teacher assistant' } },
       { to: '/classroom', icon: '👥', key: 'nav.classroom', label: L_CLASSES },
       { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER },
+      { to: '/teacher-documents', icon: '🗂️', key: 'nav.teacherDocuments', label: L_TEACHER_DOCS },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
     ]
     : user.role === 'PARENT' ? [

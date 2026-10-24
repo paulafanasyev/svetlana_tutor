@@ -42,6 +42,7 @@ const MathTutor = retryLazy(() => import('../features/math/MathTutor.jsx'));
 const Programs = retryLazy(() => import('../features/school/Programs.jsx'));
 const Lessons = retryLazy(() => import('../features/school/Lessons.jsx'));
 const Planner = retryLazy(() => import('../features/school/Planner.jsx'));
+const TeacherWorkspace = retryLazy(() => import('../features/school/TeacherWorkspace.jsx'));
 const ClassRoom = retryLazy(() => import('../features/school/ClassRoom.jsx'));
 const AssistantChat = retryLazy(() => import('../features/assistant/AssistantChat.jsx'));
 
@@ -129,6 +130,7 @@ function AppScreens() {
             <Route path="/assistant" element={<AssistantChat />} />
             <Route path="/classroom" element={<ClassRoom />} />
             <Route path="/planner" element={<Planner />} />
+            <Route path="/teacher-documents" element={<TeacherWorkspace />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/teacher" replace />} />
@@ -178,6 +180,7 @@ function AppScreens() {
           <Route path="/diary" element={<StudentDiary />} />
           <Route path="/classroom" element={<ClassRoom />} />
           <Route path="/programs" element={<Programs />} />
+          {(user.role === 'ADMIN' || user.role === 'TEACHER') && <Route path="/teacher-documents" element={<TeacherWorkspace />} />}
           <Route path="/settings" element={<Settings />} />
           <Route path="/teacher" element={<TeacherPicker />} />
           {user.role === 'ADMIN' && <Route path="/admin" element={<Admin />} />}
