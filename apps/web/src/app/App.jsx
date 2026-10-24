@@ -133,7 +133,7 @@ function CadetWelcomeGate({ track }) {
   const begin = async () => {
     setStarted(true);
     const video = videoRef.current;
-    if (video && videoReady && !videoFailed) {
+    if (video && !videoFailed) {
       try {
         video.muted = false;
         video.currentTime = 0;
