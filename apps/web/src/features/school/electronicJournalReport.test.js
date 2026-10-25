@@ -25,7 +25,7 @@ test('сводка считает записи, типы, оценённые з�
   assert.deepEqual(report.markCounts, { 5: 1, 4: 1, 3: 1, 2: 0 });
   assert.equal(report.meanMark, 4);
   assert.equal(report.successRate, 100);
-  assert.equal(report.qualityRate, 200 / 3);
+  assert.ok(Math.abs(report.qualityRate - 200 / 3) < 1e-9);
   assert.equal(report.byKind.lesson, 1);
   assert.equal(report.byKind.quiz, 1);
   assert.equal(report.byKind.homework, 1);
