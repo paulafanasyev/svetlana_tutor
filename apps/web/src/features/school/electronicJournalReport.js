@@ -26,7 +26,7 @@ const kindTitle = (kind) => ({
 function filterPeriod(entries, start, end) {
   const startAt = validDate(start) ? new Date(start + 'T00:00:00').getTime() : null;
   const endAt = validDate(end) ? new Date(new Date(end + 'T00:00:00').getTime() + 86400000) : null;
-  if (startAt !== null && endAt !== null && startAt >= endAt.getTime()) return [];
+  if (startAt !== null && endAt !== null && startAt >= endAt) return [];
   return entries.filter((entry) => {
     const at = Number(entry.at);
     if (!Number.isFinite(at)) return false;
