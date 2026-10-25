@@ -179,7 +179,8 @@ export function serializeTeacherDocumentCsv(drafts) {
     'id', 'title', 'documentType', 'grade', 'className', 'subject',
     'period', 'date', 'savedAt', 'versionsCount', 'content',
   ];
-  const rows = [headers, ...drafts.map((draft, index) => {
+  const rows = [headers.map(csvCell).join(',')];
+  for (const [index, draft] of drafts.entries()) {
     if (!draft || typeof draft !== 'object' || Array.isArray(draft)) {
       throw new Error('Некорректный черновик № ' + (index + 1) + '.');
     }
@@ -190,7 +191,7 @@ export function serializeTeacherDocumentCsv(drafts) {
       form.period, form.date, draft.savedAt, Array.isArray(draft.versions) ? draft.versions.length : 0,
       draft.content,
     ];
-    return values.map(csvCell);
-  }).map((row) => row.join(','));
-  return '\\uFEFF' + rows.map((row) => Array.isArray(row) ? row.map(csvCell).join(',') : row).join('\\r\\n') + '\\r\\n';
+    rows.push(values.map(csvCell).join(','));
+  }
+  return '\uFEFF' + rows.join('\r\n') + '\r\n';
 }
