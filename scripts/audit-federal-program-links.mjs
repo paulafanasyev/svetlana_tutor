@@ -78,12 +78,20 @@ async function probeHead(url, timeoutMs) {
 }
 
 async function probeRange(url, timeoutMs) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
   let response;
   try {
-    response = await fetchWithTimeout(url, 'GET', {
-      accept: 'application/pdf,application/octet-stream,text/html,*/*',
-      range: 'bytes=0-7',
-    }, timeoutMs);
+    response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'user-agent': USER_AGENT,
+        accept: 'application/pdf,application/octet-stream,text/html,*/*',
+        range: 'bytes=0-7',
+      },
+      redirect: 'follow',
+      signal: controller.signal,
+    });
     let signature = 'unverified';
     if (response.body) {
       const reader = response.body.getReader();
@@ -109,18 +117,19 @@ async function probeRange(url, timeoutMs) {
     };
   } catch (error) {
     return {
-      statusCode: null,
-      finalUrl: url,
-      contentType: '',
-      contentLength: '',
-      contentRange: '',
+      statusCode: response?.status ?? null,
+      finalUrl: response?.url || url,
+      contentType: response?.headers.get('content-type') || '',
+      contentLength: response?.headers.get('content-length') || '',
+      contentRange: response?.headers.get('content-range') || '',
       method: 'GET_RANGE',
       pdfSignature: 'unverified',
       error: error?.name === 'AbortError' ? 'timeout' : errorText(error),
     };
+  } finally {
+    clearTimeout(timer);
   }
 }
-
 async function auditOne(target, timeoutMs) {
   const base = {
     url: target.url,
