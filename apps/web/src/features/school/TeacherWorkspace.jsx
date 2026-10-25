@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { api } from '../../core/api.js';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
@@ -7,6 +8,7 @@ import { PROGRAMS, splitTopic } from './fop.js';
 import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
 import { school } from './schoolStore.js';
 import { buildClassroomActivitySnapshot } from './classroomActivityReport.js';
+import { buildElectronicJournalReport } from './electronicJournalReport.js';
 
 const fieldClass = 'w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-semibold';
 const today = () => {
@@ -63,6 +65,10 @@ const INITIAL_FORM = (user) => ({
   className: '',
   schoolClassId: '',
   classroomSnapshot: '',
+  journalSnapshot: '',
+  journalClassName: '',
+  journalPeriodStart: '',
+  journalPeriodEnd: '',
   grade: '5',
   subject: 'Математика',
   curriculumProgramId: 'math-5',
@@ -135,6 +141,12 @@ export default function TeacherWorkspace() {
   const [schoolDb, setSchoolDb] = useState(() => school.get());
   useEffect(() => school.subscribe(setSchoolDb), []);
   const teacherClasses = useMemo(() => (schoolDb.classes || []).filter((cls) => cls.teacherId === String(user?.id)), [schoolDb.classes, user?.id]);
+  const [journalClasses, setJournalClasses] = useState([]);
+  const [journalClassId, setJournalClassId] = useState('');
+  const [journalEntries, setJournalEntries] = useState([]);
+  const [journalLoading, setJournalLoading] = useState(false);
+  const [journalReloadToken, setJournalReloadToken] = useState(0);
+  const [journalLoadError, setJournalLoadError] = useState('');
   const [form, setForm] = useState(() => INITIAL_FORM(user));
   const [docType, setDocType] = useState('lesson-plan');
   const [content, setContent] = useState('');
@@ -150,6 +162,45 @@ export default function TeacherWorkspace() {
   }, [form.grade, selectedProgram?.subject]);
   const selectedOfficialSource = gradeOfficialSources.find((item) => item.id === form.officialSourceId) || gradeOfficialSources[0] || null;
   const officialCatalogMeta = useMemo(() => getOfficialProgramCatalogMetadata(), []);
+
+  useEffect(() => {
+    let active = true;
+    api.myClasses().then((items) => {
+      if (!active) return;
+      const available = Array.isArray(items) ? items : [];
+      setJournalClasses(available);
+      setJournalClassId((current) => available.some((item) => String(item.id) === String(current)) ? current : String(available[0]?.id || ''));
+      setJournalLoadError('');
+    }).catch(() => {
+      if (!active) return;
+      setJournalClasses([]);
+      setJournalClassId('');
+      setJournalLoadError('Не удалось загрузить классы электронного журнала. Проверьте подключение или права учителя.');
+    });
+    return () => { active = false; };
+  }, [user?.id]);
+
+  useEffect(() => {
+    let active = true;
+    if (!journalClassId) {
+      setJournalEntries([]);
+      setJournalLoading(false);
+      return () => { active = false; };
+    }
+    setJournalLoading(true);
+    setJournalLoadError('');
+    api.listJournal({ classId: journalClassId }).then((items) => {
+      if (active) setJournalEntries(Array.isArray(items) ? items : []);
+    }).catch(() => {
+      if (active) {
+        setJournalEntries([]);
+        setJournalLoadError('Не удалось прочитать журнал этого класса. Проверьте права доступа и подключение.');
+      }
+    }).finally(() => { if (active) setJournalLoading(false); });
+    return () => { active = false; };
+  }, [journalClassId, user?.id, journalReloadToken]);
+
+  const selectedJournalClass = journalClasses.find((item) => String(item.id) === String(journalClassId)) || null;
 
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
@@ -209,6 +260,32 @@ export default function TeacherWorkspace() {
     setContent('');
     setActiveId('');
     setNotice('Подставлено ' + topics.length + ' строк тем из локальной программы. Проверьте редакцию, часы и соответствие программе вашей школы.');
+  };
+
+  const loadElectronicJournalReport = () => {
+    if (form.journalPeriodStart && form.journalPeriodEnd && form.journalPeriodStart > form.journalPeriodEnd) {
+      setNotice('Проверьте период: дата начала не может быть позже даты окончания.');
+      return;
+    }
+    if (!selectedJournalClass) {
+      setNotice('Выберите класс, доступный в электронном журнале.');
+      return;
+    }
+    const report = buildElectronicJournalReport(journalEntries, {
+      className: selectedJournalClass.name || form.className,
+      periodStart: form.journalPeriodStart,
+      periodEnd: form.journalPeriodEnd,
+    });
+    setForm((old) => ({
+      ...old,
+      className: selectedJournalClass.name || old.className,
+      journalClassName: selectedJournalClass.name || '',
+      journalSnapshot: report.markdown,
+    }));
+    setDocType('journal-period-report');
+    setContent('');
+    setActiveId('');
+    setNotice('Отчёт сформирован из ' + report.entryCount + ' записей электронного журнала. Имена и индивидуальные комментарии не включены; посещаемость не рассчитывается.');
   };
 
   const loadClassroomSnapshot = () => {
@@ -407,6 +484,31 @@ export default function TeacherWorkspace() {
                 </div>
               ) : <p className="text-xs font-semibold text-ink/50">Классы учителя в этом браузере пока не созданы. Сначала создайте класс в «Классы и чат».</p>}
               <Field label="Сводка для отчёта (без имён учеников)" name="classroomSnapshot" value={form.classroomSnapshot} onChange={updateForm} multiline help="Текст можно проверить и исправить вручную перед экспортом." />
+            </div>
+            <div className="card p-3 space-y-3">
+              <div className="font-black text-sm">Отчёт из электронного журнала</div>
+              <p className="text-xs font-semibold text-ink/50">{api.demo ? 'Демо-режим: данные хранятся в этом браузере и могут быть демонстрационными; не используйте такой отчёт как подтверждённую школьную отчётность.' : 'Серверный режим: записи загружаются из подключённого API и должны соответствовать данным вашей школы.'} Сводка не содержит ФИО, индивидуальные комментарии и идентификаторы; проценты считаются по записям, не по ученикам. Записи уроков не доказывают посещаемость.</p>
+              {journalClasses.length ? (
+                <>
+                  <label className="block space-y-1">
+                    <span className="text-xs font-black text-ink/65">Класс / группа журнала</span>
+                    <select className={fieldClass} aria-label="Класс электронного журнала" value={journalClassId} onChange={(e) => setJournalClassId(e.target.value)}>
+                      {journalClasses.map((cls) => <option key={cls.id} value={String(cls.id)}>{cls.name}</option>)}
+                    </select>
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Field label="Начало периода" name="journalPeriodStart" value={form.journalPeriodStart} onChange={updateForm} type="date" />
+                    <Field label="Конец периода" name="journalPeriodEnd" value={form.journalPeriodEnd} onChange={updateForm} type="date" />
+                  </div>
+                  <p className="text-xs font-semibold text-ink/50">{journalLoading ? 'Загружаю записи журнала…' : 'Загружено записей: ' + journalEntries.length}</p>
+                  <div className="flex flex-wrap gap-2">
+                    <button type="button" className="btn-ghost !py-2" onClick={() => setJournalReloadToken((value) => value + 1)} disabled={journalLoading}>Обновить журнал</button>
+                    <button type="button" className="btn-ghost !py-2" onClick={loadElectronicJournalReport} disabled={journalLoading || !!journalLoadError}>Сформировать отчёт из журнала</button>
+                  </div>
+                </>
+              ) : <p className="text-xs font-semibold text-ink/50">{journalLoadError || 'Для этой учётной записи нет доступного класса электронного журнала.'}</p>}
+              {journalLoadError && <p className="text-xs font-bold text-rose-700" role="status">{journalLoadError}</p>}
+              <Field label="Сводка электронного журнала (можно отредактировать)" name="journalSnapshot" value={form.journalSnapshot} onChange={updateForm} multiline />
             </div>
             <div className="grid grid-cols-2 gap-2">
               <Field label="Отметок «5»" name="five" value={form.five} onChange={updateForm} type="number" />
