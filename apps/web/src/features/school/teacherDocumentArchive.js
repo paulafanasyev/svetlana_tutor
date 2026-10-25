@@ -14,13 +14,18 @@ export function serializeTeacherDocumentArchive(drafts, exportedAt = new Date().
   if (drafts.length > MAX_ARCHIVE_DRAFTS) {
     throw new Error('В архиве может быть не более ' + MAX_ARCHIVE_DRAFTS + ' черновиков.');
   }
-  return JSON.stringify({
+  const serialized = JSON.stringify({
     format: TEACHER_DOCUMENT_ARCHIVE_FORMAT,
     version: TEACHER_DOCUMENT_ARCHIVE_VERSION,
     exportedAt,
     draftCount: drafts.length,
     drafts,
   }, null, 2);
+  if (serialized.length > MAX_ARCHIVE_CHARACTERS) {
+    throw new Error('Архив больше допустимых 5 МБ.');
+  }
+  parseTeacherDocumentArchive(serialized);
+  return serialized;
 }
 
 function cleanForm(value) {
@@ -83,6 +88,9 @@ export function parseTeacherDocumentArchive(serialized) {
     throw new Error('Версия архива не поддерживается: ' + String(archive.version) + '.');
   }
   if (!Array.isArray(archive.drafts)) throw new Error('В архиве отсутствует список черновиков.');
+  if (archive.draftCount !== undefined && archive.draftCount !== archive.drafts.length) {
+    throw new Error('Количество черновиков в заголовке архива не совпадает с содержимым.');
+  }
   if (archive.drafts.length > MAX_ARCHIVE_DRAFTS) {
     throw new Error('В одном архиве может быть не более ' + MAX_ARCHIVE_DRAFTS + ' черновиков.');
   }
