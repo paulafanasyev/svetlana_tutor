@@ -263,7 +263,7 @@ export default function TeacherWorkspace() {
   };
 
   const loadElectronicJournalReport = () => {
-    if (form.journalPeriodStart && form.journalPeriodEnd && form.journalPeriodStart >= form.journalPeriodEnd) {
+    if (form.journalPeriodStart && form.journalPeriodEnd && form.journalPeriodStart > form.journalPeriodEnd) {
       setNotice('Проверьте период: дата начала должна быть раньше даты окончания.');
       return;
     }
