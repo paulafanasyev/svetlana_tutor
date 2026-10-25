@@ -43,6 +43,7 @@ test('диапазон дат исключает записи вне выбра�
   assert.equal(report.entryCount, 1);
   assert.equal(report.gradedEntryCount, 1);
   assert.equal(report.meanMark, 4);
+  assert.equal(report.invalidPeriod, false);
 });
 
 test('не придумывает оценки, когда журнал пуст или в нём нет отметок', () => {
@@ -55,4 +56,6 @@ test('не придумывает оценки, когда журнал пуст
 test('не принимает перевёрнутый диапазон дат как нормальный период', () => {
   const report = buildElectronicJournalReport(entries, { periodStart: '2026-10-04', periodEnd: '2026-10-01' });
   assert.equal(report.entryCount, 0);
+  assert.equal(report.invalidPeriod, true);
+  assert.match(report.markdown, /ОШИБКА: начало периода позже конца/);
 });
