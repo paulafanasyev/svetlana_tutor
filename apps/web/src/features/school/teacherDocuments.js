@@ -130,7 +130,7 @@ export function buildTeacherDocument(type, form = {}) {
       break;
     }
     case 'calendar-plan': {
-      const topics = String(form.curriculumTopics || '').split(/\\r?\\n/).map((item) => item.trim()).filter(Boolean);
+      const topics = String(form.curriculumTopics || '').split(/\r?\n/).map((item) => item.trim()).filter(Boolean);
       lines = [
         '## Основание планирования',
         'Федеральная рабочая программа: ' + value(form, 'curriculumSource'),
