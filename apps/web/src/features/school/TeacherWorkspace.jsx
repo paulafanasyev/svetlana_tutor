@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../core/api.js';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
+import { serializeTeacherDocumentArchive, parseTeacherDocumentArchive, mergeTeacherDocumentDrafts, filterTeacherDocumentDrafts } from './teacherDocumentArchive.js';
 import { PROGRAMS, splitTopic } from './fop.js';
 import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
 import { getCurriculumCoverage, getCurriculumCoverageMetadata } from '../../data/curriculumCoverage.js';
@@ -154,6 +155,9 @@ export default function TeacherWorkspace() {
   const [drafts, setDrafts] = useState(() => readDrafts(storageKey));
   const [activeId, setActiveId] = useState('');
   const [notice, setNotice] = useState('');
+  const [historyDraftId, setHistoryDraftId] = useState('');
+  const [draftSearch, setDraftSearch] = useState('');
+  const archiveInputRef = useRef(null);
 
   const gradePrograms = useMemo(() => PROGRAMS.filter((program) => Number(program.grade) === Number(form.grade)), [form.grade]);
   const selectedProgram = gradePrograms.find((program) => program.id === form.curriculumProgramId) || gradePrograms[0] || null;
@@ -206,6 +210,7 @@ export default function TeacherWorkspace() {
   const selectedJournalClass = journalClasses.find((item) => String(item.id) === String(journalClassId)) || null;
 
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
+  const filteredDrafts = useMemo(() => filterTeacherDocumentDrafts(drafts, draftSearch), [drafts, draftSearch]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
 
   const chooseGrade = (rawGrade) => {
@@ -325,6 +330,15 @@ export default function TeacherWorkspace() {
   const saveDraft = () => {
     const draftContent = content || buildTeacherDocument(docType, form);
     const id = activeId || String(Date.now());
+    const previous = drafts.find((item) => item.id === id);
+    const changed = previous && (
+      previous.content !== draftContent
+      || previous.type !== docType
+      || JSON.stringify(previous.form || {}) !== JSON.stringify(form)
+    );
+    const versions = changed
+      ? [{ savedAt: previous.savedAt, content: previous.content, form: previous.form || {}, type: previous.type, title: previous.title }, ...(previous.versions || [])].slice(0, 5)
+      : (previous?.versions || []).slice(0, 5);
     const record = {
       id,
       title: doc.title + ' · ' + (form.className || form.grade + ' класс') + ' · ' + (form.period || form.date),
@@ -332,12 +346,14 @@ export default function TeacherWorkspace() {
       form,
       content: draftContent,
       savedAt: new Date().toISOString(),
+      versions,
     };
     const next = [record, ...drafts.filter((item) => item.id !== id)].slice(0, 30);
     persistDrafts(next);
     setContent(draftContent);
     setActiveId(id);
-    setNotice('Черновик сохранён только в этом браузере на этом устройстве.');
+    setHistoryDraftId('');
+    setNotice('Черновик сохранён в браузере. Предыдущие версии сохранены: ' + versions.length + '.');
   };
 
   const openDraft = (draft) => {
@@ -345,13 +361,51 @@ export default function TeacherWorkspace() {
     setForm({ ...INITIAL_FORM(user), ...(draft.form || {}) });
     setContent(draft.content);
     setActiveId(draft.id);
+    setHistoryDraftId('');
     setNotice('Открыт сохранённый черновик.');
+  };
+
+  const restoreVersion = (draft, version) => {
+    setDocType(version.type || draft.type);
+    setForm({ ...INITIAL_FORM(user), ...(version.form || draft.form || {}) });
+    setContent(version.content);
+    setActiveId(draft.id);
+    setHistoryDraftId('');
+    setNotice('Открыта предыдущая версия. Текущая версия не удалена; нажмите «Сохранить в браузере», чтобы зафиксировать восстановленный вариант.');
   };
 
   const deleteDraft = (id) => {
     persistDrafts(drafts.filter((item) => item.id !== id));
     if (activeId === id) { setActiveId(''); setContent(''); }
+    if (historyDraftId === id) setHistoryDraftId('');
     setNotice('Черновик удалён из локального списка.');
+  };
+
+  const exportArchive = () => {
+    try {
+      const archive = serializeTeacherDocumentArchive(drafts);
+      downloadFile('svetlana-teacher-documents-' + today() + '.json', archive, 'application/json;charset=utf-8');
+      setNotice('Резервная копия создана. JSON-файл не зашифрован и может содержать чувствительные сведения — храните его защищённо.');
+    } catch (error) {
+      setNotice('Не удалось создать архив: ' + (error instanceof Error ? error.message : 'неизвестная ошибка'));
+    }
+  };
+
+  const importArchive = async (event) => {
+    const input = event.currentTarget;
+    const file = input.files?.[0];
+    if (!file) return;
+    try {
+      if (file.size > 5 * 1024 * 1024) throw new Error('Файл больше допустимых 5 МБ.');
+      const imported = parseTeacherDocumentArchive(await file.text());
+      const merged = mergeTeacherDocumentDrafts(drafts, imported, 30);
+      if (merged.addedCount) persistDrafts(merged.drafts);
+      setNotice('Импортировано черновиков: ' + merged.addedCount + '. Пропущено из-за лимита в 30 записей: ' + merged.skippedCount + '. Существующие документы не перезаписаны.');
+    } catch (error) {
+      setNotice('Импорт не выполнен: ' + (error instanceof Error ? error.message : 'неизвестная ошибка'));
+    } finally {
+      input.value = '';
+    }
   };
 
   const saveMarkdown = () => {
@@ -559,12 +613,32 @@ export default function TeacherWorkspace() {
 
           <div className="card p-4 space-y-3">
             <div className="font-black">Сохранённые черновики ({drafts.length})</div>
+            <label className="block space-y-1">
+              <span className="text-xs font-black text-ink/65">Поиск по названию, тексту, предмету или классу</span>
+              <input className={fieldClass} type="search" value={draftSearch} onChange={(e) => setDraftSearch(e.target.value)} placeholder="Например: математика, 7 класс, контрольная" />
+            </label>
+            <input ref={archiveInputRef} type="file" accept=".json,application/json" className="hidden" onChange={importArchive} />
+            <div className="flex flex-wrap gap-2">
+              <button type="button" className="btn-ghost !py-2" onClick={exportArchive}>Резервная копия JSON</button>
+              <button type="button" className="btn-ghost !py-2" onClick={() => archiveInputRef.current?.click()}>Импорт JSON-архива</button>
+            </div>
+            <p className="text-xs font-semibold text-ink/50">Архив включает тексты и предыдущие версии документов. Он не шифруется. При импорте существующие черновики не заменяются; локально хранится не более 30 записей.</p>
             {drafts.length === 0 && <p className="text-sm font-semibold text-ink/50">Сохранённых документов пока нет.</p>}
-            {drafts.map((draft) => (
+            {drafts.length > 0 && filteredDrafts.length === 0 && <p className="text-sm font-semibold text-ink/50">По запросу ничего не найдено.</p>}
+            {filteredDrafts.map((draft) => (
               <div key={draft.id} className="rounded-xl bg-soft/60 p-3 space-y-2">
                 <button type="button" className="text-left font-black underline text-primary" onClick={() => openDraft(draft)}>{draft.title}</button>
                 <div className="text-[11px] font-semibold text-ink/45">Сохранён: {new Date(draft.savedAt).toLocaleString('ru-RU')}</div>
-                <button type="button" className="text-xs font-bold text-red-700 underline" onClick={() => deleteDraft(draft.id)}>Удалить</button>
+                <div className="flex flex-wrap gap-3">
+                  {(draft.versions || []).length > 0 && <button type="button" className="text-xs font-bold underline text-primary" onClick={() => setHistoryDraftId(historyDraftId === draft.id ? '' : draft.id)}>История версий ({draft.versions.length})</button>}
+                  <button type="button" className="text-xs font-bold text-red-700 underline" onClick={() => deleteDraft(draft.id)}>Удалить</button>
+                </div>
+                {historyDraftId === draft.id && <div className="space-y-2 rounded-lg border border-black/10 p-2">
+                  {(draft.versions || []).map((version, index) => <div key={draft.id + '-version-' + index} className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                    <span>{version.savedAt ? new Date(version.savedAt).toLocaleString('ru-RU') : 'Дата не указана'} · предыдущая версия</span>
+                    <button type="button" className="font-bold underline text-primary" onClick={() => restoreVersion(draft, version)}>Открыть</button>
+                  </div>)}
+                </div>}
               </div>
             ))}
           </div>
