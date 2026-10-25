@@ -72,15 +72,15 @@ export function buildCurriculumAuditSummary(results) {
 }
 
 function pdfTotalBytes(result) {
-  if (!result || result.status !== 'reachable' || result.expectedPdf && result.pdfSignature !== 'valid') return null;
-  const contentRange = String(result.contentRange || '').match(/^bytes\\s+\\d+-\\d+\\/(\\d+)$/i);
+  if (!result || result.status !== 'reachable' || (result.expectedPdf && result.pdfSignature !== 'valid')) return null;
+  const contentRange = String(result.contentRange || '').match(/^bytes\s+\d+-\d+\/(\d+)$/i);
   if (contentRange) return Number(contentRange[1]);
   const contentLength = Number(result.contentLength);
   return Number.isSafeInteger(contentLength) && contentLength > 0 ? contentLength : null;
 }
 
 function isDirectPdfUrl(rawUrl) {
-  try { return /\\.pdf$/i.test(new URL(rawUrl).pathname); } catch { return false; }
+  try { return /\.pdf$/i.test(new URL(rawUrl).pathname); } catch { return false; }
 }
 
 export function compareCurriculumPdfMirrorSizes(catalog, results) {
