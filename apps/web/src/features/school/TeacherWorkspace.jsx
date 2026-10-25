@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
+import { PROGRAMS, splitTopic } from './fop.js';
 
 const fieldClass = 'w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-semibold';
 const today = () => {
@@ -59,6 +60,14 @@ const INITIAL_FORM = (user) => ({
   className: '',
   grade: '5',
   subject: 'Математика',
+  curriculumProgramId: 'math-5',
+  curriculumTopics: '',
+  curriculumSource: '',
+  curriculumStatus: '',
+  curriculumHoursPerWeek: '',
+  curriculumHoursPerYear: '',
+  plannedHours: '',
+  completedHours: '',
   period: '',
   date: today(),
   topic: '',
@@ -124,8 +133,68 @@ export default function TeacherWorkspace() {
   const [activeId, setActiveId] = useState('');
   const [notice, setNotice] = useState('');
 
+  const gradePrograms = useMemo(() => PROGRAMS.filter((program) => Number(program.grade) === Number(form.grade)), [form.grade]);
+  const selectedProgram = gradePrograms.find((program) => program.id === form.curriculumProgramId) || gradePrograms[0] || null;
+
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
+
+  const chooseGrade = (rawGrade) => {
+    const grade = Number(rawGrade);
+    const sameSubject = PROGRAMS.find((program) => Number(program.grade) === grade && program.subject === form.subject);
+    const nextProgram = sameSubject || PROGRAMS.find((program) => Number(program.grade) === grade) || null;
+    setForm((old) => ({
+      ...old,
+      grade: String(grade),
+      subject: nextProgram?.subject || old.subject,
+      curriculumProgramId: nextProgram?.id || '',
+    }));
+    setContent('');
+    setActiveId('');
+  };
+
+  const chooseProgram = (id) => {
+    const program = PROGRAMS.find((item) => item.id === id);
+    if (!program) return;
+    setForm((old) => ({ ...old, grade: String(program.grade), subject: program.subject, curriculumProgramId: program.id }));
+    setContent('');
+    setActiveId('');
+  };
+
+  const fillFromCurriculum = () => {
+    if (!selectedProgram) {
+      setNotice('В локальном каталоге не найдена программа для выбранного класса.');
+      return;
+    }
+    const topics = selectedProgram.sections.flatMap((section) =>
+      (Array.isArray(section.topics) ? section.topics : []).flatMap((topic) =>
+        splitTopic(topic).map((item) => item.trim()).filter(Boolean).map((item) => section.title + ': ' + item)
+      )
+    ).slice(0, Math.max(1, Number(selectedProgram.hours_per_year) || 100));
+    const source = selectedProgram.source_doc || selectedProgram.content_source || 'Федеральная рабочая программа';
+    const sourceUrl = selectedProgram.source_url || selectedProgram.content_source_url || '';
+    const contentStatus = selectedProgram.content_src === 'live' ? 'сверено при сборке' : selectedProgram.content_src === 'fop' ? 'текст ФОП из локального каталога' : 'корпус/проверка не завершена';
+    const resultsStatus = selectedProgram.results_src === 'live' ? 'сверено при сборке' : selectedProgram.results_src === 'fop' ? 'текст ФОП из локального каталога' : selectedProgram.results_src === 'corpus' ? 'корпус/проверка не завершена' : 'статус не указан';
+    const results = Array.isArray(selectedProgram.results) ? selectedProgram.results.slice(0, 8).map((item) => '- ' + item).join('\n') : '';
+    setForm((old) => ({
+      ...old,
+      grade: String(selectedProgram.grade),
+      subject: selectedProgram.subject,
+      curriculumProgramId: selectedProgram.id,
+      curriculumTopics: topics.join('\n'),
+      curriculumSource: source + (sourceUrl ? ' — ' + sourceUrl : ''),
+      curriculumStatus: 'Содержание: ' + contentStatus + '. Планируемые результаты: ' + resultsStatus + '.',
+      curriculumHoursPerWeek: String(selectedProgram.hours_per_week ?? ''),
+      curriculumHoursPerYear: String(selectedProgram.hours_per_year ?? ''),
+      topic: old.topic.trim() || (selectedProgram.subject + ', ' + selectedProgram.grade + ' класс — ' + (selectedProgram.sections[0]?.title || 'тема программы')),
+      goals: old.goals.trim() || ('Планировать освоение разделов федеральной рабочей программы. Проверить соответствие локальной рабочей программе школы.'),
+      outcomes: old.outcomes.trim() || results,
+      materials: old.materials.trim() || ('Источник: ' + source + (sourceUrl ? '\n' + sourceUrl : '') + '\n' + 'Статус: ' + contentStatus + '; результаты: ' + resultsStatus + '.'),
+    }));
+    setContent('');
+    setActiveId('');
+    setNotice('Подставлено ' + topics.length + ' строк тем из локальной программы. Проверьте редакцию, часы и соответствие программе вашей школы.');
+  };
 
   const generate = () => {
     const check = validateTeacherDocument(docType, form);
@@ -236,10 +305,32 @@ export default function TeacherWorkspace() {
             <Field label="Образовательная организация" name="schoolName" value={form.schoolName} onChange={updateForm} />
             <Field label="ФИО / инициалы учителя" name="teacherName" value={form.teacherName} onChange={updateForm} help="Для публикации или теста используйте инициалы." />
             <div className="grid grid-cols-2 gap-2">
-              <Field label="Класс" name="grade" value={form.grade} onChange={updateForm} />
+              <label className="block space-y-1">
+                <span className="text-xs font-black text-ink/65">Класс обучения</span>
+                <select className={fieldClass} value={String(form.grade)} onChange={(e) => chooseGrade(e.target.value)}>
+                  {Array.from({ length: 11 }, (_, index) => String(index + 1)).map((grade) => <option key={grade} value={grade}>{grade} класс</option>)}
+                </select>
+              </label>
               <Field label="Литера класса" name="className" value={form.className} onChange={updateForm} />
             </div>
-            <Field label="Предмет" name="subject" value={form.subject} onChange={updateForm} />
+            <label className="block space-y-1">
+              <span className="text-xs font-black text-ink/65">Предмет и федеральная программа</span>
+              <select className={fieldClass} value={selectedProgram?.id || ''} onChange={(e) => chooseProgram(e.target.value)}>
+                {gradePrograms.map((program) => <option key={program.id} value={program.id}>{program.subject} · {program.hours_per_week} ч/нед.</option>)}
+              </select>
+              {selectedProgram && <span className="block text-[11px] font-semibold text-ink/50">{selectedProgram.source_doc || selectedProgram.content_source || 'Источник не указан'} · содержание: {selectedProgram.content_src || 'не указано'} · результаты: {selectedProgram.results_src || 'не указано'}</span>}
+            </label>
+            <div className="flex flex-wrap gap-2">
+              <button type="button" className="btn-ghost !py-2" onClick={fillFromCurriculum} disabled={!selectedProgram}>Заполнить из ФОП/ФРП</button>
+              <button type="button" className="btn-ghost !py-2" onClick={() => navigate('/planner?p=' + encodeURIComponent(selectedProgram?.id || ''))} disabled={!selectedProgram}>Открыть КТП</button>
+            </div>
+            <Field label="Темы программы (по одной строке; для КТП)" name="curriculumTopics" value={form.curriculumTopics} onChange={updateForm} multiline help="Заполните кнопкой выше, затем исправьте темы и формулировки, если нужно." />
+            <Field label="Источник программы" name="curriculumSource" value={form.curriculumSource} onChange={updateForm} multiline />
+            <Field label="Статус проверки источника" name="curriculumStatus" value={form.curriculumStatus} onChange={updateForm} />
+            <div className="grid grid-cols-2 gap-2">
+              <Field label="Часов в неделю" name="curriculumHoursPerWeek" value={form.curriculumHoursPerWeek} onChange={updateForm} type="number" />
+              <Field label="Часов в год" name="curriculumHoursPerYear" value={form.curriculumHoursPerYear} onChange={updateForm} type="number" />
+            </div>
             <Field label="Период" name="period" value={form.period} onChange={updateForm} />
             <div className="grid grid-cols-2 gap-2">
               <Field label="Дата документа" name="date" value={form.date} onChange={updateForm} type="date" />
@@ -253,6 +344,10 @@ export default function TeacherWorkspace() {
 
             <div className="font-black pt-2">3. Отчётные данные (если применимо)</div>
             <Field label="Численность класса" name="studentCount" value={form.studentCount} onChange={updateForm} type="number" />
+            <div className="grid grid-cols-2 gap-2">
+              <Field label="Плановые часы за период" name="plannedHours" value={form.plannedHours} onChange={updateForm} type="number" />
+              <Field label="Фактически проведено часов" name="completedHours" value={form.completedHours} onChange={updateForm} type="number" />
+            </div>
             <div className="grid grid-cols-2 gap-2">
               <Field label="Отметок «5»" name="five" value={form.five} onChange={updateForm} type="number" />
               <Field label="Отметок «4»" name="four" value={form.four} onChange={updateForm} type="number" />

@@ -56,8 +56,9 @@ export default function Planner() {
   return (
     <div className="space-y-5">
       <div>
-        <div className="h2">🗓️ План уроков (КТП), демо</div>
+        <div className="h2">🗓️ Календарно-тематическое планирование (КТП)</div>
         <p className="text-sm font-semibold text-ink/60 mt-1">Черновик календарно-тематического планирования по темам федеральной программы. Часы распределяются по темам равномерно, всё можно править вручную. Каникулы, праздники, решения школы и утверждённый учебный план школы не учитываются: это помощник, а не официальный документ. План хранится в этом браузере.</p>
+        <p className="text-xs font-semibold text-ink/55 mt-2">{program.source_doc || program.content_source || 'Источник программы не указан'} · содержание: {program.content_src || 'статус не указан'} · планируемые результаты: {program.results_src || 'статус не указан'}{program.source_url && <> · <a className="underline text-primary" href={program.source_url} target="_blank" rel="noreferrer">Открыть источник</a></>}</p>
       </div>
       <RuOnly />
 

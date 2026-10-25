@@ -1,5 +1,7 @@
 export const TEACHER_DOCUMENTS = [
   { id: 'lesson-plan', title: 'План урока', category: 'Планирование' },
+  { id: 'calendar-plan', title: 'Календарно-тематическое планирование (КТП)', category: 'Планирование' },
+  { id: 'program-implementation-report', title: 'Отчёт о выполнении рабочей программы', category: 'Отчётность' },
   { id: 'subject-report', title: 'Отчёт по предмету за период', category: 'Отчётность' },
   { id: 'class-report', title: 'Аналитический отчёт по классу', category: 'Отчётность' },
   { id: 'assessment-analysis', title: 'Анализ контрольной работы', category: 'Оценивание' },
@@ -48,7 +50,7 @@ export function getGradeCounts(form = {}) {
 export function validateTeacherDocument(type, form = {}) {
   const errors = [];
   if (!TEACHER_DOCUMENTS.some((item) => item.id === type)) errors.push('Выберите тип документа.');
-  for (const key of ['studentCount', 'five', 'four', 'three', 'two']) {
+  for (const key of ['studentCount', 'five', 'four', 'three', 'two', 'plannedHours', 'completedHours']) {
     const n = numberField(form, key);
     if (Number.isNaN(n)) errors.push('Поле «' + key + '» должно быть целым неотрицательным числом.');
   }
@@ -116,9 +118,63 @@ export function buildTeacherDocument(type, form = {}) {
         '## Домашнее задание',
         value(form, 'homework'),
         '',
+        '## Связь с федеральной рабочей программой',
+        value(form, 'curriculumSource'),
+        value(form, 'curriculumStatus', 'Статус источника не указан'),
+        'Сверьте тему урока и планируемые результаты с источником программы и рабочей программой образовательной организации.',
+        '',
         '## Что учителю проверить после урока',
         '- Какие результаты достигнуты и каким доказательством это подтверждается.',
         '- Кому нужна дополнительная практика и по какой конкретной теме.',
+      ];
+      break;
+    }
+    case 'calendar-plan': {
+      const topics = String(form.curriculumTopics || '').split(/\r?\n/).map((item) => item.trim()).filter(Boolean);
+      lines = [
+        '## Основание планирования',
+        'Федеральная рабочая программа: ' + value(form, 'curriculumSource'),
+        'Статус источника в каталоге: ' + value(form, 'curriculumStatus', 'не указан'),
+        'Плановая нагрузка: ' + value(form, 'curriculumHoursPerWeek', 'не указана') + ' ч/нед.; ' + value(form, 'curriculumHoursPerYear', 'не указано') + ' ч/год.',
+        '',
+        '## Календарно-тематическое планирование',
+        'Всего строк тем: ' + topics.length + '. Проверьте распределение часов, календарь школы, каникулы, праздничные дни и локально утверждённый учебный план.',
+        '',
+        ...(topics.length ? topics.map((item, index) => (index + 1) + '. ' + item + ' — дата: [указать]; домашнее задание: [указать].') : ['Темы не загружены. Выберите программу выше и нажмите «Заполнить из ФОП/ФРП».']),
+        '',
+        '## Методические примечания',
+        '- Не считать этот черновик утверждённым КТП школы.',
+        '- Не добавлять темы, которых нет в выбранной программе, без указания локального основания.',
+        '- Уточнить тематическое распределение и количество часов у предметного объединения / администрации по правилам образовательной организации.',
+      ];
+      break;
+    }
+    case 'program-implementation-report': {
+      const planned = numberField(form, 'plannedHours');
+      const completed = numberField(form, 'completedHours');
+      const hoursKnown = planned !== null && completed !== null && Number.isFinite(planned) && Number.isFinite(completed);
+      lines = [
+        '## Выполнение рабочей программы',
+        '- Основание / программа: ' + value(form, 'curriculumSource'),
+        '- Период: ' + value(form, 'period'),
+        '- Плановые часы: ' + (hoursKnown ? planned : '[уточнить]'),
+        '- Фактически проведено часов: ' + (hoursKnown ? completed : '[уточнить]'),
+        '- Отклонение (факт минус план): ' + (hoursKnown ? (completed - planned >= 0 ? '+' : '') + (completed - planned) + ' ч' : 'не рассчитано: введите плановые и фактические часы'),
+        '',
+        '## Причины отклонений — только подтверждённые факты',
+        value(form, 'gaps'),
+        '',
+        '## Освоенные темы и результаты',
+        value(form, 'strengths'),
+        value(form, 'outcomes'),
+        '',
+        '## Корректирующие мероприятия и срок',
+        value(form, 'actions'),
+        value(form, 'deadline'),
+        '',
+        '## Проверки перед использованием',
+        '- Сопоставить с утверждённым КТП, фактическими записями уроков и локальными правилами школы.',
+        '- Не включать неподтверждённые причины переноса занятий или результаты освоения.',
       ];
       break;
     }

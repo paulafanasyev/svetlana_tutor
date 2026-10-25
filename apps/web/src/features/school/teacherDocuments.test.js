@@ -29,6 +29,37 @@ test('у каждого типа документа есть непустой р
   }
 });
 
+test('КТП формируется по переданным темам и содержит источник и часы программы', () => {
+  const output = buildTeacherDocument('calendar-plan', {
+    ...form,
+    curriculumSource: 'ФОП ООО — https://edsoo.ru/rabochie-programmy/',
+    curriculumStatus: 'Содержание: сверено при сборке.',
+    curriculumHoursPerWeek: '5',
+    curriculumHoursPerYear: '170',
+    curriculumTopics: 'Дроби: сравнение дробей\nДроби: сложение дробей',
+  });
+  assert.match(output, /Календарно-тематическое планирование/);
+  assert.match(output, /Дроби: сравнение дробей/);
+  assert.match(output, /Дроби: сложение дробей/);
+  assert.match(output, /170 ч\/год/);
+  assert.match(output, /ФОП ООО/);
+});
+
+test('отчёт о выполнении программы считает отклонение только из введённых часов', () => {
+  const output = buildTeacherDocument('program-implementation-report', {
+    ...form, plannedHours: '64', completedHours: '61',
+  });
+  assert.match(output, /Отклонение.*-3 ч/);
+  const incomplete = buildTeacherDocument('program-implementation-report', {
+    ...form, plannedHours: '', completedHours: '61',
+  });
+  assert.match(incomplete, /не рассчитано/);
+});
+
+test('валидатор отклоняет отрицательные часы выполнения программы', () => {
+  assert.equal(validateTeacherDocument('program-implementation-report', { plannedHours: '10', completedHours: '-1' }).ok, false);
+});
+
 test('сводка корректно считает успеваемость и качество по введённым отметкам', () => {
   const counts = getGradeCounts(form);
   assert.equal(counts.total, 25);
