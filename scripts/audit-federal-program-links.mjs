@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import {
   createCurriculumAuditTargets,
   buildCurriculumAuditSummary,
+  compareCurriculumPdfMirrorSizes,
 } from '../apps/web/src/data/curriculumLinkAudit.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -221,6 +222,7 @@ async function main() {
   const results = await mapLimit(targets, CONCURRENCY, (target) => auditOne(target, options.timeoutMs));
   const summary = buildCurriculumAuditSummary(results);
   summary.checkedAt = checkedAt;
+  const mirrorConsistency = compareCurriculumPdfMirrorSizes(catalog, results);
   const report = {
     schemaVersion: 1,
     checkedAt,
@@ -228,6 +230,7 @@ async function main() {
     sourceCatalogCheckedAt: catalog.checkedAt || null,
     note: 'A successful link check does not prove curriculum completeness, legal applicability, PDF text accuracy, or school-specific approval.',
     summary,
+    mirrorConsistency,
     results,
   };
   const date = checkedAt.slice(0, 10);
@@ -241,6 +244,10 @@ async function main() {
     reachableAndChecked: summary.reachableAndCheckedCount,
     failedOrUntrusted: summary.failedOrUntrustedCount,
     notProven: summary.notProvenCount,
+    pairedPdfs: mirrorConsistency.pairedPdfCount,
+    matchingByteSizes: mirrorConsistency.sizeMatchCount,
+    mismatchedByteSizes: mirrorConsistency.sizeMismatchCount,
+    uncomparableByteSizes: mirrorConsistency.notComparableCount,
   }, null, 2));
   // Link outages are reported, not made a release gate. Invalid catalog/schema and script errors still fail the job.
 }

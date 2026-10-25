@@ -4,6 +4,7 @@ import {
   isAllowedCurriculumAuditUrl,
   createCurriculumAuditTargets,
   buildCurriculumAuditSummary,
+  compareCurriculumPdfMirrorSizes,
 } from './curriculumLinkAudit.js';
 
 test('only HTTPS links to explicitly approved official and GitHub hosts are audited', () => {
@@ -56,3 +57,33 @@ test('summary separates verified reachability, broken links and inconclusive che
   assert.equal(summary.notProvenCount, 1);
   assert.match(summary.completenessPolicy, /do not prove curriculum completeness/i);
 });
+
+test('official PDF and release mirror sizes are compared without claiming byte identity', () => {
+  const catalog = { programs: [
+    { id: 'match', title: 'Совпадение', url: 'https://edsoo.ru/a.pdf', releaseUrl: 'https://github.com/release/a.pdf' },
+    { id: 'mismatch', title: 'Размеры различаются', url: 'https://edsoo.ru/b.pdf', releaseUrl: 'https://github.com/release/b.pdf' },
+    { id: 'unknown', title: 'Нет результата проверки', url: 'https://edsoo.ru/c.pdf', releaseUrl: 'https://github.com/release/c.pdf' },
+    { id: 'page', title: 'Страница, не PDF', url: 'https://edsoo.ru/index/', releaseUrl: 'https://github.com/release/index/' },
+  ] };
+  const checked = (url, size) => ({
+    url,
+    status: 'reachable',
+    expectedPdf: true,
+    pdfSignature: 'valid',
+    contentRange: 'bytes 0-7/' + size,
+  });
+  const result = compareCurriculumPdfMirrorSizes(catalog, [
+    checked('https://edsoo.ru/a.pdf', 1024),
+    checked('https://github.com/release/a.pdf', 1024),
+    checked('https://edsoo.ru/b.pdf', 2048),
+    checked('https://github.com/release/b.pdf', 4096),
+  ]);
+  assert.equal(result.pairedPdfCount, 3);
+  assert.equal(result.comparablePairCount, 2);
+  assert.equal(result.sizeMatchCount, 1);
+  assert.equal(result.sizeMismatchCount, 1);
+  assert.equal(result.notComparableCount, 1);
+  assert.equal(result.contentIdentityProven, false);
+  assert.match(result.note, /does not prove/i);
+});
+
