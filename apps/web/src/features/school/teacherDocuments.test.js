@@ -70,6 +70,17 @@ test('сводка цифрового класса включается в от�
   assert.match(output, /не учёт посещаемости|не учёт посещаемости/i);
 });
 
+test('электронный журнал включается в шаблон отчёта без генерации отсутствующих данных', () => {
+  const output = buildTeacherDocument('journal-period-report', {
+    ...form,
+    journalSnapshot: 'Записей в выбранном периоде: 14.\\nСредняя отметка: 4,4.',
+  });
+  assert.match(output, /Сводный отчёт по электронному журналу/);
+  assert.match(output, /Записей в выбранном периоде: 14/);
+  const empty = buildTeacherDocument('journal-period-report', { ...form, journalSnapshot: '' });
+  assert.match(empty, /Данные журнала не загружены/);
+});
+
 test('сводка корректно считает успеваемость и качество по введённым отметкам', () => {
   const counts = getGradeCounts(form);
   assert.equal(counts.total, 25);
