@@ -145,6 +145,7 @@ export default function TeacherWorkspace() {
   const [journalClassId, setJournalClassId] = useState('');
   const [journalEntries, setJournalEntries] = useState([]);
   const [journalLoading, setJournalLoading] = useState(false);
+  const [journalReloadToken, setJournalReloadToken] = useState(0);
   const [journalLoadError, setJournalLoadError] = useState('');
   const [form, setForm] = useState(() => INITIAL_FORM(user));
   const [docType, setDocType] = useState('lesson-plan');
@@ -197,7 +198,7 @@ export default function TeacherWorkspace() {
       }
     }).finally(() => { if (active) setJournalLoading(false); });
     return () => { active = false; };
-  }, [journalClassId, user?.id]);
+  }, [journalClassId, user?.id, journalReloadToken]);
 
   const selectedJournalClass = journalClasses.find((item) => String(item.id) === String(journalClassId)) || null;
 
@@ -482,7 +483,7 @@ export default function TeacherWorkspace() {
             </div>
             <div className="card p-3 space-y-3">
               <div className="font-black text-sm">Отчёт из электронного журнала</div>
-              <p className="text-xs font-semibold text-ink/50">Используются записи, доступные текущему учителю через API приложения. Сводка не содержит ФИО, индивидуальные комментарии и идентификаторы; проценты считаются по записям, не по ученикам. Записи уроков не доказывают посещаемость.</p>
+              <p className="text-xs font-semibold text-ink/50">{api.demo ? 'Демо-режим: данные хранятся в этом браузере и могут быть демонстрационными; не используйте такой отчёт как подтверждённую школьную отчётность.' : 'Серверный режим: записи загружаются из подключённого API и должны соответствовать данным вашей школы.'} Сводка не содержит ФИО, индивидуальные комментарии и идентификаторы; проценты считаются по записям, не по ученикам. Записи уроков не доказывают посещаемость.</p>
               {journalClasses.length ? (
                 <>
                   <label className="block space-y-1">
@@ -496,7 +497,10 @@ export default function TeacherWorkspace() {
                     <Field label="Конец периода" name="journalPeriodEnd" value={form.journalPeriodEnd} onChange={updateForm} type="date" />
                   </div>
                   <p className="text-xs font-semibold text-ink/50">{journalLoading ? 'Загружаю записи журнала…' : 'Загружено записей: ' + journalEntries.length}</p>
-                  <button type="button" className="btn-ghost !py-2" onClick={loadElectronicJournalReport} disabled={journalLoading || !!journalLoadError}>Сформировать отчёт из журнала</button>
+                  <div className="flex flex-wrap gap-2">
+                    <button type="button" className="btn-ghost !py-2" onClick={() => setJournalReloadToken((value) => value + 1)} disabled={journalLoading}>Обновить журнал</button>
+                    <button type="button" className="btn-ghost !py-2" onClick={loadElectronicJournalReport} disabled={journalLoading || !!journalLoadError}>Сформировать отчёт из журнала</button>
+                  </div>
                 </>
               ) : <p className="text-xs font-semibold text-ink/50">{journalLoadError || 'Для этой учётной записи нет доступного класса электронного журнала.'}</p>}
               {journalLoadError && <p className="text-xs font-bold text-rose-700" role="status">{journalLoadError}</p>}
