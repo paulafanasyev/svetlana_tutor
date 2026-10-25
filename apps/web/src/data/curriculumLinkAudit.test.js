@@ -36,7 +36,9 @@ test('catalog URLs are deduplicated while all program IDs and roles are retained
 test('malformed catalog entries fail closed rather than being fetched', () => {
   assert.throws(() => createCurriculumAuditTargets({}), /массив programs/);
   assert.throws(() => createCurriculumAuditTargets({ programs: [{ url: 'https://edsoo.ru/file.pdf' }] }), /id/);
-  assert.throws(() => createCurriculumAuditTargets({ programs: [{ id: 'bad', url: 'javascript:alert(1)' }] }), /Некорректный URL/);
+  const unsafe = createCurriculumAuditTargets({ programs: [{ id: 'bad', url: 'javascript:alert(1)' }] });
+  assert.equal(unsafe.length, 1);
+  assert.equal(unsafe[0].trustedHost, false);
 });
 
 test('summary separates verified reachability, broken links and inconclusive checks', () => {
