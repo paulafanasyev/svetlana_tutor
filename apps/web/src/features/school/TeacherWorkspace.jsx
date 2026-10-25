@@ -364,7 +364,7 @@ export default function TeacherWorkspace() {
                     {gradeOfficialSources.map((item) => <option key={item.id} value={item.id}>{item.title}{item.pages ? ' · ' + item.pages + ' стр.' : ''}</option>)}
                   </select>
                   {selectedOfficialSource && <div className="text-[11px] font-semibold text-ink/50">{selectedOfficialSource.level || selectedOfficialSource.documentType || 'Официальный ресурс'} · {selectedOfficialSource.contentStoredLocally ? 'текст доступен локально' : 'текст не встроен в ИИ'} · актуальность и класс нужно сверить с оригиналом.</div>}
-                  {selectedOfficialSource && <a className="inline-block text-sm font-bold text-primary underline" href={selectedOfficialSource.url} target="_blank" rel="noreferrer">{/\\.pdf(?:$|\\?)/i.test(selectedOfficialSource.url) ? 'Открыть официальный PDF' : 'Открыть официальный ресурс'}</a>}
+                  {selectedOfficialSource && <a className="inline-block text-sm font-bold text-primary underline" href={selectedOfficialSource.url} target="_blank" rel="noreferrer">{/\.pdf(?:$|\?)/i.test(selectedOfficialSource.url) ? 'Открыть официальный PDF' : 'Открыть официальный ресурс'}</a>}
                 </>
               ) : <p className="text-xs font-semibold text-ink/50">В каталоге нет отдельной записи для выбранного класса. Откройте <a className="underline text-primary" href="https://edsoo.ru/rabochie-programmy/" target="_blank" rel="noreferrer">общий каталог ЕДСОО</a>.</p>}
             </div>
