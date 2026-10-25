@@ -166,10 +166,9 @@ export function filterTeacherDocumentDrafts(drafts, query) {
 function csvCell(value) {
   let text = value === null || value === undefined ? '' : String(value);
   // Protect spreadsheet users from CSV formula injection when opening the export in Excel.
-  if (/^[\\t\\r\\n ]*[=+@-]/.test(text)) text = "'" + text;
+  if (/^[\t\r\n ]*[=+@-]/.test(text)) text = "'" + text;
   return '"' + text.replace(/"/g, '""') + '"';
 }
-
 export function serializeTeacherDocumentCsv(drafts) {
   if (!Array.isArray(drafts)) throw new Error('Список черновиков имеет неверный формат.');
   if (drafts.length > MAX_ARCHIVE_DRAFTS) {
