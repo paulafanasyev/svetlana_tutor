@@ -71,3 +71,14 @@ test('объединение сохраняет текущие записи, е�
   assert.equal(result.skippedCount, 1);
   assert.ok(result.drafts.some((item) => item.id === 'local-0'));
 });
+
+test('archive metadata count must match its actual content', () => {
+  const archive = JSON.parse(serializeTeacherDocumentArchive([draft()], '2026-10-25T11:00:00.000Z'));
+  archive.draftCount = 9;
+  assert.throws(() => parseTeacherDocumentArchive(JSON.stringify(archive)), /не совпадает/);
+});
+
+test('export refuses to create an archive that cannot be imported within size limits', () => {
+  assert.throws(() => serializeTeacherDocumentArchive([draft({ content: 'x'.repeat(200_001) })]), /200 000 символов/);
+});
+
