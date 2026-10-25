@@ -4,6 +4,7 @@ import {
   serializeTeacherDocumentArchive,
   parseTeacherDocumentArchive,
   mergeTeacherDocumentDrafts,
+  filterTeacherDocumentDrafts,
   TEACHER_DOCUMENT_ARCHIVE_FORMAT,
   TEACHER_DOCUMENT_ARCHIVE_VERSION,
 } from './teacherDocumentArchive.js';
@@ -80,5 +81,16 @@ test('archive metadata count must match its actual content', () => {
 
 test('export refuses to create an archive that cannot be imported within size limits', () => {
   assert.throws(() => serializeTeacherDocumentArchive([draft({ content: 'x'.repeat(200_001) })]), /200 000 символов/);
+});
+
+test('поиск находит документы по названию, тексту и полям класса/предмета', () => {
+  const items = [
+    draft({ id: 'a', title: 'План урока', form: { grade: '5', subject: 'Математика' }, content: 'Дроби' }),
+    draft({ id: 'b', title: 'Отчёт за четверть', form: { grade: '8', subject: 'История' }, content: 'Источники' }),
+  ];
+  assert.deepEqual(filterTeacherDocumentDrafts(items, 'математика').map((item) => item.id), ['a']);
+  assert.deepEqual(filterTeacherDocumentDrafts(items, 'источники').map((item) => item.id), ['b']);
+  assert.deepEqual(filterTeacherDocumentDrafts(items, '  '), items);
+  assert.deepEqual(filterTeacherDocumentDrafts(items, 'нет такого документа'), []);
 });
 
