@@ -4,7 +4,7 @@ import { api } from '../../core/api.js';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
-import { serializeTeacherDocumentArchive, parseTeacherDocumentArchive, mergeTeacherDocumentDrafts } from './teacherDocumentArchive.js';
+import { serializeTeacherDocumentArchive, parseTeacherDocumentArchive, mergeTeacherDocumentDrafts, filterTeacherDocumentDrafts } from './teacherDocumentArchive.js';
 import { PROGRAMS, splitTopic } from './fop.js';
 import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
 import { getCurriculumCoverage, getCurriculumCoverageMetadata } from '../../data/curriculumCoverage.js';
@@ -156,6 +156,7 @@ export default function TeacherWorkspace() {
   const [activeId, setActiveId] = useState('');
   const [notice, setNotice] = useState('');
   const [historyDraftId, setHistoryDraftId] = useState('');
+  const [draftSearch, setDraftSearch] = useState('');
   const archiveInputRef = useRef(null);
 
   const gradePrograms = useMemo(() => PROGRAMS.filter((program) => Number(program.grade) === Number(form.grade)), [form.grade]);
@@ -209,6 +210,7 @@ export default function TeacherWorkspace() {
   const selectedJournalClass = journalClasses.find((item) => String(item.id) === String(journalClassId)) || null;
 
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
+  const filteredDrafts = useMemo(() => filterTeacherDocumentDrafts(drafts, draftSearch), [drafts, draftSearch]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
 
   const chooseGrade = (rawGrade) => {
@@ -611,6 +613,10 @@ export default function TeacherWorkspace() {
 
           <div className="card p-4 space-y-3">
             <div className="font-black">Сохранённые черновики ({drafts.length})</div>
+            <label className="block space-y-1">
+              <span className="text-xs font-black text-ink/65">Поиск по названию, тексту, предмету или классу</span>
+              <input className={fieldClass} type="search" value={draftSearch} onChange={(e) => setDraftSearch(e.target.value)} placeholder="Например: математика, 7 класс, контрольная" />
+            </label>
             <input ref={archiveInputRef} type="file" accept=".json,application/json" className="hidden" onChange={importArchive} />
             <div className="flex flex-wrap gap-2">
               <button type="button" className="btn-ghost !py-2" onClick={exportArchive}>Резервная копия JSON</button>
@@ -618,7 +624,8 @@ export default function TeacherWorkspace() {
             </div>
             <p className="text-xs font-semibold text-ink/50">Архив включает тексты и предыдущие версии документов. Он не шифруется. При импорте существующие черновики не заменяются; локально хранится не более 30 записей.</p>
             {drafts.length === 0 && <p className="text-sm font-semibold text-ink/50">Сохранённых документов пока нет.</p>}
-            {drafts.map((draft) => (
+            {drafts.length > 0 && filteredDrafts.length === 0 && <p className="text-sm font-semibold text-ink/50">По запросу ничего не найдено.</p>}
+            {filteredDrafts.map((draft) => (
               <div key={draft.id} className="rounded-xl bg-soft/60 p-3 space-y-2">
                 <button type="button" className="text-left font-black underline text-primary" onClick={() => openDraft(draft)}>{draft.title}</button>
                 <div className="text-[11px] font-semibold text-ink/45">Сохранён: {new Date(draft.savedAt).toLocaleString('ru-RU')}</div>
