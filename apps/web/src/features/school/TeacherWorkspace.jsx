@@ -175,13 +175,13 @@ export default function TeacherWorkspace() {
     const sourceUrl = selectedProgram.source_url || selectedProgram.content_source_url || '';
     const contentStatus = selectedProgram.content_src === 'live' ? 'сверено при сборке' : selectedProgram.content_src === 'fop' ? 'текст ФОП из локального каталога' : 'корпус/проверка не завершена';
     const resultsStatus = selectedProgram.results_src === 'live' ? 'сверено при сборке' : selectedProgram.results_src === 'fop' ? 'текст ФОП из локального каталога' : selectedProgram.results_src === 'corpus' ? 'корпус/проверка не завершена' : 'статус не указан';
-    const results = Array.isArray(selectedProgram.results) ? selectedProgram.results.slice(0, 8).map((item) => '- ' + item).join('\\n') : '';
+    const results = Array.isArray(selectedProgram.results) ? selectedProgram.results.slice(0, 8).map((item) => '- ' + item).join('\n') : '';
     setForm((old) => ({
       ...old,
       grade: String(selectedProgram.grade),
       subject: selectedProgram.subject,
       curriculumProgramId: selectedProgram.id,
-      curriculumTopics: topics.join('\\n'),
+      curriculumTopics: topics.join('\n'),
       curriculumSource: source + (sourceUrl ? ' — ' + sourceUrl : ''),
       curriculumStatus: 'Содержание: ' + contentStatus + '. Планируемые результаты: ' + resultsStatus + '.',
       curriculumHoursPerWeek: String(selectedProgram.hours_per_week ?? ''),
@@ -189,7 +189,7 @@ export default function TeacherWorkspace() {
       topic: old.topic.trim() || (selectedProgram.subject + ', ' + selectedProgram.grade + ' класс — ' + (selectedProgram.sections[0]?.title || 'тема программы')),
       goals: old.goals.trim() || ('Планировать освоение разделов федеральной рабочей программы. Проверить соответствие локальной рабочей программе школы.'),
       outcomes: old.outcomes.trim() || results,
-      materials: old.materials.trim() || ('Источник: ' + source + (sourceUrl ? '\\n' + sourceUrl : '') + '\\n' + 'Статус: ' + contentStatus + '; результаты: ' + resultsStatus + '.'),
+      materials: old.materials.trim() || ('Источник: ' + source + (sourceUrl ? '\n' + sourceUrl : '') + '\n' + 'Статус: ' + contentStatus + '; результаты: ' + resultsStatus + '.'),
     }));
     setContent('');
     setActiveId('');
