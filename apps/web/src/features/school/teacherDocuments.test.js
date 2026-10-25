@@ -36,12 +36,12 @@ test('КТП формируется по переданным темам и со
     curriculumStatus: 'Содержание: сверено при сборке.',
     curriculumHoursPerWeek: '5',
     curriculumHoursPerYear: '170',
-    curriculumTopics: 'Дроби: сравнение дробей\\nДроби: сложение дробей',
+    curriculumTopics: 'Дроби: сравнение дробей\nДроби: сложение дробей',
   });
   assert.match(output, /Календарно-тематическое планирование/);
   assert.match(output, /Дроби: сравнение дробей/);
   assert.match(output, /Дроби: сложение дробей/);
-  assert.match(output, /170 ч\\/год/);
+  assert.match(output, /170 ч\/год/);
   assert.match(output, /ФОП ООО/);
 });
 
