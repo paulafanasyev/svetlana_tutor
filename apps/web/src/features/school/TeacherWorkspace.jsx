@@ -1,9 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
 import { PROGRAMS, splitTopic } from './fop.js';
+import { school } from './schoolStore.js';
+import { buildClassroomActivitySnapshot } from './classroomActivityReport.js';
 
 const fieldClass = 'w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-semibold';
 const today = () => {
@@ -58,6 +60,8 @@ const INITIAL_FORM = (user) => ({
   teacherName: user?.name || '',
   position: 'учитель',
   className: '',
+  schoolClassId: '',
+  classroomSnapshot: '',
   grade: '5',
   subject: 'Математика',
   curriculumProgramId: 'math-5',
@@ -126,6 +130,9 @@ export default function TeacherWorkspace() {
   const { user } = useApp();
   const navigate = useNavigate();
   const storageKey = keyFor(user?.id);
+  const [schoolDb, setSchoolDb] = useState(() => school.get());
+  useEffect(() => school.subscribe(setSchoolDb), []);
+  const teacherClasses = useMemo(() => (schoolDb.classes || []).filter((cls) => cls.teacherId === String(user?.id)), [schoolDb.classes, user?.id]);
   const [form, setForm] = useState(() => INITIAL_FORM(user));
   const [docType, setDocType] = useState('lesson-plan');
   const [content, setContent] = useState('');
@@ -194,6 +201,24 @@ export default function TeacherWorkspace() {
     setContent('');
     setActiveId('');
     setNotice('Подставлено ' + topics.length + ' строк тем из локальной программы. Проверьте редакцию, часы и соответствие программе вашей школы.');
+  };
+
+  const loadClassroomSnapshot = () => {
+    const snapshot = buildClassroomActivitySnapshot(schoolDb, form.schoolClassId);
+    if (!snapshot) {
+      setNotice('Выберите класс, созданный в разделе «Классы и чат» этого браузера.');
+      return;
+    }
+    setForm((old) => ({
+      ...old,
+      subject: snapshot.subject || old.subject,
+      className: snapshot.classTitle || old.className,
+      classroomSnapshot: snapshot.markdown,
+    }));
+    setDocType('classroom-activity-report');
+    setContent('');
+    setActiveId('');
+    setNotice('Сводка загружена из локального модуля: без имён учеников и текстов ответов. Посещаемость модуль не отслеживает.');
   };
 
   const generate = () => {
@@ -347,6 +372,20 @@ export default function TeacherWorkspace() {
             <div className="grid grid-cols-2 gap-2">
               <Field label="Плановые часы за период" name="plannedHours" value={form.plannedHours} onChange={updateForm} type="number" />
               <Field label="Фактически проведено часов" name="completedHours" value={form.completedHours} onChange={updateForm} type="number" />
+            </div>
+            <div className="card p-3 space-y-2">
+              <div className="font-black text-sm">Сводка из «Классы и чат»</div>
+              <p className="text-xs font-semibold text-ink/50">Использует только локальные задания и сданные работы. Имена и тексты учеников в отчёт не включаются; посещаемость не собирается.</p>
+              {teacherClasses.length ? (
+                <div className="flex flex-wrap gap-2">
+                  <select className={fieldClass + ' flex-1 min-w-[12rem]'} aria-label="Класс для сводки" value={form.schoolClassId} onChange={(e) => updateForm('schoolClassId', e.target.value)}>
+                    <option value="">Выберите класс</option>
+                    {teacherClasses.map((cls) => <option key={cls.id} value={cls.id}>{cls.title} · {cls.subject || 'предмет не указан'}</option>)}
+                  </select>
+                  <button type="button" className="btn-ghost !py-2" onClick={loadClassroomSnapshot} disabled={!form.schoolClassId}>Загрузить сводку</button>
+                </div>
+              ) : <p className="text-xs font-semibold text-ink/50">Классы учителя в этом браузере пока не созданы. Сначала создайте класс в «Классы и чат».</p>}
+              <Field label="Сводка для отчёта (без имён учеников)" name="classroomSnapshot" value={form.classroomSnapshot} onChange={updateForm} multiline help="Текст можно проверить и исправить вручную перед экспортом." />
             </div>
             <div className="grid grid-cols-2 gap-2">
               <Field label="Отметок «5»" name="five" value={form.five} onChange={updateForm} type="number" />
