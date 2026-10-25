@@ -47,7 +47,7 @@ export function buildElectronicJournalReport(entries, {
 } = {}) {
   const safeEntries = (Array.isArray(entries) ? entries : []).filter((entry) => entry && typeof entry === 'object');
   const invalidPeriod = validDate(periodStart) && validDate(periodEnd)
-    && new Date(periodStart + 'T00:00:00').getTime() >= new Date(periodEnd + 'T00:00:00').getTime();
+    && new Date(periodStart + 'T00:00:00').getTime() > new Date(periodEnd + 'T00:00:00').getTime();
   const filtered = invalidPeriod ? [] : filterPeriod(safeEntries, periodStart, periodEnd);
   const graded = filtered.map((entry) => ({ entry, mark: markOf(entry.mark) })).filter((item) => item.mark !== null);
   const counts = { 5: 0, 4: 0, 3: 0, 2: 0 };
