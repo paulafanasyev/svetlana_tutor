@@ -60,6 +60,16 @@ test('валидатор отклоняет отрицательные часы 
   assert.equal(validateTeacherDocument('program-implementation-report', { plannedHours: '10', completedHours: '-1' }).ok, false);
 });
 
+test('сводка цифрового класса включается в отдельный тип отчёта без имён учащихся', () => {
+  const output = buildTeacherDocument('classroom-activity-report', {
+    ...form,
+    classroomSnapshot: 'Уникальных полученных работ: 12\\nСредняя отметка по оценённым работам: 4,5',
+  });
+  assert.match(output, /Сводка по локальному модулю класса/);
+  assert.match(output, /Уникальных полученных работ: 12/);
+  assert.match(output, /не учёт посещаемости|не учёт посещаемости/i);
+});
+
 test('сводка корректно считает успеваемость и качество по введённым отметкам', () => {
   const counts = getGradeCounts(form);
   assert.equal(counts.total, 25);
