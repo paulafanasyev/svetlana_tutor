@@ -5,6 +5,7 @@ import {
   parseTeacherDocumentArchive,
   mergeTeacherDocumentDrafts,
   filterTeacherDocumentDrafts,
+  serializeTeacherDocumentCsv,
   TEACHER_DOCUMENT_ARCHIVE_FORMAT,
   TEACHER_DOCUMENT_ARCHIVE_VERSION,
 } from './teacherDocumentArchive.js';
@@ -92,5 +93,26 @@ test('поиск находит документы по названию, тек
   assert.deepEqual(filterTeacherDocumentDrafts(items, 'источники').map((item) => item.id), ['b']);
   assert.deepEqual(filterTeacherDocumentDrafts(items, '  '), items);
   assert.deepEqual(filterTeacherDocumentDrafts(items, 'нет такого документа'), []);
+});
+
+test('CSV export keeps Unicode, commas, quotes and multiline document content', () => {
+  const csv = serializeTeacherDocumentCsv([
+    draft({
+      title: 'План, "физика"',
+      form: { grade: '7', className: '7А', subject: 'Физика', period: 'I четверть' },
+      content: 'Первая строка, "пример"\nВторая строка',
+    }),
+  ]);
+  assert.ok(csv.startsWith('\uFEFF"id","title","documentType"'));
+  assert.ok(csv.includes('"План, ""физика"""'));
+  assert.ok(csv.includes('"Первая строка, ""пример""\nВторая строка"'));
+  assert.ok(csv.includes('"7","7А","Физика"'));
+});
+
+test('CSV export prefixes possible spreadsheet formulas and enforces export limits', () => {
+  const csv = serializeTeacherDocumentCsv([draft({ content: '=SUM(A1:A2)' })]);
+  assert.ok(csv.includes('"\'=SUM(A1:A2)"'));
+  assert.throws(() => serializeTeacherDocumentCsv(null), /Список черновиков/);
+  assert.throws(() => serializeTeacherDocumentCsv(Array.from({ length: 101 }, (_, i) => draft({ id: 'id-' + i }))), /не более 100/);
 });
 

@@ -162,3 +162,35 @@ export function filterTeacherDocumentDrafts(drafts, query) {
     return haystack.includes(needle);
   });
 }
+
+function csvCell(value) {
+  let text = value === null || value === undefined ? '' : String(value);
+  // Protect spreadsheet users from CSV formula injection when opening the export in Excel.
+  if (/^[\t\r\n ]*[=+@-]/.test(text)) text = "'" + text;
+  return '"' + text.replace(/"/g, '""') + '"';
+}
+export function serializeTeacherDocumentCsv(drafts) {
+  if (!Array.isArray(drafts)) throw new Error('Список черновиков имеет неверный формат.');
+  if (drafts.length > MAX_ARCHIVE_DRAFTS) {
+    throw new Error('В CSV может быть не более ' + MAX_ARCHIVE_DRAFTS + ' черновиков.');
+  }
+  const headers = [
+    'id', 'title', 'documentType', 'grade', 'className', 'subject',
+    'period', 'date', 'savedAt', 'versionsCount', 'content',
+  ];
+  const rows = [headers.map(csvCell).join(',')];
+  for (const [index, draft] of drafts.entries()) {
+    if (!draft || typeof draft !== 'object' || Array.isArray(draft)) {
+      throw new Error('Некорректный черновик № ' + (index + 1) + '.');
+    }
+    const form = draft.form && typeof draft.form === 'object' && !Array.isArray(draft.form)
+      ? draft.form : {};
+    const values = [
+      draft.id, draft.title, draft.type, form.grade, form.className, form.subject,
+      form.period, form.date, draft.savedAt, Array.isArray(draft.versions) ? draft.versions.length : 0,
+      draft.content,
+    ];
+    rows.push(values.map(csvCell).join(','));
+  }
+  return '\uFEFF' + rows.join('\r\n') + '\r\n';
+}
