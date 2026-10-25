@@ -58,7 +58,11 @@ function cleanVersions(versions) {
     const time = typeof version.savedAt === 'string' && !Number.isNaN(Date.parse(version.savedAt))
       ? version.savedAt
       : '';
-    return { savedAt: time, content: version.content };
+    const clean = { savedAt: time, content: version.content };
+    if (version.form !== undefined) clean.form = cleanForm(version.form);
+    if (typeof version.type === 'string' && DOCUMENT_TYPES.has(version.type)) clean.type = version.type;
+    if (typeof version.title === 'string' && version.title.length <= 300) clean.title = version.title;
+    return clean;
   });
 }
 
@@ -104,7 +108,7 @@ export function parseTeacherDocumentArchive(serialized) {
       id,
       title,
       type,
-      form: cleanForm(draft.form),
+      form: draft.form === undefined ? {} : cleanForm(draft.form),
       content,
       savedAt: draft.savedAt,
       versions: cleanVersions(draft.versions),
