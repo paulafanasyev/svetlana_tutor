@@ -1,3 +1,5 @@
+import federalProgramCatalog from '../../data/federalWorkingProgramCatalog.json' with { type: 'json' };
+
 export const TEACHER_REFERENCE_SOURCES = [
   {
     title: 'Перечень документов педагогических работников',
@@ -32,6 +34,9 @@ const SUBJECTS = [
   { label: 'Литературное чтение', match: /литературн.*чтен/i },
   { label: 'Литература', match: /литератур/i },
   { label: 'Китайский язык', match: /китайск/i },
+  { label: 'Немецкий язык', match: /немецк/i },
+  { label: 'Французский язык', match: /французск/i },
+  { label: 'Испанский язык', match: /испанск/i },
   { label: 'Основы духовно-нравственной культуры народов России', match: /однкнр|днкр|основ.*духовно-нравствен/i },
   { label: 'Английский язык', match: /англий|иностранн.*язык/i },
   { label: 'История', match: /истори/i },
@@ -99,6 +104,57 @@ function programmeSummary(programme) {
   ].filter(Boolean).join('\n');
 }
 
+const OFFICIAL_SUBJECT_CODES = {
+  'Математика': ['mathematics'],
+  'Русский язык': ['russian-language'],
+  'Литературное чтение': ['literary-reading'],
+  'Литература': ['literature'],
+  'Английский язык': ['english-language'],
+  'Немецкий язык': ['german-language'],
+  'Французский язык': ['french-language'],
+  'Испанский язык': ['spanish-language'],
+  'Китайский язык': ['chinese-language'],
+  'История': ['history'],
+  'Обществознание': ['social-studies'],
+  'География': ['geography'],
+  'Физика': ['physics'],
+  'Химия': ['chemistry'],
+  'Биология': ['biology'],
+  'Информатика': ['informatics'],
+  'Окружающий мир': ['world-around-us'],
+  'Труд / технология': ['technology'],
+  'Физическая культура': ['physical-education'],
+  'ОБЗР': ['fundamentals-security-defense-homeland'],
+  'ОРКСЭ': ['fundamentals-spiritual-culture'],
+  'Основы духовно-нравственной культуры народов России': ['fundamentals-spiritual-culture'],
+};
+
+export function findOfficialProgramSources(subjectLabel, grade) {
+  const gradeNumber = Number(grade);
+  if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 11) return [];
+  const codes = OFFICIAL_SUBJECT_CODES[subjectLabel] || [];
+  if (!codes.length) return [];
+  return (Array.isArray(federalProgramCatalog.programs) ? federalProgramCatalog.programs : [])
+    .filter((item) => Array.isArray(item.gradeRange) && item.gradeRange.length === 2
+      && gradeNumber >= Number(item.gradeRange[0]) && gradeNumber <= Number(item.gradeRange[1])
+      && codes.includes(item.subject) && typeof item.url === 'string' && item.url.startsWith('https://'))
+    .sort((a, b) => {
+      const aExact = Number(a.gradeRange[0]) === gradeNumber && Number(a.gradeRange[1]) === gradeNumber ? 0 : 1;
+      const bExact = Number(b.gradeRange[0]) === gradeNumber && Number(b.gradeRange[1]) === gradeNumber ? 0 : 1;
+      return aExact - bExact || String(a.title).localeCompare(String(b.title), 'ru');
+    })
+    .slice(0, 5);
+}
+
+function officialSourceSummary(sources) {
+  if (!sources.length) return '';
+  return [
+    'Официальные ссылки на федеральные рабочие программы (только метаданные; PDF не подмешан в текст модели):',
+    ...sources.map((item) => '- ' + item.title + ' — ' + item.url + (item.pages ? ' (' + item.pages + ' стр.)' : '') + '. Источник: ' + (item.sourceLandingPage || 'не указан') + '.'),
+    'Перед утверждением темы открой PDF и проверь редакцию, класс, уровень и актуальность. Наличие ссылки не означает, что полный текст PDF уже доступен модели.',
+  ].join('\n');
+}
+
 export async function buildTeacherKnowledgeContext(question) {
   const references = [
     'Нормативные и методические ориентиры (это ссылки для проверки, а не юридическое заключение):',
@@ -124,11 +180,19 @@ export async function buildTeacherKnowledgeContext(question) {
       unique.push(item);
       if (unique.length >= 2) break;
     }
+    const officialSources = requestedGrade !== null && requestedSubject
+      ? findOfficialProgramSources(requestedSubject, requestedGrade)
+      : [];
     if (!unique.length) {
-      return references + '\n\nПодходящая запись локальной базы ФОП не обнаружена для указанного запроса. Не подменяй её похожим предметом или другим классом. Уточни класс/предмет либо предложи официальный каталог ЕДСОО.';
+      const sourceContext = officialSourceSummary(officialSources);
+      return references + '\n\nПодходящая запись локальной базы ФОП не обнаружена для указанного запроса. Не подменяй её похожим предметом или другим классом. ' +
+        (sourceContext ? sourceContext + '\n\n' : '') +
+        'Используй официальную ссылку как указатель на источник, а не как доказательство того, что содержание PDF загружено в модель. Если точный текст не доступен, прямо сообщи об этом.';
     }
+    const sourceContext = officialSourceSummary(officialSources);
     return references + '\n\nРелевантные фрагменты локального каталога ФОП/ФРП (проверяй метки источника и уровень достоверности):\n\n' +
-      unique.map(programmeSummary).join('\n\n').slice(0, 7200);
+      unique.map(programmeSummary).join('\n\n').slice(0, 5600) +
+      (sourceContext ? '\n\n' + sourceContext.slice(0, 1400) : '');
   } catch {
     return references + '\n\nЛокальный каталог программ сейчас не удалось загрузить. Не утверждай, что тема или программа подтверждены; используй ссылки выше и сообщи об ограничении.';
   }
