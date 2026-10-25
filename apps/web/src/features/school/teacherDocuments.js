@@ -50,7 +50,7 @@ export function getGradeCounts(form = {}) {
 export function validateTeacherDocument(type, form = {}) {
   const errors = [];
   if (!TEACHER_DOCUMENTS.some((item) => item.id === type)) errors.push('Выберите тип документа.');
-  for (const key of ['studentCount', 'five', 'four', 'three', 'two']) {
+  for (const key of ['studentCount', 'five', 'four', 'three', 'two', 'plannedHours', 'completedHours']) {
     const n = numberField(form, key);
     if (Number.isNaN(n)) errors.push('Поле «' + key + '» должно быть целым неотрицательным числом.');
   }
