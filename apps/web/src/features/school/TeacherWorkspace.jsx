@@ -264,7 +264,7 @@ export default function TeacherWorkspace() {
 
   const loadElectronicJournalReport = () => {
     if (form.journalPeriodStart && form.journalPeriodEnd && form.journalPeriodStart > form.journalPeriodEnd) {
-      setNotice('Проверьте период: дата начала должна быть раньше даты окончания.');
+      setNotice('Проверьте период: дата начала не может быть позже даты окончания.');
       return;
     }
     if (!selectedJournalClass) {
