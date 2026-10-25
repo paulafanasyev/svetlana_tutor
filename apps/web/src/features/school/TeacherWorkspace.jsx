@@ -4,7 +4,7 @@ import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
 import { PROGRAMS, splitTopic } from './fop.js';
-import federalProgramCatalog from '../../data/federalWorkingProgramCatalog.json' with { type: 'json' };
+import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
 import { school } from './schoolStore.js';
 import { buildClassroomActivitySnapshot } from './classroomActivityReport.js';
 
@@ -144,10 +144,12 @@ export default function TeacherWorkspace() {
 
   const gradePrograms = useMemo(() => PROGRAMS.filter((program) => Number(program.grade) === Number(form.grade)), [form.grade]);
   const selectedProgram = gradePrograms.find((program) => program.id === form.curriculumProgramId) || gradePrograms[0] || null;
-  const gradeOfficialSources = useMemo(() => (Array.isArray(federalProgramCatalog.programs) ? federalProgramCatalog.programs : [])
-    .filter((item) => item.subject !== 'all-school-subjects' && Array.isArray(item.gradeRange) && Number(form.grade) >= Number(item.gradeRange[0]) && Number(form.grade) <= Number(item.gradeRange[1]) && typeof item.url === 'string' && item.url.startsWith('https://'))
-    .sort((a, b) => String(a.title).localeCompare(String(b.title), 'ru')), [form.grade]);
+  const gradeOfficialSources = useMemo(() => {
+    const mapped = selectedProgram ? findOfficialProgramSources(selectedProgram.subject, form.grade, 20) : [];
+    return mapped.length ? mapped : listOfficialProgramSourcesForGrade(form.grade, 20);
+  }, [form.grade, selectedProgram?.subject]);
   const selectedOfficialSource = gradeOfficialSources.find((item) => item.id === form.officialSourceId) || gradeOfficialSources[0] || null;
+  const officialCatalogMeta = useMemo(() => getOfficialProgramCatalogMetadata(), []);
 
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
@@ -357,7 +359,7 @@ export default function TeacherWorkspace() {
             </div>
             <div className="card p-3 space-y-2">
               <div className="font-black text-sm">Официальные материалы по классу</div>
-              <p className="text-xs font-semibold text-ink/50">Каталог содержит 61 запись федеральных программ и ссылок (55 прямых PDF-ссылок по состоянию на 21.10.2026). Это метаданные: текст PDF не добавляется в контекст ИИ автоматически.</p>
+              <p className="text-xs font-semibold text-ink/50">Для выбранного предмета показаны подходящие ссылки, если они есть; иначе — общий каталог ссылок по классу. Каталог содержит {officialCatalogMeta.recordCount} записей, из них {officialCatalogMeta.directPdfLinks} PDF-ссылок (срез {officialCatalogMeta.checkedAt || 'дата не указана'}). Это метаданные: текст PDF не добавляется в контекст ИИ автоматически.</p>
               {gradeOfficialSources.length ? (
                 <>
                   <select className={fieldClass} aria-label="Официальный источник по классу" value={selectedOfficialSource?.id || ''} onChange={(e) => updateForm('officialSourceId', e.target.value)}>
