@@ -103,7 +103,7 @@ test('CSV export keeps Unicode, commas, quotes and multiline document content', 
       content: 'Первая строка, "пример"\nВторая строка',
     }),
   ]);
-  assert.ok(csv.startsWith('\\uFEFF"id","title","documentType"'));
+  assert.ok(csv.startsWith('\uFEFF"id","title","documentType"'));
   assert.ok(csv.includes('"План, ""физика"""'));
   assert.ok(csv.includes('"Первая строка, ""пример""\nВторая строка"'));
   assert.ok(csv.includes('"7","7А","Физика"'));
