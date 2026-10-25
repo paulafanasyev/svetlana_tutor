@@ -4,7 +4,7 @@ import { api } from '../../core/api.js';
 import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
-import { serializeTeacherDocumentArchive, parseTeacherDocumentArchive, mergeTeacherDocumentDrafts, filterTeacherDocumentDrafts } from './teacherDocumentArchive.js';
+import { serializeTeacherDocumentArchive, parseTeacherDocumentArchive, mergeTeacherDocumentDrafts, filterTeacherDocumentDrafts, serializeTeacherDocumentCsv } from './teacherDocumentArchive.js';
 import { PROGRAMS, splitTopic } from './fop.js';
 import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
 import { getCurriculumCoverage, getCurriculumCoverageMetadata } from '../../data/curriculumCoverage.js';
@@ -391,6 +391,16 @@ export default function TeacherWorkspace() {
     }
   };
 
+  const exportDraftsCsv = () => {
+    try {
+      const csv = serializeTeacherDocumentCsv(drafts);
+      downloadFile('svetlana-teacher-documents-' + today() + '.csv', csv, 'text/csv;charset=utf-8');
+      setNotice('CSV-таблица создана. Её удобно открыть в Excel; для точного переноса и восстановления версий используйте JSON-архив. Файл не зашифрован.');
+    } catch (error) {
+      setNotice('Не удалось создать CSV: ' + (error instanceof Error ? error.message : 'неизвестная ошибка'));
+    }
+  };
+
   const importArchive = async (event) => {
     const input = event.currentTarget;
     const file = input.files?.[0];
@@ -620,6 +630,7 @@ export default function TeacherWorkspace() {
             <input ref={archiveInputRef} type="file" accept=".json,application/json" className="hidden" onChange={importArchive} />
             <div className="flex flex-wrap gap-2">
               <button type="button" className="btn-ghost !py-2" onClick={exportArchive}>Резервная копия JSON</button>
+              <button type="button" className="btn-ghost !py-2" onClick={exportDraftsCsv}>Выгрузить таблицу CSV</button>
               <button type="button" className="btn-ghost !py-2" onClick={() => archiveInputRef.current?.click()}>Импорт JSON-архива</button>
             </div>
             <p className="text-xs font-semibold text-ink/50">Архив включает тексты и предыдущие версии документов. Он не шифруется. При импорте существующие черновики не заменяются; локально хранится не более 30 записей.</p>
