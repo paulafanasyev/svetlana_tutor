@@ -1,4 +1,5 @@
-import federalProgramCatalog from '../../data/federalWorkingProgramCatalog.json' with { type: 'json' };
+import { findOfficialProgramSources } from '../../data/federalProgramSources.js';
+export { findOfficialProgramSources } from '../../data/federalProgramSources.js';
 
 export const TEACHER_REFERENCE_SOURCES = [
   {
@@ -102,48 +103,6 @@ function programmeSummary(programme) {
     source ? 'Источник программы: ' + source : 'Прямой URL источника не задан в этой записи.',
     programme.content_src ? 'Статус содержания: ' + programme.content_src + '; статус результатов: ' + (programme.results_src || 'не указан') + '.' : '',
   ].filter(Boolean).join('\n');
-}
-
-const OFFICIAL_SUBJECT_CODES = {
-  'Математика': ['mathematics'],
-  'Русский язык': ['russian-language'],
-  'Литературное чтение': ['literary-reading'],
-  'Литература': ['literature'],
-  'Английский язык': ['english-language'],
-  'Немецкий язык': ['german-language'],
-  'Французский язык': ['french-language'],
-  'Испанский язык': ['spanish-language'],
-  'Китайский язык': ['chinese-language'],
-  'История': ['history'],
-  'Обществознание': ['social-studies'],
-  'География': ['geography'],
-  'Физика': ['physics'],
-  'Химия': ['chemistry'],
-  'Биология': ['biology'],
-  'Информатика': ['informatics'],
-  'Окружающий мир': ['world-around-us'],
-  'Труд / технология': ['technology'],
-  'Физическая культура': ['physical-education'],
-  'ОБЗР': ['fundamentals-security-defense-homeland'],
-  'ОРКСЭ': ['fundamentals-spiritual-culture'],
-  'Основы духовно-нравственной культуры народов России': ['fundamentals-spiritual-culture'],
-};
-
-export function findOfficialProgramSources(subjectLabel, grade) {
-  const gradeNumber = Number(grade);
-  if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 11) return [];
-  const codes = OFFICIAL_SUBJECT_CODES[subjectLabel] || [];
-  if (!codes.length) return [];
-  return (Array.isArray(federalProgramCatalog.programs) ? federalProgramCatalog.programs : [])
-    .filter((item) => Array.isArray(item.gradeRange) && item.gradeRange.length === 2
-      && gradeNumber >= Number(item.gradeRange[0]) && gradeNumber <= Number(item.gradeRange[1])
-      && codes.includes(item.subject) && typeof item.url === 'string' && item.url.startsWith('https://'))
-    .sort((a, b) => {
-      const aExact = Number(a.gradeRange[0]) === gradeNumber && Number(a.gradeRange[1]) === gradeNumber ? 0 : 1;
-      const bExact = Number(b.gradeRange[0]) === gradeNumber && Number(b.gradeRange[1]) === gradeNumber ? 0 : 1;
-      return aExact - bExact || String(a.title).localeCompare(String(b.title), 'ru');
-    })
-    .slice(0, 5);
 }
 
 function officialSourceSummary(sources) {
