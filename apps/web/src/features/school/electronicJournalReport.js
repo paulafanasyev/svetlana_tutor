@@ -30,7 +30,7 @@ function filterPeriod(entries, start, end) {
   return entries.filter((entry) => {
     const at = Number(entry.at);
     if (!Number.isFinite(at)) return false;
-    return (startAt === null || at >= startAt) && (endAt === null || at < endAt.getTime());
+    return (startAt === null || at >= startAt) && (endAt === null || at < endAt);
   });
 }
 
