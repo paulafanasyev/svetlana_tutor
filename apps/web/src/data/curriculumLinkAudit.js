@@ -70,3 +70,53 @@ export function buildCurriculumAuditSummary(results) {
     completenessPolicy: 'Link reachability and PDF signature checks do not prove curriculum completeness, legal applicability, text extraction quality, or editorial correctness.',
   };
 }
+
+function pdfTotalBytes(result) {
+  if (!result || result.status !== 'reachable' || result.expectedPdf && result.pdfSignature !== 'valid') return null;
+  const contentRange = String(result.contentRange || '').match(/^bytes\\s+\\d+-\\d+\\/(\\d+)$/i);
+  if (contentRange) return Number(contentRange[1]);
+  const contentLength = Number(result.contentLength);
+  return Number.isSafeInteger(contentLength) && contentLength > 0 ? contentLength : null;
+}
+
+function isDirectPdfUrl(rawUrl) {
+  try { return /\\.pdf$/i.test(new URL(rawUrl).pathname); } catch { return false; }
+}
+
+export function compareCurriculumPdfMirrorSizes(catalog, results) {
+  if (!catalog || !Array.isArray(catalog.programs)) throw new Error('Каталог должен содержать массив programs.');
+  const byUrl = new Map((Array.isArray(results) ? results : []).map((item) => [item.url, item]));
+  const comparisons = [];
+  for (const program of catalog.programs) {
+    if (!program?.url || !program?.releaseUrl
+        || !isDirectPdfUrl(program.url) || !isDirectPdfUrl(program.releaseUrl)) continue;
+    const official = byUrl.get(program.url);
+    const release = byUrl.get(program.releaseUrl);
+    const officialBytes = pdfTotalBytes(official);
+    const releaseBytes = pdfTotalBytes(release);
+    let status = 'not_comparable';
+    if (officialBytes !== null && releaseBytes !== null) {
+      status = officialBytes === releaseBytes ? 'size_match' : 'size_mismatch';
+    }
+    comparisons.push({
+      programId: program.id,
+      title: program.title || program.id,
+      officialUrl: program.url,
+      releaseUrl: program.releaseUrl,
+      officialBytes,
+      releaseBytes,
+      status,
+    });
+  }
+  const comparable = comparisons.filter((item) => item.status !== 'not_comparable');
+  return {
+    pairedPdfCount: comparisons.length,
+    comparablePairCount: comparable.length,
+    sizeMatchCount: comparisons.filter((item) => item.status === 'size_match').length,
+    sizeMismatchCount: comparisons.filter((item) => item.status === 'size_mismatch').length,
+    notComparableCount: comparisons.filter((item) => item.status === 'not_comparable').length,
+    contentIdentityProven: false,
+    note: 'Matching byte size is only a coarse consistency check. It does not prove that the official PDF and release copy contain identical bytes or the same text.',
+    comparisons,
+  };
+}
