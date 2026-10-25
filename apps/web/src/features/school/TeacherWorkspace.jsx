@@ -6,6 +6,7 @@ import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
 import { PROGRAMS, splitTopic } from './fop.js';
 import { findOfficialProgramSources, listOfficialProgramSourcesForGrade, getOfficialProgramCatalogMetadata } from '../../data/federalProgramSources.js';
+import { getCurriculumCoverage, getCurriculumCoverageMetadata } from '../../data/curriculumCoverage.js';
 import { school } from './schoolStore.js';
 import { buildClassroomActivitySnapshot } from './classroomActivityReport.js';
 import { buildElectronicJournalReport } from './electronicJournalReport.js';
@@ -162,6 +163,8 @@ export default function TeacherWorkspace() {
   }, [form.grade, selectedProgram?.subject]);
   const selectedOfficialSource = gradeOfficialSources.find((item) => item.id === form.officialSourceId) || gradeOfficialSources[0] || null;
   const officialCatalogMeta = useMemo(() => getOfficialProgramCatalogMetadata(), []);
+  const coverageMetadata = useMemo(() => getCurriculumCoverageMetadata(), []);
+  const selectedCoverage = useMemo(() => getCurriculumCoverage(selectedProgram?.subject || form.subject, form.grade), [form.grade, selectedProgram?.subject, form.subject]);
 
   useEffect(() => {
     let active = true;
@@ -446,6 +449,24 @@ export default function TeacherWorkspace() {
                   {selectedOfficialSource && <a className="inline-block text-sm font-bold text-primary underline" href={selectedOfficialSource.url} target="_blank" rel="noreferrer">{/\.pdf(?:$|\?)/i.test(selectedOfficialSource.url) ? 'Открыть официальный PDF' : 'Открыть официальный ресурс'}</a>}
                 </>
               ) : <p className="text-xs font-semibold text-ink/50">В каталоге нет отдельной записи для выбранного класса. Откройте <a className="underline text-primary" href="https://edsoo.ru/rabochie-programmy/" target="_blank" rel="noreferrer">общий каталог ЕДСОО</a>.</p>}
+            </div>
+            <div className="card p-3 space-y-3" aria-label="Аудит полноты школьной программы">
+              <div className="font-black text-sm">Аудит покрытия программы</div>
+              <p className="text-xs font-semibold text-ink/50">Матрица проверена {coverageMetadata.checkedAt || 'без даты'}: {coverageMetadata.recordCount} пар «класс × предмет»; полнота {coverageMetadata.notProvenCount} пар не доказана. Ссылки и счётчики не означают, что все темы и редакции полностью проверены.</p>
+              {selectedCoverage ? (
+                <>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="rounded-xl bg-soft/60 p-2"><b>Статус индекса</b><div>{selectedCoverage.status}</div></div>
+                    <div className="rounded-xl bg-soft/60 p-2"><b>Полнота</b><div>{selectedCoverage.completeCoverage}</div></div>
+                    <div className="rounded-xl bg-soft/60 p-2"><b>Записей в индексах</b><div>{selectedCoverage.indexedResourceCount}</div></div>
+                    <div className="rounded-xl bg-soft/60 p-2"><b>Записей ФРП</b><div>{selectedCoverage.officialWorkingProgramCount}</div></div>
+                    <div className="rounded-xl bg-soft/60 p-2"><b>В релизе</b><div>{selectedCoverage.releaseAvailableWorkingProgramCount}</div></div>
+                    <div className="rounded-xl bg-soft/60 p-2"><b>Авторских заданий в матрице</b><div>{selectedCoverage.locallyStoredOriginalTaskCount}</div></div>
+                  </div>
+                  <p className="text-xs font-semibold text-ink/60">{selectedCoverage.curriculumApplicability === 'SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM' ? 'В матрице есть запись федеральной рабочей программы для этой пары.' : 'Привязка к точной федеральной рабочей программе в этой матрице не подтверждена.'} В обоих случаях полнота остаётся {selectedCoverage.completeCoverage}: нужно сверить состав тем, действующую редакцию и источники.</p>
+                </>
+              ) : <p className="text-xs font-semibold text-ink/50">Для выбранного названия предмета точная строка аудита не найдена; это не доказательство отсутствия программы. Проверьте официальный каталог и локальное название предмета.</p>}
+              <a href="https://edsoo.ru/rabochie-programmy/" target="_blank" rel="noreferrer" className="text-sm font-bold text-primary underline">Проверить на официальном каталоге ЕДСОО</a>
             </div>
             <Field label="Темы программы (по одной строке; для КТП)" name="curriculumTopics" value={form.curriculumTopics} onChange={updateForm} multiline help="Заполните кнопкой выше, затем исправьте темы и формулировки, если нужно." />
             <Field label="Источник программы" name="curriculumSource" value={form.curriculumSource} onChange={updateForm} multiline />
