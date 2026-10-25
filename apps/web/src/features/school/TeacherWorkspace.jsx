@@ -4,6 +4,7 @@ import { useApp } from '../../core/store.js';
 import RuOnly from './RuOnly.jsx';
 import { TEACHER_DOCUMENTS, buildTeacherDocument, safeDocumentFilename, validateTeacherDocument } from './teacherDocuments.js';
 import { PROGRAMS, splitTopic } from './fop.js';
+import federalProgramCatalog from '../../data/federalWorkingProgramCatalog.json' with { type: 'json' };
 import { school } from './schoolStore.js';
 import { buildClassroomActivitySnapshot } from './classroomActivityReport.js';
 
@@ -65,6 +66,7 @@ const INITIAL_FORM = (user) => ({
   grade: '5',
   subject: 'Математика',
   curriculumProgramId: 'math-5',
+  officialSourceId: '',
   curriculumTopics: '',
   curriculumSource: '',
   curriculumStatus: '',
@@ -142,6 +144,10 @@ export default function TeacherWorkspace() {
 
   const gradePrograms = useMemo(() => PROGRAMS.filter((program) => Number(program.grade) === Number(form.grade)), [form.grade]);
   const selectedProgram = gradePrograms.find((program) => program.id === form.curriculumProgramId) || gradePrograms[0] || null;
+  const gradeOfficialSources = useMemo(() => (Array.isArray(federalProgramCatalog.programs) ? federalProgramCatalog.programs : [])
+    .filter((item) => item.subject !== 'all-school-subjects' && Array.isArray(item.gradeRange) && Number(form.grade) >= Number(item.gradeRange[0]) && Number(form.grade) <= Number(item.gradeRange[1]) && typeof item.url === 'string' && item.url.startsWith('https://'))
+    .sort((a, b) => String(a.title).localeCompare(String(b.title), 'ru')), [form.grade]);
+  const selectedOfficialSource = gradeOfficialSources.find((item) => item.id === form.officialSourceId) || gradeOfficialSources[0] || null;
 
   const doc = useMemo(() => TEACHER_DOCUMENTS.find((item) => item.id === docType) || TEACHER_DOCUMENTS[0], [docType]);
   const updateForm = (name, value) => setForm((old) => ({ ...old, [name]: value }));
@@ -348,6 +354,19 @@ export default function TeacherWorkspace() {
             <div className="flex flex-wrap gap-2">
               <button type="button" className="btn-ghost !py-2" onClick={fillFromCurriculum} disabled={!selectedProgram}>Заполнить из ФОП/ФРП</button>
               <button type="button" className="btn-ghost !py-2" onClick={() => navigate('/planner?p=' + encodeURIComponent(selectedProgram?.id || ''))} disabled={!selectedProgram}>Открыть КТП</button>
+            </div>
+            <div className="card p-3 space-y-2">
+              <div className="font-black text-sm">Официальные материалы по классу</div>
+              <p className="text-xs font-semibold text-ink/50">Каталог содержит 61 запись федеральных программ и ссылок (55 прямых PDF-ссылок по состоянию на 21.10.2026). Это метаданные: текст PDF не добавляется в контекст ИИ автоматически.</p>
+              {gradeOfficialSources.length ? (
+                <>
+                  <select className={fieldClass} aria-label="Официальный источник по классу" value={selectedOfficialSource?.id || ''} onChange={(e) => updateForm('officialSourceId', e.target.value)}>
+                    {gradeOfficialSources.map((item) => <option key={item.id} value={item.id}>{item.title}{item.pages ? ' · ' + item.pages + ' стр.' : ''}</option>)}
+                  </select>
+                  {selectedOfficialSource && <div className="text-[11px] font-semibold text-ink/50">{selectedOfficialSource.level || selectedOfficialSource.documentType || 'Официальный ресурс'} · {selectedOfficialSource.contentStoredLocally ? 'текст доступен локально' : 'текст не встроен в ИИ'} · актуальность и класс нужно сверить с оригиналом.</div>}
+                  {selectedOfficialSource && <a className="inline-block text-sm font-bold text-primary underline" href={selectedOfficialSource.url} target="_blank" rel="noreferrer">{/\\.pdf(?:$|\\?)/i.test(selectedOfficialSource.url) ? 'Открыть официальный PDF' : 'Открыть официальный ресурс'}</a>}
+                </>
+              ) : <p className="text-xs font-semibold text-ink/50">В каталоге нет отдельной записи для выбранного класса. Откройте <a className="underline text-primary" href="https://edsoo.ru/rabochie-programmy/" target="_blank" rel="noreferrer">общий каталог ЕДСОО</a>.</p>}
             </div>
             <Field label="Темы программы (по одной строке; для КТП)" name="curriculumTopics" value={form.curriculumTopics} onChange={updateForm} multiline help="Заполните кнопкой выше, затем исправьте темы и формулировки, если нужно." />
             <Field label="Источник программы" name="curriculumSource" value={form.curriculumSource} onChange={updateForm} multiline />
