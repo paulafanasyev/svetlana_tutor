@@ -1,0 +1,42 @@
+name: Federal Program Link Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - 'apps/web/src/data/federalWorkingProgramCatalog.json'
+      - 'apps/web/src/data/curriculumLinkAudit.js'
+      - 'scripts/audit-federal-program-links.mjs'
+      - '.github/workflows/federal-program-link-audit.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: federal-program-link-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check official source and release links
+        run: node scripts/audit-federal-program-links.mjs
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: federal-program-link-audit-${{ github.run_id }}
+          path: artifacts/federal-program-link-audit-*.json
+          if-no-files-found: warn
+          retention-days: 90
