@@ -66,7 +66,7 @@ export function buildElectronicJournalReport(entries, {
   const topTopics = Array.from(topics.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru')).slice(0, 8);
   const stamp = generatedAt instanceof Date ? generatedAt : new Date(generatedAt);
   const dateLabel = Number.isNaN(stamp.getTime()) ? 'не указана' : stamp.toLocaleDateString('ru-RU');
-  const periodLabel = invalidPeriod ? 'ОШИБКА: начало периода не может быть позже или равно концу' : (periodStart || periodEnd
+  const periodLabel = invalidPeriod ? 'ОШИБКА: начало периода позже конца' : (periodStart || periodEnd
     ? (labelDate(periodStart) || 'начало не задано') + ' — ' + (labelDate(periodEnd) || 'конец не задан')
     : 'все записи, возвращённые журналом');
   const kindLines = KINDS.filter((kind) => byKind[kind] > 0).map((kind) => '- ' + kindTitle(kind) + ': ' + byKind[kind] + '.');
@@ -81,7 +81,7 @@ export function buildElectronicJournalReport(entries, {
     'Источник: записи, доступные текущему учителю через электронный журнал приложения.',
     '',
     '## Объём записей',
-    ...(invalidPeriod ? ['- ОШИБКА: проверьте даты периода; начальная дата должна быть раньше конечной.'] : []),
+    ...(invalidPeriod ? ['- ОШИБКА: проверьте даты периода; начальная дата не может быть позже конечной.'] : []),
     '- Записей в выбранном периоде: ' + filtered.length + '.',
     '- Уникальных учащихся, у которых есть записи: ' + studentsWithEntries.size + '.',
     '- Уникальных учащихся хотя бы с одной итоговой отметкой: ' + studentsWithMarks.size + '.',
