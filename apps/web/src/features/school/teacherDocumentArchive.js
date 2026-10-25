@@ -147,3 +147,18 @@ export function mergeTeacherDocumentDrafts(existing, incoming, limit = 30) {
   }
   return { drafts: [...kept, ...added], addedCount: added.length, skippedCount: skipped };
 }
+
+export function filterTeacherDocumentDrafts(drafts, query) {
+  const needle = String(query || '').trim().toLocaleLowerCase('ru-RU');
+  if (!needle) return Array.isArray(drafts) ? drafts : [];
+  return (Array.isArray(drafts) ? drafts : []).filter((draft) => {
+    const formValues = draft?.form && typeof draft.form === 'object'
+      ? Object.values(draft.form).filter((value) => typeof value === 'string' || typeof value === 'number')
+      : [];
+    const haystack = [draft?.title, draft?.type, draft?.content, ...formValues]
+      .map((value) => String(value ?? ''))
+      .join(' ')
+      .toLocaleLowerCase('ru-RU');
+    return haystack.includes(needle);
+  });
+}
