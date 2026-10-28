@@ -6,6 +6,8 @@ const triageUrl = new URL('../../../../data/school-materials/curriculum-gap-tria
 const triage = JSON.parse(await readFile(triageUrl, 'utf8'));
 const regulatoryDeltaUrl = new URL('../../../../data/school-materials/regulatory-delta-2026-10-28.json', import.meta.url);
 const regulatoryDelta = JSON.parse(await readFile(regulatoryDeltaUrl, 'utf8'));
+const currentTriageUrl = new URL('../../../../data/school-materials/curriculum-gap-triage-2026-10-29.json', import.meta.url);
+const currentTriage = JSON.parse(await readFile(currentTriageUrl, 'utf8'));
 
 test('gap-triage preserves all 166 unresolved grade/subject rows without duplicates', () => {
   assert.equal(triage.items.length, 166);
@@ -89,5 +91,25 @@ test('2026 FOP amendment is tracked without treating current corpus as updated',
 
   for (const target of regulatoryDelta.repositoryReviewTargets) {
     assert.ok(target.path && target.reason.length > 20);
+  }
+});
+
+test('current gap queue excludes only the 11 manual mathematics-source mapping fixes and keeps all content unverified', () => {
+  assert.equal(currentTriage.items.length, 155);
+  assert.equal(currentTriage.metrics.gapRows, 155);
+  assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 11);
+  assert.equal(currentTriage.metrics.completenessVerified, 0);
+  assert.equal(currentTriage.metrics.resolvedApplicability, 0);
+  assert.equal(currentTriage.resolvedComponentRows.length, 11);
+  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 155);
+  assert.ok(currentTriage.items.every((item) =>
+    item.decision === 'NEEDS_MANUAL_REVIEW'
+    && item.completeCoverage === 'NOT_PROVEN'
+    && item.currentApplicability === 'NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX'
+  ));
+  for (const item of currentTriage.resolvedComponentRows) {
+    assert.equal(item.completeCoverage, 'NOT_PROVEN');
+    assert.ok(item.evidenceUrls.length > 0);
+    assert.ok(item.evidenceUrls.every((url) => url.startsWith('https://edsoo.ru/')));
   }
 });
