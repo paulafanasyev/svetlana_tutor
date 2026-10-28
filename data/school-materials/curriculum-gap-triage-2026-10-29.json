@@ -41,7 +41,8 @@
     "candidateSourceRangeMismatchRows": 51,
     "candidateSourceRangesVerified": 51,
     "sourceApplicabilityResolvedByRangeCheck": 0,
-    "rowsResolvedByOfficialScope": 4
+    "rowsResolvedByOfficialScope": 4,
+    "rowsMappedToOptionalVariantScope": 3
   },
   "policy": [
     "All remaining items stay NEEDS_MANUAL_REVIEW, NOT_PROVEN and NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX until evidence is found for that exact grade/subject.",
@@ -6050,6 +6051,39 @@
         "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf"
       ],
       "note": "Официальные ФРП ОБЗР охватывают 8–9 и 10–11 классы; отдельная программа предмета для 1–4 классов не указана. Это закрывает федеральный предметный диапазон, но не подтверждает отсутствие вариативных/внеурочных курсов и не доказывает полноту материалов."
+    },
+    {
+      "grade": 5,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OPTIONAL_VARIANT_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf"
+      ],
+      "note": "Официальный FAQ ЕДСОО прямо допускает ОБЗР в 5–7 классах из часов вариативной части учебного плана. Это не равнозначно обязательной ФРП для этих классов и не подтверждает наличие полного набора материалов."
+    },
+    {
+      "grade": 6,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OPTIONAL_VARIANT_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf"
+      ],
+      "note": "Официальный FAQ ЕДСОО прямо допускает ОБЗР в 5–7 классах из часов вариативной части учебного плана. Это не равнозначно обязательной ФРП для этих классов и не подтверждает наличие полного набора материалов."
+    },
+    {
+      "grade": 7,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OPTIONAL_VARIANT_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf"
+      ],
+      "note": "Официальный FAQ ЕДСОО прямо допускает ОБЗР в 5–7 классах из часов вариативной части учебного плана. Это не равнозначно обязательной ФРП для этих классов и не подтверждает наличие полного набора материалов."
     }
   ]
 }
