@@ -67,7 +67,7 @@
     "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE": "Класс находится вне диапазона официальной федеральной рабочей программы для этого предмета; это не доказывает отсутствие региональных/вариативных курсов.",
     "OPTIONAL_VARIANT_PROGRAM_RANGE": "Официальный FAQ ЕДСОО допускает курс ОБЗР в 5–7 классах за счёт вариативной части; не маркировать как обязательную ФРП и не считать полной программой.",
     "SCHEDULED_FROM_2027_2028": "Программа опубликована, но применение в этом классе начинается с 2027/2028 учебного года; не применять раньше срока.",
-    "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OPTIONAL_VARIANT_PROGRAM_REFERENCE — курс разрешён в вариативной части; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
+    "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE/PARENT_PHYSICS_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OPTIONAL_VARIANT_PROGRAM_REFERENCE — курс разрешён в вариативной части; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
   },
   "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
   "rows": [
@@ -9460,16 +9460,18 @@
       "grade": 10,
       "subject": "astronomy",
       "subjectLabel": "Астрономия",
-      "indexedResourceCount": 0,
-      "status": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "indexedResourceCount": 1,
+      "status": "LINKS_AVAILABLE",
       "completeCoverage": "NOT_PROVEN",
-      "curriculumApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "curriculumApplicability": "RELATED_PARENT_PROGRAM_ONLY",
       "federalBibliographyRecordCount": 0,
       "verifiedOfficialLessonIndexCount": 0,
-      "officialWorkingProgramCount": 0,
-      "releaseAvailableWorkingProgramCount": 0,
-      "officialProgramRelationship": "NOT_ESTABLISHED",
-      "officialProgramComponentMappingIds": [],
+      "officialWorkingProgramCount": 1,
+      "releaseAvailableWorkingProgramCount": 1,
+      "officialProgramRelationship": "PARENT_PHYSICS_PROGRAM_REFERENCE",
+      "officialProgramComponentMappingIds": [
+        "astronomy-via-physics"
+      ],
       "officialExtracurricularProgramCount": 0,
       "locallyStoredOriginalTaskCount": 0,
       "federalBibliographyFullTextCount": 0,
@@ -10441,16 +10443,18 @@
       "grade": 11,
       "subject": "astronomy",
       "subjectLabel": "Астрономия",
-      "indexedResourceCount": 0,
-      "status": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "indexedResourceCount": 1,
+      "status": "LINKS_AVAILABLE",
       "completeCoverage": "NOT_PROVEN",
-      "curriculumApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "curriculumApplicability": "RELATED_PARENT_PROGRAM_ONLY",
       "federalBibliographyRecordCount": 0,
       "verifiedOfficialLessonIndexCount": 0,
-      "officialWorkingProgramCount": 0,
-      "releaseAvailableWorkingProgramCount": 0,
-      "officialProgramRelationship": "NOT_ESTABLISHED",
-      "officialProgramComponentMappingIds": [],
+      "officialWorkingProgramCount": 1,
+      "releaseAvailableWorkingProgramCount": 1,
+      "officialProgramRelationship": "PARENT_PHYSICS_PROGRAM_REFERENCE",
+      "officialProgramComponentMappingIds": [
+        "astronomy-via-physics"
+      ],
       "officialExtracurricularProgramCount": 0,
       "locallyStoredOriginalTaskCount": 0,
       "federalBibliographyFullTextCount": 0,
@@ -10866,9 +10870,9 @@
   "summary": {
     "subjectGradeRows": 429,
     "catalogSubjectCount": 39,
-    "rowsWithAtLeastOneIndexedLink": 259,
-    "rowsWithoutExactGradeSubjectRecord": 170,
-    "rowsWithoutRecordsRequiringReview": 137,
+    "rowsWithAtLeastOneIndexedLink": 261,
+    "rowsWithoutExactGradeSubjectRecord": 168,
+    "rowsWithoutRecordsRequiringReview": 135,
     "subjectsWithUnindexedGradePairs": 23,
     "unindexedGradePairsBySubject": [
       {
@@ -10891,11 +10895,9 @@
           6,
           7,
           8,
-          9,
-          10,
-          11
+          9
         ],
-        "count": 11
+        "count": 9
       },
       {
         "subject": "biology",
@@ -11170,8 +11172,8 @@
         "count": 5
       }
     ],
-    "rowsWithAnExplicitWorkingProgram": 207,
-    "rowsSupportedViaComponentCrosswalk": 33,
+    "rowsWithAnExplicitWorkingProgram": 209,
+    "rowsSupportedViaComponentCrosswalk": 35,
     "rowsWithAtLeastOneBibliographyRecord": 149,
     "rowsWithAGradeVerifiedOfficialLesson": 18,
     "rowsWithAtLeastOneOriginalPracticeTask": 73,
