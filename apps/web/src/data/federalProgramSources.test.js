@@ -50,6 +50,13 @@ test('official sources resolve by subject and grade with overlapping grade range
     { schoolYear: '2026/2027', startYear: 2026, grades: [5] },
     { schoolYear: '2027/2028', startYear: 2027, grades: [5, 6, 7] },
   ]);
+  const obzrOptional = findOfficialProgramSources('ОБЗР', 5);
+  assert.equal(obzrOptional.length, 1);
+  assert.equal(obzrOptional[0].id, 'edsoo-obzr-optional-scope-5-7');
+  assert.equal(obzrOptional[0].scopeOnly, true);
+  assert.equal(obzrOptional[0].contentStoredLocally, false);
+  assert.equal(obzrOptional[0].mirrorAllowed, false);
+  assert.match(obzrOptional[0].rightsStatus, /not a full FRP/i);
   const obzr8 = findOfficialProgramSources('ОБЗР', 8);
   assert.ok(obzr8.some((item) => item.id === 'frp-ooo-obzr-8-9' && item.mirrorAllowed === false && item.contentStoredLocally === false));
   const obzr10 = findOfficialProgramSources('Основы безопасности и защиты Родины', 10);
@@ -67,6 +74,10 @@ test('course aliases map to curriculum catalogue subject identifiers', () => {
 });
 
 test('the grade-wide fallback only shows valid sources applicable to the grade', () => {
+  const obzrSources = listOfficialProgramSourcesForGrade(5, 50);
+  assert.ok(obzrSources.some((item) => item.id === 'edsoo-obzr-optional-scope-5-7'));
+  assert.ok(obzrSources.every((item) => item.gradeRange[0] <= 5 && item.gradeRange[1] >= 5));
+
   const sources = listOfficialProgramSourcesForGrade(3, 20);
   assert.ok(sources.length > 0);
   assert.ok(sources.every((item) => item.gradeRange[0] <= 3 && item.gradeRange[1] >= 3));
