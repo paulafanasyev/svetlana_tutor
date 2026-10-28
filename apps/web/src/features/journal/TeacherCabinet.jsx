@@ -4,6 +4,7 @@ import { api } from '../../core/api.js';
 import { Stat, ProgressBar } from '../../ui/kit.jsx';
 import { sfx } from '../../audio/sfx.js';
 import MathCabinet from '../math/MathCabinet.jsx';
+import { SLUGS, MODES } from '../../data/games/subjects.js';
 
 const KIND_ICON = { lesson: '📘', quiz: '📝', homework: '🏠', note: '📌' };
 const MARK_CLS = (m) => (m >= 5 ? '!bg-emerald-100 text-emerald-700' : m === 4 ? '!bg-sky-100 text-sky-700' : m === 3 ? '!bg-amber-100 text-amber-700' : '!bg-rose-100 text-rose-600');
@@ -11,6 +12,16 @@ const MARK_CLS = (m) => (m >= 5 ? '!bg-emerald-100 text-emerald-700' : m === 4 ?
 function ago(at, t) {
   const d = Math.floor((Date.now() - at) / 86400000);
   return d <= 0 ? t('cab.today') : d + ' ' + t('cab.daysAgo');
+}
+
+const GAME_MODE_NAMES = Object.fromEntries(MODES.map((mode) => [mode.id, mode.name]));
+function schoolGameSubject(result) {
+  if (result.subjectSlug === 'algebra') return Number(result.grade) >= 10 ? 'Алгебра и начала математического анализа' : 'Алгебра';
+  return Object.entries(SLUGS).find(([, slug]) => slug === result.subjectSlug)?.[0] || result.subjectSlug;
+}
+function gameLastAt(ms) {
+  if (!ms) return '—';
+  return new Date(ms).toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
 }
 
 export default function TeacherCabinet() {
@@ -92,6 +103,41 @@ export default function TeacherCabinet() {
           </tbody>
         </table>
       </div>
+
+      {/* Detailed school-game results are scoped to the teacher's own class roster. */}
+      <section className="card p-4 mb-6 space-y-3" aria-label="Результаты школьных игр">
+        <div>
+          <h2 className="font-black text-lg">🎮 Результаты игр, заданий и тестов</h2>
+          <p className="text-xs font-semibold text-ink/55 mt-1">Ответы сгруппированы по предмету, классу, режиму игры и теме. Точность считается по сохранённым ответам, а не по наградам.</p>
+        </div>
+        {!roster.some((student) => (student.gameResults || []).length > 0) && (
+          <p className="text-sm font-semibold text-ink/50">Пока нет результатов школьных игр. После первых прохождений здесь появятся верные ответы, точность, темы и время последней попытки.</p>
+        )}
+        {roster.filter((student) => (student.gameResults || []).length > 0).map((student) => {
+          const results = student.gameResults || [];
+          const total = results.reduce((sum, result) => sum + result.total, 0);
+          const correct = results.reduce((sum, result) => sum + result.correct, 0);
+          return (
+            <details key={student.id} className="rounded-2xl bg-soft/60 p-3">
+              <summary className="cursor-pointer font-black">
+                {student.name} · {total} ответов · {total ? Math.round(correct / total * 100) : 0}% точность
+              </summary>
+              <div className="space-y-2 mt-3">
+                {results.map((result) => (
+                  <div key={result.subjectSlug + '-' + result.grade + '-' + result.mode + '-' + result.topic} className="rounded-xl bg-white p-3">
+                    <div className="font-black text-sm">{schoolGameSubject(result)}, {result.grade} класс · {GAME_MODE_NAMES[result.mode] || result.mode}</div>
+                    <div className="text-sm font-semibold mt-1">{result.topic}</div>
+                    <div className="text-xs font-bold text-ink/65 mt-1">
+                      Верно {result.correct} из {result.total} · точность {Math.round(result.accuracy * 100)}% · среднее время {Math.round(result.avgDurationMs / 100) / 10} с
+                    </div>
+                    <div className="text-[11px] font-semibold text-ink/45 mt-1">Последняя попытка: {gameLastAt(result.lastAt)}</div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          );
+        })}
+      </section>
 
       {/* Math: per-student stats and homework (demo mode) */}
       {classId && <MathCabinet classId={classId} />}
