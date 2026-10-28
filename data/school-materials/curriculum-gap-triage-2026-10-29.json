@@ -37,7 +37,10 @@
     "rowsResolvedByHints": 0,
     "allHintsAreNonResolving": true,
     "rowsResolvedByOfficialComponentCrosswalk": 15,
-    "rowsResolvedBySubjectTaxonomy": 10
+    "rowsResolvedBySubjectTaxonomy": 10,
+    "candidateSourceRangeMismatchRows": 51,
+    "candidateSourceRangesVerified": 51,
+    "sourceApplicabilityResolvedByRangeCheck": 0
   },
   "policy": [
     "All remaining items stay NEEDS_MANUAL_REVIEW, NOT_PROVEN and NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX until evidence is found for that exact grade/subject.",
@@ -4185,6 +4188,1858 @@
         }
       ],
       "sourceId": "frp-ooo-dnkr-5-7"
+    }
+  ],
+  "sourceRangeReview": [
+    {
+      "grade": 1,
+      "subject": "english-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-english-2-4",
+          "title": "Иностранный (английский) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_anglijskij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-english-5-9",
+          "title": "Иностранный (английский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_angl_5-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-english-basic-10-11",
+          "title": "Иностранный (английский) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_angl-yaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-english-second-10-11",
+          "title": "Английский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "french-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-french-5-9",
+          "title": "Иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2024/03/frp_ooo_franczuzskij_yazyk_29032024_itog.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-french-second-5-9",
+          "title": "Второй иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/26_frp_franczuzskij_vi_5_9_klassy_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-french-second-10-11",
+          "title": "Второй иностранный (французский) язык, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "spanish-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-spanish-second-5-9",
+          "title": "Второй иностранный (испанский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-spanish-second-10-11",
+          "title": "Испанский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_ispanskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "chinese-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chinese-second-5-9",
+          "title": "Второй иностранный (китайский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chinese-second-10-11",
+          "title": "Китайский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "informatics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-informatics-basic-7-9",
+          "title": "Информатика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-informatics-advanced-7-9",
+          "title": "Информатика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-informatics-basic-10-11",
+          "title": "Информатика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "social-studies",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-social-studies-2026",
+          "title": "Обществознание, основное общее образование",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-social-studies-10-11",
+          "title": "Обществознание, среднее общее образование",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "biology",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-biology-basic-5-9",
+          "title": "Биология, базовый уровень, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-biology-advanced-7-9",
+          "title": "Биология, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/17_frp_biologiya_7_9_klassy_ugl_itog_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-basic-10-11",
+          "title": "Биология, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-advanced-10-11",
+          "title": "Биология, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "physics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-physics-basic-7-9",
+          "title": "Физика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-physics-advanced-7-9",
+          "title": "Физика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-physics-basic-10-11",
+          "title": "Физика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 1,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "french-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-french-5-9",
+          "title": "Иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2024/03/frp_ooo_franczuzskij_yazyk_29032024_itog.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-french-second-5-9",
+          "title": "Второй иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/26_frp_franczuzskij_vi_5_9_klassy_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-french-second-10-11",
+          "title": "Второй иностранный (французский) язык, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "spanish-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-spanish-second-5-9",
+          "title": "Второй иностранный (испанский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-spanish-second-10-11",
+          "title": "Испанский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_ispanskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "chinese-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chinese-second-5-9",
+          "title": "Второй иностранный (китайский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chinese-second-10-11",
+          "title": "Китайский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "informatics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-informatics-basic-7-9",
+          "title": "Информатика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-informatics-advanced-7-9",
+          "title": "Информатика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-informatics-basic-10-11",
+          "title": "Информатика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "social-studies",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-social-studies-2026",
+          "title": "Обществознание, основное общее образование",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-social-studies-10-11",
+          "title": "Обществознание, среднее общее образование",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "biology",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-biology-basic-5-9",
+          "title": "Биология, базовый уровень, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-biology-advanced-7-9",
+          "title": "Биология, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/17_frp_biologiya_7_9_klassy_ugl_itog_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-basic-10-11",
+          "title": "Биология, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-advanced-10-11",
+          "title": "Биология, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "physics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-physics-basic-7-9",
+          "title": "Физика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-physics-advanced-7-9",
+          "title": "Физика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-physics-basic-10-11",
+          "title": "Физика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 2,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "french-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-french-5-9",
+          "title": "Иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2024/03/frp_ooo_franczuzskij_yazyk_29032024_itog.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-french-second-5-9",
+          "title": "Второй иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/26_frp_franczuzskij_vi_5_9_klassy_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-french-second-10-11",
+          "title": "Второй иностранный (французский) язык, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "spanish-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-spanish-second-5-9",
+          "title": "Второй иностранный (испанский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-spanish-second-10-11",
+          "title": "Испанский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_ispanskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "chinese-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chinese-second-5-9",
+          "title": "Второй иностранный (китайский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chinese-second-10-11",
+          "title": "Китайский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "social-studies",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-social-studies-2026",
+          "title": "Обществознание, основное общее образование",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-social-studies-10-11",
+          "title": "Обществознание, среднее общее образование",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "physics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-physics-basic-7-9",
+          "title": "Физика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-physics-advanced-7-9",
+          "title": "Физика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-physics-basic-10-11",
+          "title": "Физика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 3,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "french-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-french-5-9",
+          "title": "Иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2024/03/frp_ooo_franczuzskij_yazyk_29032024_itog.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-french-second-5-9",
+          "title": "Второй иностранный (французский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/26_frp_franczuzskij_vi_5_9_klassy_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-french-second-10-11",
+          "title": "Второй иностранный (французский) язык, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "spanish-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-spanish-second-5-9",
+          "title": "Второй иностранный (испанский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-spanish-second-10-11",
+          "title": "Испанский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_ispanskij_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "chinese-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chinese-second-5-9",
+          "title": "Второй иностранный (китайский) язык, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chinese-second-10-11",
+          "title": "Китайский язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "social-studies",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-social-studies-2026",
+          "title": "Обществознание, основное общее образование",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-social-studies-10-11",
+          "title": "Обществознание, среднее общее образование",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "biology",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-biology-basic-5-9",
+          "title": "Биология, базовый уровень, 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-biology-advanced-7-9",
+          "title": "Биология, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/17_frp_biologiya_7_9_klassy_ugl_itog_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-basic-10-11",
+          "title": "Биология, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-biology-advanced-10-11",
+          "title": "Биология, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "physics",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-physics-basic-7-9",
+          "title": "Физика, базовый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-physics-advanced-7-9",
+          "title": "Физика, углублённый уровень, 7–9 классы",
+          "gradeRange": [
+            7,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-physics-basic-10-11",
+          "title": "Физика, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 4,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 5,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 5,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 5,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 6,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 6,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 6,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 7,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 7,
+      "subject": "chemistry",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-chemistry-basic-8-9",
+          "title": "Химия, базовый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-ooo-chemistry-advanced-8-9",
+          "title": "Химия, углублённый уровень, 8–9 классы",
+          "gradeRange": [
+            8,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-basic-10-11",
+          "title": "Химия, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-chemistry-advanced-10-11",
+          "title": "Химия, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 7,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 8,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 8,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 9,
+      "subject": "german-language",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-german-2-4",
+          "title": "Иностранный (немецкий) язык, 2–4 классы",
+          "gradeRange": [
+            2,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_nemeczkij-yazyk_2-4.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-basic-10-11",
+          "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-advanced-10-11",
+          "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+          "checkedAt": "2026-10-21"
+        },
+        {
+          "id": "frp-soo-german-second-10-11",
+          "title": "Немецкий язык, второй иностранный, 10–11 классы",
+          "gradeRange": [
+            10,
+            11
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 9,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 9,
+      "subject": "visual-arts",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-visual-arts-1-4",
+          "title": "Изобразительное искусство, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 10,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 10,
+      "subject": "technology",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-technology-5-9",
+          "title": "Труд (технология), 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 10,
+      "subject": "visual-arts",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-visual-arts-1-4",
+          "title": "Изобразительное искусство, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 11,
+      "subject": "world-around-us",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-world-1-4",
+          "title": "Окружающий мир, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 11,
+      "subject": "technology",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-ooo-technology-5-9",
+          "title": "Труд (технология), 5–9 классы",
+          "gradeRange": [
+            5,
+            9
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
+    },
+    {
+      "grade": 11,
+      "subject": "visual-arts",
+      "findingStatus": "VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE",
+      "candidates": [
+        {
+          "id": "frp-noo-visual-arts-1-4",
+          "title": "Изобразительное искусство, 1–4 классы",
+          "gradeRange": [
+            1,
+            4
+          ],
+          "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+          "checkedAt": "2026-10-21"
+        }
+      ],
+      "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
+      "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
+      "completeCoverage": "NOT_PROVEN"
     }
   ]
 }
