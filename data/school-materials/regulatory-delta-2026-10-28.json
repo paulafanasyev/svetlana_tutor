@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-28",
+  "status": "AMENDMENT_SCOPE_REVIEW_PENDING",
+  "purpose": "Track the newly published 2026 amendment to federal educational programs without claiming that existing curriculum records are updated or complete.",
+  "act": {
+    "title": "Приказ Минпросвещения России от 19.08.2026 № 576",
+    "subject": "О внесении изменений в некоторые приказы Минпросвещения России, касающиеся федеральных образовательных программ начального общего, основного общего и среднего общего образования",
+    "signedDate": "2026-08-19",
+    "registrationDate": "2026-10-12",
+    "registrationNumber": "88710",
+    "officialPublicationUrl": "https://publication.pravo.gov.ru/document/0001202610130011",
+    "officialReferencePage": "https://edsoo.ru/normativnye-dokumenty-_/",
+    "readableTextUrl": "https://www.consultant.ru/document/cons_doc_LAW_546716/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+    "generalEffectiveRule": "Вступает в силу по истечении 10 дней после дня официального опубликования; исключения по иностранному языку 6–9 классов перечислены отдельно в приказе.",
+    "effectiveDateException": {
+      "area": "Содержание обучения и предметные результаты по предмету «Иностранный язык» в 6–9 классах",
+      "effectiveFrom": "2027-09-01",
+      "source": "Пункт 2 приказа № 576: подпункты 10–14 пункта 2 изменений в указанной части вступают в силу с 1 сентября 2027 года."
+    }
+  },
+  "verifiedScopeFromPublishedSummaries": [
+    {
+      "id": "obzr-course-structure",
+      "subjects": ["Основы безопасности и защиты Родины"],
+      "levels": ["ООО", "СОО"],
+      "summary": "Проверить изменение структуры программы ОБЗР: курсы «Начальная военная подготовка» и «Безопасность жизнедеятельности», а также связанное распределение часов.",
+      "reviewStatus": "REVIEW_REQUIRED",
+      "doNotAssume": "Не считать существующее распределение модулей по 8–9 классам актуальным без постатейной сверки приказа и текущей ФРП.",
+      "evidenceUrls": [
+        "https://www.consultant.ru/law/hotdocs/95963.html",
+        "https://base.garant.ru/414811677/"
+      ]
+    },
+    {
+      "id": "foreign-language-delayed-changes",
+      "subjects": ["Иностранный язык", "Иностранный (английский) язык", "Иностранный (немецкий) язык", "Иностранный (французский) язык", "Иностранный (испанский) язык", "Иностранный (китайский) язык"],
+      "levels": ["ООО"],
+      "grades": [6, 7, 8, 9],
+      "effectiveFrom": "2027-09-01",
+      "reviewStatus": "DO_NOT_APPLY_EARLY",
+      "summary": "Разделить действующие до 01.09.2027 требования и редакцию содержания/предметных результатов, вводимую с 01.09.2027.",
+      "evidenceUrls": [
+        "https://edsoo.ru/normativnye-dokumenty-_/",
+        "https://www.consultant.ru/document/cons_doc_LAW_546716/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/"
+      ]
+    },
+    {
+      "id": "native-language-programs",
+      "subjects": ["Государственные языки субъектов РФ", "Родные языки", "Литературное чтение на родных языках", "Родная литература"],
+      "levels": ["НОО", "ООО", "СОО"],
+      "reviewStatus": "RECOMPUTE_COVERAGE_MATRIX",
+      "summary": "Проверить новые/изменённые программы по отдельным государственным и родным языкам; пересчитать точные совпадения, не объединяя эти предметы с русским языком или литературой.",
+      "evidenceUrls": [
+        "https://edsoo.ru/normativnye-dokumenty-_/",
+        "https://www.consultant.ru/law/hotdocs/95963.html"
+      ]
+    },
+    {
+      "id": "senior-secondary-programs",
+      "subjects": ["История", "Обществознание"],
+      "levels": ["СОО"],
+      "grades": [10, 11],
+      "reviewStatus": "REVIEW_REQUIRED",
+      "summary": "Проверить изменения федеральных рабочих программ для 10–11 классов и соответствие используемых записей действующей редакции.",
+      "evidenceUrls": [
+        "https://edsoo.ru/normativnye-dokumenty-_/",
+        "https://www.garant.ru/hotlaw/federal/2273522/"
+      ]
+    }
+  ],
+  "repositoryReviewTargets": [
+    {
+      "path": "apps/web/frp-noo-content.js",
+      "reason": "Source mapping and header comment still identify the 10.11.2025 revision; dynamic extraction was 0/125 in the latest verified CI run."
+    },
+    {
+      "path": "apps/web/src/data/fop/obzr_ooo.json",
+      "reason": "Check current module/course mapping and hours against order №576."
+    },
+    {
+      "path": "apps/web/src/data/fop/obzr_ooo_results.json",
+      "reason": "Check updated subject results and course mapping against order №576."
+    },
+    {
+      "path": "apps/web/src/data/fop/english.json",
+      "reason": "Confirm current version separately from the 6–9 content/results changes scheduled for 2027-09-01."
+    },
+    {
+      "path": "apps/web/src/data/schoolCurriculumCoverage.json",
+      "reason": "Recompute exact subject/grade matches after the language-program catalogue has been reconciled."
+    },
+    {
+      "path": "data/school-materials/curriculum-gap-triage-2026-10-28.json",
+      "reason": "Reassess any of the 166 unresolved cells affected by new/changed subject programs; existing hints must not auto-resolve them."
+    }
+  ],
+  "policy": [
+    "This record is an impact triage, not a legal interpretation or completed content migration.",
+    "Do not apply foreign-language content/results changes for grades 6–9 before 2027-09-01.",
+    "Do not mark a curriculum cell covered from a title match or a listing alone.",
+    "Keep source version, effective date, grade range, official URL, and verification date with every resolved curriculum row.",
+    "The new amendment does not by itself prove that an existing FOP text extraction or OCR record matches the current legally effective text."
+  ],
+  "metrics": {
+    "subjectsOrAreasFlagged": 4,
+    "repositoryTargets": 6,
+    "automaticallyResolvedCurriculumCells": 0,
+    "contentFilesAutomaticallyRewritten": 0
+  }
+}
