@@ -407,6 +407,8 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   const row = (grade, subject) => appCoverage.rows.find((item) => item[0] === grade && item[1] === subject);
   assert.equal(row(3, 'geometry')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
   assert.equal(row(8, 'geometry')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(3, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(3, 'probability-statistics')[5], 'RELATED_PARENT_PROGRAM_ONLY');
   assert.equal(row(6, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
   assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
   assert.ok(appCoverage.rows.every((item) => item[4] === 'NOT_PROVEN'));
