@@ -95,13 +95,13 @@ test('2026 FOP amendment is tracked without treating current corpus as updated',
 });
 
 test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy', () => {
-  assert.equal(currentTriage.items.length, 145);
-  assert.equal(currentTriage.metrics.gapRows, 145);
-  assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 11);
+  assert.equal(currentTriage.items.length, 141);
+  assert.equal(currentTriage.metrics.gapRows, 141);
+  assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 15);
   assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
   assert.equal(currentTriage.metrics.completenessVerified, 0);
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
-  assert.equal(currentTriage.resolvedComponentRows.length, 11);
+  assert.equal(currentTriage.resolvedComponentRows.length, 15);
   assert.equal(currentTriage.taxonomyResolutions.length, 10);
   assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 145);
   assert.ok(currentTriage.items.every((item) =>
