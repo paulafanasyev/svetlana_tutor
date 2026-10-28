@@ -99,6 +99,20 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   assert.equal(currentTriage.metrics.gapRows, 141);
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 15);
   assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
+  assert.equal(currentTriage.metrics.candidateSourceRangeMismatchRows, 51);
+  assert.equal(currentTriage.metrics.candidateSourceRangesVerified, 51);
+  assert.equal(currentTriage.metrics.sourceApplicabilityResolvedByRangeCheck, 0);
+  assert.equal(currentTriage.sourceRangeReview.length, 51);
+  for (const item of currentTriage.sourceRangeReview) {
+    assert.equal(item.findingStatus, 'VERIFIED_CANDIDATE_PROGRAMMES_DO_NOT_INCLUDE_GRADE');
+    assert.equal(item.completeCoverage, 'NOT_PROVEN');
+    assert.ok(item.candidates.length > 0);
+    assert.ok(item.candidates.every((source) =>
+      source.url.startsWith('https://edsoo.ru/')
+      && (item.grade < source.gradeRange[0] || item.grade > source.gradeRange[1])
+    ));
+    assert.match(item.remainingQuestion, /NOT_PROVEN/);
+  }
   assert.equal(currentTriage.metrics.completenessVerified, 0);
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
   assert.equal(currentTriage.resolvedComponentRows.length, 15);
