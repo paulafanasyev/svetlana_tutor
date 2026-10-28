@@ -40,3 +40,30 @@ test('all referenced exact and related programs resolve to evidence records', ()
     Array.isArray(program.gradeRange)
   ));
 });
+
+test('official source hints use the curated registry and never auto-resolve a gap', () => {
+  const sources = new Map(triage.officialSourceRegistry.map((source) => [source.id, source]));
+  assert.equal(sources.size, triage.officialSourceRegistry.length);
+  assert.ok(sources.has('edsoo-program-catalog'));
+  assert.ok(sources.has('edsoo-fop-faq'));
+  assert.equal(triage.metrics.officialScopeHintRows, 166);
+  assert.equal(triage.metrics.rowsWithOfficialPdfScopeHint, 48);
+  assert.equal(triage.metrics.rowsResolvedByHints, 0);
+  assert.equal(triage.metrics.allHintsAreNonResolving, true);
+
+  for (const source of triage.officialSourceRegistry) {
+    assert.ok(source.url.startsWith('https://edsoo.ru/'), `Untrusted official-source host: ${source.url}`);
+    assert.ok(['OFFICIAL_CATALOG', 'OFFICIAL_GUIDANCE', 'OFFICIAL_FRP_PDF'].includes(source.sourceType));
+    assert.ok(typeof source.scopeNote === 'string' && source.scopeNote.length > 20);
+  }
+
+  for (const item of triage.items) {
+    assert.ok(item.officialScopeHintIds.includes('edsoo-program-catalog'));
+    assert.ok(item.officialScopeHintIds.includes('edsoo-fop-faq'));
+    for (const id of item.officialScopeHintIds) {
+      assert.ok(sources.has(id), `Missing official scope source ${id} for ${item.grade}/${item.subject}`);
+    }
+    assert.equal(item.decision, 'NEEDS_MANUAL_REVIEW');
+    assert.equal(item.completeCoverage, 'NOT_PROVEN');
+  }
+});
