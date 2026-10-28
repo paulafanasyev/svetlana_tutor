@@ -10,16 +10,23 @@ top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[3], met
 - `officialSourceRegistry` record keys: id(11), title(11), url(11), publisher(11), sourceType(11), gradeRange(11), subjects(11), scopeNote(11)
   - records mentioning «до 31 августа 20XX»: 0
 
-## curriculum-gap-triage-2026-10-29.json (204138 bytes)
-top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[3], metrics:dict[12], policy:list[5], resolvedComponentRows:list[11], items:list[155], programEvidence:list[45], officialSourceRegistry:list[11]
+## curriculum-gap-triage-2026-10-29.json (204905 bytes)
+top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[4], metrics:dict[13], policy:list[5], resolvedComponentRows:list[11], items:list[145], programEvidence:list[46], officialSourceRegistry:list[12], taxonomyResolutions:list[10], currentProgramScopes:list[2]
 - `resolvedComponentRows` record keys: grade(11), subject(11), previousStatus(11), resolutionStatus(11), mappingId(11), relationship(11), programSourceIds(11), evidenceUrls(11), completeCoverage(11), note(11)
   - records mentioning «до 31 августа 20XX»: 0
-- `items` record keys: grade(155), subject(155), indexedResourceCount(155), sourceMatrixStatus(155), currentApplicability(155), completeCoverage(155), triageStatus(155), decision(155), exactProgramIds(155), relatedProgramHintIds(155), nextStep(155), officialScopeHintIds(155)
+- `items` record keys: grade(145), subject(145), indexedResourceCount(145), sourceMatrixStatus(145), currentApplicability(145), completeCoverage(145), triageStatus(145), decision(145), exactProgramIds(145), relatedProgramHintIds(145), nextStep(145), officialScopeHintIds(145)
   - records mentioning «до 31 августа 20XX»: 0
-- `programEvidence` record keys: id(45), title(45), subject(45), gradeRange(45), url(45), sourceLandingPage(45), checkedAt(45), year(45), rightsStatus(45)
-  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=45
+- `programEvidence` record keys: id(46), title(46), subject(46), gradeRange(46), url(46), sourceLandingPage(46), checkedAt(46), year(46), rightsStatus(46), mirrorAllowed(1), implementationSchedule(1)
+  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=45, LINK_TO_OFFICIAL_SOURCE; no mirroring before rights are confirmed=1
   - records mentioning «до 31 августа 20XX»: 0
-- `officialSourceRegistry` record keys: id(11), title(11), url(11), publisher(11), sourceType(11), gradeRange(11), subjects(11), scopeNote(11)
+- `officialSourceRegistry` record keys: id(12), title(12), url(12), sourceType(12), gradeRange(12), publisher(11), subjects(11), scopeNote(11), checkedAt(1), rightsStatus(1), implementationSchedule(1), resolvingPower(1)
+  - rightsStatus: LINK_ONLY; redistribution and mirroring rights not confirmed=1
+  - records mentioning «до 31 августа 20XX»: 0
+- `taxonomyResolutions` record keys: grade(10), priorSubject(10), status(10), triageDecision(10), evidenceUrls(10), note(10)
+  - status: LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN=10
+  - records mentioning «до 31 августа 20XX»: 0
+- `currentProgramScopes` record keys: subject(2), subjectLabel(2), grades(2), status(2), sourceId(2), schedule(1)
+  - status: CURRENT_FEDERAL_PROGRAM=1, PHASED_IMPLEMENTATION=1
   - records mentioning «до 31 августа 20XX»: 0
 
 ## edsoo-official-lesson-index.json (142208 bytes)
@@ -187,12 +194,12 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-1113", "listRow": 1113, "sectionCode": "2.1.3.2.1.2", "listSection": "2.1", "schoolStage": "secondary", "grade": 11, "title": "Пос (хакас) литературазы. 11 класс: тирен син: thкci угредiг организацияларына учебник = Родная (хакасская) литература. 11 класс: углублённый уровень: учебник для общеобразовательных организаций; 1-е издание; язык издания: хакасский", "authors": "Майнагашева Н.С., Челтыгмашева Л.В.. Боргоякова М.П. и другие", "publisher": "Государственное бюджетное учреждение Республики Хакасия \"Хакасское книжное издательство имени В.М. Торосова\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 413; Приказ № 371", "approvalOrganization": "Государственное бюджетное учреждение Республики Хакасия \"Хакасское книжное издательство имени В.М. Торосова\"", "approvalOrder": "От 26 июня 2025 г. № 495", "allowedUseUntil": "До 31 августа 2030 года", "metadata
     ```
 
-## federal-working-programs.json (92374 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, officialCatalog:str, officialRegistry:str, totalRecords:int, directPdfLinks:int, note:str, programs:list[61], releaseSummary:dict[6]
-- `programs` record keys: id(61), title(61), subject(61), gradeRange(61), level(61), year(61), documentType(61), sourceId(61), sourceLandingPage(61), url(61), fileFormat(61), pages(61), accessStatus(61), rightsStatus(61), contentStoredLocally(61), checkedAt(61), downloadAttemptAt(55), sourceAttributionUrl(55), fileSizeBytes(55), sha256(55), downloadStatus(55), provenance(55), releaseTag(55), releaseAsset(55), releaseUrl(55), storedInRelease(55), urlStatus(6)
-  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=61
-  - provenance: corpus=55
-  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55
+## federal-working-programs.json (94186 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, officialCatalog:str, officialRegistry:str, totalRecords:int, directPdfLinks:int, note:str, programs:list[62], releaseSummary:dict[6]
+- `programs` record keys: id(62), title(62), subject(62), gradeRange(62), level(62), year(62), documentType(62), sourceId(62), sourceLandingPage(62), url(62), fileFormat(62), pages(62), accessStatus(62), rightsStatus(62), contentStoredLocally(62), checkedAt(62), sourceAttributionUrl(56), downloadStatus(56), provenance(56), storedInRelease(56), downloadAttemptAt(55), fileSizeBytes(55), sha256(55), releaseTag(55), releaseAsset(55), releaseUrl(55), urlStatus(6), mirrorAllowed(1), implementationSchedule(1), implementationScheduleSource(1)
+  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=61, LINK_TO_OFFICIAL_SOURCE; do not mirror or store a local copy until redistribution rights are independently confirmed=1
+  - provenance: corpus=55, official-source-link=1
+  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55, LINK_ONLY_NOT_MIRRORED_PENDING_RIGHTS_REVIEW=1
   - records mentioning «до 31 августа 20XX»: 0
 
 ## fipi-exam-materials-2026-2027.json (5770 bytes)
@@ -221,11 +228,11 @@ top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items
   - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-materials.json (27768 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[26], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
+## official-russian-school-materials.json (28638 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[39], sources:list[27], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
 - `schoolStages` record keys: id(3), name(3), grades(3)
   - records mentioning «до 31 августа 20XX»: 0
-- `sources` record keys: id(26), name(26), url(26), kind(26), access(26), gradeRange(26), subjects(26), storesFullTextbooksLocally(22), rightsNote(9), storesFullTextLocally(4), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
+- `sources` record keys: id(27), name(27), url(27), gradeRange(27), subjects(27), kind(26), access(26), storesFullTextbooksLocally(22), rightsNote(10), storesFullTextLocally(5), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
   - records mentioning «до 31 августа 20XX»: 0
 - `collections` record keys: id(3), file(3), description(3)
   - records mentioning «до 31 августа 20XX»: 0
@@ -242,10 +249,10 @@ top-level: schemaVersion:int, reviewedAt:str, status:str, purpose:str, act:dict[
 - `repositoryReviewTargets` record keys: path(6), reason(6)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (666871 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[6], rowScopeNote:str, rows:list[407], summary:dict[30]
-- `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialProgramRelationship(407), officialProgramComponentMappingIds(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), openReferenceResourceCount(407), officialExamResourceCount(407), publicLessonPlatformResourceCount(407), additionalOfficialSubjectResourceCount(407), officialPlatformEntryPointCount(407), additionalCatalogResourceCount(407), notes(407)
-  - status: LINKS_AVAILABLE=252, NO_EXACT_GRADE_SUBJECT_RECORD=155
+## school-curriculum-coverage.json (704830 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[39], coveragePolicy:str, statusDefinitions:dict[9], rowScopeNote:str, rows:list[429], summary:dict[31]
+- `rows` record keys: grade(429), subject(429), subjectLabel(429), indexedResourceCount(429), status(429), completeCoverage(429), curriculumApplicability(429), federalBibliographyRecordCount(429), verifiedOfficialLessonIndexCount(429), officialWorkingProgramCount(429), releaseAvailableWorkingProgramCount(429), officialProgramRelationship(429), officialProgramComponentMappingIds(429), officialExtracurricularProgramCount(429), locallyStoredOriginalTaskCount(429), federalBibliographyFullTextCount(429), openReferenceResourceCount(429), officialExamResourceCount(429), publicLessonPlatformResourceCount(429), additionalOfficialSubjectResourceCount(429), officialPlatformEntryPointCount(429), additionalCatalogResourceCount(429), notes(429)
+  - status: LINKS_AVAILABLE=255, NO_EXACT_GRADE_SUBJECT_RECORD=145, OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE=18, LEGACY_ARCHIVAL_ONLY=11
   - records mentioning «до 31 августа 20XX»: 0
 
 ## subject-component-crosswalk.json (6735 bytes)
@@ -258,7 +265,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-28, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-28, pages=312
-- federal-working-programs.json: generatedAt=2026-10-28T18:09:40.571852+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-28T18:24:45.843704+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
