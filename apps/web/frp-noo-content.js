@@ -211,6 +211,16 @@ export function isTransientSourceError(message) {
   return /документ доступен только по расписанию|HTTP (?:418|429|5[0-9]{2})|timed? ?out|timeout|operation was aborted|fetch failed|ECONNRESET|ETIMEDOUT|UND_ERR_CONNECT_TIMEOUT|ENOTFOUND|EAI_AGAIN|network error/i.test(String(message));
 }
 
+// Резервный корпус сохраняет обычные CI-сборки при временном ограничении внешнего источника.
+// В nightly source-check временная недоступность означает неуспех проверки, а не успешную проверку актуальности.
+export function sourceFailureMode(errors, eventName = '') {
+  if (!errors.length) return 'no-error';
+  if (errors.every(isTransientSourceError)) {
+    return eventName === 'schedule' ? 'fail-live-source-check' : 'fallback-with-warning';
+  }
+  return 'fail-build';
+}
+
 // Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
 // Собирает только подпункты одного корневого раздела, не подхватывая следующий раздел ФОП.
 export function flatSubtreeResults(lines, root) {
@@ -456,9 +466,15 @@ export default function nooContent() {
           for (let i = 0, k = 0; i < text.length && k < 1; i += 1900, k++) console.log(`::notice title=c${k}::${esc(text.slice(i, i + 1900))}`);
           // Внешний источник может ограничивать CI-запросы не только расписанием, но и антиботом/тайм-аутами.
           // В таком случае оставляем встроенный корпус и явно предупреждаем; ошибки парсинга не маскируем.
-          const sourceUnavailable = errors.length > 0 && errors.every(e => isTransientSourceError(e));
-          if (sourceUnavailable) console.log(`::warning title=noo-content::Источник КонсультантПлюс временно недоступен для CI; ${n} из ${EXPECTED} динамических разделов, используются встроенные материалы`);
-          else if (n < EXPECTED) this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
+          const sourceMode = sourceFailureMode(errors, process.env.GITHUB_EVENT_NAME || '');
+          if (sourceMode === 'fallback-with-warning' || sourceMode === 'fail-live-source-check') {
+            console.log(`::warning title=noo-content::Источник КонсультантПлюс временно недоступен для CI; ${n} из ${EXPECTED} динамических разделов, используются встроенные материалы`);
+            if (sourceMode === 'fail-live-source-check') {
+              this.error(`Проверка живого источника по расписанию не прошла: ${n} из ${EXPECTED} динамических разделов. Ошибки: ${errors.join(' | ')}`);
+            }
+          } else if (sourceMode === 'fail-build' || n < EXPECTED) {
+            this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
+          }
         }
         mod = `export default ${JSON.stringify(map)};`;
       }
