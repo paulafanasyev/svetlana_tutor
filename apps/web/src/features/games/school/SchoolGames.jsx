@@ -12,6 +12,7 @@ import { sfx } from '../../../audio/sfx.js';
 import { ProgressBar, Confetti } from '../../../ui/kit.jsx';
 import { GRADES, ICONS, MODES, subjectsOfGrade } from '../../../data/games/subjects.js';
 import { loadPack } from '../../../data/games/loadPack.js';
+import { makeSchoolGameTaskType } from '../../../data/games/results.js';
 
 const readGrade = (k) => { try { const g = Number(JSON.parse(localStorage.getItem(k))); return GRADES.includes(g) ? g : 5; } catch { return 5; } };
 const writeGrade = (k, g) => { try { localStorage.setItem(k, JSON.stringify(g)); } catch { /* full storage */ } };
@@ -43,12 +44,21 @@ function Question({ item, picked, onPick, locked }) {
   );
 }
 
-async function reward({ user, setUser, topic, score, total, ms }) {
+async function reward({ user, setUser, score }) {
   const xp = 10 + score * 5, coins = 5 + score * 3;
-  api.addAttempt({ taskType: 'school-game', topic, level: user.level, correct: score * 2 >= total, durationMs: ms }).catch(() => {});
   const u = await api.earn({ xp, coins }).catch(() => null);
   if (u) setUser(u);
   return { xp, coins };
+}
+
+function recordSchoolGameAnswer({ user, pack, mode, topic, correct, durationMs }) {
+  api.addAttempt({
+    taskType: makeSchoolGameTaskType(pack.slug, pack.grade, mode),
+    topic: String(topic || pack.subject).slice(0, 120),
+    level: String(user?.level || 'A1').slice(0, 10),
+    correct: Boolean(correct),
+    durationMs: Math.max(0, Math.min(3600000, Math.round(durationMs || 0))),
+  }).catch(() => {});
 }
 
 function Finish({ title, line, prize, won, onAgain, onBack }) {
@@ -81,6 +91,7 @@ function Battle({ pack, onBack }) {
   const [prize, setPrize] = useState(null);
   const timer = useRef(null);
   const t0 = useRef(Date.now());
+  const questionStartedAt = useRef(Date.now());
   const item = qs[n];
   const over = n >= qs.length;
 
@@ -91,14 +102,18 @@ function Battle({ pack, onBack }) {
     timer.current = setInterval(() => {
       const p = (Date.now() - start) / dur;
       setAi(p);
-      if (p >= 1) { clearInterval(timer.current); setPicked(''); sfx.wrong(); flash('encourage'); setScore((s) => ({ ...s, ai: s.ai + 1 })); }
+      if (p >= 1) {
+        clearInterval(timer.current);
+        recordSchoolGameAnswer({ user, pack, mode: 'battle', topic: item.topic, correct: false, durationMs: Date.now() - questionStartedAt.current });
+        setPicked(''); sfx.wrong(); flash('encourage'); setScore((s) => ({ ...s, ai: s.ai + 1 }));
+      }
     }, 90);
     return () => clearInterval(timer.current);
   }, [n, over]); // eslint-disable-line
 
   useEffect(() => {
     if (!over) return;
-    reward({ user, setUser, topic: `${pack.subject} ${pack.grade}: битва`, score: score.you, total: qs.length, ms: Date.now() - t0.current }).then(setPrize);
+    reward({ user, setUser, score: score.you }).then(setPrize);
     if (score.you > score.ai) sfx.levelUp();
   }, [over]); // eslint-disable-line
 
@@ -106,11 +121,12 @@ function Battle({ pack, onBack }) {
     if (picked != null) return;
     clearInterval(timer.current);
     setPicked(o.text);
+    recordSchoolGameAnswer({ user, pack, mode: 'battle', topic: item.topic, correct: o.ok, durationMs: Date.now() - questionStartedAt.current });
     if (o.ok) { sfx.correct(); flash('happy'); setScore((s) => ({ ...s, you: s.you + 1 })); }
     else { sfx.wrong(); flash('encourage'); setScore((s) => ({ ...s, ai: s.ai + 1 })); }
   };
-  const next = () => { setPicked(null); setAi(0); setN(n + 1); };
-  const again = () => { setQs(shuffle(pack.quiz).slice(0, ROUNDS)); setN(0); setPicked(null); setAi(0); setScore({ you: 0, ai: 0 }); setPrize(null); t0.current = Date.now(); };
+  const next = () => { setPicked(null); setAi(0); setN(n + 1); questionStartedAt.current = Date.now(); };
+  const again = () => { setQs(shuffle(pack.quiz).slice(0, ROUNDS)); setN(0); setPicked(null); setAi(0); setScore({ you: 0, ai: 0 }); setPrize(null); t0.current = Date.now(); questionStartedAt.current = Date.now(); };
 
   const won = score.you > score.ai;
   return (
@@ -153,22 +169,24 @@ function Quest({ pack, onBack }) {
   const [picked, setPicked] = useState(null);
   const [prize, setPrize] = useState(null);
   const t0 = useRef(Date.now());
+  const questionStartedAt = useRef(Date.now());
   const lost = lives <= 0 && picked == null;
   const over = n >= qs.length || lost;
 
   useEffect(() => {
     if (!over) return;
-    reward({ user, setUser, topic: `${pack.subject} ${pack.grade}: квест`, score: ok, total: qs.length, ms: Date.now() - t0.current }).then(setPrize);
+    reward({ user, setUser, score: ok }).then(setPrize);
     if (!lost) sfx.levelUp();
   }, [over]); // eslint-disable-line
 
   const pick = (o) => {
     if (picked != null) return;
     setPicked(o.text);
+    recordSchoolGameAnswer({ user, pack, mode: 'quest', topic: qs[n].topic, correct: o.ok, durationMs: Date.now() - questionStartedAt.current });
     if (o.ok) { sfx.correct(); setOk((x) => x + 1); } else { sfx.wrong(); setLives((l) => l - 1); }
   };
-  const next = () => { setPicked(null); if (lives > 0) setN(n + 1); };
-  const again = () => { setQs(shuffle(pack.quiz).slice(0, STEPS)); setN(0); setLives(3); setOk(0); setPicked(null); setPrize(null); t0.current = Date.now(); };
+  const next = () => { setPicked(null); if (lives > 0) setN(n + 1); questionStartedAt.current = Date.now(); };
+  const again = () => { setQs(shuffle(pack.quiz).slice(0, STEPS)); setN(0); setLives(3); setOk(0); setPicked(null); setPrize(null); t0.current = Date.now(); questionStartedAt.current = Date.now(); };
 
   return (
     <div className="space-y-4">
@@ -208,13 +226,14 @@ function Pairs({ pack, onBack }) {
   const [prize, setPrize] = useState(null);
   const lock = useRef(false);
   const t0 = useRef(Date.now());
+  const firstFlipAt = useRef(Date.now());
   const total = deck.length / 2;
   const done = matched.length === total;
 
   useEffect(() => {
     if (!done) return;
     sfx.levelUp();
-    reward({ user, setUser, topic: `${pack.subject} ${pack.grade}: пары`, score: Math.max(1, total * 2 - moves + 2), total, ms: Date.now() - t0.current }).then(setPrize);
+    reward({ user, setUser, score: Math.max(1, total * 2 - moves + 2) }).then(setPrize);
   }, [done]); // eslint-disable-line
 
   const flip = (c) => {
@@ -222,11 +241,13 @@ function Pairs({ pack, onBack }) {
     sfx.pop();
     const now = [...open, c.key];
     setOpen(now);
-    if (now.length < 2) return;
+    if (now.length < 2) { firstFlipAt.current = Date.now(); return; }
     lock.current = true;
     setMoves((m) => m + 1);
     const [a, b] = now.map((k) => deck.find((x) => x.key === k));
-    if (a.pair === b.pair && a.side !== b.side) setTimeout(() => { sfx.match(); setMatched((m) => [...m, a.pair]); setOpen([]); lock.current = false; }, 350);
+    const isMatch = a.pair === b.pair && a.side !== b.side;
+    recordSchoolGameAnswer({ user, pack, mode: 'pairs', topic: isMatch ? (a.side === 't' ? a.text : b.text) : ('Ошибочное сопоставление: ' + a.text + ' / ' + b.text), correct: isMatch, durationMs: Date.now() - firstFlipAt.current });
+    if (isMatch) setTimeout(() => { sfx.match(); setMatched((m) => [...m, a.pair]); setOpen([]); lock.current = false; }, 350);
     else setTimeout(() => { sfx.wrong(); setOpen([]); lock.current = false; }, 900);
   };
   const again = () => { setDeck(buildDeck(pack.pairs)); setOpen([]); setMatched([]); setMoves(0); setPrize(null); lock.current = false; t0.current = Date.now(); };
@@ -253,7 +274,88 @@ function Pairs({ pack, onBack }) {
   );
 }
 
-const GAMES = { battle: Battle, quest: Quest, pairs: Pairs };
+
+function Memory({ pack, onBack }) {
+  const { user, setUser } = useApp();
+  const [items, setItems] = useState(() => shuffle(pack.quiz).slice(0, Math.min(5, pack.quiz.length)));
+  const [testItems, setTestItems] = useState([]);
+  const [phase, setPhase] = useState('study');
+  const [studyN, setStudyN] = useState(0);
+  const [testN, setTestN] = useState(0);
+  const [picked, setPicked] = useState(null);
+  const [ok, setOk] = useState(0);
+  const [prize, setPrize] = useState(null);
+  const questionStartedAt = useRef(Date.now());
+  const over = phase === 'recall' && testN >= testItems.length;
+  const item = testItems[testN];
+
+  useEffect(() => {
+    if (!over) return;
+    reward({ user, setUser, score: ok }).then(setPrize);
+  }, [over]); // eslint-disable-line
+
+  const beginRecall = () => {
+    setTestItems(shuffle(items));
+    setTestN(0);
+    setPicked(null);
+    setPhase('recall');
+    questionStartedAt.current = Date.now();
+  };
+  const pick = (option) => {
+    if (picked != null || !item) return;
+    setPicked(option.text);
+    recordSchoolGameAnswer({ user, pack, mode: 'memory', topic: item.topic, correct: option.ok, durationMs: Date.now() - questionStartedAt.current });
+    if (option.ok) { setOk((x) => x + 1); sfx.correct(); } else sfx.wrong();
+  };
+  const nextRecall = () => {
+    if (testN + 1 >= testItems.length) setTestN(testItems.length);
+    else { setTestN(testN + 1); setPicked(null); questionStartedAt.current = Date.now(); }
+  };
+  const again = () => {
+    setItems(shuffle(pack.quiz).slice(0, Math.min(5, pack.quiz.length)));
+    setTestItems([]);
+    setPhase('study');
+    setStudyN(0);
+    setTestN(0);
+    setPicked(null);
+    setOk(0);
+    setPrize(null);
+    questionStartedAt.current = Date.now();
+  };
+
+  return (
+    <div className="space-y-4">
+      {phase === 'study' && (
+        <>
+          <div className="card p-5 space-y-3">
+            <div className="chip">Этап 1 из 2 · Карточка {studyN + 1} из {items.length}</div>
+            <div className="text-xs font-black text-ink/50">{items[studyN].topic}</div>
+            <div className="text-xl font-black leading-snug">{items[studyN].q}</div>
+            <div className="rounded-2xl bg-soft p-4">
+              <div className="text-xs font-black text-ink/50">Запомни ответ</div>
+              <div className="text-lg font-black mt-1">{items[studyN].options[items[studyN].answer]}</div>
+              <p className="text-sm font-semibold text-ink/60 mt-2">{items[studyN].explain}</p>
+            </div>
+            <p className="text-sm font-semibold text-ink/60">Свяжи вопрос с ответом: датой, формулой, термином или определением. Через несколько карточек система попросит вспомнить ответ без показа подсказки.</p>
+          </div>
+          <button className="btn-primary w-full" onClick={() => {
+            if (studyN + 1 < items.length) setStudyN(studyN + 1);
+            else beginRecall();
+          }}>{studyN + 1 < items.length ? 'Запомнил — следующая карточка →' : 'Проверить память →'}</button>
+        </>
+      )}
+      {phase === 'recall' && !over && item && (
+        <>
+          <div className="chip">Этап 2 из 2 · Вспомни ответ {testN + 1} из {testItems.length}</div>
+          <Question item={item} picked={picked} onPick={pick} locked={picked != null} />
+          {picked != null && <button className="btn-primary w-full" onClick={nextRecall}>{testN + 1 < testItems.length ? 'Следующее задание →' : 'Посмотреть результат →'}</button>}
+        </>
+      )}
+      {over && <Finish won={ok >= Math.ceil(testItems.length * 0.8)} title="Проверка памяти завершена" line={'Вспомнил: ' + ok + ' из ' + testItems.length} prize={prize} onAgain={again} onBack={onBack} />}
+    </div>
+  );
+}
+const GAMES = { battle: Battle, quest: Quest, pairs: Pairs, memory: Memory };
 
 export default function SchoolGames() {
   const { user } = useApp();
@@ -314,7 +416,7 @@ export default function SchoolGames() {
           {err && <div className="card p-5 font-semibold text-ink/60">Вопросы для этого класса пока не готовы.</div>}
           {!err && !pack && <div className="card p-5 font-semibold text-ink/50">Загружаю вопросы…</div>}
           {pack && !Game && (
-            <div className="grid sm:grid-cols-3 gap-3">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {MODES.map((x) => (
                 <button key={x.id} onClick={() => go({ s: cell.slug, m: x.id })} className="rounded-3xl p-5 text-left text-white bg-gradient-to-br from-violet-500 to-fuchsia-500 shadow-xl hover:-translate-y-1 transition">
                   <div className="text-4xl">{x.icon}</div>
