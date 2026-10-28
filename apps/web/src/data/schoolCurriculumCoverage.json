@@ -54,7 +54,7 @@
     "locallyStoredOriginalTaskCount",
     "officialProgramRelationship"
   ],
-  "policy": "Это матрица наличия индексированных ссылок, а не подтверждение преподавания предмета или полноты программы. indexedResourceCount суммирует записи разных индексов и не равен числу уникальных книг. Полнота маркируется NOT_PROVEN, пока не выполнена полная сверка программы, файлов и прав. Course-component mappings: алгебра, геометрия и вероятность/статистика могут ссылаться на родительскую ФРП по математике через data/school-materials/subject-component-crosswalk.json. Колонка officialProgramRelationship distinguishes a parent-program reference from an explicitly named course; this does not mark content complete. Legacy taxonomy: fundamentals-spiritual-culture is retained as an archival category and is not the current federal subject. Current ORKSE and DNKR are separate subject IDs. The DNKR programme is phased: grade 5 from 2026/27; grades 5–7 from 2027/28. Link existence does not imply complete materials or permission to mirror.",
+  "policy": "Это матрица наличия индексированных ссылок, а не подтверждение преподавания предмета или полноты программы. indexedResourceCount суммирует записи разных индексов и не равен числу уникальных книг. Полнота маркируется NOT_PROVEN, пока не выполнена полная сверка программы, файлов и прав. Course-component mappings: алгебра, геометрия и вероятность/статистика могут ссылаться на родительскую ФРП по математике через data/school-materials/subject-component-crosswalk.json. Колонка officialProgramRelationship distinguishes a parent-program reference from an explicitly named course; this does not mark content complete. Legacy taxonomy: fundamentals-spiritual-culture is retained as an archival category and is not the current federal subject. Current ORKSE and DNKR are separate subject IDs. The DNKR programme is phased: grade 5 from 2026/27; grades 5–7 from 2027/28. Link existence does not imply complete materials or permission to mirror. ОБЗР: официальные ФРП указаны для 8–9 и 10–11 классов; для 1–7 не подразумевается отдельная обязательная федеральная программа. Вариативные и внеурочные курсы могут существовать отдельно. Тексты ОБЗР ещё требуется сверить с приказом № 576.",
   "rows": [
     [
       1,
@@ -420,13 +420,13 @@
       1,
       "fundamentals-security-defense-homeland",
       0,
-      "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       1,
@@ -888,13 +888,13 @@
       2,
       "fundamentals-security-defense-homeland",
       0,
-      "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       2,
@@ -1356,13 +1356,13 @@
       3,
       "fundamentals-security-defense-homeland",
       0,
-      "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       3,
@@ -1824,13 +1824,13 @@
       4,
       "fundamentals-security-defense-homeland",
       0,
-      "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       4,
@@ -2294,11 +2294,11 @@
       2,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       5,
@@ -2762,11 +2762,11 @@
       2,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       6,
@@ -3230,11 +3230,11 @@
       2,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
       0,
       0,
       0,
-      "NOT_ESTABLISHED"
+      "OUTSIDE_SOURCE_GRADE_RANGE"
     ],
     [
       7,
@@ -3695,14 +3695,14 @@
     [
       8,
       "fundamentals-security-defense-homeland",
-      3,
+      4,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM",
+      1,
       0,
       0,
-      0,
-      "NOT_ESTABLISHED"
+      "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
     ],
     [
       8,
@@ -4163,14 +4163,14 @@
     [
       9,
       "fundamentals-security-defense-homeland",
-      3,
+      4,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM",
+      1,
       0,
       0,
-      0,
-      "NOT_ESTABLISHED"
+      "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
     ],
     [
       9,
@@ -4631,14 +4631,14 @@
     [
       10,
       "fundamentals-security-defense-homeland",
-      3,
+      4,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM",
+      1,
       0,
       0,
-      0,
-      "NOT_ESTABLISHED"
+      "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
     ],
     [
       10,
@@ -5099,14 +5099,14 @@
     [
       11,
       "fundamentals-security-defense-homeland",
-      3,
+      4,
       "LINKS_AVAILABLE",
       "NOT_PROVEN",
-      "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+      "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM",
+      1,
       0,
       0,
-      0,
-      "NOT_ESTABLISHED"
+      "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
     ],
     [
       11,
