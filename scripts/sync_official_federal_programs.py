@@ -15,6 +15,10 @@ UA = "SvetlanaTutor-EducationResources/1.0 (+https://github.com/paulafanasyev/sv
 
 
 def allowed(p):
+    # Links whose redistribution terms are not established must never enter the
+    # Release mirror workflow, even when they are official PDF URLs.
+    if p.get("mirrorAllowed") is False:
+        return False
     u = urllib.parse.urlparse(p.get("url", ""))
     return (p.get("fileFormat") == "PDF" and u.scheme == "https" and u.hostname == "edsoo.ru"
             and u.path.startswith("/wp-content/uploads/")
