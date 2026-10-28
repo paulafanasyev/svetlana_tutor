@@ -26,7 +26,7 @@ test('catalog clearly distinguishes source links from content embedded in the ap
   assert.match(catalog.note, /not embedded/i);
   assert.ok(catalog.programs.some((item) => item.contentStoredLocally === false));
   const metadata = getOfficialProgramCatalogMetadata();
-  assert.equal(metadata.recordCount, 61);
+  assert.equal(metadata.recordCount, 62);
   assert.ok(metadata.directPdfLinks >= 50);
 });
 
@@ -37,6 +37,19 @@ test('official sources resolve by subject and grade with overlapping grade range
   assert.ok(math.every((item) => item.url.startsWith('https://')));
   const french = findOfficialProgramSources('Французский язык', 10);
   assert.ok(french.some((item) => /француз/i.test(item.title)));
+
+  const orkse = findOfficialProgramSources('ОРКСЭ', 4);
+  assert.ok(orkse.some((item) => item.subject === 'religious-cultures-ethics'));
+
+  const dnkr = findOfficialProgramSources('Духовно-нравственная культура России', 5);
+  assert.equal(dnkr.length, 1);
+  assert.equal(dnkr[0].id, 'frp-ooo-dnkr-5-7');
+  assert.equal(dnkr[0].contentStoredLocally, false);
+  assert.equal(dnkr[0].mirrorAllowed, false);
+  assert.deepEqual(dnkr[0].implementationSchedule, [
+    { schoolYear: '2026/2027', startYear: 2026, grades: [5] },
+    { schoolYear: '2027/2028', startYear: 2027, grades: [5, 6, 7] },
+  ]);
   const algebra = findOfficialProgramSources('Алгебра', 8);
   assert.ok(algebra.length > 0);
   assert.deepEqual(findOfficialProgramSources('Астрономия', 10), []);
