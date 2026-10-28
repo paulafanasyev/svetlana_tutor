@@ -91,6 +91,28 @@ def source_matches(target, source, grade=None):
     return target == source
 
 
+def program_component_mapping(target, source, grade, mappings):
+    for mapping in mappings:
+        if mapping.get("targetSubject") != target or mapping.get("sourceProgramSubject") != source:
+            continue
+        if not covers(mapping.get("gradeRange"), grade):
+            continue
+        relationship = "PARENT_MATH_PROGRAM_REFERENCE"
+        for rule in mapping.get("gradeRelationships", []):
+            if covers(rule.get("gradeRange"), grade):
+                relationship = rule.get("relationship", relationship)
+                break
+        return mapping, relationship
+    return None, None
+
+
+def program_matches(target, source, grade, mappings):
+    # Keep the ordinary exact/established language/literature aliases. Only official
+    # working-program records may use the explicit component crosswalk; this mapping
+    # must not bleed into textbook OCR, lessons, extracurricular PDFs or exercises.
+    return source_matches(target, source, grade) or bool(program_component_mapping(target, source, grade, mappings)[0])
+
+
 def bibliography_matches(target, label, grade):
     return any(source_matches(target, subject, grade) for subject in BIBLIOGRAPHY_SUBJECTS.get(label, []))
 
@@ -251,6 +273,22 @@ def main():
     biblio = records(bibliography, "records")
     lessons = records(lesson_index, "items")
     programs = records(program_doc, "programs")
+    component_crosswalk = load(DATA / "subject-component-crosswalk.json")
+    component_mappings = records(component_crosswalk, "mappings")
+    if len({item.get("id") for item in component_mappings}) != len(component_mappings):
+        raise ValueError("Duplicate IDs in official mathematics programme component crosswalk")
+    program_by_id = {item.get("id"): item for item in programs}
+    allowed_component_subjects = {"algebra", "geometry", "probability-statistics"}
+    for mapping in component_mappings:
+        if mapping.get("targetSubject") not in allowed_component_subjects or mapping.get("sourceProgramSubject") != "mathematics":
+            raise ValueError("Unsupported target/source in programme component crosswalk: " + str(mapping.get("id")))
+        for program_id in mapping.get("sourceIds", []):
+            program = program_by_id.get(program_id)
+            if not program or program.get("subject") != "mathematics":
+                raise ValueError("Crosswalk programme source not found or wrong subject: " + str(program_id))
+    for source in records(component_crosswalk, "sources"):
+        if not str(source.get("url", "")).startswith("https://edsoo.ru/"):
+            raise ValueError("Crosswalk source must use the official EDSOO host: " + str(source.get("id")))
     extracurricular = records(extra_doc, "records")
     catalog_items = records(catalog_item_doc, "items")
     lesson_ids = {item.get("id") for item in lessons}
@@ -305,8 +343,24 @@ def main():
             matching_programs = [
                 item for item in programs
                 if covers(item.get("gradeRange"), grade)
-                and source_matches(subject, item.get("subject", ""))
+                and program_matches(subject, item.get("subject", ""), grade, component_mappings)
             ]
+            component_match_details = [
+                program_component_mapping(subject, item.get("subject", ""), grade, component_mappings)
+                for item in matching_programs
+            ]
+            component_mapping_ids = sorted({
+                mapping.get("id") for mapping, relationship in component_match_details if mapping
+            })
+            component_relationships = sorted({
+                relationship for mapping, relationship in component_match_details if mapping
+            })
+            if component_mapping_ids:
+                program_relationship = component_relationships[0] if len(component_relationships) == 1 else "MIXED_COMPONENT_RELATIONSHIPS"
+            elif matching_programs:
+                program_relationship = "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
+            else:
+                program_relationship = "NOT_ESTABLISHED"
             extra_count = sum(
                 1 for item in extracurricular
                 if covers(item.get("gradeRange"), grade)
@@ -341,6 +395,8 @@ def main():
                 "verifiedOfficialLessonIndexCount": lesson_count,
                 "officialWorkingProgramCount": len(matching_programs),
                 "releaseAvailableWorkingProgramCount": sum(item.get("storedInRelease") is True for item in matching_programs),
+                "officialProgramRelationship": program_relationship,
+                "officialProgramComponentMappingIds": component_mapping_ids,
                 "officialExtracurricularProgramCount": extra_count,
                 "locallyStoredOriginalTaskCount": task_count,
                 "federalBibliographyFullTextCount": 0,
@@ -381,6 +437,7 @@ def main():
         "subjectsWithUnindexedGradePairs": len(missing_by_subject),
         "unindexedGradePairsBySubject": missing_by_subject,
         "rowsWithAnExplicitWorkingProgram": sum(row["officialWorkingProgramCount"] > 0 for row in rows),
+        "rowsSupportedViaComponentCrosswalk": sum(bool(row.get("officialProgramComponentMappingIds")) for row in rows),
         "rowsWithAtLeastOneBibliographyRecord": sum(row["federalBibliographyRecordCount"] > 0 for row in rows),
         "rowsWithAGradeVerifiedOfficialLesson": sum(row["verifiedOfficialLessonIndexCount"] > 0 for row in rows),
         "rowsWithAtLeastOneOriginalPracticeTask": sum(row["locallyStoredOriginalTaskCount"] > 0 for row in rows),
@@ -404,7 +461,7 @@ def main():
         "edsooOfficialLessonIndexRecords": len(lessons),
         "lessonRecordsWithGradeEstablished": known_grade_lessons,
         "lessonRecordsNeedingGradeRecheck": len(lessons) - known_grade_lessons,
-        "note": "Все строки остаются NOT_PROVEN. Счётчики отражают записи индекса, а не полные тексты учебников. Категории «иностранный язык» и отдельные языки пересекаются; значения по предметам нельзя складывать между строками."
+        "note": "Все строки остаются NOT_PROVEN. Счётчики отражают записи индекса, а не полные тексты учебников. Категории «иностранный язык» и отдельные языки пересекаются; значения по предметам нельзя складывать между строками. Отдельные курсы математики привязаны к родительской ФРП через проверенный component crosswalk; это не означает отдельный предмет в каждом классе."
     }
     matrix = {
         "schemaVersion": 2, "name": "school-curriculum-coverage", "checkedAt": checked_at,
@@ -414,9 +471,10 @@ def main():
             "LINKS_AVAILABLE": "Есть запись в библиографии, подтверждённом по классу индексе уроков, рабочих программах, внеурочной программе или авторском банке с точным совпадением по классу и предмету.",
             "NO_EXACT_GRADE_SUBJECT_RECORD": "В подсчитываемых индексах нет точной записи для этой пары; это не доказывает отсутствие предмета или материалов.",
             "NOT_PROVEN": "Полнота не установлена по актуальной программе, полному инвентарю и подтверждённым правам.",
-            "VERIFIED_COMPLETE": "Только после полной сверки источников, файлов и прав; сейчас не назначается."
+            "VERIFIED_COMPLETE": "Только после полной сверки источников, файлов и прав; сейчас не назначается.",
+            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или уже установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — ссылка на родительскую ФРП, не отдельный курс; EXPLICIT_MATH_SUBCOURSE — официальный документ явно называет курс."
         },
-        "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов.",
+        "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
         "rows": rows, "summary": summary
     }
     save(DATA / "school-curriculum-coverage.json", matrix)
