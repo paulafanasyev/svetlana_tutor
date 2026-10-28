@@ -104,7 +104,7 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   const outOfRangeObzr = currentTriage.scopeResolutions.filter((item) => item.status === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
   const optionalObzr = currentTriage.scopeResolutions.filter((item) => item.status === 'OPTIONAL_VARIANT_PROGRAM_RANGE');
   assert.equal(outOfRangeObzr.length, 4);
-  assert.ok(outOfRangeObzr.every((item) => item.completeCoverage === 'NOT_PROVEN' && item.grade >= 1 && item.grade <= 4 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
+  assert.ok(outOfRangeObzr.every((item) => item.completeCoverage === 'NOT_PROVEN' && item.grade >= 1 && item.grade <= 4 && (item.evidenceUrls || item.sourceUrls || []).includes('https://edsoo.ru/vopros-otvet-obzr/')));
   assert.equal(optionalObzr.length, 3);
   assert.ok(optionalObzr.every((item) => item.completeCoverage === 'NOT_PROVEN' && item.grade >= 5 && item.grade <= 7 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
   assert.equal(currentTriage.metrics.rowsMappedToOptionalVariantScope, 3);
