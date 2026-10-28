@@ -95,9 +95,9 @@ test('2026 FOP amendment is tracked without treating current corpus as updated',
 });
 
 test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy', () => {
-  assert.equal(currentTriage.items.length, 137);
-  assert.equal(currentTriage.metrics.gapRows, 137);
-  assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 15);
+  assert.equal(currentTriage.items.length, 135);
+  assert.equal(currentTriage.metrics.gapRows, 135);
+  assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 17);
   assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialScope, 4);
   assert.equal(currentTriage.scopeResolutions.length, 7);
@@ -124,9 +124,14 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   }
   assert.equal(currentTriage.metrics.completenessVerified, 0);
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
-  assert.equal(currentTriage.resolvedComponentRows.length, 15);
+  assert.equal(currentTriage.resolvedComponentRows.length, 17);
+  const astronomyRows = currentTriage.resolvedComponentRows.filter((item) => item.mappingId === 'astronomy-via-physics');
+  assert.deepEqual(astronomyRows.map((item) => item.grade).sort(), [10, 11]);
+  assert.ok(astronomyRows.every((item) => item.completeCoverage === 'NOT_PROVEN'
+    && item.relationship === 'PARENT_PHYSICS_PROGRAM_REFERENCE'
+    && item.evidenceUrls.includes('https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf')));
   assert.equal(currentTriage.taxonomyResolutions.length, 10);
-  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 137);
+  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 135);
   assert.ok(currentTriage.items.every((item) =>
     item.decision === 'NEEDS_MANUAL_REVIEW'
     && item.completeCoverage === 'NOT_PROVEN'
