@@ -8,6 +8,7 @@
 // multi-user security comes only from the HTTP backend.
 import { storage } from './storage.js';
 import { priceOf } from '../data/shopCatalog.js';
+import { summarizeSchoolGameAttempts } from '../data/games/results.js';
 
 // Audit 21.10: the published demo has NO administrator. The admin demo login (admin@demo / admin123) and any
 // ADMIN role saved in this browser exist only in local development or when VITE_DEMO_ADMIN=1 is set for a build.
@@ -359,7 +360,8 @@ const DemoApi = {
     let streak = 0, cur = Math.floor(now() / DAY);
     while (days.has(cur)) { streak++; cur--; }
     return { id: u.id, name: u.name, level: u.level, xp: u.xp, coins: u.coins, attempts: mine.length, correct,
-      accuracy: mine.length ? correct / mine.length : 0, streak, lastActive: u.lastActive, teacherId: u.teacherId };
+      accuracy: mine.length ? correct / mine.length : 0, streak, lastActive: u.lastActive, teacherId: u.teacherId,
+      gameResults: summarizeSchoolGameAttempts(mine) };
   },
   // Which students the current user may see in the journal (null = everyone, admin).
   _visibleStudents(d, u) {
