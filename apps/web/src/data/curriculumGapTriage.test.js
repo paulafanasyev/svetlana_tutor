@@ -100,8 +100,14 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 15);
   assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialScope, 4);
-  assert.equal(currentTriage.scopeResolutions.length, 4);
-  assert.ok(currentTriage.scopeResolutions.every((item) => item.status === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE' && item.completeCoverage === 'NOT_PROVEN' && item.grade >= 1 && item.grade <= 4 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
+  assert.equal(currentTriage.scopeResolutions.length, 7);
+  const outOfRangeObzr = currentTriage.scopeResolutions.filter((item) => item.status === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
+  const optionalObzr = currentTriage.scopeResolutions.filter((item) => item.status === 'OPTIONAL_VARIANT_PROGRAM_RANGE');
+  assert.equal(outOfRangeObzr.length, 4);
+  assert.ok(outOfRangeObzr.every((item) => item.completeCoverage === 'NOT_PROVEN' && item.grade >= 1 && item.grade <= 4 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
+  assert.equal(optionalObzr.length, 3);
+  assert.ok(optionalObzr.every((item) => item.completeCoverage === 'NOT_PROVEN' && item.grade >= 5 && item.grade <= 7 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
+  assert.equal(currentTriage.metrics.rowsMappedToOptionalVariantScope, 3);
   assert.equal(currentTriage.metrics.candidateSourceRangeMismatchRows, 51);
   assert.equal(currentTriage.metrics.candidateSourceRangesVerified, 51);
   assert.equal(currentTriage.metrics.sourceApplicabilityResolvedByRangeCheck, 0);
