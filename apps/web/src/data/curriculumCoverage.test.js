@@ -64,6 +64,11 @@ test('покрытие подбирается по предмету и клас�
   assert.ok(probabilityInGrade6.officialWorkingProgramCount > 0);
   assert.equal(probabilityInGrade6.completeCoverage, 'NOT_PROVEN');
 
+  const astronomy10 = getCurriculumCoverage('Астрономия', 10);
+  assert.equal(astronomy10.officialProgramRelationship, 'PARENT_PHYSICS_PROGRAM_REFERENCE');
+  assert.equal(astronomy10.curriculumApplicability, 'RELATED_PARENT_PROGRAM_ONLY');
+  assert.equal(astronomy10.completeCoverage, 'NOT_PROVEN');
+
   const probabilityInGrade8 = getCurriculumCoverage('Вероятность и статистика', 8);
   assert.equal(probabilityInGrade8.officialProgramRelationship, 'EXPLICIT_MATH_SUBCOURSE');
   assert.ok(probabilityInGrade8.officialWorkingProgramCount > 0);
