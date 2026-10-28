@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "catalogName": "official-russian-school-materials",
-  "lastVerified": "2026-10-28",
+  "lastVerified": "2026-10-29",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
   "gradeRange": [
     1,
@@ -760,6 +760,42 @@
       ],
       "storesFullTextLocally": false,
       "rightsNote": "Официальная ссылка на программу; новая PDF-копия не хранится и не зеркалируется, пока права на распространение не подтверждены."
+    },
+    {
+      "id": "edsoo-obzr-8-9-2025",
+      "name": "Основы безопасности и защиты Родины, 8–9 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+      "kind": [
+        "federal-working-program"
+      ],
+      "access": "public-source-link-only",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subjects": [
+        "fundamentals-security-defense-homeland"
+      ],
+      "storesFullTextbooksLocally": false,
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING; redistribution rights not confirmed"
+    },
+    {
+      "id": "edsoo-obzr-10-11-2025",
+      "name": "Основы безопасности и защиты Родины, 10–11 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf",
+      "kind": [
+        "federal-working-program"
+      ],
+      "access": "public-source-link-only",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subjects": [
+        "fundamentals-security-defense-homeland"
+      ],
+      "storesFullTextbooksLocally": false,
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING; redistribution rights not confirmed"
     }
   ],
   "integrationPolicy": {
@@ -811,8 +847,8 @@
       "description": "Оригинальные задания с ответами, созданные для репозитория; всего 153, лицензия CC BY 4.0."
     }
   ],
-  "workingProgramCount": 62,
-  "directWorkingProgramPdfCount": 56,
+  "workingProgramCount": 64,
+  "directWorkingProgramPdfCount": 58,
   "originalExerciseCount": 153,
   "currentCoverageNote": "Сверка 2026-10-28: матрица 429 строк (39 предметных идентификаторов × 11 классов); 259 сочетаний имеют индексные записи; 170 не имеют точной записи в индексах. Пустая ячейка не доказывает отсутствие материала: сначала необходимо установить применимость предмета к классу и сопоставить официальные источники. Ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
   "lastFederalProgramDownloadAttemptAt": "2026-10-28T18:29:41.150730+00:00",
