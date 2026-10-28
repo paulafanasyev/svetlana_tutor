@@ -44,8 +44,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Resolve dependencies and create audit lockfile
-        run: npm install --package-lock-only --no-audit --no-fund --legacy-peer-deps
+      - name: Install reproducible locked dependencies
+        run: npm ci --no-audit --no-fund --legacy-peer-deps
 
       - name: Generate production dependency audit JSON
         shell: bash
@@ -67,44 +67,3 @@ jobs:
             ${{ matrix.path }}/package-lock.json
           if-no-files-found: warn
           retention-days: 14
-
-  commit-generated-lockfiles:
-    name: Save generated package lockfiles (audit branch only)
-    if: always() && github.ref == 'refs/heads/security/audit-refresh-2026-10-28'
-    needs: production-dependencies
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download API dependency report and lockfile
-        uses: actions/download-artifact@v4
-        with:
-          name: npm-audit-api-${{ github.sha }}
-          path: generated/api
-
-      - name: Download web dependency report and lockfile
-        uses: actions/download-artifact@v4
-        with:
-          name: npm-audit-web-${{ github.sha }}
-          path: generated/web
-
-      - name: Commit lockfiles to the dedicated audit branch
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -s generated/api/package-lock.json
-          test -s generated/web/package-lock.json
-          cp generated/api/package-lock.json apps/api/package-lock.json
-          cp generated/web/package-lock.json apps/web/package-lock.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps/api/package-lock.json apps/web/package-lock.json
-          if git diff --cached --quiet; then
-            echo "Lockfiles already match generated audit state."
-            exit 0
-          fi
-          git commit -m "build(deps): add lockfiles for reproducible security audits"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
