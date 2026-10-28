@@ -41,6 +41,7 @@ export const MODES = [
   { id: 'battle', icon: '⚔️', name: 'Битва', desc: 'Кто быстрее ответит: ты или учитель?' },
   { id: 'quest', icon: '🗺️', name: 'Квест', desc: 'Пройди путь до сокровища, у тебя 3 жизни.' },
   { id: 'pairs', icon: '🧠', name: 'Пары', desc: 'Открывай карточки и находи пары.' },
+  { id: 'memory', icon: '🧠', name: 'Память', desc: 'Запомни даты, термины и формулы, затем проверь себя без подсказки.' },
 ];
 
 // Класс из packs/ + класс из more/ → один класс: новые вопросы и пары идут в конец.
@@ -55,6 +56,7 @@ export function normalizeGrade(slug, grade, raw) {
   if (!raw) return null;
   const g = applyFixes(slug, grade, raw);
   return {
+    slug,
     subject: g.subject,
     grade,
     quiz: (g.quiz || []).map((x, i) => ({ id: `${slug}-${grade}-q${i + 1}`, topic: x.t, q: x.q, options: x.o, answer: x.a, explain: x.e })),
