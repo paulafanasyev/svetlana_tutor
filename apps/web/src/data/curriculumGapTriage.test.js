@@ -103,7 +103,7 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
   assert.equal(currentTriage.resolvedComponentRows.length, 15);
   assert.equal(currentTriage.taxonomyResolutions.length, 10);
-  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 145);
+  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 141);
   assert.ok(currentTriage.items.every((item) =>
     item.decision === 'NEEDS_MANUAL_REVIEW'
     && item.completeCoverage === 'NOT_PROVEN'
