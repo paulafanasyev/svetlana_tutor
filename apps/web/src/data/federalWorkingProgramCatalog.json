@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-10-29",
   "source": "data/school-materials/federal-working-programs.json",
-  "note": "Metadata and links only. PDF contents are not embedded in this application catalog.",
+  "note": "Metadata and official source links only. PDF contents are not embedded in the app. The 2026 DNKR PDF is intentionally link-only, has a phased implementation schedule, and must not be mirrored until redistribution rights are independently confirmed.",
   "programs": [
     {
       "id": "frp-noo-russian-1-4",
@@ -140,7 +140,7 @@
     {
       "id": "frp-noo-orkse-4",
       "title": "Основы религиозных культур и светской этики, 4 класс",
-      "subject": "fundamentals-spiritual-culture",
+      "subject": "religious-cultures-ethics",
       "gradeRange": [
         4,
         4
@@ -1162,6 +1162,45 @@
       "storedInRelease": false,
       "releaseUrl": null,
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-dnkr-5-7",
+      "title": "Духовно-нравственная культура России, 5–7 классы (5 класс — с 2026/27; 6–7 классы — с 2027/28)",
+      "subject": "spiritual-moral-culture-russia",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 44,
+      "provenance": "official-source-link",
+      "contentStoredLocally": false,
+      "storedInRelease": false,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; do not mirror or store a local copy until redistribution rights are independently confirmed",
+      "mirrorAllowed": false,
+      "implementationSchedule": [
+        {
+          "schoolYear": "2026/2027",
+          "startYear": 2026,
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "startYear": 2027,
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "implementationScheduleSource": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "downloadStatus": "LINK_ONLY_NOT_MIRRORED_PENDING_RIGHTS_REVIEW"
     }
   ]
 }
