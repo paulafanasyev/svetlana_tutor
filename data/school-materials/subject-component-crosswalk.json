@@ -5,7 +5,7 @@
   "purpose": "Connect grade/subject index rows for mathematics course components to the official parent mathematics FRP when the course is integrated or explicitly named within that FRP.",
   "policy": [
     "This crosswalk resolves a source-index mapping gap only. It never marks a row VERIFIED_COMPLETE and never proves that every required textbook, lesson, assignment or exercise is present.",
-    "For grades 1-6, Algebra/Geometry and Probability & Statistics (grades 5-6) point to the parent mathematics programme only; they must not be represented as separate courses based on this mapping.",
+    "For grades 1-6, Algebra/Geometry and Probability & Statistics (grades 1-6) point to the parent mathematics programme only; they must not be represented as separate courses based on this mapping.",
     "For grades 7-11, the relevant FRPs explicitly structure mathematics through the named courses Algebra, Geometry and Probability & Statistics.",
     "Do not use this crosswalk to classify textbook bibliographic records, OCR records, extracurricular programmes, or authored exercises as matching those sub-courses.",
     "All five programme PDFs are official EDSOO links represented in the federal working-programme catalogue; the repository labels them as source-linked corpus, not as re-verified against every 2026 amendment."
