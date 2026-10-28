@@ -94,7 +94,7 @@ jobs:
                   unverifiable.append(path.name)
               else:
                   upload.append(str(path))
-          pathlib.Path(".cache/school-materials/upload-list.txt").write_text("\\n".join(upload) + ("\\n" if upload else ""), encoding="utf-8")
+          pathlib.Path(".cache/school-materials/upload-list.txt").write_text("\n".join(upload) + ("\n" if upload else ""), encoding="utf-8")
           print(f"release assets with matching digest/size: {len(skipped)}")
           print(f"release assets without digest (same size only): {len(unverifiable)}")
           print(f"assets to upload/replace: {len(upload)}")
