@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-10-28T18:29:41.150730+00:00",
+  "generatedAt": "2026-10-28T18:35:10.407752+00:00",
   "officialCatalogue": "https://edsoo.ru/rabochie-programmy/",
   "provenance": "corpus",
   "attempted": 55,
   "verified": 55,
   "failed": 0,
   "files": [
-    {
-      "id": "frp-noo-russian-1-4",
-      "title": "Русский язык, 1–4 классы",
-      "gradeRange": [
-        1,
-        4
-      ],
-      "subject": "russian-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_russkij-yazyk_1-4.pdf",
-      "pages": 196,
-      "releaseAsset": "frp-frp-noo-russian-1-4.pdf",
-      "fileSizeBytes": 2064904,
-      "sha256": "a890038ce4fcc825d4a7853eae42c0c6fc7ac7bc5af8fba61e0bad8e12ee3f82",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-noo-literary-reading-1-4",
-      "title": "Литературное чтение, 1–4 классы",
-      "gradeRange": [
-        1,
-        4
-      ],
-      "subject": "literary-reading",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_literaturnoe-chtenie_1-4.pdf",
-      "pages": 204,
-      "releaseAsset": "frp-frp-noo-literary-reading-1-4.pdf",
-      "fileSizeBytes": 1972091,
-      "sha256": "b859421ba09d853cf651c6e91bc721345324b5bccb94bc2ce7d89f015f74bfed",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
     {
       "id": "frp-noo-english-2-4",
       "title": "Иностранный (английский) язык, 2–4 классы",
@@ -71,18 +39,18 @@
       "error": null
     },
     {
-      "id": "frp-noo-visual-arts-1-4",
-      "title": "Изобразительное искусство, 1–4 классы",
+      "id": "frp-noo-literary-reading-1-4",
+      "title": "Литературное чтение, 1–4 классы",
       "gradeRange": [
         1,
         4
       ],
-      "subject": "visual-arts",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
-      "pages": 92,
-      "releaseAsset": "frp-frp-noo-visual-arts-1-4.pdf",
-      "fileSizeBytes": 958374,
-      "sha256": "aa773bc3e4af38ba72c04354fc51dd00cf77c4b4ea9640bf8ef5fb02745a4c6f",
+      "subject": "literary-reading",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_literaturnoe-chtenie_1-4.pdf",
+      "pages": 204,
+      "releaseAsset": "frp-frp-noo-literary-reading-1-4.pdf",
+      "fileSizeBytes": 1972091,
+      "sha256": "b859421ba09d853cf651c6e91bc721345324b5bccb94bc2ce7d89f015f74bfed",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -103,18 +71,18 @@
       "error": null
     },
     {
-      "id": "frp-noo-world-1-4",
-      "title": "Окружающий мир, 1–4 классы",
+      "id": "frp-noo-music-1-4",
+      "title": "Музыка, 1–4 классы",
       "gradeRange": [
         1,
         4
       ],
-      "subject": "world-around-us",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
-      "pages": 111,
-      "releaseAsset": "frp-frp-noo-world-1-4.pdf",
-      "fileSizeBytes": 1292129,
-      "sha256": "8ae0c48d3017b7ad0b0ce7a43341a3fa1a8a819557be72d5ab1ef7f937853541",
+      "subject": "music",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_muzyka_1-4.pdf",
+      "pages": 114,
+      "releaseAsset": "frp-frp-noo-music-1-4.pdf",
+      "fileSizeBytes": 1209315,
+      "sha256": "6ed1c8b1400a44fe99dc245638de4025f76f8a69c9d91533564df40512bb6177",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -151,194 +119,50 @@
       "error": null
     },
     {
-      "id": "frp-noo-music-1-4",
-      "title": "Музыка, 1–4 классы",
+      "id": "frp-noo-russian-1-4",
+      "title": "Русский язык, 1–4 классы",
       "gradeRange": [
         1,
         4
       ],
-      "subject": "music",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_muzyka_1-4.pdf",
-      "pages": 114,
-      "releaseAsset": "frp-frp-noo-music-1-4.pdf",
-      "fileSizeBytes": 1209315,
-      "sha256": "6ed1c8b1400a44fe99dc245638de4025f76f8a69c9d91533564df40512bb6177",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-russian-5-9",
-      "title": "Русский язык, 5–9 классы",
-      "gradeRange": [
-        5,
-        9
-      ],
       "subject": "russian-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/09/01_frp_russkij-yazyk_5-9-klassy_itog-na-sajt_1-2.pdf",
-      "pages": 252,
-      "releaseAsset": "frp-frp-ooo-russian-5-9.pdf",
-      "fileSizeBytes": 2339183,
-      "sha256": "1d2f68b5e77e7b67fccd52ce0fed36d84141dc719e50db7b225f40b1313eeb0d",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_russkij-yazyk_1-4.pdf",
+      "pages": 196,
+      "releaseAsset": "frp-frp-noo-russian-1-4.pdf",
+      "fileSizeBytes": 2064904,
+      "sha256": "a890038ce4fcc825d4a7853eae42c0c6fc7ac7bc5af8fba61e0bad8e12ee3f82",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-ooo-literature-5-9",
-      "title": "Литература, 5–9 классы",
+      "id": "frp-noo-visual-arts-1-4",
+      "title": "Изобразительное искусство, 1–4 классы",
       "gradeRange": [
-        5,
-        9
+        1,
+        4
       ],
-      "subject": "literature",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
-      "pages": 193,
-      "releaseAsset": "frp-frp-ooo-literature-5-9.pdf",
-      "fileSizeBytes": 1843145,
-      "sha256": "ee71af2fd025b7760bdfd85689bb0a1cca0cd44a1e94371c4fe1f5ec9b42b7fa",
+      "subject": "visual-arts",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+      "pages": 92,
+      "releaseAsset": "frp-frp-noo-visual-arts-1-4.pdf",
+      "fileSizeBytes": 958374,
+      "sha256": "aa773bc3e4af38ba72c04354fc51dd00cf77c4b4ea9640bf8ef5fb02745a4c6f",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-ooo-math-basic-5-9",
-      "title": "Математика, базовый уровень, 5–9 классы",
+      "id": "frp-noo-world-1-4",
+      "title": "Окружающий мир, 1–4 классы",
       "gradeRange": [
-        5,
-        9
+        1,
+        4
       ],
-      "subject": "mathematics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
-      "pages": 143,
-      "releaseAsset": "frp-frp-ooo-math-basic-5-9.pdf",
-      "fileSizeBytes": 1629454,
-      "sha256": "a7afed6d5b67bea7b22ec680a2a736473e408b7835f927659d0e0cc840203d4f",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-math-advanced-5-9",
-      "title": "Математика, углублённый уровень, 5–9 классы",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "subject": "mathematics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
-      "pages": 101,
-      "releaseAsset": "frp-frp-ooo-math-advanced-5-9.pdf",
-      "fileSizeBytes": 981751,
-      "sha256": "de1332f2136749720bf8fb9e4f208cd679144ae4bdfb22c5e1e1dc9b35021380",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-informatics-basic-7-9",
-      "title": "Информатика, базовый уровень, 7–9 классы",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "subject": "informatics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
-      "pages": 66,
-      "releaseAsset": "frp-frp-ooo-informatics-basic-7-9.pdf",
-      "fileSizeBytes": 978486,
-      "sha256": "ee4b4518f7cd8903139c109bfe21d0541dc299281b182b6c9f6d0763c5733cd0",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-informatics-advanced-7-9",
-      "title": "Информатика, углублённый уровень, 7–9 классы",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "subject": "informatics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
-      "pages": 51,
-      "releaseAsset": "frp-frp-ooo-informatics-advanced-7-9.pdf",
-      "fileSizeBytes": 1030416,
-      "sha256": "196c1a64852520cab86e20b31be17e9c23c9044f55dcf34126cce06bdd48ee27",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-physics-basic-7-9",
-      "title": "Физика, базовый уровень, 7–9 классы",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "subject": "physics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
-      "pages": 97,
-      "releaseAsset": "frp-frp-ooo-physics-basic-7-9.pdf",
-      "fileSizeBytes": 1239873,
-      "sha256": "80047c7ae0fe2a3e35d54546a0c3aec478df7cdfca1d8333769cc101502321dc",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-physics-advanced-7-9",
-      "title": "Физика, углублённый уровень, 7–9 классы",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "subject": "physics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
-      "pages": 72,
-      "releaseAsset": "frp-frp-ooo-physics-advanced-7-9.pdf",
-      "fileSizeBytes": 853466,
-      "sha256": "e42dc356897f423131dda529214946f62d3ca40bcc0f8ec8de2fb60d8d81a3e3",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-chemistry-basic-8-9",
-      "title": "Химия, базовый уровень, 8–9 классы",
-      "gradeRange": [
-        8,
-        9
-      ],
-      "subject": "chemistry",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
-      "pages": 71,
-      "releaseAsset": "frp-frp-ooo-chemistry-basic-8-9.pdf",
-      "fileSizeBytes": 1013499,
-      "sha256": "35a0283e8128b81190805bc682034d63456b909a2a80c46524505bdc31985e15",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-chemistry-advanced-8-9",
-      "title": "Химия, углублённый уровень, 8–9 классы",
-      "gradeRange": [
-        8,
-        9
-      ],
-      "subject": "chemistry",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
-      "pages": 81,
-      "releaseAsset": "frp-frp-ooo-chemistry-advanced-8-9.pdf",
-      "fileSizeBytes": 1012995,
-      "sha256": "d7b732672820f0cd69b75c54b249f97c105ca800aecc63c5688aeb8dae7550ae",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-ooo-biology-basic-5-9",
-      "title": "Биология, базовый уровень, 5–9 классы",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "subject": "biology",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
-      "pages": 144,
-      "releaseAsset": "frp-frp-ooo-biology-basic-5-9.pdf",
-      "fileSizeBytes": 1518946,
-      "sha256": "16470854fd537ebdfc6cc193c0f30fda1336cd7b6eb76f906266ea49caaaf35f",
+      "subject": "world-around-us",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+      "pages": 111,
+      "releaseAsset": "frp-frp-noo-world-1-4.pdf",
+      "fileSizeBytes": 1292129,
+      "sha256": "8ae0c48d3017b7ad0b0ce7a43341a3fa1a8a819557be72d5ab1ef7f937853541",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -359,66 +183,66 @@
       "error": null
     },
     {
-      "id": "frp-ooo-geography-5-9",
-      "title": "География, 5–9 классы",
+      "id": "frp-ooo-biology-basic-5-9",
+      "title": "Биология, базовый уровень, 5–9 классы",
       "gradeRange": [
         5,
         9
       ],
-      "subject": "geography",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_geografiya-5-9.pdf",
-      "pages": 181,
-      "releaseAsset": "frp-frp-ooo-geography-5-9.pdf",
-      "fileSizeBytes": 1654785,
-      "sha256": "bf7739f713faea9064618ebe04e10ef9e7359e35978dbd457421b93094c7ac7c",
+      "subject": "biology",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+      "pages": 144,
+      "releaseAsset": "frp-frp-ooo-biology-basic-5-9.pdf",
+      "fileSizeBytes": 1518946,
+      "sha256": "16470854fd537ebdfc6cc193c0f30fda1336cd7b6eb76f906266ea49caaaf35f",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-ooo-history-5-9",
-      "title": "История, 5–9 классы",
+      "id": "frp-ooo-chemistry-advanced-8-9",
+      "title": "Химия, углублённый уровень, 8–9 классы",
       "gradeRange": [
-        5,
+        8,
         9
       ],
-      "subject": "history",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_istoriya_5-9.pdf",
-      "pages": 228,
-      "releaseAsset": "frp-frp-ooo-history-5-9.pdf",
-      "fileSizeBytes": 2264604,
-      "sha256": "b31d053cd5b8484faff58f4c6c40b0dff18a733c9e191a424918d3d89f11d489",
+      "subject": "chemistry",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+      "pages": 81,
+      "releaseAsset": "frp-frp-ooo-chemistry-advanced-8-9.pdf",
+      "fileSizeBytes": 1012995,
+      "sha256": "d7b732672820f0cd69b75c54b249f97c105ca800aecc63c5688aeb8dae7550ae",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-ooo-technology-5-9",
-      "title": "Труд (технология), 5–9 классы",
+      "id": "frp-ooo-chemistry-basic-8-9",
+      "title": "Химия, базовый уровень, 8–9 классы",
       "gradeRange": [
-        5,
+        8,
         9
       ],
-      "subject": "technology",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
-      "pages": 180,
-      "releaseAsset": "frp-frp-ooo-technology-5-9.pdf",
-      "fileSizeBytes": 2216029,
-      "sha256": "5183acb9610b7f7f5678d4bdef05510fdebd5b73735208bf8fed92ece60a9d99",
+      "subject": "chemistry",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+      "pages": 71,
+      "releaseAsset": "frp-frp-ooo-chemistry-basic-8-9.pdf",
+      "fileSizeBytes": 1013499,
+      "sha256": "35a0283e8128b81190805bc682034d63456b909a2a80c46524505bdc31985e15",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-ooo-social-studies-2026",
-      "title": "Обществознание, основное общее образование",
+      "id": "frp-ooo-chinese-second-5-9",
+      "title": "Второй иностранный (китайский) язык, 5–9 классы",
       "gradeRange": [
         5,
         9
       ],
-      "subject": "social-studies",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
-      "pages": 40,
-      "releaseAsset": "frp-frp-ooo-social-studies-2026.pdf",
-      "fileSizeBytes": 735197,
-      "sha256": "d6a232e238a4ebcc129d0cbab31161ce64865770438e3ac61791690aeaf3e9d9",
+      "subject": "chinese-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+      "pages": 169,
+      "releaseAsset": "frp-frp-ooo-chinese-second-5-9.pdf",
+      "fileSizeBytes": 1646047,
+      "sha256": "3f62136e16aecc5a88018af4be296e26b0bb6eebce1c63b92500bd7b1b16acd9",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -471,6 +295,182 @@
       "error": null
     },
     {
+      "id": "frp-ooo-geography-5-9",
+      "title": "География, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "geography",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_geografiya-5-9.pdf",
+      "pages": 181,
+      "releaseAsset": "frp-frp-ooo-geography-5-9.pdf",
+      "fileSizeBytes": 1654785,
+      "sha256": "bf7739f713faea9064618ebe04e10ef9e7359e35978dbd457421b93094c7ac7c",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-history-5-9",
+      "title": "История, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "history",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_istoriya_5-9.pdf",
+      "pages": 228,
+      "releaseAsset": "frp-frp-ooo-history-5-9.pdf",
+      "fileSizeBytes": 2264604,
+      "sha256": "b31d053cd5b8484faff58f4c6c40b0dff18a733c9e191a424918d3d89f11d489",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-informatics-advanced-7-9",
+      "title": "Информатика, углублённый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "informatics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
+      "pages": 51,
+      "releaseAsset": "frp-frp-ooo-informatics-advanced-7-9.pdf",
+      "fileSizeBytes": 1030416,
+      "sha256": "196c1a64852520cab86e20b31be17e9c23c9044f55dcf34126cce06bdd48ee27",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-informatics-basic-7-9",
+      "title": "Информатика, базовый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "informatics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
+      "pages": 66,
+      "releaseAsset": "frp-frp-ooo-informatics-basic-7-9.pdf",
+      "fileSizeBytes": 978486,
+      "sha256": "ee4b4518f7cd8903139c109bfe21d0541dc299281b182b6c9f6d0763c5733cd0",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-literature-5-9",
+      "title": "Литература, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "literature",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+      "pages": 193,
+      "releaseAsset": "frp-frp-ooo-literature-5-9.pdf",
+      "fileSizeBytes": 1843145,
+      "sha256": "ee71af2fd025b7760bdfd85689bb0a1cca0cd44a1e94371c4fe1f5ec9b42b7fa",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-math-advanced-5-9",
+      "title": "Математика, углублённый уровень, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "mathematics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
+      "pages": 101,
+      "releaseAsset": "frp-frp-ooo-math-advanced-5-9.pdf",
+      "fileSizeBytes": 981751,
+      "sha256": "de1332f2136749720bf8fb9e4f208cd679144ae4bdfb22c5e1e1dc9b35021380",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-math-basic-5-9",
+      "title": "Математика, базовый уровень, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "mathematics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
+      "pages": 143,
+      "releaseAsset": "frp-frp-ooo-math-basic-5-9.pdf",
+      "fileSizeBytes": 1629454,
+      "sha256": "a7afed6d5b67bea7b22ec680a2a736473e408b7835f927659d0e0cc840203d4f",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-physics-advanced-7-9",
+      "title": "Физика, углублённый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "physics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+      "pages": 72,
+      "releaseAsset": "frp-frp-ooo-physics-advanced-7-9.pdf",
+      "fileSizeBytes": 853466,
+      "sha256": "e42dc356897f423131dda529214946f62d3ca40bcc0f8ec8de2fb60d8d81a3e3",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-physics-basic-7-9",
+      "title": "Физика, базовый уровень, 7–9 классы",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "subject": "physics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+      "pages": 97,
+      "releaseAsset": "frp-frp-ooo-physics-basic-7-9.pdf",
+      "fileSizeBytes": 1239873,
+      "sha256": "80047c7ae0fe2a3e35d54546a0c3aec478df7cdfca1d8333769cc101502321dc",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-russian-5-9",
+      "title": "Русский язык, 5–9 классы",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "russian-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/09/01_frp_russkij-yazyk_5-9-klassy_itog-na-sajt_1-2.pdf",
+      "pages": 252,
+      "releaseAsset": "frp-frp-ooo-russian-5-9.pdf",
+      "fileSizeBytes": 2339183,
+      "sha256": "1d2f68b5e77e7b67fccd52ce0fed36d84141dc719e50db7b225f40b1313eeb0d",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-ooo-social-studies-2026",
+      "title": "Обществознание, основное общее образование",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "social-studies",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+      "pages": 40,
+      "releaseAsset": "frp-frp-ooo-social-studies-2026.pdf",
+      "fileSizeBytes": 735197,
+      "sha256": "d6a232e238a4ebcc129d0cbab31161ce64865770438e3ac61791690aeaf3e9d9",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
       "id": "frp-ooo-spanish-second-5-9",
       "title": "Второй иностранный (испанский) язык, 5–9 классы",
       "gradeRange": [
@@ -487,162 +487,18 @@
       "error": null
     },
     {
-      "id": "frp-ooo-chinese-second-5-9",
-      "title": "Второй иностранный (китайский) язык, 5–9 классы",
+      "id": "frp-ooo-technology-5-9",
+      "title": "Труд (технология), 5–9 классы",
       "gradeRange": [
         5,
         9
       ],
-      "subject": "chinese-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
-      "pages": 169,
-      "releaseAsset": "frp-frp-ooo-chinese-second-5-9.pdf",
-      "fileSizeBytes": 1646047,
-      "sha256": "3f62136e16aecc5a88018af4be296e26b0bb6eebce1c63b92500bd7b1b16acd9",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-math-basic-10-11",
-      "title": "Математика, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "mathematics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
-      "pages": 89,
-      "releaseAsset": "frp-frp-soo-math-basic-10-11.pdf",
-      "fileSizeBytes": 912087,
-      "sha256": "631e85f6cd8c03d4d23160f8a06fae985b0439ef1958f15eccb6b9c2fe4f4b22",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-math-advanced-10-11",
-      "title": "Математика, углублённый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "mathematics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
-      "pages": 89,
-      "releaseAsset": "frp-frp-soo-math-advanced-10-11.pdf",
-      "fileSizeBytes": 1100919,
-      "sha256": "1e77e50f65dedb457587cac15f9d46f734ce543ad95d53d93a245e472e44dd64",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-russian-10-11",
-      "title": "Русский язык, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "russian-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_russkij-yazyk_10_11.pdf",
-      "pages": 92,
-      "releaseAsset": "frp-frp-soo-russian-10-11.pdf",
-      "fileSizeBytes": 1056277,
-      "sha256": "6be6b29f4512627c5a9510a0fb6ff6e6e5b7d81718564f19e361eaab4ef00bd6",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-literature-basic-10-11",
-      "title": "Литература, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "literature",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
-      "pages": 127,
-      "releaseAsset": "frp-frp-soo-literature-basic-10-11.pdf",
-      "fileSizeBytes": 1139432,
-      "sha256": "b99c79da960be946c9d4d2b7a46cdbce8bd3cc38d9a70385d2e329149e55f5d1",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-informatics-basic-10-11",
-      "title": "Информатика, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "informatics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
-      "pages": 46,
-      "releaseAsset": "frp-frp-soo-informatics-basic-10-11.pdf",
-      "fileSizeBytes": 854189,
-      "sha256": "447813cd1c337569c25a36430ecb236c44a210562a98efd23e0c0a0d10b0b3c7",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-physics-basic-10-11",
-      "title": "Физика, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "physics",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
-      "pages": 78,
-      "releaseAsset": "frp-frp-soo-physics-basic-10-11.pdf",
-      "fileSizeBytes": 1097825,
-      "sha256": "cf07842f1c6784a972bac8bb57fa9a031cc1f8bdaaf7016a725b474485aab82c",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-chemistry-basic-10-11",
-      "title": "Химия, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "chemistry",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
-      "pages": 58,
-      "releaseAsset": "frp-frp-soo-chemistry-basic-10-11.pdf",
-      "fileSizeBytes": 1015343,
-      "sha256": "2a6d6ef9d9824d8b2b910b9e21d8efd7e1c943d71ba7c6815cffce8246f2b9dd",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-chemistry-advanced-10-11",
-      "title": "Химия, углублённый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "chemistry",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
-      "pages": 72,
-      "releaseAsset": "frp-frp-soo-chemistry-advanced-10-11.pdf",
-      "fileSizeBytes": 1157820,
-      "sha256": "f3121d55c5a186defea5e909f114a8a9d1b81c8ca244ccc76c526402ecbbc276",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-biology-basic-10-11",
-      "title": "Биология, базовый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "biology",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
-      "pages": 88,
-      "releaseAsset": "frp-frp-soo-biology-basic-10-11.pdf",
-      "fileSizeBytes": 1098888,
-      "sha256": "3bfc06ba21cae082a759d14713c9f86a2796d25a86ce342d549c523a1d8e9842",
+      "subject": "technology",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
+      "pages": 180,
+      "releaseAsset": "frp-frp-ooo-technology-5-9.pdf",
+      "fileSizeBytes": 2216029,
+      "sha256": "5183acb9610b7f7f5678d4bdef05510fdebd5b73735208bf8fed92ece60a9d99",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -663,98 +519,66 @@
       "error": null
     },
     {
-      "id": "frp-soo-geography-basic-10-11",
-      "title": "География, базовый уровень, 10–11 классы",
+      "id": "frp-soo-biology-basic-10-11",
+      "title": "Биология, базовый уровень, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "geography",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_baz.pdf",
-      "pages": 85,
-      "releaseAsset": "frp-frp-soo-geography-basic-10-11.pdf",
-      "fileSizeBytes": 938159,
-      "sha256": "e29b1a0fbe587345517e04db36b834c75fc3fcbd252e07887c3d466c553f11f5",
+      "subject": "biology",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
+      "pages": 88,
+      "releaseAsset": "frp-frp-soo-biology-basic-10-11.pdf",
+      "fileSizeBytes": 1098888,
+      "sha256": "3bfc06ba21cae082a759d14713c9f86a2796d25a86ce342d549c523a1d8e9842",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-soo-geography-advanced-10-11",
-      "title": "География, углублённый уровень, 10–11 классы",
+      "id": "frp-soo-chemistry-advanced-10-11",
+      "title": "Химия, углублённый уровень, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "geography",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_ugl.pdf",
-      "pages": 283,
-      "releaseAsset": "frp-frp-soo-geography-advanced-10-11.pdf",
-      "fileSizeBytes": 1976049,
-      "sha256": "2505e81503a408f55414a32bd0af6fedb3d3dbd4e1dfdf095664afb06e2eb97b",
+      "subject": "chemistry",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
+      "pages": 72,
+      "releaseAsset": "frp-frp-soo-chemistry-advanced-10-11.pdf",
+      "fileSizeBytes": 1157820,
+      "sha256": "f3121d55c5a186defea5e909f114a8a9d1b81c8ca244ccc76c526402ecbbc276",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-soo-history-basic-10-11",
-      "title": "История, базовый уровень, 10–11 классы",
+      "id": "frp-soo-chemistry-basic-10-11",
+      "title": "Химия, базовый уровень, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "history",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_baza.pdf",
-      "pages": 150,
-      "releaseAsset": "frp-frp-soo-history-basic-10-11.pdf",
-      "fileSizeBytes": 1293766,
-      "sha256": "3d3ba537958e082e4d8c7f6085355e2bc63b678b819aea3f4bd0e1a261cc4598",
+      "subject": "chemistry",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
+      "pages": 58,
+      "releaseAsset": "frp-frp-soo-chemistry-basic-10-11.pdf",
+      "fileSizeBytes": 1015343,
+      "sha256": "2a6d6ef9d9824d8b2b910b9e21d8efd7e1c943d71ba7c6815cffce8246f2b9dd",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
     {
-      "id": "frp-soo-history-advanced-10-11",
-      "title": "История, углублённый уровень, 10–11 классы",
+      "id": "frp-soo-chinese-second-10-11",
+      "title": "Китайский язык, второй иностранный, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "history",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_ugl.pdf",
-      "pages": 181,
-      "releaseAsset": "frp-frp-soo-history-advanced-10-11.pdf",
-      "fileSizeBytes": 1476093,
-      "sha256": "c806084aa63e13196607b4bc53f6bfc1f6901ac92e7907514740c4fe8e9fd5d6",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-social-studies-10-11",
-      "title": "Обществознание, среднее общее образование",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "social-studies",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
-      "pages": 67,
-      "releaseAsset": "frp-frp-soo-social-studies-10-11.pdf",
-      "fileSizeBytes": 877760,
-      "sha256": "3ce2eb3d57d07cc4dc68472dd40f2f0a7b4bd89353b75d598a54323e52d58975",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-pe-10-11",
-      "title": "Физическая культура, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "physical-education",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizkultura_10_11.pdf",
-      "pages": 236,
-      "releaseAsset": "frp-frp-soo-pe-10-11.pdf",
-      "fileSizeBytes": 1885134,
-      "sha256": "f92e8ebd17f736f657febfaf67d66c512b716d17224da56a14f7febb77a4ae70",
+      "subject": "chinese-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
+      "pages": 124,
+      "releaseAsset": "frp-frp-soo-chinese-second-10-11.pdf",
+      "fileSizeBytes": 1483499,
+      "sha256": "61638db9e12eafa809b6530ebd7c65155dd0d1f4d45ea097d76d299d2363a51f",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -775,34 +599,18 @@
       "error": null
     },
     {
-      "id": "frp-soo-german-basic-10-11",
-      "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+      "id": "frp-soo-english-second-10-11",
+      "title": "Английский язык, второй иностранный, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "german-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
-      "pages": 124,
-      "releaseAsset": "frp-frp-soo-german-basic-10-11.pdf",
-      "fileSizeBytes": 1296116,
-      "sha256": "4a26789796df794349730fd520dc2e1e55e7d5f72c5aa9341dc90b3ea33e22df",
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "error": null
-    },
-    {
-      "id": "frp-soo-german-advanced-10-11",
-      "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "subject": "german-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
-      "pages": 117,
-      "releaseAsset": "frp-frp-soo-german-advanced-10-11.pdf",
-      "fileSizeBytes": 1299063,
-      "sha256": "0dc6c610324dbc9ef6451671bc6513a46f878ce5fac94765ef413ae85161dbc4",
+      "subject": "english-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
+      "pages": 115,
+      "releaseAsset": "frp-frp-soo-english-second-10-11.pdf",
+      "fileSizeBytes": 1179085,
+      "sha256": "bdbfb55cdf79ec359affb34f52601502d897f63d12086bcf3340e2b56e92b1d9",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -823,18 +631,66 @@
       "error": null
     },
     {
-      "id": "frp-soo-english-second-10-11",
-      "title": "Английский язык, второй иностранный, 10–11 классы",
+      "id": "frp-soo-geography-advanced-10-11",
+      "title": "География, углублённый уровень, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "english-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
-      "pages": 115,
-      "releaseAsset": "frp-frp-soo-english-second-10-11.pdf",
-      "fileSizeBytes": 1179085,
-      "sha256": "bdbfb55cdf79ec359affb34f52601502d897f63d12086bcf3340e2b56e92b1d9",
+      "subject": "geography",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_ugl.pdf",
+      "pages": 283,
+      "releaseAsset": "frp-frp-soo-geography-advanced-10-11.pdf",
+      "fileSizeBytes": 1976049,
+      "sha256": "2505e81503a408f55414a32bd0af6fedb3d3dbd4e1dfdf095664afb06e2eb97b",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-geography-basic-10-11",
+      "title": "География, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "geography",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_baz.pdf",
+      "pages": 85,
+      "releaseAsset": "frp-frp-soo-geography-basic-10-11.pdf",
+      "fileSizeBytes": 938159,
+      "sha256": "e29b1a0fbe587345517e04db36b834c75fc3fcbd252e07887c3d466c553f11f5",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-german-advanced-10-11",
+      "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+      "pages": 117,
+      "releaseAsset": "frp-frp-soo-german-advanced-10-11.pdf",
+      "fileSizeBytes": 1299063,
+      "sha256": "0dc6c610324dbc9ef6451671bc6513a46f878ce5fac94765ef413ae85161dbc4",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-german-basic-10-11",
+      "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "german-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+      "pages": 124,
+      "releaseAsset": "frp-frp-soo-german-basic-10-11.pdf",
+      "fileSizeBytes": 1296116,
+      "sha256": "4a26789796df794349730fd520dc2e1e55e7d5f72c5aa9341dc90b3ea33e22df",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
@@ -855,18 +711,162 @@
       "error": null
     },
     {
-      "id": "frp-soo-chinese-second-10-11",
-      "title": "Китайский язык, второй иностранный, 10–11 классы",
+      "id": "frp-soo-history-advanced-10-11",
+      "title": "История, углублённый уровень, 10–11 классы",
       "gradeRange": [
         10,
         11
       ],
-      "subject": "chinese-language",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_kit-yaz_10-11.pdf",
-      "pages": 124,
-      "releaseAsset": "frp-frp-soo-chinese-second-10-11.pdf",
-      "fileSizeBytes": 1483499,
-      "sha256": "61638db9e12eafa809b6530ebd7c65155dd0d1f4d45ea097d76d299d2363a51f",
+      "subject": "history",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_ugl.pdf",
+      "pages": 181,
+      "releaseAsset": "frp-frp-soo-history-advanced-10-11.pdf",
+      "fileSizeBytes": 1476093,
+      "sha256": "c806084aa63e13196607b4bc53f6bfc1f6901ac92e7907514740c4fe8e9fd5d6",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-history-basic-10-11",
+      "title": "История, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "history",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_baza.pdf",
+      "pages": 150,
+      "releaseAsset": "frp-frp-soo-history-basic-10-11.pdf",
+      "fileSizeBytes": 1293766,
+      "sha256": "3d3ba537958e082e4d8c7f6085355e2bc63b678b819aea3f4bd0e1a261cc4598",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-informatics-basic-10-11",
+      "title": "Информатика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "informatics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+      "pages": 46,
+      "releaseAsset": "frp-frp-soo-informatics-basic-10-11.pdf",
+      "fileSizeBytes": 854189,
+      "sha256": "447813cd1c337569c25a36430ecb236c44a210562a98efd23e0c0a0d10b0b3c7",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-literature-basic-10-11",
+      "title": "Литература, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "literature",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+      "pages": 127,
+      "releaseAsset": "frp-frp-soo-literature-basic-10-11.pdf",
+      "fileSizeBytes": 1139432,
+      "sha256": "b99c79da960be946c9d4d2b7a46cdbce8bd3cc38d9a70385d2e329149e55f5d1",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-math-advanced-10-11",
+      "title": "Математика, углублённый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
+      "pages": 89,
+      "releaseAsset": "frp-frp-soo-math-advanced-10-11.pdf",
+      "fileSizeBytes": 1100919,
+      "sha256": "1e77e50f65dedb457587cac15f9d46f734ce543ad95d53d93a245e472e44dd64",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-math-basic-10-11",
+      "title": "Математика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "mathematics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
+      "pages": 89,
+      "releaseAsset": "frp-frp-soo-math-basic-10-11.pdf",
+      "fileSizeBytes": 912087,
+      "sha256": "631e85f6cd8c03d4d23160f8a06fae985b0439ef1958f15eccb6b9c2fe4f4b22",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-pe-10-11",
+      "title": "Физическая культура, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "physical-education",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizkultura_10_11.pdf",
+      "pages": 236,
+      "releaseAsset": "frp-frp-soo-pe-10-11.pdf",
+      "fileSizeBytes": 1885134,
+      "sha256": "f92e8ebd17f736f657febfaf67d66c512b716d17224da56a14f7febb77a4ae70",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-physics-basic-10-11",
+      "title": "Физика, базовый уровень, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "physics",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+      "pages": 78,
+      "releaseAsset": "frp-frp-soo-physics-basic-10-11.pdf",
+      "fileSizeBytes": 1097825,
+      "sha256": "cf07842f1c6784a972bac8bb57fa9a031cc1f8bdaaf7016a725b474485aab82c",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-russian-10-11",
+      "title": "Русский язык, 10–11 классы",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "russian-language",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_russkij-yazyk_10_11.pdf",
+      "pages": 92,
+      "releaseAsset": "frp-frp-soo-russian-10-11.pdf",
+      "fileSizeBytes": 1056277,
+      "sha256": "6be6b29f4512627c5a9510a0fb6ff6e6e5b7d81718564f19e361eaab4ef00bd6",
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "error": null
+    },
+    {
+      "id": "frp-soo-social-studies-10-11",
+      "title": "Обществознание, среднее общее образование",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "social-studies",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+      "pages": 67,
+      "releaseAsset": "frp-frp-soo-social-studies-10-11.pdf",
+      "fileSizeBytes": 877760,
+      "sha256": "3ce2eb3d57d07cc4dc68472dd40f2f0a7b4bd89353b75d598a54323e52d58975",
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "error": null
     },
