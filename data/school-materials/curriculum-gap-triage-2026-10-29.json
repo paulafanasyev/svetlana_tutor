@@ -25,14 +25,14 @@
     }
   },
   "metrics": {
-    "gapRows": 141,
+    "gapRows": 137,
     "outsideListedProgramRanges": 51,
-    "noExactSubjectProgramEntry": 90,
+    "noExactSubjectProgramEntry": 86,
     "listedRangeIncludesClassButIndexHasNoExactRow": 0,
     "resolvedApplicability": 0,
     "completenessVerified": 0,
     "allRemainNeedsManualReview": true,
-    "officialScopeHintRows": 141,
+    "officialScopeHintRows": 137,
     "rowsWithOfficialPdfScopeHint": 38,
     "rowsResolvedByHints": 0,
     "allHintsAreNonResolving": true,
@@ -40,7 +40,8 @@
     "rowsResolvedBySubjectTaxonomy": 10,
     "candidateSourceRangeMismatchRows": 51,
     "candidateSourceRangesVerified": 51,
-    "sourceApplicabilityResolvedByRangeCheck": 0
+    "sourceApplicabilityResolvedByRangeCheck": 0,
+    "rowsResolvedByOfficialScope": 4
   },
   "policy": [
     "All remaining items stay NEEDS_MANUAL_REVIEW, NOT_PROVEN and NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX until evidence is found for that exact grade/subject.",
@@ -48,7 +49,8 @@
     "A component crosswalk resolves the indexing/source relationship only. It does not prove curriculum completeness, the existence of separate courses in lower grades, textbook availability, OCR correctness or redistribution rights.",
     "Generic source hints do not automatically resolve anything. The manually reviewed mathematics mapping is separately recorded with source IDs and exact official URLs.",
     "Do not apply foreign-language content/results changes for grades 6-9 before 2027-09-01.",
-    "Four additional rows (Probability & Statistics, grades 1-4) are linked only to the parent Mathematics FRP because the primary programme includes work with data/tables. This is not a separate course claim and completeness remains NOT_PROVEN."
+    "Four additional rows (Probability & Statistics, grades 1-4) are linked only to the parent Mathematics FRP because the primary programme includes work with data/tables. This is not a separate course claim and completeness remains NOT_PROVEN.",
+    "Четыре ячейки ОБЗР в 1–4 классах перенесены в scopeResolutions на основании официального FAQ и диапазонов ФРП 8–9/10–11 классов. Это не доказывает отсутствие факультативов и не меняет completeCoverage."
   ],
   "resolvedComponentRows": [
     {
@@ -643,23 +645,6 @@
     },
     {
       "grade": 1,
-      "subject": "fundamentals-security-defense-homeland",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 1,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -1008,23 +993,6 @@
     },
     {
       "grade": 2,
-      "subject": "fundamentals-security-defense-homeland",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 2,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -1312,23 +1280,6 @@
     {
       "grade": 3,
       "subject": "ecology",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 3,
-      "subject": "fundamentals-security-defense-homeland",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
       "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
@@ -1655,23 +1606,6 @@
     {
       "grade": 4,
       "subject": "ecology",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 4,
-      "subject": "fundamentals-security-defense-homeland",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
       "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
@@ -4048,6 +3982,32 @@
         }
       ],
       "resolvingPower": "Official programme source and phase schedule only; not proof of complete content or curriculum coverage"
+    },
+    {
+      "id": "frp-ooo-obzr-8-9",
+      "sourceType": "OFFICIAL_FRP_PDF",
+      "title": "Федеральная рабочая программа ОБЗР, 8–9 классы (2025)",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "checkedAt": "2026-10-29",
+      "rightsStatus": "LINK_ONLY; redistribution not independently confirmed",
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING"
+    },
+    {
+      "id": "frp-soo-obzr-10-11",
+      "sourceType": "OFFICIAL_FRP_PDF",
+      "title": "Федеральная рабочая программа ОБЗР, 10–11 классы (2025)",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "checkedAt": "2026-10-29",
+      "rightsStatus": "LINK_ONLY; redistribution not independently confirmed",
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING"
     }
   ],
   "taxonomyResolutions": [
@@ -6040,6 +6000,56 @@
       "remainingQuestion": "NOT_PROVEN: this does not establish that the subject is not required or that no local, regional, elective or integrated programme exists.",
       "requiredNextStep": "Check the grade-specific current federal plan and, where relevant, the school's chosen language/level/elective curriculum. Do not mark NOT_APPLICABLE from this finding alone.",
       "completeCoverage": "NOT_PROVEN"
+    }
+  ],
+  "scopeResolutions": [
+    {
+      "grade": 1,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf"
+      ],
+      "note": "Официальные ФРП ОБЗР охватывают 8–9 и 10–11 классы; отдельная программа предмета для 1–4 классов не указана. Это закрывает федеральный предметный диапазон, но не подтверждает отсутствие вариативных/внеурочных курсов и не доказывает полноту материалов."
+    },
+    {
+      "grade": 2,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf"
+      ],
+      "note": "Официальные ФРП ОБЗР охватывают 8–9 и 10–11 классы; отдельная программа предмета для 1–4 классов не указана. Это закрывает федеральный предметный диапазон, но не подтверждает отсутствие вариативных/внеурочных курсов и не доказывает полноту материалов."
+    },
+    {
+      "grade": 3,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf"
+      ],
+      "note": "Официальные ФРП ОБЗР охватывают 8–9 и 10–11 классы; отдельная программа предмета для 1–4 классов не указана. Это закрывает федеральный предметный диапазон, но не подтверждает отсутствие вариативных/внеурочных курсов и не доказывает полноту материалов."
+    },
+    {
+      "grade": 4,
+      "subject": "fundamentals-security-defense-homeland",
+      "status": "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+      "completeCoverage": "NOT_PROVEN",
+      "sourceUrls": [
+        "https://edsoo.ru/vopros-otvet-obzr/",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf"
+      ],
+      "note": "Официальные ФРП ОБЗР охватывают 8–9 и 10–11 классы; отдельная программа предмета для 1–4 классов не указана. Это закрывает федеральный предметный диапазон, но не подтверждает отсутствие вариативных/внеурочных курсов и не доказывает полноту материалов."
     }
   ]
 }
