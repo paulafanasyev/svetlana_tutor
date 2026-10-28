@@ -188,6 +188,11 @@ function CadetWelcomeGate({ track }) {
             </div>
           )}
         </div>
+        {videoFailed && (
+          <p role="status" className="mx-auto mb-4 max-w-md border border-[#c9a227]/60 bg-black/20 px-4 py-3 text-sm leading-relaxed text-[#f4edcf]">
+            Видео-приветствие генерала Чуйкова пока недоступно. Сейчас можно прослушать временное голосовое приветствие; для показа видео необходимо добавить исходный MP4-файл.
+          </p>
+        )}
         <p className="mx-auto mb-5 max-w-md text-sm leading-relaxed text-[#e4dfc8]">
           «Кадет, приветствую тебя! Здесь ценятся дисциплина, знания и уважение. Будь настойчив, думай самостоятельно и каждый день становись сильнее. Приступай к занятиям!»
         </p>
