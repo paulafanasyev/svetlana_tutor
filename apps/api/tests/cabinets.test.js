@@ -65,6 +65,25 @@ describe('Teacher cabinet — /api/teacher', () => {
     expect(res.body[0]).toHaveProperty('accuracy');
   });
 
+  it('shows per-topic school-game results to the owning class teacher', async () => {
+    const payload = { taskType: 'school-game:history:6:memory', topic: 'Крещение Руси', level: 'A1', durationMs: 3000 };
+    const ok = await request(app).post('/api/progress/attempt').set(auth(s1)).send({ ...payload, correct: true });
+    const miss = await request(app).post('/api/progress/attempt').set(auth(s1)).send({ ...payload, correct: false, durationMs: 5000 });
+    expect(ok.status).toBe(201);
+    expect(miss.status).toBe(201);
+
+    const res = await request(app).get(`/api/teacher/classes/${cls.id}/roster`).set(auth(teacher));
+    expect(res.status).toBe(200);
+    const student = res.body.find((row) => row.id === s1.id);
+    expect(student.gameResults).toEqual([
+      expect.objectContaining({
+        subjectSlug: 'history', grade: 6, mode: 'memory', topic: 'Крещение Руси',
+        total: 2, correct: 1, accuracy: 0.5, avgDurationMs: 4000,
+      }),
+    ]);
+    expect(student.gameResults[0].lastAt).toBeGreaterThan(0);
+  });
+
   it("forbids a teacher from viewing another teacher's class roster (403)", async () => {
     const res = await request(app).get(`/api/teacher/classes/${cls.id}/roster`).set(auth(other));
     expect(res.status).toBe(403);
