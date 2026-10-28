@@ -386,6 +386,18 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   ]);
   assert.equal(programs.find((item) => item.id === 'frp-noo-orkse-4').subject, 'religious-cultures-ethics');
 
+  const obzr8 = programs.find((item) => item.id === 'frp-ooo-obzr-8-9');
+  const obzr10 = programs.find((item) => item.id === 'frp-soo-obzr-10-11');
+  assert.ok(obzr8 && obzr10, 'official OBZR programmes must be indexed');
+  assert.deepEqual(obzr8.gradeRange, [8, 9]);
+  assert.deepEqual(obzr10.gradeRange, [10, 11]);
+  for (const program of [obzr8, obzr10]) {
+    assert.equal(program.subject, 'fundamentals-security-defense-homeland');
+    assert.equal(program.mirrorAllowed, false);
+    assert.equal(program.contentStoredLocally, false);
+    assert.match(program.curriculumStatus, /ORDER_576_CROSSWALK_PENDING/);
+  }
+
   const ids = new Set(programs.map((program) => program.id));
   const sourceIds = new Set(componentCrosswalk.sources.map((source) => source.id));
   assert.equal(sourceIds.size, componentCrosswalk.sources.length);
@@ -411,6 +423,10 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   assert.equal(row(3, 'probability-statistics')[5], 'RELATED_PARENT_PROGRAM_ONLY');
   assert.equal(row(6, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
   assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(3, 'fundamentals-security-defense-homeland')[3], 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE');
+  assert.equal(row(3, 'fundamentals-security-defense-homeland')[5], 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
+  assert.equal(row(8, 'fundamentals-security-defense-homeland')[6], 1);
+  assert.equal(row(8, 'fundamentals-security-defense-homeland')[4], 'NOT_PROVEN');
   assert.ok(appCoverage.rows.every((item) => item[4] === 'NOT_PROVEN'));
   assert.equal(appCoverage.rows.filter((item) => item[4] === 'VERIFIED_COMPLETE').length, 0);
 });
