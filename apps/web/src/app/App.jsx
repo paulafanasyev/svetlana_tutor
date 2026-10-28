@@ -6,6 +6,7 @@ import { setSfxEnabled } from '../audio/sfx.js';
 import { setVoiceEnabled } from '../audio/tts.js';
 import Layout from './Layout.jsx';
 import TrackBar from './TrackBar.jsx';
+import { publicAssetUrl } from './cadetWelcomeAsset.js';
 import Login from '../features/auth/Login.jsx';
 import TeacherPicker from '../features/picker/TeacherPicker.jsx';
 import Home from '../features/home/Home.jsx';
@@ -104,8 +105,9 @@ export default function App() {
 }
 
 // Opening greeting for the locked cadet-school experience. The video is an optional
-// public asset at /assets/cadet-general-chuikov.mp4; speech synthesis is the safe
-// fallback until that asset is present or when browser media playback is unavailable.
+// public asset resolved relative to Vite's configured base path. Speech synthesis is
+// the fallback until that asset is supplied or when browser media playback is unavailable.
+const CADET_WELCOME_VIDEO_URL = publicAssetUrl(import.meta.env.BASE_URL, 'assets/cadet-general-chuikov.mp4');
 function CadetWelcomeGate({ track }) {
   const [dismissed, setDismissed] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
@@ -116,7 +118,15 @@ function CadetWelcomeGate({ track }) {
   const active = track === 'cadet' && !dismissed;
 
   useEffect(() => {
-    if (track === 'cadet') setDismissed(false);
+    if (track !== 'cadet') return;
+    setDismissed(false);
+    setVideoReady(false);
+    setVideoFailed(false);
+    setStarted(false);
+    try {
+      const video = videoRef.current;
+      if (video) { video.pause(); video.currentTime = 0; }
+    } catch { /* The media element may not be mounted yet. */ }
   }, [track]);
 
   useEffect(() => () => {
@@ -166,7 +176,7 @@ function CadetWelcomeGate({ track }) {
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-[#d5c783]">Кадетский корпус · Вводный инструктаж</p>
         <h1 id="cadet-welcome-title" className="mb-4 text-3xl font-black uppercase tracking-wide sm:text-4xl">Генерал Чуйков приветствует кадета</h1>
         <div className="relative mx-auto mb-4 aspect-[2/3] w-full max-w-[260px] overflow-hidden border-4 border-[#c9a227] bg-[#303824] shadow-2xl">
-          <video ref={videoRef} src="/assets/cadet-general-chuikov.mp4" playsInline preload="metadata"
+          <video ref={videoRef} src={CADET_WELCOME_VIDEO_URL} playsInline preload="metadata"
             className={`h-full w-full object-cover ${videoFailed ? 'hidden' : ''}`}
             onCanPlay={() => setVideoReady(true)} onError={() => setVideoFailed(true)}
             onEnded={enter} aria-label="Видео-приветствие генерала Чуйкова" />
