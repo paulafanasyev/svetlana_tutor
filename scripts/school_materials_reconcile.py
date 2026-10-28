@@ -326,7 +326,7 @@ def main():
             raise ValueError("Unsupported target/source in programme component crosswalk: " + str(mapping.get("id")))
         for program_id in mapping.get("sourceIds", []):
             program = program_by_id.get(program_id)
-            if not program or program.get("subject") != "mathematics":
+            if not program or program.get("subject") != mapping.get("sourceProgramSubject"):
                 raise ValueError("Crosswalk programme source not found or wrong subject: " + str(program_id))
     for source in records(component_crosswalk, "sources"):
         if not str(source.get("url", "")).startswith("https://edsoo.ru/"):
