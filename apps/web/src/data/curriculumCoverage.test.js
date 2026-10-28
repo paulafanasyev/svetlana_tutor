@@ -7,7 +7,7 @@ test('матрица содержит полный индекс 37 катего�
   assert.equal(metadata.recordCount, 407);
   assert.equal(metadata.notProvenCount, 407);
   assert.equal(metadata.verifiedCompleteCount, 0);
-  assert.equal(metadata.checkedAt, '2026-10-22');
+  assert.equal(metadata.checkedAt, '2026-10-29');
 });
 
 test('покрытие подбирается по предмету и классу без завышения полноты', () => {
@@ -20,7 +20,24 @@ test('покрытие подбирается по предмету и клас�
 
   const algebra = getCurriculumCoverage('Алгебра', 7);
   assert.equal(algebra.subject, 'algebra');
+  assert.equal(algebra.officialProgramRelationship, 'EXPLICIT_MATH_SUBCOURSE');
+  assert.ok(algebra.officialWorkingProgramCount > 0);
   assert.equal(algebra.completeCoverage, 'NOT_PROVEN');
+
+  const primaryGeometry = getCurriculumCoverage('Геометрия', 3);
+  assert.equal(primaryGeometry.officialProgramRelationship, 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(primaryGeometry.officialWorkingProgramCount, 1);
+  assert.equal(primaryGeometry.completeCoverage, 'NOT_PROVEN');
+
+  const probabilityInGrade6 = getCurriculumCoverage('Вероятность и статистика', 6);
+  assert.equal(probabilityInGrade6.officialProgramRelationship, 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.ok(probabilityInGrade6.officialWorkingProgramCount > 0);
+  assert.equal(probabilityInGrade6.completeCoverage, 'NOT_PROVEN');
+
+  const probabilityInGrade8 = getCurriculumCoverage('Вероятность и статистика', 8);
+  assert.equal(probabilityInGrade8.officialProgramRelationship, 'EXPLICIT_MATH_SUBCOURSE');
+  assert.ok(probabilityInGrade8.officialWorkingProgramCount > 0);
+  assert.equal(probabilityInGrade8.completeCoverage, 'NOT_PROVEN');
 });
 
 test('отсутствие точной пары не подменяется другой программой', () => {
