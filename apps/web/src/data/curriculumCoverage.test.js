@@ -54,6 +54,11 @@ test('покрытие подбирается по предмету и клас�
   assert.equal(primaryGeometry.officialWorkingProgramCount, 1);
   assert.equal(primaryGeometry.completeCoverage, 'NOT_PROVEN');
 
+  const probabilityInGrade4 = getCurriculumCoverage('Вероятность и статистика', 4);
+  assert.equal(probabilityInGrade4.officialProgramRelationship, 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(probabilityInGrade4.curriculumApplicability, 'RELATED_PARENT_PROGRAM_ONLY');
+  assert.equal(probabilityInGrade4.completeCoverage, 'NOT_PROVEN');
+
   const probabilityInGrade6 = getCurriculumCoverage('Вероятность и статистика', 6);
   assert.equal(probabilityInGrade6.officialProgramRelationship, 'PARENT_MATH_PROGRAM_REFERENCE');
   assert.ok(probabilityInGrade6.officialWorkingProgramCount > 0);
