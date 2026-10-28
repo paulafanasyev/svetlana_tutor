@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "name": "federal-working-programs",
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-10-29",
   "officialCatalog": "https://edsoo.ru/rabochie-programmy/",
   "officialRegistry": "https://fgosreestr.edsoo.ru/educational-programs",
-  "totalRecords": 61,
-  "directPdfLinks": 55,
-  "note": "The direct PDF links and page counts listed here were confirmed by opening results linked from the official EDSOO working-programmes page. This index does not contain the separate commercial textbooks named in the federal textbook list.",
+  "totalRecords": 62,
+  "directPdfLinks": 56,
+  "note": "Official EDSOO PDF links are indexed here. Release mirrors are restricted to entries independently approved for that workflow. The 2026 DNKR programme is link-only and must not be mirrored while redistribution rights remain unconfirmed. This catalogue does not contain the separate commercial textbooks named in the federal textbook list.",
   "programs": [
     {
       "id": "frp-noo-russian-1-4",
@@ -228,7 +228,7 @@
     {
       "id": "frp-noo-orkse-4",
       "title": "Основы религиозных культур и светской этики, 4 класс",
-      "subject": "fundamentals-spiritual-culture",
+      "subject": "religious-cultures-ethics",
       "gradeRange": [
         4,
         4
@@ -1844,6 +1844,51 @@
       "contentStoredLocally": false,
       "checkedAt": "2026-10-21",
       "urlStatus": "OFFICIAL_TOPIC_PAGE"
+    },
+    {
+      "id": "frp-ooo-dnkr-5-7",
+      "title": "Духовно-нравственная культура России, 5–7 классы (5 класс — с 2026/27; 6–7 классы — с 2027/28)",
+      "subject": "spiritual-moral-culture-russia",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "documentType": "Федеральная рабочая программа",
+      "sourceId": "edsoo-working-programs",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "fileFormat": "PDF",
+      "pages": 44,
+      "accessStatus": "PUBLIC_OFFICIAL_PAGE_LINKED",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; do not mirror or store a local copy until redistribution rights are independently confirmed",
+      "contentStoredLocally": false,
+      "checkedAt": "2026-10-29",
+      "sourceAttributionUrl": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "downloadStatus": "LINK_ONLY_NOT_MIRRORED_PENDING_RIGHTS_REVIEW",
+      "provenance": "official-source-link",
+      "storedInRelease": false,
+      "mirrorAllowed": false,
+      "implementationSchedule": [
+        {
+          "schoolYear": "2026/2027",
+          "startYear": 2026,
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "startYear": 2027,
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "implementationScheduleSource": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf"
     }
   ],
   "releaseSummary": {
