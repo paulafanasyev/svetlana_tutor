@@ -1,0 +1,69 @@
+name: Runtime Dependency Security Audit
+
+on:
+  push:
+    paths:
+      - 'apps/api/package.json'
+      - 'apps/api/package-lock.json'
+      - 'apps/web/package.json'
+      - 'apps/web/package-lock.json'
+      - '.github/workflows/security-audit.yml'
+  pull_request:
+    paths:
+      - 'apps/api/package.json'
+      - 'apps/api/package-lock.json'
+      - 'apps/web/package.json'
+      - 'apps/web/package-lock.json'
+      - '.github/workflows/security-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  production-dependencies:
+    name: Production dependencies · ${{ matrix.path }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        path: [apps/api, apps/web]
+    defaults:
+      run:
+        working-directory: ${{ matrix.path }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install reproducible locked dependencies
+        run: npm ci --no-audit --no-fund --legacy-peer-deps
+
+      - name: Generate production dependency audit JSON
+        shell: bash
+        run: |
+          npm audit --omit=dev --json > npm-audit.json || audit_exit=$?
+          if [ ! -s npm-audit.json ]; then
+            echo "npm audit did not produce a report (exit: ${audit_exit:-0})" >&2
+            exit 1
+          fi
+          node --input-type=commonjs -e "const fs=require('fs'); const r=JSON.parse(fs.readFileSync('npm-audit.json','utf8')); if (r.error || !r.metadata || !r.metadata.vulnerabilities) { console.error(JSON.stringify(r.error || r)); process.exit(1); } const v=r.metadata.vulnerabilities; console.log(JSON.stringify(v)); if ((v.high||0)+(v.critical||0)>0) process.exit(2);"
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-${{ matrix.path == 'apps/api' && 'api' || 'web' }}-${{ github.sha }}
+          path: |
+            ${{ matrix.path }}/npm-audit.json
+            ${{ matrix.path }}/package-lock.json
+          if-no-files-found: warn
+          retention-days: 14
