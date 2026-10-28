@@ -37,6 +37,7 @@ LEGACY_SUBJECT_IDS = {"fundamentals-spiritual-culture"}
 OFFICIAL_SUBJECT_GRADE_SCOPES = {
     "religious-cultures-ethics": [4, 4],
     "spiritual-moral-culture-russia": [5, 7],
+    "fundamentals-security-defense-homeland": [8, 11],
 }
 BIBLIOGRAPHY_SUBJECTS = {
     "Русский язык": ["russian-language"], "Литературное чтение": ["literary-reading"],
