@@ -4,6 +4,8 @@ import { readFile } from 'node:fs/promises';
 
 const triageUrl = new URL('../../../../data/school-materials/curriculum-gap-triage-2026-10-28.json', import.meta.url);
 const triage = JSON.parse(await readFile(triageUrl, 'utf8'));
+const regulatoryDeltaUrl = new URL('../../../../data/school-materials/regulatory-delta-2026-10-28.json', import.meta.url);
+const regulatoryDelta = JSON.parse(await readFile(regulatoryDeltaUrl, 'utf8'));
 
 test('gap-triage preserves all 166 unresolved grade/subject rows without duplicates', () => {
   assert.equal(triage.items.length, 166);
@@ -65,5 +67,27 @@ test('official source hints use the curated registry and never auto-resolve a ga
     }
     assert.equal(item.decision, 'NEEDS_MANUAL_REVIEW');
     assert.equal(item.completeCoverage, 'NOT_PROVEN');
+  }
+});
+
+
+test('2026 FOP amendment is tracked without treating current corpus as updated', () => {
+  assert.equal(regulatoryDelta.act.title, 'Приказ Минпросвещения России от 19.08.2026 № 576');
+  assert.equal(regulatoryDelta.act.registrationDate, '2026-10-12');
+  assert.equal(regulatoryDelta.act.registrationNumber, '88710');
+  assert.equal(regulatoryDelta.act.officialReferencePage, 'https://edsoo.ru/normativnye-dokumenty-_/');
+  assert.equal(regulatoryDelta.act.effectiveDateException.effectiveFrom, '2027-09-01');
+
+  const areas = new Map(regulatoryDelta.verifiedScopeFromPublishedSummaries.map((area) => [area.id, area]));
+  assert.ok(areas.has('obzr-course-structure'));
+  assert.ok(areas.has('foreign-language-delayed-changes'));
+  assert.ok(areas.has('native-language-programs'));
+  assert.ok(areas.has('senior-secondary-programs'));
+  assert.equal(areas.get('foreign-language-delayed-changes').reviewStatus, 'DO_NOT_APPLY_EARLY');
+  assert.equal(regulatoryDelta.metrics.automaticallyResolvedCurriculumCells, 0);
+  assert.equal(regulatoryDelta.metrics.contentFilesAutomaticallyRewritten, 0);
+
+  for (const target of regulatoryDelta.repositoryReviewTargets) {
+    assert.ok(target.path && target.reason.length > 20);
   }
 });
