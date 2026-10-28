@@ -94,22 +94,35 @@ test('2026 FOP amendment is tracked without treating current corpus as updated',
   }
 });
 
-test('current gap queue excludes only the 11 manual mathematics-source mapping fixes and keeps all content unverified', () => {
-  assert.equal(currentTriage.items.length, 155);
-  assert.equal(currentTriage.metrics.gapRows, 155);
+test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy', () => {
+  assert.equal(currentTriage.items.length, 145);
+  assert.equal(currentTriage.metrics.gapRows, 145);
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 11);
+  assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
   assert.equal(currentTriage.metrics.completenessVerified, 0);
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
   assert.equal(currentTriage.resolvedComponentRows.length, 11);
-  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 155);
+  assert.equal(currentTriage.taxonomyResolutions.length, 10);
+  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 145);
   assert.ok(currentTriage.items.every((item) =>
     item.decision === 'NEEDS_MANUAL_REVIEW'
     && item.completeCoverage === 'NOT_PROVEN'
     && item.currentApplicability === 'NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX'
+    && item.subject !== 'fundamentals-spiritual-culture'
   ));
   for (const item of currentTriage.resolvedComponentRows) {
     assert.equal(item.completeCoverage, 'NOT_PROVEN');
     assert.ok(item.evidenceUrls.length > 0);
     assert.ok(item.evidenceUrls.every((url) => url.startsWith('https://edsoo.ru/')));
   }
+  for (const item of currentTriage.taxonomyResolutions) {
+    assert.equal(item.status, 'LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN');
+    assert.ok(item.evidenceUrls.includes('https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/'));
+  }
+  const dnkr = currentTriage.currentProgramScopes.find((item) => item.subject === 'spiritual-moral-culture-russia');
+  assert.ok(dnkr);
+  assert.deepEqual(dnkr.schedule, [
+    { schoolYear: '2026/2027', grades: [5] },
+    { schoolYear: '2027/2028', grades: [5, 6, 7] },
+  ]);
 });
