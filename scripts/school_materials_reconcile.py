@@ -119,6 +119,11 @@ def programme_schedule_status(program, grade, school_year_start):
 
 
 def subject_scope_status(subject, grade):
+    # EDSOO confirms the dedicated federal programme is for grades 8-11,
+    # but grades 5-7 may study OBZR as a variable-part course. Keep that
+    # optional status distinct from the mandatory federal programme range.
+    if subject == "fundamentals-security-defense-homeland" and 5 <= grade <= 7:
+        return "OPTIONAL_VARIANT_PROGRAM_RANGE"
     scope = OFFICIAL_SUBJECT_GRADE_SCOPES.get(subject)
     if not scope:
         return None
@@ -404,6 +409,8 @@ def main():
                 program_relationship = "PHASED_IMPLEMENTATION_CURRENT_GRADE"
             elif future_scheduled:
                 program_relationship = "PHASED_IMPLEMENTATION_SCHEDULED"
+            elif scope_status == "OPTIONAL_VARIANT_PROGRAM_RANGE":
+                program_relationship = "OPTIONAL_VARIANT_PROGRAM_REFERENCE"
             elif scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE":
                 program_relationship = "OUTSIDE_SOURCE_GRADE_RANGE"
             elif component_mapping_ids:
@@ -451,6 +458,7 @@ def main():
                     else "SCHEDULED_FROM_" + str(min(future_scheduled)) + "_" + str(min(future_scheduled) + 1)
                     if future_scheduled and not current_scheduled
                     else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM" if current_scheduled
+                    else "OPTIONAL_VARIANT_PROGRAM_RANGE" if scope_status == "OPTIONAL_VARIANT_PROGRAM_RANGE"
                     else "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE" if scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE"
                     else "RELATED_PARENT_PROGRAM_ONLY"
                     if program_relationship == "PARENT_MATH_PROGRAM_REFERENCE"
@@ -557,8 +565,9 @@ def main():
             "RELATED_PARENT_PROGRAM_ONLY": "Есть ссылка на родительскую ФРП по математике, но отдельная применимость курса-подкатегории в этом классе этим не доказывается.",
             "LEGACY_ARCHIVAL_ONLY": "Архивный предмет, отсутствующий в текущем федеральном учебном плане; исторические задания/индекс не считаются покрытием действующего предмета.",
             "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE": "Класс находится вне диапазона официальной федеральной рабочей программы для этого предмета; это не доказывает отсутствие региональных/вариативных курсов.",
+            "OPTIONAL_VARIANT_PROGRAM_RANGE": "Официальный FAQ ЕДСОО допускает курс ОБЗР в 5–7 классах за счёт вариативной части; не маркировать как обязательную ФРП и не считать полной программой.",
             "SCHEDULED_FROM_2027_2028": "Программа опубликована, но применение в этом классе начинается с 2027/2028 учебного года; не применять раньше срока.",
-            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
+            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OPTIONAL_VARIANT_PROGRAM_REFERENCE — курс разрешён в вариативной части; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
         },
         "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
         "rows": rows, "summary": summary
