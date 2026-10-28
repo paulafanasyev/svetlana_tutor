@@ -390,7 +390,13 @@ def main():
                 "indexedResourceCount": count,
                 "status": "LINKS_AVAILABLE" if count else "NO_EXACT_GRADE_SUBJECT_RECORD",
                 "completeCoverage": "NOT_PROVEN",
-                "curriculumApplicability": "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM" if matching_programs else "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
+                "curriculumApplicability": (
+                    "RELATED_PARENT_PROGRAM_ONLY"
+                    if program_relationship == "PARENT_MATH_PROGRAM_REFERENCE"
+                    else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM"
+                    if matching_programs
+                    else "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX"
+                ),
                 "federalBibliographyRecordCount": biblio_count,
                 "verifiedOfficialLessonIndexCount": lesson_count,
                 "officialWorkingProgramCount": len(matching_programs),
@@ -472,6 +478,7 @@ def main():
             "NO_EXACT_GRADE_SUBJECT_RECORD": "В подсчитываемых индексах нет точной записи для этой пары; это не доказывает отсутствие предмета или материалов.",
             "NOT_PROVEN": "Полнота не установлена по актуальной программе, полному инвентарю и подтверждённым правам.",
             "VERIFIED_COMPLETE": "Только после полной сверки источников, файлов и прав; сейчас не назначается.",
+            "RELATED_PARENT_PROGRAM_ONLY": "Есть ссылка на родительскую ФРП по математике, но отдельная применимость курса-подкатегории в этом классе этим не доказывается.",
             "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или уже установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — ссылка на родительскую ФРП, не отдельный курс; EXPLICIT_MATH_SUBCOURSE — официальный документ явно называет курс."
         },
         "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
