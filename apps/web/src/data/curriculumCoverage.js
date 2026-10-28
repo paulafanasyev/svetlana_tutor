@@ -43,6 +43,7 @@ const SUBJECT_CODES = {
   'Основы религиозных культур и светской этики': ['religious-cultures-ethics'],
   'Основы духовно-нравственной культуры народов России': ['fundamentals-spiritual-culture'],
   'Духовно-нравственная культура России': ['spiritual-moral-culture-russia'],
+  'ДНКР': ['spiritual-moral-culture-russia'],
   'Шахматы': ['chess'],
   'Функциональная грамотность': ['functional-literacy'],
   'Подготовка к ОГЭ/ЕГЭ': ['exam-preparation'],
