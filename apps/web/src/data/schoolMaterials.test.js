@@ -425,6 +425,8 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
   assert.equal(row(3, 'fundamentals-security-defense-homeland')[3], 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE');
   assert.equal(row(3, 'fundamentals-security-defense-homeland')[5], 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
+  assert.equal(row(5, 'fundamentals-security-defense-homeland')[5], 'OPTIONAL_VARIANT_PROGRAM_RANGE');
+  assert.equal(row(5, 'fundamentals-security-defense-homeland')[9], 'OPTIONAL_VARIANT_PROGRAM_REFERENCE');
   assert.equal(row(8, 'fundamentals-security-defense-homeland')[6], 1);
   assert.equal(row(8, 'fundamentals-security-defense-homeland')[4], 'NOT_PROVEN');
   assert.ok(appCoverage.rows.every((item) => item[4] === 'NOT_PROVEN'));
