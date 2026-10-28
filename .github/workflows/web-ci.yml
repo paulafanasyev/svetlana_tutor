@@ -12,6 +12,11 @@ on:
       - 'apps/web/**'
       - 'site/**'
       - '.github/workflows/web-ci.yml'
+  # ConsultantPlus makes document text available on weekdays from 20:00 to 24:00 Moscow time.
+  # 17:30 UTC = 20:30 Moscow time; this run verifies the live source inside its published access window.
+  schedule:
+    - cron: '30 17 * * 1-5'
+  workflow_dispatch:
 
 permissions:
   contents: read
