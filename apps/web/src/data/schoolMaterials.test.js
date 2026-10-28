@@ -4,7 +4,7 @@
 // Контрольная ревизия классов карточек ЕДСОО: сверка по страницам источника на 2026-10-22.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { flatSubtreeResults, isTransientSourceError } from '../../frp-noo-content.js';
+import { flatSubtreeResults, isTransientSourceError, sourceFailureMode } from '../../frp-noo-content.js';
 import { officialGradeRangeLabel, officialSubjectResourcesFor, officialLessonResourcesFor, unclassifiedOfficialLessonsFor } from './officialSubjectResources.js';
 import { readFileSync, readdirSync } from 'node:fs';
 
@@ -346,4 +346,17 @@ test('карточки уроков ЕДСОО доступны в UI по пр�
   assert.ok(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 3).length > 0);
   assert.ok(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 3).every((x) => x.subject === 'all-school-subjects'));
   assert.equal(unclassifiedOfficialLessonsFor(officialLessonResourceItems, 12).length, 0);
+});
+
+
+test('обычные сборки используют корпус при ограничении источника, scheduled-аудит требует живой источник', () => {
+  const transient = [
+    'КонсультантПлюс: документ доступен только по расписанию',
+    'The operation was aborted due to timeout',
+  ];
+  assert.equal(sourceFailureMode([], 'schedule'), 'no-error');
+  assert.equal(sourceFailureMode(transient, 'pull_request'), 'fallback-with-warning');
+  assert.equal(sourceFailureMode(transient, 'push'), 'fallback-with-warning');
+  assert.equal(sourceFailureMode(transient, 'schedule'), 'fail-live-source-check');
+  assert.equal(sourceFailureMode(['163.9: разделы не найдены'], 'schedule'), 'fail-build');
 });
