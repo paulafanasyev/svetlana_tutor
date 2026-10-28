@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "catalogName": "official-russian-school-materials",
-  "lastVerified": "2026-10-28",
+  "lastVerified": "2026-10-29",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
   "gradeRange": [
     1,
@@ -70,7 +70,9 @@
     "functional-literacy",
     "exam-preparation",
     "regional-and-native-languages",
-    "all-school-subjects"
+    "all-school-subjects",
+    "religious-cultures-ethics",
+    "spiritual-moral-culture-russia"
   ],
   "sources": [
     {
@@ -169,7 +171,9 @@
         "music",
         "visual-arts",
         "physical-education",
-        "functional-literacy"
+        "functional-literacy",
+        "religious-cultures-ethics",
+        "spiritual-moral-culture-russia"
       ],
       "verifiedExample": {
         "title": "Интерактивные задания по русскому языку для 5–6 классов",
@@ -742,6 +746,20 @@
       ],
       "storesFullTextLocally": false,
       "rightsNote": "Ссылка на официальный список произведений. Она не разрешает копировать современные произведения или полные учебники; права и условия переиспользования проверять для каждого текста."
+    },
+    {
+      "id": "edsoo-dnkr-federal-program-2026",
+      "name": "Федеральная рабочая программа «Духовно-нравственная культура России», 5–7 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "subjects": [
+        "spiritual-moral-culture-russia"
+      ],
+      "storesFullTextLocally": false,
+      "rightsNote": "Официальная ссылка на программу; новая PDF-копия не хранится и не зеркалируется, пока права на распространение не подтверждены."
     }
   ],
   "integrationPolicy": {
@@ -793,8 +811,8 @@
       "description": "Оригинальные задания с ответами, созданные для репозитория; всего 153, лицензия CC BY 4.0."
     }
   ],
-  "workingProgramCount": 61,
-  "directWorkingProgramPdfCount": 55,
+  "workingProgramCount": 62,
+  "directWorkingProgramPdfCount": 56,
   "originalExerciseCount": 153,
   "currentCoverageNote": "Сверка 2026-10-28: матрица 407 строк (37 предметных идентификаторов × 11 классов); 252 сочетаний имеют индексные записи; 155 не имеют точной записи в индексах. Пустая ячейка не доказывает отсутствие материала: сначала необходимо установить применимость предмета к классу и сопоставить официальные источники. Ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
   "lastFederalProgramDownloadAttemptAt": "2026-10-28T18:09:40.571852+00:00",
