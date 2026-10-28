@@ -395,7 +395,7 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
     assert.equal(program.subject, 'fundamentals-security-defense-homeland');
     assert.equal(program.mirrorAllowed, false);
     assert.equal(program.contentStoredLocally, false);
-    assert.match(program.curriculumStatus, /ORDER_576_CROSSWALK_PENDING/);
+    assert.match(program.curriculumStatus, /order 576 pending/i);
   }
 
   const ids = new Set(programs.map((program) => program.id));
