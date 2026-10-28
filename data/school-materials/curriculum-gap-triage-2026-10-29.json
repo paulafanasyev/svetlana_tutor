@@ -41,10 +41,11 @@
   },
   "policy": [
     "All remaining items stay NEEDS_MANUAL_REVIEW, NOT_PROVEN and NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX until evidence is found for that exact grade/subject.",
-    "The 11 removed rows had an official mathematics programme that correctly resolves the missing source-index mapping: Algebra and Geometry grade 1-4 use the parent Mathematics FRP; Probability & Statistics grades 5, 6 and 10 use the relevant Mathematics FRP.",
+    "The 15 resolved rows had an official mathematics programme that correctly resolves the missing source-index mapping: Algebra and Geometry grade 1-4 use the parent Mathematics FRP; Probability & Statistics grades 5, 6 and 10 use the relevant Mathematics FRP.",
     "A component crosswalk resolves the indexing/source relationship only. It does not prove curriculum completeness, the existence of separate courses in lower grades, textbook availability, OCR correctness or redistribution rights.",
     "Generic source hints do not automatically resolve anything. The manually reviewed mathematics mapping is separately recorded with source IDs and exact official URLs.",
-    "Do not apply foreign-language content/results changes for grades 6-9 before 2027-09-01."
+    "Do not apply foreign-language content/results changes for grades 6-9 before 2027-09-01.",
+    "Four additional rows (Probability & Statistics, grades 1-4) are linked only to the parent Mathematics FRP because the primary programme includes work with data/tables. This is not a separate course claim and completeness remains NOT_PROVEN."
   ],
   "resolvedComponentRows": [
     {
