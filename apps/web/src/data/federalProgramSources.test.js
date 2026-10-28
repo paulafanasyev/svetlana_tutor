@@ -26,7 +26,7 @@ test('catalog clearly distinguishes source links from content embedded in the ap
   assert.match(catalog.note, /not embedded/i);
   assert.ok(catalog.programs.some((item) => item.contentStoredLocally === false));
   const metadata = getOfficialProgramCatalogMetadata();
-  assert.equal(metadata.recordCount, 62);
+  assert.equal(metadata.recordCount, 64);
   assert.ok(metadata.directPdfLinks >= 50);
 });
 
@@ -50,6 +50,10 @@ test('official sources resolve by subject and grade with overlapping grade range
     { schoolYear: '2026/2027', startYear: 2026, grades: [5] },
     { schoolYear: '2027/2028', startYear: 2027, grades: [5, 6, 7] },
   ]);
+  const obzr8 = findOfficialProgramSources('ОБЗР', 8);
+  assert.ok(obzr8.some((item) => item.id === 'frp-ooo-obzr-8-9' && item.mirrorAllowed === false && item.contentStoredLocally === false));
+  const obzr10 = findOfficialProgramSources('Основы безопасности и защиты Родины', 10);
+  assert.ok(obzr10.some((item) => item.id === 'frp-soo-obzr-10-11' && item.mirrorAllowed === false && item.contentStoredLocally === false));
   const algebra = findOfficialProgramSources('Алгебра', 8);
   assert.ok(algebra.length > 0);
   assert.deepEqual(findOfficialProgramSources('Астрономия', 10), []);
