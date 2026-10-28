@@ -319,7 +319,10 @@ def main():
     program_by_id = {item.get("id"): item for item in programs}
     allowed_component_subjects = {"algebra", "geometry", "probability-statistics"}
     for mapping in component_mappings:
-        if mapping.get("targetSubject") not in allowed_component_subjects or mapping.get("sourceProgramSubject") != "mathematics":
+        if (
+            mapping.get("targetSubject") not in allowed_component_subjects | {"astronomy"}
+            or mapping.get("sourceProgramSubject") != ("physics" if mapping.get("targetSubject") == "astronomy" else "mathematics")
+        ):
             raise ValueError("Unsupported target/source in programme component crosswalk: " + str(mapping.get("id")))
         for program_id in mapping.get("sourceIds", []):
             program = program_by_id.get(program_id)
@@ -461,7 +464,7 @@ def main():
                     else "OPTIONAL_VARIANT_PROGRAM_RANGE" if scope_status == "OPTIONAL_VARIANT_PROGRAM_RANGE"
                     else "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE" if scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE"
                     else "RELATED_PARENT_PROGRAM_ONLY"
-                    if program_relationship == "PARENT_MATH_PROGRAM_REFERENCE"
+                    if program_relationship in {"PARENT_MATH_PROGRAM_REFERENCE", "PARENT_PHYSICS_PROGRAM_REFERENCE"}
                     else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM" if matching_programs
                     else "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX"
                 ),
@@ -567,7 +570,7 @@ def main():
             "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE": "Класс находится вне диапазона официальной федеральной рабочей программы для этого предмета; это не доказывает отсутствие региональных/вариативных курсов.",
             "OPTIONAL_VARIANT_PROGRAM_RANGE": "Официальный FAQ ЕДСОО допускает курс ОБЗР в 5–7 классах за счёт вариативной части; не маркировать как обязательную ФРП и не считать полной программой.",
             "SCHEDULED_FROM_2027_2028": "Программа опубликована, но применение в этом классе начинается с 2027/2028 учебного года; не применять раньше срока.",
-            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OPTIONAL_VARIANT_PROGRAM_REFERENCE — курс разрешён в вариативной части; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
+            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE/PARENT_PHYSICS_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OPTIONAL_VARIANT_PROGRAM_REFERENCE — курс разрешён в вариативной части; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
         },
         "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
         "rows": rows, "summary": summary
