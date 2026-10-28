@@ -16,6 +16,8 @@ test('определяет школьные предметы и не путае�
   assert.equal(detectRequestedSubject('Подготовь урок по литературному чтению для 2 класса'), 'Литературное чтение');
   assert.equal(detectRequestedSubject('Составь урок китайского языка'), 'Китайский язык');
   assert.equal(detectRequestedSubject('План занятия по ОДНКНР'), 'Основы духовно-нравственной культуры народов России');
+  assert.equal(detectRequestedSubject('Составь занятие по ДНКР для 5 класса'), 'Духовно-нравственная культура России');
+  assert.equal(detectRequestedSubject('Подготовь урок по предмету Духовно-нравственная культура России'), 'Духовно-нравственная культура России');
   assert.equal(detectRequestedSubject('Урок по вероятности и статистике'), 'Математика');
   assert.equal(detectRequestedSubject('Подготовь отчёт по классу'), null);
 });
