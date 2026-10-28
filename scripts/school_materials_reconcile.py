@@ -24,13 +24,20 @@ LABELS = {
     "visual-arts": "Изобразительное искусство", "music": "Музыка",
     "physical-education": "Физическая культура",
     "fundamentals-security-defense-homeland": "Основы безопасности и защиты Родины",
-    "fundamentals-spiritual-culture": "Основы духовно-нравственной культуры народов России",
+    "fundamentals-spiritual-culture": "Основы духовно-нравственной культуры народов России (архивный курс)",
+    "religious-cultures-ethics": "Основы религиозных культур и светской этики (ОРКСЭ)",
+    "spiritual-moral-culture-russia": "Духовно-нравственная культура России",
     "chess": "Шахматы", "functional-literacy": "Функциональная грамотность",
     "exam-preparation": "Подготовка к ОГЭ/ЕГЭ",
     "regional-and-native-languages": "Региональные и родные языки",
     "all-school-subjects": "Межпредметные материалы / все школьные предметы",
 }
 LANGUAGE_SUBJECTS = {"english-language", "german-language", "french-language", "spanish-language", "chinese-language"}
+LEGACY_SUBJECT_IDS = {"fundamentals-spiritual-culture"}
+OFFICIAL_SUBJECT_GRADE_SCOPES = {
+    "religious-cultures-ethics": [4, 4],
+    "spiritual-moral-culture-russia": [5, 7],
+}
 BIBLIOGRAPHY_SUBJECTS = {
     "Русский язык": ["russian-language"], "Литературное чтение": ["literary-reading"],
     "Математика": ["mathematics"], "Информатика": ["informatics"],
@@ -39,7 +46,7 @@ BIBLIOGRAPHY_SUBJECTS = {
     "Математика (алгебра и начала математического анализа)": ["mathematics", "algebra"],
     "Геометрия": ["geometry"], "История": ["history"], "Физика": ["physics"],
     "Химия": ["chemistry"], "Изобразительное искусство": ["visual-arts"],
-    "ОРКСЭ": ["fundamentals-spiritual-culture"], "Труд (технология)": ["technology"],
+    "ОРКСЭ": ["religious-cultures-ethics"], "Труд (технология)": ["technology"],
     "ОБЗР": ["fundamentals-security-defense-homeland"], "Китайский язык": ["chinese-language"],
     "География": ["geography"], "Окружающий мир": ["world-around-us"], "Музыка": ["music"],
     "Биология": ["biology"], "Физическая культура": ["physical-education"],
@@ -89,6 +96,32 @@ def source_matches(target, source, grade=None):
     if target == "literary-reading" and grade is not None and grade >= 5:
         return source == "literature"
     return target == source
+
+
+def current_school_year_start():
+    now = datetime.now(timezone.utc)
+    return now.year if now.month >= 9 else now.year - 1
+
+
+def programme_schedule_status(program, grade, school_year_start):
+    schedule = program.get("implementationSchedule")
+    if not isinstance(schedule, list) or not schedule:
+        return None
+    for_grade = [item for item in schedule if grade in item.get("grades", [])]
+    if not for_grade:
+        return ("OUTSIDE_SOURCE_GRADE_RANGE", None)
+    current = [item for item in for_grade if int(item.get("startYear", 9999)) <= school_year_start]
+    if current:
+        return ("PHASED_IMPLEMENTATION_CURRENT_GRADE", None)
+    start = min(int(item.get("startYear", 9999)) for item in for_grade)
+    return ("PHASED_IMPLEMENTATION_SCHEDULED", start)
+
+
+def subject_scope_status(subject, grade):
+    scope = OFFICIAL_SUBJECT_GRADE_SCOPES.get(subject)
+    if not scope:
+        return None
+    return "IN_SCOPE" if scope[0] <= grade <= scope[1] else "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE"
 
 
 def program_component_mapping(target, source, grade, mappings):
@@ -255,8 +288,8 @@ def main():
     unknown = set(subjects) - set(LABELS)
     if unknown:
         raise ValueError("Add labels for catalog subjects: " + ", ".join(sorted(unknown)))
-    if len(subjects) != 37:
-        raise ValueError("Expected 37 catalog subject IDs; got " + str(len(subjects)))
+    if len(subjects) != 39:
+        raise ValueError("Expected 39 catalog subject IDs; got " + str(len(subjects)))
 
     practice = load(DATA / "original-school-practice-bank.json")
     bibliography = load(DATA / "federal-textbook-bibliography-2026.json")
@@ -297,6 +330,7 @@ def main():
     for filename in ("federal-textbooks-2026-primary-1-4.json", "federal-textbooks-2026-basic-5-9.json", "federal-textbooks-2026-secondary-10-11.json"):
         structured_fpu.extend(records(load(DATA / filename), "records"))
     ocr_crosswalk = build_ocr_crosswalk(ocr, structured_fpu)
+    school_year_start = current_school_year_start()
     save(DATA / "federal-textbook-ocr-crosswalk-2026.json", ocr_crosswalk)
     catalog_only_items = []
     for item in catalog_items:
@@ -355,7 +389,23 @@ def main():
             component_relationships = sorted({
                 relationship for mapping, relationship in component_match_details if mapping
             })
-            if component_mapping_ids:
+            scheduled_program_states = [
+                (item, programme_schedule_status(item, grade, school_year_start))
+                for item in matching_programs
+                if programme_schedule_status(item, grade, school_year_start) is not None
+            ]
+            current_scheduled = any(state[0] == "PHASED_IMPLEMENTATION_CURRENT_GRADE" for _, state in scheduled_program_states)
+            future_scheduled = [state[1] for _, state in scheduled_program_states if state[0] == "PHASED_IMPLEMENTATION_SCHEDULED"]
+            scope_status = subject_scope_status(subject, grade)
+            if subject in LEGACY_SUBJECT_IDS:
+                program_relationship = "LEGACY_ARCHIVAL_ONLY"
+            elif current_scheduled:
+                program_relationship = "PHASED_IMPLEMENTATION_CURRENT_GRADE"
+            elif future_scheduled:
+                program_relationship = "PHASED_IMPLEMENTATION_SCHEDULED"
+            elif scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE":
+                program_relationship = "OUTSIDE_SOURCE_GRADE_RANGE"
+            elif component_mapping_ids:
                 program_relationship = component_relationships[0] if len(component_relationships) == 1 else "MIXED_COMPONENT_RELATIONSHIPS"
             elif matching_programs:
                 program_relationship = "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS"
@@ -388,13 +438,22 @@ def main():
             rows.append({
                 "grade": grade, "subject": subject, "subjectLabel": LABELS[subject],
                 "indexedResourceCount": count,
-                "status": "LINKS_AVAILABLE" if count else "NO_EXACT_GRADE_SUBJECT_RECORD",
+                "status": (
+                    "LEGACY_ARCHIVAL_ONLY" if subject in LEGACY_SUBJECT_IDS
+                    else "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE" if scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE" and not count
+                    else "LINKS_AVAILABLE" if count
+                    else "NO_EXACT_GRADE_SUBJECT_RECORD"
+                ),
                 "completeCoverage": "NOT_PROVEN",
                 "curriculumApplicability": (
-                    "RELATED_PARENT_PROGRAM_ONLY"
+                    "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN" if subject in LEGACY_SUBJECT_IDS
+                    else "SCHEDULED_FROM_" + str(min(future_scheduled)) + "_" + str(min(future_scheduled) + 1)
+                    if future_scheduled and not current_scheduled
+                    else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM" if current_scheduled
+                    else "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE" if scope_status == "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE"
+                    else "RELATED_PARENT_PROGRAM_ONLY"
                     if program_relationship == "PARENT_MATH_PROGRAM_REFERENCE"
-                    else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM"
-                    if matching_programs
+                    else "SUPPORTED_BY_EXPLICIT_WORKING_PROGRAM" if matching_programs
                     else "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX"
                 ),
                 "federalBibliographyRecordCount": biblio_count,
@@ -415,11 +474,26 @@ def main():
     known_grade_lessons = sum(item.get("gradeStatus") in {"GRADE_FOUND_IN_INDEX", "GRADE_VERIFIED_ON_SOURCE_PAGE"} for item in lessons)
     rows_with_records = sum(row["indexedResourceCount"] > 0 for row in rows)
     rows_without_records = len(rows) - rows_with_records
+    rows_without_records_requiring_review = sum(
+        row["indexedResourceCount"] == 0
+        and row["curriculumApplicability"] not in {
+            "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+            "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+            "SCHEDULED_FROM_2027_2028",
+        }
+        for row in rows
+    )
     missing_by_subject = []
     for subject in subjects:
         missing_grades = sorted(
             row["grade"] for row in rows
-            if row["subject"] == subject and row["indexedResourceCount"] == 0
+            if row["subject"] == subject
+            and row["indexedResourceCount"] == 0
+            and row["curriculumApplicability"] not in {
+                "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+                "OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE",
+                "SCHEDULED_FROM_2027_2028",
+            }
         )
         if missing_grades:
             missing_by_subject.append({
@@ -440,6 +514,7 @@ def main():
         "subjectGradeRows": len(rows), "catalogSubjectCount": len(subjects),
         "rowsWithAtLeastOneIndexedLink": rows_with_records,
         "rowsWithoutExactGradeSubjectRecord": rows_without_records,
+        "rowsWithoutRecordsRequiringReview": rows_without_records_requiring_review,
         "subjectsWithUnindexedGradePairs": len(missing_by_subject),
         "unindexedGradePairsBySubject": missing_by_subject,
         "rowsWithAnExplicitWorkingProgram": sum(row["officialWorkingProgramCount"] > 0 for row in rows),
@@ -472,14 +547,17 @@ def main():
     matrix = {
         "schemaVersion": 2, "name": "school-curriculum-coverage", "checkedAt": checked_at,
         "grades": grades, "subjects": subjects,
-        "coveragePolicy": "Матрица охватывает 37 идентификаторов каталога × классы 1–11. Это сетка сверки, а не утверждение, что каждый предмет преподаётся в каждом классе. Наличие записи не доказывает полноту; VERIFIED_COMPLETE запрещён без проверки программы, полного инвентаря и прав.",
+        "coveragePolicy": "Матрица охватывает 39 идентификаторов каталога × классы 1–11. Это сетка сверки, а не утверждение, что каждый предмет преподаётся в каждом классе. Наличие записи не доказывает полноту; VERIFIED_COMPLETE запрещён без проверки программы, полного инвентаря и прав.",
         "statusDefinitions": {
             "LINKS_AVAILABLE": "Есть запись в библиографии, подтверждённом по классу индексе уроков, рабочих программах, внеурочной программе или авторском банке с точным совпадением по классу и предмету.",
             "NO_EXACT_GRADE_SUBJECT_RECORD": "В подсчитываемых индексах нет точной записи для этой пары; это не доказывает отсутствие предмета или материалов.",
             "NOT_PROVEN": "Полнота не установлена по актуальной программе, полному инвентарю и подтверждённым правам.",
             "VERIFIED_COMPLETE": "Только после полной сверки источников, файлов и прав; сейчас не назначается.",
             "RELATED_PARENT_PROGRAM_ONLY": "Есть ссылка на родительскую ФРП по математике, но отдельная применимость курса-подкатегории в этом классе этим не доказывается.",
-            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или уже установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — ссылка на родительскую ФРП, не отдельный курс; EXPLICIT_MATH_SUBCOURSE — официальный документ явно называет курс."
+            "LEGACY_ARCHIVAL_ONLY": "Архивный предмет, отсутствующий в текущем федеральном учебном плане; исторические задания/индекс не считаются покрытием действующего предмета.",
+            "OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE": "Класс находится вне диапазона официальной федеральной рабочей программы для этого предмета; это не доказывает отсутствие региональных/вариативных курсов.",
+            "SCHEDULED_FROM_2027_2028": "Программа опубликована, но применение в этом классе начинается с 2027/2028 учебного года; не применять раньше срока.",
+            "officialProgramRelationship": "DIRECT_OR_ESTABLISHED_SUBJECT_ALIAS — отдельная ФРП или установленный алиас; PARENT_MATH_PROGRAM_REFERENCE — родительская ФРП; EXPLICIT_MATH_SUBCOURSE — прямо названный курс; PHASED_IMPLEMENTATION_CURRENT_GRADE — поэтапно введён в текущем учебном году; PHASED_IMPLEMENTATION_SCHEDULED — поэтапное введение позже; OUTSIDE_SOURCE_GRADE_RANGE — класс вне диапазона источника; LEGACY_ARCHIVAL_ONLY — архивный курс."
         },
         "rowScopeNote": "Категории «иностранный язык» и конкретные языки, а также «все школьные предметы» пересекаются. Суммы между ними не являются числом уникальных материалов. Алгебра, геометрия и вероятность/статистика сопоставляются с математической ФРП только через data/school-materials/subject-component-crosswalk.json; relationship отличает родительскую программу от явно названного курса. Такое сопоставление не доказывает полноту.",
         "rows": rows, "summary": summary
@@ -511,7 +589,7 @@ def main():
     ]
     lines = [
         "# Сверка и наполнение школьных материалов — " + checked_at, "",
-        "Матрица содержит " + str(len(rows)) + " сочетаний (37 идентификаторов каталога × 11 классов): " + str(rows_with_records) + " ячеек имеют хотя бы одну индексную запись, " + str(rows_without_records) + " не имеют точной записи. Это сетка аудита, а не заявление, что каждый предмет преподаётся в каждом классе. Отсутствие записи не доказывает отсутствия материала. Полнота не подтверждена ни в одной строке.", "",
+        "Матрица содержит " + str(len(rows)) + " сочетаний (39 идентификаторов каталога × 11 классов): " + str(rows_with_records) + " ячеек имеют хотя бы одну индексную запись, " + str(rows_without_records) + " не имеют точной записи. Это сетка аудита, а не заявление, что каждый предмет преподаётся в каждом классе. Отсутствие записи не доказывает отсутствия материала. Полнота не подтверждена ни в одной строке.", "",
         "| Этап | Клеток | Есть записи | Есть рабочая программа | Есть библиография | Есть авторское задание |",
         "|---|---:|---:|---:|---:|---:|"
     ]
