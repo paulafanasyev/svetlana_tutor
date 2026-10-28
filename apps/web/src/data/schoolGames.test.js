@@ -5,7 +5,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
-import { gameCells, SLUGS, ICONS, normalizeGrade, mergeMore } from './games/subjects.js';
+import { gameCells, SLUGS, ICONS, MODES, normalizeGrade, mergeMore } from './games/subjects.js';
 import { REVIEW } from './games/review.js';
 import { FIXES, applyFixes } from './games/fixes.js';
 
@@ -50,6 +50,11 @@ test('для каждого предмета есть файл, загрузчи
   for (const f of moreNames) if (!slugs.includes(f)) p.push(`лишний файл more/${f}`);
   for (const [s, f] of Object.entries(more)) for (const grade of Object.keys(f.grades || {})) if (!files[s].grades?.[grade]) p.push(`more/${s}: класса ${grade} нет в packs/`);
   report('файлы', p);
+});
+
+test('все школьные предметы используют общий набор мини-игр, включая отложенное воспроизведение по памяти', () => {
+  assert.deepEqual(MODES.map((mode) => mode.id), ['battle', 'quest', 'pairs', 'memory']);
+  assert.ok(MODES.find((mode) => mode.id === 'memory').desc.includes('Запомни даты'));
 });
 
 test('каждая клетка плана 1–11 с часами > 0 имеет вопросы и пары', () => {
