@@ -10,7 +10,6 @@ on:
       - '.github/workflows/school-materials-sync.yml'
       - 'scripts/school_materials_*'
       - 'scripts/sync_official_*.py'
-      - 'apps/web/src/data/schoolMaterials.test.js'
   workflow_dispatch:
     inputs:
       ocr:
@@ -62,12 +61,50 @@ jobs:
           python scripts/sync_official_extracurricular_programs.py || echo "::warning::extracurricular sync failed"
           python scripts/sync_official_textbook_list.py || echo "::warning::textbook list sync failed"
 
-      - name: Upload PDFs to the release
+      - name: Upload only missing or changed release assets
+        shell: bash
         run: |
           gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --prerelease \
             --title "School materials 2026-10" \
             --notes "Official PDFs (EDSOO, Minjust). Not in git: see data/school-materials/manifests for source URLs and sha256."
-          gh release upload "$TAG" .cache/school-materials/release/* --clobber
+          gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}" > .cache/school-materials/release-before.json
+          python - <<'PY'
+          import hashlib, json, pathlib
+          release = json.loads(pathlib.Path(".cache/school-materials/release-before.json").read_text(encoding="utf-8"))
+          existing = {asset["name"]: asset for asset in release.get("assets", [])}
+          upload, skipped, unverifiable = [], [], []
+          for path in sorted(pathlib.Path(".cache/school-materials/release").glob("*")):
+              if not path.is_file():
+                  continue
+              asset = existing.get(path.name)
+              if asset is None:
+                  upload.append(str(path))
+                  continue
+              digest = asset.get("digest")
+              if digest:
+                  local_digest = "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+                  if digest == local_digest:
+                      skipped.append(path.name)
+                  else:
+                      upload.append(str(path))
+              elif asset.get("size") == path.stat().st_size:
+                  # Do not hammer the Release API if this GitHub API response lacks
+                  # digests. Final manifest validation still checks name and size.
+                  skipped.append(path.name)
+                  unverifiable.append(path.name)
+              else:
+                  upload.append(str(path))
+          pathlib.Path(".cache/school-materials/upload-list.txt").write_text("\\n".join(upload) + ("\\n" if upload else ""), encoding="utf-8")
+          print(f"release assets with matching digest/size: {len(skipped)}")
+          print(f"release assets without digest (same size only): {len(unverifiable)}")
+          print(f"assets to upload/replace: {len(upload)}")
+          PY
+          mapfile -t upload_files < .cache/school-materials/upload-list.txt
+          if (( ${#upload_files[@]} )); then
+            gh release upload "$TAG" "${upload_files[@]}" --clobber
+          else
+            echo "All local files already match Release assets; upload skipped."
+          fi
 
       - name: Verify release against manifests
         run: |
