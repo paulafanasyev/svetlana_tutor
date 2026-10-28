@@ -373,7 +373,7 @@ test('обычные сборки используют корпус при ог�
 
 test('math component crosswalk cites official FRPs and does not claim curriculum completeness', () => {
   assert.equal(componentCrosswalk.checkedAt, '2026-10-29');
-  assert.equal(componentCrosswalk.mappings.length, 3);
+  assert.equal(componentCrosswalk.mappings.length, 4);
   assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 3);
   const currentDnkr = programs.find((item) => item.id === 'frp-ooo-dnkr-5-7');
   assert.ok(currentDnkr, 'current DNKR source must be indexed');
@@ -411,8 +411,8 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   for (const mapping of componentCrosswalk.mappings) {
     assert.ok(ids.has(mapping.sourceIds[0]));
     assert.ok(mapping.sourceIds.every((id) => ids.has(id)));
-    assert.ok(['algebra', 'geometry', 'probability-statistics'].includes(mapping.targetSubject));
-    assert.equal(mapping.sourceProgramSubject, 'mathematics');
+    assert.ok(['algebra', 'geometry', 'probability-statistics', 'astronomy'].includes(mapping.targetSubject));
+    assert.equal(mapping.sourceProgramSubject, mapping.targetSubject === 'astronomy' ? 'physics' : 'mathematics');
     assert.ok(mapping.gradeRelationships.length > 0);
   }
   assert.ok(appCoverage.columns.includes('officialProgramRelationship'));
@@ -423,6 +423,9 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   assert.equal(row(3, 'probability-statistics')[5], 'RELATED_PARENT_PROGRAM_ONLY');
   assert.equal(row(6, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
   assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(10, 'astronomy')[9], 'PARENT_PHYSICS_PROGRAM_REFERENCE');
+  assert.equal(row(10, 'astronomy')[5], 'RELATED_PARENT_PROGRAM_ONLY');
+  assert.equal(row(11, 'astronomy')[4], 'NOT_PROVEN');
   assert.equal(row(3, 'fundamentals-security-defense-homeland')[3], 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE');
   assert.equal(row(3, 'fundamentals-security-defense-homeland')[5], 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
   assert.equal(row(5, 'fundamentals-security-defense-homeland')[5], 'OPTIONAL_VARIANT_PROGRAM_RANGE');
