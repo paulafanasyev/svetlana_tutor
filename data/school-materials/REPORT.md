@@ -10,11 +10,11 @@ top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[3], met
 - `officialSourceRegistry` record keys: id(11), title(11), url(11), publisher(11), sourceType(11), gradeRange(11), subjects(11), scopeNote(11)
   - records mentioning «до 31 августа 20XX»: 0
 
-## curriculum-gap-triage-2026-10-29.json (204905 bytes)
-top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[4], metrics:dict[13], policy:list[5], resolvedComponentRows:list[11], items:list[145], programEvidence:list[46], officialSourceRegistry:list[12], taxonomyResolutions:list[10], currentProgramScopes:list[2]
-- `resolvedComponentRows` record keys: grade(11), subject(11), previousStatus(11), resolutionStatus(11), mappingId(11), relationship(11), programSourceIds(11), evidenceUrls(11), completeCoverage(11), note(11)
+## curriculum-gap-triage-2026-10-29.json (204177 bytes)
+top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[4], metrics:dict[13], policy:list[5], resolvedComponentRows:list[15], items:list[141], programEvidence:list[46], officialSourceRegistry:list[12], taxonomyResolutions:list[10], currentProgramScopes:list[2]
+- `resolvedComponentRows` record keys: grade(15), subject(15), previousStatus(15), resolutionStatus(15), mappingId(15), relationship(15), programSourceIds(15), evidenceUrls(15), completeCoverage(15), note(15)
   - records mentioning «до 31 августа 20XX»: 0
-- `items` record keys: grade(145), subject(145), indexedResourceCount(145), sourceMatrixStatus(145), currentApplicability(145), completeCoverage(145), triageStatus(145), decision(145), exactProgramIds(145), relatedProgramHintIds(145), nextStep(145), officialScopeHintIds(145)
+- `items` record keys: grade(141), subject(141), indexedResourceCount(141), sourceMatrixStatus(141), currentApplicability(141), completeCoverage(141), triageStatus(141), decision(141), exactProgramIds(141), relatedProgramHintIds(141), nextStep(141), officialScopeHintIds(141)
   - records mentioning «до 31 августа 20XX»: 0
 - `programEvidence` record keys: id(46), title(46), subject(46), gradeRange(46), url(46), sourceLandingPage(46), checkedAt(46), year(46), rightsStatus(46), mirrorAllowed(1), implementationSchedule(1)
   - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=45, LINK_TO_OFFICIAL_SOURCE; no mirroring before rights are confirmed=1
@@ -249,14 +249,14 @@ top-level: schemaVersion:int, reviewedAt:str, status:str, purpose:str, act:dict[
 - `repositoryReviewTargets` record keys: path(6), reason(6)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (704830 bytes)
+## school-curriculum-coverage.json (704747 bytes)
 top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[39], coveragePolicy:str, statusDefinitions:dict[9], rowScopeNote:str, rows:list[429], summary:dict[31]
 - `rows` record keys: grade(429), subject(429), subjectLabel(429), indexedResourceCount(429), status(429), completeCoverage(429), curriculumApplicability(429), federalBibliographyRecordCount(429), verifiedOfficialLessonIndexCount(429), officialWorkingProgramCount(429), releaseAvailableWorkingProgramCount(429), officialProgramRelationship(429), officialProgramComponentMappingIds(429), officialExtracurricularProgramCount(429), locallyStoredOriginalTaskCount(429), federalBibliographyFullTextCount(429), openReferenceResourceCount(429), officialExamResourceCount(429), publicLessonPlatformResourceCount(429), additionalOfficialSubjectResourceCount(429), officialPlatformEntryPointCount(429), additionalCatalogResourceCount(429), notes(429)
-  - status: LINKS_AVAILABLE=255, NO_EXACT_GRADE_SUBJECT_RECORD=145, OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE=18, LEGACY_ARCHIVAL_ONLY=11
+  - status: LINKS_AVAILABLE=259, NO_EXACT_GRADE_SUBJECT_RECORD=141, OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE=18, LEGACY_ARCHIVAL_ONLY=11
   - records mentioning «до 31 августа 20XX»: 0
 
-## subject-component-crosswalk.json (6735 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[5], sources:list[5], mappings:list[3], evidence:dict[4]
+## subject-component-crosswalk.json (7265 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[5], sources:list[5], mappings:list[3], evidence:dict[6]
 - `sources` record keys: id(5), title(5), url(5), gradeRange(5), sourceType(5), checkedAt(5)
   - records mentioning «до 31 августа 20XX»: 0
 - `mappings` record keys: id(3), targetSubject(3), sourceProgramSubject(3), gradeRange(3), gradeRelationships(3), sourceIds(3)
@@ -265,7 +265,7 @@ top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[
 ## Manifests
 - federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-28, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-28, pages=312
-- federal-working-programs.json: generatedAt=2026-10-28T18:24:45.843704+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-28T18:29:41.150730+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
 ## Legacy extracurricular (backup branch)
 - PDFs in git: 53; manifest entries: 53
