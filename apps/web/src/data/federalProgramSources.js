@@ -35,6 +35,7 @@ const SUBJECT_CODES = {
   'ОРКСЭ': ['religious-cultures-ethics'],
   'Основы религиозных культур и светской этики': ['religious-cultures-ethics'],
   'Духовно-нравственная культура России': ['spiritual-moral-culture-russia'],
+  'ДНКР': ['spiritual-moral-culture-russia'],
   'Основы духовно-нравственной культуры народов России': ['fundamentals-spiritual-culture'],
   'Музыка': ['music'],
   'Изобразительное искусство': ['visual-arts'],
