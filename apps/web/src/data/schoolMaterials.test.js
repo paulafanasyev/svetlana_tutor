@@ -140,7 +140,7 @@ test('матрица сверки охватывает все предметы �
   assert.equal(coverage.summary.rowsWithoutExactGradeSubjectRecord, missingRows.length);
   assert.equal(coverage.summary.subjectsWithUnindexedGradePairs, coverage.summary.unindexedGradePairsBySubject.length);
   assert.equal(coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0), missingRows.length);
-  const reconciliation = readFileSync(new URL('RECONCILIATION-2026-10-22.md', DIR), 'utf8');
+  const reconciliation = readFileSync(new URL('RECONCILIATION-' + coverage.checkedAt + '.md', DIR), 'utf8');
   assert.ok(reconciliation.includes('## Сочетания без точной индексной записи'));
   for (const group of coverage.summary.unindexedGradePairsBySubject) {
     const line = '| ' + group.subjectLabel + ' (`' + group.subject + '`) | ' + group.gradesWithoutExactRecord.join(', ') + ' | ' + group.count + ' |';
