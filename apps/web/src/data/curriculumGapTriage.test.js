@@ -95,10 +95,13 @@ test('2026 FOP amendment is tracked without treating current corpus as updated',
 });
 
 test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy', () => {
-  assert.equal(currentTriage.items.length, 141);
-  assert.equal(currentTriage.metrics.gapRows, 141);
+  assert.equal(currentTriage.items.length, 137);
+  assert.equal(currentTriage.metrics.gapRows, 137);
   assert.equal(currentTriage.metrics.rowsResolvedByOfficialComponentCrosswalk, 15);
   assert.equal(currentTriage.metrics.rowsResolvedBySubjectTaxonomy, 10);
+  assert.equal(currentTriage.metrics.rowsResolvedByOfficialScope, 4);
+  assert.equal(currentTriage.scopeResolutions.length, 4);
+  assert.ok(currentTriage.scopeResolutions.every((item) => item.status === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE' && item.completeCoverage === 'NOT_PROVEN' && item.grade >= 1 && item.grade <= 4 && item.evidenceUrls.includes('https://edsoo.ru/vopros-otvet-obzr/')));
   assert.equal(currentTriage.metrics.candidateSourceRangeMismatchRows, 51);
   assert.equal(currentTriage.metrics.candidateSourceRangesVerified, 51);
   assert.equal(currentTriage.metrics.sourceApplicabilityResolvedByRangeCheck, 0);
@@ -117,7 +120,7 @@ test('current gap queue separates unresolved pairs from archived ODNKNR taxonomy
   assert.equal(currentTriage.metrics.resolvedApplicability, 0);
   assert.equal(currentTriage.resolvedComponentRows.length, 15);
   assert.equal(currentTriage.taxonomyResolutions.length, 10);
-  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 141);
+  assert.equal(new Set(currentTriage.items.map((item) => `${item.grade}:${item.subject}`)).size, 137);
   assert.ok(currentTriage.items.every((item) =>
     item.decision === 'NEEDS_MANUAL_REVIEW'
     && item.completeCoverage === 'NOT_PROVEN'
