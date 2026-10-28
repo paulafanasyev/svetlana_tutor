@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-10-29",
-  "purpose": "Current unresolved grade/subject index-gap queue after manual review of the official mathematics programme component mapping; historical 2026-10-28 snapshot is preserved unchanged.",
+  "purpose": "Current unresolved grade/subject index-gap queue after math source mapping and current-vs-legacy spiritual-culture taxonomy review; historical 2026-10-28 snapshot is preserved unchanged.",
   "sources": {
     "coverageMatrix": {
       "path": "apps/web/src/data/schoolCurriculumCoverage.json",
       "checkedAt": "2026-10-29",
-      "rows": 407
+      "rows": 429
     },
     "officialComponentCrosswalk": {
       "path": "data/school-materials/subject-component-crosswalk.json",
@@ -16,21 +16,28 @@
     "previousSnapshot": {
       "path": "data/school-materials/curriculum-gap-triage-2026-10-28.json",
       "checkedAt": "2026-10-28"
+    },
+    "currentSubjectTaxonomy": {
+      "path": "data/school-materials/official-russian-school-materials.json",
+      "checkedAt": "2026-10-29",
+      "currentSubjectCount": 39,
+      "note": "Current ORKSE and phased DNKR use separate identifiers; legacy ODNKNR remains archived and is excluded from the current unresolved queue."
     }
   },
   "metrics": {
-    "gapRows": 155,
-    "outsideListedProgramRanges": 61,
+    "gapRows": 145,
+    "outsideListedProgramRanges": 51,
     "noExactSubjectProgramEntry": 94,
     "listedRangeIncludesClassButIndexHasNoExactRow": 0,
     "resolvedApplicability": 0,
     "completenessVerified": 0,
     "allRemainNeedsManualReview": true,
-    "officialScopeHintRows": 155,
-    "rowsWithOfficialPdfScopeHint": 48,
+    "officialScopeHintRows": 145,
+    "rowsWithOfficialPdfScopeHint": 38,
     "rowsResolvedByHints": 0,
     "allHintsAreNonResolving": true,
-    "rowsResolvedByOfficialComponentCrosswalk": 11
+    "rowsResolvedByOfficialComponentCrosswalk": 11,
+    "rowsResolvedBySubjectTaxonomy": 10
   },
   "policy": [
     "All remaining items stay NEEDS_MANUAL_REVIEW, NOT_PROVEN and NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX until evidence is found for that exact grade/subject.",
@@ -608,28 +615,6 @@
     },
     {
       "grade": 1,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
-      ]
-    },
-    {
-      "grade": 1,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -1018,28 +1003,6 @@
     },
     {
       "grade": 2,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
-      ]
-    },
-    {
-      "grade": 2,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -1379,28 +1342,6 @@
       "officialScopeHintIds": [
         "edsoo-program-catalog",
         "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 3,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
       ]
     },
     {
@@ -1996,28 +1937,6 @@
     },
     {
       "grade": 5,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
-      ]
-    },
-    {
-      "grade": 5,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -2222,28 +2141,6 @@
       "officialScopeHintIds": [
         "edsoo-program-catalog",
         "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 6,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
       ]
     },
     {
@@ -2456,28 +2353,6 @@
     },
     {
       "grade": 7,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
-      ]
-    },
-    {
-      "grade": 7,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -2659,28 +2534,6 @@
       "officialScopeHintIds": [
         "edsoo-program-catalog",
         "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 8,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
       ]
     },
     {
@@ -2888,28 +2741,6 @@
         "edsoo-program-catalog",
         "edsoo-fop-faq",
         "frp-visual-arts-ooo-5-7"
-      ]
-    },
-    {
-      "grade": 9,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
       ]
     },
     {
@@ -3120,28 +2951,6 @@
     },
     {
       "grade": 10,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
-      ]
-    },
-    {
-      "grade": 10,
       "subject": "chess",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -3344,28 +3153,6 @@
         "edsoo-program-catalog",
         "edsoo-fop-faq",
         "frp-visual-arts-ooo-5-7"
-      ]
-    },
-    {
-      "grade": 11,
-      "subject": "fundamentals-spiritual-culture",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "OUTSIDE_LISTED_PROGRAM_RANGES",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [
-        "frp-noo-orkse-4"
-      ],
-      "relatedProgramHintIds": [
-        "frp-noo-orkse-4"
-      ],
-      "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq",
-        "frp-orkse-4"
       ]
     },
     {
@@ -4066,6 +3853,39 @@
       "checkedAt": "2026-10-21",
       "year": 2025,
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-dnkr-5-7",
+      "title": "Духовно-нравственная культура России, 5–7 классы (5 класс — с 2026/27; 6–7 классы — с 2027/28)",
+      "subject": "spiritual-moral-culture-russia",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "checkedAt": "2026-10-29",
+      "year": 2026,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; no mirroring before rights are confirmed",
+      "mirrorAllowed": false,
+      "implementationSchedule": [
+        {
+          "schoolYear": "2026/2027",
+          "startYear": 2026,
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "startYear": 2027,
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
     }
   ],
   "officialSourceRegistry": [
@@ -4223,6 +4043,175 @@
         "english-language"
       ],
       "scopeNote": "Программа для английского языка во 2–4 классах; отдельный язык не считать присутствующим в конкретной школе без сведений о выбранном курсе."
+    },
+    {
+      "id": "frp-ooo-dnkr-5-7",
+      "sourceType": "OFFICIAL_FRP_PDF",
+      "title": "Федеральная рабочая программа — Духовно-нравственная культура России, 5–7 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "checkedAt": "2026-10-29",
+      "rightsStatus": "LINK_ONLY; redistribution and mirroring rights not confirmed",
+      "implementationSchedule": [
+        {
+          "schoolYear": "2026/2027",
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "resolvingPower": "Official programme source and phase schedule only; not proof of complete content or curriculum coverage"
+    }
+  ],
+  "taxonomyResolutions": [
+    {
+      "grade": 1,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 2,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 3,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 5,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 6,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 7,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 8,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 9,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 10,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    },
+    {
+      "grade": 11,
+      "priorSubject": "fundamentals-spiritual-culture",
+      "status": "LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN",
+      "triageDecision": "RECLASSIFIED_AS_ARCHIVAL; NOT_COUNTED_AS_CURRENT_GRADE_SUBJECT_GAP",
+      "evidenceUrls": [
+        "https://edsoo.ru/otvety-na-chasto-zadavaemye-voprosy/"
+      ],
+      "note": "Официальный FAQ ЕДСОО сообщает, что с 1 сентября 2025 года предмет ОДНКНР отсутствует в федеральных учебных планах. Сохранять исторические данные отдельно; не использовать этот ID для ОРКСЭ или новой ДНКР."
+    }
+  ],
+  "currentProgramScopes": [
+    {
+      "subject": "religious-cultures-ethics",
+      "subjectLabel": "Основы религиозных культур и светской этики (ОРКСЭ)",
+      "grades": [
+        4
+      ],
+      "status": "CURRENT_FEDERAL_PROGRAM",
+      "sourceId": "frp-noo-orkse-4"
+    },
+    {
+      "subject": "spiritual-moral-culture-russia",
+      "subjectLabel": "Духовно-нравственная культура России (ДНКР)",
+      "grades": [
+        5,
+        6,
+        7
+      ],
+      "status": "PHASED_IMPLEMENTATION",
+      "schedule": [
+        {
+          "schoolYear": "2026/2027",
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "sourceId": "frp-ooo-dnkr-5-7"
     }
   ]
 }
