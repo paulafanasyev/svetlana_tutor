@@ -32,7 +32,7 @@
     "multer": "^2.0.2",
     "pdf-parse": "^1.1.1",
     "prisma": "^5.20.0",
-    "zod": "^3.23.8"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "supertest": "^7.0.0",
