@@ -374,7 +374,7 @@ test('обычные сборки используют корпус при ог�
 test('math component crosswalk cites official FRPs and does not claim curriculum completeness', () => {
   assert.equal(componentCrosswalk.checkedAt, '2026-10-29');
   assert.equal(componentCrosswalk.mappings.length, 4);
-  assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 3);
+  assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 4);
   const currentDnkr = programs.find((item) => item.id === 'frp-ooo-dnkr-5-7');
   assert.ok(currentDnkr, 'current DNKR source must be indexed');
   assert.equal(currentDnkr.subject, 'spiritual-moral-culture-russia');
