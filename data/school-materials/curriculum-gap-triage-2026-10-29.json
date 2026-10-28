@@ -25,18 +25,18 @@
     }
   },
   "metrics": {
-    "gapRows": 137,
+    "gapRows": 135,
     "outsideListedProgramRanges": 51,
-    "noExactSubjectProgramEntry": 86,
+    "noExactSubjectProgramEntry": 84,
     "listedRangeIncludesClassButIndexHasNoExactRow": 0,
     "resolvedApplicability": 0,
     "completenessVerified": 0,
     "allRemainNeedsManualReview": true,
-    "officialScopeHintRows": 137,
+    "officialScopeHintRows": 135,
     "rowsWithOfficialPdfScopeHint": 38,
     "rowsResolvedByHints": 0,
     "allHintsAreNonResolving": true,
-    "rowsResolvedByOfficialComponentCrosswalk": 15,
+    "rowsResolvedByOfficialComponentCrosswalk": 17,
     "rowsResolvedBySubjectTaxonomy": 10,
     "candidateSourceRangeMismatchRows": 51,
     "candidateSourceRangesVerified": 51,
@@ -299,6 +299,38 @@
       ],
       "completeCoverage": "NOT_PROVEN",
       "note": "В ФРП математики 1–4 классов есть работа с таблицами/данными, но отдельный предмет «Вероятность и статистика» этим не устанавливается. Закрыт только пробел сопоставления родительского источника."
+    },
+    {
+      "grade": 10,
+      "subject": "astronomy",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_COMPONENT_CROSSWALK",
+      "mappingId": "astronomy-via-physics",
+      "relationship": "PARENT_PHYSICS_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-soo-physics-basic-10-11"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "ФРП физики 10–11 содержит раздел по элементам астрономии и астрофизики. Закрыт только пробел привязки источника, а не подтверждена отдельная ФРП астрономии или полнота материалов."
+    },
+    {
+      "grade": 11,
+      "subject": "astronomy",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_COMPONENT_CROSSWALK",
+      "mappingId": "astronomy-via-physics",
+      "relationship": "PARENT_PHYSICS_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-soo-physics-basic-10-11"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "ФРП физики 10–11 содержит раздел по элементам астрономии и астрофизики. Закрыт только пробел привязки источника, а не подтверждена отдельная ФРП астрономии или полнота материалов."
     }
   ],
   "items": [
@@ -2748,23 +2780,6 @@
     },
     {
       "grade": 10,
-      "subject": "astronomy",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 10,
       "subject": "world-around-us",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -2963,23 +2978,6 @@
         "frp-ooo-literature-5-9",
         "frp-soo-literature-basic-10-11"
       ],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 11,
-      "subject": "astronomy",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [],
       "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
       "officialScopeHintIds": [
         "edsoo-program-catalog",
