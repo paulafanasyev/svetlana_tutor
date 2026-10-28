@@ -573,7 +573,7 @@ def main():
         catalog["federalWorkingProgramReleasePdfCount"] = program_manifest.get("verified", catalog.get("federalWorkingProgramReleasePdfCount", 0))
         catalog["failedFederalWorkingProgramPdfCount"] = program_manifest.get("failed", catalog.get("failedFederalWorkingProgramPdfCount", 0))
     catalog["currentCoverageNote"] = (
-        "Сверка " + checked_at + ": матрица " + str(len(rows)) + " строк (37 предметных идентификаторов × 11 классов); "
+        "Сверка " + checked_at + ": матрица " + str(len(rows)) + " строк (39 предметных идентификаторов × 11 классов); "
         + str(rows_with_records) + " сочетаний имеют индексные записи; " + str(rows_without_records) + " не имеют точной записи в индексах. "
         "Пустая ячейка не доказывает отсутствие материала: сначала необходимо установить применимость предмета к классу и сопоставить официальные источники. "
         "Ни одна строка не доказана полностью. "
