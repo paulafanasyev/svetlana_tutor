@@ -141,17 +141,17 @@
       "targetSubject": "probability-statistics",
       "sourceProgramSubject": "mathematics",
       "gradeRange": [
-        5,
+        1,
         11
       ],
       "gradeRelationships": [
         {
           "gradeRange": [
-            5,
+            1,
             6
           ],
           "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
-          "note": "Grades 5-6 are covered by the parent Mathematics course in the official 5-9 FRP; do not imply a separate course."
+          "note": "Grades 1-6: only parent Mathematics FRP is referenced. In grades 1-4, the official programme includes work with tables and data, but this mapping does not create a separate Probability & Statistics subject."
         },
         {
           "gradeRange": [
@@ -159,10 +159,11 @@
             11
           ],
           "relationship": "EXPLICIT_MATH_SUBCOURSE",
-          "note": "The official FRPs explicitly name Probability & Statistics as a mathematics course for grades 7-11."
+          "note": "The official FRPs explicitly structure the named Probability & Statistics course for grades 7-11."
         }
       ],
       "sourceIds": [
+        "frp-noo-math-1-4",
         "frp-ooo-math-basic-5-9",
         "frp-ooo-math-advanced-5-9",
         "frp-soo-math-basic-10-11",
@@ -174,6 +175,8 @@
     "officialProgramCatalog": "https://edsoo.ru/rabochie-programmy/",
     "grade5to9TextEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/06/05_frp_matematika-5-9-klassy_baza_17062025_itog-na-sajt.pdf",
     "grade10to11TextEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
-    "reviewedSummary": "The official 5-9 mathematics FRP describes Mathematics as the course for grades 5-6, then Algebra and Geometry in grades 7-9, with Probability & Statistics in the mathematics programme. The official 10-11 FRP names Algebra and beginnings of mathematical analysis, Geometry, and Probability & Statistics."
+    "reviewedSummary": "The official 5-9 mathematics FRP describes Mathematics as the course for grades 5-6, then Algebra and Geometry in grades 7-9, with Probability & Statistics in the mathematics programme. The official 10-11 FRP names Algebra and beginnings of mathematical analysis, Geometry, and Probability & Statistics.",
+    "primarySchoolMathEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf",
+    "primarySchoolMathEvidenceSummary": "The official 1-4 Mathematics FRP contains grade-level learning outcomes involving data representation, tables, and numerical data. This supports only a parent mathematics programme link, not the existence of a separate Probability & Statistics course."
   }
 }
