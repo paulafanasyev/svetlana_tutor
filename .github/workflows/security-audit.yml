@@ -44,8 +44,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install locked dependencies
-        run: npm ci --no-audit --no-fund --legacy-peer-deps
+      - name: Resolve dependencies and create audit lockfile
+        run: npm install --package-lock-only --no-audit --no-fund --legacy-peer-deps
 
       - name: Generate production dependency audit JSON
         shell: bash
@@ -62,6 +62,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: npm-audit-${{ matrix.path == 'apps/api' && 'api' || 'web' }}-${{ github.sha }}
-          path: ${{ matrix.path }}/npm-audit.json
+          path: |
+            ${{ matrix.path }}/npm-audit.json
+            ${{ matrix.path }}/package-lock.json
           if-no-files-found: warn
           retention-days: 14
