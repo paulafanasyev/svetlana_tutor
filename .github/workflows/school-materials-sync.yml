@@ -101,7 +101,25 @@ jobs:
           PY
           mapfile -t upload_files < .cache/school-materials/upload-list.txt
           if (( ${#upload_files[@]} )); then
-            gh release upload "$TAG" "${upload_files[@]}" --clobber
+            for file in "${upload_files[@]}"; do
+              uploaded=false
+              for attempt in 1 2 3 4; do
+                if gh release upload "$TAG" "$file" --clobber; then
+                  uploaded=true
+                  break
+                fi
+                if (( attempt < 4 )); then
+                  delay=$((attempt * 30))
+                  echo "::warning::Release upload failed for $file (attempt $attempt); retrying in ${delay}s"
+                  sleep "$delay"
+                fi
+              done
+              if [[ "$uploaded" != true ]]; then
+                echo "::error::Release asset upload failed after retries: $file"
+                exit 1
+              fi
+              sleep 10
+            done
           else
             echo "All local files already match Release assets; upload skipped."
           fi
