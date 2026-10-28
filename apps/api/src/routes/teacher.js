@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { requireAuth, requireRole } from '../middleware/auth.js';
 import { validate } from '../middleware/validate.js';
+import { summarizeSchoolGameAttempts } from '../lib/schoolGameResults.js';
 
 const router = Router();
 router.use(requireAuth, requireRole('TEACHER', 'ADMIN'));
@@ -23,6 +24,7 @@ export function summarize(user, attempts) {
   return {
     id: user.id, name: user.name, level: user.level, xp: user.xp, coins: user.coins,
     attempts: mine.length, correct, accuracy: mine.length ? correct / mine.length : 0, streak, lastActive,
+    gameResults: summarizeSchoolGameAttempts(mine),
   };
 }
 
