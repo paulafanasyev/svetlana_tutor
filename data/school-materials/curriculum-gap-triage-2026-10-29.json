@@ -25,18 +25,18 @@
     }
   },
   "metrics": {
-    "gapRows": 145,
+    "gapRows": 141,
     "outsideListedProgramRanges": 51,
-    "noExactSubjectProgramEntry": 94,
+    "noExactSubjectProgramEntry": 90,
     "listedRangeIncludesClassButIndexHasNoExactRow": 0,
     "resolvedApplicability": 0,
     "completenessVerified": 0,
     "allRemainNeedsManualReview": true,
-    "officialScopeHintRows": 145,
+    "officialScopeHintRows": 141,
     "rowsWithOfficialPdfScopeHint": 38,
     "rowsResolvedByHints": 0,
     "allHintsAreNonResolving": true,
-    "rowsResolvedByOfficialComponentCrosswalk": 11,
+    "rowsResolvedByOfficialComponentCrosswalk": 15,
     "rowsResolvedBySubjectTaxonomy": 10
   },
   "policy": [
@@ -228,6 +228,70 @@
       ],
       "completeCoverage": "NOT_PROVEN",
       "note": "Закрыт только пробел в индексации источника: использована официальная ФРП по математике как родительская программа или прямо названный курс. Полнота материалов и наличие всех учебников не подтверждены."
+    },
+    {
+      "grade": 1,
+      "subject": "probability-statistics",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_MATH_COMPONENT_CROSSWALK",
+      "mappingId": "probability-statistics-via-mathematics",
+      "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-noo-math-1-4"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "В ФРП математики 1–4 классов есть работа с таблицами/данными, но отдельный предмет «Вероятность и статистика» этим не устанавливается. Закрыт только пробел сопоставления родительского источника."
+    },
+    {
+      "grade": 2,
+      "subject": "probability-statistics",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_MATH_COMPONENT_CROSSWALK",
+      "mappingId": "probability-statistics-via-mathematics",
+      "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-noo-math-1-4"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "В ФРП математики 1–4 классов есть работа с таблицами/данными, но отдельный предмет «Вероятность и статистика» этим не устанавливается. Закрыт только пробел сопоставления родительского источника."
+    },
+    {
+      "grade": 3,
+      "subject": "probability-statistics",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_MATH_COMPONENT_CROSSWALK",
+      "mappingId": "probability-statistics-via-mathematics",
+      "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-noo-math-1-4"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "В ФРП математики 1–4 классов есть работа с таблицами/данными, но отдельный предмет «Вероятность и статистика» этим не устанавливается. Закрыт только пробел сопоставления родительского источника."
+    },
+    {
+      "grade": 4,
+      "subject": "probability-statistics",
+      "previousStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
+      "resolutionStatus": "SOURCE_INDEX_GAP_RESOLVED_BY_OFFICIAL_MATH_COMPONENT_CROSSWALK",
+      "mappingId": "probability-statistics-via-mathematics",
+      "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+      "programSourceIds": [
+        "frp-noo-math-1-4"
+      ],
+      "evidenceUrls": [
+        "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf"
+      ],
+      "completeCoverage": "NOT_PROVEN",
+      "note": "В ФРП математики 1–4 классов есть работа с таблицами/данными, но отдельный предмет «Вероятность и статистика» этим не устанавливается. Закрыт только пробел сопоставления родительского источника."
     }
   ],
   "items": [
@@ -414,29 +478,6 @@
     },
     {
       "grade": 1,
-      "subject": "probability-statistics",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [
-        "frp-noo-math-1-4",
-        "frp-ooo-math-basic-5-9",
-        "frp-ooo-math-advanced-5-9",
-        "frp-soo-math-basic-10-11",
-        "frp-soo-math-advanced-10-11"
-      ],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 1,
       "subject": "informatics",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -795,29 +836,6 @@
       ],
       "relatedProgramHintIds": [],
       "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 2,
-      "subject": "probability-statistics",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [
-        "frp-noo-math-1-4",
-        "frp-ooo-math-basic-5-9",
-        "frp-ooo-math-advanced-5-9",
-        "frp-soo-math-basic-10-11",
-        "frp-soo-math-advanced-10-11"
-      ],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
       "officialScopeHintIds": [
         "edsoo-program-catalog",
         "edsoo-fop-faq"
@@ -1190,29 +1208,6 @@
     },
     {
       "grade": 3,
-      "subject": "probability-statistics",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [
-        "frp-noo-math-1-4",
-        "frp-ooo-math-basic-5-9",
-        "frp-ooo-math-advanced-5-9",
-        "frp-soo-math-basic-10-11",
-        "frp-soo-math-advanced-10-11"
-      ],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 3,
       "subject": "social-studies",
       "indexedResourceCount": 0,
       "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
@@ -1526,29 +1521,6 @@
       ],
       "relatedProgramHintIds": [],
       "nextStep": "Сверить диапазон в действующей официальной ФОП/ФРП и проверить полноту каталога. Отсутствие класса в каталоге не является доказательством неприменимости предмета.",
-      "officialScopeHintIds": [
-        "edsoo-program-catalog",
-        "edsoo-fop-faq"
-      ]
-    },
-    {
-      "grade": 4,
-      "subject": "probability-statistics",
-      "indexedResourceCount": 0,
-      "sourceMatrixStatus": "NO_EXACT_GRADE_SUBJECT_RECORD",
-      "currentApplicability": "NOT_ESTABLISHED_BY_CURRENT_PROGRAM_INDEX",
-      "completeCoverage": "NOT_PROVEN",
-      "triageStatus": "NO_EXACT_SUBJECT_PROGRAM_ENTRY",
-      "decision": "NEEDS_MANUAL_REVIEW",
-      "exactProgramIds": [],
-      "relatedProgramHintIds": [
-        "frp-noo-math-1-4",
-        "frp-ooo-math-basic-5-9",
-        "frp-ooo-math-advanced-5-9",
-        "frp-soo-math-basic-10-11",
-        "frp-soo-math-advanced-10-11"
-      ],
-      "nextStep": "Найти действующее нормативное основание: отдельная ФРП, интеграция в другой предмет, региональный/вариативный курс или внеурочная программа. Не присваивать статус NOT_APPLICABLE без официального доказательства.",
       "officialScopeHintIds": [
         "edsoo-program-catalog",
         "edsoo-fop-faq"
