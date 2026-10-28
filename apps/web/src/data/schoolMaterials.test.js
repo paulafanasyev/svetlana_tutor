@@ -134,12 +134,20 @@ test('матрица сверки охватывает все предметы �
     assert.ok(Number.isInteger(row.indexedResourceCount) && row.indexedResourceCount >= 0, row.subject);
     assert.ok(Number.isInteger(row.locallyStoredOriginalTaskCount) && row.locallyStoredOriginalTaskCount >= 0, row.subject);
     assert.equal(row.completeCoverage, 'NOT_PROVEN', String(row.grade) + '/' + row.subject);
-    assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', String(row.grade) + '/' + row.subject);
+    const key = String(row.grade) + '/' + row.subject;
+    if (row.curriculumApplicability === 'LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN') {
+      assert.equal(row.status, 'LEGACY_ARCHIVAL_ONLY', key);
+    } else if (row.curriculumApplicability === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE' && row.indexedResourceCount === 0) {
+      assert.equal(row.status, 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE', key);
+    } else {
+      assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', key);
+    }
   }
   const missingRows = coverage.rows.filter((row) => row.indexedResourceCount === 0);
   assert.equal(coverage.summary.rowsWithoutExactGradeSubjectRecord, missingRows.length);
   assert.equal(coverage.summary.subjectsWithUnindexedGradePairs, coverage.summary.unindexedGradePairsBySubject.length);
-  assert.equal(coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0), missingRows.length);
+  assert.equal(coverage.summary.rowsWithoutRecordsRequiringReview, coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0));
+  assert.ok(coverage.summary.rowsWithoutRecordsRequiringReview <= missingRows.length);
   const reconciliation = readFileSync(new URL('RECONCILIATION-' + coverage.checkedAt + '.md', DIR), 'utf8');
   assert.ok(reconciliation.includes('## Сочетания без точной индексной записи'));
   for (const group of coverage.summary.unindexedGradePairsBySubject) {
@@ -367,6 +375,17 @@ test('math component crosswalk cites official FRPs and does not claim curriculum
   assert.equal(componentCrosswalk.checkedAt, '2026-10-29');
   assert.equal(componentCrosswalk.mappings.length, 3);
   assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 3);
+  const currentDnkr = programs.find((item) => item.id === 'frp-ooo-dnkr-5-7');
+  assert.ok(currentDnkr, 'current DNKR source must be indexed');
+  assert.equal(currentDnkr.subject, 'spiritual-moral-culture-russia');
+  assert.equal(currentDnkr.mirrorAllowed, false);
+  assert.equal(currentDnkr.contentStoredLocally, false);
+  assert.deepEqual(currentDnkr.implementationSchedule, [
+    { schoolYear: '2026/2027', startYear: 2026, grades: [5] },
+    { schoolYear: '2027/2028', startYear: 2027, grades: [5, 6, 7] },
+  ]);
+  assert.equal(programs.find((item) => item.id === 'frp-noo-orkse-4').subject, 'religious-cultures-ethics');
+
   const ids = new Set(programs.map((program) => program.id));
   const sourceIds = new Set(componentCrosswalk.sources.map((source) => source.id));
   assert.equal(sourceIds.size, componentCrosswalk.sources.length);
