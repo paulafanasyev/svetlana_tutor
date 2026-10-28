@@ -20,6 +20,8 @@ const items = read('official-russian-school-material-items.json').items;
 const lessonIndex = read('edsoo-official-lesson-index.json');
 const lessons = lessonIndex.items;
 const programs = read('federal-working-programs.json').programs;
+const componentCrosswalk = read('subject-component-crosswalk.json');
+const appCoverage = JSON.parse(readFileSync(new URL('./schoolCurriculumCoverage.json', import.meta.url), 'utf8'));
 const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
 
 test('все JSON читаются, id в общем каталоге уникальны', () => {
@@ -359,4 +361,35 @@ test('обычные сборки используют корпус при ог�
   assert.equal(sourceFailureMode(transient, 'push'), 'fallback-with-warning');
   assert.equal(sourceFailureMode(transient, 'schedule'), 'fail-live-source-check');
   assert.equal(sourceFailureMode(['163.9: разделы не найдены'], 'schedule'), 'fail-build');
+});
+
+test('math component crosswalk cites official FRPs and does not claim curriculum completeness', () => {
+  assert.equal(componentCrosswalk.checkedAt, '2026-10-29');
+  assert.equal(componentCrosswalk.mappings.length, 3);
+  assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 3);
+  const ids = new Set(programs.map((program) => program.id));
+  const sourceIds = new Set(componentCrosswalk.sources.map((source) => source.id));
+  assert.equal(sourceIds.size, componentCrosswalk.sources.length);
+  for (const source of componentCrosswalk.sources) {
+    assert.ok(source.url.startsWith('https://edsoo.ru/'), source.id);
+    const program = programs.find((item) => item.id === source.id);
+    assert.ok(program, 'crosswalk source must exist in the official catalogue: ' + source.id);
+    assert.equal(source.url, program.url, source.id);
+    assert.deepEqual(source.gradeRange, program.gradeRange, source.id);
+  }
+  for (const mapping of componentCrosswalk.mappings) {
+    assert.ok(ids.has(mapping.sourceIds[0]));
+    assert.ok(mapping.sourceIds.every((id) => ids.has(id)));
+    assert.ok(['algebra', 'geometry', 'probability-statistics'].includes(mapping.targetSubject));
+    assert.equal(mapping.sourceProgramSubject, 'mathematics');
+    assert.ok(mapping.gradeRelationships.length > 0);
+  }
+  assert.ok(appCoverage.columns.includes('officialProgramRelationship'));
+  const row = (grade, subject) => appCoverage.rows.find((item) => item[0] === grade && item[1] === subject);
+  assert.equal(row(3, 'geometry')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(8, 'geometry')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(6, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.ok(appCoverage.rows.every((item) => item[4] === 'NOT_PROVEN'));
+  assert.equal(appCoverage.rows.filter((item) => item[4] === 'VERIFIED_COMPLETE').length, 0);
 });
