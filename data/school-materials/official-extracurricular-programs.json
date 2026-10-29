@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "title": "Официальные программы внеурочной деятельности — ЕДСОО",
   "source": "https://edsoo.ru/rabochie-programmy-vd/",
-  "checkedAt": "2026-10-21",
-  "count": 53,
+  "checkedAt": "2026-10-29",
+  "count": 54,
   "records": [
     {
       "id": "edsoo-vd-001",
@@ -1095,6 +1095,51 @@
       "contentStoredLocally": false
     },
     {
+      "id": "edsoo-vd-ai-infosec-ooo",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Искусственный интеллект и информационная безопасность». 5–9 классы (2026 г.)",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Искусственный интеллект и информационная безопасность",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/10/rp_iiiib_ooo.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-29",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    },
+    {
+      "id": "edsoo-vd-ai-infosec-soo",
+      "sourceId": "edsoo-extracurricular-programs",
+      "title": "Рабочая программа курса внеурочной деятельности «Искусственный интеллект и информационная безопасность». 10–11 классы (2026 г.)",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subject": "all-school-subjects",
+      "topic": "Искусственный интеллект и информационная безопасность",
+      "kind": [
+        "official-extracurricular-program",
+        "working-program-pdf"
+      ],
+      "url": "https://edsoo.ru/wp-content/uploads/2026/10/rp_iiiib_soo.pdf",
+      "landingPage": "https://edsoo.ru/rabochie-programmy-vd/",
+      "checkedAt": "2026-10-29",
+      "accessStatus": "direct PDF link published on official EDSOO site",
+      "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
+      "contentStoredLocally": false
+    }
+  ],
+  "archiveNote": "count and records cover active direct PDF links on the current official EDSOO page; archivedRecords preserve entries no longer listed.",
+  "archivedRecords": [
+    {
       "id": "edsoo-vd-053",
       "sourceId": "edsoo-extracurricular-programs",
       "title": "Рабочая программа курса внеурочной деятельности «Современные агробиотехнологии». 10-11 классы (2023 г.)",
@@ -1113,7 +1158,9 @@
       "checkedAt": "2026-10-21",
       "accessStatus": "direct PDF link published on official EDSOO site",
       "rightsStatus": "LINK_ONLY; redistribution licence not independently confirmed",
-      "contentStoredLocally": false
+      "contentStoredLocally": false,
+      "archivedAt": "2026-10-29",
+      "archiveReason": "Not present on the current official EDSOO extracurricular-programmes page; retained for traceability, excluded from active records."
     }
   ]
 }
