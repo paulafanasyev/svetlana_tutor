@@ -53,8 +53,8 @@ def main():
         old_m = legacy / "MANIFEST.json"
         old_entries = load(old_m).get("files", []) if old_m.exists() else []
         paths = Counter(e.get("localPath") for e in old_entries)
-        out += ["", "## Legacy extracurricular (backup branch)",
-                f"- PDFs in git: {len(old_pdfs)}; manifest entries: {len(old_entries)}",
+        out += ["", "## Legacy extracurricular (backup-branch cache)",
+                f"- PDF files unpacked from the backup-branch archive into the ignored cache: {len(old_pdfs)}; manifest entries: {len(old_entries)}",
                 f"- localPath collisions (several URLs -> one file): {sum(v - 1 for v in paths.values() if v > 1)}",
                 f"- garbled-looking names: {len(garbled)}"]
 
