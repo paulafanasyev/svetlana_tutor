@@ -69,7 +69,7 @@ test('активный каталог внеурочных программ со
   assert.ok(vd, 'манифест внеурочки');
   assert.equal(extracurricularCatalog.count, extracurricularCatalog.records.length);
   assert.ok(unique(extracurricularCatalog.records.map((x) => x.id)));
-  const normalizeUrl = (url) => decodeURIComponent(String(url || '').split('?')[0]).replace(/\\/+$/g, '').toLowerCase();
+  const normalizeUrl = (url) => decodeURIComponent(String(url || '').split('?')[0]).replace(/\/+$/g, '').toLowerCase();
   const catalogUrls = extracurricularCatalog.records.map((x) => normalizeUrl(x.url)).sort();
   const manifestUrls = vd.files.map((x) => normalizeUrl(x.sourceUrl)).sort();
   assert.deepEqual(catalogUrls, manifestUrls, 'активный каталог должен отражать все текущие ссылки из манифеста');
