@@ -472,7 +472,7 @@ export default function nooContent() {
             if (sourceMode === 'fail-live-source-check') {
               this.error(`Проверка живого источника по расписанию не прошла: ${n} из ${EXPECTED} динамических разделов. Ошибки: ${errors.join(' | ')}`);
             }
-          } else if (sourceMode === 'fail-build' || n < EXPECTED) {
+          } else if (sourceMode === 'fail-build' || (sourceMode === 'no-error' && n < EXPECTED)) {
             this.error(`Содержание НОО/ООО из ФОП: ${n} из ${EXPECTED}. ${errors.join(' | ')}`);
           }
         }
