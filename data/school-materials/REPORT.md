@@ -219,10 +219,13 @@ top-level: schemaVersion:int, name:str, checkedAt:str, source:str, sourceDescrip
   - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=128
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-extracurricular-programs.json (55595 bytes)
-top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, records:list[53]
-- `records` record keys: id(53), sourceId(53), title(53), gradeRange(53), subject(53), topic(53), kind(53), url(53), landingPage(53), checkedAt(53), accessStatus(53), rightsStatus(53), contentStoredLocally(53)
-  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=53
+## official-extracurricular-programs.json (58041 bytes)
+top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, records:list[54], archiveNote:str, archivedRecords:list[1]
+- `records` record keys: id(54), sourceId(54), title(54), gradeRange(54), subject(54), topic(54), kind(54), url(54), landingPage(54), checkedAt(54), accessStatus(54), rightsStatus(54), contentStoredLocally(54)
+  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=54
+  - records mentioning «до 31 августа 20XX»: 0
+- `archivedRecords` record keys: id(1), sourceId(1), title(1), gradeRange(1), subject(1), topic(1), kind(1), url(1), landingPage(1), checkedAt(1), accessStatus(1), rightsStatus(1), contentStoredLocally(1), archivedAt(1), archiveReason(1)
+  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=1
   - records mentioning «до 31 августа 20XX»: 0
 
 ## official-russian-school-material-items.json (2260070 bytes)
