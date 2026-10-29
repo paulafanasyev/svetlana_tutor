@@ -79,7 +79,7 @@ function seedDb() {
     blocked: false, level: 'C1', xp: 0, coins: 0, teacherId: null, theme: 'candy', frame: 'none', createdAt: now() - 60 * DAY, lastActive: now() });
   users.push({ id: 'u_parent', email: 'parent@demo', passwordHash: enc('parent123'), name: 'Ирина (родитель)', role: 'PARENT',
     blocked: false, level: 'A1', xp: 0, coins: 0, teacherId: null, childIds: ['u_s0'], theme: 'candy', frame: 'none', createdAt: now() - 30 * DAY, lastActive: now() });
-  const classStudents = ['u_s0', 'u_s1', 'u_s2', 'u_s3', 'u_s4', 'u_s5'];
+  const classStudents = ['u_student', 'u_s0', 'u_s1', 'u_s2', 'u_s3', 'u_s4', 'u_s5'];
   const classes = [{ id: 'c1', name: 'Группа 5А · Английский', teacherId: 'u_teacher', studentIds: classStudents, createdAt: now() - 60 * DAY }];
   const KINDS = ['lesson', 'quiz', 'homework'];
   const JT = ['basics', 'family', 'food', 'travel', 'school', 'hobbies'];
@@ -125,6 +125,14 @@ function migrate(d) {
   for (const a of d.attempts) {
     const t = normalizeTaskType(a.taskType);
     if (t !== a.taskType) { a.taskType = t; changed = true; }
+  }
+  // Keep the published demo learner in the demo teacher's class. Existing browsers
+  // already have aet_db_v3 in localStorage, so updating seedDb alone is not enough.
+  const demoStudent = d.users.find((u) => u.id === 'u_student' && u.role === 'STUDENT');
+  const demoClass = d.classes.find((c) => c.id === 'c1' && c.teacherId === 'u_teacher');
+  if (demoStudent && demoClass && Array.isArray(demoClass.studentIds) && !demoClass.studentIds.includes(demoStudent.id)) {
+    demoClass.studentIds.push(demoStudent.id);
+    changed = true;
   }
   const kept = d.unlocks.filter((x) => x.itemType !== 'teacher' || validTeacher(x.itemId));
   if (kept.length !== d.unlocks.length) { d.unlocks = kept; changed = true; }
