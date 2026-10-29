@@ -29,12 +29,14 @@
 # Subtest: записи ЕДСОО с подтверждением класса содержат ссылку и доказательство
 # Subtest: официальные дополнительные материалы ЕДСОО отображаются по предмету и классу
 # Subtest: карточки уроков ЕДСОО доступны в UI по предмету и классу, а неразмеченные не приписываются предметам
-# tests 23
+# Subtest: обычные сборки используют корпус при ограничении источника, scheduled-аудит требует живой источник
+# Subtest: math component crosswalk cites official FRPs and does not claim curriculum completeness
+# tests 25
 # suites 0
-# pass 23
+# pass 25
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 152.73289
+# duration_ms 218.176514
 ```

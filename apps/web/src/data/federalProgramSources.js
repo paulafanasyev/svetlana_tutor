@@ -32,15 +32,35 @@ const SUBJECT_CODES = {
   'Физическая культура': ['physical-education'],
   'ОБЗР': ['fundamentals-security-defense-homeland'],
   'Основы безопасности и защиты Родины': ['fundamentals-security-defense-homeland'],
-  'ОРКСЭ': ['fundamentals-spiritual-culture'],
-  'Основы религиозных культур и светской этики': ['fundamentals-spiritual-culture'],
-  'Духовно-нравственная культура России': ['fundamentals-spiritual-culture'],
+  'ОРКСЭ': ['religious-cultures-ethics'],
+  'Основы религиозных культур и светской этики': ['religious-cultures-ethics'],
+  'Духовно-нравственная культура России': ['spiritual-moral-culture-russia'],
+  'ДНКР': ['spiritual-moral-culture-russia'],
   'Основы духовно-нравственной культуры народов России': ['fundamentals-spiritual-culture'],
   'Музыка': ['music'],
   'Изобразительное искусство': ['visual-arts'],
 };
 
 const allPrograms = () => Array.isArray(catalog.programs) ? catalog.programs : [];
+
+// The source page below establishes scope, not a complete FRP document. Keeping
+// it separate from the PDF catalogue prevents it from inflating programme counts
+// or being mirrored to a release.
+const OPTIONAL_SCOPE_REFERENCES = [
+  {
+    id: 'edsoo-obzr-optional-scope-5-7',
+    title: 'ОБЗР в 5–7 классах: разъяснение о вариативной части учебного плана',
+    subject: 'fundamentals-security-defense-homeland',
+    gradeRange: [5, 7],
+    url: 'https://edsoo.ru/vopros-otvet-obzr/',
+    sourceType: 'official-scope-guidance',
+    scopeOnly: true,
+    contentStoredLocally: false,
+    mirrorAllowed: false,
+    rightsStatus: 'LINK_TO_OFFICIAL_SOURCE; not a full FRP and not a local copy',
+  },
+];
+const allSourceRecords = () => [...allPrograms(), ...OPTIONAL_SCOPE_REFERENCES];
 const isValidSource = (item) => item
   && item.subject !== 'all-school-subjects'
   && Array.isArray(item.gradeRange)
@@ -61,7 +81,7 @@ export function findOfficialProgramSources(subjectLabel, grade, limit = 5) {
   const codes = officialProgramSubjectCodes(subjectLabel);
   if (!codes.length) return [];
   const safeLimit = Number.isInteger(limit) ? Math.max(1, Math.min(20, limit)) : 5;
-  return allPrograms()
+  return allSourceRecords()
     .filter((item) => isValidSource(item)
       && gradeNumber >= Number(item.gradeRange[0])
       && gradeNumber <= Number(item.gradeRange[1])
@@ -78,7 +98,7 @@ export function listOfficialProgramSourcesForGrade(grade, limit = 20) {
   const gradeNumber = Number(grade);
   if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 11) return [];
   const safeLimit = Number.isInteger(limit) ? Math.max(1, Math.min(50, limit)) : 20;
-  return allPrograms()
+  return allSourceRecords()
     .filter((item) => isValidSource(item)
       && gradeNumber >= Number(item.gradeRange[0])
       && gradeNumber <= Number(item.gradeRange[1]))

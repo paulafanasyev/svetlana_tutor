@@ -1,45 +1,83 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-21",
+  "checkedAt": "2026-10-29",
   "source": "data/school-materials/federal-working-programs.json",
-  "note": "Metadata and links only. PDF contents are not embedded in this application catalog.",
+  "note": "Metadata and official source links only. PDF contents are not embedded in the app. The 2026 DNKR PDF is intentionally link-only, has a phased implementation schedule, and must not be mirrored until redistribution rights are independently confirmed. OBZR 2025 PDFs are kept link-only: redistribution rights have not been established and text amendments under order 576 still require review.",
   "programs": [
     {
-      "id": "frp-noo-russian-1-4",
-      "title": "Русский язык, 1–4 классы",
-      "subject": "russian-language",
+      "id": "edsoo-history-assessment-bank",
+      "title": "Банк заданий для текущего оценивания по истории, 5–9 классы",
+      "subject": "history",
       "gradeRange": [
-        1,
-        4
+        5,
+        9
       ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_russkij-yazyk_1-4.pdf",
+      "level": "Банк заданий",
+      "year": 2024,
+      "url": "https://edsoo.ru/md-istoriya/",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 196,
-      "provenance": "corpus",
+      "pages": null,
+      "provenance": "catalog",
       "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-russian-1-4.pdf",
+      "storedInRelease": false,
+      "releaseUrl": null,
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-noo-literary-reading-1-4",
-      "title": "Литературное чтение, 1–4 классы",
-      "subject": "literary-reading",
+      "id": "edsoo-methodical-index",
+      "title": "Методические документы, банки заданий и материалы к урокам",
+      "subject": "all-school-subjects",
       "gradeRange": [
         1,
-        4
+        11
       ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_literaturnoe-chtenie_1-4.pdf",
+      "level": "Официальный каталог",
+      "year": 2026,
+      "url": "https://edsoo.ru/metodicheskie-dokumenty/",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 204,
-      "provenance": "corpus",
+      "pages": null,
+      "provenance": "catalog",
       "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-literary-reading-1-4.pdf",
+      "storedInRelease": false,
+      "releaseUrl": null,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-all-levels-index",
+      "title": "Каталог федеральных рабочих программ всех уровней образования",
+      "subject": "all-school-subjects",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "level": "Официальный каталог",
+      "year": 2026,
+      "url": "https://edsoo.ru/rabochie-programmy/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "provenance": "catalog",
+      "contentStoredLocally": false,
+      "storedInRelease": false,
+      "releaseUrl": null,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-extra-curricular-index",
+      "title": "Рабочие программы курсов внеурочной деятельности",
+      "subject": "all-school-subjects",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "level": "Официальный каталог",
+      "year": 2026,
+      "url": "https://edsoo.ru/rabochie-programmy-vd/",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": null,
+      "provenance": "catalog",
+      "contentStoredLocally": false,
+      "storedInRelease": false,
+      "releaseUrl": null,
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -81,22 +119,22 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-noo-visual-arts-1-4",
-      "title": "Изобразительное искусство, 1–4 классы",
-      "subject": "visual-arts",
+      "id": "frp-noo-literary-reading-1-4",
+      "title": "Литературное чтение, 1–4 классы",
+      "subject": "literary-reading",
       "gradeRange": [
         1,
         4
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_literaturnoe-chtenie_1-4.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 92,
+      "pages": 204,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-visual-arts-1-4.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-literary-reading-1-4.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -119,28 +157,28 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-noo-world-1-4",
-      "title": "Окружающий мир, 1–4 классы",
-      "subject": "world-around-us",
+      "id": "frp-noo-music-1-4",
+      "title": "Музыка, 1–4 классы",
+      "subject": "music",
       "gradeRange": [
         1,
         4
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_muzyka_1-4.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 111,
+      "pages": 114,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-world-1-4.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-music-1-4.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
       "id": "frp-noo-orkse-4",
       "title": "Основы религиозных культур и светской этики, 4 класс",
-      "subject": "fundamentals-spiritual-culture",
+      "subject": "religious-cultures-ethics",
       "gradeRange": [
         4,
         4
@@ -176,25 +214,6 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-noo-music-1-4",
-      "title": "Музыка, 1–4 классы",
-      "subject": "music",
-      "gradeRange": [
-        1,
-        4
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_muzyka_1-4.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 114,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-music-1-4.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
       "id": "frp-noo-programs-hub",
       "title": "Каталог программ начальной школы",
       "subject": "all-school-subjects",
@@ -214,212 +233,60 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-russian-5-9",
-      "title": "Русский язык, 5–9 классы",
+      "id": "frp-noo-russian-1-4",
+      "title": "Русский язык, 1–4 классы",
       "subject": "russian-language",
       "gradeRange": [
-        5,
-        9
+        1,
+        4
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/09/01_frp_russkij-yazyk_5-9-klassy_itog-na-sajt_1-2.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_russkij-yazyk_1-4.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 252,
+      "pages": 196,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-russian-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-russian-1-4.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-literature-5-9",
-      "title": "Литература, 5–9 классы",
-      "subject": "literature",
+      "id": "frp-noo-visual-arts-1-4",
+      "title": "Изобразительное искусство, 1–4 классы",
+      "subject": "visual-arts",
       "gradeRange": [
-        5,
-        9
+        1,
+        4
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_izo_1-4.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 193,
+      "pages": 92,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-literature-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-visual-arts-1-4.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-math-basic-5-9",
-      "title": "Математика, базовый уровень, 5–9 классы",
-      "subject": "mathematics",
+      "id": "frp-noo-world-1-4",
+      "title": "Окружающий мир, 1–4 классы",
+      "subject": "world-around-us",
       "gradeRange": [
-        5,
-        9
+        1,
+        4
       ],
-      "level": "Базовый уровень",
+      "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_okruzhayushhij-mir_1-4.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 143,
+      "pages": 111,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-math-basic-5-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-math-advanced-5-9",
-      "title": "Математика, углублённый уровень, 5–9 классы",
-      "subject": "mathematics",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 101,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-math-advanced-5-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-informatics-basic-7-9",
-      "title": "Информатика, базовый уровень, 7–9 классы",
-      "subject": "informatics",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 66,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-informatics-basic-7-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-informatics-advanced-7-9",
-      "title": "Информатика, углублённый уровень, 7–9 классы",
-      "subject": "informatics",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 51,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-informatics-advanced-7-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-physics-basic-7-9",
-      "title": "Физика, базовый уровень, 7–9 классы",
-      "subject": "physics",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 97,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-physics-basic-7-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-physics-advanced-7-9",
-      "title": "Физика, углублённый уровень, 7–9 классы",
-      "subject": "physics",
-      "gradeRange": [
-        7,
-        9
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 72,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-physics-advanced-7-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-chemistry-basic-8-9",
-      "title": "Химия, базовый уровень, 8–9 классы",
-      "subject": "chemistry",
-      "gradeRange": [
-        8,
-        9
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 71,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chemistry-basic-8-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-chemistry-advanced-8-9",
-      "title": "Химия, углублённый уровень, 8–9 классы",
-      "subject": "chemistry",
-      "gradeRange": [
-        8,
-        9
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 81,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chemistry-advanced-8-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-biology-basic-5-9",
-      "title": "Биология, базовый уровень, 5–9 классы",
-      "subject": "biology",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 144,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-biology-basic-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-noo-world-1-4.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -442,80 +309,119 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-geography-5-9",
-      "title": "География, 5–9 классы",
-      "subject": "geography",
+      "id": "frp-ooo-biology-basic-5-9",
+      "title": "Биология, базовый уровень, 5–9 классы",
+      "subject": "biology",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_biologiya_5-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 144,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-biology-basic-5-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-chemistry-advanced-8-9",
+      "title": "Химия, углублённый уровень, 8–9 классы",
+      "subject": "chemistry",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_uglub_8-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 81,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chemistry-advanced-8-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-chemistry-basic-8-9",
+      "title": "Химия, базовый уровень, 8–9 классы",
+      "subject": "chemistry",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 71,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chemistry-basic-8-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-chinese-second-5-9",
+      "title": "Второй иностранный (китайский) язык, 5–9 классы",
+      "subject": "chinese-language",
       "gradeRange": [
         5,
         9
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_geografiya-5-9.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 181,
+      "pages": 169,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-geography-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chinese-second-5-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-history-5-9",
-      "title": "История, 5–9 классы",
-      "subject": "history",
+      "id": "frp-ooo-dnkr-5-7",
+      "title": "Духовно-нравственная культура России, 5–7 классы (5 класс — с 2026/27; 6–7 классы — с 2027/28)",
+      "subject": "spiritual-moral-culture-russia",
       "gradeRange": [
         5,
-        9
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_istoriya_5-9.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 228,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-history-5-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-technology-5-9",
-      "title": "Труд (технология), 5–9 классы",
-      "subject": "technology",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 180,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-technology-5-9.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-ooo-social-studies-2026",
-      "title": "Обществознание, основное общее образование",
-      "subject": "social-studies",
-      "gradeRange": [
-        5,
-        9
+        7
       ],
       "level": "Федеральная рабочая программа",
       "year": 2026,
-      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 40,
-      "provenance": "corpus",
+      "pages": 44,
+      "provenance": "official-source-link",
       "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-social-studies-2026.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+      "storedInRelease": false,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; do not mirror or store a local copy until redistribution rights are independently confirmed",
+      "mirrorAllowed": false,
+      "implementationSchedule": [
+        {
+          "schoolYear": "2026/2027",
+          "startYear": 2026,
+          "grades": [
+            5
+          ]
+        },
+        {
+          "schoolYear": "2027/2028",
+          "startYear": 2027,
+          "grades": [
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "implementationScheduleSource": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "downloadStatus": "LINK_ONLY_NOT_MIRRORED_PENDING_RIGHTS_REVIEW"
     },
     {
       "id": "frp-ooo-english-5-9",
@@ -575,41 +481,194 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-spanish-second-5-9",
-      "title": "Второй иностранный (испанский) язык, 5–9 классы",
-      "subject": "spanish-language",
+      "id": "frp-ooo-geography-5-9",
+      "title": "География, 5–9 классы",
+      "subject": "geography",
       "gradeRange": [
         5,
         9
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_geografiya-5-9.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 152,
+      "pages": 181,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-spanish-second-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-geography-5-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-ooo-chinese-second-5-9",
-      "title": "Второй иностранный (китайский) язык, 5–9 классы",
-      "subject": "chinese-language",
+      "id": "frp-ooo-history-5-9",
+      "title": "История, 5–9 классы",
+      "subject": "history",
       "gradeRange": [
         5,
         9
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp-kit-yaz_vi_5-9_.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_istoriya_5-9.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 169,
+      "pages": 228,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-chinese-second-5-9.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-history-5-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-informatics-advanced-7-9",
+      "title": "Информатика, углублённый уровень, 7–9 классы",
+      "subject": "informatics",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 51,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-informatics-advanced-7-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-informatics-basic-7-9",
+      "title": "Информатика, базовый уровень, 7–9 классы",
+      "subject": "informatics",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_informatika-7-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 66,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-informatics-basic-7-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-literature-5-9",
+      "title": "Литература, 5–9 классы",
+      "subject": "literature",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_literatura_5-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 193,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-literature-5-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-math-advanced-5-9",
+      "title": "Математика, углублённый уровень, 5–9 классы",
+      "subject": "mathematics",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 101,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-math-advanced-5-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-math-basic-5-9",
+      "title": "Математика, базовый уровень, 5–9 классы",
+      "subject": "mathematics",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 143,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-math-basic-5-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-obzr-8-9",
+      "title": "Основы безопасности и защиты Родины, 8–9 классы",
+      "subject": "fundamentals-security-defense-homeland",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "level": "Основное общее образование",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+      "sourceLandingPage": "https://edsoo.ru/vopros-otvet-obzr/",
+      "provenance": "official-source-link",
+      "contentStoredLocally": false,
+      "storedInRelease": false,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; mirroring rights not independently confirmed",
+      "mirrorAllowed": false,
+      "downloadStatus": "LINK_ONLY_PENDING_RIGHTS_AND_ORDER_576_REVIEW",
+      "curriculumStatus": "OFFICIAL_REFERENCE; reconciliation with order 576 pending"
+    },
+    {
+      "id": "frp-ooo-physics-advanced-7-9",
+      "title": "Физика, углублённый уровень, 7–9 классы",
+      "subject": "physics",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika_7-9_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 72,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-physics-advanced-7-9.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-ooo-physics-basic-7-9",
+      "title": "Физика, базовый уровень, 7–9 классы",
+      "subject": "physics",
+      "gradeRange": [
+        7,
+        9
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_fizika-7-9_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 97,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-physics-basic-7-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -632,174 +691,79 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-math-basic-10-11",
-      "title": "Математика, базовый уровень, 10–11 классы",
-      "subject": "mathematics",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 89,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-math-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-math-advanced-10-11",
-      "title": "Математика, углублённый уровень, 10–11 классы",
-      "subject": "mathematics",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 89,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-math-advanced-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-russian-10-11",
-      "title": "Русский язык, 10–11 классы",
+      "id": "frp-ooo-russian-5-9",
+      "title": "Русский язык, 5–9 классы",
       "subject": "russian-language",
       "gradeRange": [
-        10,
-        11
+        5,
+        9
       ],
       "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_russkij-yazyk_10_11.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/09/01_frp_russkij-yazyk_5-9-klassy_itog-na-sajt_1-2.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 92,
+      "pages": 252,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-russian-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-russian-5-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-literature-basic-10-11",
-      "title": "Литература, базовый уровень, 10–11 классы",
-      "subject": "literature",
+      "id": "frp-ooo-social-studies-2026",
+      "title": "Обществознание, основное общее образование",
+      "subject": "social-studies",
       "gradeRange": [
-        10,
-        11
+        5,
+        9
       ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_ooo_baza_itog-1.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 127,
+      "pages": 40,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-literature-basic-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-social-studies-2026.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-informatics-basic-10-11",
-      "title": "Информатика, базовый уровень, 10–11 классы",
-      "subject": "informatics",
+      "id": "frp-ooo-spanish-second-5-9",
+      "title": "Второй иностранный (испанский) язык, 5–9 классы",
+      "subject": "spanish-language",
       "gradeRange": [
-        10,
-        11
+        5,
+        9
       ],
-      "level": "Базовый уровень",
+      "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/02/frp_ispanskij_yazyk_vi_5_9_.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 46,
+      "pages": 152,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-informatics-basic-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-spanish-second-5-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-physics-basic-10-11",
-      "title": "Физика, базовый уровень, 10–11 классы",
-      "subject": "physics",
+      "id": "frp-ooo-technology-5-9",
+      "title": "Труд (технология), 5–9 классы",
+      "subject": "technology",
       "gradeRange": [
-        10,
-        11
+        5,
+        9
       ],
-      "level": "Базовый уровень",
+      "level": "Федеральная рабочая программа",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/08/20_frp_trud_tehnologiya_5_9_klassy_itog_na_sajt.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 78,
+      "pages": 180,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-physics-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-chemistry-basic-10-11",
-      "title": "Химия, базовый уровень, 10–11 классы",
-      "subject": "chemistry",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 58,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-chemistry-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-chemistry-advanced-10-11",
-      "title": "Химия, углублённый уровень, 10–11 классы",
-      "subject": "chemistry",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 72,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-chemistry-advanced-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-biology-basic-10-11",
-      "title": "Биология, базовый уровень, 10–11 классы",
-      "subject": "biology",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 88,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-biology-basic-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-ooo-technology-5-9.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -822,231 +786,60 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-geography-basic-10-11",
-      "title": "География, базовый уровень, 10–11 классы",
-      "subject": "geography",
+      "id": "frp-soo-biology-basic-10-11",
+      "title": "Биология, базовый уровень, 10–11 классы",
+      "subject": "biology",
       "gradeRange": [
         10,
         11
       ],
       "level": "Базовый уровень",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_baz.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_biologiya_10_11_baz.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 85,
+      "pages": 88,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-geography-basic-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-biology-basic-10-11.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-geography-advanced-10-11",
-      "title": "География, углублённый уровень, 10–11 классы",
-      "subject": "geography",
+      "id": "frp-soo-chemistry-advanced-10-11",
+      "title": "Химия, углублённый уровень, 10–11 классы",
+      "subject": "chemistry",
       "gradeRange": [
         10,
         11
       ],
       "level": "Углублённый уровень",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_ugl.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_ugl.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 283,
+      "pages": 72,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-geography-advanced-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-chemistry-advanced-10-11.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
-      "id": "frp-soo-history-basic-10-11",
-      "title": "История, базовый уровень, 10–11 классы",
-      "subject": "history",
+      "id": "frp-soo-chemistry-basic-10-11",
+      "title": "Химия, базовый уровень, 10–11 классы",
+      "subject": "chemistry",
       "gradeRange": [
         10,
         11
       ],
       "level": "Базовый уровень",
       "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_baza.pdf",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_himiya_10_11_baz.pdf",
       "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 150,
+      "pages": 58,
       "provenance": "corpus",
       "contentStoredLocally": false,
       "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-history-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-history-advanced-10-11",
-      "title": "История, углублённый уровень, 10–11 классы",
-      "subject": "history",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 181,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-history-advanced-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-social-studies-10-11",
-      "title": "Обществознание, среднее общее образование",
-      "subject": "social-studies",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2026,
-      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 67,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-social-studies-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-pe-10-11",
-      "title": "Физическая культура, 10–11 классы",
-      "subject": "physical-education",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizkultura_10_11.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 236,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-pe-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-english-basic-10-11",
-      "title": "Иностранный (английский) язык, базовый уровень, 10–11 классы",
-      "subject": "english-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_angl-yaz_10-11_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 157,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-english-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-german-basic-10-11",
-      "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
-      "subject": "german-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Базовый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 124,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-basic-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-german-advanced-10-11",
-      "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
-      "subject": "german-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Углублённый уровень",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 117,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-advanced-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-french-second-10-11",
-      "title": "Второй иностранный (французский) язык, 10–11 классы",
-      "subject": "french-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 84,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-french-second-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-english-second-10-11",
-      "title": "Английский язык, второй иностранный, 10–11 классы",
-      "subject": "english-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 115,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-english-second-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-soo-german-second-10-11",
-      "title": "Немецкий язык, второй иностранный, 10–11 классы",
-      "subject": "german-language",
-      "gradeRange": [
-        10,
-        11
-      ],
-      "level": "Федеральная рабочая программа",
-      "year": 2025,
-      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": 80,
-      "provenance": "corpus",
-      "contentStoredLocally": false,
-      "storedInRelease": true,
-      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-second-10-11.pdf",
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-chemistry-basic-10-11.pdf",
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
@@ -1069,6 +862,368 @@
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     },
     {
+      "id": "frp-soo-english-basic-10-11",
+      "title": "Иностранный (английский) язык, базовый уровень, 10–11 классы",
+      "subject": "english-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_angl-yaz_10-11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 157,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-english-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-english-second-10-11",
+      "title": "Английский язык, второй иностранный, 10–11 классы",
+      "subject": "english-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_anglyaz_10-11_vi.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 115,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-english-second-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-french-second-10-11",
+      "title": "Второй иностранный (французский) язык, 10–11 классы",
+      "subject": "french-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_vi_franczuzskij_10-11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 84,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-french-second-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-geography-advanced-10-11",
+      "title": "География, углублённый уровень, 10–11 классы",
+      "subject": "geography",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 283,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-geography-advanced-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-geography-basic-10-11",
+      "title": "География, базовый уровень, 10–11 классы",
+      "subject": "geography",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_geografiya_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 85,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-geography-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-german-advanced-10-11",
+      "title": "Иностранный (немецкий) язык, углублённый уровень, 10–11 классы",
+      "subject": "german-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 117,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-advanced-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-german-basic-10-11",
+      "title": "Иностранный (немецкий) язык, базовый уровень, 10–11 классы",
+      "subject": "german-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nemyaz_10-11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 124,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-german-second-10-11",
+      "title": "Немецкий язык, второй иностранный, 10–11 классы",
+      "subject": "german-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_nem-yaz_10-11_vi.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 80,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-german-second-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-history-advanced-10-11",
+      "title": "История, углублённый уровень, 10–11 классы",
+      "subject": "history",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 181,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-history-advanced-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-history-basic-10-11",
+      "title": "История, базовый уровень, 10–11 классы",
+      "subject": "history",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_istoriya_10_11_baza.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 150,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-history-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-informatics-basic-10-11",
+      "title": "Информатика, базовый уровень, 10–11 классы",
+      "subject": "informatics",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_informatika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 46,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-informatics-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-literature-basic-10-11",
+      "title": "Литература, базовый уровень, 10–11 классы",
+      "subject": "literature",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_literatura_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 127,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-literature-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-math-advanced-10-11",
+      "title": "Математика, углублённый уровень, 10–11 классы",
+      "subject": "mathematics",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Углублённый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 89,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-math-advanced-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-math-basic-10-11",
+      "title": "Математика, базовый уровень, 10–11 классы",
+      "subject": "mathematics",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 89,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-math-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-obzr-10-11",
+      "title": "Основы безопасности и защиты Родины, 10–11 классы",
+      "subject": "fundamentals-security-defense-homeland",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Среднее общее образование",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/vopros-otvet-obzr/",
+      "provenance": "official-source-link",
+      "contentStoredLocally": false,
+      "storedInRelease": false,
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; mirroring rights not independently confirmed",
+      "mirrorAllowed": false,
+      "downloadStatus": "LINK_ONLY_PENDING_RIGHTS_AND_ORDER_576_REVIEW",
+      "curriculumStatus": "OFFICIAL_REFERENCE; reconciliation with order 576 pending"
+    },
+    {
+      "id": "frp-soo-pe-10-11",
+      "title": "Физическая культура, 10–11 классы",
+      "subject": "physical-education",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizkultura_10_11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 236,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-pe-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-physics-basic-10-11",
+      "title": "Физика, базовый уровень, 10–11 классы",
+      "subject": "physics",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Базовый уровень",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 78,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-physics-basic-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-russian-10-11",
+      "title": "Русский язык, 10–11 классы",
+      "subject": "russian-language",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2025,
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_russkij-yazyk_10_11.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 92,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-russian-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
+      "id": "frp-soo-social-studies-10-11",
+      "title": "Обществознание, среднее общее образование",
+      "subject": "social-studies",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "level": "Федеральная рабочая программа",
+      "year": 2026,
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_obshhestvoznanie_soo_itog.pdf",
+      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
+      "pages": 67,
+      "provenance": "corpus",
+      "contentStoredLocally": false,
+      "storedInRelease": true,
+      "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-social-studies-10-11.pdf",
+      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
+    },
+    {
       "id": "frp-soo-spanish-second-10-11",
       "title": "Испанский язык, второй иностранный, 10–11 классы",
       "subject": "spanish-language",
@@ -1085,82 +1240,6 @@
       "contentStoredLocally": false,
       "storedInRelease": true,
       "releaseUrl": "https://github.com/paulafanasyev/svetlana_tutor/releases/download/school-materials-2026-10/frp-frp-soo-spanish-second-10-11.pdf",
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-all-levels-index",
-      "title": "Каталог федеральных рабочих программ всех уровней образования",
-      "subject": "all-school-subjects",
-      "gradeRange": [
-        1,
-        11
-      ],
-      "level": "Официальный каталог",
-      "year": 2026,
-      "url": "https://edsoo.ru/rabochie-programmy/",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": null,
-      "provenance": "catalog",
-      "contentStoredLocally": false,
-      "storedInRelease": false,
-      "releaseUrl": null,
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "frp-extra-curricular-index",
-      "title": "Рабочие программы курсов внеурочной деятельности",
-      "subject": "all-school-subjects",
-      "gradeRange": [
-        1,
-        11
-      ],
-      "level": "Официальный каталог",
-      "year": 2026,
-      "url": "https://edsoo.ru/rabochie-programmy-vd/",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": null,
-      "provenance": "catalog",
-      "contentStoredLocally": false,
-      "storedInRelease": false,
-      "releaseUrl": null,
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "edsoo-methodical-index",
-      "title": "Методические документы, банки заданий и материалы к урокам",
-      "subject": "all-school-subjects",
-      "gradeRange": [
-        1,
-        11
-      ],
-      "level": "Официальный каталог",
-      "year": 2026,
-      "url": "https://edsoo.ru/metodicheskie-dokumenty/",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": null,
-      "provenance": "catalog",
-      "contentStoredLocally": false,
-      "storedInRelease": false,
-      "releaseUrl": null,
-      "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
-    },
-    {
-      "id": "edsoo-history-assessment-bank",
-      "title": "Банк заданий для текущего оценивания по истории, 5–9 классы",
-      "subject": "history",
-      "gradeRange": [
-        5,
-        9
-      ],
-      "level": "Банк заданий",
-      "year": 2024,
-      "url": "https://edsoo.ru/md-istoriya/",
-      "sourceLandingPage": "https://edsoo.ru/rabochie-programmy/",
-      "pages": null,
-      "provenance": "catalog",
-      "contentStoredLocally": false,
-      "storedInRelease": false,
-      "releaseUrl": null,
       "rightsStatus": "LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror"
     }
   ]

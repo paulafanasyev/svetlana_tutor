@@ -1,12 +1,12 @@
 {
   "sourcePage": "https://edsoo.ru/rabochie-programmy-vd/",
-  "checkedAt": "2026-10-22",
+  "checkedAt": "2026-10-29",
   "provenance": "corpus",
-  "linksFound": 53,
-  "verified": 53,
+  "linksFound": 54,
+  "verified": 54,
   "failed": 0,
   "duplicatesBySha256": 0,
-  "staleItemsRemoved": 0,
+  "staleItemsRemoved": 1,
   "files": [
     {
       "id": "edsoo-vd-ed16bf7aafc5",
@@ -177,6 +177,30 @@
       "error": null
     },
     {
+      "id": "edsoo-vd-8fbb460b9d09",
+      "title": "pvd matematika uglub posle sinhronizaczii 10.07 1",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
+      "sourceFileName": "pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
+      "releaseAsset": "vd-8fbb460b9d09.pdf",
+      "sha256": "e95be258d6674fbb76ab0f2e6e04d5777e17f57aa2ff4fe83e9bbc7e6fb6f6f0",
+      "fileSizeBytes": 540676,
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "duplicateOf": null,
+      "error": null
+    },
+    {
+      "id": "edsoo-vd-747f0472d47f",
+      "title": "rp iiiib ooo",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/10/rp_iiiib_ooo.pdf",
+      "sourceFileName": "rp_iiiib_ooo.pdf",
+      "releaseAsset": "vd-747f0472d47f.pdf",
+      "sha256": "1e8dadae4405cda4c098a30205fd631b3b7982c4dd9c9df10e3900d43423a703",
+      "fileSizeBytes": 519536,
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "duplicateOf": null,
+      "error": null
+    },
+    {
       "id": "edsoo-vd-af548e100127",
       "title": "matematika magiya i strojnost chisel",
       "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/08/matematika-magiya-i-strojnost-chisel.pdf",
@@ -220,30 +244,6 @@
       "releaseAsset": "vd-1eab39ae1656.pdf",
       "sha256": "98bfaa5669f44acfde9e448b2f116a3d46f73a91bd547431cbf2dd9608cfa620",
       "fileSizeBytes": 413052,
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "duplicateOf": null,
-      "error": null
-    },
-    {
-      "id": "edsoo-vd-8fbb460b9d09",
-      "title": "pvd matematika uglub posle sinhronizaczii 10.07 1",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/09/pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
-      "sourceFileName": "pvd_matematika__uglub_posle-sinhronizaczii-10.07-1.pdf",
-      "releaseAsset": "vd-8fbb460b9d09.pdf",
-      "sha256": "e95be258d6674fbb76ab0f2e6e04d5777e17f57aa2ff4fe83e9bbc7e6fb6f6f0",
-      "fileSizeBytes": 540676,
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "duplicateOf": null,
-      "error": null
-    },
-    {
-      "id": "edsoo-vd-82aaa027b021",
-      "title": "pvd osnovy inf kultury shkolnikov 2025 1",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
-      "sourceFileName": "pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
-      "releaseAsset": "vd-82aaa027b021.pdf",
-      "sha256": "3513f522f6e88f4433e6e1cee10687db3c255da4bdbdc47e1440284cf3b93ff3",
-      "fileSizeBytes": 697602,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -297,13 +297,13 @@
       "error": null
     },
     {
-      "id": "edsoo-vd-f1a58e8d3c18",
-      "title": "pvd moya semya ooo itog 12092024",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2024/09/pvd_moya-semya_ooo_itog_12092024.pdf",
-      "sourceFileName": "pvd_moya-semya_ooo_itog_12092024.pdf",
-      "releaseAsset": "vd-f1a58e8d3c18.pdf",
-      "sha256": "4967607325a1df6783f490f938938f609f14eff3912f001f0a0f4b62f1553411",
-      "fileSizeBytes": 541532,
+      "id": "edsoo-vd-82aaa027b021",
+      "title": "pvd osnovy inf kultury shkolnikov 2025 1",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/07/pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
+      "sourceFileName": "pvd_osnovy_inf_kultury_shkolnikov_2025-1.pdf",
+      "releaseAsset": "vd-82aaa027b021.pdf",
+      "sha256": "3513f522f6e88f4433e6e1cee10687db3c255da4bdbdc47e1440284cf3b93ff3",
+      "fileSizeBytes": 697602,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -316,6 +316,18 @@
       "releaseAsset": "vd-bca2160f0ab8.pdf",
       "sha256": "8c381c107b10ca5cd8865e52da149b4ed6371748632592598f5b9c2c901df82b",
       "fileSizeBytes": 447497,
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "duplicateOf": null,
+      "error": null
+    },
+    {
+      "id": "edsoo-vd-f1a58e8d3c18",
+      "title": "pvd moya semya ooo itog 12092024",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2024/09/pvd_moya-semya_ooo_itog_12092024.pdf",
+      "sourceFileName": "pvd_moya-semya_ooo_itog_12092024.pdf",
+      "releaseAsset": "vd-f1a58e8d3c18.pdf",
+      "sha256": "4967607325a1df6783f490f938938f609f14eff3912f001f0a0f4b62f1553411",
+      "fileSizeBytes": 541532,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -364,6 +376,18 @@
       "releaseAsset": "vd-1c862761b92a.pdf",
       "sha256": "abdf36ebd3a7c785878871c586e453458105921e78be478594af20b2b2288968",
       "fileSizeBytes": 750473,
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "duplicateOf": null,
+      "error": null
+    },
+    {
+      "id": "edsoo-vd-b7568b636634",
+      "title": "ВУД ПРП курса внеурочной деятельности Биология 5 9 класс. ПИД основное общее образование Новая",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
+      "sourceFileName": "ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
+      "releaseAsset": "vd-b7568b636634.pdf",
+      "sha256": "e25524bc488d4950bd9621463c54568db9c85b0319a862fc5c14d153a8dc73d2",
+      "fileSizeBytes": 805419,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -441,18 +465,6 @@
       "error": null
     },
     {
-      "id": "edsoo-vd-b7568b636634",
-      "title": "ВУД ПРП курса внеурочной деятельности Биология 5 9 класс. ПИД основное общее образование Новая",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
-      "sourceFileName": "ВУД_ПРП-курса-внеурочной-деятельности-Биология-5-9-класс.-ПИД-основное-общее-образование_Новая.pdf",
-      "releaseAsset": "vd-b7568b636634.pdf",
-      "sha256": "e25524bc488d4950bd9621463c54568db9c85b0319a862fc5c14d153a8dc73d2",
-      "fileSizeBytes": 805419,
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "duplicateOf": null,
-      "error": null
-    },
-    {
       "id": "edsoo-vd-22fe9630273b",
       "title": "ВУД ПРП курса внеурочной деятельности Экологичный образ жизни основное общее образование Новая",
       "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/08/ВУД_ПРП-курса-внеурочной-деятельности-Экологичный-образ-жизни-основное-общее-образование_Новая.pdf",
@@ -460,6 +472,18 @@
       "releaseAsset": "vd-22fe9630273b.pdf",
       "sha256": "edd9952e41df6d6f35afffa48039ae9908aac2f55ec09290c72b6275d38df304",
       "fileSizeBytes": 749130,
+      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
+      "duplicateOf": null,
+      "error": null
+    },
+    {
+      "id": "edsoo-vd-6223c576f7bb",
+      "title": "rp iiiib soo",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2026/10/rp_iiiib_soo.pdf",
+      "sourceFileName": "rp_iiiib_soo.pdf",
+      "releaseAsset": "vd-6223c576f7bb.pdf",
+      "sha256": "d1ff04d58541108cf71b61f7230ca16dcbd86f931f7779233537d2f00674ab7e",
+      "fileSizeBytes": 417647,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -520,18 +544,6 @@
       "releaseAsset": "vd-cd5ddc3b71de.pdf",
       "sha256": "348410aed853dbeb4dcd0b2ce342c6ab04943c6d8011c43d7af72fd43c24c8fb",
       "fileSizeBytes": 405669,
-      "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
-      "duplicateOf": null,
-      "error": null
-    },
-    {
-      "id": "edsoo-vd-84e2272b2982",
-      "title": "pvd zhurnalistika 28112023",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_zhurnalistika_28112023.pdf",
-      "sourceFileName": "pvd_zhurnalistika_28112023.pdf",
-      "releaseAsset": "vd-84e2272b2982.pdf",
-      "sha256": "11d833caf1171dc76a9e0889b965b45d6eb45d18e2803e22ac8f91a2d3fdda6c",
-      "fileSizeBytes": 1019764,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null
@@ -633,13 +645,13 @@
       "error": null
     },
     {
-      "id": "edsoo-vd-130855302330",
-      "title": "pvd agrobio soo 28112023",
-      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_agrobio_soo_28112023.pdf",
-      "sourceFileName": "pvd_agrobio_soo_28112023.pdf",
-      "releaseAsset": "vd-130855302330.pdf",
-      "sha256": "0c9076021c3f81e1d60c355fee5fc078c759beeef4ef1ae86556a55563d90383",
-      "fileSizeBytes": 476508,
+      "id": "edsoo-vd-84e2272b2982",
+      "title": "pvd zhurnalistika 28112023",
+      "sourceUrl": "https://edsoo.ru/wp-content/uploads/2023/11/pvd_zhurnalistika_28112023.pdf",
+      "sourceFileName": "pvd_zhurnalistika_28112023.pdf",
+      "releaseAsset": "vd-84e2272b2982.pdf",
+      "sha256": "11d833caf1171dc76a9e0889b965b45d6eb45d18e2803e22ac8f91a2d3fdda6c",
+      "fileSizeBytes": 1019764,
       "status": "PDF_SIGNATURE_AND_HASH_VERIFIED",
       "duplicateOf": null,
       "error": null

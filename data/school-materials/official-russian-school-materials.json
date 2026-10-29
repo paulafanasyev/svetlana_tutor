@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "catalogName": "official-russian-school-materials",
-  "lastVerified": "2026-10-22",
+  "lastVerified": "2026-10-29",
   "purpose": "Каталог источников, библиографических записей и ссылок на учебные материалы для российских школ, 1–11 классы.",
   "gradeRange": [
     1,
@@ -70,7 +70,9 @@
     "functional-literacy",
     "exam-preparation",
     "regional-and-native-languages",
-    "all-school-subjects"
+    "all-school-subjects",
+    "religious-cultures-ethics",
+    "spiritual-moral-culture-russia"
   ],
   "sources": [
     {
@@ -169,7 +171,9 @@
         "music",
         "visual-arts",
         "physical-education",
-        "functional-literacy"
+        "functional-literacy",
+        "religious-cultures-ethics",
+        "spiritual-moral-culture-russia"
       ],
       "verifiedExample": {
         "title": "Интерактивные задания по русскому языку для 5–6 классов",
@@ -742,6 +746,56 @@
       ],
       "storesFullTextLocally": false,
       "rightsNote": "Ссылка на официальный список произведений. Она не разрешает копировать современные произведения или полные учебники; права и условия переиспользования проверять для каждого текста."
+    },
+    {
+      "id": "edsoo-dnkr-federal-program-2026",
+      "name": "Федеральная рабочая программа «Духовно-нравственная культура России», 5–7 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2026/09/frp-_dnk_ooo_.pdf",
+      "gradeRange": [
+        5,
+        7
+      ],
+      "subjects": [
+        "spiritual-moral-culture-russia"
+      ],
+      "storesFullTextLocally": false,
+      "rightsNote": "Официальная ссылка на программу; новая PDF-копия не хранится и не зеркалируется, пока права на распространение не подтверждены."
+    },
+    {
+      "id": "edsoo-obzr-8-9-2025",
+      "name": "Основы безопасности и защиты Родины, 8–9 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_obzr-8-9.pdf",
+      "kind": [
+        "federal-working-program"
+      ],
+      "access": "public-source-link-only",
+      "gradeRange": [
+        8,
+        9
+      ],
+      "subjects": [
+        "fundamentals-security-defense-homeland"
+      ],
+      "storesFullTextbooksLocally": false,
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING; redistribution rights not confirmed"
+    },
+    {
+      "id": "edsoo-obzr-10-11-2025",
+      "name": "Основы безопасности и защиты Родины, 10–11 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_obzr_10_11.pdf",
+      "kind": [
+        "federal-working-program"
+      ],
+      "access": "public-source-link-only",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "subjects": [
+        "fundamentals-security-defense-homeland"
+      ],
+      "storesFullTextbooksLocally": false,
+      "reviewStatus": "ORDER_576_CROSSWALK_PENDING; redistribution rights not confirmed"
     }
   ],
   "integrationPolicy": {
@@ -793,11 +847,11 @@
       "description": "Оригинальные задания с ответами, созданные для репозитория; всего 153, лицензия CC BY 4.0."
     }
   ],
-  "workingProgramCount": 61,
-  "directWorkingProgramPdfCount": 55,
+  "workingProgramCount": 64,
+  "directWorkingProgramPdfCount": 58,
   "originalExerciseCount": 153,
-  "currentCoverageNote": "Сверка 2026-10-22: матрица 407 строк (37 предметных идентификаторов × 11 классов); 241 сочетаний имеют индексные записи; 166 не имеют точной записи в индексах. Пустая ячейка не доказывает отсутствие материала: сначала необходимо установить применимость предмета к классу и сопоставить официальные источники. Ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
-  "lastFederalProgramDownloadAttemptAt": "2026-10-22T12:32:32.423634+00:00",
+  "currentCoverageNote": "Сверка 2026-10-29: матрица 429 строк (39 предметных идентификаторов × 11 классов); 261 сочетаний имеют индексные записи; 168 не имеют точной записи в индексах. Пустая ячейка не доказывает отсутствие материала: сначала необходимо установить применимость предмета к классу и сопоставить официальные источники. Ни одна строка не доказана полностью. Полные тексты актуальных издательских учебников не собраны; полнота остаётся NOT PROVEN. 934 OCR-библиографических записей исключены из подтверждённого подсчёта до ручной перепроверки.",
+  "lastFederalProgramDownloadAttemptAt": "2026-10-29T14:33:20.018827+00:00",
   "verifiedLocalFederalWorkingProgramPdfCount": 55,
   "failedFederalWorkingProgramPdfCount": 0,
   "extracurricularProgramsSourceUrl": "https://edsoo.ru/rabochie-programmy-vd/",
@@ -819,10 +873,10 @@
   "sha": "ee0e8807aba014b81856042810ed8b3f8b8939e6",
   "extracurricularSyncEvidence": {
     "status": "VERIFIED_IN_RELEASE",
-    "linksFound": 53,
-    "verified": 53,
+    "linksFound": 54,
+    "verified": 54,
     "failed": 0,
-    "releaseAssetChecks": 53,
+    "releaseAssetChecks": 54,
     "manifestPath": "data/school-materials/manifests/federal-extracurricular-programs.json"
   }
 }

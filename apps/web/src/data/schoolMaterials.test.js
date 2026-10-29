@@ -20,6 +20,9 @@ const items = read('official-russian-school-material-items.json').items;
 const lessonIndex = read('edsoo-official-lesson-index.json');
 const lessons = lessonIndex.items;
 const programs = read('federal-working-programs.json').programs;
+const extracurricularCatalog = read('official-extracurricular-programs.json');
+const componentCrosswalk = read('subject-component-crosswalk.json');
+const appCoverage = JSON.parse(readFileSync(new URL('./schoolCurriculumCoverage.json', import.meta.url), 'utf8'));
 const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
 
 test('все JSON читаются, id в общем каталоге уникальны', () => {
@@ -59,6 +62,26 @@ test('имена PDF внеурочки строятся из id, без бит�
   assert.ok(vd, 'манифест внеурочки');
   for (const f of vd.files.filter((x) => x.releaseAsset)) assert.match(f.releaseAsset, /^vd-[0-9a-f]{12}\.pdf$/);
   assert.equal(vd.verified, vd.files.filter((x) => x.releaseAsset).length);
+});
+
+test('активный каталог внеурочных программ совпадает с текущими ссылками EDSOO и манифестом', () => {
+  const vd = manifests.find((m) => m.sourcePage?.includes('rabochie-programmy-vd'));
+  assert.ok(vd, 'манифест внеурочки');
+  assert.equal(extracurricularCatalog.count, extracurricularCatalog.records.length);
+  assert.ok(unique(extracurricularCatalog.records.map((x) => x.id)));
+  const normalizeUrl = (url) => decodeURIComponent(String(url || '').split('?')[0]).replace(/\/+$/g, '').toLowerCase();
+  const catalogUrls = extracurricularCatalog.records.map((x) => normalizeUrl(x.url)).sort();
+  const manifestUrls = vd.files.map((x) => normalizeUrl(x.sourceUrl)).sort();
+  assert.deepEqual(catalogUrls, manifestUrls, 'активный каталог должен отражать все текущие ссылки из манифеста');
+  assert.equal(extracurricularCatalog.records.length, vd.linksFound);
+  const aiOoo = extracurricularCatalog.records.find((x) => x.url.endsWith('/rp_iiiib_ooo.pdf'));
+  const aiSoo = extracurricularCatalog.records.find((x) => x.url.endsWith('/rp_iiiib_soo.pdf'));
+  assert.deepEqual(aiOoo.gradeRange, [5, 9]);
+  assert.deepEqual(aiSoo.gradeRange, [10, 11]);
+  assert.equal(aiOoo.contentStoredLocally, false);
+  assert.equal(aiSoo.contentStoredLocally, false);
+  assert.ok(extracurricularCatalog.archivedRecords.some((x) => x.id === 'edsoo-vd-053'
+    && x.archiveReason.includes('Not present on the current official EDSOO')));
 });
 
 test('ФРП с ЕДСОО помечены как корпус, не как сверенные с ФОП', () => {
@@ -132,13 +155,21 @@ test('матрица сверки охватывает все предметы �
     assert.ok(Number.isInteger(row.indexedResourceCount) && row.indexedResourceCount >= 0, row.subject);
     assert.ok(Number.isInteger(row.locallyStoredOriginalTaskCount) && row.locallyStoredOriginalTaskCount >= 0, row.subject);
     assert.equal(row.completeCoverage, 'NOT_PROVEN', String(row.grade) + '/' + row.subject);
-    assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', String(row.grade) + '/' + row.subject);
+    const key = String(row.grade) + '/' + row.subject;
+    if (row.curriculumApplicability === 'LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN') {
+      assert.equal(row.status, 'LEGACY_ARCHIVAL_ONLY', key);
+    } else if (row.curriculumApplicability === 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE' && row.indexedResourceCount === 0) {
+      assert.equal(row.status, 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE', key);
+    } else {
+      assert.equal(row.status, row.indexedResourceCount > 0 ? 'LINKS_AVAILABLE' : 'NO_EXACT_GRADE_SUBJECT_RECORD', key);
+    }
   }
   const missingRows = coverage.rows.filter((row) => row.indexedResourceCount === 0);
   assert.equal(coverage.summary.rowsWithoutExactGradeSubjectRecord, missingRows.length);
   assert.equal(coverage.summary.subjectsWithUnindexedGradePairs, coverage.summary.unindexedGradePairsBySubject.length);
-  assert.equal(coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0), missingRows.length);
-  const reconciliation = readFileSync(new URL('RECONCILIATION-2026-10-22.md', DIR), 'utf8');
+  assert.equal(coverage.summary.rowsWithoutRecordsRequiringReview, coverage.summary.unindexedGradePairsBySubject.reduce((sum, group) => sum + group.count, 0));
+  assert.ok(coverage.summary.rowsWithoutRecordsRequiringReview <= missingRows.length);
+  const reconciliation = readFileSync(new URL('RECONCILIATION-' + coverage.checkedAt + '.md', DIR), 'utf8');
   assert.ok(reconciliation.includes('## Сочетания без точной индексной записи'));
   for (const group of coverage.summary.unindexedGradePairsBySubject) {
     const line = '| ' + group.subjectLabel + ' (`' + group.subject + '`) | ' + group.gradesWithoutExactRecord.join(', ') + ' | ' + group.count + ' |';
@@ -359,4 +390,69 @@ test('обычные сборки используют корпус при ог�
   assert.equal(sourceFailureMode(transient, 'push'), 'fallback-with-warning');
   assert.equal(sourceFailureMode(transient, 'schedule'), 'fail-live-source-check');
   assert.equal(sourceFailureMode(['163.9: разделы не найдены'], 'schedule'), 'fail-build');
+});
+
+test('math component crosswalk cites official FRPs and does not claim curriculum completeness', () => {
+  assert.equal(componentCrosswalk.checkedAt, '2026-10-29');
+  assert.equal(componentCrosswalk.mappings.length, 4);
+  assert.equal(new Set(componentCrosswalk.mappings.map((item) => item.id)).size, 4);
+  const currentDnkr = programs.find((item) => item.id === 'frp-ooo-dnkr-5-7');
+  assert.ok(currentDnkr, 'current DNKR source must be indexed');
+  assert.equal(currentDnkr.subject, 'spiritual-moral-culture-russia');
+  assert.equal(currentDnkr.mirrorAllowed, false);
+  assert.equal(currentDnkr.contentStoredLocally, false);
+  assert.deepEqual(currentDnkr.implementationSchedule, [
+    { schoolYear: '2026/2027', startYear: 2026, grades: [5] },
+    { schoolYear: '2027/2028', startYear: 2027, grades: [5, 6, 7] },
+  ]);
+  assert.equal(programs.find((item) => item.id === 'frp-noo-orkse-4').subject, 'religious-cultures-ethics');
+
+  const obzr8 = programs.find((item) => item.id === 'frp-ooo-obzr-8-9');
+  const obzr10 = programs.find((item) => item.id === 'frp-soo-obzr-10-11');
+  assert.ok(obzr8 && obzr10, 'official OBZR programmes must be indexed');
+  assert.deepEqual(obzr8.gradeRange, [8, 9]);
+  assert.deepEqual(obzr10.gradeRange, [10, 11]);
+  for (const program of [obzr8, obzr10]) {
+    assert.equal(program.subject, 'fundamentals-security-defense-homeland');
+    assert.equal(program.mirrorAllowed, false);
+    assert.equal(program.contentStoredLocally, false);
+    assert.match(program.curriculumStatus, /order 576 pending/i);
+  }
+
+  const ids = new Set(programs.map((program) => program.id));
+  const sourceIds = new Set(componentCrosswalk.sources.map((source) => source.id));
+  assert.equal(sourceIds.size, componentCrosswalk.sources.length);
+  for (const source of componentCrosswalk.sources) {
+    assert.ok(source.url.startsWith('https://edsoo.ru/'), source.id);
+    const program = programs.find((item) => item.id === source.id);
+    assert.ok(program, 'crosswalk source must exist in the official catalogue: ' + source.id);
+    assert.equal(source.url, program.url, source.id);
+    assert.deepEqual(source.gradeRange, program.gradeRange, source.id);
+  }
+  for (const mapping of componentCrosswalk.mappings) {
+    assert.ok(ids.has(mapping.sourceIds[0]));
+    assert.ok(mapping.sourceIds.every((id) => ids.has(id)));
+    assert.ok(['algebra', 'geometry', 'probability-statistics', 'astronomy'].includes(mapping.targetSubject));
+    assert.equal(mapping.sourceProgramSubject, mapping.targetSubject === 'astronomy' ? 'physics' : 'mathematics');
+    assert.ok(mapping.gradeRelationships.length > 0);
+  }
+  assert.ok(appCoverage.columns.includes('officialProgramRelationship'));
+  const row = (grade, subject) => appCoverage.rows.find((item) => item[0] === grade && item[1] === subject);
+  assert.equal(row(3, 'geometry')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(8, 'geometry')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(3, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(3, 'probability-statistics')[5], 'RELATED_PARENT_PROGRAM_ONLY');
+  assert.equal(row(6, 'probability-statistics')[9], 'PARENT_MATH_PROGRAM_REFERENCE');
+  assert.equal(row(10, 'probability-statistics')[9], 'EXPLICIT_MATH_SUBCOURSE');
+  assert.equal(row(10, 'astronomy')[9], 'PARENT_PHYSICS_PROGRAM_REFERENCE');
+  assert.equal(row(10, 'astronomy')[5], 'RELATED_PARENT_PROGRAM_ONLY');
+  assert.equal(row(11, 'astronomy')[4], 'NOT_PROVEN');
+  assert.equal(row(3, 'fundamentals-security-defense-homeland')[3], 'OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE');
+  assert.equal(row(3, 'fundamentals-security-defense-homeland')[5], 'OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE');
+  assert.equal(row(5, 'fundamentals-security-defense-homeland')[5], 'OPTIONAL_VARIANT_PROGRAM_RANGE');
+  assert.equal(row(5, 'fundamentals-security-defense-homeland')[9], 'OPTIONAL_VARIANT_PROGRAM_REFERENCE');
+  assert.equal(row(8, 'fundamentals-security-defense-homeland')[6], 1);
+  assert.equal(row(8, 'fundamentals-security-defense-homeland')[4], 'NOT_PROVEN');
+  assert.ok(appCoverage.rows.every((item) => item[4] === 'NOT_PROVEN'));
+  assert.equal(appCoverage.rows.filter((item) => item[4] === 'VERIFIED_COMPLETE').length, 0);
 });

@@ -53,8 +53,8 @@ def main():
         old_m = legacy / "MANIFEST.json"
         old_entries = load(old_m).get("files", []) if old_m.exists() else []
         paths = Counter(e.get("localPath") for e in old_entries)
-        out += ["", "## Legacy extracurricular (backup branch)",
-                f"- PDFs in git: {len(old_pdfs)}; manifest entries: {len(old_entries)}",
+        out += ["", "## Legacy extracurricular (backup-branch cache)",
+                f"- PDF files unpacked from the backup-branch archive into the ignored cache: {len(old_pdfs)}; manifest entries: {len(old_entries)}",
                 f"- localPath collisions (several URLs -> one file): {sum(v - 1 for v in paths.values() if v > 1)}",
                 f"- garbled-looking names: {len(garbled)}"]
 
@@ -78,16 +78,27 @@ def main():
             head = key.split("|")[0]
             number = int(head) if head.isdigit() else None
             hits = [h for h in by_code.get(st["fpu_code"], []) if h[1] == number]
+            # The hand-checked status catalogue represents unlimited approvals as
+            # {"unlimited": true}; do not invent an expiry date or assume a missing
+            # use_until field means a parsing failure.
+            unlimited = st.get("unlimited") is True
+            use_until = st.get("use_until")
+            use_until_label = use_until or ("Бессрочно" if unlimited else "NOT_PROVEN")
             if not any(h[0] == "garant" for h in hits):
                 absent += 1
             if not hits:
-                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | — | — | NOT IN EXTRACT |")
+                out.append(f"| {key} | {st['fpu_code']} | {use_until_label} | — | — | NOT IN EXTRACT |")
             for src, row, title, until in hits:
-                m = re.search(r"(20\d\d)", until or "")
-                ok = None if src == "ocr" or not m else (m.group(1) == st["use_until"][:4])
+                year_match = re.search(r"(20\d\d)", until or "")
+                if src == "ocr" or not until:
+                    ok = None
+                elif unlimited:
+                    ok = "бессрочно" in until.casefold()
+                else:
+                    ok = bool(year_match and use_until and year_match.group(1) == use_until[:4])
                 agree += ok is True; disagree += ok is False
                 flag = "" if ok is not False else " **MISMATCH**"
-                out.append(f"| {key} | {st['fpu_code']} | {st['use_until']} | {src} | {until or '—'}{flag} | {(title or '')[:70]} |")
+                out.append(f"| {key} | {st['fpu_code']} | {use_until_label} | {src} | {until or '—'}{flag} | {(title or '')[:70]} |")
         out.append(f"- agree={agree} disagree={disagree} not_in_garant_extract={absent}")
         reused = sum(1 for code, hs in by_code.items() if len({h[1] for h in hs if h[0] == "garant"}) > 1)
         out.append(f"- position codes used by more than one row in the garant extract: {reused}")

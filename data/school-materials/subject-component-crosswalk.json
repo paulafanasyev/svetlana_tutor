@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "name": "Official programme component crosswalk (mathematics and astronomy)",
+  "checkedAt": "2026-10-29",
+  "purpose": "Connect grade/subject index rows for mathematical sub-courses and astronomy topics to their official parent federal working programmes when the source explicitly supports that relationship.",
+  "policy": [
+    "This crosswalk resolves a source-index mapping gap only. It never marks a row VERIFIED_COMPLETE and never proves that every required textbook, lesson, assignment or exercise is present.",
+    "For grades 1-6, Algebra/Geometry and Probability & Statistics (grades 1-6) point to the parent mathematics programme only; they must not be represented as separate courses based on this mapping.",
+    "For grades 7-11, the relevant FRPs explicitly structure mathematics through the named courses Algebra, Geometry and Probability & Statistics.",
+    "Do not use this crosswalk to classify textbook bibliographic records, OCR records, extracurricular programmes, or authored exercises as matching those sub-courses.",
+    "All five programme PDFs are official EDSOO links represented in the federal working-programme catalogue; the repository labels them as source-linked corpus, not as re-verified against every 2026 amendment.",
+    "Astronomy in grades 10-11 is cross-referenced to the official Physics FRP topic on astronomy/astrophysics; this is an integrated topic in Physics, not proof of a separate standalone Astronomy programme."
+  ],
+  "sources": [
+    {
+      "id": "frp-noo-math-1-4",
+      "title": "Математика, 1–4 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf",
+      "gradeRange": [
+        1,
+        4
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "id": "frp-ooo-math-basic-5-9",
+      "title": "Математика, базовый уровень, 5–9 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_baza.pdf",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "id": "frp-ooo-math-advanced-5-9",
+      "title": "Математика, углублённый уровень, 5–9 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_matematika-5-9_ugl.pdf",
+      "gradeRange": [
+        5,
+        9
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "id": "frp-soo-math-basic-10-11",
+      "title": "Математика, базовый уровень, 10–11 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "id": "frp-soo-math-advanced-10-11",
+      "title": "Математика, углублённый уровень, 10–11 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_ugl.pdf",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "id": "frp-soo-physics-basic-10-11",
+      "title": "Физика, базовый уровень, 10–11 классы",
+      "url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "sourceType": "OFFICIAL_EDSOO_FRP",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "algebra-via-mathematics",
+      "targetSubject": "algebra",
+      "sourceProgramSubject": "mathematics",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeRelationships": [
+        {
+          "gradeRange": [
+            1,
+            6
+          ],
+          "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+          "note": "Only the parent mathematics FRP is referenced; this does not assert a separate Algebra course in grades 1-6."
+        },
+        {
+          "gradeRange": [
+            7,
+            11
+          ],
+          "relationship": "EXPLICIT_MATH_SUBCOURSE",
+          "note": "The FRP mathematics programme explicitly structures the relevant level through an Algebra course (10-11: Algebra and beginnings of mathematical analysis)."
+        }
+      ],
+      "sourceIds": [
+        "frp-noo-math-1-4",
+        "frp-ooo-math-basic-5-9",
+        "frp-ooo-math-advanced-5-9",
+        "frp-soo-math-basic-10-11",
+        "frp-soo-math-advanced-10-11"
+      ]
+    },
+    {
+      "id": "geometry-via-mathematics",
+      "targetSubject": "geometry",
+      "sourceProgramSubject": "mathematics",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeRelationships": [
+        {
+          "gradeRange": [
+            1,
+            6
+          ],
+          "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+          "note": "Only the parent mathematics FRP is referenced; this does not assert a separate Geometry course in grades 1-6."
+        },
+        {
+          "gradeRange": [
+            7,
+            11
+          ],
+          "relationship": "EXPLICIT_MATH_SUBCOURSE",
+          "note": "The FRP mathematics programme explicitly structures the relevant level through a Geometry course."
+        }
+      ],
+      "sourceIds": [
+        "frp-noo-math-1-4",
+        "frp-ooo-math-basic-5-9",
+        "frp-ooo-math-advanced-5-9",
+        "frp-soo-math-basic-10-11",
+        "frp-soo-math-advanced-10-11"
+      ]
+    },
+    {
+      "id": "probability-statistics-via-mathematics",
+      "targetSubject": "probability-statistics",
+      "sourceProgramSubject": "mathematics",
+      "gradeRange": [
+        1,
+        11
+      ],
+      "gradeRelationships": [
+        {
+          "gradeRange": [
+            1,
+            6
+          ],
+          "relationship": "PARENT_MATH_PROGRAM_REFERENCE",
+          "note": "Grades 1-6: only parent Mathematics FRP is referenced. In grades 1-4, the official programme includes work with tables and data, but this mapping does not create a separate Probability & Statistics subject."
+        },
+        {
+          "gradeRange": [
+            7,
+            11
+          ],
+          "relationship": "EXPLICIT_MATH_SUBCOURSE",
+          "note": "The official FRPs explicitly structure the named Probability & Statistics course for grades 7-11."
+        }
+      ],
+      "sourceIds": [
+        "frp-noo-math-1-4",
+        "frp-ooo-math-basic-5-9",
+        "frp-ooo-math-advanced-5-9",
+        "frp-soo-math-basic-10-11",
+        "frp-soo-math-advanced-10-11"
+      ]
+    },
+    {
+      "id": "astronomy-via-physics",
+      "targetSubject": "astronomy",
+      "sourceProgramSubject": "physics",
+      "gradeRange": [
+        10,
+        11
+      ],
+      "gradeRelationships": [
+        {
+          "gradeRange": [
+            10,
+            11
+          ],
+          "relationship": "PARENT_PHYSICS_PROGRAM_REFERENCE",
+          "note": "The official 10-11 Physics FRP includes a section on elements of astronomy and astrophysics. This supports a reference to the parent Physics programme, not a separate Astronomy course or completeness claim."
+        }
+      ],
+      "sourceIds": [
+        "frp-soo-physics-basic-10-11"
+      ]
+    }
+  ],
+  "evidence": {
+    "officialProgramCatalog": "https://edsoo.ru/rabochie-programmy/",
+    "grade5to9TextEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/06/05_frp_matematika-5-9-klassy_baza_17062025_itog-na-sajt.pdf",
+    "grade10to11TextEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_matematika_10_11_baz.pdf",
+    "reviewedSummary": "The official 5-9 mathematics FRP describes Mathematics as the course for grades 5-6, then Algebra and Geometry in grades 7-9, with Probability & Statistics in the mathematics programme. The official 10-11 FRP names Algebra and beginnings of mathematical analysis, Geometry, and Probability & Statistics.",
+    "primarySchoolMathEvidenceUrl": "https://edsoo.ru/wp-content/uploads/2025/07/2025_noo_frp_matematika_1-4.pdf",
+    "primarySchoolMathEvidenceSummary": "The official 1-4 Mathematics FRP contains grade-level learning outcomes involving data representation, tables, and numerical data. This supports only a parent mathematics programme link, not the existence of a separate Probability & Statistics course.",
+    "officialPhysics10to11Url": "https://edsoo.ru/wp-content/uploads/2025/07/2025_soo_frp_fizika_10_11_baz.pdf",
+    "astronomyCrosswalkSummary": "In grades 10-11, astronomy/astrophysics is covered as a section in the Physics FRP. The mapping points to that parent programme and does not create a separate standalone Astronomy course."
+  }
+}

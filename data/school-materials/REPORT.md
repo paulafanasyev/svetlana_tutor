@@ -1,5 +1,39 @@
 # School materials: import report
 
+## curriculum-gap-triage-2026-10-28.json (205391 bytes)
+top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[3], metrics:dict[11], policy:list[4], programEvidence:list[45], items:list[166], officialSourceRegistry:list[11]
+- `programEvidence` record keys: id(45), title(45), subject(45), gradeRange(45), url(45), sourceLandingPage(45), checkedAt(45), year(45), rightsStatus(45)
+  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=45
+  - records mentioning «до 31 августа 20XX»: 0
+- `items` record keys: grade(166), subject(166), indexedResourceCount(166), sourceMatrixStatus(166), currentApplicability(166), completeCoverage(166), triageStatus(166), decision(166), exactProgramIds(166), relatedProgramHintIds(166), nextStep(166), officialScopeHintIds(166)
+  - records mentioning «до 31 августа 20XX»: 0
+- `officialSourceRegistry` record keys: id(11), title(11), url(11), publisher(11), sourceType(11), gradeRange(11), subjects(11), scopeNote(11)
+  - records mentioning «до 31 августа 20XX»: 0
+
+## curriculum-gap-triage-2026-10-29.json (287379 bytes)
+top-level: schemaVersion:int, generatedAt:str, purpose:str, sources:dict[4], metrics:dict[18], policy:list[7], resolvedComponentRows:list[17], items:list[135], programEvidence:list[46], officialSourceRegistry:list[14], taxonomyResolutions:list[10], currentProgramScopes:list[2], sourceRangeReview:list[51], scopeResolutions:list[7]
+- `resolvedComponentRows` record keys: grade(17), subject(17), previousStatus(17), resolutionStatus(17), mappingId(17), relationship(17), programSourceIds(17), evidenceUrls(17), completeCoverage(17), note(17)
+  - records mentioning «до 31 августа 20XX»: 0
+- `items` record keys: grade(135), subject(135), indexedResourceCount(135), sourceMatrixStatus(135), currentApplicability(135), completeCoverage(135), triageStatus(135), decision(135), exactProgramIds(135), relatedProgramHintIds(135), nextStep(135), officialScopeHintIds(135)
+  - records mentioning «до 31 августа 20XX»: 0
+- `programEvidence` record keys: id(46), title(46), subject(46), gradeRange(46), url(46), sourceLandingPage(46), checkedAt(46), year(46), rightsStatus(46), mirrorAllowed(1), implementationSchedule(1)
+  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=45, LINK_TO_OFFICIAL_SOURCE; no mirroring before rights are confirmed=1
+  - records mentioning «до 31 августа 20XX»: 0
+- `officialSourceRegistry` record keys: id(14), title(14), url(14), sourceType(14), gradeRange(14), publisher(11), subjects(11), scopeNote(11), checkedAt(3), rightsStatus(3), reviewStatus(2), implementationSchedule(1), resolvingPower(1)
+  - rightsStatus: LINK_ONLY; redistribution not independently confirmed=2, LINK_ONLY; redistribution and mirroring rights not confirmed=1
+  - records mentioning «до 31 августа 20XX»: 0
+- `taxonomyResolutions` record keys: grade(10), priorSubject(10), status(10), triageDecision(10), evidenceUrls(10), note(10)
+  - status: LEGACY_NOT_IN_CURRENT_FEDERAL_PLAN=10
+  - records mentioning «до 31 августа 20XX»: 0
+- `currentProgramScopes` record keys: subject(2), subjectLabel(2), grades(2), status(2), sourceId(2), schedule(1)
+  - status: CURRENT_FEDERAL_PROGRAM=1, PHASED_IMPLEMENTATION=1
+  - records mentioning «до 31 августа 20XX»: 0
+- `sourceRangeReview` record keys: grade(51), subject(51), findingStatus(51), candidates(51), remainingQuestion(51), requiredNextStep(51), completeCoverage(51)
+  - records mentioning «до 31 августа 20XX»: 0
+- `scopeResolutions` record keys: grade(7), subject(7), status(7), completeCoverage(7), sourceUrls(7), note(7)
+  - status: OUTSIDE_CURRENT_FEDERAL_PROGRAM_RANGE=4, OPTIONAL_VARIANT_PROGRAM_RANGE=3
+  - records mentioning «до 31 августа 20XX»: 0
+
 ## edsoo-official-lesson-index.json (142208 bytes)
 top-level: schemaVersion:int, name:str, source:str, checkedAt:str, discoveredCount:int, note:str, items:list[103], gradeVerificationSummary:dict[4]
 - `items` record keys: id(103), sourceId(103), title(103), url(103), description(103), gradeRange(103), gradeStatus(103), subject(103), topic(103), kind(103), accessStatus(103), rightsStatus(103), contentStoredLocally(103), metadataCompleteness(103), checkedAt(103), note(103), gradeEvidence(96), gradeEvidenceUrl(96), gradeEvidenceType(96)
@@ -165,12 +199,12 @@ top-level: schemaVersion:int, title:str, source:str, officialSource:str, checked
     {"id": "fpu2026-1113", "listRow": 1113, "sectionCode": "2.1.3.2.1.2", "listSection": "2.1", "schoolStage": "secondary", "grade": 11, "title": "Пос (хакас) литературазы. 11 класс: тирен син: thкci угредiг организацияларына учебник = Родная (хакасская) литература. 11 класс: углублённый уровень: учебник для общеобразовательных организаций; 1-е издание; язык издания: хакасский", "authors": "Майнагашева Н.С., Челтыгмашева Л.В.. Боргоякова М.П. и другие", "publisher": "Государственное бюджетное учреждение Республики Хакасия \"Хакасское книжное издательство имени В.М. Торосова\"", "relatedTeachingMaterials": null, "approvalBasis": "Приказ № 413; Приказ № 371", "approvalOrganization": "Государственное бюджетное учреждение Республики Хакасия \"Хакасское книжное издательство имени В.М. Торосова\"", "approvalOrder": "От 26 июня 2025 г. № 495", "allowedUseUntil": "До 31 августа 2030 года", "metadata
     ```
 
-## federal-working-programs.json (92374 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, officialCatalog:str, officialRegistry:str, totalRecords:int, directPdfLinks:int, note:str, programs:list[61], releaseSummary:dict[6]
-- `programs` record keys: id(61), title(61), subject(61), gradeRange(61), level(61), year(61), documentType(61), sourceId(61), sourceLandingPage(61), url(61), fileFormat(61), pages(61), accessStatus(61), rightsStatus(61), contentStoredLocally(61), checkedAt(61), downloadAttemptAt(55), sourceAttributionUrl(55), fileSizeBytes(55), sha256(55), downloadStatus(55), provenance(55), releaseTag(55), releaseAsset(55), releaseUrl(55), storedInRelease(55), urlStatus(6)
-  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=61
-  - provenance: corpus=55
-  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55
+## federal-working-programs.json (96842 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, officialCatalog:str, officialRegistry:str, totalRecords:int, directPdfLinks:int, note:str, programs:list[64], releaseSummary:dict[6]
+- `programs` record keys: id(64), title(64), subject(64), gradeRange(64), level(64), year(64), documentType(64), sourceId(64), sourceLandingPage(64), url(64), fileFormat(64), accessStatus(64), rightsStatus(64), contentStoredLocally(64), checkedAt(64), pages(62), sourceAttributionUrl(58), downloadStatus(58), provenance(58), storedInRelease(58), downloadAttemptAt(55), fileSizeBytes(55), sha256(55), releaseTag(55), releaseAsset(55), releaseUrl(55), urlStatus(6), mirrorAllowed(3), curriculumStatus(2), implementationSchedule(1), implementationScheduleSource(1)
+  - rightsStatus: LINK_TO_OFFICIAL_SOURCE; keep active attribution link; do not assume this permits a mirror=61, LINK_TO_OFFICIAL_SOURCE; mirroring rights not independently confirmed=2, LINK_TO_OFFICIAL_SOURCE; do not mirror or store a local copy until redistribution rights are independently confirmed=1
+  - provenance: corpus=55, official-source-link=3
+  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55, LINK_ONLY_PENDING_RIGHTS_AND_ORDER_576_REVIEW=2, LINK_ONLY_NOT_MIRRORED_PENDING_RIGHTS_REVIEW=1
   - records mentioning «до 31 августа 20XX»: 0
 
 ## fipi-exam-materials-2026-2027.json (5770 bytes)
@@ -185,25 +219,28 @@ top-level: schemaVersion:int, name:str, checkedAt:str, source:str, sourceDescrip
   - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=128
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-extracurricular-programs.json (55595 bytes)
-top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, records:list[53]
-- `records` record keys: id(53), sourceId(53), title(53), gradeRange(53), subject(53), topic(53), kind(53), url(53), landingPage(53), checkedAt(53), accessStatus(53), rightsStatus(53), contentStoredLocally(53)
-  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=53
+## official-extracurricular-programs.json (58041 bytes)
+top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, records:list[54], archiveNote:str, archivedRecords:list[1]
+- `records` record keys: id(54), sourceId(54), title(54), gradeRange(54), subject(54), topic(54), kind(54), url(54), landingPage(54), checkedAt(54), accessStatus(54), rightsStatus(54), contentStoredLocally(54)
+  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=54
+  - records mentioning «до 31 августа 20XX»: 0
+- `archivedRecords` record keys: id(1), sourceId(1), title(1), gradeRange(1), subject(1), topic(1), kind(1), url(1), landingPage(1), checkedAt(1), accessStatus(1), rightsStatus(1), contentStoredLocally(1), archivedAt(1), archiveReason(1)
+  - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=1
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-material-items.json (2258876 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1738], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
-- `items` record keys: id(1738), sourceId(1738), title(1738), kind(1738), accessStatus(1738), rightsStatus(1738), contentStoredLocally(1738), checkedAt(1714), subject(1708), gradeRange(1636), url(1585), note(1206), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(660), metadataCompleteness(584), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(128), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), catalogueSnippet(61), year(61)
-  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=128, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
-  - provenance: corpus=108
-  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
+## official-russian-school-material-items.json (2260070 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1739], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
+- `items` record keys: id(1739), sourceId(1739), title(1739), kind(1739), rightsStatus(1739), contentStoredLocally(1739), accessStatus(1737), checkedAt(1715), subject(1707), gradeRange(1637), url(1586), note(1206), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(661), metadataCompleteness(585), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(128), fileSizeBytes(110), sha256(110), releaseTag(110), releaseAsset(110), releaseUrl(110), storedInRelease(110), provenance(109), catalogueSnippet(61), year(61)
+  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=128, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=54, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
+  - provenance: corpus=109
+  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-materials.json (27768 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[37], sources:list[26], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
+## official-russian-school-materials.json (29850 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, purpose:str, gradeRange:list[2], schoolStages:list[3], subjects:list[39], sources:list[29], integrationPolicy:dict[10], fullCoverageNote:str, collections:list[3], workingProgramCount:int, directWorkingProgramPdfCount:int, originalExerciseCount:int, currentCoverageNote:str, lastFederalProgramDownloadAttemptAt:str, verifiedLocalFederalWorkingProgramPdfCount:int, failedFederalWorkingProgramPdfCount:int, extracurricularProgramsSourceUrl:str, extracurricularProgramsLocalSyncStatus:str, federalWorkingProgramReleasePdfCount:int, federalTextbookListReleaseCopy:dict[11], sha:str, extracurricularSyncEvidence:dict[6]
 - `schoolStages` record keys: id(3), name(3), grades(3)
   - records mentioning «до 31 августа 20XX»: 0
-- `sources` record keys: id(26), name(26), url(26), kind(26), access(26), gradeRange(26), subjects(26), storesFullTextbooksLocally(22), rightsNote(9), storesFullTextLocally(4), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
+- `sources` record keys: id(29), name(29), url(29), gradeRange(29), subjects(29), kind(28), access(28), storesFullTextbooksLocally(24), rightsNote(10), storesFullTextLocally(5), license(3), licenseUrl(3), referenceUrl(2), verifiedExample(2), reviewStatus(2), announcementUrl(1), officialPdfLandingPage(1), alternateUrl(1), catalogReportedCounts(1), catalogReportedUpdated(1), indexedPageCount(1), indexCoverageStatus(1), registryUrl(1), recordFiles(1), recordCount(1), notes(1)
   - records mentioning «до 31 августа 20XX»: 0
 - `collections` record keys: id(3), file(3), description(3)
   - records mentioning «до 31 августа 20XX»: 0
@@ -213,19 +250,33 @@ top-level: schemaVersion:int, title:str, language:str, grades:list[11], license:
 - `exercises` record keys: grade(153), subject(153), topic(153), prompt(153), answer(153), explanation(153), difficulty(153), id(153), authorship(54), license(54)
   - records mentioning «до 31 августа 20XX»: 0
 
-## school-curriculum-coverage.json (619072 bytes)
-top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[37], coveragePolicy:str, statusDefinitions:dict[4], rowScopeNote:str, rows:list[407], summary:dict[29]
-- `rows` record keys: grade(407), subject(407), subjectLabel(407), indexedResourceCount(407), status(407), completeCoverage(407), curriculumApplicability(407), federalBibliographyRecordCount(407), verifiedOfficialLessonIndexCount(407), officialWorkingProgramCount(407), releaseAvailableWorkingProgramCount(407), officialExtracurricularProgramCount(407), locallyStoredOriginalTaskCount(407), federalBibliographyFullTextCount(407), openReferenceResourceCount(407), officialExamResourceCount(407), publicLessonPlatformResourceCount(407), additionalOfficialSubjectResourceCount(407), officialPlatformEntryPointCount(407), additionalCatalogResourceCount(407), notes(407)
-  - status: LINKS_AVAILABLE=241, NO_EXACT_GRADE_SUBJECT_RECORD=166
+## regulatory-delta-2026-10-28.json (7199 bytes)
+top-level: schemaVersion:int, reviewedAt:str, status:str, purpose:str, act:dict[10], verifiedScopeFromPublishedSummaries:list[4], repositoryReviewTargets:list[6], policy:list[5], metrics:dict[4]
+- `verifiedScopeFromPublishedSummaries` record keys: id(4), subjects(4), levels(4), summary(4), reviewStatus(4), evidenceUrls(4), grades(2), doNotAssume(1), effectiveFrom(1)
+  - records mentioning «до 31 августа 20XX»: 0
+- `repositoryReviewTargets` record keys: path(6), reason(6)
+  - records mentioning «до 31 августа 20XX»: 0
+
+## school-curriculum-coverage.json (705090 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects:list[39], coveragePolicy:str, statusDefinitions:dict[10], rowScopeNote:str, rows:list[429], summary:dict[31]
+- `rows` record keys: grade(429), subject(429), subjectLabel(429), indexedResourceCount(429), status(429), completeCoverage(429), curriculumApplicability(429), federalBibliographyRecordCount(429), verifiedOfficialLessonIndexCount(429), officialWorkingProgramCount(429), releaseAvailableWorkingProgramCount(429), officialProgramRelationship(429), officialProgramComponentMappingIds(429), officialExtracurricularProgramCount(429), locallyStoredOriginalTaskCount(429), federalBibliographyFullTextCount(429), openReferenceResourceCount(429), officialExamResourceCount(429), publicLessonPlatformResourceCount(429), additionalOfficialSubjectResourceCount(429), officialPlatformEntryPointCount(429), additionalCatalogResourceCount(429), notes(429)
+  - status: LINKS_AVAILABLE=261, NO_EXACT_GRADE_SUBJECT_RECORD=135, OUTSIDE_OFFICIAL_PROGRAM_GRADE_RANGE=22, LEGACY_ARCHIVAL_ONLY=11
+  - records mentioning «до 31 августа 20XX»: 0
+
+## subject-component-crosswalk.json (8875 bytes)
+top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[6], sources:list[6], mappings:list[4], evidence:dict[8]
+- `sources` record keys: id(6), title(6), url(6), gradeRange(6), sourceType(6), checkedAt(6)
+  - records mentioning «до 31 августа 20XX»: 0
+- `mappings` record keys: id(4), targetSubject(4), sourceProgramSubject(4), gradeRange(4), gradeRelationships(4), sourceIds(4)
   - records mentioning «до 31 августа 20XX»: 0
 
 ## Manifests
-- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-22, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
-- federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-22, pages=312
-- federal-working-programs.json: generatedAt=2026-10-22T12:32:32.423634+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-29, provenance=corpus, linksFound=54, verified=54, failed=0, duplicatesBySha256=0, staleItemsRemoved=1
+- federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-29, pages=312
+- federal-working-programs.json: generatedAt=2026-10-29T14:33:20.018827+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
-## Legacy extracurricular (backup branch)
-- PDFs in git: 53; manifest entries: 53
+## Legacy extracurricular (backup-branch cache)
+- PDF files unpacked from the backup-branch archive into the ignored cache: 53; manifest entries: 53
 - localPath collisions (several URLs -> one file): 0
 - garbled-looking names: 14
 
@@ -278,6 +329,132 @@ top-level: schemaVersion:int, name:str, checkedAt:str, grades:list[11], subjects
 | 709|Химия | 1.1.3.10.1.2 | 2030-08-31 | ocr | — | Химия |
 | 726|География | 1.1.3.14.1.1 | 2030-08-31 | ocr | — | География: базовое и улуубленное обучение |
 | 727|География | 1.1.3.14.1.2 | 2030-08-31 | ocr | — | География: базовое и улуубленное обучение |
-- agree=14 disagree=0 not_in_garant_extract=26
+| 233|Русский язык | 1.1.2.1.1.1 | 2027-08-31 | garant | До 31 августа 2027 года | Русский язык: 5-й класс: учебник: в 2 частях; 5-е издание, переработан |
+| 233|Русский язык | 1.1.2.1.1.1 | 2027-08-31 | ocr | — | Русский язык: 5-й класс: учебник; в 2 частях; 5-е издание, переработан |
+| 234|Русский язык | 1.1.2.1.1.2 | 2027-08-31 | garant | До 31 августа 2027 года | Русский язык: 6-й класс: учебник: в 2 частях; 5-е издание, переработан |
+| 234|Русский язык | 1.1.2.1.1.2 | 2027-08-31 | ocr | — | Русский язык: 6-й класс: учебник; в 2 частах; 5-е издание, переработян |
+| 235|Русский язык | 1.1.2.1.1.3 | 2027-08-31 | garant | До 31 августа 2027 года | Русский язык: 7-й класс: учебник: в 2 частях; 5-е издание, переработан |
+| 235|Русский язык | 1.1.2.1.1.3 | 2027-08-31 | ocr | — | Русский язык: 7-й класс: учебник; в 2 частах; 5-е издание, переработян |
+| 236|Русский язык | 1.1.2.1.1.4 | 2027-08-31 | garant | До 31 августа 2027 года | Русский язык: 8-й класс: учебник; 5-е издание, переработанное |
+| 236|Русский язык | 1.1.2.1.1.4 | 2027-08-31 | ocr | — | Русский язык: 8-й класс: учебник; 5-е издание, переработяное |
+| 237|Русский язык | 1.1.2.1.1.5 | 2027-08-31 | garant | До 31 августа 2027 года | Русский язык: 9-й класс: учебник; 5-е издание, переработанное |
+| 237|Русский язык | 1.1.2.1.1.5 | 2027-08-31 | ocr | — | Русский язык: 9-й класс: учебник; 5-е издание, переработяное |
+| 199|Окружающий мир | 1.1.1.7.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Окружающий мир: 1-й класс: учебник: в 2 частях; 16-е издание, перерабо |
+| 199|Окружающий мир | 1.1.1.7.1.1 | 2032-08-31 | ocr | — | Окружающий мир: 1-й класс: учебник: в 2 частях; 16-е издание, перерабо |
+| 200|Окружающий мир | 1.1.1.7.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Окружающий мир: 2-й класс: учебник: в 2 частях; 15-е издание, перерабо |
+| 200|Окружающий мир | 1.1.1.7.1.2 | 2032-08-31 | ocr | — | Окружающий мир: 2-й класс: учебник: в 2 частях; 15-е издание, перерабо |
+| 201|Окружающий мир | 1.1.1.7.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Окружающий мир: 3-й класс: учебник: в 2 частях; 14-е издание, перерабо |
+| 201|Окружающий мир | 1.1.1.7.1.3 | 2032-08-31 | ocr | — | Окружающий мир; 3-й класс; учебник: в 2 частях; 14-е издание, перерабо |
+| 202|Окружающий мир | 1.1.1.7.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | Окружающий мир: 4-й класс: учебник: в 2 частях; 14-е издание, перерабо |
+| 202|Окружающий мир | 1.1.1.7.1.4 | 2032-08-31 | ocr | — | Окружающий мир; 4-й класс; учебник: в 2 частях; 14-е издание, перерабо |
+| 594|Музыка | 1.1.2.16.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 5-й класс: учебник; 14-е издание, переработанное |
+| 594|Музыка | 1.1.2.16.1.1 | 2032-08-31 | ocr | — | Музыка: 5-й класс: учебник; 14-е издание, переработанное |
+| 595|Музыка | 1.1.2.16.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 6-й класс: учебник; 13-е издание, переработанное |
+| 595|Музыка | 1.1.2.16.1.2 | 2032-08-31 | ocr | — | Музыка: 6-й класс: учебник; 13-е издание, переработанное |
+| 596|Музыка | 1.1.2.16.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 7-й класс: учебник; 13-е издание, переработанное |
+| 596|Музыка | 1.1.2.16.1.3 | 2032-08-31 | ocr | — | Музыка: 7-й класс: учебник; 13-е издание, переработанное |
+| 597|Музыка | 1.1.2.16.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 8-й класс: учебник; 5-е издание, переработанное |
+| 597|Музыка | 1.1.2.16.1.4 | 2032-08-31 | ocr | — | Музыка: 8-й класс: учебник; 5-е издание, переработанное |
+| 583|Биология | 1.1.2.14.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Биология: 5-й класс: базовый уровень: учебник; 1-е издание |
+| 583|Биология | 1.1.2.14.1.1 | 2032-08-31 | ocr | — | Биология: 5-й класс: базовый уровень: учебник, 1-е издание |
+| 584|Биология | 1.1.2.14.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Биология: 6-й класс: базовый уровень: учебник; 1-е издание |
+| 584|Биология | 1.1.2.14.1.2 | 2032-08-31 | ocr | — | Биология: 6-й класс: базовый уровень: учебник; 1-е издание |
+| 585|Биология | 1.1.2.14.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Биология: 7-й класс: базовый уровень: учебник; 1-е издание |
+| 585|Биология | 1.1.2.14.1.3 | 2032-08-31 | ocr | — | Биология: 7-й класс: базовый уровень: учебник; 1-е издание |
+| 586|Биология | 1.1.2.14.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | Биология: 8-й класс: базовый уровень: учебник; 1-е издание |
+| 586|Биология | 1.1.2.14.1.4 | 2032-08-31 | ocr | — | Биология: 8-й класс: базовый уровень: учебник; 1-е издание |
+| 587|Биология | 1.1.2.14.1.5 | 2032-08-31 | garant | До 31 августа 2032 года | Биология: 9-й класс: базовый уровень: учебник; 1-е издание |
+| 587|Биология | 1.1.2.14.1.5 | 2032-08-31 | ocr | — | Биология: 9-й класс: базовый уровень: учебник; 1-е издание |
+| 713|Биология | 1.1.3.11.1.1 | 2030-08-31 | ocr | — | Биология |
+| 714|Биология | 1.1.3.11.1.2 | 2030-08-31 | ocr | — | Биология |
+| 715|Биология | 1.1.3.11.2.1 | 2030-08-31 | ocr | — | Биология. Биологияческне системы и процессы, улубленное обучение |
+| 716|Биология | 1.1.3.11.2.2 | 2030-08-31 | ocr | — | Биология. Биологияческне системы и процессы, улубленное обучение |
+| 571|География | 1.1.2.11.1.1 | 2032-08-31 | ocr | — | География: 5-6-е классы: учебник; 12-е издание, переработанное |
+| 572|География | 1.1.2.11.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | География: 7-й класс: учебник; 11-е издание, переработанное |
+| 572|География | 1.1.2.11.1.2 | 2032-08-31 | ocr | — | География: 7-8 класс: учебник; 11-е издание, переработанное |
+| 573|География | 1.1.2.11.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | География: 8-й класс: учебник; 12-е издание, переработанное |
+| 573|География | 1.1.2.11.1.3 | 2032-08-31 | ocr | — | География: 8-9 класс: учебник; 12-е издание, переработанное |
+| 574|География | 1.1.2.11.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | География: 9-й класс: учебник; 11-е издание, переработанное |
+| 574|География | 1.1.2.11.1.4 | 2032-08-31 | ocr | — | География: 9-8 класс: учебник; 11-е издание, переработанное |
+| 604|Физическая культура | 1.1.2.18.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Физическая культура: 5-й класс: учебник; 13-е издание, переработанное |
+| 604|Физическая культура | 1.1.2.18.1.1 | 2032-08-31 | ocr | — | Физическая культура: 5-й класс: учебник; 13-е издание, переработяное |
+| 605|Физическая культура | 1.1.2.18.1.2 | 2032-08-31 | ocr | — | Физическая культура: 6-7-е классы: учебник; 13-е издание, переработяно |
+| 606|Физическая культура | 1.1.2.18.1.3 | 2032-08-31 | ocr | — | Физическая культура: 8-9-е классы: учебник; 12-е издание, переработяно |
+| 731|Физическая культура | 1.1.3.15.1.1 | 2030-08-31 | ocr | — | Физическая культура; базовый уровень |
+| 226|Физическая культура | 1.1.1.12.1.1 | 2032-08-31 | ocr | — | Физическая культура: 1 - 4-е классы: учебник; в 2 частях |
+| 227|Физическая культура | 1.1.1.12.2.1 | 2032-08-31 | garant | До 31 августа 2032 года | Физическая культура: 1-й класс: учебник; 14-е издание, переработанное |
+| 227|Физическая культура | 1.1.1.12.2.1 | 2032-08-31 | ocr | — | Физическая культура: 1-8 класс: учебник; 14-е издание, переработанное |
+| 228|Физическая культура | 1.1.1.12.2.2 | 2032-08-31 | garant | До 31 августа 2032 года | Физическая культура: 2-й класс: учебник; 13-е издание, переработанное |
+| 228|Физическая культура | 1.1.1.12.2.2 | 2032-08-31 | ocr | — | Физическая культура: 2-8 класс: учебник; 13-е издание, переработанное |
+| 229|Физическая культура | 1.1.1.12.2.3 | 2032-08-31 | garant | До 31 августа 2032 года | Физическая культура: 3-й класс: учебник; 5-е издание, переработанное |
+| 229|Физическая культура | 1.1.1.12.2.3 | 2032-08-31 | ocr | — | Физическая культура: 3-8 класс: учебник; 5-е издание, переработанное |
+| 230|Физическая культура | 1.1.1.12.2.4 | 2032-08-31 | garant | До 31 августа 2032 года | Физическая культура: 4-й класс: учебник; 5-е издание, переработанное |
+| 230|Физическая культура | 1.1.1.12.2.4 | 2032-08-31 | ocr | — | Физическая культура: 4-8 класс: учебник; 5-е издание, переработанное |
+| 216|Музыка | 1.1.1.10.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 1-й класс: учебник; 15-е издание, переработанное |
+| 216|Музыка | 1.1.1.10.1.1 | 2032-08-31 | ocr | — | Музыка: 1-й класс; учебник; 15-е издание, переработячное |
+| 217|Музыка | 1.1.1.10.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 2-й класс: учебник; 15-е издание, переработанное |
+| 217|Музыка | 1.1.1.10.1.2 | 2032-08-31 | ocr | — | Музыка: 2-й класс; учебник; 15-е издание, переработячное |
+| 218|Музыка | 1.1.1.10.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 3-й класс: учебник; 15-е издание, переработанное |
+| 218|Музыка | 1.1.1.10.1.3 | 2032-08-31 | ocr | — | Музыка: 3-8 класс; учебник; 15-е издание, переработячное |
+| 219|Музыка | 1.1.1.10.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | Музыка: 4-й класс: учебник; 14-е издание, переработанное |
+| 219|Музыка | 1.1.1.10.1.4 | 2032-08-31 | ocr | — | Музыка: 4-й класс; учебник; 14-е издание, переработячное |
+| 576|Физика | 1.1.2.12.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Физика: 7-й класс: базовый уровень: учебник; 3-е издание, переработанн |
+| 576|Физика | 1.1.2.12.1.1 | 2032-08-31 | ocr | — | Физика: 7-8 класс: базовый уровень, учебник; 3-е издание, переработанн |
+| 577|Физика | 1.1.2.12.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Физика: 8-й класс: базовый уровень: учебник; 3-е издание, переработанн |
+| 577|Физика | 1.1.2.12.1.2 | 2032-08-31 | ocr | — | Физика: 8-9 класс: базовый уровень, учебник; 3-е издание, переработанн |
+| 578|Физика | 1.1.2.12.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Физика: 9-й класс: базовый уровень: учебник; 3-е издание, переработанн |
+| 578|Физика | 1.1.2.12.1.3 | 2032-08-31 | ocr | — | Физика: 9-8 класс: базовый уровень, учебник; 3-е издание, переработанн |
+| 580|Химия | 1.1.2.13.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Химия: 8-й класс: базовый уровень: учебник; 5-е издание, переработанно |
+| 580|Химия | 1.1.2.13.1.1 | 2032-08-31 | ocr | — | Химия: 8-8 класс: базовый уровень, учебник; 5-е издание, переработанно |
+| 581|Химия | 1.1.2.13.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Химия: 9-й класс: базовый уровень: учебник; 5-е издание, переработанно |
+| 581|Химия | 1.1.2.13.1.2 | 2032-08-31 | ocr | — | Химия: 9-8 класс: базовый уровень, учебник; |
+| 474|Математика | 1.1.2.7.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Математика: 5-й класс: базовый уровень: учебник: в 2 частях; 3-е издан |
+| 474|Математика | 1.1.2.7.1.1 | 2032-08-31 | ocr | — | Математика: 5-й класс; базовый уровень: учебник; в 2 частях; 3-е издан |
+| 475|Математика | 1.1.2.7.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Математика: 6-й класс: базовый уровень: учебник: в 2 частях; 3-е издан |
+| 475|Математика | 1.1.2.7.1.2 | 2032-08-31 | ocr | — | Математика: 6-й класс; базовый уровень: учебник; в 2 частях; 3-е издан |
+| 476|Алгебра | 1.1.2.7.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Математика. Алгебра: 7-й класс: базовый уровень: учебник; 15-е издание |
+| 476|Алгебра | 1.1.2.7.1.3 | 2032-08-31 | ocr | — | Математика: Алтебра; 7-й класс; базовый уровень: учебник; 15-е издание |
+| 477|Алгебра | 1.1.2.7.1.4 | 2032-08-31 | garant | До 31 августа 2032 года | Математика. Алгебра: 8-й класс: базовый уровень: учебник; 16-е издание |
+| 477|Алгебра | 1.1.2.7.1.4 | 2032-08-31 | ocr | — | Математика: Алтебра; 8-й класс; базовый уровень: учебник; 16-е издание |
+| 478|Алгебра | 1.1.2.7.1.5 | 2032-08-31 | garant | До 31 августа 2032 года | Математика. Алгебра: 9-й класс: базовый уровень: учебник; 15-е издание |
+| 478|Алгебра | 1.1.2.7.1.5 | 2032-08-31 | ocr | — | Математика: Алтебра; 9-й класс; базовый уровень: учебник; 15-е издание |
+| 479|Геометрия | 1.1.2.7.2.1 | 2032-08-31 | ocr | — | Математика: 7-9-е классы; Геометрия: 7-9-е классы; базовый уровень: уч |
+| 480|Вероятность и статистика | 1.1.2.7.3.1 | 2032-08-31 | ocr | — | Математика: Вероятность и стаститика: 7-9-е классы; базовый уровень: у |
+| 482|Информатика | 1.1.2.8.1.1 | 2032-08-31 | garant | До 31 августа 2032 года | Информатика: 7-й класс: базовый уровень: учебник; 5-е издание, перераб |
+| 482|Информатика | 1.1.2.8.1.1 | 2032-08-31 | ocr | — | Информатика: 7-9-е классы; базовый уровень: учебник; 5-е издание, пере |
+| 483|Информатика | 1.1.2.8.1.2 | 2032-08-31 | garant | До 31 августа 2032 года | Информатика: 8-й класс: базовый уровень: учебник; 5-е издание, перераб |
+| 483|Информатика | 1.1.2.8.1.2 | 2032-08-31 | ocr | — | Информатика: 8-9-е классы; базовый уровень: учебник; |
+| 484|Информатика | 1.1.2.8.1.3 | 2032-08-31 | garant | До 31 августа 2032 года | Информатика: 9-й класс: базовый уровень: учебник; 5-е издание, перераб |
+| 239|Литература | 1.1.2.2.1.1 | 2027-08-31 | garant | До 31 августа 2027 года | Литература: 5-й класс: учебник: в 2 частях; 14-е издание, переработанн |
+| 239|Литература | 1.1.2.2.1.1 | 2027-08-31 | ocr | — | Литература: 5-й класс: учебник: в 2 частях; 14-е издание, переработяно |
+| 240|Литература | 1.1.2.2.1.2 | 2027-08-31 | garant | До 31 августа 2027 года | Литература: 6-й класс: учебник: в 2 частях; 14-е издание, переработанн |
+| 240|Литература | 1.1.2.2.1.2 | 2027-08-31 | ocr | — | Литература: 6-й класс: учебник: в 2 частях; 14-е издание, переработяно |
+| 241|Литература | 1.1.2.2.1.3 | 2027-08-31 | garant | До 31 августа 2027 года | Литература: 7-й класс: учебник: в 2 частях; 13-е издание, переработанн |
+| 241|Литература | 1.1.2.2.1.3 | 2027-08-31 | ocr | — | Литература: 7-й класс: учебник: в 2 частях; 13-е издание, переработяно |
+| 242|Литература | 1.1.2.2.1.4 | 2027-08-31 | garant | До 31 августа 2027 года | Литература: 8-й класс: учебник: в 2 частях; 12-е издание, переработанн |
+| 242|Литература | 1.1.2.2.1.4 | 2027-08-31 | ocr | — | Литература: 8-й класс: учебник: в 2 частях; 12-е издание, переработяно |
+| 243|Литература | 1.1.2.2.1.5 | 2027-08-31 | garant | До 31 августа 2027 года | Литература: 9-й класс: учебник: в 2 частях; 11-е издание, переработанн |
+| 243|Литература | 1.1.2.2.1.5 | 2027-08-31 | ocr | — | Литература: 9-й класс: учебник: в 2 частях; 11-е издание, переработяно |
+| 569|Обществознание | 1.1.2.10.1.1 | Бессрочно | garant | Бессрочно | Обществознание: 9-й класс: учебник; 1-е издание |
+| 569|Обществознание | 1.1.2.10.1.1 | Бессрочно | ocr | — | Обществознание: 9-8 класс: учебник; 1-е издание |
+| 616|Русский язык | 1.1.3.1.1.1 | 2030-08-31 | ocr | — | Русский язык |
+| 617|Русский язык | 1.1.3.1.2.1 | 2030-08-31 | ocr | — | Русский язык; утлубленное обучение |
+| 618|Русский язык | 1.1.3.1.2.2 | 2030-08-31 | ocr | — | Русский язык; утлубленное обучение |
+| 668|Английский язык | 1.1.3.5.1.1 | 2030-08-31 | ocr | — | Английский язык |
+| 669|Английский язык | 1.1.3.5.1.2 | 2030-08-31 | ocr | — | Английский язык |
+| 670|Английский язык | 1.1.3.5.2.1 | 2030-08-31 | ocr | — | Английский язык; угубленное обучение |
+| 671|Английский язык | 1.1.3.5.2.2 | 2030-08-31 | ocr | — | Английский язык; угубленное обучение |
+| 718|История | 1.1.3.12.1.1 | Бессрочно | garant | Бессрочно | История. История России. 1914 - 1945 годы: 10 класс: базовый уровень:  |
+| 718|История | 1.1.3.12.1.1 | Бессрочно | ocr | — | История, История Россия, 1914 - 1945 годы: 10 класс; базовий уровень:  |
+| 719|История | 1.1.3.12.1.2 | Бессрочно | garant | Бессрочно | История. История России. 1945 год - начало XXI века: 11 класс: базовый |
+| 719|История | 1.1.3.12.1.2 | Бессрочно | ocr | — | История, История Россия, 1945 год - начало XXI века: 11 класс; базовий |
+| 720|История | 1.1.3.12.2.1 | Бессрочно | garant | Бессрочно | История. Всеобщая история. 1914 - 1945 годы: 10 класс: базовый уровень |
+| 720|История | 1.1.3.12.2.1 | Бессрочно | ocr | — | История, Весобіцяв история, 1914 - 1945 годы: 10 класс; базовий уровен |
+| 721|История | 1.1.3.12.2.2 | Бессрочно | garant | Бессрочно | История. Всеобщая история. 1945 год - начало XXI века: 11 класс: базов |
+| 721|История | 1.1.3.12.2.2 | Бессрочно | ocr | — | История, Весобіцяв история, |
+| 723|Обществознание | 1.1.3.13.1.1 | Бессрочно | garant | Бессрочно | Обществознание: 10-й класс: базовый уровень: учебник; 1-е издание |
+| 723|Обществознание | 1.1.3.13.1.1 | Бессрочно | ocr | — | Обществознаание: 10-й класс: базовый уровень: учебник; 1-е издание |
+| 724|Обществознание | 1.1.3.13.1.2 | Бессрочно | ocr | — | Обществознаание: 11-й класс: базовый уровень: 1-е издание |
+- agree=68 disagree=0 not_in_garant_extract=45
 - position codes used by more than one row in the garant extract: 32
 - allowedUseUntil by stage/year: basic-5-9:2026=6, basic-5-9:2027=75, basic-5-9:2028=55, basic-5-9:2029=61, basic-5-9:2030=53, basic-5-9:2032=88, basic-5-9:none=85, primary-1-4:2020=1, primary-1-4:2026=7, primary-1-4:2027=35, primary-1-4:2028=22, primary-1-4:2029=56, primary-1-4:2030=44, primary-1-4:2031=9, primary-1-4:2032=63, secondary-10-11:2027=7, secondary-10-11:2028=21, secondary-10-11:2029=8, secondary-10-11:2030=45, secondary-10-11:none=5
