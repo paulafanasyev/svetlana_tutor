@@ -221,6 +221,21 @@ export function sourceFailureMode(errors, eventName = '') {
   return 'fail-build';
 }
 
+// Разрешённое окно проверки текста КонсультантПлюс: будни, 20:00–24:00 по Москве.
+// Проверяем фактическое время старта job, а не только cron: GitHub Actions может задерживать schedule-запуски.
+export function isConsultantPlusAccessWindow(now = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Moscow',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+  }).formatToParts(now);
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  const hour = Number(values.hour);
+  return !['Sat', 'Sun'].includes(values.weekday) && hour >= 20 && hour < 24;
+}
+
 // Общий блок результатов иногда начинается сразу с подпунктов (без строки «163.9.»).
 // Собирает только подпункты одного корневого раздела, не подхватывая следующий раздел ФОП.
 export function flatSubtreeResults(lines, root) {
@@ -453,6 +468,19 @@ export default function nooContent() {
     async load(id) {
       if (id !== '\0' + VID) return null;
       if (!mod) {
+        const scheduledLiveCheck = process.env.GITHUB_ACTIONS === 'true'
+          && process.env.GITHUB_EVENT_NAME === 'schedule';
+        if (scheduledLiveCheck && !isConsultantPlusAccessWindow()) {
+          const currentMsk = new Intl.DateTimeFormat('ru-RU', {
+            timeZone: 'Europe/Moscow',
+            dateStyle: 'short',
+            timeStyle: 'medium',
+            hourCycle: 'h23',
+          }).format(new Date());
+          this.error(
+            `Проверка живого источника NOT PROVEN: schedule-job стартовал вне разрешённого окна (будни 20:00–24:00 MSK; сейчас ${currentMsk} MSK). Запросы к КонсультантПлюс пропущены.`
+          );
+        }
         const { map, errors } = await loadNooContent();
         const n = Object.keys(map).length;
         console.log(`[noo-content] программ: ${n} из ${EXPECTED}${errors.length ? '; ' + errors.join(' | ') : ''}`);
