@@ -11214,10 +11214,10 @@
     "workingProgramReleaseAssets": 55,
     "officialExtracurricularProgramRecords": 53,
     "officialExtracurricularManifest": {
-      "linksFound": 53,
-      "verified": 53,
+      "linksFound": 54,
+      "verified": 54,
       "failed": 0,
-      "releaseAssetChecks": 53,
+      "releaseAssetChecks": 54,
       "status": "VERIFIED_IN_RELEASE"
     },
     "originalPracticeTaskCount": 153,

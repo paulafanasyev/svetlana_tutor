@@ -225,12 +225,12 @@ top-level: schemaVersion:int, title:str, source:str, checkedAt:str, count:int, r
   - rightsStatus: LINK_ONLY; redistribution licence not independently confirmed=53
   - records mentioning «до 31 августа 20XX»: 0
 
-## official-russian-school-material-items.json (2258876 bytes)
-top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1738], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
-- `items` record keys: id(1738), sourceId(1738), title(1738), kind(1738), accessStatus(1738), rightsStatus(1738), contentStoredLocally(1738), checkedAt(1714), subject(1708), gradeRange(1636), url(1585), note(1206), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(660), metadataCompleteness(584), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(128), fileSizeBytes(109), sha256(109), releaseTag(109), releaseAsset(109), releaseUrl(109), storedInRelease(109), provenance(108), catalogueSnippet(61), year(61)
-  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=128, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=53, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
-  - provenance: corpus=108
-  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=54
+## official-russian-school-material-items.json (2260070 bytes)
+top-level: schemaVersion:int, catalogName:str, lastVerified:str, note:str, items:list[1739], coverageNote:str, extracurricularPdfCount:int, extracurricularPdfFailureCount:int
+- `items` record keys: id(1739), sourceId(1739), title(1739), kind(1739), rightsStatus(1739), contentStoredLocally(1739), accessStatus(1737), checkedAt(1715), subject(1707), gradeRange(1637), url(1586), note(1206), authors(1078), publisher(1078), federalListNumber(1078), grades(1078), subjectLabel(1078), metadataStatus(1078), fullTextAvailable(1078), sectionCode(934), gradeRaw(934), topic(661), metadataCompleteness(585), level(205), license(183), contentRef(153), description(133), subtitleOrCitation(128), publicationYear(128), notes(128), gradeStatus(128), fileSizeBytes(110), sha256(110), releaseTag(110), releaseAsset(110), releaseUrl(110), storedInRelease(110), provenance(109), catalogueSnippet(61), year(61)
+  - rightsStatus: NOT_PROVEN_FOR_REPUBLICATION=1206, ORIGINAL_CONTENT_CC_BY_4.0=153, LINK_ONLY_REUSE_TERMS_NOT_CONFIRMED=128, LINK_ONLY; individual textbook files are not contained in this section index=61, OFFICIAL_EDSOO_PDF_WITH_ACTIVE_SOURCE_LINK=55, OFFICIAL_SOURCE; redistribution terms not independently established=54, OPEN_LICENSE_WITH_ATTRIBUTION_SUBJECT_TO_PAGE_EXCLUSIONS=30, LINK_TO_SOURCE; do not mirror files without confirmed terms=15
+  - provenance: corpus=109
+  - downloadStatus: PDF_SIGNATURE_AND_HASH_VERIFIED=55
   - records mentioning «до 31 августа 20XX»: 0
 
 ## official-russian-school-materials.json (29850 bytes)
@@ -268,12 +268,12 @@ top-level: schemaVersion:int, name:str, checkedAt:str, purpose:str, policy:list[
   - records mentioning «до 31 августа 20XX»: 0
 
 ## Manifests
-- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-29, provenance=corpus, linksFound=53, verified=53, failed=0, duplicatesBySha256=0, staleItemsRemoved=0
+- federal-extracurricular-programs.json: sourcePage=https://edsoo.ru/rabochie-programmy-vd/, checkedAt=2026-10-29, provenance=corpus, linksFound=54, verified=54, failed=0, duplicatesBySha256=0, staleItemsRemoved=1
 - federal-textbook-list-2026.json: registration=Зарегистрирован Минюстом России 22.07.2026 № 87563, officialLandingPage=https://minjust.consultant.ru/documents/60664, officialAnnouncement=https://edu.gov.ru/press/11911/minprosveshcheniya-rossii-obnovilo-federalnyy-perechen-uchebnikov-dlya-vseh-urovney-shkolnogo-obrazovaniya, resolvedPdfUrl=https://minjust.consultant.ru/files/60664, checkedAt=2026-10-29, pages=312
-- federal-working-programs.json: generatedAt=2026-10-29T00:47:24.330267+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
+- federal-working-programs.json: generatedAt=2026-10-29T14:33:20.018827+00:00, officialCatalogue=https://edsoo.ru/rabochie-programmy/, provenance=corpus, attempted=55, verified=55, failed=0
 
-## Legacy extracurricular (backup branch)
-- PDFs in git: 53; manifest entries: 53
+## Legacy extracurricular (backup-branch cache)
+- PDF files unpacked from the backup-branch archive into the ignored cache: 53; manifest entries: 53
 - localPath collisions (several URLs -> one file): 0
 - garbled-looking names: 14
 
