@@ -20,6 +20,7 @@ const items = read('official-russian-school-material-items.json').items;
 const lessonIndex = read('edsoo-official-lesson-index.json');
 const lessons = lessonIndex.items;
 const programs = read('federal-working-programs.json').programs;
+const extracurricularCatalog = read('official-extracurricular-programs.json');
 const componentCrosswalk = read('subject-component-crosswalk.json');
 const appCoverage = JSON.parse(readFileSync(new URL('./schoolCurriculumCoverage.json', import.meta.url), 'utf8'));
 const manifests = readdirSync(new URL('manifests/', DIR)).filter((f) => f.endsWith('.json')).map((f) => read('manifests/' + f));
@@ -61,6 +62,26 @@ test('имена PDF внеурочки строятся из id, без бит�
   assert.ok(vd, 'манифест внеурочки');
   for (const f of vd.files.filter((x) => x.releaseAsset)) assert.match(f.releaseAsset, /^vd-[0-9a-f]{12}\.pdf$/);
   assert.equal(vd.verified, vd.files.filter((x) => x.releaseAsset).length);
+});
+
+test('активный каталог внеурочных программ совпадает с текущими ссылками EDSOO и манифестом', () => {
+  const vd = manifests.find((m) => m.sourcePage?.includes('rabochie-programmy-vd'));
+  assert.ok(vd, 'манифест внеурочки');
+  assert.equal(extracurricularCatalog.count, extracurricularCatalog.records.length);
+  assert.ok(unique(extracurricularCatalog.records.map((x) => x.id)));
+  const normalizeUrl = (url) => decodeURIComponent(String(url || '').split('?')[0]).replace(/\\/+$/g, '').toLowerCase();
+  const catalogUrls = extracurricularCatalog.records.map((x) => normalizeUrl(x.url)).sort();
+  const manifestUrls = vd.files.map((x) => normalizeUrl(x.sourceUrl)).sort();
+  assert.deepEqual(catalogUrls, manifestUrls, 'активный каталог должен отражать все текущие ссылки из манифеста');
+  assert.equal(extracurricularCatalog.records.length, vd.linksFound);
+  const aiOoo = extracurricularCatalog.records.find((x) => x.url.endsWith('/rp_iiiib_ooo.pdf'));
+  const aiSoo = extracurricularCatalog.records.find((x) => x.url.endsWith('/rp_iiiib_soo.pdf'));
+  assert.deepEqual(aiOoo.gradeRange, [5, 9]);
+  assert.deepEqual(aiSoo.gradeRange, [10, 11]);
+  assert.equal(aiOoo.contentStoredLocally, false);
+  assert.equal(aiSoo.contentStoredLocally, false);
+  assert.ok(extracurricularCatalog.archivedRecords.some((x) => x.id === 'edsoo-vd-053'
+    && x.archiveReason.includes('Not present on the current official EDSOO')));
 });
 
 test('ФРП с ЕДСОО помечены как корпус, не как сверенные с ФОП', () => {
