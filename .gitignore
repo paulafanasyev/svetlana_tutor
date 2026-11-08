@@ -34,3 +34,5 @@ tools/bin/
 
 # GitHub Pages staging output
 _site/
+.vercel
+.env*

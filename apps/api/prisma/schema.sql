@@ -1,9 +1,14 @@
+-- Postgres enum used by Prisma (schema.prisma `enum Role`).
+DO $$ BEGIN
+  CREATE TYPE "Role" AS ENUM ('STUDENT', 'TEACHER', 'PARENT', 'ADMIN');
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+
 CREATE TABLE IF NOT EXISTS "User" (
   id TEXT PRIMARY KEY,
   email TEXT UNIQUE NOT NULL,
   "passwordHash" TEXT NOT NULL,
   name TEXT NOT NULL,
-  role TEXT DEFAULT 'STUDENT' NOT NULL,
+  role "Role" DEFAULT 'STUDENT' NOT NULL,
   blocked BOOLEAN DEFAULT false NOT NULL,
   level TEXT DEFAULT 'A1' NOT NULL,
   xp INTEGER DEFAULT 0 NOT NULL,
