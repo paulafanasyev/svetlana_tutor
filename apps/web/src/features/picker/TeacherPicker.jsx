@@ -33,7 +33,7 @@ export default function TeacherPicker({ firstTime = false }) {
     if (playingId === teacher.id) { tts.stop(); setPlayingId(null); return; }
     const done = () => setPlayingId((p) => (p === teacher.id ? null : p));
     setPlayingId(teacher.id);
-    const ok = tts.speak(teacher.greeting, teacher, { force: true, lang: 'en-US', onEnd: done });
+    const ok = tts.speak(teacher.greeting, teacher, { force: true, onEnd: done });
     if (!ok) setTimeout(done, 4000);
   };
 

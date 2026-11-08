@@ -50,3 +50,53 @@ item below before exposing it to real users:
 - [ ] **Resource limits.** Set container memory/CPU limits for `api` and `postgres` in your orchestrator (plain compose does not enforce any by default) to contain the impact of a runaway process or an unexpectedly large upload burst.
 - [ ] **Reverse-proxy request limits.** Even with the built-in Express rate limiter, consider proxy-level connection/request limits (e.g. nginx `limit_req`) as a second layer, since the Express limiter is per-process and won't coordinate across multiple `api` replicas without a shared store (e.g. Redis) — if you scale `api` horizontally, swap the in-memory rate-limit store for a shared one.
 - [ ] **Restrict Adminer.** The optional `adminer` compose service (profile `tools`) should never run in production, or if it must, put it behind additional auth (VPN, SSO proxy) — it is intended for local development convenience only.
+
+## Hardening log — 2026-11-08 (pre-production review round)
+
+Fixed in this round:
+
+- **Cross-tenant chat enumeration (HIGH)**: `GET /api/chat/rooms` for a TEACHER now
+  only returns their own membership rooms plus class rooms of their **own** school
+  (`src/routes/chat.js`). A teacher passing a foreign `schoolId` gets `403`. Previously
+  the `schoolId` filter was silently dropped when the query parameter was absent,
+  exposing class rooms (member IDs, last messages) of every school.
+- **Parent chat-read hole (HIGH)**: `GET /api/chat/rooms/:roomId/messages` previously
+  fell through both role checks for a non-member PARENT, allowing them to read any
+  room's messages by ID. Now any non-member who is not same-school staff or an admin
+  gets `403` (`src/routes/chat.js`).
+- **Chat member validation (MEDIUM)**: room creation now rejects members from a
+  different school (teacher-created rooms) and always adds the creator as a member.
+- **Unbounded analytics query (MEDIUM)**: `/api/admin/analytics` no longer loads every
+  user and every `Attempt` row into memory; all metrics are computed with database
+  aggregations (`count` / `groupBy`), with the 30-day per-day series bounded to
+  timestamps only.
+- **Materials list (MEDIUM)**: `GET /api/materials` is capped at the 200 most recent
+  rows instead of a full-table scan.
+- **Admin self-lockout (LOW)**: an admin can no longer delete their own account.
+- **Refresh-token growth (LOW)**: expired refresh-token rows are swept on every
+  token issuance (`src/routes/auth.js`).
+- **Classroom NAT lockout (LOW)**: the `/api/auth/*` IP limiter raised from 20 to
+  100 requests / 15 min; per-account brute force is still stopped by
+  `loginGuard` (5 failures per email+IP, 50 per email).
+- **JWT payload (INFO)**: the access token no longer carries the user's e-mail —
+  identity is re-loaded from the database on every request anyway
+  (`src/middleware/auth.js`).
+
+Documented deployment assumptions (accepted, not bugs):
+
+- `trust proxy 1` (`src/app.js`) assumes exactly one reverse proxy in front of the
+  API. Exposing the API directly to the internet would let clients spoof
+  `X-Forwarded-For` and rotate IPs past the IP-based limiter (per-account
+  `loginGuard` still applies). Keep the documented nginx/compose topology.
+- The current schema scopes teacher/parent access by ownership (class rosters,
+  parent links, journal authorship) rather than by a `schoolId` column on every
+  table. The chat module is now school-scoped; a full multi-school tenancy model
+  (school column on Class/Enrollment/JournalEntry/ParentLink) is a future
+  architectural step before onboarding many schools simultaneously.
+- Brute-force state (`loginGuard`, refresh-reuse detection) is in-memory,
+  per-process — sufficient for the documented single-instance deployment.
+- JWTs are stored client-side in `localStorage` (`apps/web/src/core/api.js`).
+  The XSS surface is deliberately minimal (no `eval`, one escaped-SVG sink,
+  strict CSP), but if the deployment model ever allows it, prefer serving the
+  API same-origin through a reverse proxy and moving the refresh token to an
+  `httpOnly` cookie with an Origin check.

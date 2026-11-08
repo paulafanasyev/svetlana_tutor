@@ -39,7 +39,6 @@ export function signAccessToken(user) {
     {
       sub: user.id,
       role: user.role,
-      email: user.email,
     },
     getSecret(),
     { algorithm: ALGORITHM, expiresIn: ACCESS_TOKEN_TTL },

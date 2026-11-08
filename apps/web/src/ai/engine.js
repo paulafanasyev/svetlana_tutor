@@ -1,7 +1,6 @@
 import { AI_MODELS, DEFAULT_MODEL_ID, getModel } from './models.js';
 
 const STORAGE_KEY = 'aet_ai';
-const WEBLLM_URL = 'https://esm.run/@mlc-ai/web-llm@0.2.85';
 const listeners = new Set();
 const jobs = [];
 let webllm = null;
@@ -107,8 +106,8 @@ export const aiEngine = {
     persist({ modelId: requestedModelId, status: 'downloading', progress: 0, progressText: 'Preparing local model…', error: '' });
     loadPromise = (async () => {
       try {
-        // Deliberately dynamic: the app has no npm dependency and does not fetch until the user asks.
-        webllm = webllm || await import(/* @vite-ignore */ 'https://esm.run/@mlc-ai/web-llm@0.2.85');
+        // Deliberately dynamic: the heavy engine chunk is only fetched when the user enables local AI.
+        webllm = webllm || await import('@mlc-ai/web-llm');
         const create = webllm.CreateMLCEngine || webllm.default?.CreateMLCEngine;
         if (typeof create !== 'function') throw new Error('WebLLM CreateMLCEngine is unavailable.');
         const loadedEngine = await create(requestedModelId, {
@@ -148,7 +147,7 @@ export const aiEngine = {
   async clearCache() {
     try {
       await dropEngine();
-      if (!webllm) webllm = await import(/* @vite-ignore */ 'https://esm.run/@mlc-ai/web-llm@0.2.85');
+      if (!webllm) webllm = await import('@mlc-ai/web-llm');
       const clear = webllm.deleteModelAllInfoInCache || webllm.default?.deleteModelAllInfoInCache;
       if (typeof clear === 'function') await clear();
       else if (typeof caches !== 'undefined') {
@@ -208,4 +207,4 @@ async function pump() {
   }
 }
 
-export { STORAGE_KEY, WEBLLM_URL, notify };
+export { STORAGE_KEY, notify };

@@ -80,7 +80,9 @@ export function createApp() {
 
   const authLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: isTest ? 1000000 : 20,
+    // A school class often shares one NAT egress IP; brute force is still
+    // stopped per-account by loginGuard.
+    max: isTest ? 1000000 : 100,
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: 'Too many authentication attempts, please try again later.' },

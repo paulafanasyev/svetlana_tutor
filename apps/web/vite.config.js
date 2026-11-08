@@ -16,8 +16,8 @@ export default defineConfig({
  chunkSizeWarningLimit: 4000,
  rollupOptions: {
  output: single ? {} : {
- manualChunks: {
- vendor: ['react', 'react-dom', 'react-router-dom'],
+ manualChunks(id) {
+ if (/[\\/]node_modules[\\/](react|react-dom|react-router-dom|react-router|scheduler)[\\/]/.test(id)) return 'vendor';
  },
  },
  },

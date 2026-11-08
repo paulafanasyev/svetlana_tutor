@@ -66,7 +66,7 @@ export default function Shop() {
         <div className="card p-4 mb-8 flex items-center gap-4">
           <Avatar teacher={CADET_TEACHER} className="w-20 shrink-0" rounded="rounded-xl" />
           <div className="text-sm font-semibold text-ink/70">
-            <div className="font-black text-ink">{CADET_TEACHER.emoji} {locale === 'ru' ? `Капитан ${CADET_TEACHER.name}` : CADET_TEACHER.nameEn}</div>
+            <div className="font-black text-ink">{CADET_TEACHER.emoji} {locale === 'ru' ? CADET_TEACHER.name : CADET_TEACHER.nameEn}</div>
             {locale === 'ru'
               ? 'В кадетской версии все занятия ведёт наставник, он бесплатный. Твой учитель сохранён: сменить его можно в обычной версии.'
               : 'In the cadet version every lesson is led by the mentor, free of charge. Your teacher is kept: you can change it in the standard version.'}

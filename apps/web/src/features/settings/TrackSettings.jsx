@@ -1,11 +1,11 @@
-import { useApp, useT } from ‘../../core/store.js’;
-import { TRACKS, trackById, DEFAULT_TRACK } from ‘../../data/tracks.js’;
-import { sfx } from ‘../../audio/sfx.js’;
-import { Toggle } from ‘../../ui/kit.jsx’;
+import { useApp, useT } from '../../core/store.js';
+import { TRACKS, trackById, DEFAULT_TRACK } from '../../data/tracks.js';
+import { sfx } from '../../audio/sfx.js';
+import { Toggle } from '../../ui/kit.jsx';
 
 const COPY = {
-  ru: { title: ‘Версия репетитора’, hint: ‘Меняет тон, темп и сложность заданий Светланы.’, who: ‘Для кого’, cadet: ‘Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель (вымышленный персонаж).’, school: ‘Ссылка для школы (версия закрепляется у ученика):’, copy: ‘Скопировать’, copied: ‘Скопировано’, offlineTitle: ‘Офлайн-режим (СУВУ)’, offlineHint: ‘Загрузить все данные на устройство для работы без интернета.’, offlineOn: ‘Офлайн-пакет активен’, offlineOff: ‘Работаем онлайн’ },
-  en: { title: ‘Tutor version’, hint: ‘Changes Svetlana’s tone, pace and task difficulty.’, who: ‘For’, cadet: ‘Mentor: Captain Andrey Nikolaevich (reserve), officer-educator (a fictional character).’, school: ‘Link for a school (fixes the version for the learner):’, copy: ‘Copy’, copied: ‘Copied’, offlineTitle: ‘Offline mode (СУВУ)’, offlineHint: ‘Download all data to the device for use without internet.’, offlineOn: ‘Offline package active’, offlineOff: ‘Working online’ },
+  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: офицер-воспитатель (вымышленный персонаж).', school: 'Ссылка для школы (версия закрепляется у ученика):', copy: 'Скопировать', copied: 'Скопировано', offlineTitle: 'Офлайн-режим (СУВУ)', offlineHint: 'Загрузить все данные на устройство для работы без интернета.', offlineOn: 'Офлайн-пакет активен', offlineOff: 'Работаем онлайн' },
+  en: { title: 'Tutor version', hint: "Changes Svetlana's tone, pace and task difficulty.", who: 'For', cadet: 'Mentor: Captain Andrey Nikolaevich (reserve), officer-educator (a fictional character).', school: 'Link for a school (fixes the version for the learner):', copy: 'Copy', copied: 'Copied', offlineTitle: 'Offline mode (СУВУ)', offlineHint: 'Download all data to the device for use without internet.', offlineOn: 'Offline package active', offlineOff: 'Working online' },
 };
 const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 

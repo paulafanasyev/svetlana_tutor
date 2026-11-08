@@ -165,6 +165,9 @@ function CadetWelcomeGate({ track }) {
       utterance.lang = 'ru-RU';
       utterance.rate = 0.92;
       utterance.pitch = 0.82;
+      const male = (window.speechSynthesis.getVoices?.() || [])
+        .find((v) => /ru/i.test(v.lang) && /dmitry|dmitri|pavel|arslan|maxim/i.test(v.name));
+      if (male) utterance.voice = male;
       utterance.onend = enter;
       utterance.onerror = enter;
       utteranceRef.current = utterance;
@@ -181,12 +184,12 @@ function CadetWelcomeGate({ track }) {
       <div className="w-full max-w-xl text-center">
         <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center border-2 border-[#c9a227] text-3xl text-[#e0c35c]" aria-hidden="true">★</div>
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-[#d5c783]">Кадетский корпус · Вводный инструктаж</p>
-        <h1 id="cadet-welcome-title" className="mb-4 text-3xl font-black uppercase tracking-wide sm:text-4xl">Генерал Чуйков приветствует кадета</h1>
+        <h1 id="cadet-welcome-title" className="mb-4 text-3xl font-black uppercase tracking-wide sm:text-4xl">Наставник приветствует кадета</h1>
         <div className="relative mx-auto mb-4 aspect-[2/3] w-full max-w-[260px] overflow-hidden border-4 border-[#c9a227] bg-[#303824] shadow-2xl">
           <video ref={videoRef} src={CADET_WELCOME_VIDEO_URL} playsInline preload="metadata"
             className={`h-full w-full object-cover ${videoFailed ? 'hidden' : ''}`}
             onCanPlay={() => setVideoReady(true)} onError={() => setVideoFailed(true)}
-            onEnded={enter} aria-label="Видео-приветствие генерала Чуйкова" />
+            onEnded={enter} aria-label="Видео-приветствие наставника" />
           {(videoFailed || !videoReady) && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#596343] to-[#1b2112] p-5">
               <div className="text-7xl" aria-hidden="true">🎖</div>
@@ -197,7 +200,7 @@ function CadetWelcomeGate({ track }) {
         </div>
         {videoFailed && (
           <p role="status" className="mx-auto mb-4 max-w-md border border-[#c9a227]/60 bg-black/20 px-4 py-3 text-sm leading-relaxed text-[#f4edcf]">
-            Видео-приветствие генерала Чуйкова пока недоступно. Сейчас можно прослушать временное голосовое приветствие; для показа видео необходимо добавить исходный MP4-файл.
+            Видео-приветствие наставника пока недоступно. Сейчас можно прослушать временное голосовое приветствие; для показа видео необходимо добавить исходный MP4-файл.
           </p>
         )}
         <p className="mx-auto mb-5 max-w-md text-sm leading-relaxed text-[#e4dfc8]">

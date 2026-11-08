@@ -14,8 +14,8 @@ const VISEME_TO_LAYER = { rest: null, M: null, F: 'E', A: 'A', I: 'E', E: 'E', L
 // translucent half-open mouth reads as a ghost blur, a squashed full-res one
 // reads as a real jaw. Origins: A pivots on the upper lip (jaw drops), O and E
 // close symmetrically around the lip line.
-const MOUTH_SCALE = { A: (q) => 0.6 + 0.18 * q, O: (q) => 0.7 + 0.16 * q, E: (q) => 0.74 + 0.14 * q };
-const MOUTH_ORIGIN = { A: '50% 28.5%', O: '50% 29.4%', E: '50% 31.4%' };
+const MOUTH_SCALE = { A: (q) => 0.62 + 0.2 * q, O: (q) => 0.72 + 0.18 * q, E: (q) => 0.76 + 0.15 * q };
+const MOUTH_ORIGIN = { A: '50% 15%', O: '50% 16.1%', E: '50% 17.3%' };
 const HAPPY = new Set(['happy', 'encourage', 'excited', 'proud']);
 
 // Portraits ship as lazily-loaded JS modules with WebP data URLs (no extra

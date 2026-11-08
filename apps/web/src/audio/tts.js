@@ -127,7 +127,7 @@ function visemeFor(value) {
   const ch = s[0];
   if ('aая'.includes(ch)) return 'A';
   if ('eёеэ'.includes(ch)) return 'E';
-  if ('iіїйыy'.includes(ch)) return 'I';
+  if ('iіїйыyи'.includes(ch)) return 'I';
   if ('oо'.includes(ch)) return 'O';
   if ('uую'.includes(ch)) return 'U';
   if ('mbpмбп'.includes(ch)) return 'M';
@@ -135,6 +135,11 @@ function visemeFor(value) {
   if ('lntdлнтд'.includes(ch)) return 'L';
   return 'E';
 }
+// Mouth aperture per viseme class (0 = lips closed) -> overlay opacity, so consonants
+// read as half-open instead of full vowel shapes. Hold weight: vowels keep the jaw
+// dropped, labial/nasal consonants are quick.
+const VISEME_Q = { rest: 0, M: 0, F: 0.4, L: 0.5, I: 0.6, E: 0.72, W: 0.8, U: 0.85, O: 0.95, A: 1 };
+const VISEME_W = { rest: 0.4, M: 0.5, F: 0.65, L: 0.75, I: 0.9, E: 1, W: 1.05, U: 1.15, O: 1.2, A: 1.25 };
 function visemeUnits(value) {
   const chars = [...String(value || '')];
   const units = [];
@@ -164,24 +169,50 @@ function clearTimers(job) {
   if (job?.keepAlive) { clearInterval(job.keepAlive); job.keepAlive = null; }
 }
 function isCurrent(job) { return current === job && !job.ended; }
-function emitViseme(job, v, t = now() - job.startedAt) {
-  if (isCurrent(job)) speechBus.emit('viseme', { v, t, teacherId: job.teacherId });
+function emitViseme(job, v, t = now() - job.startedAt, q = VISEME_Q[v] ?? 1) {
+  if (isCurrent(job)) speechBus.emit('viseme', { v, t, q, teacherId: job.teacherId });
+}
+// Speech rhythm: words separated by brief lip closures, sentences by a longer pause.
+function speechUnits(text) {
+  const units = [];
+  String(text || '').trim().split(/\s+/).forEach((word, wi) => {
+    if (wi > 0) units.push({ v: 'M', w: VISEME_W.M });
+    visemeUnits(word).forEach((letter) => {
+      const v = visemeFor(letter);
+      units.push({ v, w: VISEME_W[v] ?? 1 });
+    });
+    if (/[.!?…]["»)]?$/.test(word)) units.push({ v: 'rest', w: VISEME_W.rest * 2.4 });
+  });
+  return units;
 }
 function scheduleEstimated(job, text, rate, offset = 0, duration = 0, initialDelay = 60) {
   if (!isCurrent(job)) return;
-  const letters = visemeUnits(text);
-  if (!letters.length) return;
-  const total = duration > 0 ? duration : (letters.length / (13 * Math.max(0.25, rate || 1))) * 1000;
-  const step = total / letters.length;
-  letters.forEach((letter, i) => {
-    job.timers.push(setTimeout(() => emitViseme(job, visemeFor(letter), offset + i * step), Math.max(0, initialDelay + i * step)));
+  const units = speechUnits(text);
+  if (!units.length) return;
+  const weight = units.reduce((s, u) => s + u.w, 0);
+  const total = duration > 0 ? duration : (weight / (13 * Math.max(0.25, rate || 1))) * 1000;
+  const scale = total / weight;
+  let t = 0;
+  units.forEach((u) => {
+    job.timers.push(setTimeout(() => emitViseme(job, u.v, offset + t, VISEME_Q[u.v] ?? 1), Math.max(0, initialDelay + t)));
+    t += u.w * scale;
   });
 }
 function scheduleWordVisemes(job, word, startAt) {
-  visemeUnits(word).forEach((letter, i) => {
-    job.timers.push(setTimeout(() => emitViseme(job, visemeFor(letter), startAt + i * 45), i * 45));
+  // ~13 visemes/s at rate 1 — the pace a real jaw moves at; faster pacing just
+  // vibrates between the three mouth overlays because easing cannot keep up.
+  const rate = Math.max(0.6, job.rate || 1);
+  let t = 0;
+  visemeUnits(word).forEach((letter) => {
+    const v = visemeFor(letter);
+    const w = VISEME_W[v] ?? 1;
+    job.timers.push(setTimeout(() => emitViseme(job, v, startAt + t, VISEME_Q[v] ?? 1), t));
+    t += (w * 75) / rate;
   });
+  job.timers.push(setTimeout(() => emitViseme(job, 'M', startAt + t + 20), t + 20));
 }
+// Test seam for the viseme rhythm unit test (src/audio/tts.visemes.test.js).
+export const visemeSpec = { VISEME_Q, VISEME_W, visemeFor, speechUnits };
 function wordAt(text, charIndex) {
   const before = String(text).slice(0, Math.max(0, charIndex));
   const match = String(text).slice(Math.max(0, charIndex)).match(/^[^\s]+/);
@@ -542,7 +573,7 @@ export const tts = {
       text: source,
       teacherId: teacher?.id,
       gender: teacher?.gender || 'f',
-      lang: normalizeLang(opts.lang || 'en-US'),
+      lang: normalizeLang(opts.lang || (textLang(source, 'en') === 'ru' ? 'ru-RU' : 'en-US')),
       rate: Number(teacher?.voice?.rate) || 1,
       pitch: Number(teacher?.voice?.pitch) || 1,
       fallbackUrl: opts.fallbackUrl,

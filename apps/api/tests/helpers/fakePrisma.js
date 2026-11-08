@@ -286,6 +286,12 @@ function createModelStore({ keyField = 'id', defaults = () => ({}), autoKey = tr
       throw err;
     },
 
+    async deleteMany({ where } = {}) {
+      const doomed = [...store.keys()].filter((k) => matchesWhere(store.get(k), where || {}));
+      for (const k of doomed) store.delete(k);
+      return { count: doomed.length };
+    },
+
     async count({ where } = {}) {
       const all = [...store.values()];
       return (where ? all.filter((r) => matchesWhere(r, where)) : all).length;

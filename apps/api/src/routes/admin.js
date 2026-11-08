@@ -124,6 +124,12 @@ router.delete(
         return res.status(404).json({ error: 'User not found' });
       }
 
+      // Lockout prevention: an admin cannot delete their own account
+      // (and thereby leave the school without administration).
+      if (req.params.id === req.user.id) {
+        return res.status(400).json({ error: 'You cannot delete your own account' });
+      }
+
       await prisma.user.delete({ where: { id: req.params.id } });
 
       await logAdminAction({
@@ -150,67 +156,54 @@ function dayKey(date) {
 // GET /api/admin/analytics
 router.get('/analytics', async (req, res, next) => {
   try {
-    const users = await prisma.user.findMany({});
-    const attempts = await prisma.attempt.findMany({});
-
     const now = new Date();
     const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 
-    // Active last 7d = users with at least one attempt in the last 7 days.
-    const activeUserIds = new Set(
-      attempts
-        .filter((a) => new Date(a.createdAt) >= sevenDaysAgo)
-        .map((a) => a.userId),
-    );
+    // Aggregate in the database: Attempt grows by one row per answer per child,
+    // so loading full tables would eventually exhaust memory.
+    const [totalUsers, totalStudents, totalAttempts, totalCorrect, activeUsers, byTypeAll, byTypeCorrect, topTopicRows, recentTimestamps] = await Promise.all([
+      prisma.user.count(),
+      prisma.user.count({ where: { role: 'STUDENT' } }),
+      prisma.attempt.count(),
+      prisma.attempt.count({ where: { correct: true } }),
+      prisma.attempt.groupBy({ by: ['userId'], where: { createdAt: { gte: sevenDaysAgo } } }),
+      prisma.attempt.groupBy({ by: ['taskType'], _count: { _all: true } }),
+      prisma.attempt.groupBy({ by: ['taskType'], _count: { _all: true }, where: { correct: true } }),
+      prisma.attempt.groupBy({ by: ['topic'], _count: { _all: true }, orderBy: { _count: { topic: 'desc' } }, take: 5 }),
+      prisma.attempt.findMany({ where: { createdAt: { gte: thirtyDaysAgo } }, select: { createdAt: true } }),
+    ]);
 
-    // Avg accuracy by taskType.
+    const correctByType = new Map(byTypeCorrect.map((row) => [row.taskType, row._count._all]));
     const byTaskType = {};
-    for (const attempt of attempts) {
-      if (!byTaskType[attempt.taskType]) {
-        byTaskType[attempt.taskType] = { total: 0, correct: 0 };
-      }
-      byTaskType[attempt.taskType].total += 1;
-      if (attempt.correct) byTaskType[attempt.taskType].correct += 1;
+    const avgAccuracyByTaskType = {};
+    for (const row of byTypeAll) {
+      const total = row._count._all;
+      const correct = correctByType.get(row.taskType) || 0;
+      byTaskType[row.taskType] = { total, correct };
+      avgAccuracyByTaskType[row.taskType] = total > 0 ? correct / total : 0;
     }
-    const avgAccuracyByTaskType = Object.fromEntries(
-      Object.entries(byTaskType).map(([key, { total, correct }]) => [
-        key,
-        total > 0 ? correct / total : 0,
-      ]),
-    );
 
-    // Attempts per day, last 30 days.
-    const recentAttempts = attempts.filter((a) => new Date(a.createdAt) >= thirtyDaysAgo);
+    // Attempts per day, last 30 days (bounded query, timestamps only).
     const perDayMap = {};
-    for (const attempt of recentAttempts) {
-      const key = dayKey(attempt.createdAt);
+    for (const { createdAt } of recentTimestamps) {
+      const key = dayKey(createdAt);
       perDayMap[key] = (perDayMap[key] || 0) + 1;
     }
     const attemptsPerDay = Object.entries(perDayMap)
       .map(([date, count]) => ({ date, count }))
       .sort((a, b) => (a.date < b.date ? -1 : 1));
 
-    // Top 5 topics by attempt count.
-    const topicCounts = {};
-    for (const attempt of attempts) {
-      topicCounts[attempt.topic] = (topicCounts[attempt.topic] || 0) + 1;
-    }
-    const topTopics = Object.entries(topicCounts)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([topic, count]) => ({ topic, count }));
-
-    const totalCorrect = attempts.filter((a) => a.correct).length;
+    const topTopics = topTopicRows.map((row) => ({ topic: row.topic, count: row._count.topic }));
 
     res.json({
       totals: {
-        users: users.length,
-        students: users.filter((u) => u.role === 'STUDENT').length,
-        attempts: attempts.length,
-        overallAccuracy: attempts.length > 0 ? totalCorrect / attempts.length : 0,
+        users: totalUsers,
+        students: totalStudents,
+        attempts: totalAttempts,
+        overallAccuracy: totalAttempts > 0 ? totalCorrect / totalAttempts : 0,
       },
-      activeLast7d: activeUserIds.size,
+      activeLast7d: activeUsers.length,
       avgAccuracyByTaskType,
       byTaskType,
       attemptsPerDay,

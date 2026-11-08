@@ -688,3 +688,7 @@ function makeHttpApi(base) {
 
 const API_URL = import.meta.env.VITE_API_URL;
 export const api = API_URL ? makeHttpApi(API_URL) : DemoApi;
+
+if (!API_URL) {
+  console.info('[Светлана Репетитор] Демо-режим: все данные хранятся локально на устройстве, сервер не используется. / Demo mode: all data stays on this device, no backend.');
+}

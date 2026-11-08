@@ -311,7 +311,7 @@ export default function MarketplaceCabinet() {
                     <span className="font-black text-primary ml-auto">{formatPrice(g.price)}</span>
                   </div>
                   {g.description && <div className="text-xs font-semibold text-ink/55 mt-1">{g.description}</div>}
-                  <div className="text-[11px] font-bold text-ink/40 mt-1">{t('mkt.submit.stock')}: {g.stock} · {g.partnerId}</div>}
+                  <div className="text-[11px] font-bold text-ink/40 mt-1">{t('mkt.submit.stock')}: {g.stock} · {g.partnerId}</div>
                   <div className="flex gap-2 mt-3">
                     <button type="button" className="btn-primary !py-1.5 !px-3 text-xs" onClick={() => flash(m.approve(g.id), t('mkt.mod.approved'))}>✓ {t('mkt.mod.approve')}</button>
                     <button type="button" className="btn-ghost !py-1.5 !px-3 text-xs text-rose-500" onClick={() => setRejectId(g.id)}>✕ {t('mkt.mod.reject')}</button>

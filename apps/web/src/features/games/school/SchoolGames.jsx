@@ -366,7 +366,7 @@ function Memory({ pack, onBack }) {
   }, [testN, testItems]);
 
   const again = useCallback(() => {
-    setItems(shuffle(pack.quiz).slice(0, Math.min(5, pack.quiz.length));
+    setItems(shuffle(pack.quiz).slice(0, Math.min(5, pack.quiz.length)));
     setTestItems([]);
     setPhase('study');
     setStudyN(0);

@@ -2,7 +2,7 @@
    Updates: navigations are network-first (a fresh index.html after every deploy); fingerprinted assets are
    cache-first; a failed asset is a real network error (never index.html in place of JS); the page reloads
    itself when a new build is out (see app/updateWatch.js). */
-const CACHE = 'aet-v3';
+const CACHE = 'aet-v9';
 const SHELL = [
   './',
   './index.html',
@@ -63,9 +63,12 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
 
   // The app shell: always try the network first, so a new deploy is picked up; offline → the cached shell.
+  // Only the actual app entry may overwrite the cached shell: a navigation to any
+  // other same-origin document (e.g. privacy.html) must not poison './index.html'.
   if (request.mode === 'navigate') {
+    const shellPath = new URL('./index.html', self.registration.scope).pathname;
     event.respondWith(fetch(request, { cache: 'no-store' }).then((response) => {
-      if (response.ok) {
+      if (response.ok && !response.redirected && new URL(response.url).pathname === shellPath) {
         const copy = response.clone();
         caches.open(CACHE).then((cache) => cache.put('./index.html', copy)).catch(() => {});
       }
@@ -83,6 +86,17 @@ self.addEventListener('fetch', (event) => {
 
   // Vite's fingerprinted bundles are immutable and safe to cache first.
   if (/\/assets\//.test(url.pathname)) {
+    // fixed-name media (greeting mp4) must stay fresh: network-first, cache only as offline fallback
+    if (/\.(mp4|webm|mp3)$/.test(url.pathname)) {
+      event.respondWith(fetch(request).then((response) => {
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE).then((cache) => cache.put(request, copy)).catch(() => {});
+        }
+        return response;
+      }).catch(() => caches.match(request)));
+      return;
+    }
     event.respondWith(cacheFirst(request));
   }
 });

@@ -50,13 +50,18 @@ router.get('/rooms', validate({ query: listQuery }), async (req, res, next) => {
     const where = {};
     if (schoolId) where.schoolId = schoolId;
 
-    // Scope: students/parents see only rooms they belong to; teachers see their classes + personal; admins see all.
+    // Scope: students/parents see only rooms they belong to; teachers see their
+    // own school only (membership or class rooms); admins see all.
     if (role === 'STUDENT' || role === 'PARENT') {
       where.members = { some: { userId } };
     } else if (role === 'TEACHER') {
-      // Teachers see rooms they're members of, plus class rooms for their classes.
+      const mySchoolId = req.user.schoolId;
+      if (schoolId && schoolId !== mySchoolId) return res.status(403).json({ error: 'Forbidden' });
+      const or = [{ members: { some: { userId } } }];
+      if (mySchoolId) or.push({ type: 'class', schoolId: mySchoolId });
+      where.OR = or;
       const myRooms = await prisma.chatRoom.findMany({
-        where: { ...where, OR: [{ members: { some: { userId } } }, { type: 'class', schoolId: where.schoolId }] },
+        where,
         include: { members: true, messages: { take: 1, orderBy: { createdAt: 'desc' } }, _count: { select: { messages: true } } },
         orderBy: { createdAt: 'desc' },
       });
@@ -90,11 +95,17 @@ router.post('/rooms', requireRole('TEACHER', 'ADMIN'), validate({ body: createRo
       return res.status(403).json({ error: 'Forbidden' });
     }
 
-    // Ensure all members exist and belong to the school (students in teacher's classes, or any user for admin).
+    // Ensure all members exist; teachers may only add users of their own school.
     const members = await prisma.user.findMany({ where: { id: { in: memberIds } } });
     if (members.length !== memberIds.length) {
       return res.status(400).json({ error: 'Some members not found' });
     }
+    if (role === 'TEACHER' && members.some((m) => m.schoolId !== schoolId)) {
+      return res.status(403).json({ error: 'Forbidden' });
+    }
+
+    // The creator always gets access to the room they created.
+    const memberUserIds = memberIds.includes(req.user.id) ? memberIds : [...memberIds, req.user.id];
 
     const room = await prisma.chatRoom.create({
       data: {
@@ -102,7 +113,7 @@ router.post('/rooms', requireRole('TEACHER', 'ADMIN'), validate({ body: createRo
         name,
         type,
         createdBy: req.user.id,
-        members: { create: memberIds.map((userId) => ({ userId })) },
+        members: { create: memberUserIds.map((userId) => ({ userId })) },
       },
       include: { members: true, messages: { take: 1, orderBy: { createdAt: 'desc' } }, _count: { select: { messages: true } } },
     });
@@ -123,10 +134,17 @@ router.get('/rooms/:roomId/messages', validate({ params: roomIdParam, query: z.o
     const room = await prisma.chatRoom.findUnique({ where: { id: roomId }, include: { members: true } });
     if (!room) return res.status(404).json({ error: 'Room not found' });
 
-    // Access control: must be member, or teacher/admin of the school.
+    // Access control: must be a member; otherwise only same-school staff or admin may read.
     const isMember = room.members.some((m) => m.userId === userId);
-    if (!isMember && role === 'STUDENT') return res.status(403).json({ error: 'Not a member' });
-    if (!isMember && role === 'TEACHER' && room.schoolId !== req.user.schoolId) return res.status(403).json({ error: 'Forbidden' });
+    if (!isMember) {
+      const sameSchoolStaff =
+        (role === 'TEACHER' || role === 'ADMIN') && room.schoolId === req.user.schoolId;
+      if (role === 'ADMIN' || sameSchoolStaff) {
+        // School staff may read rooms of their own school.
+      } else {
+        return res.status(403).json({ error: 'Not a member' });
+      }
+    }
 
     const where = { roomId };
     if (before) where.createdAt = { lt: new Date(before) };

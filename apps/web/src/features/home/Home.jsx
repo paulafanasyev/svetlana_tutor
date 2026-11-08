@@ -67,7 +67,7 @@ export default function Home() {
     { to: '/diary', icon: '📔', title: cadet ? pickL(L_CADET.diary, locale) : pickL(L_DIARY.title, locale), desc: pickL(L_DIARY.desc, locale), cls: 'from-indigo-500 to-violet-500' },
   ];
   const rank = rankOf(user.xp, locale);
-  const mentorName = cadet && teacher.rank ? (locale === 'ru' ? `${teacher.rank.ru} ${teacher.name}` : (teacher.nameEn || teacher.name)) : teacher.name;
+  const mentorName = locale === 'ru' ? teacher.name : (teacher.nameEn || teacher.name);
 
   return (
     <div className="space-y-6">

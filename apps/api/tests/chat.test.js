@@ -7,8 +7,8 @@ import { signAccessToken, hashPassword } from './setup.js';
 const app = createApp();
 
 describe('Chat API', () => {
-  let adminToken, teacherToken, studentToken, student2Token, parentToken;
-  let admin, teacher, student, parent, student2;
+  let adminToken, teacherToken, studentToken, student2Token, parentToken, teacher2Token;
+  let admin, teacher, student, parent, student2, teacher2, student3;
   let roomId;
 
   beforeEach(async () => {
@@ -23,11 +23,17 @@ describe('Chat API', () => {
     teacher = await prisma.user.create({
       data: { email: 'teacher@school.test', passwordHash: await hashPassword('teacher123'), name: 'Teacher', role: 'TEACHER', schoolId: 'school-1' },
     });
+    teacher2 = await prisma.user.create({
+      data: { email: 'teacher2@school.test', passwordHash: await hashPassword('teacher123'), name: 'Teacher 2', role: 'TEACHER', schoolId: 'school-2' },
+    });
     student = await prisma.user.create({
       data: { email: 'student@school.test', passwordHash: await hashPassword('student123'), name: 'Student', role: 'STUDENT', schoolId: 'school-1' },
     });
     student2 = await prisma.user.create({
       data: { email: 'student2@school.test', passwordHash: await hashPassword('student123'), name: 'Student 2', role: 'STUDENT', schoolId: 'school-1' },
+    });
+    student3 = await prisma.user.create({
+      data: { email: 'student3@school.test', passwordHash: await hashPassword('student123'), name: 'Student 3', role: 'STUDENT', schoolId: 'school-2' },
     });
     parent = await prisma.user.create({
       data: { email: 'parent@school.test', passwordHash: await hashPassword('parent123'), name: 'Parent', role: 'PARENT', schoolId: 'school-1' },
@@ -35,6 +41,7 @@ describe('Chat API', () => {
 
     adminToken = await signAccessToken({ sub: admin.id, role: admin.role });
     teacherToken = await signAccessToken({ sub: teacher.id, role: teacher.role });
+    teacher2Token = await signAccessToken({ sub: teacher2.id, role: teacher2.role });
     studentToken = await signAccessToken({ sub: student.id, role: student.role });
     student2Token = await signAccessToken({ sub: student2.id, role: student2.role });
     parentToken = await signAccessToken({ sub: parent.id, role: parent.role });
@@ -58,8 +65,18 @@ describe('Chat API', () => {
       expect(res.body).toHaveProperty('id');
       expect(res.body.name).toBe('Class 5A');
       expect(res.body.type).toBe('class');
-      expect(res.body.memberIds).toHaveLength(2);
+      // The creator is always added to the room they created.
+      expect(res.body.memberIds).toHaveLength(3);
+      expect(res.body.memberIds).toContain(teacher.id);
       roomId = res.body.id;
+    });
+
+    it('rejects a teacher adding members from another school', async () => {
+      await request(app)
+        .post('/api/chat/rooms')
+        .set('Authorization', `Bearer ${teacherToken}`)
+        .send({ schoolId: 'school-1', name: 'Mixed school', type: 'group', memberIds: [student3.id] })
+        .expect(403);
     });
 
     it('rejects teacher creating room in another school', async () => {
@@ -128,6 +145,22 @@ describe('Chat API', () => {
 
       expect(Array.isArray(res.body)).toBe(true);
       expect(res.body).toHaveLength(0);
+    });
+
+    it("hides another school's class rooms from a teacher", async () => {
+      const res = await request(app)
+        .get('/api/chat/rooms')
+        .set('Authorization', `Bearer ${teacher2Token}`)
+        .expect(200);
+
+      expect(res.body).toHaveLength(0);
+    });
+
+    it('rejects a teacher listing rooms of another school', async () => {
+      await request(app)
+        .get('/api/chat/rooms?schoolId=school-1')
+        .set('Authorization', `Bearer ${teacher2Token}`)
+        .expect(403);
     });
   });
 
@@ -212,6 +245,20 @@ describe('Chat API', () => {
       await request(app)
         .get(`/api/chat/rooms/${roomId}/messages`)
         .set('Authorization', `Bearer ${student2Token}`)
+        .expect(403);
+    });
+
+    it('rejects a non-member parent', async () => {
+      await request(app)
+        .get(`/api/chat/rooms/${roomId}/messages`)
+        .set('Authorization', `Bearer ${parentToken}`)
+        .expect(403);
+    });
+
+    it("rejects a teacher of another school", async () => {
+      await request(app)
+        .get(`/api/chat/rooms/${roomId}/messages`)
+        .set('Authorization', `Bearer ${teacher2Token}`)
         .expect(403);
     });
 

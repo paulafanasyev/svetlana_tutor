@@ -44,6 +44,10 @@ const logoutSchema = z.object({
 });
 
 async function issueTokenPair(user) {
+  // Housekeeping: expired rows are swept on every issuance, so the table
+  // cannot grow forever on a long-running server.
+  await prisma.refreshToken.deleteMany({ where: { expiresAt: { lt: new Date() } } });
+
   const accessToken = signAccessToken(user);
   const { raw, tokenHash, expiresAt } = generateRefreshToken();
 

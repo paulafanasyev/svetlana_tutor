@@ -86,7 +86,10 @@ router.post('/upload', uploadSingle, async (req, res, next) => {
 // GET /api/materials
 router.get('/', async (req, res, next) => {
   try {
-    const materials = await prisma.material.findMany({});
+    const materials = await prisma.material.findMany({
+      orderBy: { createdAt: 'desc' },
+      take: 200,
+    });
     res.json({
       materials: materials.map((m) => ({
         id: m.id,
