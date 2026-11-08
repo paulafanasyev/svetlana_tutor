@@ -1,10 +1,11 @@
-import { useApp, useT } from '../../core/store.js';
-import { TRACKS, trackById, DEFAULT_TRACK } from '../../data/tracks.js';
-import { sfx } from '../../audio/sfx.js';
+import { useApp, useT } from ‘../../core/store.js’;
+import { TRACKS, trackById, DEFAULT_TRACK } from ‘../../data/tracks.js’;
+import { sfx } from ‘../../audio/sfx.js’;
+import { Toggle } from ‘../../ui/kit.jsx’;
 
 const COPY = {
-  ru: { title: 'Версия репетитора', hint: 'Меняет тон, темп и сложность заданий Светланы.', who: 'Для кого', cadet: 'Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель (вымышленный персонаж).', school: 'Ссылка для школы (версия закрепляется у ученика):', copy: 'Скопировать', copied: 'Скопировано' },
-  en: { title: 'Tutor version', hint: 'Changes Svetlana’s tone, pace and task difficulty.', who: 'For', cadet: 'Mentor: Captain Andrey Nikolaevich (reserve), officer-educator (a fictional character).', school: 'Link for a school (fixes the version for the learner):', copy: 'Copy', copied: 'Copied' },
+  ru: { title: ‘Версия репетитора’, hint: ‘Меняет тон, темп и сложность заданий Светланы.’, who: ‘Для кого’, cadet: ‘Наставник: капитан запаса Андрей Николаевич, офицер-воспитатель (вымышленный персонаж).’, school: ‘Ссылка для школы (версия закрепляется у ученика):’, copy: ‘Скопировать’, copied: ‘Скопировано’, offlineTitle: ‘Офлайн-режим (СУВУ)’, offlineHint: ‘Загрузить все данные на устройство для работы без интернета.’, offlineOn: ‘Офлайн-пакет активен’, offlineOff: ‘Работаем онлайн’ },
+  en: { title: ‘Tutor version’, hint: ‘Changes Svetlana’s tone, pace and task difficulty.’, who: ‘For’, cadet: ‘Mentor: Captain Andrey Nikolaevich (reserve), officer-educator (a fictional character).’, school: ‘Link for a school (fixes the version for the learner):’, copy: ‘Copy’, copied: ‘Copied’, offlineTitle: ‘Offline mode (СУВУ)’, offlineHint: ‘Download all data to the device for use without internet.’, offlineOn: ‘Offline package active’, offlineOff: ‘Working online’ },
 };
 const pick = (v, locale) => (v && (v[locale] || v.en)) || '';
 
@@ -45,6 +46,18 @@ export default function TrackSettings() {
           <div className="flex gap-2 mt-1"><code className="flex-1 truncate bg-soft rounded-lg px-2 py-1">{link}</code><button className="btn-ghost !px-3 !py-1 text-xs" onClick={copy}>{c.copy}</button></div>
         </div>
       )}
+
+      <div className="mt-4 pt-4 border-t border-black/5">
+        <Toggle
+          checked={!!prefs.offlineMode}
+          onChange={(v) => { sfx.click(); setPref('offlineMode', v); }}
+          label={`📦 ${c.offlineTitle}`}
+        />
+        <p className="text-xs font-semibold text-ink/50 mt-1">{c.offlineHint}</p>
+        <div className={`text-xs font-bold mt-1 ${prefs.offlineMode ? 'text-emerald-600' : 'text-ink/40'}`}>
+          {prefs.offlineMode ? `✅ ${c.offlineOn}` : `🌐 ${c.offlineOff}`}
+        </div>
+      </div>
     </div>
   );
 }

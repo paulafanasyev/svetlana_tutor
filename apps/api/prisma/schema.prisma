@@ -28,6 +28,7 @@ model User {
   xp           Int      @default(0)
   coins        Int      @default(0)
   teacherId    String?
+  schoolId     String?
   locale       String   @default("ru")
   createdAt    DateTime @default(now())
 
@@ -43,6 +44,10 @@ model User {
   journalEntries JournalEntry[] @relation("StudentJournal")
   parentLinks    ParentLink[]   @relation("ParentLinks")
   childLinks     ParentLink[]   @relation("ChildLinks")
+
+  // Phase 11 — chat
+  chatMemberships ChatMember[]
+  chatMessages    ChatMessage[]
 
   @@index([teacherId])
 }
@@ -183,4 +188,52 @@ model JournalEntry {
   @@index([classId])
   @@index([teacherId])
   @@index([studentId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Phase 11 — chat rooms, members, messages
+// ---------------------------------------------------------------------------
+
+model ChatRoom {
+  id        String   @id @default(cuid())
+  schoolId  String
+  name      String
+  type      String   // school | class | group | personal
+  createdBy String
+  createdAt DateTime @default(now())
+
+  members  ChatMember[]
+  messages ChatMessage[]
+
+  @@index([schoolId])
+  @@index([type])
+}
+
+model ChatMember {
+  id        String   @id @default(cuid())
+  roomId    String
+  userId    String
+  createdAt DateTime @default(now())
+
+  room ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([roomId, userId])
+  @@index([userId])
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  roomId    String
+  authorId  String
+  text      String
+  createdAt DateTime @default(now())
+
+  room   ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  author User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([roomId])
+  @@index([authorId])
+  @@index([createdAt])
+  @@index([roomId, createdAt])
 }

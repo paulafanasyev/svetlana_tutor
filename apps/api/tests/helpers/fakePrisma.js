@@ -68,11 +68,31 @@ function applyUpdateData(existing, data) {
 
 function matchesWhere(record, where = {}) {
   return Object.entries(where).every(([key, cond]) => {
-    // Support the small operator subset the Phase-10 routes use: { in: [...] }, { not: x }.
+    // Logical operators
+    if (key === 'OR') {
+      return Array.isArray(cond) && cond.some((sub) => matchesWhere(record, sub));
+    }
+    if (key === 'AND') {
+      return Array.isArray(cond) && cond.every((sub) => matchesWhere(record, sub));
+    }
+    // Support the small operator subset the Phase-10 routes use: { in: [...] }, { not: x },
+    // { contains }, { gte }, { gt }, { lt }, { lte }.
     if (cond && typeof cond === 'object' && !Array.isArray(cond) && !(cond instanceof Date)) {
-      if ('in' in cond) return Array.isArray(cond.in) && cond.in.includes(record[key]);
-      if ('not' in cond) return record[key] !== cond.not;
-      return false; // unsupported operator → explicit non-match
+      let matched = true;
+      if ('in' in cond) matched = matched && Array.isArray(cond.in) && cond.in.includes(record[key]);
+      if ('not' in cond) matched = matched && record[key] !== cond.not;
+      if ('contains' in cond) {
+        const val = String(record[key] ?? '');
+        const search = cond.contains;
+        if (cond.mode === 'insensitive') matched = matched && val.toLowerCase().includes(search.toLowerCase());
+        else matched = matched && val.includes(search);
+      }
+      const toNum = (v) => (v instanceof Date ? v.getTime() : v);
+      if ('gte' in cond) matched = matched && toNum(record[key]) >= toNum(cond.gte);
+      if ('gt' in cond) matched = matched && toNum(record[key]) > toNum(cond.gt);
+      if ('lte' in cond) matched = matched && toNum(record[key]) <= toNum(cond.lte);
+      if ('lt' in cond) matched = matched && toNum(record[key]) < toNum(cond.lt);
+      return matched;
     }
     return record[key] === cond;
   });
@@ -143,10 +163,38 @@ function createModelStore({ keyField = 'id', defaults = () => ({}), autoKey = tr
       return null;
     },
 
-    async findMany({ where } = {}) {
+    async findMany({ where, skip, take, orderBy: ob } = {}) {
       const all = [...store.values()];
-      const filtered = where ? all.filter((r) => matchesWhere(r, where)) : all;
+      let filtered = where ? all.filter((r) => matchesWhere(r, where)) : all;
+      if (ob) filtered = applyOrderBy(filtered, ob);
+      if (skip != null) filtered = filtered.slice(skip);
+      if (take != null) filtered = filtered.slice(0, take);
       return filtered.map(clone);
+    },
+
+    async groupBy({ by, _count, where, take }) {
+      const all = where ? [...store.values()].filter((r) => matchesWhere(r, where)) : [...store.values()];
+      const groups = new Map();
+      for (const record of all) {
+        const key = by.map((f) => JSON.stringify(record[f])).join('|||');
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(record);
+      }
+      let results = [];
+      for (const [, records] of groups) {
+        const result = {};
+        by.forEach((f) => { result[f] = records[0][f]; });
+        if (_count) {
+          result._count = {};
+          if (_count._all !== undefined) result._count._all = records.length;
+          for (const field of Object.keys(_count)) {
+            if (field !== '_all') result._count[field] = records.length;
+          }
+        }
+        results.push(result);
+      }
+      if (take != null) results = results.slice(0, take);
+      return results;
     },
 
     async create({ data }) {
@@ -299,8 +347,7 @@ export function createFakePrisma() {
     return {
       ...base,
       async findMany(args = {}) {
-        let rows = await base.findMany({ where: args.where });
-        if (args.orderBy) rows = applyOrderBy(rows, args.orderBy);
+        let rows = await base.findMany({ where: args.where, skip: args.skip, take: args.take, orderBy: args.orderBy });
         if (args.include) rows = await Promise.all(rows.map((r) => resolveInclude(name, r, args.include, models)));
         return rows;
       },

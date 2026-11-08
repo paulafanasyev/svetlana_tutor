@@ -2,6 +2,8 @@
 node_modules/
 apps/web/dist/
 apps/web/dist-demo/
+apps/web/dist-offline/
+dist-offline/
 apps/web/android/
 apps/web/ios/
 

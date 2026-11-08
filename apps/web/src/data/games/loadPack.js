@@ -1,5 +1,5 @@
 // Вопросы грузятся только когда ребёнок открыл игру: один файл на предмет (все классы внутри).
-import { normalizeGrade, mergeMore } from './subjects.js';
+import { normalizeGrade, mergeMore, filterByTrack } from './subjects.js';
 import { REVIEW } from './review.js';
 
 export const LOADERS = {
@@ -36,11 +36,15 @@ const cache = new Map();
 const cached = (key, load) => { if (!cache.has(key)) cache.set(key, load().then((m) => m.default || m)); return cache.get(key); };
 
 // → { subject, grade, quiz, pairs, review } или null, если вопросов для класса нет.
-export async function loadPack(slug, grade) {
+// track (необязательный): 'base' | 'cadet' | 'lyceum' | 'care' — фильтрует вопросы по слою трека.
+//   Вопросы без поля track считаются базовыми и показываются всем.
+export async function loadPack(slug, grade, track) {
   const load = LOADERS[slug];
   if (!load) return null;
   const moreLoad = MORE[`./more/${slug}.json`];
   const [file, more] = await Promise.all([cached(slug, load), moreLoad ? cached(`more:${slug}`, moreLoad) : null]);
-  const g = normalizeGrade(slug, grade, mergeMore(file.grades?.[String(grade)], more?.grades?.[String(grade)]));
+  const rawMerged = mergeMore(file.grades?.[String(grade)], more?.grades?.[String(grade)]);
+  const rawFiltered = filterByTrack(rawMerged, track);
+  const g = normalizeGrade(slug, grade, rawFiltered);
   return g ? { ...g, review: REVIEW[slug] || null } : null;
 }

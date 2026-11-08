@@ -89,6 +89,33 @@ function equivalent(astA, astB) {
   return true;
 }
 
+// Exact radical k√m (m squarefree). Accepts «3√2», «√18», «3*sqrt(2)», «4». BigInt only.
+const RAD_LIMIT = 10n ** 10n; // bound the radicand so factorisation stays fast
+function parseRadical(input) {
+  let s = String(input ?? '').trim().toLowerCase();
+  if (s.length > MAX_INPUT) throw new MathError('long');
+  s = s.replace(/[−–—]/g, '-').replace(/[×·∙]/g, '*').replace(/\s+/g, '');
+  s = s.replace(/sqrt|корень/g, '√');
+  let sign = 1n;
+  if (s[0] === '-') { sign = -1n; s = s.slice(1); } else if (s[0] === '+') { s = s.slice(1); }
+  let k = 1n, m = 1n;
+  const idx = s.indexOf('√');
+  const digits = (x) => { if (!/^\d+$/.test(x) || x.length > MAX_DIGITS) throw new MathError('radical'); return BigInt(x); };
+  if (idx === -1) {
+    k = digits(s);
+  } else {
+    const coef = s.slice(0, idx).replace(/\*$/, '');
+    let rad = s.slice(idx + 1).replace(/^\(/, '').replace(/\)$/, '');
+    if (coef !== '') k = digits(coef);
+    m = digits(rad);
+    if (m <= 0n) throw new MathError('radical');
+  }
+  if (m > RAD_LIMIT) throw new MathError('long');
+  let i = 2n;
+  while (i * i <= m) { while (m % (i * i) === 0n) { m /= i * i; k *= i; } i += 1n; }
+  return { k: sign * k, m };
+}
+
 function genericDiagnosis(got, exp) {
   if (!exp.eq(0) && got.eq(exp.neg())) return msg('Почти! Проверь знак.', 'Almost! Check the sign.');
   if (!exp.eq(0) && (got.eq(exp.mul(10)) || got.eq(exp.div(10)) || got.eq(exp.mul(100)) || got.eq(exp.div(100))))
@@ -104,6 +131,7 @@ function genericDiagnosis(got, exp) {
  *  { kind:'number', value:'3/4', requireReduced?:true, mistakes?:[{value, note}] }
  *  { kind:'roots', values:['2','-3'] }
  *  { kind:'expr', value:'2x+6', forbidParens?:true }
+ *  { kind:'radical', value:'3√2' }  // exact k√m, m squarefree
  */
 export function check(answer, input) {
   const raw = String(input ?? '').trim();
@@ -144,12 +172,23 @@ export function check(answer, input) {
       }
       return { status: 'wrong', note: msg('Проверь при x = 1: совпадает ли твоё выражение с исходным?', 'Test with x = 1: does your expression match the original?') };
     }
+    if (answer.kind === 'radical') {
+      const exp = parseRadical(answer.value);
+      const got = parseRadical(raw);
+      if (got.k === exp.k && got.m === exp.m) return { status: 'correct' };
+      for (const m of answer.mistakes || []) {
+        const mv = parseRadical(m.value);
+        if (got.k === mv.k && got.m === mv.m) return { status: 'wrong', mistake: m.id, note: m.note };
+      }
+      return { status: 'wrong', note: msg('Запиши корень в точном виде k√m и вынеси квадратный множитель.', 'Write the root in exact form k√m with the square factor pulled out.') };
+    }
     throw new MathError('kind');
   } catch (e) {
     if (e instanceof MathError) {
       if (e.code === 'div0') return { status: 'invalid', note: msg('На ноль делить нельзя.', 'You cannot divide by zero.') };
       if (e.code === 'long') return { status: 'invalid', note: msg('Слишком длинная запись.', 'That input is too long.') };
       if (e.code === 'var_div' || e.code === 'var_pow') return { status: 'invalid', note: msg('Запиши ответ как многочлен, без деления на x.', 'Write the answer as a polynomial, without dividing by x.') };
+      if (e.code === 'radical') return { status: 'invalid', note: msg('Запиши корень в виде k√m, например 3√2 или √18.', 'Write the root as k√m, e.g. 3√2 or √18.') };
       return { status: 'invalid', note: msg('Не понимаю запись. Пример: 3/4, −2,5, 2x+6.', "Can't read that. Examples: 3/4, −2.5, 2x+6.") };
     }
     throw e;

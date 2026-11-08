@@ -15,6 +15,7 @@ import materialsRouter from './routes/materials.js';
 import teacherRouter from './routes/teacher.js';
 import journalRouter from './routes/journal.js';
 import parentRouter from './routes/parent.js';
+import chatRouter from './routes/chat.js';
 import { notFoundHandler, errorHandler } from './middleware/errors.js';
 
 export function createApp() {
@@ -66,9 +67,12 @@ export function createApp() {
   app.use(express.urlencoded({ extended: false, limit: '1mb' }));
 
   // --- Rate limiting --------------------------------------------------
+  // In test runs a single file issues hundreds of auth requests from one IP;
+  // the limits are exercised by dedicated security tests, not by traffic volume.
+  const isTest = process.env.NODE_ENV === 'test';
   const globalLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 300,
+    max: isTest ? 1000000 : 300,
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: 'Too many requests, please try again later.' },
@@ -76,7 +80,7 @@ export function createApp() {
 
   const authLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 20,
+    max: isTest ? 1000000 : 20,
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: 'Too many authentication attempts, please try again later.' },
@@ -100,6 +104,7 @@ export function createApp() {
   app.use('/api/teacher', teacherRouter);
   app.use('/api/journal', journalRouter);
   app.use('/api/parent', parentRouter);
+  app.use('/api/chat', chatRouter);
 
   // --- 404 + error handling ------------------------------------------
   app.use(notFoundHandler);

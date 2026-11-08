@@ -238,7 +238,8 @@ const DemoApi = {
     const d = db();
     const u = sessionUser(d);
     if (!u) return null;
-    d.attempts.push({ id: uid(), userId: u.id, taskType: normalizeTaskType(taskType), topic, level, correct: !!correct, durationMs: durationMs || 0, at: now() });
+    const safeLevel = ['A1', 'A2', 'B1', 'B2'].includes(level) ? level : u.level || 'A1';
+    d.attempts.push({ id: uid(), userId: u.id, taskType: normalizeTaskType(taskType), topic: String(topic || 'general').slice(0, 120), level: safeLevel, correct: !!correct, durationMs: Math.max(0, Math.min(3600000, Math.round(durationMs || 0))), at: now() });
     u.lastActive = now();
     adaptLevel(d, u);
     save(d); return publicUser(u);
@@ -439,6 +440,67 @@ const DemoApi = {
     const entries = (d.journal || []).filter((e) => e.studentId === childId).sort((a, b) => b.at - a.at).map((e) => ({ ...e, teacherName: nameOf(e.teacherId) }));
     return { summary: this._summary(d, child), entries };
   },
+  async listChatRooms(schoolId) {
+    const d = db(); const u = sessionUser(d);
+    if (!u) throw new Error('auth');
+    const rooms = (d.chatRooms || []).filter((r) => !schoolId || r.schoolId === schoolId);
+    const visible = u.role === 'ADMIN' ? rooms : rooms.filter((r) => r.memberIds.includes(u.id) || (u.role === 'TEACHER' && r.schoolId === 'school-demo'));
+    return visible.map((r) => ({
+      id: r.id, schoolId: r.schoolId, name: r.name, type: r.type,
+      memberIds: r.memberIds, isMember: r.memberIds.includes(u.id),
+      messageCount: (r.messages || []).length,
+      lastMessage: r.messages?.length ? { id: r.messages[0].id, text: r.messages[0].text, authorId: r.messages[0].authorId, at: r.messages[0].at } : null,
+      createdAt: r.createdAt,
+    }));
+  },
+  async createChatRoom(data) {
+    const d = db(); const u = requireRole(d, 'TEACHER', 'ADMIN');
+    const room = { id: uid(), schoolId: data.schoolId, name: data.name, type: data.type, memberIds: data.memberIds || [], messages: [], createdBy: u.id, createdAt: now() };
+    d.chatRooms = d.chatRooms || [];
+    d.chatRooms.unshift(room);
+    save(d);
+    return { ...room, isMember: true, messageCount: 0, lastMessage: null };
+  },
+  async listChatMessages(roomId, limit = 50, before) {
+    const d = db(); const u = sessionUser(d);
+    if (!u) throw new Error('auth');
+    const room = (d.chatRooms || []).find((r) => r.id === roomId);
+    if (!room) return [];
+    if (!room.memberIds.includes(u.id) && u.role !== 'ADMIN') throw new Error('forbidden');
+    let msgs = room.messages || [];
+    if (before) msgs = msgs.filter((m) => m.at < before);
+    return msgs.slice(-limit).reverse().map((m) => ({ id: m.id, roomId: m.roomId, authorId: m.authorId, authorName: d.users.find((x) => x.id === m.authorId)?.name || '—', text: m.text, at: m.at }));
+  },
+  async sendChatMessage(roomId, text) {
+    const d = db(); const u = sessionUser(d);
+    if (!u) throw new Error('auth');
+    const room = (d.chatRooms || []).find((r) => r.id === roomId);
+    if (!room) throw new Error('notfound');
+    if (!room.memberIds.includes(u.id)) throw new Error('forbidden');
+    const trimmed = String(text || '').slice(0, 2000);
+    if (!trimmed) throw new Error('empty');
+    const msg = { id: uid(), roomId, authorId: u.id, text: trimmed, at: now() };
+    room.messages = room.messages || [];
+    room.messages.push(msg);
+    save(d);
+    return { ...msg, authorName: u.name };
+  },
+  async addChatMember(roomId, userId) {
+    const d = db(); requireRole(d, 'TEACHER', 'ADMIN');
+    const room = (d.chatRooms || []).find((r) => r.id === roomId);
+    if (!room) throw new Error('notfound');
+    if (!room.memberIds.includes(userId)) room.memberIds.push(userId);
+    save(d);
+  },
+  async removeChatMember(roomId, userId) {
+    const d = db(); const u = sessionUser(d);
+    if (!u) throw new Error('auth');
+    const room = (d.chatRooms || []).find((r) => r.id === roomId);
+    if (!room) throw new Error('notfound');
+    if (u.role !== 'ADMIN' && u.role !== 'TEACHER' && u.id !== userId) throw new Error('forbidden');
+    room.memberIds = room.memberIds.filter((id) => id !== userId);
+    save(d);
+  },
   async resetDemo() { storage.del(DB_KEY); storage.del(SES_KEY); },
 };
 
@@ -599,6 +661,27 @@ function makeHttpApi(base) {
     async deleteJournalEntry(id) { return call('/api/journal/' + id, { method: 'DELETE' }); },
     async myChildren() { return call('/api/parent/children'); },
     async childDiary(id) { return call('/api/parent/children/' + id + '/diary'); },
+    async listChatRooms(schoolId) {
+      const q = schoolId ? '?schoolId=' + encodeURIComponent(schoolId) : '';
+      return call('/api/chat/rooms' + q);
+    },
+    async createChatRoom(data) {
+      return call('/api/chat/rooms', { method: 'POST', body: data });
+    },
+    async listChatMessages(roomId, limit = 50, before) {
+      const params = new URLSearchParams({ limit: String(limit) });
+      if (before) params.set('before', String(before));
+      return call('/api/chat/rooms/' + roomId + '/messages?' + params.toString());
+    },
+    async sendChatMessage(roomId, text) {
+      return call('/api/chat/rooms/' + roomId + '/messages', { method: 'POST', body: { text } });
+    },
+    async addChatMember(roomId, userId) {
+      return call('/api/chat/rooms/' + roomId + '/members', { method: 'POST', body: { userId } });
+    },
+    async removeChatMember(roomId, userId) {
+      return call('/api/chat/rooms/' + roomId + '/members/' + userId, { method: 'DELETE' });
+    },
     async resetDemo() {},
   };
 }

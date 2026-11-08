@@ -1658,9 +1658,4479 @@
       "difficulty": "basic",
       "authorship": "original",
       "license": "CC BY 4.0"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 7 яблок, во второй 4. Сколько яблок в двух корзинах вместе?",
+      "answer": "11",
+      "explanation": "Складываем: 7 + 4 = 11.",
+      "difficulty": "basic",
+      "id": "g1-gen-001"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 14 рублей. Она потратила 13 рублей. Сколько рублей осталось?",
+      "answer": "1",
+      "explanation": "Вычитаем: 14 − 13 = 1.",
+      "difficulty": "basic",
+      "id": "g2-gen-001"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 73 яблок, во второй 22. Сколько яблок в двух корзинах вместе?",
+      "answer": "95",
+      "explanation": "Складываем: 73 + 22 = 95.",
+      "difficulty": "basic",
+      "id": "g3-gen-001"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 430.",
+      "answer": "43",
+      "explanation": "10% — это десятая часть: 430 ÷ 10 = 43.",
+      "difficulty": "advanced",
+      "id": "g4-gen-001"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 3 см и 11 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "33",
+      "explanation": "Площадь = 3 × 11 = 33 см².",
+      "difficulty": "basic",
+      "id": "g5-gen-001"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 120.",
+      "answer": "12",
+      "explanation": "10% — это десятая часть: 120 ÷ 10 = 12.",
+      "difficulty": "advanced",
+      "id": "g6-gen-001"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/9",
+      "explanation": "Белых 2 из 9 шаров, вероятность = 2/9.",
+      "difficulty": "advanced",
+      "id": "g7-gen-001"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 4, разность d = 5. Найди 10-й член.",
+      "answer": "49",
+      "explanation": "aₙ = a₁ + (n−1)d = 4 + 9 × 5 = 49.",
+      "difficulty": "advanced",
+      "id": "g8-gen-001"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 6 белых и 2 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "6/8",
+      "explanation": "Белых 6 из 8 шаров, вероятность = 6/8.",
+      "difficulty": "advanced",
+      "id": "g9-gen-001"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 9 при a = 12.",
+      "answer": "45",
+      "explanation": "3 × 12 + 9 = 36 + 9 = 45.",
+      "difficulty": "basic",
+      "id": "g10-gen-001"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 6 учеников?",
+      "answer": "15",
+      "explanation": "C(6,2) = 6 × 5 ÷ 2 = 15.",
+      "difficulty": "advanced",
+      "id": "g11-gen-001"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 13 рублей. Она потратила 10 рублей. Сколько рублей осталось?",
+      "answer": "3",
+      "explanation": "Вычитаем: 13 − 10 = 3.",
+      "difficulty": "basic",
+      "id": "g1-gen-002"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 19 см и 16 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "304",
+      "explanation": "Площадь = 19 × 16 = 304 см².",
+      "difficulty": "basic",
+      "id": "g2-gen-002"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 12 см и 16 см. Найди его периметр в сантиметрах.",
+      "answer": "56",
+      "explanation": "Периметр = 2 × (12 + 16) = 56 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-002"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 2 × 2.",
+      "answer": "4",
+      "explanation": "Табличное умножение: 2 × 2 = 4.",
+      "difficulty": "basic",
+      "id": "g4-gen-002"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 4 см и 13 см. Найди его периметр в сантиметрах.",
+      "answer": "34",
+      "explanation": "Периметр = 2 × (4 + 13) = 34 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-002"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 6 см и 6 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "36",
+      "explanation": "Площадь = 6 × 6 = 36 см².",
+      "difficulty": "basic",
+      "id": "g6-gen-002"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 6 учеников?",
+      "answer": "15",
+      "explanation": "C(6,2) = 6 × 5 ÷ 2 = 15.",
+      "difficulty": "advanced",
+      "id": "g7-gen-002"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 15x + 56 = 0 имеет корни 7 и 8. Чему равна сумма корней?",
+      "answer": "15",
+      "explanation": "По теореме Виета сумма корней равна 15 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-002"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 6 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/8",
+      "explanation": "Белых 2 из 8 шаров, вероятность = 2/8.",
+      "difficulty": "advanced",
+      "id": "g9-gen-002"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 10 см и 7 см. Найди его площадь в см².",
+      "answer": "35",
+      "explanation": "Площадь = (10 × 7) ÷ 2 = 35 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-002"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 9 при a = 2.",
+      "answer": "15",
+      "explanation": "3 × 2 + 9 = 6 + 9 = 15.",
+      "difficulty": "basic",
+      "id": "g11-gen-002"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 4 + 9 × 6.",
+      "answer": "58",
+      "explanation": "Сначала умножение: 9 × 6 = 54, затем 4 + 54 = 58.",
+      "difficulty": "basic",
+      "id": "g1-gen-003"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 400.",
+      "answer": "40",
+      "explanation": "10% — это десятая часть: 400 ÷ 10 = 40.",
+      "difficulty": "advanced",
+      "id": "g2-gen-003"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 37 рублей. Она потратила 29 рублей. Сколько рублей осталось?",
+      "answer": "8",
+      "explanation": "Вычитаем: 37 − 29 = 8.",
+      "difficulty": "basic",
+      "id": "g3-gen-003"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 15 см и 15 см. Найди его периметр в сантиметрах.",
+      "answer": "60",
+      "explanation": "Периметр = 2 × (15 + 15) = 60 см.",
+      "difficulty": "basic",
+      "id": "g4-gen-003"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 7 см и 16 см. Найди его периметр в сантиметрах.",
+      "answer": "46",
+      "explanation": "Периметр = 2 × (7 + 16) = 46 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-003"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 370.",
+      "answer": "37",
+      "explanation": "10% — это десятая часть: 370 ÷ 10 = 37.",
+      "difficulty": "advanced",
+      "id": "g6-gen-003"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 38 = 46. Чему равен x?",
+      "answer": "8",
+      "explanation": "x = 46 − 38 = 8.",
+      "difficulty": "basic",
+      "id": "g7-gen-003"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 7 см и 3 см. Найди его площадь в см².",
+      "answer": "10.5",
+      "explanation": "Площадь = (7 × 3) ÷ 2 = 10.5 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-003"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 6 учеников?",
+      "answer": "15",
+      "explanation": "C(6,2) = 6 × 5 ÷ 2 = 15.",
+      "difficulty": "advanced",
+      "id": "g9-gen-003"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 37° и 42°. Найди третий угол в градусах.",
+      "answer": "101",
+      "explanation": "Сумма углов треугольника 180°: 180 − 37 − 42 = 101°.",
+      "difficulty": "basic",
+      "id": "g10-gen-003"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 11 см и 11 см. Найди его площадь в см².",
+      "answer": "60.5",
+      "explanation": "Площадь = (11 × 11) ÷ 2 = 60.5 см².",
+      "difficulty": "basic",
+      "id": "g11-gen-003"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 2 + 2 × 7.",
+      "answer": "16",
+      "explanation": "Сначала умножение: 2 × 7 = 14, затем 2 + 14 = 16.",
+      "difficulty": "basic",
+      "id": "g1-gen-004"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 11 + 2 × 8.",
+      "answer": "27",
+      "explanation": "Сначала умножение: 2 × 8 = 16, затем 11 + 16 = 27.",
+      "difficulty": "basic",
+      "id": "g2-gen-004"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 8 × 6.",
+      "answer": "48",
+      "explanation": "Табличное умножение: 8 × 6 = 48.",
+      "difficulty": "basic",
+      "id": "g3-gen-004"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 5.",
+      "answer": "25",
+      "explanation": "Табличное умножение: 5 × 5 = 25.",
+      "difficulty": "basic",
+      "id": "g4-gen-004"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 44 рублей. Она потратила 7 рублей. Сколько рублей осталось?",
+      "answer": "37",
+      "explanation": "Вычитаем: 44 − 7 = 37.",
+      "difficulty": "basic",
+      "id": "g5-gen-004"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 8.",
+      "answer": "56",
+      "explanation": "Табличное умножение: 7 × 8 = 56.",
+      "difficulty": "basic",
+      "id": "g6-gen-004"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 6 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "6/13",
+      "explanation": "Белых 6 из 13 шаров, вероятность = 6/13.",
+      "difficulty": "advanced",
+      "id": "g7-gen-004"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 35° и 66°. Найди третий угол в градусах.",
+      "answer": "79",
+      "explanation": "Сумма углов треугольника 180°: 180 − 35 − 66 = 79°.",
+      "difficulty": "basic",
+      "id": "g8-gen-004"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 9, разность d = 3. Найди 7-й член.",
+      "answer": "27",
+      "explanation": "aₙ = a₁ + (n−1)d = 9 + 6 × 3 = 27.",
+      "difficulty": "advanced",
+      "id": "g9-gen-004"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 10 см. Найди объём куба в см³.",
+      "answer": "1000",
+      "explanation": "Объём куба = a³ = 10³ = 1000 см³.",
+      "difficulty": "advanced",
+      "id": "g10-gen-004"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 5 = 39. Чему равен x?",
+      "answer": "34",
+      "explanation": "x = 39 − 5 = 34.",
+      "difficulty": "basic",
+      "id": "g11-gen-004"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 110.",
+      "answer": "11",
+      "explanation": "10% — это десятая часть: 110 ÷ 10 = 11.",
+      "difficulty": "advanced",
+      "id": "g1-gen-005"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 14?",
+      "answer": "7",
+      "explanation": "Половина — это 14 ÷ 2 = 7.",
+      "difficulty": "basic",
+      "id": "g2-gen-005"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 101 рублей. Она потратила 3 рублей. Сколько рублей осталось?",
+      "answer": "98",
+      "explanation": "Вычитаем: 101 − 3 = 98.",
+      "difficulty": "basic",
+      "id": "g3-gen-005"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 9 × 5.",
+      "answer": "45",
+      "explanation": "Табличное умножение: 9 × 5 = 45.",
+      "difficulty": "basic",
+      "id": "g4-gen-005"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 8 × 6.",
+      "answer": "48",
+      "explanation": "Табличное умножение: 8 × 6 = 48.",
+      "difficulty": "basic",
+      "id": "g5-gen-005"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 20 ÷ 5.",
+      "answer": "4",
+      "explanation": "20 ÷ 5 = 4, потому что 5 × 4 = 20.",
+      "difficulty": "basic",
+      "id": "g6-gen-005"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 47° и 54°. Найди третий угол в градусах.",
+      "answer": "79",
+      "explanation": "Сумма углов треугольника 180°: 180 − 47 − 54 = 79°.",
+      "difficulty": "basic",
+      "id": "g7-gen-005"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 53° и 46°. Найди третий угол в градусах.",
+      "answer": "81",
+      "explanation": "Сумма углов треугольника 180°: 180 − 53 − 46 = 81°.",
+      "difficulty": "basic",
+      "id": "g8-gen-005"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 5 белых и 2 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "5/7",
+      "explanation": "Белых 5 из 7 шаров, вероятность = 5/7.",
+      "difficulty": "advanced",
+      "id": "g9-gen-005"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 9 и 12. Найди гипотенузу.",
+      "answer": "15",
+      "explanation": "c² = 9² + 12² = 81 + 144 = 225, значит c = 15.",
+      "difficulty": "advanced",
+      "id": "g10-gen-005"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 2x = 24. Чему равен x?",
+      "answer": "12",
+      "explanation": "x = 24 ÷ 2 = 12.",
+      "difficulty": "basic",
+      "id": "g11-gen-005"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 14 см и 19 см. Найди его периметр в сантиметрах.",
+      "answer": "66",
+      "explanation": "Периметр = 2 × (14 + 19) = 66 см.",
+      "difficulty": "basic",
+      "id": "g1-gen-006"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 18?",
+      "answer": "9",
+      "explanation": "Половина — это 18 ÷ 2 = 9.",
+      "difficulty": "basic",
+      "id": "g2-gen-006"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 8 ÷ 4.",
+      "answer": "2",
+      "explanation": "8 ÷ 4 = 2, потому что 4 × 2 = 8.",
+      "difficulty": "basic",
+      "id": "g3-gen-006"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 93 рублей. Она потратила 72 рублей. Сколько рублей осталось?",
+      "answer": "21",
+      "explanation": "Вычитаем: 93 − 72 = 21.",
+      "difficulty": "basic",
+      "id": "g4-gen-006"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 126 рублей. Она потратила 119 рублей. Сколько рублей осталось?",
+      "answer": "7",
+      "explanation": "Вычитаем: 126 − 119 = 7.",
+      "difficulty": "basic",
+      "id": "g5-gen-006"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 18 + 8 × 7.",
+      "answer": "74",
+      "explanation": "Сначала умножение: 8 × 7 = 56, затем 18 + 56 = 74.",
+      "difficulty": "basic",
+      "id": "g6-gen-006"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 32 = 57. Чему равен x?",
+      "answer": "25",
+      "explanation": "x = 57 − 32 = 25.",
+      "difficulty": "basic",
+      "id": "g7-gen-006"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 11 см и 11 см. Найди его площадь в см².",
+      "answer": "60.5",
+      "explanation": "Площадь = (11 × 11) ÷ 2 = 60.5 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-006"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 9 см и 12 см. Найди его площадь в см².",
+      "answer": "54",
+      "explanation": "Площадь = (9 × 12) ÷ 2 = 54 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-006"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 5 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/8",
+      "explanation": "Белых 3 из 8 шаров, вероятность = 3/8.",
+      "difficulty": "advanced",
+      "id": "g11-gen-006"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 17 + 5 × 3.",
+      "answer": "32",
+      "explanation": "Сначала умножение: 5 × 3 = 15, затем 17 + 15 = 32.",
+      "difficulty": "basic",
+      "id": "g1-gen-007"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 8 ÷ 2.",
+      "answer": "4",
+      "explanation": "8 ÷ 2 = 4, потому что 2 × 4 = 8.",
+      "difficulty": "basic",
+      "id": "g2-gen-007"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 53 яблок, во второй 26. Сколько яблок в двух корзинах вместе?",
+      "answer": "79",
+      "explanation": "Складываем: 53 + 26 = 79.",
+      "difficulty": "basic",
+      "id": "g3-gen-007"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 390.",
+      "answer": "39",
+      "explanation": "10% — это десятая часть: 390 ÷ 10 = 39.",
+      "difficulty": "advanced",
+      "id": "g4-gen-007"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 17 + 3 × 6.",
+      "answer": "35",
+      "explanation": "Сначала умножение: 3 × 6 = 18, затем 17 + 18 = 35.",
+      "difficulty": "basic",
+      "id": "g5-gen-007"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 9 × 4.",
+      "answer": "36",
+      "explanation": "Табличное умножение: 9 × 4 = 36.",
+      "difficulty": "basic",
+      "id": "g6-gen-007"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 11 = 47. Чему равен x?",
+      "answer": "36",
+      "explanation": "x = 47 − 11 = 36.",
+      "difficulty": "basic",
+      "id": "g7-gen-007"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 5 см. Найди объём куба в см³.",
+      "answer": "125",
+      "explanation": "Объём куба = a³ = 5³ = 125 см³.",
+      "difficulty": "advanced",
+      "id": "g8-gen-007"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 10 учеников?",
+      "answer": "45",
+      "explanation": "C(10,2) = 10 × 9 ÷ 2 = 45.",
+      "difficulty": "advanced",
+      "id": "g9-gen-007"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 3 и 4. Найди гипотенузу.",
+      "answer": "5",
+      "explanation": "c² = 3² + 4² = 9 + 16 = 25, значит c = 5.",
+      "difficulty": "advanced",
+      "id": "g10-gen-006"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 10 см и 16 см. Найди его площадь в см².",
+      "answer": "80",
+      "explanation": "Площадь = (10 × 16) ÷ 2 = 80 см².",
+      "difficulty": "basic",
+      "id": "g11-gen-007"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 15 рублей. Она потратила 1 рублей. Сколько рублей осталось?",
+      "answer": "14",
+      "explanation": "Вычитаем: 15 − 1 = 14.",
+      "difficulty": "basic",
+      "id": "g1-gen-008"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 4.",
+      "answer": "28",
+      "explanation": "Табличное умножение: 7 × 4 = 28.",
+      "difficulty": "basic",
+      "id": "g2-gen-008"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 8 см и 8 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "64",
+      "explanation": "Площадь = 8 × 8 = 64 см².",
+      "difficulty": "basic",
+      "id": "g3-gen-008"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 33 яблок, во второй 65. Сколько яблок в двух корзинах вместе?",
+      "answer": "98",
+      "explanation": "Складываем: 33 + 65 = 98.",
+      "difficulty": "basic",
+      "id": "g4-gen-008"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 4 см и 19 см. Найди его периметр в сантиметрах.",
+      "answer": "46",
+      "explanation": "Периметр = 2 × (4 + 19) = 46 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-008"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 10 + 5 × 3.",
+      "answer": "25",
+      "explanation": "Сначала умножение: 5 × 3 = 15, затем 10 + 15 = 25.",
+      "difficulty": "basic",
+      "id": "g6-gen-008"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 13x + 42 = 0 имеет корни 6 и 7. Чему равна сумма корней?",
+      "answer": "13",
+      "explanation": "По теореме Виета сумма корней равна 13 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g7-gen-008"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 7 белых и 3 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "7/10",
+      "explanation": "Белых 7 из 10 шаров, вероятность = 7/10.",
+      "difficulty": "advanced",
+      "id": "g8-gen-008"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 48° и 41°. Найди третий угол в градусах.",
+      "answer": "91",
+      "explanation": "Сумма углов треугольника 180°: 180 − 48 − 41 = 91°.",
+      "difficulty": "basic",
+      "id": "g9-gen-008"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 7, разность d = 7. Найди 7-й член.",
+      "answer": "49",
+      "explanation": "aₙ = a₁ + (n−1)d = 7 + 6 × 7 = 49.",
+      "difficulty": "advanced",
+      "id": "g10-gen-007"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 4 при a = 8.",
+      "answer": "28",
+      "explanation": "3 × 8 + 4 = 24 + 4 = 28.",
+      "difficulty": "basic",
+      "id": "g11-gen-008"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 16 + 7 × 3.",
+      "answer": "37",
+      "explanation": "Сначала умножение: 7 × 3 = 21, затем 16 + 21 = 37.",
+      "difficulty": "basic",
+      "id": "g1-gen-009"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 48 ÷ 8.",
+      "answer": "6",
+      "explanation": "48 ÷ 8 = 6, потому что 8 × 6 = 48.",
+      "difficulty": "basic",
+      "id": "g2-gen-009"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 6 × 4.",
+      "answer": "24",
+      "explanation": "Табличное умножение: 6 × 4 = 24.",
+      "difficulty": "basic",
+      "id": "g3-gen-009"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 28?",
+      "answer": "14",
+      "explanation": "Половина — это 28 ÷ 2 = 14.",
+      "difficulty": "basic",
+      "id": "g4-gen-009"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 2 + 4 × 2.",
+      "answer": "10",
+      "explanation": "Сначала умножение: 4 × 2 = 8, затем 2 + 8 = 10.",
+      "difficulty": "basic",
+      "id": "g5-gen-009"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 18 ÷ 6.",
+      "answer": "3",
+      "explanation": "18 ÷ 6 = 3, потому что 6 × 3 = 18.",
+      "difficulty": "basic",
+      "id": "g6-gen-009"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Среднее арифметическое",
+      "prompt": "Найди среднее арифметическое чисел 6, 4 и 5.",
+      "answer": "5",
+      "explanation": "(6 + 4 + 5) ÷ 3 = 15 ÷ 3 = 5.",
+      "difficulty": "basic",
+      "id": "g7-gen-009"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 12 учеников?",
+      "answer": "66",
+      "explanation": "C(12,2) = 12 × 11 ÷ 2 = 66.",
+      "difficulty": "advanced",
+      "id": "g8-gen-009"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 2, разность d = 3. Найди 6-й член.",
+      "answer": "17",
+      "explanation": "aₙ = a₁ + (n−1)d = 2 + 5 × 3 = 17.",
+      "difficulty": "advanced",
+      "id": "g9-gen-009"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 9 при a = 7.",
+      "answer": "30",
+      "explanation": "3 × 7 + 9 = 21 + 9 = 30.",
+      "difficulty": "basic",
+      "id": "g10-gen-008"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 4 учеников?",
+      "answer": "6",
+      "explanation": "C(4,2) = 4 × 3 ÷ 2 = 6.",
+      "difficulty": "advanced",
+      "id": "g11-gen-009"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 270.",
+      "answer": "27",
+      "explanation": "10% — это десятая часть: 270 ÷ 10 = 27.",
+      "difficulty": "advanced",
+      "id": "g1-gen-010"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 19 см и 20 см. Найди его периметр в сантиметрах.",
+      "answer": "78",
+      "explanation": "Периметр = 2 × (19 + 20) = 78 см.",
+      "difficulty": "basic",
+      "id": "g2-gen-010"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 70.",
+      "answer": "7",
+      "explanation": "10% — это десятая часть: 70 ÷ 10 = 7.",
+      "difficulty": "advanced",
+      "id": "g3-gen-010"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 13 + 3 × 5.",
+      "answer": "28",
+      "explanation": "Сначала умножение: 3 × 5 = 15, затем 13 + 15 = 28.",
+      "difficulty": "basic",
+      "id": "g4-gen-010"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 40?",
+      "answer": "20",
+      "explanation": "Половина — это 40 ÷ 2 = 20.",
+      "difficulty": "basic",
+      "id": "g5-gen-010"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 22?",
+      "answer": "11",
+      "explanation": "Половина — это 22 ÷ 2 = 11.",
+      "difficulty": "basic",
+      "id": "g6-gen-010"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 19 см и 6 см. Найди его площадь в см².",
+      "answer": "57",
+      "explanation": "Площадь = (19 × 6) ÷ 2 = 57 см².",
+      "difficulty": "basic",
+      "id": "g7-gen-010"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 6 белых и 3 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "6/9",
+      "explanation": "Белых 6 из 9 шаров, вероятность = 6/9.",
+      "difficulty": "advanced",
+      "id": "g8-gen-010"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 4 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/7",
+      "explanation": "Белых 3 из 7 шаров, вероятность = 3/7.",
+      "difficulty": "advanced",
+      "id": "g9-gen-010"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 5x + 6 = 0 имеет корни 2 и 3. Чему равна сумма корней?",
+      "answer": "5",
+      "explanation": "По теореме Виета сумма корней равна 5 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g10-gen-009"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 7 учеников?",
+      "answer": "21",
+      "explanation": "C(7,2) = 7 × 6 ÷ 2 = 21.",
+      "difficulty": "advanced",
+      "id": "g11-gen-010"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 9 яблок, во второй 4. Сколько яблок в двух корзинах вместе?",
+      "answer": "13",
+      "explanation": "Складываем: 9 + 4 = 13.",
+      "difficulty": "basic",
+      "id": "g1-gen-011"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 70.",
+      "answer": "7",
+      "explanation": "10% — это десятая часть: 70 ÷ 10 = 7.",
+      "difficulty": "advanced",
+      "id": "g2-gen-011"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 110 рублей. Она потратила 50 рублей. Сколько рублей осталось?",
+      "answer": "60",
+      "explanation": "Вычитаем: 110 − 50 = 60.",
+      "difficulty": "basic",
+      "id": "g3-gen-011"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 148 рублей. Она потратила 33 рублей. Сколько рублей осталось?",
+      "answer": "115",
+      "explanation": "Вычитаем: 148 − 33 = 115.",
+      "difficulty": "basic",
+      "id": "g4-gen-011"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 15 яблок, во второй 61. Сколько яблок в двух корзинах вместе?",
+      "answer": "76",
+      "explanation": "Складываем: 15 + 61 = 76.",
+      "difficulty": "basic",
+      "id": "g5-gen-011"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 50.",
+      "answer": "5",
+      "explanation": "10% — это десятая часть: 50 ÷ 10 = 5.",
+      "difficulty": "advanced",
+      "id": "g6-gen-011"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/10",
+      "explanation": "Белых 3 из 10 шаров, вероятность = 3/10.",
+      "difficulty": "advanced",
+      "id": "g7-gen-011"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 4 белых и 6 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "4/10",
+      "explanation": "Белых 4 из 10 шаров, вероятность = 4/10.",
+      "difficulty": "advanced",
+      "id": "g8-gen-011"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 4 см. Найди объём куба в см³.",
+      "answer": "64",
+      "explanation": "Объём куба = a³ = 4³ = 64 см³.",
+      "difficulty": "advanced",
+      "id": "g9-gen-011"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 5 при a = 11.",
+      "answer": "38",
+      "explanation": "3 × 11 + 5 = 33 + 5 = 38.",
+      "difficulty": "basic",
+      "id": "g10-gen-010"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 39 = 65. Чему равен x?",
+      "answer": "26",
+      "explanation": "x = 65 − 39 = 26.",
+      "difficulty": "basic",
+      "id": "g11-gen-011"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 16?",
+      "answer": "8",
+      "explanation": "Половина — это 16 ÷ 2 = 8.",
+      "difficulty": "basic",
+      "id": "g1-gen-012"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 2 яблок, во второй 5. Сколько яблок в двух корзинах вместе?",
+      "answer": "7",
+      "explanation": "Складываем: 2 + 5 = 7.",
+      "difficulty": "basic",
+      "id": "g2-gen-012"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 68 яблок, во второй 52. Сколько яблок в двух корзинах вместе?",
+      "answer": "120",
+      "explanation": "Складываем: 68 + 52 = 120.",
+      "difficulty": "basic",
+      "id": "g3-gen-012"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 4 + 2 × 7.",
+      "answer": "18",
+      "explanation": "Сначала умножение: 2 × 7 = 14, затем 4 + 14 = 18.",
+      "difficulty": "basic",
+      "id": "g4-gen-012"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 9 см и 4 см. Найди его периметр в сантиметрах.",
+      "answer": "26",
+      "explanation": "Периметр = 2 × (9 + 4) = 26 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-012"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 6 + 9 × 2.",
+      "answer": "24",
+      "explanation": "Сначала умножение: 9 × 2 = 18, затем 6 + 18 = 24.",
+      "difficulty": "basic",
+      "id": "g6-gen-012"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 3 и 4. Найди гипотенузу.",
+      "answer": "5",
+      "explanation": "c² = 3² + 4² = 9 + 16 = 25, значит c = 5.",
+      "difficulty": "advanced",
+      "id": "g7-gen-012"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 10 см. Найди объём куба в см³.",
+      "answer": "1000",
+      "explanation": "Объём куба = a³ = 10³ = 1000 см³.",
+      "difficulty": "advanced",
+      "id": "g8-gen-012"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 33 = 69. Чему равен x?",
+      "answer": "36",
+      "explanation": "x = 69 − 33 = 36.",
+      "difficulty": "basic",
+      "id": "g9-gen-012"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 25 = 64. Чему равен x?",
+      "answer": "39",
+      "explanation": "x = 64 − 25 = 39.",
+      "difficulty": "basic",
+      "id": "g10-gen-011"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 5 учеников?",
+      "answer": "10",
+      "explanation": "C(5,2) = 5 × 4 ÷ 2 = 10.",
+      "difficulty": "advanced",
+      "id": "g11-gen-012"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 18 рублей. Она потратила 17 рублей. Сколько рублей осталось?",
+      "answer": "1",
+      "explanation": "Вычитаем: 18 − 17 = 1.",
+      "difficulty": "basic",
+      "id": "g1-gen-013"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 8 яблок, во второй 6. Сколько яблок в двух корзинах вместе?",
+      "answer": "14",
+      "explanation": "Складываем: 8 + 6 = 14.",
+      "difficulty": "basic",
+      "id": "g2-gen-013"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 37 яблок, во второй 60. Сколько яблок в двух корзинах вместе?",
+      "answer": "97",
+      "explanation": "Складываем: 37 + 60 = 97.",
+      "difficulty": "basic",
+      "id": "g3-gen-013"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 14 см и 10 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "140",
+      "explanation": "Площадь = 14 × 10 = 140 см².",
+      "difficulty": "basic",
+      "id": "g4-gen-013"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 120.",
+      "answer": "12",
+      "explanation": "10% — это десятая часть: 120 ÷ 10 = 12.",
+      "difficulty": "advanced",
+      "id": "g5-gen-013"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 44 рублей. Она потратила 3 рублей. Сколько рублей осталось?",
+      "answer": "41",
+      "explanation": "Вычитаем: 44 − 3 = 41.",
+      "difficulty": "basic",
+      "id": "g6-gen-013"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 8 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/11",
+      "explanation": "Белых 3 из 11 шаров, вероятность = 3/11.",
+      "difficulty": "advanced",
+      "id": "g7-gen-013"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 13x + 42 = 0 имеет корни 7 и 6. Чему равна сумма корней?",
+      "answer": "13",
+      "explanation": "По теореме Виета сумма корней равна 13 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-013"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 5x = 60. Чему равен x?",
+      "answer": "12",
+      "explanation": "x = 60 ÷ 5 = 12.",
+      "difficulty": "basic",
+      "id": "g9-gen-013"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 7x + 10 = 0 имеет корни 5 и 2. Чему равна сумма корней?",
+      "answer": "7",
+      "explanation": "По теореме Виета сумма корней равна 7 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g10-gen-012"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 7 см и 7 см. Найди его площадь в см².",
+      "answer": "24.5",
+      "explanation": "Площадь = (7 × 7) ÷ 2 = 24.5 см².",
+      "difficulty": "basic",
+      "id": "g11-gen-013"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 17 рублей. Она потратила 7 рублей. Сколько рублей осталось?",
+      "answer": "10",
+      "explanation": "Вычитаем: 17 − 7 = 10.",
+      "difficulty": "basic",
+      "id": "g1-gen-014"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 6 см и 19 см. Найди его периметр в сантиметрах.",
+      "answer": "50",
+      "explanation": "Периметр = 2 × (6 + 19) = 50 см.",
+      "difficulty": "basic",
+      "id": "g2-gen-014"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 40 яблок, во второй 40. Сколько яблок в двух корзинах вместе?",
+      "answer": "80",
+      "explanation": "Складываем: 40 + 40 = 80.",
+      "difficulty": "basic",
+      "id": "g3-gen-014"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 4.",
+      "answer": "28",
+      "explanation": "Табличное умножение: 7 × 4 = 28.",
+      "difficulty": "basic",
+      "id": "g4-gen-014"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 14 + 5 × 5.",
+      "answer": "39",
+      "explanation": "Сначала умножение: 5 × 5 = 25, затем 14 + 25 = 39.",
+      "difficulty": "basic",
+      "id": "g5-gen-014"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 6 × 6.",
+      "answer": "36",
+      "explanation": "Табличное умножение: 6 × 6 = 36.",
+      "difficulty": "basic",
+      "id": "g6-gen-014"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 5 белых и 5 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "5/10",
+      "explanation": "Белых 5 из 10 шаров, вероятность = 5/10.",
+      "difficulty": "advanced",
+      "id": "g7-gen-014"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 16 см и 11 см. Найди его площадь в см².",
+      "answer": "88",
+      "explanation": "Площадь = (16 × 11) ÷ 2 = 88 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-014"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/9",
+      "explanation": "Белых 2 из 9 шаров, вероятность = 2/9.",
+      "difficulty": "advanced",
+      "id": "g9-gen-014"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 3 см. Найди объём куба в см³.",
+      "answer": "27",
+      "explanation": "Объём куба = a³ = 3³ = 27 см³.",
+      "difficulty": "advanced",
+      "id": "g10-gen-013"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 9.",
+      "answer": "63",
+      "explanation": "Табличное умножение: 7 × 9 = 63.",
+      "difficulty": "basic",
+      "id": "g1-gen-015"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 320.",
+      "answer": "32",
+      "explanation": "10% — это десятая часть: 320 ÷ 10 = 32.",
+      "difficulty": "advanced",
+      "id": "g2-gen-015"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 5 см и 4 см. Найди его периметр в сантиметрах.",
+      "answer": "18",
+      "explanation": "Периметр = 2 × (5 + 4) = 18 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-015"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 40?",
+      "answer": "20",
+      "explanation": "Половина — это 40 ÷ 2 = 20.",
+      "difficulty": "basic",
+      "id": "g4-gen-015"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 3 × 5.",
+      "answer": "15",
+      "explanation": "Табличное умножение: 3 × 5 = 15.",
+      "difficulty": "basic",
+      "id": "g5-gen-015"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 2 × 8.",
+      "answer": "16",
+      "explanation": "Табличное умножение: 2 × 8 = 16.",
+      "difficulty": "basic",
+      "id": "g6-gen-015"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 5 при a = 11.",
+      "answer": "38",
+      "explanation": "3 × 11 + 5 = 33 + 5 = 38.",
+      "difficulty": "basic",
+      "id": "g7-gen-015"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 13 см и 19 см. Найди его площадь в см².",
+      "answer": "123.5",
+      "explanation": "Площадь = (13 × 19) ÷ 2 = 123.5 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-015"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 9, разность d = 2. Найди 4-й член.",
+      "answer": "15",
+      "explanation": "aₙ = a₁ + (n−1)d = 9 + 3 × 2 = 15.",
+      "difficulty": "advanced",
+      "id": "g9-gen-015"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 16 см и 20 см. Найди его площадь в см².",
+      "answer": "160",
+      "explanation": "Площадь = (16 × 20) ÷ 2 = 160 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-014"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 12x + 32 = 0 имеет корни 8 и 4. Чему равна сумма корней?",
+      "answer": "12",
+      "explanation": "По теореме Виета сумма корней равна 12 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g11-gen-014"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 8 × 4.",
+      "answer": "32",
+      "explanation": "Табличное умножение: 8 × 4 = 32.",
+      "difficulty": "basic",
+      "id": "g1-gen-016"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 10 рублей. Она потратила 5 рублей. Сколько рублей осталось?",
+      "answer": "5",
+      "explanation": "Вычитаем: 10 − 5 = 5.",
+      "difficulty": "basic",
+      "id": "g2-gen-016"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 28?",
+      "answer": "14",
+      "explanation": "Половина — это 28 ÷ 2 = 14.",
+      "difficulty": "basic",
+      "id": "g3-gen-016"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 20?",
+      "answer": "10",
+      "explanation": "Половина — это 20 ÷ 2 = 10.",
+      "difficulty": "basic",
+      "id": "g4-gen-016"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 19 см и 8 см. Найди его периметр в сантиметрах.",
+      "answer": "54",
+      "explanation": "Периметр = 2 × (19 + 8) = 54 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-016"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 20?",
+      "answer": "10",
+      "explanation": "Половина — это 20 ÷ 2 = 10.",
+      "difficulty": "basic",
+      "id": "g6-gen-016"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 3 см и 7 см. Найди его площадь в см².",
+      "answer": "10.5",
+      "explanation": "Площадь = (3 × 7) ÷ 2 = 10.5 см².",
+      "difficulty": "basic",
+      "id": "g7-gen-016"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 59° и 66°. Найди третий угол в градусах.",
+      "answer": "55",
+      "explanation": "Сумма углов треугольника 180°: 180 − 59 − 66 = 55°.",
+      "difficulty": "basic",
+      "id": "g8-gen-016"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 16x + 63 = 0 имеет корни 9 и 7. Чему равна сумма корней?",
+      "answer": "16",
+      "explanation": "По теореме Виета сумма корней равна 16 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g9-gen-016"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 40 = 75. Чему равен x?",
+      "answer": "35",
+      "explanation": "x = 75 − 40 = 35.",
+      "difficulty": "basic",
+      "id": "g10-gen-015"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 8 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/9",
+      "explanation": "Белых 1 из 9 шаров, вероятность = 1/9.",
+      "difficulty": "advanced",
+      "id": "g11-gen-015"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 460.",
+      "answer": "46",
+      "explanation": "10% — это десятая часть: 460 ÷ 10 = 46.",
+      "difficulty": "advanced",
+      "id": "g2-gen-017"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 91 яблок, во второй 62. Сколько яблок в двух корзинах вместе?",
+      "answer": "153",
+      "explanation": "Складываем: 91 + 62 = 153.",
+      "difficulty": "basic",
+      "id": "g3-gen-017"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 14 см и 7 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "98",
+      "explanation": "Площадь = 14 × 7 = 98 см².",
+      "difficulty": "basic",
+      "id": "g4-gen-017"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 15 яблок, во второй 98. Сколько яблок в двух корзинах вместе?",
+      "answer": "113",
+      "explanation": "Складываем: 15 + 98 = 113.",
+      "difficulty": "basic",
+      "id": "g5-gen-017"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 3 × 7.",
+      "answer": "21",
+      "explanation": "Табличное умножение: 3 × 7 = 21.",
+      "difficulty": "basic",
+      "id": "g6-gen-017"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 15x + 56 = 0 имеет корни 8 и 7. Чему равна сумма корней?",
+      "answer": "15",
+      "explanation": "По теореме Виета сумма корней равна 15 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g7-gen-017"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 5 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/7",
+      "explanation": "Белых 2 из 7 шаров, вероятность = 2/7.",
+      "difficulty": "advanced",
+      "id": "g8-gen-017"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 3x + 2 = 0 имеет корни 1 и 2. Чему равна сумма корней?",
+      "answer": "3",
+      "explanation": "По теореме Виета сумма корней равна 3 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g9-gen-017"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 24 = 50. Чему равен x?",
+      "answer": "26",
+      "explanation": "x = 50 − 24 = 26.",
+      "difficulty": "basic",
+      "id": "g10-gen-016"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 13x + 36 = 0 имеет корни 4 и 9. Чему равна сумма корней?",
+      "answer": "13",
+      "explanation": "По теореме Виета сумма корней равна 13 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g11-gen-016"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 18 см и 9 см. Найди его периметр в сантиметрах.",
+      "answer": "54",
+      "explanation": "Периметр = 2 × (18 + 9) = 54 см.",
+      "difficulty": "basic",
+      "id": "g1-gen-017"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 24 ÷ 6.",
+      "answer": "4",
+      "explanation": "24 ÷ 6 = 4, потому что 6 × 4 = 24.",
+      "difficulty": "basic",
+      "id": "g2-gen-018"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 11 см и 3 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "33",
+      "explanation": "Площадь = 11 × 3 = 33 см².",
+      "difficulty": "basic",
+      "id": "g3-gen-018"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 6.",
+      "answer": "30",
+      "explanation": "Табличное умножение: 5 × 6 = 30.",
+      "difficulty": "basic",
+      "id": "g4-gen-018"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 3.",
+      "answer": "15",
+      "explanation": "Табличное умножение: 5 × 3 = 15.",
+      "difficulty": "basic",
+      "id": "g5-gen-018"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 24?",
+      "answer": "12",
+      "explanation": "Половина — это 24 ÷ 2 = 12.",
+      "difficulty": "basic",
+      "id": "g6-gen-018"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 18 см и 9 см. Найди его площадь в см².",
+      "answer": "81",
+      "explanation": "Площадь = (18 × 9) ÷ 2 = 81 см².",
+      "difficulty": "basic",
+      "id": "g7-gen-018"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 17 см и 13 см. Найди его площадь в см².",
+      "answer": "110.5",
+      "explanation": "Площадь = (17 × 13) ÷ 2 = 110.5 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-018"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 8 и 15. Найди гипотенузу.",
+      "answer": "17",
+      "explanation": "c² = 8² + 15² = 64 + 225 = 289, значит c = 17.",
+      "difficulty": "advanced",
+      "id": "g9-gen-018"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 5 при a = 3.",
+      "answer": "14",
+      "explanation": "3 × 3 + 5 = 9 + 5 = 14.",
+      "difficulty": "basic",
+      "id": "g10-gen-017"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 57° и 46°. Найди третий угол в градусах.",
+      "answer": "77",
+      "explanation": "Сумма углов треугольника 180°: 180 − 57 − 46 = 77°.",
+      "difficulty": "basic",
+      "id": "g11-gen-017"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 9 × 5.",
+      "answer": "45",
+      "explanation": "Табличное умножение: 9 × 5 = 45.",
+      "difficulty": "basic",
+      "id": "g1-gen-018"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 8 яблок, во второй 4. Сколько яблок в двух корзинах вместе?",
+      "answer": "12",
+      "explanation": "Складываем: 8 + 4 = 12.",
+      "difficulty": "basic",
+      "id": "g2-gen-019"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 440.",
+      "answer": "44",
+      "explanation": "10% — это десятая часть: 440 ÷ 10 = 44.",
+      "difficulty": "advanced",
+      "id": "g3-gen-019"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 480.",
+      "answer": "48",
+      "explanation": "10% — это десятая часть: 480 ÷ 10 = 48.",
+      "difficulty": "advanced",
+      "id": "g4-gen-019"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 17 + 2 × 7.",
+      "answer": "31",
+      "explanation": "Сначала умножение: 2 × 7 = 14, затем 17 + 14 = 31.",
+      "difficulty": "basic",
+      "id": "g5-gen-019"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 19 + 2 × 4.",
+      "answer": "27",
+      "explanation": "Сначала умножение: 2 × 4 = 8, затем 19 + 8 = 27.",
+      "difficulty": "basic",
+      "id": "g6-gen-019"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 4x = 44. Чему равен x?",
+      "answer": "11",
+      "explanation": "x = 44 ÷ 4 = 11.",
+      "difficulty": "basic",
+      "id": "g7-gen-019"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 69° и 62°. Найди третий угол в градусах.",
+      "answer": "49",
+      "explanation": "Сумма углов треугольника 180°: 180 − 69 − 62 = 49°.",
+      "difficulty": "basic",
+      "id": "g8-gen-019"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 11 см и 13 см. Найди его площадь в см².",
+      "answer": "71.5",
+      "explanation": "Площадь = (11 × 13) ÷ 2 = 71.5 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-019"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 18x + 81 = 0 имеет корни 9 и 9. Чему равна сумма корней?",
+      "answer": "18",
+      "explanation": "По теореме Виета сумма корней равна 18 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g10-gen-018"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Среднее арифметическое",
+      "prompt": "Найди среднее арифметическое чисел 4, 5 и 9.",
+      "answer": "6",
+      "explanation": "(4 + 5 + 9) ÷ 3 = 18 ÷ 3 = 6.",
+      "difficulty": "basic",
+      "id": "g11-gen-018"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 4?",
+      "answer": "2",
+      "explanation": "Половина — это 4 ÷ 2 = 2.",
+      "difficulty": "basic",
+      "id": "g1-gen-019"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 10?",
+      "answer": "5",
+      "explanation": "Половина — это 10 ÷ 2 = 5.",
+      "difficulty": "basic",
+      "id": "g2-gen-020"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 14 + 4 × 8.",
+      "answer": "46",
+      "explanation": "Сначала умножение: 4 × 8 = 32, затем 14 + 32 = 46.",
+      "difficulty": "basic",
+      "id": "g3-gen-020"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 11 см и 10 см. Найди его периметр в сантиметрах.",
+      "answer": "42",
+      "explanation": "Периметр = 2 × (11 + 10) = 42 см.",
+      "difficulty": "basic",
+      "id": "g4-gen-020"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 10 + 8 × 5.",
+      "answer": "50",
+      "explanation": "Сначала умножение: 8 × 5 = 40, затем 10 + 40 = 50.",
+      "difficulty": "basic",
+      "id": "g5-gen-020"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 12?",
+      "answer": "6",
+      "explanation": "Половина — это 12 ÷ 2 = 6.",
+      "difficulty": "basic",
+      "id": "g6-gen-020"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 4x = 28. Чему равен x?",
+      "answer": "7",
+      "explanation": "x = 28 ÷ 4 = 7.",
+      "difficulty": "basic",
+      "id": "g7-gen-020"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 9 см и 15 см. Найди его площадь в см².",
+      "answer": "67.5",
+      "explanation": "Площадь = (9 × 15) ÷ 2 = 67.5 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-020"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 31 = 51. Чему равен x?",
+      "answer": "20",
+      "explanation": "x = 51 − 31 = 20.",
+      "difficulty": "basic",
+      "id": "g9-gen-020"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 2 при a = 7.",
+      "answer": "23",
+      "explanation": "3 × 7 + 2 = 21 + 2 = 23.",
+      "difficulty": "basic",
+      "id": "g10-gen-019"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 8 + 7 × 5.",
+      "answer": "43",
+      "explanation": "Сначала умножение: 7 × 5 = 35, затем 8 + 35 = 43.",
+      "difficulty": "basic",
+      "id": "g1-gen-020"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 18 ÷ 2.",
+      "answer": "9",
+      "explanation": "18 ÷ 2 = 9, потому что 2 × 9 = 18.",
+      "difficulty": "basic",
+      "id": "g2-gen-021"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 4 + 9 × 2.",
+      "answer": "22",
+      "explanation": "Сначала умножение: 9 × 2 = 18, затем 4 + 18 = 22.",
+      "difficulty": "basic",
+      "id": "g3-gen-021"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 6 × 8.",
+      "answer": "48",
+      "explanation": "Табличное умножение: 6 × 8 = 48.",
+      "difficulty": "basic",
+      "id": "g4-gen-021"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 77 яблок, во второй 9. Сколько яблок в двух корзинах вместе?",
+      "answer": "86",
+      "explanation": "Складываем: 77 + 9 = 86.",
+      "difficulty": "basic",
+      "id": "g5-gen-021"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 300.",
+      "answer": "30",
+      "explanation": "10% — это десятая часть: 300 ÷ 10 = 30.",
+      "difficulty": "advanced",
+      "id": "g6-gen-021"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 8 белых и 8 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "8/16",
+      "explanation": "Белых 8 из 16 шаров, вероятность = 8/16.",
+      "difficulty": "advanced",
+      "id": "g7-gen-021"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 34 = 40. Чему равен x?",
+      "answer": "6",
+      "explanation": "x = 40 − 34 = 6.",
+      "difficulty": "basic",
+      "id": "g8-gen-021"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 6 см и 13 см. Найди его площадь в см².",
+      "answer": "39",
+      "explanation": "Площадь = (6 × 13) ÷ 2 = 39 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-021"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 37 = 74. Чему равен x?",
+      "answer": "37",
+      "explanation": "x = 74 − 37 = 37.",
+      "difficulty": "basic",
+      "id": "g10-gen-020"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 7 = 24. Чему равен x?",
+      "answer": "17",
+      "explanation": "x = 24 − 7 = 17.",
+      "difficulty": "basic",
+      "id": "g11-gen-019"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 280.",
+      "answer": "28",
+      "explanation": "10% — это десятая часть: 280 ÷ 10 = 28.",
+      "difficulty": "advanced",
+      "id": "g1-gen-021"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 11 см и 10 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "110",
+      "explanation": "Площадь = 11 × 10 = 110 см².",
+      "difficulty": "basic",
+      "id": "g2-gen-022"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 5 + 6 × 6.",
+      "answer": "41",
+      "explanation": "Сначала умножение: 6 × 6 = 36, затем 5 + 36 = 41.",
+      "difficulty": "basic",
+      "id": "g3-gen-022"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 6?",
+      "answer": "3",
+      "explanation": "Половина — это 6 ÷ 2 = 3.",
+      "difficulty": "basic",
+      "id": "g4-gen-022"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 8?",
+      "answer": "4",
+      "explanation": "Половина — это 8 ÷ 2 = 4.",
+      "difficulty": "basic",
+      "id": "g5-gen-022"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 340.",
+      "answer": "34",
+      "explanation": "10% — это десятая часть: 340 ÷ 10 = 34.",
+      "difficulty": "advanced",
+      "id": "g6-gen-022"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 6 см. Найди объём куба в см³.",
+      "answer": "216",
+      "explanation": "Объём куба = a³ = 6³ = 216 см³.",
+      "difficulty": "advanced",
+      "id": "g7-gen-022"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 37 = 69. Чему равен x?",
+      "answer": "32",
+      "explanation": "x = 69 − 37 = 32.",
+      "difficulty": "basic",
+      "id": "g8-gen-022"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 15 = 36. Чему равен x?",
+      "answer": "21",
+      "explanation": "x = 36 − 15 = 21.",
+      "difficulty": "basic",
+      "id": "g9-gen-022"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 5x = 25. Чему равен x?",
+      "answer": "5",
+      "explanation": "x = 25 ÷ 5 = 5.",
+      "difficulty": "basic",
+      "id": "g10-gen-021"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 6x = 36. Чему равен x?",
+      "answer": "6",
+      "explanation": "x = 36 ÷ 6 = 6.",
+      "difficulty": "basic",
+      "id": "g11-gen-020"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 420.",
+      "answer": "42",
+      "explanation": "10% — это десятая часть: 420 ÷ 10 = 42.",
+      "difficulty": "advanced",
+      "id": "g1-gen-022"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 12 + 9 × 3.",
+      "answer": "39",
+      "explanation": "Сначала умножение: 9 × 3 = 27, затем 12 + 27 = 39.",
+      "difficulty": "basic",
+      "id": "g2-gen-023"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 15 см и 19 см. Найди его периметр в сантиметрах.",
+      "answer": "68",
+      "explanation": "Периметр = 2 × (15 + 19) = 68 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-023"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 17 яблок, во второй 79. Сколько яблок в двух корзинах вместе?",
+      "answer": "96",
+      "explanation": "Складываем: 17 + 79 = 96.",
+      "difficulty": "basic",
+      "id": "g4-gen-023"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 190.",
+      "answer": "19",
+      "explanation": "10% — это десятая часть: 190 ÷ 10 = 19.",
+      "difficulty": "advanced",
+      "id": "g5-gen-023"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 420.",
+      "answer": "42",
+      "explanation": "10% — это десятая часть: 420 ÷ 10 = 42.",
+      "difficulty": "advanced",
+      "id": "g6-gen-023"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 6 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/9",
+      "explanation": "Белых 3 из 9 шаров, вероятность = 3/9.",
+      "difficulty": "advanced",
+      "id": "g7-gen-023"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 12x + 35 = 0 имеет корни 7 и 5. Чему равна сумма корней?",
+      "answer": "12",
+      "explanation": "По теореме Виета сумма корней равна 12 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-023"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 5 и 12. Найди гипотенузу.",
+      "answer": "13",
+      "explanation": "c² = 5² + 12² = 25 + 144 = 169, значит c = 13.",
+      "difficulty": "advanced",
+      "id": "g9-gen-023"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 51° и 71°. Найди третий угол в градусах.",
+      "answer": "58",
+      "explanation": "Сумма углов треугольника 180°: 180 − 51 − 71 = 58°.",
+      "difficulty": "basic",
+      "id": "g10-gen-022"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 78° и 66°. Найди третий угол в градусах.",
+      "answer": "36",
+      "explanation": "Сумма углов треугольника 180°: 180 − 78 − 66 = 36°.",
+      "difficulty": "basic",
+      "id": "g11-gen-021"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 10 рублей. Она потратила 9 рублей. Сколько рублей осталось?",
+      "answer": "1",
+      "explanation": "Вычитаем: 10 − 9 = 1.",
+      "difficulty": "basic",
+      "id": "g1-gen-023"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 34?",
+      "answer": "17",
+      "explanation": "Половина — это 34 ÷ 2 = 17.",
+      "difficulty": "basic",
+      "id": "g2-gen-024"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 51 рублей. Она потратила 41 рублей. Сколько рублей осталось?",
+      "answer": "10",
+      "explanation": "Вычитаем: 51 − 41 = 10.",
+      "difficulty": "basic",
+      "id": "g3-gen-024"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 15 + 6 × 6.",
+      "answer": "51",
+      "explanation": "Сначала умножение: 6 × 6 = 36, затем 15 + 36 = 51.",
+      "difficulty": "basic",
+      "id": "g4-gen-024"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 20 см и 15 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "300",
+      "explanation": "Площадь = 20 × 15 = 300 см².",
+      "difficulty": "basic",
+      "id": "g5-gen-024"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 96 яблок, во второй 18. Сколько яблок в двух корзинах вместе?",
+      "answer": "114",
+      "explanation": "Складываем: 96 + 18 = 114.",
+      "difficulty": "basic",
+      "id": "g6-gen-024"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 8 см. Найди объём куба в см³.",
+      "answer": "512",
+      "explanation": "Объём куба = a³ = 8³ = 512 см³.",
+      "difficulty": "advanced",
+      "id": "g7-gen-024"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 3 белых и 2 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "3/5",
+      "explanation": "Белых 3 из 5 шаров, вероятность = 3/5.",
+      "difficulty": "advanced",
+      "id": "g9-gen-024"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 3 при a = 2.",
+      "answer": "9",
+      "explanation": "3 × 2 + 3 = 6 + 3 = 9.",
+      "difficulty": "basic",
+      "id": "g10-gen-023"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Среднее арифметическое",
+      "prompt": "Найди среднее арифметическое чисел 9, 2 и 7.",
+      "answer": "6",
+      "explanation": "(9 + 2 + 7) ÷ 3 = 18 ÷ 3 = 6.",
+      "difficulty": "basic",
+      "id": "g11-gen-022"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 17 + 3 × 2.",
+      "answer": "23",
+      "explanation": "Сначала умножение: 3 × 2 = 6, затем 17 + 6 = 23.",
+      "difficulty": "basic",
+      "id": "g1-gen-024"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 63 ÷ 9.",
+      "answer": "7",
+      "explanation": "63 ÷ 9 = 7, потому что 9 × 7 = 63.",
+      "difficulty": "basic",
+      "id": "g2-gen-025"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 2 + 8 × 8.",
+      "answer": "66",
+      "explanation": "Сначала умножение: 8 × 8 = 64, затем 2 + 64 = 66.",
+      "difficulty": "basic",
+      "id": "g3-gen-025"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 10 см и 13 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "130",
+      "explanation": "Площадь = 10 × 13 = 130 см².",
+      "difficulty": "basic",
+      "id": "g4-gen-025"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 6 см и 16 см. Найди его периметр в сантиметрах.",
+      "answer": "44",
+      "explanation": "Периметр = 2 × (6 + 16) = 44 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-025"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 40 яблок, во второй 45. Сколько яблок в двух корзинах вместе?",
+      "answer": "85",
+      "explanation": "Складываем: 40 + 45 = 85.",
+      "difficulty": "basic",
+      "id": "g6-gen-025"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 4x = 8. Чему равен x?",
+      "answer": "2",
+      "explanation": "x = 8 ÷ 4 = 2.",
+      "difficulty": "basic",
+      "id": "g7-gen-025"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 16x + 63 = 0 имеет корни 7 и 9. Чему равна сумма корней?",
+      "answer": "16",
+      "explanation": "По теореме Виета сумма корней равна 16 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-024"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 14 см и 14 см. Найди его площадь в см².",
+      "answer": "98",
+      "explanation": "Площадь = (14 × 14) ÷ 2 = 98 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-024"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 14 см и 5 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "70",
+      "explanation": "Площадь = 14 × 5 = 70 см².",
+      "difficulty": "basic",
+      "id": "g1-gen-025"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 2 яблок, во второй 4. Сколько яблок в двух корзинах вместе?",
+      "answer": "6",
+      "explanation": "Складываем: 2 + 4 = 6.",
+      "difficulty": "basic",
+      "id": "g2-gen-026"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 40 ÷ 5.",
+      "answer": "8",
+      "explanation": "40 ÷ 5 = 8, потому что 5 × 8 = 40.",
+      "difficulty": "basic",
+      "id": "g3-gen-026"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 123 рублей. Она потратила 72 рублей. Сколько рублей осталось?",
+      "answer": "51",
+      "explanation": "Вычитаем: 123 − 72 = 51.",
+      "difficulty": "basic",
+      "id": "g4-gen-026"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 35 рублей. Она потратила 20 рублей. Сколько рублей осталось?",
+      "answer": "15",
+      "explanation": "Вычитаем: 35 − 20 = 15.",
+      "difficulty": "basic",
+      "id": "g5-gen-026"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 20.",
+      "answer": "2",
+      "explanation": "10% — это десятая часть: 20 ÷ 10 = 2.",
+      "difficulty": "advanced",
+      "id": "g6-gen-026"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 4 см. Найди объём куба в см³.",
+      "answer": "64",
+      "explanation": "Объём куба = a³ = 4³ = 64 см³.",
+      "difficulty": "advanced",
+      "id": "g7-gen-026"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 7 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "7/14",
+      "explanation": "Белых 7 из 14 шаров, вероятность = 7/14.",
+      "difficulty": "advanced",
+      "id": "g8-gen-025"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 56° и 49°. Найди третий угол в градусах.",
+      "answer": "75",
+      "explanation": "Сумма углов треугольника 180°: 180 − 56 − 49 = 75°.",
+      "difficulty": "basic",
+      "id": "g9-gen-025"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 23 = 61. Чему равен x?",
+      "answer": "38",
+      "explanation": "x = 61 − 23 = 38.",
+      "difficulty": "basic",
+      "id": "g10-gen-025"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 13x + 40 = 0 имеет корни 8 и 5. Чему равна сумма корней?",
+      "answer": "13",
+      "explanation": "По теореме Виета сумма корней равна 13 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g11-gen-023"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 16 рублей. Она потратила 7 рублей. Сколько рублей осталось?",
+      "answer": "9",
+      "explanation": "Вычитаем: 16 − 7 = 9.",
+      "difficulty": "basic",
+      "id": "g1-gen-026"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 2 + 8 × 8.",
+      "answer": "66",
+      "explanation": "Сначала умножение: 8 × 8 = 64, затем 2 + 64 = 66.",
+      "difficulty": "basic",
+      "id": "g2-gen-027"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 14?",
+      "answer": "7",
+      "explanation": "Половина — это 14 ÷ 2 = 7.",
+      "difficulty": "basic",
+      "id": "g3-gen-027"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 17 см и 14 см. Найди его периметр в сантиметрах.",
+      "answer": "62",
+      "explanation": "Периметр = 2 × (17 + 14) = 62 см.",
+      "difficulty": "basic",
+      "id": "g4-gen-027"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 15 см и 17 см. Найди его периметр в сантиметрах.",
+      "answer": "64",
+      "explanation": "Периметр = 2 × (15 + 17) = 64 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-027"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 19 см и 3 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "57",
+      "explanation": "Площадь = 19 × 3 = 57 см².",
+      "difficulty": "basic",
+      "id": "g6-gen-027"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 6 учеников?",
+      "answer": "15",
+      "explanation": "C(6,2) = 6 × 5 ÷ 2 = 15.",
+      "difficulty": "advanced",
+      "id": "g8-gen-026"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 14x + 45 = 0 имеет корни 5 и 9. Чему равна сумма корней?",
+      "answer": "14",
+      "explanation": "По теореме Виета сумма корней равна 14 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g9-gen-026"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 8 см и 20 см. Найди его площадь в см².",
+      "answer": "80",
+      "explanation": "Площадь = (8 × 20) ÷ 2 = 80 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-026"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Среднее арифметическое",
+      "prompt": "Найди среднее арифметическое чисел 6, 10 и 8.",
+      "answer": "8",
+      "explanation": "(6 + 10 + 8) ÷ 3 = 24 ÷ 3 = 8.",
+      "difficulty": "basic",
+      "id": "g11-gen-024"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 18 см и 11 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "198",
+      "explanation": "Площадь = 18 × 11 = 198 см².",
+      "difficulty": "basic",
+      "id": "g1-gen-027"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 12 ÷ 6.",
+      "answer": "2",
+      "explanation": "12 ÷ 6 = 2, потому что 6 × 2 = 12.",
+      "difficulty": "basic",
+      "id": "g2-gen-028"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 6 см и 14 см. Найди его периметр в сантиметрах.",
+      "answer": "40",
+      "explanation": "Периметр = 2 × (6 + 14) = 40 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-028"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 80 яблок, во второй 37. Сколько яблок в двух корзинах вместе?",
+      "answer": "117",
+      "explanation": "Складываем: 80 + 37 = 117.",
+      "difficulty": "basic",
+      "id": "g4-gen-028"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 7 см. Найди его периметр в сантиметрах.",
+      "answer": "20",
+      "explanation": "Периметр = 2 × (3 + 7) = 20 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-028"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 59 яблок, во второй 56. Сколько яблок в двух корзинах вместе?",
+      "answer": "115",
+      "explanation": "Складываем: 59 + 56 = 115.",
+      "difficulty": "basic",
+      "id": "g6-gen-028"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 6 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/7",
+      "explanation": "Белых 1 из 7 шаров, вероятность = 1/7.",
+      "difficulty": "advanced",
+      "id": "g7-gen-027"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 7 учеников?",
+      "answer": "21",
+      "explanation": "C(7,2) = 7 × 6 ÷ 2 = 21.",
+      "difficulty": "advanced",
+      "id": "g8-gen-027"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 16 см и 3 см. Найди его площадь в см².",
+      "answer": "24",
+      "explanation": "Площадь = (16 × 3) ÷ 2 = 24 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-027"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 33 = 36. Чему равен x?",
+      "answer": "3",
+      "explanation": "x = 36 − 33 = 3.",
+      "difficulty": "basic",
+      "id": "g10-gen-027"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 11x + 30 = 0 имеет корни 5 и 6. Чему равна сумма корней?",
+      "answer": "11",
+      "explanation": "По теореме Виета сумма корней равна 11 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g11-gen-025"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 6 × 4.",
+      "answer": "24",
+      "explanation": "Табличное умножение: 6 × 4 = 24.",
+      "difficulty": "basic",
+      "id": "g1-gen-028"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 4 см и 17 см. Найди его периметр в сантиметрах.",
+      "answer": "42",
+      "explanation": "Периметр = 2 × (4 + 17) = 42 см.",
+      "difficulty": "basic",
+      "id": "g2-gen-029"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 68 яблок, во второй 72. Сколько яблок в двух корзинах вместе?",
+      "answer": "140",
+      "explanation": "Складываем: 68 + 72 = 140.",
+      "difficulty": "basic",
+      "id": "g3-gen-029"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 5 + 5 × 4.",
+      "answer": "25",
+      "explanation": "Сначала умножение: 5 × 4 = 20, затем 5 + 20 = 25.",
+      "difficulty": "basic",
+      "id": "g4-gen-029"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 34?",
+      "answer": "17",
+      "explanation": "Половина — это 34 ÷ 2 = 17.",
+      "difficulty": "basic",
+      "id": "g5-gen-029"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 76 рублей. Она потратила 34 рублей. Сколько рублей осталось?",
+      "answer": "42",
+      "explanation": "Вычитаем: 76 − 34 = 42.",
+      "difficulty": "basic",
+      "id": "g6-gen-029"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 7 см и 13 см. Найди его площадь в см².",
+      "answer": "45.5",
+      "explanation": "Площадь = (7 × 13) ÷ 2 = 45.5 см².",
+      "difficulty": "basic",
+      "id": "g7-gen-028"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 8 = 31. Чему равен x?",
+      "answer": "23",
+      "explanation": "x = 31 − 8 = 23.",
+      "difficulty": "basic",
+      "id": "g8-gen-028"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 8x = 40. Чему равен x?",
+      "answer": "5",
+      "explanation": "x = 40 ÷ 8 = 5.",
+      "difficulty": "basic",
+      "id": "g9-gen-028"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 38 = 77. Чему равен x?",
+      "answer": "39",
+      "explanation": "x = 77 − 38 = 39.",
+      "difficulty": "basic",
+      "id": "g10-gen-028"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 13 см и 4 см. Найди его периметр в сантиметрах.",
+      "answer": "34",
+      "explanation": "Периметр = 2 × (13 + 4) = 34 см.",
+      "difficulty": "basic",
+      "id": "g1-gen-029"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 9 яблок, во второй 5. Сколько яблок в двух корзинах вместе?",
+      "answer": "14",
+      "explanation": "Складываем: 9 + 5 = 14.",
+      "difficulty": "basic",
+      "id": "g2-gen-030"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 6 + 4 × 6.",
+      "answer": "30",
+      "explanation": "Сначала умножение: 4 × 6 = 24, затем 6 + 24 = 30.",
+      "difficulty": "basic",
+      "id": "g3-gen-030"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 230.",
+      "answer": "23",
+      "explanation": "10% — это десятая часть: 230 ÷ 10 = 23.",
+      "difficulty": "advanced",
+      "id": "g4-gen-030"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 270.",
+      "answer": "27",
+      "explanation": "10% — это десятая часть: 270 ÷ 10 = 27.",
+      "difficulty": "advanced",
+      "id": "g5-gen-030"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 129 рублей. Она потратила 109 рублей. Сколько рублей осталось?",
+      "answer": "20",
+      "explanation": "Вычитаем: 129 − 109 = 20.",
+      "difficulty": "basic",
+      "id": "g6-gen-030"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 6x + 8 = 0 имеет корни 4 и 2. Чему равна сумма корней?",
+      "answer": "6",
+      "explanation": "По теореме Виета сумма корней равна 6 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g7-gen-029"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 31 = 35. Чему равен x?",
+      "answer": "4",
+      "explanation": "x = 35 − 31 = 4.",
+      "difficulty": "basic",
+      "id": "g8-gen-029"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 8 белых и 1 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "8/9",
+      "explanation": "Белых 8 из 9 шаров, вероятность = 8/9.",
+      "difficulty": "advanced",
+      "id": "g9-gen-029"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 19 см и 9 см. Найди его площадь в см².",
+      "answer": "85.5",
+      "explanation": "Площадь = (19 × 9) ÷ 2 = 85.5 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-029"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Среднее арифметическое",
+      "prompt": "Найди среднее арифметическое чисел 3, 7 и 2.",
+      "answer": "4",
+      "explanation": "(3 + 7 + 2) ÷ 3 = 12 ÷ 3 = 4.",
+      "difficulty": "basic",
+      "id": "g11-gen-026"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 4 + 5 × 9.",
+      "answer": "49",
+      "explanation": "Сначала умножение: 5 × 9 = 45, затем 4 + 45 = 49.",
+      "difficulty": "basic",
+      "id": "g1-gen-030"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 15 см и 11 см. Найди его периметр в сантиметрах.",
+      "answer": "52",
+      "explanation": "Периметр = 2 × (15 + 11) = 52 см.",
+      "difficulty": "basic",
+      "id": "g2-gen-031"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 24?",
+      "answer": "12",
+      "explanation": "Половина — это 24 ÷ 2 = 12.",
+      "difficulty": "basic",
+      "id": "g3-gen-031"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 30.",
+      "answer": "3",
+      "explanation": "10% — это десятая часть: 30 ÷ 10 = 3.",
+      "difficulty": "advanced",
+      "id": "g4-gen-031"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 7 см и 4 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "28",
+      "explanation": "Площадь = 7 × 4 = 28 см².",
+      "difficulty": "basic",
+      "id": "g5-gen-031"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 97 яблок, во второй 75. Сколько яблок в двух корзинах вместе?",
+      "answer": "172",
+      "explanation": "Складываем: 97 + 75 = 172.",
+      "difficulty": "basic",
+      "id": "g6-gen-031"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 7 при a = 9.",
+      "answer": "34",
+      "explanation": "3 × 9 + 7 = 27 + 7 = 34.",
+      "difficulty": "basic",
+      "id": "g7-gen-030"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 4x = 8. Чему равен x?",
+      "answer": "2",
+      "explanation": "x = 8 ÷ 4 = 2.",
+      "difficulty": "basic",
+      "id": "g8-gen-030"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 5 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/7",
+      "explanation": "Белых 2 из 7 шаров, вероятность = 2/7.",
+      "difficulty": "advanced",
+      "id": "g9-gen-030"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 9 см. Найди объём куба в см³.",
+      "answer": "729",
+      "explanation": "Объём куба = a³ = 9³ = 729 см³.",
+      "difficulty": "advanced",
+      "id": "g10-gen-030"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 8 см и 6 см. Найди его периметр в сантиметрах.",
+      "answer": "28",
+      "explanation": "Периметр = 2 × (8 + 6) = 28 см.",
+      "difficulty": "basic",
+      "id": "g1-gen-031"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 4.",
+      "answer": "20",
+      "explanation": "Табличное умножение: 5 × 4 = 20.",
+      "difficulty": "basic",
+      "id": "g2-gen-032"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 8 см и 16 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "128",
+      "explanation": "Площадь = 8 × 16 = 128 см².",
+      "difficulty": "basic",
+      "id": "g3-gen-032"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 4 + 6 × 2.",
+      "answer": "16",
+      "explanation": "Сначала умножение: 6 × 2 = 12, затем 4 + 12 = 16.",
+      "difficulty": "basic",
+      "id": "g4-gen-032"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 12 см. Найди его периметр в сантиметрах.",
+      "answer": "30",
+      "explanation": "Периметр = 2 × (3 + 12) = 30 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-032"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 14 см. Найди его периметр в сантиметрах.",
+      "answer": "34",
+      "explanation": "Периметр = 2 × (3 + 14) = 34 см.",
+      "difficulty": "basic",
+      "id": "g6-gen-032"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 8 и 15. Найди гипотенузу.",
+      "answer": "17",
+      "explanation": "c² = 8² + 15² = 64 + 225 = 289, значит c = 17.",
+      "difficulty": "advanced",
+      "id": "g7-gen-031"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 3 см и 12 см. Найди его площадь в см².",
+      "answer": "18",
+      "explanation": "Площадь = (3 × 12) ÷ 2 = 18 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-031"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 2x = 6. Чему равен x?",
+      "answer": "3",
+      "explanation": "x = 6 ÷ 2 = 3.",
+      "difficulty": "basic",
+      "id": "g9-gen-031"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 6x = 42. Чему равен x?",
+      "answer": "7",
+      "explanation": "x = 42 ÷ 6 = 7.",
+      "difficulty": "basic",
+      "id": "g10-gen-031"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 3 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/4",
+      "explanation": "Белых 1 из 4 шаров, вероятность = 1/4.",
+      "difficulty": "advanced",
+      "id": "g11-gen-027"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 8 яблок, во второй 5. Сколько яблок в двух корзинах вместе?",
+      "answer": "13",
+      "explanation": "Складываем: 8 + 5 = 13.",
+      "difficulty": "basic",
+      "id": "g1-gen-032"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 10 рублей. Она потратила 8 рублей. Сколько рублей осталось?",
+      "answer": "2",
+      "explanation": "Вычитаем: 10 − 8 = 2.",
+      "difficulty": "basic",
+      "id": "g2-gen-033"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 35 ÷ 7.",
+      "answer": "5",
+      "explanation": "35 ÷ 7 = 5, потому что 7 × 5 = 35.",
+      "difficulty": "basic",
+      "id": "g3-gen-033"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 88 яблок, во второй 46. Сколько яблок в двух корзинах вместе?",
+      "answer": "134",
+      "explanation": "Складываем: 88 + 46 = 134.",
+      "difficulty": "basic",
+      "id": "g4-gen-033"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 33 яблок, во второй 86. Сколько яблок в двух корзинах вместе?",
+      "answer": "119",
+      "explanation": "Складываем: 33 + 86 = 119.",
+      "difficulty": "basic",
+      "id": "g5-gen-033"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 7.",
+      "answer": "49",
+      "explanation": "Табличное умножение: 7 × 7 = 49.",
+      "difficulty": "basic",
+      "id": "g6-gen-033"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 11 учеников?",
+      "answer": "55",
+      "explanation": "C(11,2) = 11 × 10 ÷ 2 = 55.",
+      "difficulty": "advanced",
+      "id": "g7-gen-032"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 6 см. Найди объём куба в см³.",
+      "answer": "216",
+      "explanation": "Объём куба = a³ = 6³ = 216 см³.",
+      "difficulty": "advanced",
+      "id": "g8-gen-032"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 7x + 10 = 0 имеет корни 5 и 2. Чему равна сумма корней?",
+      "answer": "7",
+      "explanation": "По теореме Виета сумма корней равна 7 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g9-gen-032"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 7, разность d = 5. Найди 8-й член.",
+      "answer": "42",
+      "explanation": "aₙ = a₁ + (n−1)d = 7 + 7 × 5 = 42.",
+      "difficulty": "advanced",
+      "id": "g10-gen-032"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 5, разность d = 4. Найди 4-й член.",
+      "answer": "17",
+      "explanation": "aₙ = a₁ + (n−1)d = 5 + 3 × 4 = 17.",
+      "difficulty": "advanced",
+      "id": "g11-gen-028"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 9 яблок, во второй 9. Сколько яблок в двух корзинах вместе?",
+      "answer": "18",
+      "explanation": "Складываем: 9 + 9 = 18.",
+      "difficulty": "basic",
+      "id": "g1-gen-033"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 7 × 3.",
+      "answer": "21",
+      "explanation": "Табличное умножение: 7 × 3 = 21.",
+      "difficulty": "basic",
+      "id": "g2-gen-034"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 410.",
+      "answer": "41",
+      "explanation": "10% — это десятая часть: 410 ÷ 10 = 41.",
+      "difficulty": "advanced",
+      "id": "g3-gen-034"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 20 см и 14 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "280",
+      "explanation": "Площадь = 20 × 14 = 280 см².",
+      "difficulty": "basic",
+      "id": "g4-gen-034"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 7 см и 20 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "140",
+      "explanation": "Площадь = 7 × 20 = 140 см².",
+      "difficulty": "basic",
+      "id": "g5-gen-034"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 4 × 7.",
+      "answer": "28",
+      "explanation": "Табличное умножение: 4 × 7 = 28.",
+      "difficulty": "basic",
+      "id": "g6-gen-034"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 2 белых и 5 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "2/7",
+      "explanation": "Белых 2 из 7 шаров, вероятность = 2/7.",
+      "difficulty": "advanced",
+      "id": "g7-gen-033"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 14x + 48 = 0 имеет корни 8 и 6. Чему равна сумма корней?",
+      "answer": "14",
+      "explanation": "По теореме Виета сумма корней равна 14 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-033"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 8 см и 4 см. Найди его площадь в см².",
+      "answer": "16",
+      "explanation": "Площадь = (8 × 4) ÷ 2 = 16 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-033"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 32 = 49. Чему равен x?",
+      "answer": "17",
+      "explanation": "x = 49 − 32 = 17.",
+      "difficulty": "basic",
+      "id": "g10-gen-033"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 6 белых и 1 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "6/7",
+      "explanation": "Белых 6 из 7 шаров, вероятность = 6/7.",
+      "difficulty": "advanced",
+      "id": "g11-gen-029"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 7 яблок, во второй 8. Сколько яблок в двух корзинах вместе?",
+      "answer": "15",
+      "explanation": "Складываем: 7 + 8 = 15.",
+      "difficulty": "basic",
+      "id": "g1-gen-034"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 6 см и 7 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "42",
+      "explanation": "Площадь = 6 × 7 = 42 см².",
+      "difficulty": "basic",
+      "id": "g2-gen-035"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 20 см и 19 см. Найди его периметр в сантиметрах.",
+      "answer": "78",
+      "explanation": "Периметр = 2 × (20 + 19) = 78 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-035"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 14?",
+      "answer": "7",
+      "explanation": "Половина — это 14 ÷ 2 = 7.",
+      "difficulty": "basic",
+      "id": "g4-gen-035"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 14 + 8 × 5.",
+      "answer": "54",
+      "explanation": "Сначала умножение: 8 × 5 = 40, затем 14 + 40 = 54.",
+      "difficulty": "basic",
+      "id": "g5-gen-035"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 41 яблок, во второй 51. Сколько яблок в двух корзинах вместе?",
+      "answer": "92",
+      "explanation": "Складываем: 41 + 51 = 92.",
+      "difficulty": "basic",
+      "id": "g6-gen-035"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 4 учеников?",
+      "answer": "6",
+      "explanation": "C(4,2) = 4 × 3 ÷ 2 = 6.",
+      "difficulty": "advanced",
+      "id": "g7-gen-034"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 10 см и 15 см. Найди его площадь в см².",
+      "answer": "75",
+      "explanation": "Площадь = (10 × 15) ÷ 2 = 75 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-034"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Комбинаторика",
+      "prompt": "Сколькими способами можно выбрать 2 дежурных из 9 учеников?",
+      "answer": "36",
+      "explanation": "C(9,2) = 9 × 8 ÷ 2 = 36.",
+      "difficulty": "advanced",
+      "id": "g9-gen-034"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 38 = 69. Чему равен x?",
+      "answer": "31",
+      "explanation": "x = 69 − 38 = 31.",
+      "difficulty": "basic",
+      "id": "g10-gen-034"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 2 при a = 3.",
+      "answer": "11",
+      "explanation": "3 × 3 + 2 = 9 + 2 = 11.",
+      "difficulty": "basic",
+      "id": "g11-gen-030"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 3 см и 4 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "12",
+      "explanation": "Площадь = 3 × 4 = 12 см².",
+      "difficulty": "basic",
+      "id": "g1-gen-035"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 13 + 7 × 9.",
+      "answer": "76",
+      "explanation": "Сначала умножение: 7 × 9 = 63, затем 13 + 63 = 76.",
+      "difficulty": "basic",
+      "id": "g2-gen-036"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 4 × 9.",
+      "answer": "36",
+      "explanation": "Табличное умножение: 4 × 9 = 36.",
+      "difficulty": "basic",
+      "id": "g3-gen-036"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 32 рублей. Она потратила 9 рублей. Сколько рублей осталось?",
+      "answer": "23",
+      "explanation": "Вычитаем: 32 − 9 = 23.",
+      "difficulty": "basic",
+      "id": "g4-gen-036"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Площадь",
+      "prompt": "Прямоугольник со сторонами 4 см и 8 см. Найди его площадь в квадратных сантиметрах.",
+      "answer": "32",
+      "explanation": "Площадь = 4 × 8 = 32 см².",
+      "difficulty": "basic",
+      "id": "g5-gen-036"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 180.",
+      "answer": "18",
+      "explanation": "10% — это десятая часть: 180 ÷ 10 = 18.",
+      "difficulty": "advanced",
+      "id": "g6-gen-036"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 5x + 4 = 0 имеет корни 1 и 4. Чему равна сумма корней?",
+      "answer": "5",
+      "explanation": "По теореме Виета сумма корней равна 5 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g8-gen-035"
+    },
+    {
+      "grade": 9,
+      "subject": "algebra",
+      "topic": "Квадратные уравнения",
+      "prompt": "Уравнение x² − 7x + 10 = 0 имеет корни 2 и 5. Чему равна сумма корней?",
+      "answer": "7",
+      "explanation": "По теореме Виета сумма корней равна 7 (коэффициент при x с противоположным знаком).",
+      "difficulty": "advanced",
+      "id": "g9-gen-035"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Прогрессии",
+      "prompt": "Арифметическая прогрессия: a₁ = 2, разность d = 7. Найди 9-й член.",
+      "answer": "58",
+      "explanation": "aₙ = a₁ + (n−1)d = 2 + 8 × 7 = 58.",
+      "difficulty": "advanced",
+      "id": "g10-gen-035"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 31° и 32°. Найди третий угол в градусах.",
+      "answer": "117",
+      "explanation": "Сумма углов треугольника 180°: 180 − 31 − 32 = 117°.",
+      "difficulty": "basic",
+      "id": "g11-gen-031"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 16 рублей. Она потратила 2 рублей. Сколько рублей осталось?",
+      "answer": "14",
+      "explanation": "Вычитаем: 16 − 2 = 14.",
+      "difficulty": "basic",
+      "id": "g1-gen-036"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 7.",
+      "answer": "35",
+      "explanation": "Табличное умножение: 5 × 7 = 35.",
+      "difficulty": "basic",
+      "id": "g2-gen-037"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 18 ÷ 3.",
+      "answer": "6",
+      "explanation": "18 ÷ 3 = 6, потому что 3 × 6 = 18.",
+      "difficulty": "basic",
+      "id": "g3-gen-037"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 12 ÷ 3.",
+      "answer": "4",
+      "explanation": "12 ÷ 3 = 4, потому что 3 × 4 = 12.",
+      "difficulty": "basic",
+      "id": "g4-gen-037"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 8 + 2 × 8.",
+      "answer": "24",
+      "explanation": "Сначала умножение: 2 × 8 = 16, затем 8 + 16 = 24.",
+      "difficulty": "basic",
+      "id": "g5-gen-037"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 2 × 9.",
+      "answer": "18",
+      "explanation": "Табличное умножение: 2 × 9 = 18.",
+      "difficulty": "basic",
+      "id": "g6-gen-037"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 5 и 12. Найди гипотенузу.",
+      "answer": "13",
+      "explanation": "c² = 5² + 12² = 25 + 144 = 169, значит c = 13.",
+      "difficulty": "advanced",
+      "id": "g8-gen-036"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 3 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/4",
+      "explanation": "Белых 1 из 4 шаров, вероятность = 1/4.",
+      "difficulty": "advanced",
+      "id": "g9-gen-036"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 12 см и 15 см. Найди его площадь в см².",
+      "answer": "90",
+      "explanation": "Площадь = (12 × 15) ÷ 2 = 90 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-036"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 20 = 39. Чему равен x?",
+      "answer": "19",
+      "explanation": "x = 39 − 20 = 19.",
+      "difficulty": "basic",
+      "id": "g11-gen-032"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 15 см и 5 см. Найди его периметр в сантиметрах.",
+      "answer": "40",
+      "explanation": "Периметр = 2 × (15 + 5) = 40 см.",
+      "difficulty": "basic",
+      "id": "g1-gen-037"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 8 яблок, во второй 5. Сколько яблок в двух корзинах вместе?",
+      "answer": "13",
+      "explanation": "Складываем: 8 + 5 = 13.",
+      "difficulty": "basic",
+      "id": "g2-gen-038"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 10 яблок, во второй 59. Сколько яблок в двух корзинах вместе?",
+      "answer": "69",
+      "explanation": "Складываем: 10 + 59 = 69.",
+      "difficulty": "basic",
+      "id": "g3-gen-038"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 8 ÷ 2.",
+      "answer": "4",
+      "explanation": "8 ÷ 2 = 4, потому что 2 × 4 = 8.",
+      "difficulty": "basic",
+      "id": "g4-gen-038"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 40 ÷ 8.",
+      "answer": "5",
+      "explanation": "40 ÷ 8 = 5, потому что 8 × 5 = 40.",
+      "difficulty": "basic",
+      "id": "g5-gen-038"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 4 × 6.",
+      "answer": "24",
+      "explanation": "Табличное умножение: 4 × 6 = 24.",
+      "difficulty": "basic",
+      "id": "g6-gen-038"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 4 при a = 11.",
+      "answer": "37",
+      "explanation": "3 × 11 + 4 = 33 + 4 = 37.",
+      "difficulty": "basic",
+      "id": "g7-gen-035"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 8 и 15. Найди гипотенузу.",
+      "answer": "17",
+      "explanation": "c² = 8² + 15² = 64 + 225 = 289, значит c = 17.",
+      "difficulty": "advanced",
+      "id": "g8-gen-037"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 75° и 33°. Найди третий угол в градусах.",
+      "answer": "72",
+      "explanation": "Сумма углов треугольника 180°: 180 − 75 − 33 = 72°.",
+      "difficulty": "basic",
+      "id": "g9-gen-037"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 28 = 37. Чему равен x?",
+      "answer": "9",
+      "explanation": "x = 37 − 28 = 9.",
+      "difficulty": "basic",
+      "id": "g10-gen-037"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 9 см. Найди объём куба в см³.",
+      "answer": "729",
+      "explanation": "Объём куба = a³ = 9³ = 729 см³.",
+      "difficulty": "advanced",
+      "id": "g11-gen-033"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 15 рублей. Она потратила 3 рублей. Сколько рублей осталось?",
+      "answer": "12",
+      "explanation": "Вычитаем: 15 − 3 = 12.",
+      "difficulty": "basic",
+      "id": "g1-gen-038"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 21 ÷ 3.",
+      "answer": "7",
+      "explanation": "21 ÷ 3 = 7, потому что 3 × 7 = 21.",
+      "difficulty": "basic",
+      "id": "g2-gen-039"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 9 + 5 × 2.",
+      "answer": "19",
+      "explanation": "Сначала умножение: 5 × 2 = 10, затем 9 + 10 = 19.",
+      "difficulty": "basic",
+      "id": "g3-gen-039"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 56 ÷ 8.",
+      "answer": "7",
+      "explanation": "56 ÷ 8 = 7, потому что 8 × 7 = 56.",
+      "difficulty": "basic",
+      "id": "g4-gen-039"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Вычитание",
+      "prompt": "У Маши было 61 рублей. Она потратила 29 рублей. Сколько рублей осталось?",
+      "answer": "32",
+      "explanation": "Вычитаем: 61 − 29 = 32.",
+      "difficulty": "basic",
+      "id": "g5-gen-039"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 12 яблок, во второй 29. Сколько яблок в двух корзинах вместе?",
+      "answer": "41",
+      "explanation": "Складываем: 12 + 29 = 41.",
+      "difficulty": "basic",
+      "id": "g6-gen-039"
+    },
+    {
+      "grade": 7,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 2 см. Найди объём куба в см³.",
+      "answer": "8",
+      "explanation": "Объём куба = a³ = 2³ = 8 см³.",
+      "difficulty": "advanced",
+      "id": "g7-gen-036"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 8 белых и 7 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "8/15",
+      "explanation": "Белых 8 из 15 шаров, вероятность = 8/15.",
+      "difficulty": "advanced",
+      "id": "g8-gen-038"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 3 см и 14 см. Найди его площадь в см².",
+      "answer": "21",
+      "explanation": "Площадь = (3 × 14) ÷ 2 = 21 см².",
+      "difficulty": "basic",
+      "id": "g9-gen-038"
+    },
+    {
+      "grade": 10,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 12 см и 17 см. Найди его площадь в см².",
+      "answer": "102",
+      "explanation": "Площадь = (12 × 17) ÷ 2 = 102 см².",
+      "difficulty": "basic",
+      "id": "g10-gen-038"
+    },
+    {
+      "grade": 11,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 7 при a = 6.",
+      "answer": "25",
+      "explanation": "3 × 6 + 7 = 18 + 7 = 25.",
+      "difficulty": "basic",
+      "id": "g11-gen-034"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 5 + 9 × 2.",
+      "answer": "23",
+      "explanation": "Сначала умножение: 9 × 2 = 18, затем 5 + 18 = 23.",
+      "difficulty": "basic",
+      "id": "g1-gen-039"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 14 ÷ 2.",
+      "answer": "7",
+      "explanation": "14 ÷ 2 = 7, потому что 2 × 7 = 14.",
+      "difficulty": "basic",
+      "id": "g2-gen-040"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 200.",
+      "answer": "20",
+      "explanation": "10% — это десятая часть: 200 ÷ 10 = 20.",
+      "difficulty": "advanced",
+      "id": "g3-gen-040"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 19 см и 16 см. Найди его периметр в сантиметрах.",
+      "answer": "70",
+      "explanation": "Периметр = 2 × (19 + 16) = 70 см.",
+      "difficulty": "basic",
+      "id": "g5-gen-040"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 20 см. Найди его периметр в сантиметрах.",
+      "answer": "46",
+      "explanation": "Периметр = 2 × (3 + 20) = 46 см.",
+      "difficulty": "basic",
+      "id": "g6-gen-040"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 34 = 39. Чему равен x?",
+      "answer": "5",
+      "explanation": "x = 39 − 34 = 5.",
+      "difficulty": "basic",
+      "id": "g7-gen-037"
+    },
+    {
+      "grade": 8,
+      "subject": "geometry",
+      "topic": "Площадь треугольника",
+      "prompt": "Прямоугольный треугольник с катетами 7 см и 14 см. Найди его площадь в см².",
+      "answer": "49",
+      "explanation": "Площадь = (7 × 14) ÷ 2 = 49 см².",
+      "difficulty": "basic",
+      "id": "g8-gen-039"
+    },
+    {
+      "grade": 9,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 7 белых и 3 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "7/10",
+      "explanation": "Белых 7 из 10 шаров, вероятность = 7/10.",
+      "difficulty": "advanced",
+      "id": "g9-gen-039"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Выражения",
+      "prompt": "Вычисли значение выражения 3a + 6 при a = 4.",
+      "answer": "18",
+      "explanation": "3 × 4 + 6 = 12 + 6 = 18.",
+      "difficulty": "basic",
+      "id": "g10-gen-039"
+    },
+    {
+      "grade": 11,
+      "subject": "geometry",
+      "topic": "Объём",
+      "prompt": "Ребро куба равно 4 см. Найди объём куба в см³.",
+      "answer": "64",
+      "explanation": "Объём куба = a³ = 4³ = 64 см³.",
+      "difficulty": "advanced",
+      "id": "g11-gen-035"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Деление",
+      "prompt": "Вычисли: 32 ÷ 4.",
+      "answer": "8",
+      "explanation": "32 ÷ 4 = 8, потому что 4 × 8 = 32.",
+      "difficulty": "basic",
+      "id": "g1-gen-040"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 60.",
+      "answer": "6",
+      "explanation": "10% — это десятая часть: 60 ÷ 10 = 6.",
+      "difficulty": "advanced",
+      "id": "g2-gen-041"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 13 см. Найди его периметр в сантиметрах.",
+      "answer": "32",
+      "explanation": "Периметр = 2 × (3 + 13) = 32 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-041"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 24?",
+      "answer": "12",
+      "explanation": "Половина — это 24 ÷ 2 = 12.",
+      "difficulty": "basic",
+      "id": "g4-gen-040"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Умножение",
+      "prompt": "Вычисли: 5 × 9.",
+      "answer": "45",
+      "explanation": "Табличное умножение: 5 × 9 = 45.",
+      "difficulty": "basic",
+      "id": "g5-gen-041"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Доли",
+      "prompt": "Сколько будет половина от 28?",
+      "answer": "14",
+      "explanation": "Половина — это 28 ÷ 2 = 14.",
+      "difficulty": "basic",
+      "id": "g6-gen-041"
+    },
+    {
+      "grade": 7,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 7x = 63. Чему равен x?",
+      "answer": "9",
+      "explanation": "x = 63 ÷ 7 = 9.",
+      "difficulty": "basic",
+      "id": "g7-gen-038"
+    },
+    {
+      "grade": 8,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: x + 40 = 45. Чему равен x?",
+      "answer": "5",
+      "explanation": "x = 45 − 40 = 5.",
+      "difficulty": "basic",
+      "id": "g8-gen-040"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Углы треугольника",
+      "prompt": "В треугольнике два угла равны 36° и 57°. Найди третий угол в градусах.",
+      "answer": "87",
+      "explanation": "Сумма углов треугольника 180°: 180 − 36 − 57 = 87°.",
+      "difficulty": "basic",
+      "id": "g9-gen-040"
+    },
+    {
+      "grade": 10,
+      "subject": "algebra",
+      "topic": "Линейные уравнения",
+      "prompt": "Реши уравнение: 5x = 50. Чему равен x?",
+      "answer": "10",
+      "explanation": "x = 50 ÷ 5 = 10.",
+      "difficulty": "basic",
+      "id": "g10-gen-040"
+    },
+    {
+      "grade": 11,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 6 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/7",
+      "explanation": "Белых 1 из 7 шаров, вероятность = 1/7.",
+      "difficulty": "advanced",
+      "id": "g11-gen-036"
+    },
+    {
+      "grade": 1,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 30.",
+      "answer": "3",
+      "explanation": "10% — это десятая часть: 30 ÷ 10 = 3.",
+      "difficulty": "advanced",
+      "id": "g1-gen-041"
+    },
+    {
+      "grade": 2,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 5 см и 10 см. Найди его периметр в сантиметрах.",
+      "answer": "30",
+      "explanation": "Периметр = 2 × (5 + 10) = 30 см.",
+      "difficulty": "basic",
+      "id": "g2-gen-042"
+    },
+    {
+      "grade": 3,
+      "subject": "mathematics",
+      "topic": "Периметр",
+      "prompt": "Прямоугольник со сторонами 3 см и 9 см. Найди его периметр в сантиметрах.",
+      "answer": "24",
+      "explanation": "Периметр = 2 × (3 + 9) = 24 см.",
+      "difficulty": "basic",
+      "id": "g3-gen-042"
+    },
+    {
+      "grade": 4,
+      "subject": "mathematics",
+      "topic": "Порядок действий",
+      "prompt": "Вычисли: 8 + 7 × 8.",
+      "answer": "64",
+      "explanation": "Сначала умножение: 7 × 8 = 56, затем 8 + 56 = 64.",
+      "difficulty": "basic",
+      "id": "g4-gen-041"
+    },
+    {
+      "grade": 5,
+      "subject": "mathematics",
+      "topic": "Сложение",
+      "prompt": "В первой корзине 15 яблок, во второй 37. Сколько яблок в двух корзинах вместе?",
+      "answer": "52",
+      "explanation": "Складываем: 15 + 37 = 52.",
+      "difficulty": "basic",
+      "id": "g5-gen-042"
+    },
+    {
+      "grade": 6,
+      "subject": "mathematics",
+      "topic": "Проценты",
+      "prompt": "Найди 10% от 440.",
+      "answer": "44",
+      "explanation": "10% — это десятая часть: 440 ÷ 10 = 44.",
+      "difficulty": "advanced",
+      "id": "g6-gen-042"
+    },
+    {
+      "grade": 7,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 5 белых и 4 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "5/9",
+      "explanation": "Белых 5 из 9 шаров, вероятность = 5/9.",
+      "difficulty": "advanced",
+      "id": "g7-gen-039"
+    },
+    {
+      "grade": 8,
+      "subject": "probability-statistics",
+      "topic": "Вероятность",
+      "prompt": "В мешке 1 белых и 4 чёрных шаров. Найди вероятность достать белый шар (в виде дроби).",
+      "answer": "1/5",
+      "explanation": "Белых 1 из 5 шаров, вероятность = 1/5.",
+      "difficulty": "advanced",
+      "id": "g8-gen-041"
+    },
+    {
+      "grade": 9,
+      "subject": "geometry",
+      "topic": "Теорема Пифагора",
+      "prompt": "Катеты прямоугольного треугольника 9 и 12. Найди гипотенузу.",
+      "answer": "15",
+      "explanation": "c² = 9² + 12² = 81 + 144 = 225, значит c = 15.",
+      "difficulty": "advanced",
+      "id": "g9-gen-041"
     }
   ],
-  "lastExpandedAt": "2026-10-21",
-  "exerciseCount": 153,
+  "lastExpandedAt": "2026-11-08",
+  "exerciseCount": 600,
   "coverageNote": "Авторские задания являются дополнением к официальным ссылкам, не заменяют учебники и не являются дословными копиями официальных заданий."
 }

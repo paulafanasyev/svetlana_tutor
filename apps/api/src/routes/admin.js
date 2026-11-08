@@ -37,21 +37,27 @@ router.get('/users', validate({ query: listUsersQuerySchema }), async (req, res,
   try {
     const { search, page, pageSize } = req.query;
 
-    const allUsers = await prisma.user.findMany({});
+    const where = search
+      ? {
+          OR: [
+            { email: { contains: search, mode: 'insensitive' } },
+            { name: { contains: search, mode: 'insensitive' } },
+          ],
+        }
+      : {};
 
-    const filtered = search
-      ? allUsers.filter((u) => {
-          const haystack = `${u.email} ${u.name}`.toLowerCase();
-          return haystack.includes(search.toLowerCase());
-        })
-      : allUsers;
-
-    const total = filtered.length;
-    const start = (page - 1) * pageSize;
-    const pageItems = filtered.slice(start, start + pageSize).map(publicUser);
+    const [users, total] = await Promise.all([
+      prisma.user.findMany({
+        where,
+        skip: (page - 1) * pageSize,
+        take: pageSize,
+        orderBy: { createdAt: 'desc' },
+      }),
+      prisma.user.count({ where }),
+    ]);
 
     res.json({
-      users: pageItems,
+      users: users.map(publicUser),
       pagination: {
         page,
         pageSize,

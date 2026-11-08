@@ -33,7 +33,8 @@ router.get('/classes', async (req, res, next) => {
   try {
     const where = req.user.role === 'ADMIN' ? {} : { teacherId: req.user.id };
     const classes = await prisma.class.findMany({ where, include: { enrollments: true } });
-    const attempts = await prisma.attempt.findMany({});
+    const studentIds = classes.flatMap((c) => c.enrollments.map((e) => e.studentId));
+    const attempts = studentIds.length ? await prisma.attempt.findMany({ where: { userId: { in: studentIds } } }) : [];
     const out = classes.map((c) => {
       const ids = c.enrollments.map((e) => e.studentId);
       const accs = ids.map((id) => {

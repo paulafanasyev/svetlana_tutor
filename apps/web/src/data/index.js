@@ -44,7 +44,14 @@ export { vocabulary, grammar, listening, quest, scenarios, phrases };
 export const LEVELS = ['A1', 'A2', 'B1', 'B2'];
 export const TOPICS = ['basics', 'family', 'food', 'travel', 'school', 'hobbies', 'nature', 'city', 'shopping', 'work', 'technology', 'feelings'];
 
-export const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+export const shuffle = (arr) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
 export const pickOne = (arr) => arr[Math.floor(Math.random() * arr.length)];
 export const praise = () => pickOne(phrases.praise);
 export const encourage = () => pickOne(phrases.encourage);

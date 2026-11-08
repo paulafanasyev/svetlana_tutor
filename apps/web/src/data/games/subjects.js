@@ -37,11 +37,12 @@ export function gameCells() {
 export const subjectsOfGrade = (grade) => gameCells().filter((c) => c.grade === grade);
 
 // Режимы игры. Битва и Квест берут вопросы с вариантами, Пары берут пары «термин — значение».
+// nameKey / descKey — ключи в i18n/cabinets.js (sg.<mode>.name / sg.<mode>.desc).
 export const MODES = [
-  { id: 'battle', icon: '⚔️', name: 'Битва', desc: 'Кто быстрее ответит: ты или учитель?' },
-  { id: 'quest', icon: '🗺️', name: 'Квест', desc: 'Пройди путь до сокровища, у тебя 3 жизни.' },
-  { id: 'pairs', icon: '🧠', name: 'Пары', desc: 'Открывай карточки и находи пары.' },
-  { id: 'memory', icon: '🧠', name: 'Память', desc: 'Запомни даты, термины и формулы, затем проверь себя без подсказки.' },
+  { id: 'battle', icon: '⚔️', nameKey: 'sg.battle.name', descKey: 'sg.battle.desc' },
+  { id: 'quest', icon: '🗺️', nameKey: 'sg.quest.name', descKey: 'sg.quest.desc' },
+  { id: 'pairs', icon: '🧠', nameKey: 'sg.pairs.name', descKey: 'sg.pairs.desc' },
+  { id: 'memory', icon: '🧠', nameKey: 'sg.memory.name', descKey: 'sg.memory.desc' },
 ];
 
 // Класс из packs/ + класс из more/ → один класс: новые вопросы и пары идут в конец.
@@ -62,4 +63,50 @@ export function normalizeGrade(slug, grade, raw) {
     quiz: (g.quiz || []).map((x, i) => ({ id: `${slug}-${grade}-q${i + 1}`, topic: x.t, q: x.q, options: x.o, answer: x.a, explain: x.e })),
     pairs: (g.pairs || []).map(([term, meaning], i) => ({ id: `${slug}-${grade}-p${i + 1}`, term, meaning })),
   };
+}
+
+// Трековые слои контента. Вопросы могут иметь необязательное поле "track":
+//   - "lyceum" — олимпиадные задачи (для лицейского трека);
+//   - "cadet" — военный/кадетский контекст;
+//   - "care" — микрошаги, упрощённые задания (для трека поддержки);
+//   - без поля — базовый уровень, показывается всем.
+export const TRACK_FILTERS = ['base', 'cadet', 'lyceum', 'care'];
+
+// Отфильтровать сырой объект класса { quiz, pairs } по текущему треку.
+// Базовые вопросы (без track) всегда включаются; трековые — только если track совпадает.
+// track === 'base' || track === undefined → только базовые (без track-поля).
+export function filterByTrack(raw, track) {
+  if (!raw) return raw;
+  const t = track || 'base';
+  const filterQuiz = (arr) => {
+    if (!Array.isArray(arr)) return arr;
+    return arr.filter((q) => {
+      const qTrack = q.track || 'base';
+      if (t === 'base') return qTrack === 'base';
+      // Для не-base треков: показываем базовые + вопросы своего трека
+      return qTrack === 'base' || qTrack === t;
+    });
+  };
+  const filterPairs = (arr) => {
+    if (!Array.isArray(arr)) return arr;
+    return arr.filter((p) => {
+      const pTrack = (Array.isArray(p) && p[2]) || 'base';
+      if (t === 'base') return pTrack === 'base';
+      return pTrack === 'base' || pTrack === t;
+    });
+  };
+  return { ...raw, quiz: filterQuiz(raw.quiz), pairs: filterPairs(raw.pairs) };
+}
+
+// Доступные треки для UI-селектора в играх.
+export function availableTracks() {
+  return TRACK_FILTERS.map((id) => {
+    const labels = {
+      base: { ru: 'Базовый', en: 'Standard', emoji: '📘' },
+      cadet: { ru: 'Кадетский', en: 'Cadet', emoji: '🎖️' },
+      lyceum: { ru: 'Лицейский', en: 'Advanced', emoji: '🎓' },
+      care: { ru: 'Поддержка', en: 'Support', emoji: '🤝' },
+    };
+    return { id, ...labels[id] };
+  });
 }

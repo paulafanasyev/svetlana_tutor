@@ -39,6 +39,12 @@ const NAV = [
   { to: '/diary', icon: '📔', key: 'nav.diary' },
   { to: '/progress', icon: '📈', key: 'nav.progress' },
   { to: '/shop', icon: '🛍️', key: 'nav.shop' },
+  { to: '/buffet', icon: '🍽️', key: 'nav.buffet' },
+  { to: '/marketplace', icon: '🏷️', key: 'nav.marketplace' },
+  { to: '/bookstore', icon: '📚', key: 'nav.bookstore' },
+  { to: '/homework', icon: '📝', key: 'nav.homework' },
+  { to: '/chat', icon: '💬', key: 'nav.chat' },
+  { to: '/staff', icon: '🏫', key: 'nav.staff' },
 ];
 
 const A11Y_CSS = `
@@ -116,11 +122,23 @@ export default function Layout({ children }) {
       { to: '/planner', icon: '🗓️', key: 'nav.planner', label: L_PLANNER },
       { to: '/teacher-documents', icon: '🗂️', key: 'nav.teacherDocuments', label: L_TEACHER_DOCS },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
+      { to: '/buffet', icon: '🍽️', key: 'nav.buffet' },
+      { to: '/marketplace', icon: '🏷️', key: 'nav.marketplace' },
+      { to: '/bookstore', icon: '📚', key: 'nav.bookstore' },
+      { to: '/homework', icon: '📝', key: 'nav.homework' },
+      { to: '/chat', icon: '💬', key: 'nav.chat' },
+      { to: '/staff', icon: '🏫', key: 'nav.staff' },
     ]
     : user.role === 'PARENT' ? [
       { to: '/child', icon: '👪', key: 'nav.child' },
       { to: '/assistant', icon: '💬', key: 'nav.assistant', label: { ru: 'ИИ-помощник', en: 'AI assistant' } },
       { to: '/programs', icon: '📋', key: 'nav.programs', label: L_PROGRAMS },
+      { to: '/buffet', icon: '🍽️', key: 'nav.buffet' },
+      { to: '/marketplace', icon: '🏷️', key: 'nav.marketplace' },
+      { to: '/bookstore', icon: '📚', key: 'nav.bookstore' },
+      { to: '/homework', icon: '📝', key: 'nav.homework' },
+      { to: '/chat', icon: '💬', key: 'nav.chat' },
+      { to: '/staff', icon: '🏫', key: 'nav.staff' },
     ]
     : NAV;
 

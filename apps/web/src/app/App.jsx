@@ -46,6 +46,12 @@ const Planner = retryLazy(() => import('../features/school/Planner.jsx'));
 const TeacherWorkspace = retryLazy(() => import('../features/school/TeacherWorkspace.jsx'));
 const ClassRoom = retryLazy(() => import('../features/school/ClassRoom.jsx'));
 const AssistantChat = retryLazy(() => import('../features/assistant/AssistantChat.jsx'));
+const Buffet = retryLazy(() => import('../features/buffet/BuffetCabinet.jsx'));
+const Marketplace = retryLazy(() => import('../features/marketplace/MarketplaceCabinet.jsx'));
+const Bookstore = retryLazy(() => import('../features/bookstore/BookstoreCabinet.jsx'));
+const Homework = retryLazy(() => import('../features/homework/HomeworkCabinet.jsx'));
+const Chat = retryLazy(() => import('../features/chat/ChatCabinet.jsx'));
+const Staff = retryLazy(() => import('../features/staff/StaffCabinet.jsx'));
 
 const DEV = !!import.meta.env.DEV;
 
@@ -242,6 +248,13 @@ function AppScreens() {
             <Route path="/planner" element={<Planner />} />
             <Route path="/teacher-documents" element={<TeacherWorkspace />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/buffet" element={<Buffet />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/bookstore" element={<Bookstore />} />
+            <Route path="/homework" element={<Homework />} />
+            <Route path="/chat" element={<Chat />} />
+          <Route path="/staff" element={<Staff />} />
+            <Route path="/staff" element={<Staff />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/teacher" replace />} />
           </Routes>
@@ -257,6 +270,13 @@ function AppScreens() {
             <Route path="/child" element={<ParentCabinet />} />
             <Route path="/assistant" element={<AssistantChat />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/buffet" element={<Buffet />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/bookstore" element={<Bookstore />} />
+            <Route path="/homework" element={<Homework />} />
+            <Route path="/chat" element={<Chat />} />
+          <Route path="/staff" element={<Staff />} />
+            <Route path="/staff" element={<Staff />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/child" replace />} />
           </Routes>
@@ -284,6 +304,12 @@ function AppScreens() {
           <Route path="/games/quest" element={<En><Quest /></En>} />
           <Route path="/games/memory" element={<En><Memory /></En>} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/buffet" element={<Buffet />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/bookstore" element={<Bookstore />} />
+          <Route path="/homework" element={<Homework />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/staff" element={<Staff />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/exams" element={<En><ExamCenter /></En>} />
           <Route path="/courses" element={<En><Courses /></En>} />

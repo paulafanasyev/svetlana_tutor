@@ -2,6 +2,8 @@
 // Every problem carries a 3-step hint ladder: question → hint → worked step,
 // and a full solution that is shown only after the student has tried.
 import { Q } from './rational.js';
+import { GEOMETRY_TOPICS, GEOMETRY_GEN } from './geometry.js';
+import { OGE_REAL_TOPICS, OGE_REAL_GEN } from './oge-real.js';
 
 export function rng(seed) {
   let a = seed >>> 0;
@@ -250,6 +252,11 @@ const GEN = {
     };
   },
 };
+
+// Geometry (grades 7-9) and ОГЭ real-math (grade 9) extend the same registry and hint ladder.
+for (const [g, list] of Object.entries(GEOMETRY_TOPICS)) TOPICS[g] = [...(TOPICS[g] || []), ...list];
+for (const [g, list] of Object.entries(OGE_REAL_TOPICS)) TOPICS[g] = [...(TOPICS[g] || []), ...list];
+Object.assign(GEN, GEOMETRY_GEN, OGE_REAL_GEN);
 
 const SUPD = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 // Typographic polish for display only: real minus sign, superscript powers.

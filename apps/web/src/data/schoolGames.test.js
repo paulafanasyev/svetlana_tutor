@@ -54,7 +54,7 @@ test('для каждого предмета есть файл, загрузчи
 
 test('все школьные предметы используют общий набор мини-игр, включая отложенное воспроизведение по памяти', () => {
   assert.deepEqual(MODES.map((mode) => mode.id), ['battle', 'quest', 'pairs', 'memory']);
-  assert.ok(MODES.find((mode) => mode.id === 'memory').desc.includes('Запомни даты'));
+  assert.ok(MODES.find((mode) => mode.id === 'memory').descKey === 'sg.memory.desc');
 });
 
 test('каждая клетка плана 1–11 с часами > 0 имеет вопросы и пары', () => {

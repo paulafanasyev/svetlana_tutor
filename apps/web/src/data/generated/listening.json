@@ -1,898 +1,3670 @@
 [
-  {
-    "id": "l001",
-    "level": "A1",
-    "title": {
-      "en": "Meeting a New Friend",
-      "ru": "Знакомство с новым другом",
-      "vi": "Gặp một người bạn mới"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Hi! My name is Tom. What's your name?"
-      },
-      {
-        "speaker": "B",
-        "en": "Hi Tom! I'm Anna. Nice to meet you."
-      },
-      {
-        "speaker": "A",
-        "en": "Nice to meet you too. Are you new here?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, this is my first day at school."
-      },
-      {
-        "speaker": "A",
-        "en": "Welcome! Do you want to sit with me at lunch?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, please! Thank you very much."
-      }
-    ],
-    "questions": [
-      {
-        "en": "What is the girl's name?",
-        "ru": "Как зовут девочку?",
-        "vi": "Tên của cô gái là gì?",
-        "options": [
-          "Tom",
-          "Anna",
-          "Lucy"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Is it Anna's first day at school?",
-        "ru": "Это первый день Анны в школе?",
-        "vi": "Đây có phải là ngày đầu tiên của Anna ở trường không?",
-        "options": [
-          "No, it isn't",
-          "Yes, it is",
-          "She doesn't say"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "What does Tom offer to Anna?",
-        "ru": "Что Том предлагает Анне?",
-        "vi": "Tom đề nghị gì với Anna?",
-        "options": [
-          "To sit together at lunch",
-          "To walk home together",
-          "To do homework together"
-        ],
-        "answer": 0
-      }
-    ]
+ {
+  "id": "l001",
+  "level": "A1",
+  "title": {
+   "en": "Meeting a New Friend",
+   "ru": "Знакомство с новым другом"
   },
-  {
-    "id": "l002",
-    "level": "A1",
-    "title": {
-      "en": "At the Cafe",
-      "ru": "В кафе",
-      "vi": "Ở quán cà phê"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Good morning! What would you like to order?"
-      },
-      {
-        "speaker": "B",
-        "en": "Good morning. Can I have a sandwich and a juice, please?"
-      },
-      {
-        "speaker": "A",
-        "en": "Sure. Cheese or chicken sandwich?"
-      },
-      {
-        "speaker": "B",
-        "en": "Chicken, please."
-      },
-      {
-        "speaker": "A",
-        "en": "Okay. That's five dollars, please."
-      },
-      {
-        "speaker": "B",
-        "en": "Here you are. Thank you!"
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hi! My name is Tom. What's your name?"
+   },
+   {
+    "speaker": "B",
+    "en": "Hi Tom! I'm Anna. Nice to meet you."
+   },
+   {
+    "speaker": "A",
+    "en": "Nice to meet you too. Are you new here?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, this is my first day at school."
+   },
+   {
+    "speaker": "A",
+    "en": "Welcome! Do you want to sit with me at lunch?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, please! Thank you very much."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the girl's name?",
+    "ru": "Как зовут девочку?",
+    "options": [
+     "Tom",
+     "Anna",
+     "Lucy"
     ],
-    "questions": [
-      {
-        "en": "What does the customer order to eat?",
-        "ru": "Что заказывает клиент из еды?",
-        "vi": "Khách hàng gọi món ăn gì?",
-        "options": [
-          "A sandwich",
-          "A salad",
-          "A pizza"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What kind of sandwich does she choose?",
-        "ru": "Какой сэндвич она выбирает?",
-        "vi": "Cô ấy chọn loại sandwich nào?",
-        "options": [
-          "Cheese",
-          "Chicken",
-          "Fish"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "How much does the order cost?",
-        "ru": "Сколько стоит заказ?",
-        "vi": "Đơn hàng có giá bao nhiêu?",
-        "options": [
-          "Three dollars",
-          "Five dollars",
-          "Ten dollars"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 1
+   },
+   {
+    "en": "Is it Anna's first day at school?",
+    "ru": "Это первый день Анны в школе?",
+    "options": [
+     "No, it isn't",
+     "Yes, it is",
+     "She doesn't say"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does Tom offer to Anna?",
+    "ru": "Что Том предлагает Анне?",
+    "options": [
+     "To sit together at lunch",
+     "To walk home together",
+     "To do homework together"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l002",
+  "level": "A1",
+  "title": {
+   "en": "At the Cafe",
+   "ru": "В кафе"
   },
-  {
-    "id": "l003",
-    "level": "A1",
-    "title": {
-      "en": "Asking for Directions",
-      "ru": "Спрашиваем дорогу",
-      "vi": "Hỏi đường"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Excuse me, where is the library?"
-      },
-      {
-        "speaker": "B",
-        "en": "It's near the park. Go straight, then turn left."
-      },
-      {
-        "speaker": "A",
-        "en": "Is it far from here?"
-      },
-      {
-        "speaker": "B",
-        "en": "No, it's only five minutes on foot."
-      },
-      {
-        "speaker": "A",
-        "en": "Thank you so much!"
-      },
-      {
-        "speaker": "B",
-        "en": "You're welcome. Have a nice day!"
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Good morning! What would you like to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Good morning. Can I have a sandwich and a juice, please?"
+   },
+   {
+    "speaker": "A",
+    "en": "Sure. Cheese or chicken sandwich?"
+   },
+   {
+    "speaker": "B",
+    "en": "Chicken, please."
+   },
+   {
+    "speaker": "A",
+    "en": "Okay. That's five dollars, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Here you are. Thank you!"
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент из еды?",
+    "options": [
+     "A sandwich",
+     "A salad",
+     "A pizza"
     ],
-    "questions": [
-      {
-        "en": "Where is the library?",
-        "ru": "Где находится библиотека?",
-        "vi": "Thư viện ở đâu?",
-        "options": [
-          "Near the park",
-          "Near the school",
-          "Near the station"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "How far is the library?",
-        "ru": "Как далеко библиотека?",
-        "vi": "Thư viện xa bao nhiêu?",
-        "options": [
-          "Ten minutes by bus",
-          "Five minutes on foot",
-          "One hour by car"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Which way should the person turn?",
-        "ru": "В какую сторону нужно повернуть?",
-        "vi": "Người đó nên rẽ theo hướng nào?",
-        "options": [
-          "Turn right",
-          "Turn left",
-          "Go back"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "What kind of sandwich does she choose?",
+    "ru": "Какой сэндвич она выбирает?",
+    "options": [
+     "Cheese",
+     "Chicken",
+     "Fish"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How much does the order cost?",
+    "ru": "Сколько стоит заказ?",
+    "options": [
+     "Three dollars",
+     "Five dollars",
+     "Ten dollars"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l003",
+  "level": "A1",
+  "title": {
+   "en": "Asking for Directions",
+   "ru": "Спрашиваем дорогу"
   },
-  {
-    "id": "l004",
-    "level": "A1",
-    "title": {
-      "en": "My Family",
-      "ru": "Моя семья",
-      "vi": "Gia đình của tôi"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Do you have any brothers or sisters?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, I have one brother. He is twelve."
-      },
-      {
-        "speaker": "A",
-        "en": "Is he older or younger than you?"
-      },
-      {
-        "speaker": "B",
-        "en": "He is younger. I am fourteen."
-      },
-      {
-        "speaker": "A",
-        "en": "That's nice. Do you play together often?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, we play video games every weekend."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Excuse me, where is the library?"
+   },
+   {
+    "speaker": "B",
+    "en": "It's near the park. Go straight, then turn left."
+   },
+   {
+    "speaker": "A",
+    "en": "Is it far from here?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's only five minutes on foot."
+   },
+   {
+    "speaker": "A",
+    "en": "Thank you so much!"
+   },
+   {
+    "speaker": "B",
+    "en": "You're welcome. Have a nice day!"
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the library?",
+    "ru": "Где находится библиотека?",
+    "options": [
+     "Near the park",
+     "Near the school",
+     "Near the station"
     ],
-    "questions": [
-      {
-        "en": "How old is the brother?",
-        "ru": "Сколько лет брату?",
-        "vi": "Người anh/em trai bao nhiêu tuổi?",
-        "options": [
-          "Ten",
-          "Twelve",
-          "Fourteen"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Who is older?",
-        "ru": "Кто старше?",
-        "vi": "Ai lớn tuổi hơn?",
-        "options": [
-          "The brother",
-          "The speaker",
-          "They are the same age"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "What do they do together?",
-        "ru": "Что они делают вместе?",
-        "vi": "Họ làm gì cùng nhau?",
-        "options": [
-          "Play video games",
-          "Watch movies",
-          "Read books"
-        ],
-        "answer": 0
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "How far is the library?",
+    "ru": "Как далеко библиотека?",
+    "options": [
+     "Ten minutes by bus",
+     "Five minutes on foot",
+     "One hour by car"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Which way should the person turn?",
+    "ru": "В какую сторону нужно повернуть?",
+    "options": [
+     "Turn right",
+     "Turn left",
+     "Go back"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l004",
+  "level": "A1",
+  "title": {
+   "en": "My Family",
+   "ru": "Моя семья"
   },
-  {
-    "id": "l005",
-    "level": "A1",
-    "title": {
-      "en": "Shopping for Clothes",
-      "ru": "Покупка одежды",
-      "vi": "Mua sắm quần áo"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Can I help you find something?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, I'm looking for a blue T-shirt."
-      },
-      {
-        "speaker": "A",
-        "en": "We have this one. It's small, medium, and large."
-      },
-      {
-        "speaker": "B",
-        "en": "Can I try the medium one, please?"
-      },
-      {
-        "speaker": "A",
-        "en": "Of course. The fitting room is over there."
-      },
-      {
-        "speaker": "B",
-        "en": "Thanks! I'll go try it on now."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Do you have any brothers or sisters?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I have one brother. He is twelve."
+   },
+   {
+    "speaker": "A",
+    "en": "Is he older or younger than you?"
+   },
+   {
+    "speaker": "B",
+    "en": "He is younger. I am fourteen."
+   },
+   {
+    "speaker": "A",
+    "en": "That's nice. Do you play together often?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, we play video games every weekend."
+   }
+  ],
+  "questions": [
+   {
+    "en": "How old is the brother?",
+    "ru": "Сколько лет брату?",
+    "options": [
+     "Ten",
+     "Twelve",
+     "Fourteen"
     ],
-    "questions": [
-      {
-        "en": "What is the customer looking for?",
-        "ru": "Что ищет покупатель?",
-        "vi": "Khách hàng đang tìm gì?",
-        "options": [
-          "A blue T-shirt",
-          "A red dress",
-          "A pair of shoes"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "Which size does she want to try?",
-        "ru": "Какой размер она хочет примерить?",
-        "vi": "Cô ấy muốn thử cỡ nào?",
-        "options": [
-          "Small",
-          "Medium",
-          "Large"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Where does she go to try on the T-shirt?",
-        "ru": "Куда она идет, чтобы примерить футболку?",
-        "vi": "Cô ấy đi đâu để thử áo?",
-        "options": [
-          "The fitting room",
-          "The cash desk",
-          "The exit"
-        ],
-        "answer": 0
-      }
-    ]
+    "answer": 1
+   },
+   {
+    "en": "Who is older?",
+    "ru": "Кто старше?",
+    "options": [
+     "The brother",
+     "The speaker",
+     "They are the same age"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What do they do together?",
+    "ru": "Что они делают вместе?",
+    "options": [
+     "Play video games",
+     "Watch movies",
+     "Read books"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l005",
+  "level": "A1",
+  "title": {
+   "en": "Shopping for Clothes",
+   "ru": "Покупка одежды"
   },
-  {
-    "id": "l006",
-    "level": "A2",
-    "title": {
-      "en": "Weekend Plans",
-      "ru": "Планы на выходные",
-      "vi": "Kế hoạch cuối tuần"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "What are you doing this weekend?"
-      },
-      {
-        "speaker": "B",
-        "en": "I'm going hiking with my cousin on Saturday."
-      },
-      {
-        "speaker": "A",
-        "en": "That sounds fun! Where are you going?"
-      },
-      {
-        "speaker": "B",
-        "en": "We're going to the mountains near the lake."
-      },
-      {
-        "speaker": "A",
-        "en": "Can I come with you? I love hiking too."
-      },
-      {
-        "speaker": "B",
-        "en": "Sure! We're leaving at eight in the morning."
-      },
-      {
-        "speaker": "A",
-        "en": "Great, I'll set an alarm so I don't oversleep."
-      },
-      {
-        "speaker": "B",
-        "en": "Perfect. See you on Saturday, then!"
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Can I help you find something?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'm looking for a blue T-shirt."
+   },
+   {
+    "speaker": "A",
+    "en": "We have this one. It's small, medium, and large."
+   },
+   {
+    "speaker": "B",
+    "en": "Can I try the medium one, please?"
+   },
+   {
+    "speaker": "A",
+    "en": "Of course. The fitting room is over there."
+   },
+   {
+    "speaker": "B",
+    "en": "Thanks! I'll go try it on now."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the customer looking for?",
+    "ru": "Что ищет покупатель?",
+    "options": [
+     "A blue T-shirt",
+     "A red dress",
+     "A pair of shoes"
     ],
-    "questions": [
-      {
-        "en": "Who is going hiking with the speaker?",
-        "ru": "С кем идет в поход собеседник?",
-        "vi": "Người nói đi leo núi với ai?",
-        "options": [
-          "A cousin",
-          "A brother",
-          "A classmate"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "Where are they going hiking?",
-        "ru": "Куда они идут в поход?",
-        "vi": "Họ đi leo núi ở đâu?",
-        "options": [
-          "To the mountains near the lake",
-          "To the city park",
-          "To the beach"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What time are they leaving?",
-        "ru": "В какое время они уезжают?",
-        "vi": "Họ khởi hành lúc mấy giờ?",
-        "options": [
-          "Seven in the morning",
-          "Eight in the morning",
-          "Nine in the evening"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "Which size does she want to try?",
+    "ru": "Какой размер она хочет примерить?",
+    "options": [
+     "Small",
+     "Medium",
+     "Large"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Where does she go to try on the T-shirt?",
+    "ru": "Куда она идет, чтобы примерить футболку?",
+    "options": [
+     "The fitting room",
+     "The cash desk",
+     "The exit"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l006",
+  "level": "A2",
+  "title": {
+   "en": "Weekend Plans",
+   "ru": "Планы на выходные"
   },
-  {
-    "id": "l007",
-    "level": "A2",
-    "title": {
-      "en": "At the Doctor's",
-      "ru": "У врача",
-      "vi": "Ở phòng khám"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Good morning. What's the problem today?"
-      },
-      {
-        "speaker": "B",
-        "en": "I have a sore throat and a headache."
-      },
-      {
-        "speaker": "A",
-        "en": "How long have you had these symptoms?"
-      },
-      {
-        "speaker": "B",
-        "en": "Since yesterday evening, I think."
-      },
-      {
-        "speaker": "A",
-        "en": "Do you have a fever as well?"
-      },
-      {
-        "speaker": "B",
-        "en": "A little. I checked this morning."
-      },
-      {
-        "speaker": "A",
-        "en": "Okay, I'll give you some medicine. Rest for two days."
-      },
-      {
-        "speaker": "B",
-        "en": "Thank you, doctor."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What are you doing this weekend?"
+   },
+   {
+    "speaker": "B",
+    "en": "I'm going hiking with my cousin on Saturday."
+   },
+   {
+    "speaker": "A",
+    "en": "That sounds fun! Where are you going?"
+   },
+   {
+    "speaker": "B",
+    "en": "We're going to the mountains near the lake."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I come with you? I love hiking too."
+   },
+   {
+    "speaker": "B",
+    "en": "Sure! We're leaving at eight in the morning."
+   },
+   {
+    "speaker": "A",
+    "en": "Great, I'll set an alarm so I don't oversleep."
+   },
+   {
+    "speaker": "B",
+    "en": "Perfect. See you on Saturday, then!"
+   }
+  ],
+  "questions": [
+   {
+    "en": "Who is going hiking with the speaker?",
+    "ru": "С кем идет в поход собеседник?",
+    "options": [
+     "A cousin",
+     "A brother",
+     "A classmate"
     ],
-    "questions": [
-      {
-        "en": "What symptoms does the patient have?",
-        "ru": "Какие симптомы у пациента?",
-        "vi": "Bệnh nhân có triệu chứng gì?",
-        "options": [
-          "A sore throat and headache",
-          "A broken arm",
-          "A stomachache"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "Since when has the patient felt sick?",
-        "ru": "С какого момента пациент чувствует себя плохо?",
-        "vi": "Bệnh nhân cảm thấy ốm từ khi nào?",
-        "options": [
-          "Since last week",
-          "Since yesterday evening",
-          "Since this morning"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "What does the doctor tell the patient to do?",
-        "ru": "Что доктор советует пациенту делать?",
-        "vi": "Bác sĩ khuyên bệnh nhân làm gì?",
-        "options": [
-          "Go to the hospital",
-          "Rest for two days",
-          "Come back tomorrow"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "Where are they going hiking?",
+    "ru": "Куда они идут в поход?",
+    "options": [
+     "To the mountains near the lake",
+     "To the city park",
+     "To the beach"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What time are they leaving?",
+    "ru": "В какое время они уезжают?",
+    "options": [
+     "Seven in the morning",
+     "Eight in the morning",
+     "Nine in the evening"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l007",
+  "level": "A2",
+  "title": {
+   "en": "At the Doctor's",
+   "ru": "У врача"
   },
-  {
-    "id": "l008",
-    "level": "A2",
-    "title": {
-      "en": "My Favorite Hobby",
-      "ru": "Мое любимое хобби",
-      "vi": "Sở thích yêu thích của tôi"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "What do you like to do in your free time?"
-      },
-      {
-        "speaker": "B",
-        "en": "I really enjoy painting. I paint almost every day."
-      },
-      {
-        "speaker": "A",
-        "en": "Wow! What do you usually paint?"
-      },
-      {
-        "speaker": "B",
-        "en": "Mostly nature — trees, flowers, and mountains."
-      },
-      {
-        "speaker": "A",
-        "en": "Have you ever sold any of your paintings?"
-      },
-      {
-        "speaker": "B",
-        "en": "Not yet, but I want to try next year."
-      },
-      {
-        "speaker": "A",
-        "en": "That's a great goal. I'd love to see your work!"
-      },
-      {
-        "speaker": "B",
-        "en": "Sure, I can show you some photos later."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Good morning. What's the problem today?"
+   },
+   {
+    "speaker": "B",
+    "en": "I have a sore throat and a headache."
+   },
+   {
+    "speaker": "A",
+    "en": "How long have you had these symptoms?"
+   },
+   {
+    "speaker": "B",
+    "en": "Since yesterday evening, I think."
+   },
+   {
+    "speaker": "A",
+    "en": "Do you have a fever as well?"
+   },
+   {
+    "speaker": "B",
+    "en": "A little. I checked this morning."
+   },
+   {
+    "speaker": "A",
+    "en": "Okay, I'll give you some medicine. Rest for two days."
+   },
+   {
+    "speaker": "B",
+    "en": "Thank you, doctor."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What symptoms does the patient have?",
+    "ru": "Какие симптомы у пациента?",
+    "options": [
+     "A sore throat and headache",
+     "A broken arm",
+     "A stomachache"
     ],
-    "questions": [
-      {
-        "en": "What is the hobby of the second speaker?",
-        "ru": "Какое хобби у второго собеседника?",
-        "vi": "Sở thích của người nói thứ hai là gì?",
-        "options": [
-          "Painting",
-          "Singing",
-          "Cooking"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What does she usually paint?",
-        "ru": "Что она обычно рисует?",
-        "vi": "Cô ấy thường vẽ gì?",
-        "options": [
-          "Buildings",
-          "Nature",
-          "Animals"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Has she sold any paintings yet?",
-        "ru": "Она уже продавала свои картины?",
-        "vi": "Cô ấy đã bán tranh nào chưa?",
-        "options": [
-          "Yes, many",
-          "No, not yet",
-          "Only one"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "Since when has the patient felt sick?",
+    "ru": "С какого момента пациент чувствует себя плохо?",
+    "options": [
+     "Since last week",
+     "Since yesterday evening",
+     "Since this morning"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does the doctor tell the patient to do?",
+    "ru": "Что доктор советует пациенту делать?",
+    "options": [
+     "Go to the hospital",
+     "Rest for two days",
+     "Come back tomorrow"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l008",
+  "level": "A2",
+  "title": {
+   "en": "My Favorite Hobby",
+   "ru": "Мое любимое хобби"
   },
-  {
-    "id": "l009",
-    "level": "A2",
-    "title": {
-      "en": "Planning a Birthday Party",
-      "ru": "Планирование дня рождения",
-      "vi": "Lên kế hoạch tiệc sinh nhật"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "My birthday is next Friday. Can you help me plan a party?"
-      },
-      {
-        "speaker": "B",
-        "en": "Of course! How many people are you inviting?"
-      },
-      {
-        "speaker": "A",
-        "en": "About fifteen friends from school and the neighborhood."
-      },
-      {
-        "speaker": "B",
-        "en": "Should we order a cake or make one ourselves?"
-      },
-      {
-        "speaker": "A",
-        "en": "Let's order one — I don't have time to bake."
-      },
-      {
-        "speaker": "B",
-        "en": "Good idea. What about music and games?"
-      },
-      {
-        "speaker": "A",
-        "en": "I'll make a playlist, and you can bring some games."
-      },
-      {
-        "speaker": "B",
-        "en": "Deal! This is going to be a great party."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What do you like to do in your free time?"
+   },
+   {
+    "speaker": "B",
+    "en": "I really enjoy painting. I paint almost every day."
+   },
+   {
+    "speaker": "A",
+    "en": "Wow! What do you usually paint?"
+   },
+   {
+    "speaker": "B",
+    "en": "Mostly nature — trees, flowers, and mountains."
+   },
+   {
+    "speaker": "A",
+    "en": "Have you ever sold any of your paintings?"
+   },
+   {
+    "speaker": "B",
+    "en": "Not yet, but I want to try next year."
+   },
+   {
+    "speaker": "A",
+    "en": "That's a great goal. I'd love to see your work!"
+   },
+   {
+    "speaker": "B",
+    "en": "Sure, I can show you some photos later."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the hobby of the second speaker?",
+    "ru": "Какое хобби у второго собеседника?",
+    "options": [
+     "Painting",
+     "Singing",
+     "Cooking"
     ],
-    "questions": [
-      {
-        "en": "When is the birthday?",
-        "ru": "Когда день рождения?",
-        "vi": "Sinh nhật là khi nào?",
-        "options": [
-          "Next Monday",
-          "Next Friday",
-          "Next Sunday"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "How many friends are invited?",
-        "ru": "Сколько друзей приглашено?",
-        "vi": "Có bao nhiêu người bạn được mời?",
-        "options": [
-          "About five",
-          "About fifteen",
-          "About thirty"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "Who will bring the games?",
-        "ru": "Кто принесет игры?",
-        "vi": "Ai sẽ mang trò chơi đến?",
-        "options": [
-          "The birthday person",
-          "The friend",
-          "Both of them"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "What does she usually paint?",
+    "ru": "Что она обычно рисует?",
+    "options": [
+     "Buildings",
+     "Nature",
+     "Animals"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Has she sold any paintings yet?",
+    "ru": "Она уже продавала свои картины?",
+    "options": [
+     "Yes, many",
+     "No, not yet",
+     "Only one"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l009",
+  "level": "A2",
+  "title": {
+   "en": "Planning a Birthday Party",
+   "ru": "Планирование дня рождения"
   },
-  {
-    "id": "l010",
-    "level": "B1",
-    "title": {
-      "en": "Job Interview Practice",
-      "ru": "Практика собеседования",
-      "vi": "Luyện tập phỏng vấn việc làm"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Thank you for coming today. Can you tell me about yourself?"
-      },
-      {
-        "speaker": "B",
-        "en": "Sure. I'm a student studying business, and I've worked part-time at a bookstore for a year."
-      },
-      {
-        "speaker": "A",
-        "en": "What did you learn from that job?"
-      },
-      {
-        "speaker": "B",
-        "en": "I learned how to manage my time and deal with difficult customers politely."
-      },
-      {
-        "speaker": "A",
-        "en": "Why do you want to work with us specifically?"
-      },
-      {
-        "speaker": "B",
-        "en": "I admire your company's focus on customer service and teamwork."
-      },
-      {
-        "speaker": "A",
-        "en": "Do you have any questions for me?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, what does a typical training period look like here?"
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "My birthday is next Friday. Can you help me plan a party?"
+   },
+   {
+    "speaker": "B",
+    "en": "Of course! How many people are you inviting?"
+   },
+   {
+    "speaker": "A",
+    "en": "About fifteen friends from school and the neighborhood."
+   },
+   {
+    "speaker": "B",
+    "en": "Should we order a cake or make one ourselves?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's order one — I don't have time to bake."
+   },
+   {
+    "speaker": "B",
+    "en": "Good idea. What about music and games?"
+   },
+   {
+    "speaker": "A",
+    "en": "I'll make a playlist, and you can bring some games."
+   },
+   {
+    "speaker": "B",
+    "en": "Deal! This is going to be a great party."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When is the birthday?",
+    "ru": "Когда день рождения?",
+    "options": [
+     "Next Monday",
+     "Next Friday",
+     "Next Sunday"
     ],
-    "questions": [
-      {
-        "en": "What is the interviewee currently studying?",
-        "ru": "Что изучает собеседуемый в настоящее время?",
-        "vi": "Người được phỏng vấn hiện đang học gì?",
-        "options": [
-          "Business",
-          "Medicine",
-          "Engineering"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What skill did she gain from her part-time job?",
-        "ru": "Какой навык она приобрела на работе с частичной занятостью?",
-        "vi": "Cô ấy học được kỹ năng gì từ công việc bán thời gian?",
-        "options": [
-          "Cooking skills",
-          "Time management",
-          "Driving skills"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "What does she ask the interviewer at the end?",
-        "ru": "Что она спрашивает у интервьюера в конце?",
-        "vi": "Cô ấy hỏi người phỏng vấn điều gì ở cuối?",
-        "options": [
-          "About the salary",
-          "About the training period",
-          "About the office location"
-        ],
-        "answer": 1
-      }
-    ]
+    "answer": 1
+   },
+   {
+    "en": "How many friends are invited?",
+    "ru": "Сколько друзей приглашено?",
+    "options": [
+     "About five",
+     "About fifteen",
+     "About thirty"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Who will bring the games?",
+    "ru": "Кто принесет игры?",
+    "options": [
+     "The birthday person",
+     "The friend",
+     "Both of them"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l010",
+  "level": "B1",
+  "title": {
+   "en": "Job Interview Practice",
+   "ru": "Практика собеседования"
   },
-  {
-    "id": "l011",
-    "level": "B1",
-    "title": {
-      "en": "Talking About the Environment",
-      "ru": "Разговор об окружающей среде",
-      "vi": "Nói về môi trường"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Have you noticed how much plastic waste there is near the river lately?"
-      },
-      {
-        "speaker": "B",
-        "en": "Yes, it's getting worse every month. Something needs to change."
-      },
-      {
-        "speaker": "A",
-        "en": "I read that our school is starting a recycling program next term."
-      },
-      {
-        "speaker": "B",
-        "en": "That's great news! Do you know how it will work?"
-      },
-      {
-        "speaker": "A",
-        "en": "Students will separate plastic, paper, and food waste into different bins."
-      },
-      {
-        "speaker": "B",
-        "en": "I think we should also organize a river cleanup on weekends."
-      },
-      {
-        "speaker": "A",
-        "en": "That's a wonderful idea. Let's suggest it to the student council."
-      },
-      {
-        "speaker": "B",
-        "en": "Agreed. The sooner we act, the better for everyone."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Thank you for coming today. Can you tell me about yourself?"
+   },
+   {
+    "speaker": "B",
+    "en": "Sure. I'm a student studying business, and I've worked part-time at a bookstore for a year."
+   },
+   {
+    "speaker": "A",
+    "en": "What did you learn from that job?"
+   },
+   {
+    "speaker": "B",
+    "en": "I learned how to manage my time and deal with difficult customers politely."
+   },
+   {
+    "speaker": "A",
+    "en": "Why do you want to work with us specifically?"
+   },
+   {
+    "speaker": "B",
+    "en": "I admire your company's focus on customer service and teamwork."
+   },
+   {
+    "speaker": "A",
+    "en": "Do you have any questions for me?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, what does a typical training period look like here?"
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the interviewee currently studying?",
+    "ru": "Что изучает собеседуемый в настоящее время?",
+    "options": [
+     "Business",
+     "Medicine",
+     "Engineering"
     ],
-    "questions": [
-      {
-        "en": "What problem are the speakers discussing?",
-        "ru": "Какую проблему обсуждают собеседники?",
-        "vi": "Người nói đang thảo luận về vấn đề gì?",
-        "options": [
-          "Plastic waste near the river",
-          "Traffic in the city",
-          "Air pollution from factories"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What is the school planning to start?",
-        "ru": "Что школа планирует начать?",
-        "vi": "Nhà trường có kế hoạch bắt đầu điều gì?",
-        "options": [
-          "A recycling program",
-          "A sports club",
-          "A music festival"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What extra idea does the second speaker suggest?",
-        "ru": "Какую дополнительную идею предлагает второй собеседник?",
-        "vi": "Người nói thứ hai đề xuất ý tưởng gì thêm?",
-        "options": [
-          "A river cleanup on weekends",
-          "A new school subject",
-          "A fundraising concert"
-        ],
-        "answer": 0
-      }
-    ]
+    "answer": 0
+   },
+   {
+    "en": "What skill did she gain from her part-time job?",
+    "ru": "Какой навык она приобрела на работе с частичной занятостью?",
+    "options": [
+     "Cooking skills",
+     "Time management",
+     "Driving skills"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does she ask the interviewer at the end?",
+    "ru": "Что она спрашивает у интервьюера в конце?",
+    "options": [
+     "About the salary",
+     "About the training period",
+     "About the office location"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l011",
+  "level": "B1",
+  "title": {
+   "en": "Talking About the Environment",
+   "ru": "Разговор об окружающей среде"
   },
-  {
-    "id": "l012",
-    "level": "B2",
-    "title": {
-      "en": "Technology in Education",
-      "ru": "Технологии в образовании",
-      "vi": "Công nghệ trong giáo dục"
-    },
-    "lines": [
-      {
-        "speaker": "A",
-        "en": "Do you think students should be allowed to use phones during lessons?"
-      },
-      {
-        "speaker": "B",
-        "en": "In moderation, yes. Phones can be useful for research and quick translations."
-      },
-      {
-        "speaker": "A",
-        "en": "I understand that, but they're also a huge distraction for many students."
-      },
-      {
-        "speaker": "B",
-        "en": "True, but banning them completely might not solve the real problem."
-      },
-      {
-        "speaker": "A",
-        "en": "What would you suggest instead?"
-      },
-      {
-        "speaker": "B",
-        "en": "Teachers could set clear rules about when phones are allowed and when they're not."
-      },
-      {
-        "speaker": "A",
-        "en": "That sounds reasonable, as long as the rules are enforced consistently."
-      },
-      {
-        "speaker": "B",
-        "en": "Exactly. Consistency is probably more important than the rule itself."
-      }
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Have you noticed how much plastic waste there is near the river lately?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, it's getting worse every month. Something needs to change."
+   },
+   {
+    "speaker": "A",
+    "en": "I read that our school is starting a recycling program next term."
+   },
+   {
+    "speaker": "B",
+    "en": "That's great news! Do you know how it will work?"
+   },
+   {
+    "speaker": "A",
+    "en": "Students will separate plastic, paper, and food waste into different bins."
+   },
+   {
+    "speaker": "B",
+    "en": "I think we should also organize a river cleanup on weekends."
+   },
+   {
+    "speaker": "A",
+    "en": "That's a wonderful idea. Let's suggest it to the student council."
+   },
+   {
+    "speaker": "B",
+    "en": "Agreed. The sooner we act, the better for everyone."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What problem are the speakers discussing?",
+    "ru": "Какую проблему обсуждают собеседники?",
+    "options": [
+     "Plastic waste near the river",
+     "Traffic in the city",
+     "Air pollution from factories"
     ],
-    "questions": [
-      {
-        "en": "What is the main topic of the debate?",
-        "ru": "Какая главная тема дебатов?",
-        "vi": "Chủ đề chính của cuộc tranh luận là gì?",
-        "options": [
-          "Whether phones should be used in lessons",
-          "Whether homework should be reduced",
-          "Whether school hours should change"
-        ],
-        "answer": 0
-      },
-      {
-        "en": "What does the second speaker believe about banning phones completely?",
-        "ru": "Что второй собеседник думает о полном запрете телефонов?",
-        "vi": "Người nói thứ hai nghĩ gì về việc cấm hoàn toàn điện thoại?",
-        "options": [
-          "It would solve the problem",
-          "It might not solve the real problem",
-          "It is the only good solution"
-        ],
-        "answer": 1
-      },
-      {
-        "en": "What does the second speaker say is more important than the rule itself?",
-        "ru": "Что, по словам второго собеседника, важнее самого правила?",
-        "vi": "Người nói thứ hai cho rằng điều gì quan trọng hơn quy tắc?",
-        "options": [
-          "The number of rules",
-          "Consistency in enforcing rules",
-          "The age of the students"
-        ],
-        "answer": 1
-      }
-    ]
-  }
+    "answer": 0
+   },
+   {
+    "en": "What is the school planning to start?",
+    "ru": "Что школа планирует начать?",
+    "options": [
+     "A recycling program",
+     "A sports club",
+     "A music festival"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What extra idea does the second speaker suggest?",
+    "ru": "Какую дополнительную идею предлагает второй собеседник?",
+    "options": [
+     "A river cleanup on weekends",
+     "A new school subject",
+     "A fundraising concert"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l012",
+  "level": "B2",
+  "title": {
+   "en": "Technology in Education",
+   "ru": "Технологии в образовании"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Do you think students should be allowed to use phones during lessons?"
+   },
+   {
+    "speaker": "B",
+    "en": "In moderation, yes. Phones can be useful for research and quick translations."
+   },
+   {
+    "speaker": "A",
+    "en": "I understand that, but they're also a huge distraction for many students."
+   },
+   {
+    "speaker": "B",
+    "en": "True, but banning them completely might not solve the real problem."
+   },
+   {
+    "speaker": "A",
+    "en": "What would you suggest instead?"
+   },
+   {
+    "speaker": "B",
+    "en": "Teachers could set clear rules about when phones are allowed and when they're not."
+   },
+   {
+    "speaker": "A",
+    "en": "That sounds reasonable, as long as the rules are enforced consistently."
+   },
+   {
+    "speaker": "B",
+    "en": "Exactly. Consistency is probably more important than the rule itself."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the main topic of the debate?",
+    "ru": "Какая главная тема дебатов?",
+    "options": [
+     "Whether phones should be used in lessons",
+     "Whether homework should be reduced",
+     "Whether school hours should change"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What does the second speaker believe about banning phones completely?",
+    "ru": "Что второй собеседник думает о полном запрете телефонов?",
+    "options": [
+     "It would solve the problem",
+     "It might not solve the real problem",
+     "It is the only good solution"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does the second speaker say is more important than the rule itself?",
+    "ru": "Что, по словам второго собеседника, важнее самого правила?",
+    "options": [
+     "The number of rules",
+     "Consistency in enforcing rules",
+     "The age of the students"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   10,
+   11
+  ],
+  "difficulty": 4,
+  "context": "personal"
+ },
+ {
+  "id": "l013",
+  "level": "B1",
+  "title": {
+   "en": "A Doctor's Appointment",
+   "ru": "Запись к врачу"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Good morning, I'd like to make an appointment with the doctor."
+   },
+   {
+    "speaker": "B",
+    "en": "Certainly. Is Thursday at half past six convenient for you?"
+   },
+   {
+    "speaker": "A",
+    "en": "Yes, that works. Should I bring anything?"
+   },
+   {
+    "speaker": "B",
+    "en": "Please bring your insurance card and arrive ten minutes early."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When is the appointment?",
+    "ru": "Когда приём?",
+    "options": [
+     "Thursday at half past six",
+     "Sunday at noon",
+     "Next month",
+     "Tomorrow morning"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What should the patient bring?",
+    "ru": "Что взять пациенту?",
+    "options": [
+     "Previous tests",
+     "Some cash",
+     "A referral letter",
+     "The insurance card"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l014",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a sandwich, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "coffee, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "a sandwich",
+     "fish and chips",
+     "ice cream",
+     "a burger"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "milk",
+     "hot chocolate",
+     "a smoothie",
+     "coffee"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l015",
+  "level": "A1",
+  "title": {
+   "en": "Favourite Subject",
+   "ru": "Любимый предмет"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What's your favourite subject, Ivan?"
+   },
+   {
+    "speaker": "B",
+    "en": "I like English best. It's really interesting."
+   },
+   {
+    "speaker": "A",
+    "en": "Why do you like it?"
+   },
+   {
+    "speaker": "B",
+    "en": "Because our teacher makes every lesson fun."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is Ivan's favourite subject?",
+    "ru": "Какой любимый предмет у Ivan?",
+    "options": [
+     "chemistry",
+     "music",
+     "physics",
+     "English"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "Why does the pupil like it?",
+    "ru": "Почему ученику нравится предмет?",
+    "options": [
+     "The teacher makes lessons fun",
+     "It is short",
+     "There is no homework",
+     "It is easy"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l016",
+  "level": "A2",
+  "title": {
+   "en": "Weekend Plans",
+   "ru": "Планы на выходные"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What's the weather forecast for the weekend?"
+   },
+   {
+    "speaker": "B",
+    "en": "It will be rainy."
+   },
+   {
+    "speaker": "A",
+    "en": "Then let's read a book."
+   },
+   {
+    "speaker": "B",
+    "en": "Good idea, I'd love to."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What will the weather be like?",
+    "ru": "Какая будет погода?",
+    "options": [
+     "stormy",
+     "foggy",
+     "rainy",
+     "hot and dry"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "What do they decide to do?",
+    "ru": "Что они решают сделать?",
+    "options": [
+     "go swimming",
+     "play football",
+     "read a book",
+     "go shopping"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l017",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a science book, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for one week."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a magazine",
+     "a science book",
+     "a newspaper",
+     "a DVD"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "one day",
+     "one week",
+     "six months",
+     "two days"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l018",
+  "level": "A1",
+  "title": {
+   "en": "Meeting a New Friend",
+   "ru": "Знакомство с новым другом"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hi! My name is Anna. What's your name?"
+   },
+   {
+    "speaker": "B",
+    "en": "Hi Anna! I'm Sofia. Nice to meet you."
+   },
+   {
+    "speaker": "A",
+    "en": "Nice to meet you too. Are you new here?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, this is my first day at school."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the second speaker's name?",
+    "ru": "Как зовут второго собеседника?",
+    "options": [
+     "Lucy",
+     "Sofia",
+     "Sam",
+     "Anna"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Is it the new pupil's first day?",
+    "ru": "Это первый день нового ученика?",
+    "options": [
+     "No",
+     "Yes",
+     "Not stated",
+     "It is the last day"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l019",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to London, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's forty pounds. The train leaves from platform 4."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "Berlin",
+     "London",
+     "Paris",
+     "Moscow"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "five pounds",
+     "sixty pounds",
+     "forty pounds",
+     "one hundred pounds"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l020",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like some pasta, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "a cup of tea, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "some pasta",
+     "fish and chips",
+     "a burger",
+     "ice cream"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "hot chocolate",
+     "milk",
+     "a smoothie",
+     "a cup of tea"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l021",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to London, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's thirty pounds. The train leaves from platform 4."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "London",
+     "Paris",
+     "Berlin",
+     "Moscow"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "thirty pounds",
+     "sixty pounds",
+     "five pounds",
+     "one hundred pounds"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l022",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a salad, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "some water, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "a burger",
+     "fish and chips",
+     "ice cream",
+     "a salad"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "a smoothie",
+     "hot chocolate",
+     "some water",
+     "milk"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l023",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a history book, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for one week."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a newspaper",
+     "a DVD",
+     "a magazine",
+     "a history book"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "one week",
+     "one day",
+     "six months",
+     "two days"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l024",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to Edinburgh, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's twenty pounds. The train leaves from platform 4."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "Edinburgh",
+     "Moscow",
+     "Paris",
+     "Berlin"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "one hundred pounds",
+     "sixty pounds",
+     "twenty pounds",
+     "five pounds"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l025",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to Cambridge, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's fifteen pounds. The train leaves from platform 4."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "Cambridge",
+     "Moscow",
+     "Berlin",
+     "Paris"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "five pounds",
+     "one hundred pounds",
+     "sixty pounds",
+     "fifteen pounds"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l026",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a science book, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for two weeks."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a newspaper",
+     "a science book",
+     "a magazine",
+     "a DVD"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "two weeks",
+     "one day",
+     "six months",
+     "two days"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l027",
+  "level": "A1",
+  "title": {
+   "en": "Meeting a New Friend",
+   "ru": "Знакомство с новым другом"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hi! My name is Kate. What's your name?"
+   },
+   {
+    "speaker": "B",
+    "en": "Hi Kate! I'm Sofia. Nice to meet you."
+   },
+   {
+    "speaker": "A",
+    "en": "Nice to meet you too. Are you new here?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, this is my first day at school."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the second speaker's name?",
+    "ru": "Как зовут второго собеседника?",
+    "options": [
+     "Sofia",
+     "Kate",
+     "Sam",
+     "Lucy"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "Is it the new pupil's first day?",
+    "ru": "Это первый день нового ученика?",
+    "options": [
+     "It is the last day",
+     "Not stated",
+     "No",
+     "Yes"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l028",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Friday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Friday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at three o'clock in front of the library."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at three o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Friday at three o'clock",
+     "Sunday morning",
+     "Friday at noon",
+     "Next week"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "In front of the library",
+     "At school",
+     "At the station",
+     "At home"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l029",
+  "level": "A1",
+  "title": {
+   "en": "Meeting a New Friend",
+   "ru": "Знакомство с новым другом"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hi! My name is Tom. What's your name?"
+   },
+   {
+    "speaker": "B",
+    "en": "Hi Tom! I'm Olga. Nice to meet you."
+   },
+   {
+    "speaker": "A",
+    "en": "Nice to meet you too. Are you new here?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, this is my first day at school."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the second speaker's name?",
+    "ru": "Как зовут второго собеседника?",
+    "options": [
+     "Olga",
+     "Lucy",
+     "Sam",
+     "Tom"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "Is it the new pupil's first day?",
+    "ru": "Это первый день нового ученика?",
+    "options": [
+     "No",
+     "It is the last day",
+     "Not stated",
+     "Yes"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l030",
+  "level": "A2",
+  "title": {
+   "en": "Asking the Way",
+   "ru": "Спрашиваем дорогу"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Excuse me, how can I get to the train station?"
+   },
+   {
+    "speaker": "B",
+    "en": "Go straight on and turn left at the traffic lights."
+   },
+   {
+    "speaker": "A",
+    "en": "Is it far from here?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's about five minutes on foot."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where does the person want to go?",
+    "ru": "Куда хочет попасть человек?",
+    "options": [
+     "the beach",
+     "the train station",
+     "the airport",
+     "the hospital"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How far is it?",
+    "ru": "Как далеко это?",
+    "options": [
+     "About five minutes on foot",
+     "Next to the shop",
+     "Two hours by bus",
+     "Very far"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l031",
+  "level": "A2",
+  "title": {
+   "en": "At the Shop",
+   "ru": "В магазине"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Can I help you?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a pen, please. How much is it?"
+   },
+   {
+    "speaker": "A",
+    "en": "It's ten pounds."
+   },
+   {
+    "speaker": "B",
+    "en": "That's fine. I'll take it."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer want to buy?",
+    "ru": "Что хочет купить покупатель?",
+    "options": [
+     "a ticket",
+     "a pen",
+     "a jacket",
+     "some food"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How much does it cost?",
+    "ru": "Сколько это стоит?",
+    "options": [
+     "two pounds",
+     "twenty pounds",
+     "one hundred pounds",
+     "ten pounds"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l032",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Friday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Friday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at three o'clock in front of the museum."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at three o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Friday at three o'clock",
+     "Friday at noon",
+     "Sunday morning",
+     "Next week"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At the station",
+     "At school",
+     "At home",
+     "In front of the museum"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l033",
+  "level": "A2",
+  "title": {
+   "en": "At the Shop",
+   "ru": "В магазине"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Can I help you?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a T-shirt, please. How much is it?"
+   },
+   {
+    "speaker": "A",
+    "en": "It's ten pounds."
+   },
+   {
+    "speaker": "B",
+    "en": "That's fine. I'll take it."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer want to buy?",
+    "ru": "Что хочет купить покупатель?",
+    "options": [
+     "a ticket",
+     "a jacket",
+     "some food",
+     "a T-shirt"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How much does it cost?",
+    "ru": "Сколько это стоит?",
+    "options": [
+     "ten pounds",
+     "one hundred pounds",
+     "twenty pounds",
+     "two pounds"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l034",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a science book, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for ten days."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a magazine",
+     "a DVD",
+     "a newspaper",
+     "a science book"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "two days",
+     "one day",
+     "ten days",
+     "six months"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l035",
+  "level": "B1",
+  "title": {
+   "en": "A Phone Message",
+   "ru": "Телефонное сообщение"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hello, this is Sofia. Can I speak to Sam?"
+   },
+   {
+    "speaker": "B",
+    "en": "I'm afraid Sam is out. Can I take a message?"
+   },
+   {
+    "speaker": "A",
+    "en": "Yes, please tell Sam I called about the football match."
+   },
+   {
+    "speaker": "B",
+    "en": "OK, I'll pass the message on."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Who is calling?",
+    "ru": "Кто звонит?",
+    "options": [
+     "The teacher",
+     "Sam",
+     "Sofia",
+     "Nobody"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "What is the call about?",
+    "ru": "О чём звонок?",
+    "options": [
+     "a party",
+     "the weather",
+     "the football match",
+     "the bus schedule"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l036",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Saturday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Saturday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at five o'clock in front of the café."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at five o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Sunday morning",
+     "Saturday at five o'clock",
+     "Saturday at noon",
+     "Next week"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At home",
+     "At the station",
+     "In front of the café",
+     "At school"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l037",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Monday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Monday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at ten o'clock in front of the museum."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at ten o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Next week",
+     "Monday at noon",
+     "Monday at ten o'clock",
+     "Sunday morning"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At school",
+     "At home",
+     "At the station",
+     "In front of the museum"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l038",
+  "level": "A1",
+  "title": {
+   "en": "Meeting a New Friend",
+   "ru": "Знакомство с новым другом"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hi! My name is Kate. What's your name?"
+   },
+   {
+    "speaker": "B",
+    "en": "Hi Kate! I'm Alex. Nice to meet you."
+   },
+   {
+    "speaker": "A",
+    "en": "Nice to meet you too. Are you new here?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, this is my first day at school."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is the second speaker's name?",
+    "ru": "Как зовут второго собеседника?",
+    "options": [
+     "Lucy",
+     "Sam",
+     "Kate",
+     "Alex"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "Is it the new pupil's first day?",
+    "ru": "Это первый день нового ученика?",
+    "options": [
+     "It is the last day",
+     "Yes",
+     "No",
+     "Not stated"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l039",
+  "level": "B1",
+  "title": {
+   "en": "A Phone Message",
+   "ru": "Телефонное сообщение"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Hello, this is Alex. Can I speak to Sam?"
+   },
+   {
+    "speaker": "B",
+    "en": "I'm afraid Sam is out. Can I take a message?"
+   },
+   {
+    "speaker": "A",
+    "en": "Yes, please tell Sam I called about the football match."
+   },
+   {
+    "speaker": "B",
+    "en": "OK, I'll pass the message on."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Who is calling?",
+    "ru": "Кто звонит?",
+    "options": [
+     "Nobody",
+     "Sam",
+     "Alex",
+     "The teacher"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "What is the call about?",
+    "ru": "О чём звонок?",
+    "options": [
+     "the weather",
+     "a party",
+     "the football match",
+     "the bus schedule"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l040",
+  "level": "A1",
+  "title": {
+   "en": "Favourite Subject",
+   "ru": "Любимый предмет"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What's your favourite subject, Maria?"
+   },
+   {
+    "speaker": "B",
+    "en": "I like history best. It's really interesting."
+   },
+   {
+    "speaker": "A",
+    "en": "Why do you like it?"
+   },
+   {
+    "speaker": "B",
+    "en": "Because our teacher makes every lesson fun."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is Maria's favourite subject?",
+    "ru": "Какой любимый предмет у Maria?",
+    "options": [
+     "physics",
+     "chemistry",
+     "history",
+     "music"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "Why does the pupil like it?",
+    "ru": "Почему ученику нравится предмет?",
+    "options": [
+     "It is easy",
+     "It is short",
+     "The teacher makes lessons fun",
+     "There is no homework"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l041",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like some pasta, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "a lemonade, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "a burger",
+     "some pasta",
+     "fish and chips",
+     "ice cream"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "milk",
+     "a lemonade",
+     "hot chocolate",
+     "a smoothie"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l042",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a novel, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for two weeks."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a magazine",
+     "a novel",
+     "a newspaper",
+     "a DVD"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "one day",
+     "two weeks",
+     "six months",
+     "two days"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l043",
+  "level": "A2",
+  "title": {
+   "en": "Talking About Sport",
+   "ru": "Разговор о спорте"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Do you do any sport, Ivan?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I go tennis at weekends."
+   },
+   {
+    "speaker": "A",
+    "en": "That's great! Is it expensive?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's quite cheap and good for health."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What sport does Ivan do?",
+    "ru": "Каким спортом занимается Ivan?",
+    "options": [
+     "boxing",
+     "tennis",
+     "skiing",
+     "golf"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How often?",
+    "ru": "Как часто?",
+    "options": [
+     "never",
+     "once a year",
+     "every hour",
+     "at weekends"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l044",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a novel, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for one week."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a newspaper",
+     "a DVD",
+     "a magazine",
+     "a novel"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "one week",
+     "two days",
+     "six months",
+     "one day"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l045",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Monday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Monday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at three o'clock in front of the library."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at three o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Sunday morning",
+     "Monday at noon",
+     "Monday at three o'clock",
+     "Next week"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At the station",
+     "At home",
+     "In front of the library",
+     "At school"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l046",
+  "level": "A2",
+  "title": {
+   "en": "Weekend Plans",
+   "ru": "Планы на выходные"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What's the weather forecast for the weekend?"
+   },
+   {
+    "speaker": "B",
+    "en": "It will be cloudy."
+   },
+   {
+    "speaker": "A",
+    "en": "Then let's watch a film."
+   },
+   {
+    "speaker": "B",
+    "en": "Good idea, I'd love to."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What will the weather be like?",
+    "ru": "Какая будет погода?",
+    "options": [
+     "cloudy",
+     "hot and dry",
+     "foggy",
+     "stormy"
+    ],
+    "answer": 0
+   },
+   {
+    "en": "What do they decide to do?",
+    "ru": "Что они решают сделать?",
+    "options": [
+     "play football",
+     "go shopping",
+     "watch a film",
+     "go swimming"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l047",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Thursday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Thursday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at five o'clock in front of the sports centre."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at five o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Next week",
+     "Thursday at noon",
+     "Thursday at five o'clock",
+     "Sunday morning"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At home",
+     "At the station",
+     "In front of the sports centre",
+     "At school"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l048",
+  "level": "A2",
+  "title": {
+   "en": "Talking About Sport",
+   "ru": "Разговор о спорте"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Do you do any sport, Ivan?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I go tennis twice a week."
+   },
+   {
+    "speaker": "A",
+    "en": "That's great! Is it expensive?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's quite cheap and good for health."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What sport does Ivan do?",
+    "ru": "Каким спортом занимается Ivan?",
+    "options": [
+     "golf",
+     "skiing",
+     "tennis",
+     "boxing"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "How often?",
+    "ru": "Как часто?",
+    "options": [
+     "every hour",
+     "never",
+     "once a year",
+     "twice a week"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l049",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like soup, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "a cup of tea, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "ice cream",
+     "soup",
+     "fish and chips",
+     "a burger"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "a cup of tea",
+     "hot chocolate",
+     "a smoothie",
+     "milk"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l050",
+  "level": "A2",
+  "title": {
+   "en": "At the Library",
+   "ru": "В библиотеке"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "I'd like to borrow a dictionary, please."
+   },
+   {
+    "speaker": "B",
+    "en": "Of course. You can keep it for ten days."
+   },
+   {
+    "speaker": "A",
+    "en": "Can I renew it online?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, you can renew it once on our website."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the person want to borrow?",
+    "ru": "Что хочет взять человек?",
+    "options": [
+     "a magazine",
+     "a newspaper",
+     "a dictionary",
+     "a DVD"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "How long can the book be kept?",
+    "ru": "На какой срок можно взять книгу?",
+    "options": [
+     "six months",
+     "one day",
+     "two days",
+     "ten days"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l051",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Monday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Monday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at three o'clock in front of the café."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at three o'clock then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Monday at noon",
+     "Next week",
+     "Monday at three o'clock",
+     "Sunday morning"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At the station",
+     "At school",
+     "At home",
+     "In front of the café"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l052",
+  "level": "A2",
+  "title": {
+   "en": "Ordering Food",
+   "ru": "Заказываем еду"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Are you ready to order?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a pizza, please."
+   },
+   {
+    "speaker": "A",
+    "en": "And to drink?"
+   },
+   {
+    "speaker": "B",
+    "en": "orange juice, please."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer order to eat?",
+    "ru": "Что заказывает клиент поесть?",
+    "options": [
+     "fish and chips",
+     "ice cream",
+     "a burger",
+     "a pizza"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "What does the customer order to drink?",
+    "ru": "Что заказывает клиент выпить?",
+    "options": [
+     "a smoothie",
+     "milk",
+     "hot chocolate",
+     "orange juice"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l053",
+  "level": "A2",
+  "title": {
+   "en": "At the Shop",
+   "ru": "В магазине"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Can I help you?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a notebook, please. How much is it?"
+   },
+   {
+    "speaker": "A",
+    "en": "It's five pounds."
+   },
+   {
+    "speaker": "B",
+    "en": "That's fine. I'll take it."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer want to buy?",
+    "ru": "Что хочет купить покупатель?",
+    "options": [
+     "a jacket",
+     "some food",
+     "a ticket",
+     "a notebook"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How much does it cost?",
+    "ru": "Сколько это стоит?",
+    "options": [
+     "twenty pounds",
+     "five pounds",
+     "two pounds",
+     "one hundred pounds"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l054",
+  "level": "A2",
+  "title": {
+   "en": "Talking About Sport",
+   "ru": "Разговор о спорте"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Do you do any sport, Olga?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I go basketball every day."
+   },
+   {
+    "speaker": "A",
+    "en": "That's great! Is it expensive?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's quite cheap and good for health."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What sport does Olga do?",
+    "ru": "Каким спортом занимается Olga?",
+    "options": [
+     "golf",
+     "basketball",
+     "boxing",
+     "skiing"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "How often?",
+    "ru": "Как часто?",
+    "options": [
+     "every hour",
+     "every day",
+     "once a year",
+     "never"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l055",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to London, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's twenty pounds. The train leaves from platform 7."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "Moscow",
+     "Paris",
+     "London",
+     "Berlin"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "sixty pounds",
+     "one hundred pounds",
+     "twenty pounds",
+     "five pounds"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ },
+ {
+  "id": "l056",
+  "level": "A1",
+  "title": {
+   "en": "Favourite Subject",
+   "ru": "Любимый предмет"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "What's your favourite subject, Maria?"
+   },
+   {
+    "speaker": "B",
+    "en": "I like English best. It's really interesting."
+   },
+   {
+    "speaker": "A",
+    "en": "Why do you like it?"
+   },
+   {
+    "speaker": "B",
+    "en": "Because our teacher makes every lesson fun."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What is Maria's favourite subject?",
+    "ru": "Какой любимый предмет у Maria?",
+    "options": [
+     "physics",
+     "chemistry",
+     "music",
+     "English"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "Why does the pupil like it?",
+    "ru": "Почему ученику нравится предмет?",
+    "options": [
+     "The teacher makes lessons fun",
+     "It is easy",
+     "It is short",
+     "There is no homework"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   2,
+   4
+  ],
+  "difficulty": 1,
+  "context": "personal"
+ },
+ {
+  "id": "l057",
+  "level": "A2",
+  "title": {
+   "en": "Making Plans",
+   "ru": "Договариваемся о встрече"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Shall we meet on Saturday?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, Saturday is good for me. What time?"
+   },
+   {
+    "speaker": "A",
+    "en": "Let's meet at half past four in front of the museum."
+   },
+   {
+    "speaker": "B",
+    "en": "Great, see you at half past four then."
+   }
+  ],
+  "questions": [
+   {
+    "en": "When will they meet?",
+    "ru": "Когда они встретятся?",
+    "options": [
+     "Sunday morning",
+     "Saturday at half past four",
+     "Next week",
+     "Saturday at noon"
+    ],
+    "answer": 1
+   },
+   {
+    "en": "Where will they meet?",
+    "ru": "Где они встретятся?",
+    "options": [
+     "At school",
+     "At the station",
+     "At home",
+     "In front of the museum"
+    ],
+    "answer": 3
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l058",
+  "level": "A2",
+  "title": {
+   "en": "Asking the Way",
+   "ru": "Спрашиваем дорогу"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Excuse me, how can I get to the city museum?"
+   },
+   {
+    "speaker": "B",
+    "en": "Go straight on and turn left at the traffic lights."
+   },
+   {
+    "speaker": "A",
+    "en": "Is it far from here?"
+   },
+   {
+    "speaker": "B",
+    "en": "No, it's about five minutes on foot."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where does the person want to go?",
+    "ru": "Куда хочет попасть человек?",
+    "options": [
+     "the hospital",
+     "the beach",
+     "the city museum",
+     "the airport"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "How far is it?",
+    "ru": "Как далеко это?",
+    "options": [
+     "About five minutes on foot",
+     "Two hours by bus",
+     "Next to the shop",
+     "Very far"
+    ],
+    "answer": 0
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l059",
+  "level": "A2",
+  "title": {
+   "en": "At the Shop",
+   "ru": "В магазине"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "Can I help you?"
+   },
+   {
+    "speaker": "B",
+    "en": "Yes, I'd like a backpack, please. How much is it?"
+   },
+   {
+    "speaker": "A",
+    "en": "It's five pounds."
+   },
+   {
+    "speaker": "B",
+    "en": "That's fine. I'll take it."
+   }
+  ],
+  "questions": [
+   {
+    "en": "What does the customer want to buy?",
+    "ru": "Что хочет купить покупатель?",
+    "options": [
+     "a jacket",
+     "a ticket",
+     "a backpack",
+     "some food"
+    ],
+    "answer": 2
+   },
+   {
+    "en": "How much does it cost?",
+    "ru": "Сколько это стоит?",
+    "options": [
+     "twenty pounds",
+     "one hundred pounds",
+     "five pounds",
+     "two pounds"
+    ],
+    "answer": 2
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   5,
+   7
+  ],
+  "difficulty": 2,
+  "context": "personal"
+ },
+ {
+  "id": "l060",
+  "level": "B1",
+  "title": {
+   "en": "Buying a Train Ticket",
+   "ru": "Покупаем билет на поезд"
+  },
+  "lines": [
+   {
+    "speaker": "A",
+    "en": "A ticket to London, please."
+   },
+   {
+    "speaker": "B",
+    "en": "That's twenty pounds. The train leaves from platform 2."
+   },
+   {
+    "speaker": "A",
+    "en": "What time does it depart?"
+   },
+   {
+    "speaker": "B",
+    "en": "In twenty minutes. Here is your ticket."
+   }
+  ],
+  "questions": [
+   {
+    "en": "Where is the passenger travelling?",
+    "ru": "Куда едет пассажир?",
+    "options": [
+     "Paris",
+     "Berlin",
+     "Moscow",
+     "London"
+    ],
+    "answer": 3
+   },
+   {
+    "en": "How much is the ticket?",
+    "ru": "Сколько стоит билет?",
+    "options": [
+     "five pounds",
+     "twenty pounds",
+     "sixty pounds",
+     "one hundred pounds"
+    ],
+    "answer": 1
+   }
+  ],
+  "skill": "listening",
+  "grades": [
+   8,
+   9
+  ],
+  "difficulty": 3,
+  "context": "personal"
+ }
 ]
