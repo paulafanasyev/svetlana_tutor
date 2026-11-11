@@ -315,7 +315,7 @@ export function parseObzrContent(lines) {
 // Результаты: общий перечень после «162(1).4.5.2. Предметные результаты по ОБЗР должны обеспечивать:», затем
 // «Предметные результаты по модулю N k …:» (заголовок оставляем первой строкой, как в корпусе). Прочие нумерованные подпункты не выводим.
 // ОБЗР с приказа № 576: вместо 11 модулей содержание 8 класса разделено на два учебных курса.
-const courseName = s => (String(s).match(/Учебный курс\\s*["«]([^"»]+)["»]/i) || [])[1] || '';
+const courseName = s => (String(s).match(/Учебный курс\s*["«]([^"»]+)["»]/i) || [])[1] || '';
 export function parseObzrCourses(lines) {
   const courses = [];
   let current = null;
@@ -350,13 +350,13 @@ export function parseObzrCourseResults(lines) {
     const m = x.match(OBZR_NUM);
     if (m && !m[1].startsWith('162(1).4.5.')) break;
     const text = typo(m ? m[2] : x);
-    const name = text.match(/^Предметные результаты по учебному курсу\\s*["«]([^"»]+)["»]/i)?.[1];
+    const name = text.match(/^Предметные результаты по учебному курсу\s*["«]([^"»]+)["»]/i)?.[1];
     if (name) { current = courses[name] = [text]; continue; }
     // Служебные номера разделов ФОП не являются результатами обучения.
     if (m) continue;
     if (!text) continue;
     if (current) current.push(text);
-    else if (/^\\d+\\)/.test(text)) general.push(text);
+    else if (/^\d+\)/.test(text)) general.push(text);
   }
   return { general, courses };
 }
