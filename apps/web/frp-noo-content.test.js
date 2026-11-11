@@ -19,3 +19,42 @@ test('unexpected parse or structure errors remain fatal', () => {
 test('no source errors means normal validation', () => {
   assert.equal(sourceFailureMode([], 'push'), 'no-error');
 });
+
+
+import { parseObzrContent, parseObzrResults } from './frp-noo-content.js';
+
+test('OBZR content parser accepts module headings split into separate source paragraphs', () => {
+  const parsed = parseObzrContent([
+    '162(1).3.1.',
+    'Модуль N 1 "Безопасное и устойчивое развитие личности, общества, государства":',
+    'фундаментальные ценности и принципы, формирующие основы российского общества;',
+    '162(1).3.2.',
+    'Модуль N 2 "Военная подготовка. Основы военных знаний":',
+    'история возникновения и развития Вооруженных Сил Российской Федерации;',
+  ]);
+  assert.deepEqual(Object.keys(parsed), ['1', '2']);
+  assert.match(parsed[1].title, /Безопасное и устойчивое развитие/);
+  assert.match(parsed[1].text.join(' '), /фундаментальные ценности/);
+  assert.match(parsed[2].text.join(' '), /Вооруженных Сил/);
+});
+
+test('OBZR results parser accepts split headings and preserves each module result', () => {
+  const { general, mods } = parseObzrResults([
+    '162(1).4.5.2.',
+    'Предметные результаты по ОБЗР должны обеспечивать:',
+    '1) сформированность представлений о значении безопасного развития;',
+    '162(1).4.5.3.',
+    'Достижение результатов обеспечивается посредством включения модулей:',
+    '162(1).4.5.3.1.',
+    'Предметные результаты по модулю N 1 "Безопасное и устойчивое развитие личности":',
+    'объяснять значение Конституции Российской Федерации;',
+    '162(1).4.5.3.2.',
+    'Предметные результаты по модулю N 2 "Военная подготовка":',
+    'иметь представление об истории Вооруженных Сил Российской Федерации;',
+  ]);
+  assert.equal(general.length, 1);
+  assert.match(general[0], /безопасного развития/);
+  assert.ok(mods[1]?.length > 1);
+  assert.ok(mods[2]?.length > 1);
+  assert.match(mods[1][1], /Конституции/);
+});
