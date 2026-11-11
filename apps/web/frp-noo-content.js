@@ -274,8 +274,8 @@ export function musicSections(corpus, fop, miss) {
 
 // ОБЗР: номера пунктов со скобками (162(1).3.1) обычный NUM не берёт.
 const OBZR_NUM = /^(\d+(?:\(\d+\))?(?:\.\d+)+)\.?\s+(.*)$/;
-const modNo = s => +((String(s).match(/модул(?:ь|я|ю)\\s*(?:N|№)?\\s*(\\d+)/i) || [])[1] || 0);
-const modName = s => (String(s).match(/модул(?:ь|я|ю)\\s*(?:N|№)?\\s*\\d+\\s*["«]([^"»]+)["»]/i) || [])[1] || '';
+const modNo = s => +((String(s).match(/модул(?:ь|я|ю)\s*(?:N|№)?\s*(\d+)/i) || [])[1] || 0);
+const modName = s => (String(s).match(/модул(?:ь|я|ю)\s*(?:N|№)?\s*\d+\s*["«]([^"»]+)["»]/i) || [])[1] || '';
 const obzrModule = (number, name) => ({ title: `Модуль № ${number} «${name}»`, text: [] });
 // Содержание: «162(1).3.k. Модуль N k "Название":», дальше абзацы без номеров. Выход: { k: { title, text: [абзацы] } }.
 export function parseObzrContent(lines) {
@@ -323,7 +323,7 @@ export function parseObzrResults(lines) {
     const t = typo(m ? m[2] : x);
     // The module heading can be a separate paragraph after its numbered prefix.
     const k = /^Предметные результаты по модулю/i.test(t) ? modNo(t) : 0;
-    if (k) { cur = mods[k] = [t.replace(/\\bN\\s+(\\d+)/i, ' № $1')]; continue; }
+    if (k) { cur = mods[k] = [t.replace(/\bN\s+(\d+)/i, ' № $1')]; continue; }
     if (m) continue;
     if (t) cur.push(t);
   }
