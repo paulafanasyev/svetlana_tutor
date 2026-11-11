@@ -52,8 +52,8 @@ test('OBZR results parser accepts split headings and preserves each module resul
     'Предметные результаты по модулю N 2 "Военная подготовка":',
     'иметь представление об истории Вооруженных Сил Российской Федерации;',
   ]);
-  assert.equal(general.length, 1);
-  assert.match(general[0], /безопасного развития/);
+  assert.ok(general.some(x => /безопасного развития/.test(x)));
+  assert.ok(general.every(x => !x.startsWith('162(1).4.5.')));
   assert.ok(mods[1]?.length > 1);
   assert.ok(mods[2]?.length > 1);
   assert.match(mods[1][1], /Конституции/);
