@@ -323,7 +323,7 @@ export function parseObzrResults(lines) {
     const t = typo(m ? m[2] : x);
     // The module heading can be a separate paragraph after its numbered prefix.
     const k = /^Предметные результаты по модулю/i.test(t) ? modNo(t) : 0;
-    if (k) { cur = mods[k] = [t.replace(/\\sN\\s+(\\d+)/i, ' № $1')]; continue; }
+    if (k) { cur = mods[k] = [t.replace(/\\bN\\s+(\\d+)/i, ' № $1')]; continue; }
     if (m) continue;
     if (t) cur.push(t);
   }
