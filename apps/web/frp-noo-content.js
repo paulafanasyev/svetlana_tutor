@@ -84,10 +84,13 @@ export const MUSIC = ['166.6', 'fa93888f44e4134baf8e18f48fbda2c043913d4b'];
 export const OBZR = {
   subject: 'Основы безопасности и защиты Родины',
   content: '42194d1cf196527ad6157c637b93df0d49551229', results: '6479083db56ea138e601a06b2c641d7b0466947f',
-  grades: { 8: [1, 2, 3, 4, 5, 6], 9: [7, 8, 9, 10, 11] },
+  // Приказ № 576: новая редакция с двумя учебными курсами применяется в 2026/27 к 8 классу.
+  // 9 класс — переходная когорта, остаётся на ранее начатой модульной программе из локального корпуса.
+  grade: 8,
+  courses: ['Начальная военная подготовка', 'Безопасность жизнедеятельности'],
 };
 // ОРКСЭ: 6 модулей на одной странице; музыка 1–4; курсы ООО: содержание (кроме «только результаты») и результаты по классам; ОБЗР: содержание и результаты 8–9.
-export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length + COURSES.reduce((a, [, , , gs, only]) => a + gs.length * (only ? 1 : 2), 0) + Object.keys(OBZR.grades).length * 2;
+export const EXPECTED = PAGES.length + 5 + 4 + OOO_PAGES.length + COURSES.reduce((a, [, , , gs, only]) => a + gs.length * (only ? 1 : 2), 0) + 2;
 
 export function htmlLines(html) {
   return html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, '').replace(/<img[^>]*>/gi, 'ё').replace(/<\/?(?:p|br|div|h\d|li|tr)\b[^>]*>/gi, '\n').replace(/<[^>]+>/g, '')
@@ -274,29 +277,90 @@ export function musicSections(corpus, fop, miss) {
 
 // ОБЗР: номера пунктов со скобками (162(1).3.1) обычный NUM не берёт.
 const OBZR_NUM = /^(\d+(?:\(\d+\))?(?:\.\d+)+)\.?\s+(.*)$/;
-const modNo = s => +((s.match(/[Мм]одул[ьюя] (?:N|№)\s?(\d+)/) || [])[1] || 0);
+const modNo = s => +((String(s).match(/модул(?:ь|я|ю)\s*(?:N|№)?\s*(\d+)/i) || [])[1] || 0);
+const modName = s => (String(s).match(/модул(?:ь|я|ю)\s*(?:N|№)?\s*\d+\s*["«]([^"»]+)["»]/i) || [])[1] || '';
+const obzrModule = (number, name) => ({ title: `Модуль № ${number} «${name}»`, text: [] });
 // Содержание: «162(1).3.k. Модуль N k "Название":», дальше абзацы без номеров. Выход: { k: { title, text: [абзацы] } }.
 export function parseObzrContent(lines) {
   const out = {};
   let cur = null;
   const a = lines.findIndex(x => x.startsWith('162(1).3.1.'));
   if (a < 0) return out;
-  for (const x of lines.slice(a)) {
+  for (let i = a; i < lines.length; i++) {
+    const x = lines[i];
     if (/^Открыть полный текст/.test(x)) break;
     if (NOTE.test(x)) continue;
+    if (x.startsWith('162(1).3.') && /^[0-9.]+$/.test(x.slice(9))) continue;
     const m = x.match(OBZR_NUM);
     if (m) {
       if (!m[1].startsWith('162(1).3.')) break;
-      const k = modNo(m[2]), name = (m[2].match(/"([^"]+)"/) || [])[1];
-      cur = k && name ? (out[k] = { title: `Модуль № ${k} «${name}»`, text: [] }) : null;
+      // ConsultantPlus may put the numbered prefix and module title in separate paragraphs.
+      let header = m[2] || '';
+      let k = modNo(header), name = modName(header);
+      if (!k && lines[i + 1]) {
+        const nextNumber = modNo(lines[i + 1]);
+        const nextName = modName(lines[i + 1]);
+        if (nextNumber && nextName) { k = nextNumber; name = nextName; i++; }
+      }
+      if (k && name) cur = out[k] = obzrModule(k, name);
+      else if (cur && header) cur.text.push(typo(header));
       continue;
     }
+    const k = modNo(x), name = modName(x);
+    if (k && name) { cur = out[k] = obzrModule(k, name); continue; }
     if (cur) cur.text.push(typo(x));
   }
   return out;
 }
 // Результаты: общий перечень после «162(1).4.5.2. Предметные результаты по ОБЗР должны обеспечивать:», затем
 // «Предметные результаты по модулю N k …:» (заголовок оставляем первой строкой, как в корпусе). Прочие нумерованные подпункты не выводим.
+// ОБЗР с приказа № 576: вместо 11 модулей содержание 8 класса разделено на два учебных курса.
+const courseName = s => (String(s).match(/Учебный курс\s*["«]([^"»]+)["»]/i) || [])[1] || '';
+export function parseObzrCourses(lines) {
+  const courses = [];
+  let current = null;
+  const start = lines.findIndex(x => x.startsWith('162(1).3.1.'));
+  if (start < 0) return courses;
+  for (const x of lines.slice(start)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    if (x.startsWith('162(1).4.')) break;
+    const name = courseName(x);
+    if (name) {
+      current = { title: `Учебный курс «${name}»`, topics: [] };
+      courses.push(current);
+      continue;
+    }
+    // Номер подпункта может быть отдельным абзацем; не показываем его как тему.
+    if (x.startsWith('162(1).3.')) continue;
+    if (current) {
+      const topic = typo(x);
+      if (topic) current.topics.push(topic);
+    }
+  }
+  return courses;
+}
+
+export function parseObzrCourseResults(lines) {
+  const general = [], courses = {};
+  const start = lines.findIndex(x => x.startsWith('162(1).4.5.2.'));
+  if (start < 0) return { general, courses };
+  let current = null;
+  for (const x of lines.slice(start + 1)) {
+    if (/^Открыть полный текст/.test(x)) break;
+    const m = x.match(OBZR_NUM);
+    if (m && !m[1].startsWith('162(1).4.5.')) break;
+    const text = typo(m ? m[2] : x);
+    const name = text.match(/^Предметные результаты по учебному курсу\s*["«]([^"»]+)["»]/i)?.[1];
+    if (name) { current = courses[name] = [text]; continue; }
+    // Служебные номера разделов ФОП не являются результатами обучения.
+    if (m) continue;
+    if (!text) continue;
+    if (current) current.push(text);
+    else if (/^\d+\)/.test(text)) general.push(text);
+  }
+  return { general, courses };
+}
+
 export function parseObzrResults(lines) {
   const general = [], mods = {};
   const a = lines.findIndex(x => x.startsWith('162(1).4.5.2.'));
@@ -305,13 +369,15 @@ export function parseObzrResults(lines) {
   for (const x of lines.slice(a + 1)) {
     if (/^Открыть полный текст/.test(x)) break;
     if (NOTE.test(x)) continue;
+    if (x.startsWith('162(1).4.5.') && /^[0-9.]+$/.test(x.slice(11))) continue;
     const m = x.match(OBZR_NUM);
     if (m && !m[1].startsWith('162(1).4.5.')) break;
     const t = typo(m ? m[2] : x);
-    const k = /^Предметные результаты по модулю/.test(t) ? modNo(t) : 0;
-    if (k) { cur = mods[k] = [t.replace(/ N (\d+)/, ' № $1')]; continue; }
+    // The module heading can be a separate paragraph after its numbered prefix.
+    const k = /^Предметные результаты по модулю/i.test(t) ? modNo(t) : 0;
+    if (k) { cur = mods[k] = [t.replace(/\bN\s+(\d+)/i, ' № $1')]; continue; }
     if (m) continue;
-    cur.push(t);
+    if (t) cur.push(t);
   }
   return { general, mods };
 }
@@ -423,17 +489,15 @@ export async function loadNooContent({ cacheDir = path.resolve('node_modules/.ca
     } catch (e) { errors.push(`ООО ${root}: ${e.message || e}`); }
   });
   try {
-    const c = parseObzrContent(htmlLines(await page(OBZR.content, cacheDir, OOO, '162(1).3.1')));
-    const { general, mods } = parseObzrResults(htmlLines(await page(OBZR.results, cacheDir, OOO, '162(1).4.5')));
+    const content = parseObzrCourses(htmlLines(await page(OBZR.content, cacheDir, OOO, '162(1).3.1')));
+    const { general, courses: results } = parseObzrCourseResults(htmlLines(await page(OBZR.results, cacheDir, OOO, '162(1).4.5')));
+    const missingContent = OBZR.courses.filter(name => !content.find(x => x.title.includes(name) && x.topics.length));
+    if (missingContent.length) errors.push(`ОБЗР 8 кл.: нет содержания учебных курсов ${missingContent.join(', ')}`);
+    else map[`${OBZR.subject}|8`] = content;
     if (general.length < 10) errors.push(`ОБЗР 162(1).4.5.2: общих результатов ${general.length}`);
-    for (const [g, ks] of Object.entries(OBZR.grades)) {
-      const miss = ks.filter(k => !c[k]?.text.length);
-      if (miss.length) errors.push(`ОБЗР ${g} кл.: нет содержания модулей ${miss.join(', ')}`);
-      else map[`${OBZR.subject}|${g}`] = ks.map(k => ({ title: c[k].title, topics: [c[k].text.join(' ')] }));
-      const rm = ks.filter(k => !(mods[k]?.length > 1));
-      if (rm.length) errors.push(`ОБЗР ${g} кл.: нет результатов модулей ${rm.join(', ')}`);
-      else map[`R|${OBZR.subject}|${g}`] = [...(g === '8' ? general : []), ...ks.flatMap(k => mods[k])];
-    }
+    const missingResults = OBZR.courses.filter(name => !(results[name]?.length > 1));
+    if (missingResults.length) errors.push(`ОБЗР 8 кл.: нет результатов учебных курсов ${missingResults.join(', ')}`);
+    else map[`R|${OBZR.subject}|8`] = [...general, ...OBZR.courses.flatMap(name => results[name])];
   } catch (e) { errors.push(`ОБЗР 162(1): ${e.message || e}`); }
   try {
     const fop = parseMusic(htmlLines(await page(MUSIC[1], cacheDir, NOO, '166.6.1')));

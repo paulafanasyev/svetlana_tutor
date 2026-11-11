@@ -86,12 +86,15 @@ const isOptional=p=>OPTIONAL_SUBJECTS.some(s=>p.subject===s||p.subject.startsWit
 const withBase=p=>({...p,content_src:staticSource(p),results_src:isOptional(p)?'fop':staticSource(p)});
 // Предметные результаты ООО (математика, английский) по классам: дословно из ФОП ООО ред. от 10.11.2025, загружаются при сборке (ключ «R|предмет|класс»).
 const oooResults=p=>p.level==='ООО'&&nooContent?.[`R|${p.subject}|${p.grade}`];
-const withResults=p=>oooResults(p)?{...p,results:oooResults(p),source_doc:'ФОП ООО (приказ № 370, ред. от 10.11.2025)',results_src:'live'}:/^music-[1-4]$/.test(p.id)?{...p,results:musicResults(p),source_doc:NOO_DOC,results_src:'fop'}:nooResults[p.id]?{...p,results:nooResults[p.id],source_doc:NOO_DOC,results_src:'fop'}:p.results?.length?p:{...p,results:RESULTS[p.id]||RESULTS[p.id.replace(/-\d+$/,'')]||p.results||[],results_src:'corpus'};
+const isObzrGrade8=p=>p.subject==='Основы безопасности и защиты Родины'&&p.grade===8;
+const OBZR_2026_DOC='ФОП ООО (приказ № 370, ред. от 19.08.2026; изменения приказа № 576)';
+const OBZR_2026_CONTENT_URL='https://www.consultant.ru/document/cons_doc_LAW_452180/42194d1cf196527ad6157c637b93df0d49551229/';
+const withResults=p=>oooResults(p)?{...p,results:oooResults(p),source_doc:isObzrGrade8(p)?OBZR_2026_DOC:'ФОП ООО (приказ № 370, ред. от 10.11.2025)',results_src:isObzrGrade8(p)?'live2026':'live'}:/^music-[1-4]$/.test(p.id)?{...p,results:musicResults(p),source_doc:NOO_DOC,results_src:'fop'}:nooResults[p.id]?{...p,results:nooResults[p.id],source_doc:NOO_DOC,results_src:'fop'}:p.results?.length?p:{...p,results:RESULTS[p.id]||RESULTS[p.id.replace(/-\d+$/,'')]||p.results||[],results_src:'corpus'};
 // ФРП «История» 2025: Первая мировая война и 1917 г. изучаются в 10 классе (курс «История России. 1914–1945 гг.»), а не в 9.
 const CONTENT_FIXES={'history-9':t=>t.replace(/\s*Россия в Первой мировой войне и революционные события 1917 г\./,'')};
 // Содержание обучения НОО и части ООО: дословно из ФОП ред. от 10.11.2025 (КонсультантПлюс), загружается при сборке, см. apps/web/frp-noo-content.js.
 // Если КонсультантПлюс был недоступен и кэша нет, остаётся текст файла с его меткой (без тихой подмены).
-const withContent=p=>nooContent&&nooContent[`${p.subject}|${p.grade}`]?{...p,sections:nooContent[`${p.subject}|${p.grade}`],content_source:p.level==='ООО'?'ФОП ООО (приказ № 370, ред. от 10.11.2025)':NOO_DOC,content_src:'live'}:p;
+const withContent=p=>nooContent&&nooContent[`${p.subject}|${p.grade}`]?{...p,sections:nooContent[`${p.subject}|${p.grade}`],content_source:isObzrGrade8(p)?OBZR_2026_DOC:p.level==='ООО'?'ФОП ООО (приказ № 370, ред. от 10.11.2025)':NOO_DOC,source_doc:isObzrGrade8(p)?OBZR_2026_DOC:p.source_doc,source_url:isObzrGrade8(p)?OBZR_2026_CONTENT_URL:p.source_url,content_src:isObzrGrade8(p)?'live2026':'live'}:p;
 const withFixes=p=>CONTENT_FIXES[p.id]?{...p,sections:p.sections.map(s=>({...s,topics:s.topics.map(CONTENT_FIXES[p.id])}))}:p;
 export const SOURCE_REGISTRY={chinese:chineseSources};
 // Китайский язык (ФРП ЕДСОО 2025): подтягивается при сборке, см. apps/web/frp-chinese-plugin.js.
