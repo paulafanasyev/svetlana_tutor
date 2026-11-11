@@ -5,6 +5,7 @@
 // none   — данных нет.
 export const PROVENANCE = {
   live: { icon: '✅', label: 'сверено с ФОП ред. 10.11.2025 при сборке', ok: true },
+  live2026: { icon: '✅', label: 'сверено с ФОП по приказу № 576 при сборке', ok: true },
   fop: { icon: '☑️', label: 'из ФОП ред. 10.11.2025, копия в репозитории', ok: true },
   corpus: { icon: '⚠️', label: 'из корпуса ЕДСОО, с действующей ФОП не сверено', ok: false },
   none: { icon: '—', label: 'нет данных', ok: false },
