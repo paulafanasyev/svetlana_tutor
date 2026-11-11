@@ -287,6 +287,7 @@ export function parseObzrContent(lines) {
     const x = lines[i];
     if (/^Открыть полный текст/.test(x)) break;
     if (NOTE.test(x)) continue;
+    if (/^162\\(1\\)\\.3\\.\\d+\\.?$/.test(x)) continue;
     const m = x.match(OBZR_NUM);
     if (m) {
       if (!m[1].startsWith('162(1).3.')) break;
@@ -318,6 +319,7 @@ export function parseObzrResults(lines) {
   for (const x of lines.slice(a + 1)) {
     if (/^Открыть полный текст/.test(x)) break;
     if (NOTE.test(x)) continue;
+    if (/^162\\(1\\)\\.4\\.5\\.\\d+(?:\\.\\d+)*\\.?$/.test(x)) continue;
     const m = x.match(OBZR_NUM);
     if (m && !m[1].startsWith('162(1).4.5.')) break;
     const t = typo(m ? m[2] : x);
