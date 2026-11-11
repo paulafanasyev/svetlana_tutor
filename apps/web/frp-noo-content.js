@@ -274,23 +274,36 @@ export function musicSections(corpus, fop, miss) {
 
 // ОБЗР: номера пунктов со скобками (162(1).3.1) обычный NUM не берёт.
 const OBZR_NUM = /^(\d+(?:\(\d+\))?(?:\.\d+)+)\.?\s+(.*)$/;
-const modNo = s => +((s.match(/[Мм]одул[ьюя] (?:N|№)\s?(\d+)/) || [])[1] || 0);
+const modNo = s => +((String(s).match(/модул(?:ь|я|ю)\\s*(?:N|№)?\\s*(\\d+)/i) || [])[1] || 0);
+const modName = s => (String(s).match(/модул(?:ь|я|ю)\\s*(?:N|№)?\\s*\\d+\\s*["«]([^"»]+)["»]/i) || [])[1] || '';
+const obzrModule = (number, name) => ({ title: `Модуль № ${number} «${name}»`, text: [] });
 // Содержание: «162(1).3.k. Модуль N k "Название":», дальше абзацы без номеров. Выход: { k: { title, text: [абзацы] } }.
 export function parseObzrContent(lines) {
   const out = {};
   let cur = null;
   const a = lines.findIndex(x => x.startsWith('162(1).3.1.'));
   if (a < 0) return out;
-  for (const x of lines.slice(a)) {
+  for (let i = a; i < lines.length; i++) {
+    const x = lines[i];
     if (/^Открыть полный текст/.test(x)) break;
     if (NOTE.test(x)) continue;
     const m = x.match(OBZR_NUM);
     if (m) {
       if (!m[1].startsWith('162(1).3.')) break;
-      const k = modNo(m[2]), name = (m[2].match(/"([^"]+)"/) || [])[1];
-      cur = k && name ? (out[k] = { title: `Модуль № ${k} «${name}»`, text: [] }) : null;
+      // ConsultantPlus may put the numbered prefix and module title in separate paragraphs.
+      let header = m[2] || '';
+      let k = modNo(header), name = modName(header);
+      if (!k && lines[i + 1]) {
+        const nextNumber = modNo(lines[i + 1]);
+        const nextName = modName(lines[i + 1]);
+        if (nextNumber && nextName) { k = nextNumber; name = nextName; i++; }
+      }
+      if (k && name) cur = out[k] = obzrModule(k, name);
+      else if (cur && header) cur.text.push(typo(header));
       continue;
     }
+    const k = modNo(x), name = modName(x);
+    if (k && name) { cur = out[k] = obzrModule(k, name); continue; }
     if (cur) cur.text.push(typo(x));
   }
   return out;
@@ -308,10 +321,11 @@ export function parseObzrResults(lines) {
     const m = x.match(OBZR_NUM);
     if (m && !m[1].startsWith('162(1).4.5.')) break;
     const t = typo(m ? m[2] : x);
-    const k = /^Предметные результаты по модулю/.test(t) ? modNo(t) : 0;
-    if (k) { cur = mods[k] = [t.replace(/ N (\d+)/, ' № $1')]; continue; }
+    // The module heading can be a separate paragraph after its numbered prefix.
+    const k = /^Предметные результаты по модулю/i.test(t) ? modNo(t) : 0;
+    if (k) { cur = mods[k] = [t.replace(/\\sN\\s+(\\d+)/i, ' № $1')]; continue; }
     if (m) continue;
-    cur.push(t);
+    if (t) cur.push(t);
   }
   return { general, mods };
 }
